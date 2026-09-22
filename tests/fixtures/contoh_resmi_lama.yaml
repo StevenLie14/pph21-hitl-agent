@@ -1,0 +1,106 @@
+contoh:
+  - nama: "Ahmad K/0"
+    sumber: "lampiran PER-31/PJ/2009 bagian kedua 1.1.1"
+    berkas: per_31_pj_2009.pdf
+    halaman_pdf: 24
+    kasus: a2009
+    argumen: {status_ptkp: "K/0", gaji_pokok: 2500000, iuran_pensiun_dibayar_pegawai: 100000}
+    harapan: 507000
+
+  - nama: "Bambang K/0, Jamsostek"
+    sumber: "lampiran PER-31/PJ/2009 bagian kedua 1.1.2"
+    berkas: per_31_pj_2009.pdf
+    halaman_pdf: 25
+    kasus: a2009
+    argumen: {status_ptkp: "K/0", gaji_pokok: 2000000, premi_jkk_dibayar_perusahaan: 10000,
+              premi_jkm_dibayar_perusahaan: 6000, iuran_jht_dibayar_pegawai: 40000,
+              iuran_pensiun_dibayar_pegawai: 50000}
+    harapan: 237100
+
+  - nama: "Endang K/0"
+    sumber: "lampiran PER-31/PJ/2009 bagian kedua 1.1.3"
+    berkas: per_31_pj_2009.pdf
+    halaman_pdf: 25
+    kasus: a2009
+    argumen: {status_ptkp: "K/0", gaji_pokok: 2500000, iuran_pensiun_dibayar_pegawai: 50000}
+    harapan: 537000
+
+  - nama: "Arip K/3"
+    sumber: "lampiran PER-31/PJ/2009 bagian kedua I.8"
+    berkas: per_31_pj_2009.pdf
+    halaman_pdf: 39
+    kasus: a2009
+    argumen: {status_ptkp: "K/3", gaji_pokok: 4000000, iuran_pensiun_dibayar_pegawai: 150000}
+    harapan: 1134000
+
+  - nama: "Fajar K/0"
+    sumber: "lampiran PER-31/PJ/2012 bagian kedua 1.1.1"
+    berkas: per_31_pj_2012.pdf
+    halaman_pdf: 24
+    kasus: a2013
+    argumen: {status_ptkp: "K/0", gaji_pokok: 2500000, iuran_pensiun_dibayar_pegawai: 100000}
+    harapan: 48750
+
+  - nama: "Budi K/0, Jamsostek"
+    sumber: "lampiran PER-31/PJ/2012 bagian kedua 1.1.2"
+    berkas: per_31_pj_2012.pdf
+    halaman_pdf: 25
+    kasus: a2013
+    argumen: {status_ptkp: "K/0", gaji_pokok: 3000000, premi_jkk_dibayar_perusahaan: 15000,
+              premi_jkm_dibayar_perusahaan: 9000, iuran_jht_dibayar_pegawai: 60000,
+              iuran_pensiun_dibayar_pegawai: 50000}
+    harapan: 341400
+
+  - nama: "Agustina K/0, lembur"
+    sumber: "lampiran PER-31/PJ/2012 bagian kedua 1.1.3"
+    berkas: per_31_pj_2012.pdf
+    halaman_pdf: 25
+    kasus: a2013
+    argumen: {status_ptkp: "K/0", gaji_pokok: 7500000, lembur: 2000000, iuran_pensiun_dibayar_pegawai: 50000}
+    harapan: 7206250
+
+  - nama: "Bambang Eko K/0, Jamsostek"
+    sumber: "lampiran PER-32/PJ/2015 bagian kedua I.1.2"
+    berkas: per_32_pj_2015.pdf
+    kasus: a2015
+    argumen: {status_ptkp: "K/0", gaji_pokok: 6000000, premi_jkk_dibayar_perusahaan: 30000,
+              premi_jkm_dibayar_perusahaan: 18000, iuran_jht_dibayar_pegawai: 120000,
+              iuran_pensiun_dibayar_pegawai: 100000}
+    harapan: 1365350
+
+  - nama: "Tanti K/0, lembur"
+    sumber: "lampiran PER-32/PJ/2015 bagian kedua I.1.3"
+    berkas: per_32_pj_2015.pdf
+    kasus: a2015
+    argumen: {status_ptkp: "K/0", gaji_pokok: 7500000, lembur: 2000000, iuran_pensiun_dibayar_pegawai: 50000}
+    harapan: 5305000
+
+  - nama: "Retto K/0"
+    sumber: "lampiran PER-16/PJ/2016 bagian kedua I.1.1"
+    berkas: per_16_pj_2016.pdf
+    halaman_pdf: 27
+    kasus: a2016
+    argumen: {status_ptkp: "K/0", gaji_pokok: 5750000, iuran_pensiun_dibayar_pegawai: 200000}
+    harapan: 232500
+
+  - nama: "Bambang Eko K/0, BPJS"
+    sumber: "lampiran PER-16/PJ/2016 bagian kedua I.1.2"
+    berkas: per_16_pj_2016.pdf
+    halaman_pdf: 28
+    kasus: a2016
+    argumen: {status_ptkp: "K/0", gaji_pokok: 8000000, premi_jkk_dibayar_perusahaan: 40000,
+              premi_jkm_dibayar_perusahaan: 24000, iuran_jht_dibayar_pegawai: 160000,
+              iuran_pensiun_dibayar_pegawai: 100000}
+    harapan: 1515450
+
+  - nama: "Tanti Agustin K/0, lembur"
+    sumber: "lampiran PER-16/PJ/2016 bagian kedua I.1.3"
+    berkas: per_16_pj_2016.pdf
+    halaman_pdf: 29
+    kasus: a2016
+    argumen: {status_ptkp: "K/0", gaji_pokok: 8500000, lembur: 2000000, iuran_pensiun_dibayar_pegawai: 50000}
+    harapan: 4135000
+    angka_resmi: 4090000
+    contoh_resmi_keliru: >-
+      The example deducts biaya jabatan 5% x Rp10.500.000 = Rp525.000 a month, above the Rp500.000 monthly
+      (Rp6.000.000 yearly) maximum; with the maximum, PKP is Rp300.000 higher and the tax Rp45.000 higher.

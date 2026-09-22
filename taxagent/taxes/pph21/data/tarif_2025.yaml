@@ -1,0 +1,14 @@
+meta:
+  tahun_pajak: 2025
+  berlaku_sejak: "2025-01-01"
+  terverifikasi: true
+  warisi_dari: 2024
+  catatan_verifikasi: >
+    Mewarisi seluruh tabel dari tarif_2024.yaml (sudah diverifikasi baris demi
+    baris terhadap Lampiran PP 58/2023, lihat README.md bagian 10). Dicek ulang
+    2026-09-22: halaman status resmi PP No. 58 Tahun 2023 di JDIH Kemenkeu
+    (jdih.kemenkeu.go.id/dok/pp-58-tahun-2023) menunjukkan status "Berlaku"
+    tanpa satu pun peraturan pengubah; satu-satunya peraturan terkait yang
+    terbit untuk 2025/2026 (PMK 105/2025, PMK 6/2026) adalah fasilitas PPh 21
+    Ditanggung Pemerintah, bukan perubahan tabel TER/PTKP/tarif Pasal 17. Detail
+    di README.md bagian 10.

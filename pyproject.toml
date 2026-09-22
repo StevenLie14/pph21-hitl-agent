@@ -1,0 +1,62 @@
+[project]
+name = "taxagent"
+version = "0.1.0"
+description = "Human-in-the-loop agent for Indonesian employee income tax (PPh 21) with a deterministic calculation engine"
+requires-python = ">=3.10"
+dependencies = [
+    "pydantic>=2.6",
+    "pydantic-settings>=2.4",
+    "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+agent = [
+    "langchain-core>=0.3",
+    "langchain-google-genai>=2.0",
+    "langchain-openai>=0.2",
+    "google-generativeai>=0.8",
+    "python-dotenv>=1.0",
+]
+graph = [
+    "neo4j>=5",
+    "python-dotenv>=1.0",
+]
+monitor = [
+    "pymupdf>=1.24",
+    "beautifulsoup4>=4.12",
+]
+rater = [
+    "openpyxl>=3.1",
+]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.6",
+]
+
+[project.scripts]
+taxagent = "taxagent.cli:main"
+pph21 = "taxagent.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["taxagent*"]
+
+[tool.setuptools.package-data]
+taxagent = ["taxes/*/data/*.yaml", "taxes/*/data/skill/*.yaml", "taxes/*/data/skill/draf/*.yaml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "B", "UP", "SIM", "C4", "I"]
+ignore = ["E501", "E741", "SIM108", "B905"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["taxagent"]

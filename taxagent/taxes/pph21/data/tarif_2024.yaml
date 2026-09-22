@@ -1,0 +1,222 @@
+meta:
+  tahun_pajak: 2024
+  berlaku_sejak: "2024-01-01"
+  terverifikasi: true
+  dasar_hukum:
+    - "UU No. 7 Tahun 1983 s.t.d.t.d UU No. 7 Tahun 2021 (UU HPP), Pasal 17 ayat (1) huruf a"
+    - "PP No. 58 Tahun 2023 tentang Tarif Pemotongan PPh Pasal 21"
+    - "PMK No. 168 Tahun 2023"
+    - "PP No. 68 Tahun 2009 (PPh final pesangon dan manfaat pensiun)"
+    - "PP No. 80 Tahun 2010 (PPh final honorarium APBN/APBD)"
+  catatan_verifikasi: >
+    Tabel TER bulanan kategori A/B/C berisi puluhan bracket per kategori dan
+    merupakan titik paling rawan salah transkrip. Verifikasi wajib dilakukan
+    terhadap Lampiran PP 58/2023, bukan terhadap sumber sekunder.
+
+ptkp:
+  wajib_pajak_sendiri: 54000000
+  tambahan_kawin: 4500000
+  tambahan_tanggungan: 4500000
+  maksimal_tanggungan: 3
+
+biaya_jabatan:
+  persen: 5
+  maksimal_sebulan: 500000
+  maksimal_setahun: 6000000
+
+biaya_pensiun:
+  persen: 5
+  maksimal_sebulan: 200000
+  maksimal_setahun: 2400000
+
+pembulatan_pkp: 1000
+
+tarif_pasal_17:
+  - {batas_atas: 60000000, persen: 5}
+  - {batas_atas: 250000000, persen: 15}
+  - {batas_atas: 500000000, persen: 25}
+  - {batas_atas: 5000000000, persen: 30}
+  - {batas_atas: null, persen: 35}
+
+non_npwp:
+  faktor: 1.2
+  keterangan: "Tarif 20% lebih tinggi bagi penerima penghasilan yang tidak ber-NPWP."
+
+kategori_ter:
+  "TK/0": A
+  "TK/1": A
+  "K/0": A
+  "TK/2": B
+  "TK/3": B
+  "K/1": B
+  "K/2": B
+  "K/3": C
+
+bukan_pegawai:
+  dpp_persen: 50
+
+natura:
+  kupon_batas_sebulan: 2000000
+  bingkisan_batas_setahun: 3000000
+  olahraga_batas_setahun: 1500000
+  tempat_tinggal_batas_sebulan: 2000000
+  kendaraan_batas_rata_bruto_sebulan: 100000000
+
+pph26:
+  persen: 20
+
+ter_harian:
+  batas_bebas_harian: 450000
+  batas_atas_ter_harian: 2500000
+  dpp_persen_di_atas_batas: 50
+  lapisan:
+    - {batas_atas: 450000, persen: 0}
+    - {batas_atas: 2500000, persen: 0.5}
+
+pph_final_pesangon:
+  - {batas_atas: 50000000, persen: 0}
+  - {batas_atas: 100000000, persen: 5}
+  - {batas_atas: 500000000, persen: 15}
+  - {batas_atas: null, persen: 25}
+
+pph_final_manfaat_pensiun:
+  - {batas_atas: 50000000, persen: 0}
+  - {batas_atas: null, persen: 5}
+
+pph_final_honorarium_pns:
+  "I": 0
+  "II": 0
+  "III": 5
+  "IV": 15
+
+ter_bulanan:
+  A:
+    - {batas_atas: 5400000, persen: 0}
+    - {batas_atas: 5650000, persen: 0.25}
+    - {batas_atas: 5950000, persen: 0.5}
+    - {batas_atas: 6300000, persen: 0.75}
+    - {batas_atas: 6750000, persen: 1}
+    - {batas_atas: 7500000, persen: 1.25}
+    - {batas_atas: 8550000, persen: 1.5}
+    - {batas_atas: 9650000, persen: 1.75}
+    - {batas_atas: 10050000, persen: 2}
+    - {batas_atas: 10350000, persen: 2.25}
+    - {batas_atas: 10700000, persen: 2.5}
+    - {batas_atas: 11050000, persen: 3}
+    - {batas_atas: 11600000, persen: 3.5}
+    - {batas_atas: 12500000, persen: 4}
+    - {batas_atas: 13750000, persen: 5}
+    - {batas_atas: 15100000, persen: 6}
+    - {batas_atas: 16950000, persen: 7}
+    - {batas_atas: 19750000, persen: 8}
+    - {batas_atas: 24150000, persen: 9}
+    - {batas_atas: 26450000, persen: 10}
+    - {batas_atas: 28000000, persen: 11}
+    - {batas_atas: 30050000, persen: 12}
+    - {batas_atas: 32400000, persen: 13}
+    - {batas_atas: 35400000, persen: 14}
+    - {batas_atas: 39100000, persen: 15}
+    - {batas_atas: 43850000, persen: 16}
+    - {batas_atas: 47800000, persen: 17}
+    - {batas_atas: 51400000, persen: 18}
+    - {batas_atas: 56300000, persen: 19}
+    - {batas_atas: 62200000, persen: 20}
+    - {batas_atas: 68600000, persen: 21}
+    - {batas_atas: 77500000, persen: 22}
+    - {batas_atas: 89000000, persen: 23}
+    - {batas_atas: 103000000, persen: 24}
+    - {batas_atas: 125000000, persen: 25}
+    - {batas_atas: 157000000, persen: 26}
+    - {batas_atas: 206000000, persen: 27}
+    - {batas_atas: 337000000, persen: 28}
+    - {batas_atas: 454000000, persen: 29}
+    - {batas_atas: 550000000, persen: 30}
+    - {batas_atas: 695000000, persen: 31}
+    - {batas_atas: 910000000, persen: 32}
+    - {batas_atas: 1400000000, persen: 33}
+    - {batas_atas: null, persen: 34}
+
+  B:
+    - {batas_atas: 6200000, persen: 0}
+    - {batas_atas: 6500000, persen: 0.25}
+    - {batas_atas: 6850000, persen: 0.5}
+    - {batas_atas: 7300000, persen: 0.75}
+    - {batas_atas: 9200000, persen: 1}
+    - {batas_atas: 10750000, persen: 1.5}
+    - {batas_atas: 11250000, persen: 2}
+    - {batas_atas: 11600000, persen: 2.5}
+    - {batas_atas: 12600000, persen: 3}
+    - {batas_atas: 13600000, persen: 4}
+    - {batas_atas: 14950000, persen: 5}
+    - {batas_atas: 16400000, persen: 6}
+    - {batas_atas: 18450000, persen: 7}
+    - {batas_atas: 21850000, persen: 8}
+    - {batas_atas: 26000000, persen: 9}
+    - {batas_atas: 27700000, persen: 10}
+    - {batas_atas: 29350000, persen: 11}
+    - {batas_atas: 31450000, persen: 12}
+    - {batas_atas: 33950000, persen: 13}
+    - {batas_atas: 37100000, persen: 14}
+    - {batas_atas: 41100000, persen: 15}
+    - {batas_atas: 45800000, persen: 16}
+    - {batas_atas: 49500000, persen: 17}
+    - {batas_atas: 53800000, persen: 18}
+    - {batas_atas: 58500000, persen: 19}
+    - {batas_atas: 64000000, persen: 20}
+    - {batas_atas: 71000000, persen: 21}
+    - {batas_atas: 80000000, persen: 22}
+    - {batas_atas: 93000000, persen: 23}
+    - {batas_atas: 109000000, persen: 24}
+    - {batas_atas: 129000000, persen: 25}
+    - {batas_atas: 163000000, persen: 26}
+    - {batas_atas: 211000000, persen: 27}
+    - {batas_atas: 374000000, persen: 28}
+    - {batas_atas: 459000000, persen: 29}
+    - {batas_atas: 555000000, persen: 30}
+    - {batas_atas: 704000000, persen: 31}
+    - {batas_atas: 957000000, persen: 32}
+    - {batas_atas: 1405000000, persen: 33}
+    - {batas_atas: null, persen: 34}
+
+  C:
+    - {batas_atas: 6600000, persen: 0}
+    - {batas_atas: 6950000, persen: 0.25}
+    - {batas_atas: 7350000, persen: 0.5}
+    - {batas_atas: 7800000, persen: 0.75}
+    - {batas_atas: 8850000, persen: 1}
+    - {batas_atas: 9800000, persen: 1.25}
+    - {batas_atas: 10950000, persen: 1.5}
+    - {batas_atas: 11200000, persen: 1.75}
+    - {batas_atas: 12050000, persen: 2}
+    - {batas_atas: 12950000, persen: 3}
+    - {batas_atas: 14150000, persen: 4}
+    - {batas_atas: 15550000, persen: 5}
+    - {batas_atas: 17050000, persen: 6}
+    - {batas_atas: 19500000, persen: 7}
+    - {batas_atas: 22700000, persen: 8}
+    - {batas_atas: 26600000, persen: 9}
+    - {batas_atas: 28100000, persen: 10}
+    - {batas_atas: 30100000, persen: 11}
+    - {batas_atas: 32600000, persen: 12}
+    - {batas_atas: 35400000, persen: 13}
+    - {batas_atas: 38900000, persen: 14}
+    - {batas_atas: 43000000, persen: 15}
+    - {batas_atas: 47400000, persen: 16}
+    - {batas_atas: 51200000, persen: 17}
+    - {batas_atas: 55800000, persen: 18}
+    - {batas_atas: 60400000, persen: 19}
+    - {batas_atas: 66700000, persen: 20}
+    - {batas_atas: 74500000, persen: 21}
+    - {batas_atas: 83200000, persen: 22}
+    - {batas_atas: 95600000, persen: 23}
+    - {batas_atas: 110000000, persen: 24}
+    - {batas_atas: 134000000, persen: 25}
+    - {batas_atas: 169000000, persen: 26}
+    - {batas_atas: 221000000, persen: 27}
+    - {batas_atas: 390000000, persen: 28}
+    - {batas_atas: 463000000, persen: 29}
+    - {batas_atas: 561000000, persen: 30}
+    - {batas_atas: 709000000, persen: 31}
+    - {batas_atas: 965000000, persen: 32}
+    - {batas_atas: 1419000000, persen: 33}
+    - {batas_atas: null, persen: 34}

@@ -1,0 +1,953 @@
+kasus:
+  - nama: "TER A, TK/0, bruto 10.000.000"
+    sumber: hitung_manual
+    tool: calculate_pph21_permanent_monthly
+    argumen:
+      gaji_pokok: 10000000
+      status_ptkp: "TK/0"
+      masa_pajak: 1
+      tahun_pajak: 2025
+    harapan:
+      pph_terutang: "200000"
+      metode_tarif: "TER kategori A, tarif 2%"
+
+  - nama: "TER B, K/1, gaji 15jt + tunjangan 1jt"
+    sumber: hitung_manual
+    tool: calculate_pph21_permanent_monthly
+    argumen:
+      gaji_pokok: 15000000
+      tunjangan_tidak_tetap: 1000000
+      status_ptkp: "K/1"
+      masa_pajak: 3
+      tahun_pajak: 2025
+    harapan:
+      pph_terutang: "960000"
+      metode_tarif: "TER kategori B, tarif 6%"
+
+  - nama: "TER C, K/3, bruto di bawah ambang bebas"
+    sumber: hitung_manual
+    tool: calculate_pph21_permanent_monthly
+    argumen:
+      gaji_pokok: 6500000
+      status_ptkp: "K/3"
+      masa_pajak: 5
+      tahun_pajak: 2025
+    harapan:
+      pph_terutang: "0"
+
+  - nama: "TER A tanpa NPWP, tarif 20% lebih tinggi"
+    sumber: hitung_manual
+    tool: calculate_pph21_permanent_monthly
+    argumen:
+      gaji_pokok: 10000000
+      status_ptkp: "TK/0"
+      masa_pajak: 1
+      tahun_pajak: 2025
+      punya_npwp: false
+    harapan:
+      pph_sebelum_penalti: "200000"
+      penalti_non_npwp: "40000"
+      pph_terutang: "240000"
+
+  - nama: "Tahunan K/1, bruto 192jt setahun"
+    sumber: hitung_manual
+    tool: calculate_pph21_permanent_annual
+    argumen:
+      gaji_pokok: 180000000
+      tunjangan_tidak_tetap: 12000000
+      status_ptkp: "K/1"
+      tahun_pajak: 2025
+    harapan:
+      dasar_pengenaan_pajak: "123000000"
+      pph_terutang: "12450000"
+
+  - nama: "Tahunan TK/0 dengan iuran JHT dan JP yang dibayar pegawai"
+    sumber: hitung_manual
+    tool: calculate_pph21_permanent_annual
+    argumen:
+      gaji_pokok: 120000000
+      iuran_jht_dibayar_pegawai: 2400000
+      iuran_jp_dibayar_pegawai: 1200000
+      status_ptkp: "TK/0"
+      tahun_pajak: 2025
+    harapan:
+      dasar_pengenaan_pajak: "56400000"
+      pph_terutang: "2820000"
+
+  - nama: "Iuran BPJS Kesehatan pegawai bukan pengurang"
+    sumber: hitung_manual
+    tool: calculate_pph21_permanent_annual
+    argumen:
+      gaji_pokok: 120000000
+      iuran_bpjs_kesehatan_dibayar_pegawai: 1200000
+      status_ptkp: "TK/0"
+      tahun_pajak: 2025
+    harapan:
+      dasar_pengenaan_pajak: "60000000"
+      pph_terutang: "3000000"
+
+  - nama: "Iuran JHT dan JP yang dibayar perusahaan tidak menambah bruto"
+    sumber: hitung_manual
+    tool: calculate_pph21_permanent_annual
+    argumen:
+      gaji_pokok: 120000000
+      iuran_jht_dibayar_perusahaan: 4440000
+      iuran_jp_dibayar_perusahaan: 2400000
+      status_ptkp: "TK/0"
+      tahun_pajak: 2025
+    harapan:
+      penghasilan_bruto: "120000000"
+      dasar_pengenaan_pajak: "60000000"
+      pph_terutang: "3000000"
+
+  - nama: "Premi JKK, JKM, dan BPJS Kesehatan perusahaan menambah bruto"
+    sumber: hitung_manual
+    tool: calculate_pph21_permanent_annual
+    argumen:
+      gaji_pokok: 120000000
+      premi_jkk_dibayar_perusahaan: 288000
+      premi_jkm_dibayar_perusahaan: 360000
+      premi_bpjs_kesehatan_dibayar_perusahaan: 4800000
+      status_ptkp: "TK/0"
+      tahun_pajak: 2025
+    harapan:
+      penghasilan_bruto: "125448000"
+
+  - nama: "Desember K/1, sudah dipotong 11 x 960.000"
+    sumber: hitung_manual
+    tool: calculate_pph21_permanent_last_period
+    argumen:
+      gaji_pokok: 180000000
+      tunjangan_tidak_tetap: 12000000
+      status_ptkp: "K/1"
+      tahun_pajak: 2025
+      pph_sudah_dipotong: 10560000
+    harapan:
+      pph_terutang: "1890000"
+
+  - nama: "Desember TK/0, pindah kerja Juli (neto+PPh dari bukti potong pemberi lama digabung)"
+    sumber: hitung_manual
+    tool: calculate_pph21_permanent_last_period
+    argumen:
+      gaji_pokok: 90000000
+      status_ptkp: "TK/0"
+      tahun_pajak: 2025
+      bulan_masa_perolehan: 6
+      pph_sudah_dipotong: 4500000
+      neto_pemberi_kerja_sebelumnya: 57000000
+      pph_dipotong_pemberi_kerja_sebelumnya: 1500000
+    harapan:
+      penghasilan_bruto: "90000000"
+      dasar_pengenaan_pajak: "90000000"
+      pph_sebelum_penalti: "7500000"
+      pph_terutang: "1500000"
+
+  - nama: "Desember K/0 gross-up penuh setahun, gaji 20jt/bulan"
+    sumber: hitung_manual
+    tool: calculate_pph21_permanent_last_period
+    argumen:
+      gaji_pokok: 240000000
+      status_ptkp: "K/0"
+      tahun_pajak: 2025
+      pph_sudah_dipotong: 21758231
+      gross_up: true
+    harapan:
+      penghasilan_bruto: "263911650"
+      dasar_pengenaan_pajak: "199411000"
+      pph_sebelum_penalti: "23911650"
+      pph_terutang: "2153419"
+
+  - nama: "Pensiunan TER A, TK/0, uang pensiun 10.000.000 (TER sama dengan pegawai tetap)"
+    sumber: hitung_manual
+    tool: calculate_pph21_pensioner_monthly
+    argumen:
+      uang_pensiun: 10000000
+      status_ptkp: "TK/0"
+      masa_pajak: 1
+      tahun_pajak: 2025
+    harapan:
+      pph_terutang: "200000"
+      metode_tarif: "TER kategori A, tarif 2%"
+
+  - nama: "Pensiunan tahunan TK/0, biaya pensiun kena batas maksimal"
+    sumber: hitung_manual
+    tool: calculate_pph21_pensioner_annual
+    argumen:
+      uang_pensiun: 60000000
+      status_ptkp: "TK/0"
+      tahun_pajak: 2025
+    harapan:
+      dasar_pengenaan_pajak: "3600000"
+      pph_terutang: "180000"
+
+  - nama: "Pensiunan tahunan TK/0 dengan zakat melalui pembayar pensiun"
+    sumber: hitung_manual
+    tool: calculate_pph21_pensioner_annual
+    argumen:
+      uang_pensiun: 60000000
+      zakat_via_pembayar_pensiun: 1200000
+      status_ptkp: "TK/0"
+      tahun_pajak: 2025
+    harapan:
+      dasar_pengenaan_pajak: "2400000"
+      pph_terutang: "120000"
+
+  - nama: "Pensiunan masa pajak terakhir tanpa NPWP"
+    sumber: hitung_manual
+    tool: calculate_pph21_pensioner_last_period
+    argumen:
+      uang_pensiun: 60000000
+      status_ptkp: "TK/0"
+      tahun_pajak: 2025
+      punya_npwp: false
+      pph_sudah_dipotong: 150000
+    harapan:
+      pph_sebelum_penalti: "180000"
+      pph_terutang: "66000"
+
+  - nama: "Harian 400.000, di bawah ambang bebas"
+    sumber: hitung_manual
+    tool: calculate_pph21_non_permanent
+    argumen:
+      upah_per_periode: 400000
+      skema: harian
+      tahun_pajak: 2025
+    harapan:
+      pph_terutang: "0"
+
+  - nama: "Harian 500.000, TER harian 0,5%"
+    sumber: hitung_manual
+    tool: calculate_pph21_non_permanent
+    argumen:
+      upah_per_periode: 500000
+      skema: harian
+      tahun_pajak: 2025
+    harapan:
+      pph_terutang: "2500"
+
+  - nama: "Harian 3.000.000, di atas batas TER harian"
+    sumber: hitung_manual
+    tool: calculate_pph21_non_permanent
+    argumen:
+      upah_per_periode: 3000000
+      skema: harian
+      tahun_pajak: 2025
+    harapan:
+      dasar_pengenaan_pajak: "1500000"
+      pph_terutang: "75000"
+
+  - nama: "Borongan 3.000.000 untuk 6 hari, upah sehari 500.000"
+    sumber: hitung_manual
+    tool: calculate_pph21_non_permanent
+    argumen:
+      upah_per_periode: 3000000
+      skema: borongan
+      jumlah_hari: 6
+      tahun_pajak: 2025
+    harapan:
+      pph_terutang: "15000"
+
+  - nama: "Bukan pegawai, bruto 50jt, tidak berkesinambungan"
+    sumber: hitung_manual
+    tool: calculate_pph21_non_employee
+    argumen:
+      penghasilan_bruto: 50000000
+      tahun_pajak: 2025
+    harapan:
+      dasar_pengenaan_pajak: "25000000"
+      pph_terutang: "1250000"
+
+  - nama: "Bukan pegawai, bruto 150jt dalam satu masa pajak, lapisan naik ke 15%"
+    sumber: hitung_manual
+    tool: calculate_pph21_non_employee
+    argumen:
+      penghasilan_bruto: 150000000
+      tahun_pajak: 2025
+    harapan:
+      dasar_pengenaan_pajak: "75000000"
+      pph_terutang: "5250000"
+
+  - nama: "Lampiran PMK 168/2023 III, Tuan P, komisaris honorarium Desember"
+    sumber: lampiran_pmk_168_2023
+    tool: calculate_pph21_commissioner
+    argumen:
+      penghasilan_bruto: 60000000
+      status_ptkp: "TK/0"
+      tahun_pajak: 2024
+    harapan:
+      dasar_pengenaan_pajak: "60000000"
+      metode_tarif: "TER bulanan kategori A, tarif 20%"
+      pph_terutang: "12000000"
+
+  - nama: "Lampiran PMK 168/2023 VI.1, Tuan W, hadiah turnamen bulutangkis (peserta kegiatan)"
+    sumber: lampiran_pmk_168_2023
+    tool: calculate_pph21_direct_pasal_17
+    argumen:
+      jenis: peserta_kegiatan
+      penghasilan_bruto: 200000000
+      tahun_pajak: 2024
+    harapan:
+      pph_terutang: "24000000"
+
+  - nama: "Lampiran PMK 168/2023 VI.2, Tuan Q, penarikan manfaat pensiun April (peserta pensiun masih pegawai)"
+    sumber: lampiran_pmk_168_2023
+    tool: calculate_pph21_direct_pasal_17
+    argumen:
+      jenis: peserta_pensiun_pegawai
+      penghasilan_bruto: 20000000
+      tahun_pajak: 2024
+    harapan:
+      pph_terutang: "1000000"
+
+  - nama: "Lampiran PMK 168/2023 VI.2, Tuan Q, penarikan manfaat pensiun Juni (tidak kumulatif dari April)"
+    sumber: lampiran_pmk_168_2023
+    tool: calculate_pph21_direct_pasal_17
+    argumen:
+      jenis: peserta_pensiun_pegawai
+      penghasilan_bruto: 15000000
+      tahun_pajak: 2024
+    harapan:
+      pph_terutang: "750000"
+
+  - nama: "Lampiran PMK 168/2023 VI.3, Tuan O, jasa produksi setelah pensiun (mantan pegawai)"
+    sumber: lampiran_pmk_168_2023
+    tool: calculate_pph21_direct_pasal_17
+    argumen:
+      jenis: mantan_pegawai
+      penghasilan_bruto: 60000000
+      tahun_pajak: 2024
+    harapan:
+      pph_terutang: "3000000"
+
+  - nama: "Pesangon 200jt"
+    sumber: hitung_manual
+    tool: calculate_pph21_final
+    argumen:
+      jenis: pesangon
+      jumlah_bruto: 200000000
+      tahun_pajak: 2025
+    harapan:
+      pph_terutang: "17500000"
+
+  - nama: "Manfaat pensiun 100jt"
+    sumber: hitung_manual
+    tool: calculate_pph21_final
+    argumen:
+      jenis: manfaat_pensiun
+      jumlah_bruto: 100000000
+      tahun_pajak: 2025
+    harapan:
+      pph_terutang: "2500000"
+
+  - nama: "Honorarium PNS Golongan III"
+    sumber: hitung_manual
+    tool: calculate_pph21_final
+    argumen:
+      jenis: honorarium_pns
+      jumlah_bruto: 10000000
+      golongan: "III"
+      tahun_pajak: 2025
+    harapan:
+      pph_terutang: "500000"
+
+  - nama: "PPh 26 tarif umum 20%"
+    sumber: hitung_manual
+    tool: calculate_pph_pasal_26
+    argumen:
+      penghasilan_bruto: 100000000
+      tahun_pajak: 2025
+    harapan:
+      pph_terutang: "20000000"
+
+  - nama: "PPh 26 tarif P3B 10% dengan SKD"
+    sumber: hitung_manual
+    tool: calculate_pph_pasal_26
+    argumen:
+      penghasilan_bruto: 100000000
+      tarif_p3b_persen: 10
+      ada_surat_keterangan_domisili: true
+      tahun_pajak: 2025
+    harapan:
+      pph_terutang: "10000000"
+
+  - nama: "PPh 26 tarif P3B diminta tanpa SKD, tetap 20%"
+    sumber: hitung_manual
+    tool: calculate_pph_pasal_26
+    argumen:
+      penghasilan_bruto: 100000000
+      tarif_p3b_persen: 10
+      ada_surat_keterangan_domisili: false
+      tahun_pajak: 2025
+    harapan:
+      pph_terutang: "20000000"
+
+kasus_resmi:
+  - nama: "Lampiran PMK 168/2023 I.2.1.2, Tuan C, TER bulanan kategori A 7%"
+    sumber: lampiran_pmk_168_2023
+    tool: calculate_pph21_permanent_monthly
+    argumen:
+      gaji_pokok: 15500000
+      status_ptkp: "TK/0"
+      masa_pajak: 9
+      tahun_pajak: 2024
+    harapan:
+      pph_terutang: "1085000"
+      metode_tarif: "TER kategori A, tarif 7%"
+
+  - nama: "Lampiran PMK 168/2023 I.2.2.1, Tuan D, masa pajak terakhir Agustus (berhenti bekerja)"
+    sumber: lampiran_pmk_168_2023
+    tool: calculate_pph21_permanent_last_period
+    argumen:
+      gaji_pokok: 140000000
+      iuran_pensiun_dibayar_pegawai: 800000
+      status_ptkp: "TK/0"
+      tahun_pajak: 2024
+      pph_sudah_dipotong: 9800000
+      masa_pajak: 8
+      bulan_masa_perolehan: 8
+      disetahunkan: false
+    harapan:
+      dasar_pengenaan_pajak: "81200000"
+      pph_sebelum_penalti: "6180000"
+      pph_terutang: "-3620000"
+
+  - nama: "Lampiran PMK 168/2023 I.3, Tuan F, gaji dalam mata uang asing dikonversi Rupiah"
+    sumber: lampiran_pmk_168_2023
+    tool: calculate_pph21_permanent_monthly
+    argumen:
+      gaji_pokok: 30000000
+      status_ptkp: "K/3"
+      masa_pajak: 1
+      tahun_pajak: 2024
+    harapan:
+      pph_terutang: "3300000"
+      metode_tarif: "TER kategori C, tarif 11%"
+
+  - nama: "Lampiran PMK 168/2023 I.5, Tuan H, gaji + tunjangan PPh, iuran pensiun bukan pengurang di TER"
+    sumber: lampiran_pmk_168_2023
+    tool: calculate_pph21_permanent_monthly
+    argumen:
+      gaji_pokok: 6500000
+      tunjangan_pph: 300000
+      iuran_pensiun_dibayar_pegawai: 100000
+      status_ptkp: "K/2"
+      masa_pajak: 7
+      tahun_pajak: 2024
+    harapan:
+      penghasilan_bruto: "6800000"
+      pph_terutang: "34000"
+      metode_tarif: "TER kategori B, tarif 0.5%"
+
+  - nama: "Lampiran PMK 168/2023 IV.1.2, Tuan L, borongan di bawah ambang harian"
+    sumber: lampiran_pmk_168_2023
+    tool: calculate_pph21_non_permanent
+    argumen:
+      upah_per_periode: 4500000
+      skema: borongan
+      jumlah_hari: 10
+      tahun_pajak: 2024
+    harapan:
+      pph_terutang: "0"
+
+  - nama: "Lampiran PMK 168/2023 IV.1.3, Tuan M, satuan di atas ambang harian (1 hari)"
+    sumber: lampiran_pmk_168_2023
+    tool: calculate_pph21_non_permanent
+    argumen:
+      upah_per_periode: 3000000
+      skema: satuan
+      jumlah_hari: 1
+      tahun_pajak: 2024
+    harapan:
+      pph_terutang: "75000"
+
+  - nama: "Lampiran PMK 168/2023 IV.1.4, Tuan Z, borongan di atas ambang harian (5 hari)"
+    sumber: lampiran_pmk_168_2023
+    tool: calculate_pph21_non_permanent
+    argumen:
+      upah_per_periode: 15000000
+      skema: borongan
+      jumlah_hari: 5
+      tahun_pajak: 2024
+    harapan:
+      pph_terutang: "375000"
+
+  - nama: "Lampiran PMK 168/2023 VII.1, Tuan X, WPLN gaji Rupiah"
+    sumber: lampiran_pmk_168_2023
+    tool: calculate_pph_pasal_26
+    argumen:
+      penghasilan_bruto: 40000000
+      tahun_pajak: 2024
+    harapan:
+      pph_terutang: "8000000"
+
+  - nama: "Lampiran PMK 168/2023 VII.2, Tuan Y, WPLN gaji mata uang asing dikonversi Rupiah"
+    sumber: lampiran_pmk_168_2023
+    tool: calculate_pph_pasal_26
+    argumen:
+      penghasilan_bruto: 37500000
+      tahun_pajak: 2024
+    harapan:
+      pph_terutang: "7500000"
+
+  - nama: "Lampiran PMK 168/2023 V.2, Tuan R, dokter praktik RS (Januari)"
+    sumber: lampiran_pmk_168_2023
+    tool: calculate_pph21_non_employee
+    argumen:
+      penghasilan_bruto: 45000000
+      tahun_pajak: 2024
+    harapan:
+      dasar_pengenaan_pajak: "22500000"
+      pph_terutang: "1125000"
+
+  - nama: "Lampiran PMK 168/2023 V.2, Tuan R, dokter praktik RS (Juni, bruto tertinggi setahun)"
+    sumber: lampiran_pmk_168_2023
+    tool: calculate_pph21_non_employee
+    argumen:
+      penghasilan_bruto: 52000000
+      tahun_pajak: 2024
+    harapan:
+      dasar_pengenaan_pajak: "26000000"
+      pph_terutang: "1300000"
+
+  - nama: "Lampiran PMK 168/2023 V.2, Tuan R, dokter praktik RS (Desember, akumulasi setahun 262jt tapi tarif tetap 5%)"
+    sumber: lampiran_pmk_168_2023
+    tool: calculate_pph21_non_employee
+    argumen:
+      penghasilan_bruto: 40000000
+      tahun_pajak: 2024
+    harapan:
+      dasar_pengenaan_pajak: "20000000"
+      pph_terutang: "1000000"
+
+  - nama: "Lampiran PMK 168/2023 I.2.2.2, Tuan D pindah ke PT AB, menyerahkan bukti potong PT W"
+    sumber: lampiran_pmk_168_2023
+    tool: calculate_pph21_permanent_last_period
+    argumen:
+      gaji_pokok: 90000000
+      iuran_pensiun_dibayar_pegawai: 400000
+      status_ptkp: "TK/0"
+      tahun_pajak: 2024
+      bulan_masa_perolehan: 4
+      neto_pemberi_kerja_sebelumnya: 135200000
+      pph_dipotong_pemberi_kerja_sebelumnya: 6180000
+      pph_sudah_dipotong: 6075000
+    harapan:
+      penghasilan_bruto: "90000000"
+      dasar_pengenaan_pajak: "168800000"
+      pph_sebelum_penalti: "19320000"
+      pph_terutang: "7065000"
+
+  - nama: "Lampiran PMK 168/2023 I.2.2.2, Tuan D di PT AB TANPA bukti potong PT W (lebih potong)"
+    sumber: lampiran_pmk_168_2023
+    tool: calculate_pph21_permanent_last_period
+    argumen:
+      gaji_pokok: 90000000
+      iuran_pensiun_dibayar_pegawai: 400000
+      status_ptkp: "TK/0"
+      tahun_pajak: 2024
+      bulan_masa_perolehan: 4
+      pph_sudah_dipotong: 6075000
+    harapan:
+      dasar_pengenaan_pajak: "33600000"
+      pph_sebelum_penalti: "1680000"
+      pph_terutang: "-4395000"
+
+  - nama: "Lampiran PMK 168/2023 II, Tuan J, pensiunan Dana Pensiun, TER B 0,25%"
+    sumber: lampiran_pmk_168_2023
+    tool: calculate_pph21_pensioner_monthly
+    argumen:
+      uang_pensiun: 6300000
+      status_ptkp: "K/2"
+      masa_pajak: 1
+      tahun_pajak: 2024
+    harapan:
+      pph_terutang: "15750"
+
+  - nama: "Lampiran PMK 168/2023 II, Tuan J, masa pajak terakhir Desember"
+    sumber: lampiran_pmk_168_2023
+    tool: calculate_pph21_pensioner_last_period
+    argumen:
+      uang_pensiun: 75600000
+      status_ptkp: "K/2"
+      tahun_pajak: 2024
+      pph_sudah_dipotong: 173250
+    harapan:
+      dasar_pengenaan_pajak: "5700000"
+      pph_sebelum_penalti: "285000"
+      pph_terutang: "111750"
+
+  - nama: "Lampiran PMK 168/2023 C.1.2, Tuan B, pensiunan PNS, Juni dengan gaji ketiga belas (TER C 0%)"
+    sumber: lampiran_pmk_168_2023
+    tool: calculate_pph21_pensioner_monthly
+    argumen:
+      uang_pensiun: 2500000
+      penghasilan_lain: 2500000
+      status_ptkp: "K/3"
+      masa_pajak: 6
+      tahun_pajak: 2024
+    harapan:
+      penghasilan_bruto: "5000000"
+      pph_terutang: "0"
+
+  - nama: "Lampiran PMK 168/2023 C.1.2, Tuan B, pensiunan PNS, masa pajak terakhir (nihil)"
+    sumber: lampiran_pmk_168_2023
+    tool: calculate_pph21_pensioner_last_period
+    argumen:
+      uang_pensiun: 30000000
+      penghasilan_lain: 2500000
+      status_ptkp: "K/3"
+      tahun_pajak: 2024
+      pph_sudah_dipotong: 0
+    harapan:
+      penghasilan_bruto: "32500000"
+      dasar_pengenaan_pajak: "0"
+      pph_terutang: "0"
+
+  - nama: "Lampiran PMK 168/2023 C.1.4, Tuan D, mulai pensiun Juni, neto pemberi kerja sebelumnya digabung"
+    sumber: lampiran_pmk_168_2023
+    tool: calculate_pph21_pensioner_last_period
+    argumen:
+      uang_pensiun: 21000000
+      status_ptkp: "K/1"
+      tahun_pajak: 2024
+      bulan_masa_perolehan: 7
+      neto_pemberi_sebelumnya: 48905000
+      pph_dipotong_pemberi_sebelumnya: 0
+      pph_sudah_dipotong: 0
+    harapan:
+      dasar_pengenaan_pajak: "5855000"
+      pph_terutang: "292750"
+
+  - nama: "Lampiran PMK 168/2023 I.2.2.3, Tuan E, berhenti dan meninggalkan Indonesia (disetahunkan)"
+    sumber: lampiran_pmk_168_2023
+    tool: calculate_pph21_permanent_last_period
+    argumen:
+      gaji_pokok: 140000000
+      status_ptkp: "TK/0"
+      tahun_pajak: 2024
+      masa_pajak: 8
+      bulan_masa_perolehan: 8
+      disetahunkan: true
+      pph_sudah_dipotong: 9800000
+    harapan:
+      dasar_pengenaan_pajak: "150000000"
+      pph_sebelum_penalti: "11000000"
+      pph_terutang: "1200000"
+
+  - nama: "Lampiran PMK 168/2023 I.1, Tuan A, Januari (TER A 13%)"
+    sumber: lampiran_pmk_168_2023
+    tool: calculate_pph21_permanent_monthly
+    argumen:
+      gaji_pokok: 10000000
+      tunjangan_tetap: 20000000
+      premi_jkk_dibayar_perusahaan: 50000
+      premi_jkm_dibayar_perusahaan: 30000
+      status_ptkp: "K/0"
+      masa_pajak: 1
+      tahun_pajak: 2024
+    harapan:
+      penghasilan_bruto: "30080000"
+      pph_terutang: "3910400"
+
+  - nama: "Lampiran PMK 168/2023 I.1, Tuan A, Juli dengan THR (TER A 18%)"
+    sumber: lampiran_pmk_168_2023
+    tool: calculate_pph21_permanent_monthly
+    argumen:
+      gaji_pokok: 10000000
+      tunjangan_tetap: 20000000
+      bonus_thr_komisi: 20000000
+      premi_jkk_dibayar_perusahaan: 50000
+      premi_jkm_dibayar_perusahaan: 30000
+      status_ptkp: "K/0"
+      masa_pajak: 7
+      tahun_pajak: 2024
+    harapan:
+      penghasilan_bruto: "50080000"
+      pph_terutang: "9014400"
+
+  - nama: "Lampiran PMK 168/2023 I.1, Tuan A, masa pajak terakhir Desember"
+    sumber: lampiran_pmk_168_2023
+    tool: calculate_pph21_permanent_last_period
+    argumen:
+      gaji_pokok: 120000000
+      tunjangan_tetap: 240000000
+      bonus_thr_komisi: 80000000
+      lembur: 10000000
+      premi_jkk_dibayar_perusahaan: 600000
+      premi_jkm_dibayar_perusahaan: 360000
+      iuran_pensiun_dibayar_pegawai: 1200000
+      zakat_via_pemberi_kerja: 2400000
+      status_ptkp: "K/0"
+      tahun_pajak: 2024
+      pph_sudah_dipotong: 50120000
+    harapan:
+      penghasilan_bruto: "450960000"
+      dasar_pengenaan_pajak: "382860000"
+      pph_sebelum_penalti: "64715000"
+      pph_terutang: "14595000"
+
+  - nama: "Lampiran PMK 168/2023 I.2.1.1, Tuan B, mulai bekerja September (lebih potong)"
+    sumber: lampiran_pmk_168_2023
+    tool: calculate_pph21_permanent_last_period
+    argumen:
+      gaji_pokok: 62000000
+      iuran_pensiun_dibayar_pegawai: 400000
+      status_ptkp: "TK/0"
+      tahun_pajak: 2024
+      bulan_masa_perolehan: 4
+      pph_sudah_dipotong: 3255000
+    harapan:
+      dasar_pengenaan_pajak: "5600000"
+      pph_sebelum_penalti: "280000"
+      pph_terutang: "-2975000"
+
+  - nama: "Lampiran PMK 168/2023 I.2.1.2, Tuan C, WNA mulai menetap September, Desember (disetahunkan)"
+    sumber: lampiran_pmk_168_2023
+    tool: calculate_pph21_permanent_last_period
+    argumen:
+      gaji_pokok: 62000000
+      zakat_via_pemberi_kerja: 3100000
+      status_ptkp: "TK/0"
+      tahun_pajak: 2024
+      bulan_masa_perolehan: 4
+      disetahunkan: true
+      pph_sudah_dipotong: 3255000
+    harapan:
+      dasar_pengenaan_pajak: "116700000"
+      pph_sebelum_penalti: "3835000"
+      pph_terutang: "580000"
+
+  - nama: "Lampiran PMK 168/2023 I.4, Tuan G, PPh ditanggung pemberi kerja (full gross-up)"
+    sumber: lampiran_pmk_168_2023
+    tool: calculate_pph21_permanent_monthly
+    argumen:
+      gaji_pokok: 51827997
+      status_ptkp: "TK/0"
+      masa_pajak: 8
+      tahun_pajak: 2024
+      gross_up: true
+    harapan:
+      penghasilan_bruto: "65605059"
+      metode_tarif: "TER kategori A, tarif 21%"
+      pph_terutang: "13777062"
+
+  - nama: "Lampiran PMK 168/2023 I.6, Tuan I, gaji + beasiswa (natura), TER B 19% (lihat erratum)"
+    sumber: lampiran_pmk_168_2023
+    tool: calculate_pph21_permanent_monthly
+    argumen:
+      gaji_pokok: 35000000
+      natura_kena_pajak: 20000000
+      status_ptkp: "K/1"
+      masa_pajak: 1
+      tahun_pajak: 2024
+    harapan:
+      penghasilan_bruto: "55000000"
+      metode_tarif: "TER kategori B, tarif 19%"
+      pph_terutang: "10450000"
+
+  - nama: "Lampiran PMK 168/2023 IV.1.1, Tuan K, upah harian 500.000 (TER harian 0,5%)"
+    sumber: lampiran_pmk_168_2023
+    tool: calculate_pph21_non_permanent
+    argumen:
+      upah_per_periode: 500000
+      skema: harian
+      jumlah_hari: 1
+      tahun_pajak: 2024
+    harapan:
+      pph_terutang: "2500"
+
+  - nama: "Lampiran PMK 168/2023 IV.2, Tuan N, pegawai tidak tetap bulanan, Juni 6.000.000"
+    sumber: lampiran_pmk_168_2023
+    tool: calculate_pph21_non_permanent
+    argumen:
+      upah_per_periode: 6000000
+      skema: bulanan
+      status_ptkp: "TK/0"
+      tahun_pajak: 2024
+    harapan:
+      pph_terutang: "45000"
+
+  - nama: "Lampiran PMK 168/2023 IV.2, Tuan N, pegawai tidak tetap bulanan, Oktober 9.000.000"
+    sumber: lampiran_pmk_168_2023
+    tool: calculate_pph21_non_permanent
+    argumen:
+      upah_per_periode: 9000000
+      skema: bulanan
+      status_ptkp: "TK/0"
+      tahun_pajak: 2024
+    harapan:
+      pph_terutang: "157500"
+
+  - nama: "Lampiran PMK 168/2023 IV.2, Tuan N, pegawai tidak tetap bulanan, Desember 8.000.000 (tetap TER)"
+    sumber: lampiran_pmk_168_2023
+    tool: calculate_pph21_non_permanent
+    argumen:
+      upah_per_periode: 8000000
+      skema: bulanan
+      status_ptkp: "TK/0"
+      tahun_pajak: 2024
+    harapan:
+      pph_terutang: "120000"
+
+  - nama: "Lampiran PMK 168/2023 V.1, Tuan U, pengacara, imbalan 400.000.000"
+    sumber: lampiran_pmk_168_2023
+    tool: calculate_pph21_non_employee
+    argumen:
+      penghasilan_bruto: 400000000
+      tahun_pajak: 2024
+    harapan:
+      dasar_pengenaan_pajak: "200000000"
+      pph_terutang: "24000000"
+
+  - nama: "Lampiran PMK 168/2023 V.3, Tuan T, jasa perbaikan komputer 7.000.000"
+    sumber: lampiran_pmk_168_2023
+    tool: calculate_pph21_non_employee
+    argumen:
+      penghasilan_bruto: 7000000
+      tahun_pajak: 2024
+    harapan:
+      dasar_pengenaan_pajak: "3500000"
+      pph_terutang: "175000"
+
+  - nama: "Lampiran PMK 168/2023 V.4, Tuan V, jasa AC, upah ahli dan komponen dikecualikan dari bruto"
+    sumber: lampiran_pmk_168_2023
+    tool: calculate_pph21_non_employee
+    argumen:
+      penghasilan_bruto: 10000000
+      pembayaran_dikecualikan: 5500000
+      tahun_pajak: 2024
+    harapan:
+      penghasilan_bruto: "4500000"
+      dasar_pengenaan_pajak: "2250000"
+      pph_terutang: "112500"
+
+  - nama: "Lampiran PMK 168/2023 C.1.1, Tuan A (PNS), Januari TER B 1,5%"
+    sumber: lampiran_pmk_168_2023
+    tool: calculate_pph21_permanent_monthly
+    argumen:
+      gaji_pokok: 3000000
+      tunjangan_tetap: 7545000
+      status_ptkp: "K/1"
+      masa_pajak: 1
+      tahun_pajak: 2024
+    harapan:
+      pph_terutang: "158175"
+
+  - nama: "Lampiran PMK 168/2023 C.1.1, Tuan A (PNS), Juni dengan gaji ketiga belas (TER B 8%)"
+    sumber: lampiran_pmk_168_2023
+    tool: calculate_pph21_permanent_monthly
+    argumen:
+      gaji_pokok: 3000000
+      tunjangan_tetap: 7017000
+      bonus_thr_komisi: 10017000
+      status_ptkp: "K/1"
+      masa_pajak: 6
+      tahun_pajak: 2024
+    harapan:
+      penghasilan_bruto: "20034000"
+      pph_terutang: "1602720"
+
+  - nama: "Lampiran PMK 168/2023 C.1.1, Tuan A (PNS), masa pajak terakhir Desember"
+    sumber: lampiran_pmk_168_2023
+    tool: calculate_pph21_permanent_last_period
+    argumen:
+      gaji_pokok: 36000000
+      tunjangan_tetap: 87504000
+      bonus_thr_komisi: 12017000
+      status_ptkp: "K/1"
+      tahun_pajak: 2024
+      pph_sudah_dipotong: 3359085
+    harapan:
+      penghasilan_bruto: "135521000"
+      dasar_pengenaan_pajak: "66521000"
+      pph_sebelum_penalti: "3978150"
+      pph_terutang: "619065"
+
+  - nama: "Lampiran PMK 168/2023 C.1.3, Tuan C, pemberi kerja pertama (KPP A) Desember"
+    sumber: lampiran_pmk_168_2023
+    tool: calculate_pph21_permanent_last_period
+    argumen:
+      gaji_pokok: 36000000
+      tunjangan_tetap: 68490000
+      bonus_thr_komisi: 8545000
+      status_ptkp: "K/1"
+      tahun_pajak: 2024
+      pph_sudah_dipotong: 2068300
+    harapan:
+      penghasilan_bruto: "113035000"
+      dasar_pengenaan_pajak: "44383000"
+      pph_sebelum_penalti: "2219150"
+      pph_terutang: "150850"
+
+  - nama: "Lampiran PMK 168/2023 C.1.3, Tuan C, pemberi kerja kedua (KIP B) menggabung neto KPP A"
+    sumber: lampiran_pmk_168_2023
+    tool: calculate_pph21_permanent_last_period
+    argumen:
+      tunjangan_tetap: 17115000
+      status_ptkp: "K/1"
+      tahun_pajak: 2024
+      neto_pemberi_kerja_sebelumnya: 107383250
+      pph_dipotong_pemberi_kerja_sebelumnya: 2219150
+      pph_sudah_dipotong: 0
+    harapan:
+      dasar_pengenaan_pajak: "60642000"
+      pph_sebelum_penalti: "3096300"
+      pph_terutang: "877150"
+
+  - nama: "Lampiran PMK 66/2023 B.1 contoh 1, kupon 2,7jt, makanan kantor 2,5jt"
+    sumber: lampiran_pmk_66_2023
+    tool: calculate_taxable_natura
+    argumen:
+      kupon_makanan: 2700000
+      nilai_makanan_kantor_sebulan: 2500000
+      tahun_pajak: 2024
+    harapan:
+      natura_kena_pajak: "200000"
+
+  - nama: "Lampiran PMK 66/2023 B.1 contoh 2, kupon 2,3jt, makanan kantor 1,5jt (batas 2jt)"
+    sumber: lampiran_pmk_66_2023
+    tool: calculate_taxable_natura
+    argumen:
+      kupon_makanan: 2300000
+      nilai_makanan_kantor_sebulan: 1500000
+      tahun_pajak: 2024
+    harapan:
+      natura_kena_pajak: "300000"
+
+  - nama: "Lampiran PMK 66/2023 B.2, Tuan BZ, Februari bingkisan Imlek (dikecualikan penuh)"
+    sumber: lampiran_pmk_66_2023
+    tool: calculate_taxable_natura
+    argumen:
+      bingkisan_hari_raya: 500000
+      tahun_pajak: 2024
+    harapan:
+      natura_kena_pajak: "0"
+
+  - nama: "Lampiran PMK 66/2023 B.2, Tuan BZ, Maret bingkisan 1jt (akumulasi 1jt)"
+    sumber: lampiran_pmk_66_2023
+    tool: calculate_taxable_natura
+    argumen:
+      bingkisan_lain: 1000000
+      tahun_pajak: 2024
+    harapan:
+      natura_kena_pajak: "0"
+
+  - nama: "Lampiran PMK 66/2023 B.2, Tuan BZ, Juni bingkisan 4jt (akumulasi 5jt, kelebihan 2jt)"
+    sumber: lampiran_pmk_66_2023
+    tool: calculate_taxable_natura
+    argumen:
+      bingkisan_lain: 4000000
+      bingkisan_lain_sebelumnya_tahun_ini: 1000000
+      tahun_pajak: 2024
+    harapan:
+      natura_kena_pajak: "2000000"
+
+  - nama: "Lampiran PMK 66/2023 B.2, Tuan BZ, Agustus bingkisan 2jt (batas sudah terlampaui)"
+    sumber: lampiran_pmk_66_2023
+    tool: calculate_taxable_natura
+    argumen:
+      bingkisan_lain: 2000000
+      bingkisan_lain_sebelumnya_tahun_ini: 5000000
+      tahun_pajak: 2024
+    harapan:
+      natura_kena_pajak: "2000000"

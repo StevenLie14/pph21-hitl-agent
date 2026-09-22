@@ -1,0 +1,15 @@
+meta:
+  tahun_pajak: 2026
+  berlaku_sejak: "2026-01-01"
+  terverifikasi: true
+  warisi_dari: 2025
+  catatan_verifikasi: >
+    Mewarisi seluruh tabel dari tarif_2025.yaml -> tarif_2024.yaml (sudah
+    diverifikasi baris demi baris terhadap Lampiran PP 58/2023, lihat README.md
+    bagian 10). Dasar tidak adanya perubahan untuk 2026: (1) cek 2026-09-22,
+    halaman JDIH PP No. 58 Tahun 2023 berstatus "Berlaku" tanpa peraturan
+    pengubah; (2) run `pph21 monitor` 2026-10-04 (kanari lolos, relasi
+    PMK 168/2023, PP 58/2023, PMK 101/2016, PMK 66/2023 tidak berubah, tidak
+    ada temuan kategori dasar di feed). Peraturan 2026 yang terkait PPh 21
+    (PMK 105/2025, PMK 6/2026) adalah fasilitas PPh 21 Ditanggung Pemerintah,
+    bukan perubahan tabel TER/PTKP/tarif Pasal 17/biaya jabatan/biaya pensiun.

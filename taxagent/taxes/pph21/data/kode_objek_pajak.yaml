@@ -1,0 +1,68 @@
+sumber: "Lampiran PER-11/PJ/2025"
+
+kode:
+  "21-100-01": {objek: "Penghasilan yang diterima atau diperoleh Pegawai Tetap", formulir: BPA1, final: false}
+  "21-100-02": {objek: "Penghasilan yang diterima atau diperoleh Pensiunan secara teratur", formulir: BPA1, final: false}
+  "21-100-32": {objek: "Penghasilan Pegawai Tetap yang menerima fasilitas di daerah tertentu", formulir: BPA1, final: true}
+  "21-100-04": {objek: "Imbalan kepada distributor perusahaan pemasaran berjenjang atau penjualan langsung", formulir: BP21, final: false}
+  "21-100-05": {objek: "Imbalan kepada agen asuransi", formulir: BP21, final: false}
+  "21-100-06": {objek: "Imbalan kepada petugas penjaja barang dagangan", formulir: BP21, final: false}
+  "21-100-07": {objek: "Imbalan kepada tenaga ahli (pengacara, akuntan, arsitek, dokter, konsultan, notaris, PPAT, penilai, aktuaris)", formulir: BP21, final: false}
+  "21-100-10": {objek: "Honorarium anggota dewan komisaris atau dewan pengawas yang diterima tidak teratur", formulir: BP21, final: false}
+  "21-100-11": {objek: "Penghasilan mantan pegawai (jasa produksi, tantiem, gratifikasi, bonus, imbalan tidak teratur lain)", formulir: BP21, final: false}
+  "21-100-12": {objek: "Uang manfaat pensiun yang diambil sebagian oleh peserta program pensiun yang masih pegawai", formulir: BP21, final: false}
+  "21-100-14": {objek: "Imbalan kepada peserta rapat, konferensi, sidang, pertemuan, kunjungan kerja, seminar, lokakarya, atau pertunjukan", formulir: BP21, final: false}
+  "21-100-15": {objek: "Imbalan kepada peserta atau anggota kepanitiaan penyelenggara kegiatan tertentu", formulir: BP21, final: false}
+  "21-100-16": {objek: "Imbalan kepada peserta pendidikan, pelatihan, dan magang", formulir: BP21, final: false}
+  "21-100-17": {objek: "Imbalan kepada peserta kegiatan lainnya", formulir: BP21, final: false}
+  "21-100-18": {objek: "Imbalan kepada penasihat, pengajar, pelatih, penceramah, penyuluh, dan moderator", formulir: BP21, final: false}
+  "21-100-19": {objek: "Imbalan kepada pengarang, peneliti, penerjemah", formulir: BP21, final: false}
+  "21-100-20": {objek: "Imbalan kepada pemberi jasa dalam segala bidang", formulir: BP21, final: false}
+  "21-100-21": {objek: "Imbalan kepada agen iklan", formulir: BP21, final: false}
+  "21-100-22": {objek: "Imbalan kepada pengawas atau pengelola proyek", formulir: BP21, final: false}
+  "21-100-23": {objek: "Imbalan kepada pembawa pesanan, penemu langganan, atau perantara", formulir: BP21, final: false}
+  "21-100-24": {objek: "Upah pegawai tidak tetap harian, mingguan, satuan, borongan sampai dengan Rp2.500.000 sehari", formulir: BP21, final: false}
+  "21-100-25": {objek: "Uang pesangon, uang manfaat pensiun, THT, atau JHT yang terutang atau dibayarkan pada tahun ketiga dan seterusnya", formulir: BP21, final: false}
+  "21-100-30": {objek: "Upah pegawai tidak tetap harian, mingguan, satuan, borongan lebih dari Rp2.500.000 sehari", formulir: BP21, final: false}
+  "21-100-33": {objek: "Imbalan kepada pemain musik, pembawa acara, penyanyi, bintang film/iklan, kru film, model, penari, pembuat konten daring (influencer, selebgram, blogger, vlogger), dan seniman lainnya", formulir: BP21, final: false}
+  "21-100-34": {objek: "Imbalan yang diterima olahragawan", formulir: BP21, final: false}
+  "21-100-35": {objek: "Upah pegawai tidak tetap yang dibayarkan secara bulanan", formulir: BP21, final: false}
+  "21-100-36": {objek: "Imbalan kepada peserta perlombaan dalam segala bidang", formulir: BP21, final: false}
+  "21-100-27": {objek: "Upah pegawai tidak tetap bulanan yang mendapat fasilitas di daerah tertentu", formulir: BP21, final: true}
+  "21-100-29": {objek: "Upah pegawai tidak tetap harian, mingguan, satuan, borongan sampai dengan Rp2.500.000 sehari yang mendapat fasilitas di daerah tertentu", formulir: BP21, final: true}
+  "21-100-31": {objek: "Upah pegawai tidak tetap harian, mingguan, satuan, borongan lebih dari Rp2.500.000 sehari yang mendapat fasilitas di daerah tertentu", formulir: BP21, final: true}
+  "21-100-37": {objek: "Penghasilan Pegawai Tetap di daerah tertentu yang tidak memenuhi persyaratan fasilitas", formulir: BP21, final: true}
+  "21-401-01": {objek: "Uang pesangon yang dibayarkan sekaligus", formulir: BP21, final: true}
+  "21-401-02": {objek: "Uang manfaat pensiun, THT, atau JHT yang dibayarkan sekaligus", formulir: BP21, final: true}
+  "21-402-02": {objek: "Honor APBN/APBD untuk PNS golongan III, TNI/POLRI perwira pertama, dan pensiunannya", formulir: BP21, final: true}
+  "21-402-03": {objek: "Honor APBN/APBD untuk pejabat negara, PNS golongan IV, TNI/POLRI perwira menengah dan tinggi, dan pensiunannya", formulir: BP21, final: true}
+  "21-402-04": {objek: "Honor APBN/APBD untuk PNS golongan I dan II, TNI/POLRI tamtama dan bintara, dan pensiunannya", formulir: BP21, final: true}
+  "21-100-38": {objek: "Penyesuaian nilai kompensasi dari masa pajak sebelumnya", formulir: BP21, final: true}
+  "27-100-99": {objek: "Imbalan jasa, pekerjaan, kegiatan, hadiah, penghargaan, pensiun, dan pembayaran berkala lain yang dipotong PPh Pasal 26", formulir: BP26, final: false}
+
+jenis_jasa:
+  distributor_mlm: "21-100-04"
+  agen_asuransi: "21-100-05"
+  penjaja_barang: "21-100-06"
+  tenaga_ahli: "21-100-07"
+  penasihat_pengajar: "21-100-18"
+  pengarang_peneliti: "21-100-19"
+  pemberi_jasa_lain: "21-100-20"
+  agen_iklan: "21-100-21"
+  pengawas_proyek: "21-100-22"
+  perantara: "21-100-23"
+  seniman_influencer: "21-100-33"
+  olahragawan: "21-100-34"
+
+jenis_kegiatan:
+  rapat_seminar: "21-100-14"
+  panitia: "21-100-15"
+  pendidikan_pelatihan: "21-100-16"
+  perlombaan: "21-100-36"
+  lainnya: "21-100-17"
+
+honorarium_golongan:
+  I: "21-402-04"
+  II: "21-402-04"
+  III: "21-402-02"
+  IV: "21-402-03"
