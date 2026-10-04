@@ -1,0 +1,74 @@
+parameter:
+  ptkp:
+    deskripsi: "Penghasilan Tidak Kena Pajak: besaran untuk diri, kawin, tanggungan"
+    istilah: ["penghasilan tidak kena pajak", "ptkp"]
+    masukan_ke: [kategori_ter, ter_bulanan]
+  biaya_jabatan:
+    deskripsi: "Biaya jabatan pegawai tetap: persen dan batas maksimal sebulan/setahun"
+    istilah: ["biaya jabatan"]
+  biaya_pensiun:
+    deskripsi: "Biaya pensiun bagi penerima pensiun berkala: persen dan batas maksimal"
+    istilah: ["biaya pensiun"]
+  pembulatan_pkp:
+    deskripsi: "Pembulatan Penghasilan Kena Pajak sebelum tarif Pasal 17"
+    istilah: ["dibulatkan"]
+  tarif_pasal_17:
+    deskripsi: "Lapisan tarif progresif Pasal 17 ayat (1) huruf a UU PPh"
+    istilah: ["pasal 17 ayat (1)", "lapisan penghasilan kena pajak"]
+  non_npwp:
+    deskripsi: "Tarif lebih tinggi bagi penerima tanpa NPWP/NIK"
+    istilah: ["tidak memiliki nomor pokok wajib pajak", "lebih tinggi 20%"]
+  kategori_ter:
+    deskripsi: "Pemetaan status PTKP ke kategori TER A, B, C"
+    istilah: ["kategori a", "kategori b", "kategori c"]
+    masukan_ke: [ter_bulanan]
+  ter_bulanan:
+    deskripsi: "Tabel tarif efektif rata-rata (TER) bulanan per kategori"
+    istilah: ["tarif efektif bulanan", "tarif efektif rata-rata"]
+  ter_harian:
+    deskripsi: "TER harian dan batas penghasilan harian yang tidak dipotong (pegawai tidak tetap)"
+    istilah: ["tarif efektif harian", "pegawai harian", "upah harian"]
+  bukan_pegawai:
+    deskripsi: "Dasar pengenaan pajak penerima bukan pegawai (persen dari bruto)"
+    istilah: ["bukan pegawai"]
+  pph26:
+    deskripsi: "Tarif PPh Pasal 26 bagi penerima luar negeri"
+    istilah: ["pasal 26"]
+  pph_final_pesangon:
+    deskripsi: "Tarif PPh final atas uang pesangon yang dibayar sekaligus"
+    istilah: ["pesangon"]
+  pph_final_manfaat_pensiun:
+    deskripsi: "Tarif PPh final atas manfaat pensiun, THT, JHT yang dibayar sekaligus"
+    istilah: ["manfaat pensiun", "tunjangan hari tua", "jaminan hari tua"]
+  pph_final_honorarium_pns:
+    deskripsi: "Tarif PPh final atas honorarium dan imbalan beban APBN/APBD bagi PNS, TNI/Polri"
+    istilah: ["honorarium", "anggaran pendapatan dan belanja negara"]
+  natura:
+    deskripsi: "Perlakuan natura dan/atau kenikmatan sebagai penghasilan pegawai"
+    istilah: ["natura", "kenikmatan"]
+  mekanisme_pemotongan:
+    deskripsi: "Logika hitung (bukan angka): penerima, pengurang seperti zakat/iuran, pemberi kerja kriteria tertentu, masa pajak terakhir"
+    istilah: ["zakat", "iuran", "dapat dikurangkan", "pemberi kerja dengan kriteria tertentu", "masa pajak terakhir"]
+
+atribut_kode:
+  ptkp: ptkp
+  annual_ptkp: ptkp
+  biaya_jabatan: biaya_jabatan
+  biaya_pensiun: biaya_pensiun
+  pembulatan_pkp: pembulatan_pkp
+  tarif_pasal_17: tarif_pasal_17
+  faktor_non_npwp: non_npwp
+  ter_category: kategori_ter
+  monthly_ter_rate: ter_bulanan
+  monthly_ter_brackets: ter_bulanan
+  daily_ter_rate: ter_harian
+  ter_harian: ter_harian
+  bukan_pegawai: bukan_pegawai
+  pph26_persen: pph26
+  final_pesangon: pph_final_pesangon
+  final_manfaat_pensiun: pph_final_manfaat_pensiun
+  final_honorarium_pns: pph_final_honorarium_pns
+
+modul_parameter:
+  in_kind.py: [natura]
+  pensioner.py: [non_npwp]

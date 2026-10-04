@@ -1,0 +1,124 @@
+peraturan:
+  - id: "UU 7 Tahun 1983"
+    peran: dasar
+    mengatur: [tarif_pasal_17, ptkp]
+    mengatur_pasal:
+      "4": [natura]
+      "7": [ptkp]
+      "17": [tarif_pasal_17]
+      "21": [mekanisme_pemotongan]
+      "26": [pph26]
+    catatan: "UU PPh; diubah terakhir dengan UU 7/2021 (HPP). Perubahan UU PPh berikutnya akan 'mengubah UU 7 Tahun 1983'."
+  - id: "UU 7 Tahun 2021"
+    peran: dasar
+    mengatur: [tarif_pasal_17]
+    catatan: "UU HPP, lapisan tarif Pasal 17 ayat (1) huruf a."
+  - id: "PP 58 Tahun 2023"
+    peran: dasar
+    mengatur: [ter_bulanan, ter_harian, kategori_ter]
+  - id: "PMK 168 Tahun 2023"
+    peran: dasar
+    mengatur: [biaya_jabatan, biaya_pensiun, mekanisme_pemotongan]
+  - id: "101/PMK.010/2016"
+    peran: dasar
+    mengatur: [ptkp]
+    pemicu: ["PP 58 Tahun 2023"]
+  - id: "PP 68 Tahun 2009"
+    peran: dasar
+    mengatur: [pph_final_pesangon, pph_final_manfaat_pensiun]
+  - id: "PP 80 Tahun 2010"
+    peran: dasar
+    mengatur: [pph_final_honorarium_pns]
+    catatan: "Dicabut sebagian oleh PP 58/2023 (Pasal 2 ayat (3)); Pasal 4 ayat (2) masih dipakai."
+  - id: "PMK 66 Tahun 2023"
+    peran: dasar
+    mengatur: [natura]
+
+  - id: "PMK 10 Tahun 2025"
+    peran: fasilitas
+    berlaku_sampai: "2025-12-31"
+    catatan: "PPh 21 DTP stimulus ekonomi TA 2025 (teks: Masa Pajak Januari s.d. Desember 2025)."
+  - id: "PMK 72 Tahun 2025"
+    peran: fasilitas
+    berlaku_sampai: "2025-12-31"
+    catatan: "Perubahan PMK 10/2025."
+  - id: "PMK 105 Tahun 2025"
+    peran: fasilitas
+    berlaku_sampai: "2026-12-31"
+    catatan: "PPh 21 DTP stimulus ekonomi TA 2026 (teks, dicek 2026-10-04: Masa Pajak Januari 2026 s.d. Desember 2026)."
+
+  - id: "PER-2/PJ/2024"
+    peran: prosedural
+    catatan: "Bukti pemotongan PPh 21/26."
+  - id: "PER-11/PJ/2025"
+    peran: prosedural
+    catatan: "Pelaporan dalam rangka Coretax."
+
+kata_kunci:
+  kuat:
+    - "PASAL 21"
+    - "PASAL 26"
+    - "PENGHASILAN TIDAK KENA PAJAK"
+    - "BIAYA JABATAN"
+    - "BIAYA PENSIUN"
+    - "NATURA"
+    - "SEHUBUNGAN DENGAN PEKERJAAN"
+    - "ZAKAT"
+    - "IURAN PENSIUN"
+  fasilitas:
+    - "DITANGGUNG PEMERINTAH"
+    - "INSENTIF"
+    - "STIMULUS"
+    - "FASILITAS"
+  prosedural:
+    - "BUKTI PEMOTONGAN"
+    - "SURAT PEMBERITAHUAN"
+    - "PELAPORAN"
+    - "SISTEM INTI ADMINISTRASI PERPAJAKAN"
+    - "CORETAX"
+    - "TATA CARA"
+  objek_lain:
+    - "NILAI KURS"
+    - "SURAT BERHARGA"
+    - "OBLIGASI"
+    - "SUKUK"
+    - "BUNGA"
+    - "PERTAMBAHAN NILAI"
+    - "BEA MASUK"
+    - "BEA KELUAR"
+    - "CUKAI"
+    - "IMPOR"
+    - "EKSPOR"
+    - "PENERIMAAN NEGARA BUKAN PAJAK"
+    - "USAHA MIKRO"
+    - "BARANG MEWAH"
+  objek_pph_lain:
+    - "UNIFIKASI"
+    - "TANAH DAN/ATAU BANGUNAN"
+    - "ROYALTI"
+    - "HARTA BERSIH"
+    - "PEREDARAN BRUTO TERTENTU"
+    - "PAJAK PENGHASILAN BADAN"
+    - "UTANG DAN MODAL"
+    - "SURAT PEMBERITAHUAN TAHUNAN"
+  konteks_pegawai:
+    - "PEGAWAI"
+    - "KARYAWAN"
+    - "GAJI"
+    - "UPAH"
+    - "PEKERJAAN"
+    - "PENSIUN"
+    - "PESANGON"
+    - "HONORARIUM"
+    - "PENGHASILAN TERTENTU"
+
+key_dari_kata_kunci:
+  "PENGHASILAN TIDAK KENA PAJAK": [ptkp]
+  "BIAYA JABATAN": [biaya_jabatan]
+  "BIAYA PENSIUN": [biaya_pensiun]
+  "NATURA": [natura]
+  "PESANGON": [pph_final_pesangon]
+  "SEKALIGUS": [pph_final_manfaat_pensiun]
+  "ANGGARAN PENDAPATAN DAN BELANJA": [pph_final_honorarium_pns]
+  "TARIF PEMOTONGAN PAJAK PENGHASILAN PASAL 21": [ter_bulanan, ter_harian, kategori_ter]
+  "PETUNJUK PELAKSANAAN PEMOTONGAN": [biaya_jabatan, biaya_pensiun, mekanisme_pemotongan]
