@@ -1,0 +1,113 @@
+skill: pph21
+nama: PPh Pasal 21/26 orang pribadi
+mode_berlaku: tahun_pajak
+berkas_data: tarif_{tahun}.yaml
+rasio: [0.5, 3]
+
+prompt_pembuka: >-
+  Anda mengekstrak angka parameter perhitungan PPh Pasal 21
+
+logika: [mekanisme_pemotongan, kategori_ter]
+
+di_luar_cakupan:
+  kategori_ter: "PP 58/2023 Pasal 2 ayat (4) dan Lampiran"
+  non_npwp: "UU PPh Pasal 21 ayat (5a), teks tidak tersedia"
+  pph26: "UU PPh Pasal 26, teks tidak tersedia"
+  pembulatan_pkp: "tidak diatur sebagai angka di pasal"
+
+kelompok:
+  ptkp:
+    istilah: [penghasilan tidak kena pajak]
+    field:
+      wajib_pajak_sendiri: {jenis: rupiah, rentang: [20000000, 200000000], arti: "Penghasilan Tidak Kena Pajak setahun untuk diri Wajib Pajak orang pribadi (rupiah)"}
+      tambahan_kawin: {jenis: rupiah, rentang: [1000000, 50000000], arti: "tambahan PTKP setahun untuk Wajib Pajak yang kawin (rupiah)"}
+      tambahan_tanggungan: {jenis: rupiah, rentang: [1000000, 50000000], arti: "tambahan PTKP setahun untuk setiap anggota keluarga yang menjadi tanggungan (rupiah)"}
+      maksimal_tanggungan: {jenis: orang, rentang: [1, 5], arti: "jumlah tanggungan paling banyak (orang)"}
+
+  biaya_jabatan:
+    istilah: [biaya jabatan]
+    field:
+      persen: {jenis: persen, rentang: [1, 20], arti: "biaya jabatan, persen dari penghasilan bruto"}
+      maksimal_sebulan: {jenis: rupiah, rentang: [100000, 5000000], arti: "biaya jabatan paling banyak sebulan (rupiah)"}
+      maksimal_setahun: {jenis: rupiah, rentang: [1200000, 60000000], arti: "biaya jabatan paling banyak setahun (rupiah)"}
+    konsistensi:
+      - {jenis: kelipatan, besar: maksimal_setahun, kecil: maksimal_sebulan, faktor: 12}
+
+  biaya_pensiun:
+    istilah: [biaya pensiun]
+    field:
+      persen: {jenis: persen, rentang: [1, 20], arti: "biaya pensiun, persen dari penghasilan bruto"}
+      maksimal_sebulan: {jenis: rupiah, rentang: [50000, 5000000], arti: "biaya pensiun paling banyak sebulan (rupiah)"}
+      maksimal_setahun: {jenis: rupiah, rentang: [600000, 60000000], arti: "biaya pensiun paling banyak setahun (rupiah)"}
+    konsistensi:
+      - {jenis: kelipatan, besar: maksimal_setahun, kecil: maksimal_sebulan, faktor: 12}
+
+  tarif_pasal_17:
+    istilah: [lapisan penghasilan kena pajak, tarif pajak yang diterapkan atas penghasilan kena pajak]
+    berlapis: true
+    field:
+      "[i].batas_atas": {jenis: rupiah, rentang: [1000000, 100000000000], arti: "lapisan ke-i (mulai 0, dari terendah) tarif Pasal 17 ayat (1) huruf a Undang-Undang Pajak Penghasilan untuk Wajib Pajak orang pribadi dalam negeri: batas atas Penghasilan Kena Pajak (rupiah); null untuk lapisan teratas"}
+      "[i].persen": {jenis: persen, rentang: [0, 50], arti: "tarif lapisan ke-i tersebut (persen)"}
+    konsistensi:
+      - {jenis: lapisan_naik}
+
+  bukan_pegawai:
+    istilah: [bukan pegawai]
+    field:
+      dpp_persen: {jenis: persen, rentang: [10, 100], arti: "dasar pengenaan dan pemotongan PPh Pasal 21 untuk Bukan Pegawai, persen dari jumlah penghasilan bruto"}
+
+  natura:
+    istilah: [natura, kenikmatan]
+    field:
+      kupon_batas_sebulan: {jenis: rupiah, rentang: [500000, 20000000], arti: "nilai kupon makanan/minuman bagi pegawai bagian pemasaran, transportasi, atau dinas luar yang dikecualikan dari objek pajak, paling banyak per pegawai sebulan (rupiah)"}
+      bingkisan_batas_setahun: {jenis: rupiah, rentang: [500000, 50000000], arti: "nilai keseluruhan bingkisan selain dalam rangka hari raya keagamaan yang dikecualikan, paling banyak per pegawai setahun (rupiah)"}
+      olahraga_batas_setahun: {jenis: rupiah, rentang: [100000, 20000000], arti: "nilai keseluruhan fasilitas olahraga (selain golf, pacuan kuda, dan sejenisnya) yang dikecualikan, paling banyak per pegawai setahun (rupiah)"}
+      tempat_tinggal_batas_sebulan: {jenis: rupiah, rentang: [500000, 20000000], arti: "nilai fasilitas tempat tinggal perseorangan (individual) yang dikecualikan, paling banyak per pegawai sebulan (rupiah)"}
+      kendaraan_batas_rata_bruto_sebulan: {jenis: rupiah, rentang: [10000000, 1000000000], arti: "fasilitas kendaraan dikecualikan bila rata-rata penghasilan bruto pegawai dalam 12 bulan terakhir paling banyak sejumlah ini tiap bulan (rupiah)"}
+
+  ter_harian:
+    istilah: [sehari]
+    field:
+      batas_bebas_harian: {jenis: rupiah, rentang: [50000, 5000000], arti: "penghasilan sehari pegawai harian/tidak tetap sampai jumlah ini tidak dipotong PPh (rupiah)"}
+      batas_atas_ter_harian: {jenis: rupiah, rentang: [100000, 20000000], arti: "batas penghasilan bruto sehari; di atasnya dasar pengenaan adalah persentase dari penghasilan bruto (rupiah)"}
+      dpp_persen_di_atas_batas: {jenis: persen, rentang: [10, 100], arti: "persen penghasilan bruto sebagai dasar pengenaan bila penghasilan sehari di atas batas tersebut"}
+      "lapisan[i].batas_atas": {jenis: rupiah, rentang: [50000, 20000000], llm: false}
+      "lapisan[i].persen": {jenis: persen, rentang: [0, 50], llm: false}
+
+  ter_bulanan:
+    istilah: [tarif efektif bulanan]
+    field:
+      "A[i].batas_atas": {jenis: rupiah, rentang: [100000, 100000000000], llm: false}
+      "A[i].persen": {jenis: persen, rentang: [0, 50], llm: false}
+      "B[i].batas_atas": {jenis: rupiah, rentang: [100000, 100000000000], llm: false}
+      "B[i].persen": {jenis: persen, rentang: [0, 50], llm: false}
+      "C[i].batas_atas": {jenis: rupiah, rentang: [100000, 100000000000], llm: false}
+      "C[i].persen": {jenis: persen, rentang: [0, 50], llm: false}
+    konsistensi:
+      - {jenis: lapisan_naik}
+
+  pph_final_pesangon:
+    istilah: [pesangon]
+    berlapis: true
+    field:
+      "[i].batas_atas": {jenis: rupiah, rentang: [1000000, 100000000000], arti: "lapisan ke-i (mulai 0) tarif PPh Pasal 21 final atas uang pesangon yang dibayar sekaligus: batas atas penghasilan bruto (rupiah); null untuk lapisan teratas"}
+      "[i].persen": {jenis: persen, rentang: [0, 50], arti: "tarif lapisan ke-i tersebut (persen)"}
+    konsistensi:
+      - {jenis: lapisan_naik}
+
+  pph_final_manfaat_pensiun:
+    istilah: [manfaat pensiun, tunjangan hari tua, jaminan hari tua]
+    berlapis: true
+    field:
+      "[i].batas_atas": {jenis: rupiah, rentang: [1000000, 100000000000], arti: "lapisan ke-i (mulai 0) tarif PPh Pasal 21 final atas uang manfaat pensiun, tunjangan hari tua, atau jaminan hari tua yang dibayar sekaligus: batas atas penghasilan bruto (rupiah); null untuk lapisan teratas"}
+      "[i].persen": {jenis: persen, rentang: [0, 50], arti: "tarif lapisan ke-i tersebut (persen)"}
+    konsistensi:
+      - {jenis: lapisan_naik}
+
+  pph_final_honorarium_pns:
+    istilah: [honorarium]
+    field:
+      I: {jenis: persen, rentang: [0, 50], arti: "tarif PPh Pasal 21 final atas honorarium/imbalan beban APBN/APBD bagi PNS golongan I (persen)"}
+      II: {jenis: persen, rentang: [0, 50], arti: "idem golongan II (persen)"}
+      III: {jenis: persen, rentang: [0, 50], arti: "idem golongan III (persen)"}
+      IV: {jenis: persen, rentang: [0, 50], arti: "idem golongan IV (persen)"}

@@ -1,0 +1,223 @@
+dokumen:
+  PMK 101 Tahun 2016:
+    set: dev
+    nomor: 101/PMK.010/2016
+    tanggal: 22-06-2016
+    tahun_berlaku: 2016
+    nilai: {ptkp.wajib_pajak_sendiri: 54000000, ptkp.tambahan_kawin: 4500000, ptkp.tambahan_tanggungan: 4500000, ptkp.maksimal_tanggungan: 3}
+  PMK 102 Tahun 2016:
+    set: dev
+    nomor: 102/PMK.010/2016
+    tanggal: 22-06-2016
+    tahun_berlaku: null
+    nilai: {ter_harian.batas_bebas_harian: 450000}
+  PMK 168 Tahun 2023:
+    set: dev
+    nomor: 168 TAHUN 2023
+    tanggal: 29-12-2023
+    tahun_berlaku: 2024
+    nilai:
+      biaya_jabatan.persen: 5
+      biaya_jabatan.maksimal_sebulan: 500000
+      biaya_jabatan.maksimal_setahun: 6000000
+      biaya_pensiun.persen: 5
+      biaya_pensiun.maksimal_sebulan: 200000
+      biaya_pensiun.maksimal_setahun: 2400000
+      bukan_pegawai.dpp_persen: 50
+      ter_harian.batas_atas_ter_harian: 2500000
+      ter_harian.dpp_persen_di_atas_batas: 50
+  UU 7 Tahun 2021:
+    set: dev
+    nomor: 7 TAHUN 2021
+    tanggal: 29-10-2021
+    tahun_berlaku: null
+    nilai:
+      ptkp.wajib_pajak_sendiri: 54000000
+      ptkp.tambahan_kawin: 4500000
+      ptkp.tambahan_tanggungan: 4500000
+      ptkp.maksimal_tanggungan: 3
+      tarif_pasal_17[0].batas_atas: 60000000
+      tarif_pasal_17[0].persen: 5
+      tarif_pasal_17[1].batas_atas: 250000000
+      tarif_pasal_17[1].persen: 15
+      tarif_pasal_17[2].batas_atas: 500000000
+      tarif_pasal_17[2].persen: 25
+      tarif_pasal_17[3].batas_atas: 5000000000
+      tarif_pasal_17[3].persen: 30
+      tarif_pasal_17[4].batas_atas: null
+      tarif_pasal_17[4].persen: 35
+  PER-16/PJ/2016:
+    set: dev
+    nomor: PER-16/PJ/2016
+    tanggal: 29-09-2016
+    tahun_berlaku: null
+    nilai:
+      ptkp.wajib_pajak_sendiri: 54000000
+      ptkp.tambahan_kawin: 4500000
+      ptkp.tambahan_tanggungan: 4500000
+      ptkp.maksimal_tanggungan: 3
+      biaya_jabatan.persen: 5
+      biaya_jabatan.maksimal_sebulan: 500000
+      biaya_jabatan.maksimal_setahun: 6000000
+      biaya_pensiun.persen: 5
+      biaya_pensiun.maksimal_sebulan: 200000
+      biaya_pensiun.maksimal_setahun: 2400000
+      bukan_pegawai.dpp_persen: 50
+      ter_harian.batas_bebas_harian: 450000
+  PP 58 Tahun 2023: {set: dev, nomor: 58 TAHUN 2023, tanggal: 27-12-2023, tahun_berlaku: 2024, nilai: {},
+                     nilai_dari_tarif: {tahun: 2024, kunci: [ter_bulanan, ter_harian.lapisan]}}
+  PMK 66 Tahun 2023: {set: dev, nomor: 66 TAHUN 2023, tanggal: 27-06-2023, nilai: {}}
+  PP 55 Tahun 2022: {set: dev, nomor: 55 TAHUN 2022, tanggal: 20-12-2022, nilai: {}}
+  PMK 167 Tahun 2018: {set: dev, nomor: 167/PMK.03/2018, tanggal: 19-12-2018, nilai: {}}
+  PMK 40 Tahun 2017: {set: dev, nomor: 40/PMK.03/2017, tanggal: 10-03-2017, nilai: {}}
+  PP 41 Tahun 2016: {set: dev, nomor: 41 TAHUN 2016, tanggal: 17-10-2016, nilai: {}}
+  PMK 114 Tahun 2025: {set: dev, nomor: 114 TAHUN 2025, tanggal: 30-12-2025, nilai: {}}
+  PMK 68 Tahun 2020: {set: dev, nomor: 68/PMK.03/2020, tanggal: 15-06-2020, nilai: {}}
+
+  PMK 122 Tahun 2015:
+    set: uji
+    nomor: 122/PMK.010/2015
+    tahun_berlaku: 2015
+    nilai: {ptkp.wajib_pajak_sendiri: 36000000, ptkp.tambahan_kawin: 3000000, ptkp.tambahan_tanggungan: 3000000, ptkp.maksimal_tanggungan: 3}
+  PMK 162 Tahun 2012:
+    set: uji
+    nomor: 162/PMK.011/2012
+    tahun_berlaku: 2013
+    nilai: {ptkp.wajib_pajak_sendiri: 24300000, ptkp.tambahan_kawin: 2025000, ptkp.tambahan_tanggungan: 2025000, ptkp.maksimal_tanggungan: 3}
+  PMK 137 Tahun 2005:
+    set: uji
+    nomor: 137/PMK.03/2005
+    tahun_berlaku: 2006
+    nilai: {ptkp.wajib_pajak_sendiri: 13200000, ptkp.tambahan_kawin: 1200000, ptkp.tambahan_tanggungan: 1200000, ptkp.maksimal_tanggungan: 3}
+  KMK 564 Tahun 2004:
+    set: uji
+    nomor: 564/KMK.03/2004
+    tahun_berlaku: 2005
+    nilai: {ptkp.wajib_pajak_sendiri: 12000000, ptkp.tambahan_kawin: 1200000, ptkp.tambahan_tanggungan: 1200000, ptkp.maksimal_tanggungan: 3}
+  PMK 152 Tahun 2015:
+    set: uji
+    nomor: 152/PMK.010/2015
+    tahun_berlaku: null
+    nilai: {ter_harian.batas_bebas_harian: 300000}
+  PMK 206 Tahun 2012:
+    set: uji
+    nomor: 206/PMK.011/2012
+    tahun_berlaku: 2013
+    nilai: {ter_harian.batas_bebas_harian: 200000}
+  PMK 254 Tahun 2008:
+    set: uji
+    nomor: 254/PMK.03/2008
+    tahun_berlaku: 2009
+    nilai: {ter_harian.batas_bebas_harian: 150000}
+  PMK 138 Tahun 2005:
+    set: uji
+    nomor: 138/PMK.03/2005
+    tahun_berlaku: 2006
+    nilai: {ter_harian.batas_bebas_harian: 110000}
+  PMK 10 Tahun 2005:
+    set: uji
+    nomor: 10/PMK.03/2005
+    tahun_berlaku: 2005
+    nilai: {ter_harian.batas_bebas_harian: 100000}
+  PMK 250 Tahun 2008:
+    set: uji
+    nomor: 250/PMK.03/2008
+    tahun_berlaku: 2009
+    nilai:
+      biaya_jabatan.persen: 5
+      biaya_jabatan.maksimal_sebulan: 500000
+      biaya_jabatan.maksimal_setahun: 6000000
+      biaya_pensiun.persen: 5
+      biaya_pensiun.maksimal_sebulan: 200000
+      biaya_pensiun.maksimal_setahun: 2400000
+  PP 68 Tahun 2009:
+    set: uji
+    nomor: 68 TAHUN 2009
+    tahun_berlaku: null
+    nilai: &pesangon
+      pph_final_pesangon[0].batas_atas: 50000000
+      pph_final_pesangon[0].persen: 0
+      pph_final_pesangon[1].batas_atas: 100000000
+      pph_final_pesangon[1].persen: 5
+      pph_final_pesangon[2].batas_atas: 500000000
+      pph_final_pesangon[2].persen: 15
+      pph_final_pesangon[3].batas_atas: null
+      pph_final_pesangon[3].persen: 25
+      pph_final_manfaat_pensiun[0].batas_atas: 50000000
+      pph_final_manfaat_pensiun[0].persen: 0
+      pph_final_manfaat_pensiun[1].batas_atas: null
+      pph_final_manfaat_pensiun[1].persen: 5
+  PMK 16 Tahun 2010:
+    set: uji
+    nomor: 16/PMK.03/2010
+    tahun_berlaku: null
+    nilai: *pesangon
+  PP 80 Tahun 2010:
+    set: uji
+    nomor: 80 TAHUN 2010
+    tahun_berlaku: 2011
+    nilai: &honor {pph_final_honorarium_pns.I: 0, pph_final_honorarium_pns.II: 0, pph_final_honorarium_pns.III: 5, pph_final_honorarium_pns.IV: 15}
+  PMK 262 Tahun 2010:
+    set: uji
+    nomor: 262/PMK.03/2010
+    tahun_berlaku: 2011
+    nilai:
+      <<: *honor
+      ptkp.maksimal_tanggungan: 3
+  UU 17 Tahun 2000:
+    set: uji
+    nomor: 17 TAHUN 2000
+    tahun_berlaku: 2001
+    nilai:
+      ptkp.wajib_pajak_sendiri: 2880000
+      ptkp.tambahan_kawin: 1440000
+      ptkp.tambahan_tanggungan: 1440000
+      ptkp.maksimal_tanggungan: 3
+      tarif_pasal_17[0].batas_atas: 25000000
+      tarif_pasal_17[0].persen: 5
+      tarif_pasal_17[1].batas_atas: 50000000
+      tarif_pasal_17[1].persen: 10
+      tarif_pasal_17[2].batas_atas: 100000000
+      tarif_pasal_17[2].persen: 15
+      tarif_pasal_17[3].batas_atas: 200000000
+      tarif_pasal_17[3].persen: 25
+      tarif_pasal_17[4].batas_atas: null
+      tarif_pasal_17[4].persen: 35
+  PER-31/PJ/2009:
+    set: uji
+    nomor: PER-31/PJ/2009
+    tahun_berlaku: 2009
+    nilai:
+      <<: &pedoman
+        biaya_jabatan.persen: 5
+        biaya_jabatan.maksimal_sebulan: 500000
+        biaya_jabatan.maksimal_setahun: 6000000
+        biaya_pensiun.persen: 5
+        biaya_pensiun.maksimal_sebulan: 200000
+        biaya_pensiun.maksimal_setahun: 2400000
+        bukan_pegawai.dpp_persen: 50
+        ptkp.maksimal_tanggungan: 3
+      ter_harian.batas_bebas_harian: 150000
+      ptkp.wajib_pajak_sendiri: 15840000
+      ptkp.tambahan_kawin: 1320000
+      ptkp.tambahan_tanggungan: 1320000
+  PER-31/PJ/2012:
+    set: uji
+    nomor: PER-31/PJ/2012
+    tahun_berlaku: 2013
+    nilai:
+      <<: *pedoman
+      ter_harian.batas_bebas_harian: 200000
+      ptkp.wajib_pajak_sendiri: 24300000
+      ptkp.tambahan_kawin: 2025000
+      ptkp.tambahan_tanggungan: 2025000
+  PER-32/PJ/2015:
+    set: uji
+    nomor: PER-32/PJ/2015
+    tahun_berlaku: null
+    nilai:
+      <<: *pedoman
+      ter_harian.batas_bebas_harian: 300000
+      ptkp.wajib_pajak_sendiri: 36000000
+      ptkp.tambahan_kawin: 3000000
+      ptkp.tambahan_tanggungan: 3000000
