@@ -1,0 +1,49 @@
+key:
+  ptkp:
+    dasar_hukum: "UU PPh Pasal 7 ayat (1); PMK No. 101/PMK.010/2016"
+    lokasi: "tarif_*.yaml: ptkp"
+    terakhir_dicek: "2026-09-22"
+  tarif_pasal_17:
+    dasar_hukum: "UU No. 7 Tahun 2021 (HPP), Pasal 17 ayat (1) huruf a UU PPh"
+    lokasi: "tarif_*.yaml: tarif_pasal_17"
+    terakhir_dicek: "2026-09-22"
+  ter_bulanan:
+    dasar_hukum: "PP No. 58 Tahun 2023, Lampiran"
+    lokasi: "tarif_*.yaml: ter_bulanan"
+    terakhir_dicek: "2026-09-22"
+  ter_harian:
+    dasar_hukum: "PP No. 58 Tahun 2023, Lampiran"
+    lokasi: "tarif_*.yaml: ter_harian"
+    terakhir_dicek: "2026-09-22"
+  kategori_ter:
+    dasar_hukum: "PP No. 58 Tahun 2023"
+    lokasi: "tarif_*.yaml: kategori_ter"
+    terakhir_dicek: "2026-09-22"
+  biaya_jabatan:
+    dasar_hukum: "PMK No. 168 Tahun 2023 Pasal 10 ayat (2)"
+    lokasi: "tarif_*.yaml: biaya_jabatan"
+    terakhir_dicek: "2026-09-28"
+  biaya_pensiun:
+    dasar_hukum: "PMK No. 168 Tahun 2023 Pasal 11 ayat (1), (2), dan (3)"
+    lokasi: "tarif_*.yaml: biaya_pensiun"
+    terakhir_dicek: "2026-09-28"
+  mekanisme_pemotongan:
+    dasar_hukum: "PMK No. 168 Tahun 2023 Pasal 8-16"
+    lokasi: "taxagent/taxes/pph21/calc/*.py (logika, bukan angka)"
+    terakhir_dicek: "2026-09-28"
+  pph_final_pesangon:
+    dasar_hukum: "PP No. 68 Tahun 2009 Pasal 4"
+    lokasi: "tarif_*.yaml: pph_final_pesangon"
+    terakhir_dicek: "2026-09-22"
+  pph_final_manfaat_pensiun:
+    dasar_hukum: "PP No. 68 Tahun 2009 Pasal 5"
+    lokasi: "tarif_*.yaml: pph_final_manfaat_pensiun"
+    terakhir_dicek: "2026-09-22"
+  pph_final_honorarium_pns:
+    dasar_hukum: "PP No. 80 Tahun 2010 Pasal 4 ayat (2)"
+    lokasi: "tarif_*.yaml: pph_final_honorarium_pns"
+    terakhir_dicek: "2026-09-22"
+  natura:
+    dasar_hukum: "PMK No. 66 Tahun 2023 Pasal 3 sampai Pasal 8 dan Lampiran huruf A dan B"
+    lokasi: "taxagent/taxes/pph21/calc/in_kind.py"
+    terakhir_dicek: "2026-09-28"

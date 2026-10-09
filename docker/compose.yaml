@@ -1,0 +1,54 @@
+name: pph21-korpus
+
+x-data: &data
+  - ${PPH21_DATA_HOST:-./data}:/data
+
+services:
+  korpus:
+    build: {context: .., dockerfile: docker/Dockerfile, target: korpus}
+    image: pph21-korpus:latest
+    env_file: [{path: "${PPH21_ENV:-neo4j.env}", required: false}]
+    environment:
+      PPH21_DATA: /data
+    volumes: *data
+
+  ocr:
+    profiles: [gpu]
+    build: {context: .., dockerfile: docker/Dockerfile, target: ocr}
+    image: pph21-ocr:latest
+    restart: unless-stopped
+    volumes:
+      - ${PPH21_DATA_HOST:-./data}:/data
+      - ocr-model:/model
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - {driver: nvidia, count: 1, capabilities: [gpu]}
+
+  embed:
+    profiles: [vektor]
+    build: {context: .., dockerfile: docker/Dockerfile, target: embed}
+    image: pph21-embed:latest
+    env_file: [{path: "${PPH21_ENV:-neo4j.env}", required: false}]
+    environment:
+      PPH21_DATA: /data
+      GOOGLE_API_KEY:
+    volumes:
+      - ${PPH21_DATA_HOST:-./data}:/data
+
+  neo4j:
+    profiles: [lokal]
+    image: neo4j:5.26-community
+    restart: unless-stopped
+    ports: ["127.0.0.1:7474:7474", "127.0.0.1:7687:7687"]
+    env_file: [{path: "${PPH21_ENV:-neo4j.env}", required: false}]
+    environment:
+      NEO4J_server_memory_heap_max__size: 2G
+      NEO4J_server_memory_pagecache_size: 1G
+    volumes:
+      - neo4j-data:/data
+
+volumes:
+  ocr-model:
+  neo4j-data:

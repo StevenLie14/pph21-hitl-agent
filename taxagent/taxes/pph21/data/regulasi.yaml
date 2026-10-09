@@ -1,0 +1,272 @@
+topik:
+  ptkp:
+    judul: "Penghasilan Tidak Kena Pajak"
+    rujukan:
+      - "UU PPh Pasal 7 ayat (1)"
+      - "PMK No. 101/PMK.010/2016"
+    ringkasan: >
+      PTKP untuk diri Wajib Pajak orang pribadi Rp54.000.000 setahun, tambahan
+      Rp4.500.000 untuk WP kawin, dan tambahan Rp4.500.000 untuk setiap anggota
+      keluarga sedarah/semenda dalam garis keturunan lurus serta anak angkat
+      yang menjadi tanggungan sepenuhnya, paling banyak 3 orang.
+
+  tarif_pasal_17:
+    judul: "Tarif progresif Pasal 17"
+    rujukan:
+      - "UU PPh Pasal 17 ayat (1) huruf a s.t.d.t.d UU No. 7 Tahun 2021 (UU HPP)"
+    ringkasan: >
+      Lima lapisan: 5% s.d. Rp60 juta, 15% s.d. Rp250 juta, 25% s.d. Rp500 juta,
+      30% s.d. Rp5 miliar, dan 35% di atas Rp5 miliar.
+
+  ter:
+    judul: "Tarif Efektif Rata-rata (TER)"
+    rujukan:
+      - "PP No. 58 Tahun 2023"
+      - "PMK No. 168 Tahun 2023"
+    ringkasan: >
+      Sejak masa pajak Januari 2024, pemotongan PPh 21 untuk pegawai tetap pada
+      masa pajak selain masa pajak terakhir memakai tarif efektif rata-rata
+      bulanan (kategori A, B, atau C sesuai status PTKP) dikalikan penghasilan
+      bruto sebulan. Masa pajak terakhir dihitung ulang dengan tarif Pasal 17.
+
+  biaya_jabatan:
+    judul: "Biaya jabatan"
+    rujukan:
+      - "PMK No. 168 Tahun 2023 Pasal 10 ayat (2)"
+    ringkasan: >
+      Pengurang penghasilan bruto pegawai tetap sebesar 5% dari penghasilan
+      bruto, paling banyak Rp500.000 sebulan atau Rp6.000.000 setahun.
+
+  biaya_pensiun:
+    judul: "Biaya pensiun"
+    rujukan:
+      - "PMK No. 168 Tahun 2023 Pasal 11 ayat (1), (2), dan (3)"
+    ringkasan: >
+      Pengurang penghasilan bruto pensiunan sebesar 5% dari penghasilan
+      bruto, paling banyak Rp200.000 sebulan atau Rp2.400.000 setahun,
+      dihitung pada masing-masing dana pensiun/pembayar. Selain biaya
+      pensiun, pengurang pensiunan HANYA zakat/sumbangan keagamaan wajib yang
+      dibayarkan melalui pembayar uang pensiun berkala (Pasal 11 ayat (1));
+      tidak ada biaya jabatan maupun iuran pensiun/JHT/JP.
+
+  pengurang:
+    judul: "Pengurang penghasilan bruto"
+    rujukan:
+      - "UU PPh Pasal 21 ayat (3)"
+      - "PMK No. 168 Tahun 2023 Pasal 10"
+    ringkasan: >
+      Pengurang: biaya jabatan/biaya pensiun, iuran pensiun serta iuran JHT/JP
+      yang dibayar sendiri oleh pegawai, dan zakat atau sumbangan keagamaan
+      wajib yang dibayarkan melalui pemberi kerja. Iuran BPJS Kesehatan yang
+      dibayar pegawai bukan pengurang.
+
+  premi_pemberi_kerja:
+    judul: "Premi asuransi yang dibayar pemberi kerja"
+    rujukan:
+      - "PMK No. 168 Tahun 2023 Pasal 5 ayat (3) huruf d, e, dan f"
+      - "PMK No. 168 Tahun 2023 Pasal 8 ayat (2)"
+    ringkasan: >
+      Premi JKK, JKM, dan BPJS Kesehatan yang dibayar pemberi kerja merupakan
+      penghasilan bagi pegawai sehingga menambah penghasilan bruto. Iuran JHT
+      dan Jaminan Pensiun yang dibayar pemberi kerja tidak menambah bruto.
+
+  natura:
+    judul: "Natura dan kenikmatan"
+    rujukan:
+      - "UU HPP"
+      - "PP No. 55 Tahun 2022"
+      - "PMK No. 66 Tahun 2023 Pasal 3 sampai Pasal 8 dan Lampiran huruf A dan B"
+    ringkasan: >
+      Natura dan kenikmatan pada dasarnya objek PPh, kecuali: makanan/minuman
+      di tempat kerja bagi seluruh pegawai; kupon makanan s.d. Rp2.000.000
+      sebulan (atau s.d. nilai makanan di kantor bila lebih besar); natura
+      yang wajib untuk pekerjaan (seragam, alat keselamatan, antar jemput);
+      natura di daerah tertentu yang ditetapkan DJP; dan jenis dengan batasan
+      tertentu: bingkisan hari raya keagamaan bagi seluruh pegawai (tanpa
+      batas), bingkisan lain s.d. Rp3.000.000 setahun, peralatan kerja,
+      layanan kesehatan akibat kerja, olahraga s.d. Rp1.500.000 setahun,
+      tempat tinggal komunal, tempat tinggal individual s.d. Rp2.000.000
+      sebulan, kendaraan bagi pegawai tanpa penyertaan modal dengan rata-rata
+      bruto s.d. Rp100.000.000 sebulan, iuran dana pensiun, dan fasilitas
+      peribadatan. Selisih di atas batasan adalah objek PPh; batasan setahun
+      dihitung kumulatif.
+
+  pegawai_tidak_tetap:
+    judul: "Pegawai tidak tetap"
+    rujukan:
+      - "PP No. 58 Tahun 2023"
+      - "PMK No. 168 Tahun 2023 Pasal 12 ayat (2) dan Pasal 16 ayat (2)"
+    ringkasan: >
+      Upah harian/mingguan/satuan/borongan: dasar pengenaan dan tarifnya
+      ditentukan murni oleh upah sehari (atau rata-rata upah sehari) periode
+      pembayaran itu sendiri, TIDAK kumulatif lintas pembayaran dalam bulan
+      yang sama. Sampai dengan Rp450.000 sehari dikenakan 0%. Bila upah
+      sehari melebihi Rp2.500.000, dikenakan tarif Pasal 17 atas 50%
+      penghasilan bruto.
+
+  bukan_pegawai:
+    judul: "Bukan pegawai"
+    rujukan:
+      - "PMK No. 168 Tahun 2023 Pasal 12 ayat (3), (4), (5) dan Pasal 16 ayat (3)"
+    ringkasan: >
+      Dasar pengenaan pajak adalah 50% dari jumlah penghasilan bruto pada masa
+      pajak yang bersangkutan, dikenakan tarif Pasal 17 langsung atas DPP masa
+      pajak itu sendiri. TIDAK kumulatif lintas masa pajak dan TIDAK dikurangi
+      PTKP; keduanya aturan PER-16/PJ/2016, yang tidak dicabut secara tegas tetapi
+      kehilangan dasar delegasinya: PMK 252/PMK.03/2008 dan PMK 102/PMK.010/2016
+      dicabut PMK 168/2023 Pasal 24 sejak 1 Januari 2024, dan aturannya bertentangan
+      dengan PMK 168/2023 (di PMK 168/2023 PTKP hanya untuk Pegawai Tetap dan
+      Pensiunan, Pasal 8 ayat (3)). Untuk
+      jasa selain katering, bruto tidak termasuk upah tenaga kerja yang
+      dipekerjakan penerima, pembelian material terkait jasa, dan pembayaran
+      ke pihak ketiga, sepanjang dibuktikan kontrak/faktur (Pasal 12 ayat (4)
+      huruf b dan ayat (5)).
+
+  dewan_komisaris:
+    judul: "Anggota dewan komisaris/pengawas dengan penghasilan tidak teratur"
+    rujukan:
+      - "PMK No. 168 Tahun 2023 Pasal 12 ayat (1) dan Pasal 16 ayat (1)"
+    ringkasan: >
+      Kategori TERPISAH dari Bukan Pegawai (Pasal 3 ayat (1) huruf c, bukan
+      huruf e), meski sekilas mirip. Dasar pengenaan pajak adalah 100%
+      penghasilan bruto (TIDAK dikurangi 50% seperti bukan pegawai), dikenakan
+      tarif efektif bulanan (TER) berdasarkan status PTKP, sama seperti
+      pegawai tetap bulanan -- BUKAN tarif Pasal 17 progresif.
+
+  pensiunan:
+    judul: "Pensiunan penerima uang pensiun bulanan reguler"
+    rujukan:
+      - "PMK No. 168 Tahun 2023 Pasal 3 ayat (1) huruf b"
+      - "PMK No. 168 Tahun 2023 Pasal 15 ayat (1)"
+    ringkasan: >
+      Kategori penerima TERPISAH dari Pegawai Tetap (huruf a), tapi Pasal 15
+      ayat (1) menggabungkan keduanya di bawah mekanisme perhitungan yang
+      SAMA: TER bulanan untuk masa pajak selain masa pajak terakhir, tarif
+      Pasal 17 progresif untuk masa pajak terakhir (Desember atau bulan
+      pensiun berhenti dibayarkan). Satu-satunya perbedaan adalah pengurang:
+      biaya pensiun (bukan biaya jabatan). BUKAN kategori yang sama dengan
+      manfaat pensiun/JHT/THT yang dibayarkan SEKALIGUS (PPh final,
+      calculate_pph21_final) maupun penarikan manfaat pensiun oleh pegawai
+      aktif (calculate_pph21_direct_pasal_17, jenis peserta_pensiun_pegawai) --
+      ketiganya kategori berbeda meski sama-sama menyangkut "pensiun".
+
+  pasal17_langsung:
+    judul: "Peserta kegiatan, penarikan manfaat pensiun, mantan pegawai"
+    rujukan:
+      - "PMK No. 168 Tahun 2023 Pasal 12 ayat (6), (7), (8) dan Pasal 16 ayat (4), (5), (6)"
+    ringkasan: >
+      Tiga kategori penerima yang dikenakan tarif Pasal 17 progresif langsung
+      atas 100% penghasilan bruto, tanpa PTKP dan tanpa pengurang lain, tidak
+      kumulatif antar masa pajak: (1) Peserta Kegiatan, atas
+      hadiah/penghargaan dari perlombaan atau kegiatan; (2) peserta program
+      pensiun yang masih berstatus Pegawai, atas penarikan uang manfaat
+      pensiun; (3) Mantan Pegawai, atas jasa produksi/tantiem/gratifikasi/
+      bonus yang diterima setelah berhenti bekerja.
+
+  final_pesangon:
+    judul: "PPh final uang pesangon"
+    rujukan:
+      - "PP No. 68 Tahun 2009 Pasal 4"
+      - "PMK No. 16/PMK.03/2010"
+    ringkasan: >
+      Uang pesangon yang dibayarkan sekaligus dikenakan PPh final berlapis:
+      0% s.d. Rp50 juta, 5% s.d. Rp100 juta, 15% s.d. Rp500 juta, dan 25% di
+      atas Rp500 juta. Bersifat sekaligus bila dibayarkan paling lama 2 tahun
+      kalender.
+
+  pesangon_tahun_ketiga:
+    judul: "Pesangon, manfaat pensiun, THT, JHT yang dibayar pada tahun ketiga dan seterusnya"
+    rujukan:
+      - "PP No. 68 Tahun 2009 Pasal 2 ayat (2) dan Pasal 6"
+      - "PMK No. 16/PMK.03/2010 Pasal 5"
+    ringkasan: >
+      Dianggap sekaligus bila dibayar paling lama 2 tahun kalender. Bagian yang
+      terutang atau dibayar pada tahun ketiga dan seterusnya dipotong dengan
+      tarif Pasal 17 ayat (1) huruf a atas jumlah bruto yang dibayar pada
+      masing-masing tahun kalender, tidak final dan dapat dikreditkan; tanpa
+      NPWP tarifnya 20% lebih tinggi. Kode objek pajak 21-100-25.
+
+  fasilitas_ikn:
+    judul: "Khusus pegawai di Ibu Kota Nusantara (IKN): PPh 21 ditanggung pemerintah dan final; BUKAN insentif PPh 21 DTP sektor tertentu"
+    rujukan:
+      - "PP No. 12 Tahun 2023 Pasal 50"
+      - "PMK No. 28 Tahun 2024 Pasal 123, Pasal 126, Pasal 129, dan Pasal 138"
+    ringkasan: >
+      Pegawai tetap atau tidak tetap yang menerima penghasilan dari pemberi
+      kerja tertentu di IKN, bertempat tinggal di IKN, dan ber-NPWP terdaftar
+      di KPP wilayah IKN: PPh 21 dihitung sesuai ketentuan biasa lalu
+      ditanggung pemerintah dan bersifat final, dibayar tunai oleh pemberi
+      kerja, dan tidak dihitung sebagai penghasilan. Pemberi kerja harus
+      mendapat persetujuan pemanfaatan dan menyampaikan laporan realisasi.
+      Berlaku sampai masa pajak Desember 2035. Tidak berlaku untuk honor
+      pejabat negara, PNS, TNI, POLRI dari APBN/APBD yang PPh-nya sudah
+      ditanggung pemerintah. Kode objek pajak 21-100-32 (pegawai tetap),
+      21-100-27/29/31 (pegawai tidak tetap), 21-100-37 (masa yang tidak
+      memenuhi syarat).
+
+  kode_objek_pajak:
+    judul: "Kode objek pajak bukti pemotongan PPh 21/26"
+    rujukan:
+      - "PER-11/PJ/2025 Lampiran (Daftar Kode Objek Pajak dan Objek Pajak)"
+    ringkasan: >
+      BPA1: 21-100-01 pegawai tetap, 21-100-02 pensiunan, 21-100-32 pegawai
+      tetap dengan fasilitas daerah tertentu. BP21 tidak final: 24 kode
+      (21-100-04 sampai 21-100-36) untuk bukan pegawai, komisaris, mantan
+      pegawai, peserta kegiatan, pegawai tidak tetap, dan pesangon tahun
+      ketiga. BP21 final: pesangon 21-401-01, manfaat pensiun/JHT 21-401-02,
+      honor APBN/APBD 21-402-02/03/04. BP26: 27-100-99. Hasil hitung
+      menyertakan kodenya di field objek_pajak.
+
+  final_manfaat_pensiun:
+    judul: "PPh final uang manfaat pensiun, THT, dan JHT"
+    rujukan:
+      - "PP No. 68 Tahun 2009 Pasal 5"
+    ringkasan: >
+      Dikenakan 0% sampai dengan Rp50 juta dan 5% atas selebihnya.
+
+  final_honorarium_pns:
+    judul: "PPh final honorarium beban APBN/APBD"
+    rujukan:
+      - "PP No. 80 Tahun 2010 Pasal 4 ayat (2)"
+    ringkasan: >
+      0% bagi PNS Golongan I dan II serta Tamtama/Bintara, 5% bagi Golongan III
+      serta Perwira Pertama, dan 15% bagi Golongan IV serta Perwira Menengah
+      dan Tinggi.
+
+  non_npwp:
+    judul: "Tarif lebih tinggi bagi yang tidak ber-NPWP"
+    rujukan:
+      - "UU PPh Pasal 21 ayat (5a)"
+      - "PMK No. 168 Tahun 2023"
+    ringkasan: >
+      Penerima penghasilan yang tidak memiliki NPWP dikenakan tarif 20% lebih
+      tinggi daripada tarif yang seharusnya.
+
+  pph26:
+    judul: "PPh Pasal 26"
+    rujukan:
+      - "UU PPh Pasal 26 ayat (1)"
+      - "PMK No. 168 Tahun 2023 Pasal 14 ayat (1)"
+    ringkasan: >
+      Penghasilan yang diterima Wajib Pajak luar negeri dipotong 20% dari
+      jumlah bruto, atau tarif yang lebih rendah sesuai Persetujuan Penghindaran
+      Pajak Berganda apabila penerima dapat menunjukkan Surat Keterangan
+      Domisili yang sah.
+
+  masa_pajak_terakhir:
+    judul: "Perhitungan masa pajak terakhir"
+    rujukan:
+      - "PMK No. 168 Tahun 2023 Pasal 1 (definisi Masa Pajak Terakhir)"
+      - "PMK No. 168 Tahun 2023 Pasal 15 ayat (1) huruf b, ayat (2), dan ayat (3)"
+      - "PMK No. 168 Tahun 2023 Pasal 10 ayat (3) dan Pasal 11 ayat (3)"
+    ringkasan: >
+      Masa Pajak Terakhir adalah masa Desember, masa pajak pegawai tetap
+      berhenti bekerja, atau masa pajak pensiunan berhenti menerima uang
+      pensiun. PPh 21 setahun (atau bagian tahun) dihitung dengan tarif Pasal
+      17 atas penghasilan kena pajak, kemudian dikurangi PPh 21 yang telah
+      dipotong pada masa-masa pajak sebelumnya. Bila kewajiban pajak subjektif
+      baru dimulai setelah Januari atau berakhir sebelum Desember, neto
+      disetahunkan dan pajaknya dihitung proporsional (ayat (3)). Pegawai yang
+      pindah kerja di tahun yang sama: biaya jabatan/biaya pensiun dihitung
+      pada masing-masing pemberi kerja, lalu penghasilan NETO pemberi kerja
+      sebelumnya (dari bukti pemotongannya) digabung di pemberi kerja baru.
