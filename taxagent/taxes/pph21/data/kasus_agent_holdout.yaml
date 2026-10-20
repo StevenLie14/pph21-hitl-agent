@@ -1,0 +1,158 @@
+kasus:
+  - id: h-01
+    kategori: pegawai_tetap_masa_terakhir
+    perilaku: hitung
+    pertanyaan: >-
+      Karyawati K/0 berhenti bekerja akhir Mei 2025 dan tetap tinggal di
+      Indonesia. Total gaji Januari-Mei Rp50.000.000, iuran JHT yang ia bayar
+      total Rp1.000.000. PPh Januari-April sudah dipotong Rp1.600.000. Hitung
+      PPh 21 bulan Mei.
+    tool: calculate_pph21_permanent_last_period
+    argumen: {gaji_pokok: 50000000, iuran_jht_dibayar_pegawai: 1000000, status_ptkp: K/0, tahun_pajak: 2025, masa_pajak: 5, bulan_masa_perolehan: 5, pph_sudah_dipotong: 1600000}
+    argumen_dinilai: [status_ptkp, tahun_pajak, bulan_masa_perolehan, pph_sudah_dipotong]
+
+  - id: h-02
+    kategori: pegawai_tetap_masa_terakhir
+    tag: [butuh_aritmetika]
+    perilaku: hitung
+    pertanyaan: >-
+      Pegawai baru mulai kerja 1 Juli 2025 (sebelumnya menganggur, WNI), gaji
+      Rp20.000.000 per bulan, status TK/1. PPh yang sudah dipotong Juli-November
+      total Rp4.000.000. Berapa PPh 21 Desember 2025?
+    tool: calculate_pph21_permanent_last_period
+    argumen: {gaji_pokok: 20000000, nilai_per_bulan: true, bulan_masa_perolehan: 6, status_ptkp: TK/1, tahun_pajak: 2025, pph_sudah_dipotong: 4000000}
+    argumen_dinilai: [status_ptkp, tahun_pajak, bulan_masa_perolehan, pph_sudah_dipotong]
+
+  - id: h-03
+    kategori: pegawai_tetap_tahunan
+    tag: [butuh_aritmetika]
+    perilaku: hitung
+    pertanyaan: >-
+      Gaji 9 juta sebulan dan tunjangan jabatan 1 juta sebulan sepanjang 2024,
+      status K/2. Berapa PPh 21 setahun?
+    tool: calculate_pph21_permanent_annual
+    argumen: {gaji_pokok: 9000000, tunjangan_tetap: 1000000, nilai_per_bulan: true, bulan_masa_perolehan: 12, status_ptkp: K/2, tahun_pajak: 2024}
+    argumen_dinilai: [status_ptkp, tahun_pajak]
+
+  - id: h-04
+    kategori: pensiunan
+    tag: [butuh_aritmetika]
+    perilaku: hitung
+    pertanyaan: >-
+      Mulai pensiun Maret 2025, uang pensiun Rp4.000.000 per bulan dari dana
+      pensiun, status TK/0, tidak ada penghasilan lain di tahun itu dan belum
+      ada potongan PPh sama sekali. Berapa PPh 21 Desember?
+    tool: calculate_pph21_pensioner_last_period
+    argumen: {uang_pensiun: 4000000, nilai_per_bulan: true, bulan_masa_perolehan: 10, status_ptkp: TK/0, tahun_pajak: 2025, pph_sudah_dipotong: 0}
+    argumen_dinilai: [status_ptkp, tahun_pajak, bulan_masa_perolehan]
+
+  - id: h-05
+    kategori: pegawai_tidak_tetap
+    perilaku: hitung
+    pertanyaan: Pekerja mingguan dibayar Rp2.100.000 untuk 7 hari kerja pada 2025. PPh 21-nya berapa?
+    tool: calculate_pph21_non_permanent
+    argumen: {upah_per_periode: 2100000, skema: mingguan, jumlah_hari: 7, tahun_pajak: 2025}
+
+  - id: h-06
+    kategori: bukan_pegawai
+    perilaku: hitung
+    pertanyaan: Penceramah menerima honor Rp15.000.000 dari sebuah perusahaan pada Mei 2025. PPh 21?
+    tool: calculate_pph21_non_employee
+    argumen: {penghasilan_bruto: 15000000, tahun_pajak: 2025}
+
+  - id: h-07
+    kategori: bukan_pegawai
+    perilaku: hitung
+    pertanyaan: >-
+      Usaha katering perorangan menagih perusahaan Rp30.000.000 pada Juni 2025,
+      di dalamnya ada belanja bahan makanan Rp18.000.000 lengkap dengan faktur.
+      Berapa PPh 21 yang dipotong?
+    tool: calculate_pph21_non_employee
+    argumen: {penghasilan_bruto: 30000000, jasa_katering: true, tahun_pajak: 2025}
+    argumen_dinilai: [penghasilan_bruto, tahun_pajak]
+
+  - id: h-08
+    kategori: dewan_komisaris
+    perilaku: hitung
+    pertanyaan: >-
+      Komisaris independen (bukan pegawai) menerima honorarium Rp25.000.000 pada
+      Juli 2025, status K/0. PPh 21?
+    tool: calculate_pph21_commissioner
+    argumen: {penghasilan_bruto: 25000000, status_ptkp: K/0, tahun_pajak: 2025}
+
+  - id: h-09
+    kategori: tanya_balik
+    perilaku: tanya_balik
+    pertanyaan: Tolong hitung PPh 21 Desember 2025 karyawan saya, gajinya 12 juta sebulan.
+
+  - id: h-10
+    kategori: tolak
+    perilaku: tolak
+    pertanyaan: Berapa pajak kendaraan bermotor untuk mobil seharga 300 juta?
+
+  - id: h-11
+    kategori: tolak
+    perilaku: tolak
+    pertanyaan: Hitung PPh 21 Januari 2025 untuk karyawati yang memilih status K/I/2, gaji Rp18.000.000.
+
+  - id: h-12
+    kategori: pegawai_tetap_bulanan
+    perilaku: hitung
+    pertanyaan: >-
+      Gaji karyawan K/0 Rp20.000.000 bulan Maret 2025 dan PPh 21-nya ditanggung
+      penuh perusahaan. Berapa tunjangan pajak dan PPh-nya?
+    tool: calculate_pph21_permanent_monthly
+    argumen: {gaji_pokok: 20000000, gross_up: true, status_ptkp: K/0, masa_pajak: 3, tahun_pajak: 2025}
+
+  - id: h-13
+    kategori: pegawai_tetap_bulanan
+    perilaku: hitung
+    pertanyaan: Pegawai tetap K/3 belum punya NPWP, gaji Rp25.000.000, Oktober 2025. PPh 21?
+    tool: calculate_pph21_permanent_monthly
+    argumen: {gaji_pokok: 25000000, punya_npwp: false, status_ptkp: K/3, masa_pajak: 10, tahun_pajak: 2025}
+
+  - id: h-14
+    kategori: pph26
+    perilaku: hitung
+    pertanyaan: >-
+      Konsultan WNA non-residen dari negara yang punya P3B dengan tarif 15%,
+      tapi belum menyerahkan Surat Keterangan Domisili, menerima fee
+      Rp50.000.000 pada 2025. Berapa pajak yang dipotong?
+    tool: calculate_pph_pasal_26
+    argumen: {penghasilan_bruto: 50000000, tarif_p3b_persen: 15, ada_surat_keterangan_domisili: false, tahun_pajak: 2025}
+    argumen_dinilai: [penghasilan_bruto, ada_surat_keterangan_domisili, tahun_pajak]
+
+  - id: h-15
+    kategori: final
+    perilaku: hitung
+    pertanyaan: Uang pesangon Rp600.000.000 dibayar sekaligus pada 2025. PPh 21-nya?
+    tool: calculate_pph21_final
+    argumen: {jenis: pesangon, jumlah_bruto: 600000000, tahun_pajak: 2025}
+
+  - id: h-16
+    kategori: pasal17_langsung
+    perilaku: hitung
+    pertanyaan: >-
+      Mantan karyawan yang sudah resign menerima bonus kinerja tahun lalu
+      Rp80.000.000 dari bekas kantornya pada 2025. PPh 21?
+    tool: calculate_pph21_direct_pasal_17
+    argumen: {jenis: mantan_pegawai, penghasilan_bruto: 80000000, tahun_pajak: 2025}
+
+  - id: h-17
+    kategori: pegawai_tetap_masa_terakhir
+    perilaku: hitung
+    pertanyaan: >-
+      Ekspat TK/0 meninggalkan Indonesia untuk selamanya akhir Juni 2025. Total
+      gaji Januari-Juni Rp120.000.000. PPh yang dipotong Januari-Mei
+      Rp10.000.000. Hitung PPh 21 masa pajak terakhirnya.
+    tool: calculate_pph21_permanent_last_period
+    argumen: {gaji_pokok: 120000000, status_ptkp: TK/0, tahun_pajak: 2025, masa_pajak: 6, bulan_masa_perolehan: 6, disetahunkan: true, pph_sudah_dipotong: 10000000}
+    argumen_dinilai: [gaji_pokok, status_ptkp, tahun_pajak, bulan_masa_perolehan, disetahunkan, pph_sudah_dipotong]
+
+  - id: h-18
+    kategori: info
+    perilaku: info
+    pertanyaan: Berapa batas maksimal biaya pensiun dan apa dasar hukumnya?
+    tool: find_legal_basis
+    harus_memuat: [["200.000", "200 ribu", "2.400.000", "2,4 juta"]]
+    dasar: PMK 168/2023 Pasal 11 ayat (2) (tarif_2024.yaml biaya_pensiun), 5% maksimal Rp200.000 sebulan / Rp2.400.000 setahun

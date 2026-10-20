@@ -1,0 +1,76 @@
+kasus:
+  - id: g-01
+    kategori: graf_status
+    perilaku: graf
+    pertanyaan: Apakah PMK 102/PMK.010/2016 tentang batas penghasilan pegawai harian yang tidak dipotong pajak masih berlaku?
+    harus_memuat: [["168/2023", "168 tahun 2023", "168/pmk.010/2023", "168/pmk.03/2023"], ["dicabut", "tidak berlaku", "tidak lagi berlaku", "sudah tidak"]]
+
+  - id: g-02
+    kategori: graf_relasi
+    perilaku: graf
+    pertanyaan: Peraturan apa yang mencabut Keputusan Menteri Keuangan Nomor 447/KMK.03/2002?
+    harus_memuat: ["138", "2005"]
+
+  - id: g-03
+    kategori: graf_relasi
+    perilaku: graf
+    pertanyaan: Pasal berapa saja di UU Pajak Penghasilan yang diubah oleh UU 7 Tahun 2021 (UU HPP)?
+    harus_memuat: ["11A", "32C"]
+
+  - id: g-04
+    kategori: graf_pasal
+    perilaku: graf
+    pertanyaan: Bagaimana bunyi Pasal 10 PMK 168 Tahun 2023 tentang batas biaya jabatan?
+    harus_memuat: ["500.000", ["5%", "5 persen"]]
+
+  - id: g-05
+    kategori: graf_skill
+    perilaku: graf
+    tool_alternatif: [find_legal_basis]
+    pertanyaan: Berapa PTKP untuk diri wajib pajak yang sedang dipakai kalkulator ini, dan apa dasar hukumnya?
+    harus_memuat: ["54.000.000", "101"]
+
+  - id: g-06
+    kategori: graf_relasi
+    perilaku: graf
+    pertanyaan: Peraturan apa saja yang dicabut oleh PP 55 Tahun 2022?
+    harus_memuat: ["2009", "2018"]
+
+  - id: g-07
+    kategori: graf_status
+    perilaku: graf
+    pertanyaan: Apakah PP 80 Tahun 2010 tentang PPh 21 atas penghasilan beban APBN/APBD masih berlaku seluruhnya?
+    harus_memuat: ["58", ["sebagian", "tidak seluruhnya", "tidak lagi seluruhnya"]]
+
+  - id: g-08
+    kategori: graf_cari
+    perilaku: graf
+    pertanyaan: >-
+      Peraturan Menteri Keuangan mana yang khusus mengatur zakat atau sumbangan keagamaan yang dapat dikurangkan
+      dari penghasilan bruto, beserta bantuan dan harta hibahan?
+    harus_memuat: ["114", "2025"]
+
+  - id: g-09
+    kategori: graf_relasi
+    perilaku: graf
+    pertanyaan: Peraturan apa yang dicabut oleh PMK 66 Tahun 2023 tentang natura?
+    harus_memuat: ["167", "2018"]
+
+  - id: g-10
+    kategori: graf_relasi
+    perilaku: graf
+    pertanyaan: Peraturan apa yang mengubah KMK 447/KMK.03/2002, dan pasal apa yang diubah?
+    harus_memuat: ["10", "2005"]
+
+  - id: g-11
+    kategori: graf_skill
+    perilaku: graf
+    tool_alternatif: [find_legal_basis]
+    pertanyaan: Dari peraturan mana angka biaya jabatan maksimal Rp500.000 sebulan yang dipakai kalkulator berasal?
+    harus_memuat: [["168/2023", "168 tahun 2023", "168/pmk.010/2023", "168/pmk.03/2023"]]
+
+  - id: g-12
+    kategori: graf_relasi
+    perilaku: graf
+    pertanyaan: Apakah UU 7 Tahun 2021 mencabut sebagian Perppu 1 Tahun 2020? Ketentuan mana yang dicabut?
+    harus_memuat: ["huruf b", "pasal 5"]

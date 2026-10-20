@@ -1,0 +1,1543 @@
+keterangan: Nilai PPh 21 yang benar per tahun pajak (kunci jawaban replay kumulatif), disusun dari draf_label.yaml dan peristiwa_backtest.yaml.
+  Hanya tahun yang berubah dicantumkan; tahun lain sama dengan tahun sebelumnya. Hanya parameter yang ditulis peraturan berlabel.
+tahun_berlaku_dari_teks:
+  UU 7 Tahun 2021:
+    tahun_pajak: 2022
+    kutipan: 'Pasal 17 ayat (1): "Ketentuan sebagaimana dimaksud dalam Pasal 3 mulai berlaku pada Tahun Pajak 2022."'
+tahun:
+- tahun_pajak: 2001
+  peraturan_baru:
+  - UU 17 Tahun 2000
+  nilai_berlaku:
+    ptkp.wajib_pajak_sendiri: 2880000
+    ptkp.tambahan_kawin: 1440000
+    ptkp.tambahan_tanggungan: 1440000
+    ptkp.maksimal_tanggungan: 3
+    tarif_pasal_17[0].batas_atas: 25000000
+    tarif_pasal_17[0].persen: 5
+    tarif_pasal_17[1].batas_atas: 50000000
+    tarif_pasal_17[1].persen: 10
+    tarif_pasal_17[2].batas_atas: 100000000
+    tarif_pasal_17[2].persen: 15
+    tarif_pasal_17[3].batas_atas: 200000000
+    tarif_pasal_17[3].persen: 25
+    tarif_pasal_17[4].batas_atas: null
+    tarif_pasal_17[4].persen: 35
+- tahun_pajak: 2005
+  peraturan_baru:
+  - KMK 564 Tahun 2004
+  - PMK 10 Tahun 2005
+  berubah:
+    ptkp.wajib_pajak_sendiri:
+      lama: 2880000
+      baru: 12000000
+    ptkp.tambahan_kawin:
+      lama: 1440000
+      baru: 1200000
+    ptkp.tambahan_tanggungan:
+      lama: 1440000
+      baru: 1200000
+    ter_harian.batas_bebas_harian:
+      lama: null
+      baru: 100000
+  nilai_berlaku:
+    ptkp.wajib_pajak_sendiri: 12000000
+    ptkp.tambahan_kawin: 1200000
+    ptkp.tambahan_tanggungan: 1200000
+    ptkp.maksimal_tanggungan: 3
+    tarif_pasal_17[0].batas_atas: 25000000
+    tarif_pasal_17[0].persen: 5
+    tarif_pasal_17[1].batas_atas: 50000000
+    tarif_pasal_17[1].persen: 10
+    tarif_pasal_17[2].batas_atas: 100000000
+    tarif_pasal_17[2].persen: 15
+    tarif_pasal_17[3].batas_atas: 200000000
+    tarif_pasal_17[3].persen: 25
+    tarif_pasal_17[4].batas_atas: null
+    tarif_pasal_17[4].persen: 35
+    ter_harian.batas_bebas_harian: 100000
+- tahun_pajak: 2006
+  peraturan_baru:
+  - PMK 137 Tahun 2005
+  - PMK 138 Tahun 2005
+  berubah:
+    ptkp.wajib_pajak_sendiri:
+      lama: 12000000
+      baru: 13200000
+    ter_harian.batas_bebas_harian:
+      lama: 100000
+      baru: 110000
+  nilai_berlaku:
+    ptkp.wajib_pajak_sendiri: 13200000
+    ptkp.tambahan_kawin: 1200000
+    ptkp.tambahan_tanggungan: 1200000
+    ptkp.maksimal_tanggungan: 3
+    tarif_pasal_17[0].batas_atas: 25000000
+    tarif_pasal_17[0].persen: 5
+    tarif_pasal_17[1].batas_atas: 50000000
+    tarif_pasal_17[1].persen: 10
+    tarif_pasal_17[2].batas_atas: 100000000
+    tarif_pasal_17[2].persen: 15
+    tarif_pasal_17[3].batas_atas: 200000000
+    tarif_pasal_17[3].persen: 25
+    tarif_pasal_17[4].batas_atas: null
+    tarif_pasal_17[4].persen: 35
+    ter_harian.batas_bebas_harian: 110000
+- tahun_pajak: 2009
+  peraturan_baru:
+  - UU 36 Tahun 2008
+  - PMK 250 Tahun 2008
+  - PMK 254 Tahun 2008
+  - PER-31/PJ/2009
+  - PP 68 Tahun 2009
+  berubah:
+    ptkp.wajib_pajak_sendiri:
+      lama: 13200000
+      baru: 15840000
+    ptkp.tambahan_kawin:
+      lama: 1200000
+      baru: 1320000
+    ptkp.tambahan_tanggungan:
+      lama: 1200000
+      baru: 1320000
+    biaya_pensiun.persen:
+      lama: null
+      baru: 5
+    biaya_pensiun.maksimal_sebulan:
+      lama: null
+      baru: 200000
+    biaya_pensiun.maksimal_setahun:
+      lama: null
+      baru: 2400000
+    pph_final_manfaat_pensiun[0].batas_atas:
+      lama: null
+      baru: 50000000
+    pph_final_manfaat_pensiun[0].persen:
+      lama: null
+      baru: 0
+    pph_final_manfaat_pensiun[1].persen:
+      lama: null
+      baru: 5
+    tarif_pasal_17[0].batas_atas:
+      lama: 25000000
+      baru: 50000000
+    tarif_pasal_17[1].batas_atas:
+      lama: 50000000
+      baru: 250000000
+    tarif_pasal_17[1].persen:
+      lama: 10
+      baru: 15
+    tarif_pasal_17[2].batas_atas:
+      lama: 100000000
+      baru: 500000000
+    tarif_pasal_17[2].persen:
+      lama: 15
+      baru: 25
+    tarif_pasal_17[3].batas_atas:
+      lama: 200000000
+      baru: null
+    tarif_pasal_17[3].persen:
+      lama: 25
+      baru: 30
+    bukan_pegawai.dpp_persen:
+      lama: null
+      baru: 50
+    pph_final_pesangon[0].batas_atas:
+      lama: null
+      baru: 50000000
+    pph_final_pesangon[0].persen:
+      lama: null
+      baru: 0
+    pph_final_pesangon[1].batas_atas:
+      lama: null
+      baru: 100000000
+    pph_final_pesangon[1].persen:
+      lama: null
+      baru: 5
+    pph_final_pesangon[2].batas_atas:
+      lama: null
+      baru: 500000000
+    pph_final_pesangon[2].persen:
+      lama: null
+      baru: 15
+    pph_final_pesangon[3].persen:
+      lama: null
+      baru: 25
+    ter_harian.batas_bebas_harian:
+      lama: 110000
+      baru: 150000
+    biaya_jabatan.persen:
+      lama: null
+      baru: 5
+    biaya_jabatan.maksimal_sebulan:
+      lama: null
+      baru: 500000
+    biaya_jabatan.maksimal_setahun:
+      lama: null
+      baru: 6000000
+  hilang:
+  - tarif_pasal_17[4].batas_atas
+  - tarif_pasal_17[4].persen
+  nilai_berlaku:
+    ptkp.wajib_pajak_sendiri: 15840000
+    ptkp.tambahan_kawin: 1320000
+    ptkp.tambahan_tanggungan: 1320000
+    ptkp.maksimal_tanggungan: 3
+    biaya_pensiun.persen: 5
+    biaya_pensiun.maksimal_sebulan: 200000
+    biaya_pensiun.maksimal_setahun: 2400000
+    pph_final_manfaat_pensiun[0].batas_atas: 50000000
+    pph_final_manfaat_pensiun[0].persen: 0
+    pph_final_manfaat_pensiun[1].batas_atas: null
+    pph_final_manfaat_pensiun[1].persen: 5
+    tarif_pasal_17[0].batas_atas: 50000000
+    tarif_pasal_17[0].persen: 5
+    tarif_pasal_17[1].batas_atas: 250000000
+    tarif_pasal_17[1].persen: 15
+    tarif_pasal_17[2].batas_atas: 500000000
+    tarif_pasal_17[2].persen: 25
+    tarif_pasal_17[3].batas_atas: null
+    tarif_pasal_17[3].persen: 30
+    bukan_pegawai.dpp_persen: 50
+    pph_final_pesangon[0].batas_atas: 50000000
+    pph_final_pesangon[0].persen: 0
+    pph_final_pesangon[1].batas_atas: 100000000
+    pph_final_pesangon[1].persen: 5
+    pph_final_pesangon[2].batas_atas: 500000000
+    pph_final_pesangon[2].persen: 15
+    pph_final_pesangon[3].batas_atas: null
+    pph_final_pesangon[3].persen: 25
+    ter_harian.batas_bebas_harian: 150000
+    biaya_jabatan.persen: 5
+    biaya_jabatan.maksimal_sebulan: 500000
+    biaya_jabatan.maksimal_setahun: 6000000
+- tahun_pajak: 2011
+  peraturan_baru:
+  - PP 80 Tahun 2010
+  - PMK 262 Tahun 2010
+  berubah:
+    pph_final_honorarium_pns.I:
+      lama: null
+      baru: 0
+    pph_final_honorarium_pns.II:
+      lama: null
+      baru: 0
+    pph_final_honorarium_pns.III:
+      lama: null
+      baru: 5
+    pph_final_honorarium_pns.IV:
+      lama: null
+      baru: 15
+  nilai_berlaku:
+    ptkp.wajib_pajak_sendiri: 15840000
+    ptkp.tambahan_kawin: 1320000
+    ptkp.tambahan_tanggungan: 1320000
+    ptkp.maksimal_tanggungan: 3
+    pph_final_honorarium_pns.I: 0
+    pph_final_honorarium_pns.II: 0
+    pph_final_honorarium_pns.III: 5
+    pph_final_honorarium_pns.IV: 15
+    biaya_pensiun.persen: 5
+    biaya_pensiun.maksimal_sebulan: 200000
+    biaya_pensiun.maksimal_setahun: 2400000
+    pph_final_manfaat_pensiun[0].batas_atas: 50000000
+    pph_final_manfaat_pensiun[0].persen: 0
+    pph_final_manfaat_pensiun[1].batas_atas: null
+    pph_final_manfaat_pensiun[1].persen: 5
+    tarif_pasal_17[0].batas_atas: 50000000
+    tarif_pasal_17[0].persen: 5
+    tarif_pasal_17[1].batas_atas: 250000000
+    tarif_pasal_17[1].persen: 15
+    tarif_pasal_17[2].batas_atas: 500000000
+    tarif_pasal_17[2].persen: 25
+    tarif_pasal_17[3].batas_atas: null
+    tarif_pasal_17[3].persen: 30
+    bukan_pegawai.dpp_persen: 50
+    pph_final_pesangon[0].batas_atas: 50000000
+    pph_final_pesangon[0].persen: 0
+    pph_final_pesangon[1].batas_atas: 100000000
+    pph_final_pesangon[1].persen: 5
+    pph_final_pesangon[2].batas_atas: 500000000
+    pph_final_pesangon[2].persen: 15
+    pph_final_pesangon[3].batas_atas: null
+    pph_final_pesangon[3].persen: 25
+    ter_harian.batas_bebas_harian: 150000
+    biaya_jabatan.persen: 5
+    biaya_jabatan.maksimal_sebulan: 500000
+    biaya_jabatan.maksimal_setahun: 6000000
+- tahun_pajak: 2013
+  peraturan_baru:
+  - PMK 162 Tahun 2012
+  - PMK 206 Tahun 2012
+  - PER-31/PJ/2012
+  berubah:
+    ptkp.wajib_pajak_sendiri:
+      lama: 15840000
+      baru: 24300000
+    ptkp.tambahan_kawin:
+      lama: 1320000
+      baru: 2025000
+    ptkp.tambahan_tanggungan:
+      lama: 1320000
+      baru: 2025000
+    ter_harian.batas_bebas_harian:
+      lama: 150000
+      baru: 200000
+  nilai_berlaku:
+    ptkp.wajib_pajak_sendiri: 24300000
+    ptkp.tambahan_kawin: 2025000
+    ptkp.tambahan_tanggungan: 2025000
+    ptkp.maksimal_tanggungan: 3
+    pph_final_honorarium_pns.I: 0
+    pph_final_honorarium_pns.II: 0
+    pph_final_honorarium_pns.III: 5
+    pph_final_honorarium_pns.IV: 15
+    biaya_pensiun.persen: 5
+    biaya_pensiun.maksimal_sebulan: 200000
+    biaya_pensiun.maksimal_setahun: 2400000
+    pph_final_manfaat_pensiun[0].batas_atas: 50000000
+    pph_final_manfaat_pensiun[0].persen: 0
+    pph_final_manfaat_pensiun[1].batas_atas: null
+    pph_final_manfaat_pensiun[1].persen: 5
+    tarif_pasal_17[0].batas_atas: 50000000
+    tarif_pasal_17[0].persen: 5
+    tarif_pasal_17[1].batas_atas: 250000000
+    tarif_pasal_17[1].persen: 15
+    tarif_pasal_17[2].batas_atas: 500000000
+    tarif_pasal_17[2].persen: 25
+    tarif_pasal_17[3].batas_atas: null
+    tarif_pasal_17[3].persen: 30
+    bukan_pegawai.dpp_persen: 50
+    pph_final_pesangon[0].batas_atas: 50000000
+    pph_final_pesangon[0].persen: 0
+    pph_final_pesangon[1].batas_atas: 100000000
+    pph_final_pesangon[1].persen: 5
+    pph_final_pesangon[2].batas_atas: 500000000
+    pph_final_pesangon[2].persen: 15
+    pph_final_pesangon[3].batas_atas: null
+    pph_final_pesangon[3].persen: 25
+    ter_harian.batas_bebas_harian: 200000
+    biaya_jabatan.persen: 5
+    biaya_jabatan.maksimal_sebulan: 500000
+    biaya_jabatan.maksimal_setahun: 6000000
+- tahun_pajak: 2015
+  peraturan_baru:
+  - PMK 122 Tahun 2015
+  - PMK 152 Tahun 2015
+  - PER-32/PJ/2015
+  berubah:
+    ptkp.wajib_pajak_sendiri:
+      lama: 24300000
+      baru: 36000000
+    ptkp.tambahan_kawin:
+      lama: 2025000
+      baru: 3000000
+    ptkp.tambahan_tanggungan:
+      lama: 2025000
+      baru: 3000000
+    ter_harian.batas_bebas_harian:
+      lama: 200000
+      baru: 300000
+  nilai_berlaku:
+    ptkp.wajib_pajak_sendiri: 36000000
+    ptkp.tambahan_kawin: 3000000
+    ptkp.tambahan_tanggungan: 3000000
+    ptkp.maksimal_tanggungan: 3
+    pph_final_honorarium_pns.I: 0
+    pph_final_honorarium_pns.II: 0
+    pph_final_honorarium_pns.III: 5
+    pph_final_honorarium_pns.IV: 15
+    biaya_pensiun.persen: 5
+    biaya_pensiun.maksimal_sebulan: 200000
+    biaya_pensiun.maksimal_setahun: 2400000
+    pph_final_manfaat_pensiun[0].batas_atas: 50000000
+    pph_final_manfaat_pensiun[0].persen: 0
+    pph_final_manfaat_pensiun[1].batas_atas: null
+    pph_final_manfaat_pensiun[1].persen: 5
+    tarif_pasal_17[0].batas_atas: 50000000
+    tarif_pasal_17[0].persen: 5
+    tarif_pasal_17[1].batas_atas: 250000000
+    tarif_pasal_17[1].persen: 15
+    tarif_pasal_17[2].batas_atas: 500000000
+    tarif_pasal_17[2].persen: 25
+    tarif_pasal_17[3].batas_atas: null
+    tarif_pasal_17[3].persen: 30
+    bukan_pegawai.dpp_persen: 50
+    pph_final_pesangon[0].batas_atas: 50000000
+    pph_final_pesangon[0].persen: 0
+    pph_final_pesangon[1].batas_atas: 100000000
+    pph_final_pesangon[1].persen: 5
+    pph_final_pesangon[2].batas_atas: 500000000
+    pph_final_pesangon[2].persen: 15
+    pph_final_pesangon[3].batas_atas: null
+    pph_final_pesangon[3].persen: 25
+    ter_harian.batas_bebas_harian: 300000
+    biaya_jabatan.persen: 5
+    biaya_jabatan.maksimal_sebulan: 500000
+    biaya_jabatan.maksimal_setahun: 6000000
+- tahun_pajak: 2016
+  peraturan_baru:
+  - PMK 101 Tahun 2016
+  - PMK 102 Tahun 2016
+  - PER-16/PJ/2016
+  berubah:
+    ptkp.wajib_pajak_sendiri:
+      lama: 36000000
+      baru: 54000000
+    ptkp.tambahan_kawin:
+      lama: 3000000
+      baru: 4500000
+    ptkp.tambahan_tanggungan:
+      lama: 3000000
+      baru: 4500000
+    ter_harian.batas_bebas_harian:
+      lama: 300000
+      baru: 450000
+  nilai_berlaku:
+    ptkp.wajib_pajak_sendiri: 54000000
+    ptkp.tambahan_kawin: 4500000
+    ptkp.tambahan_tanggungan: 4500000
+    ptkp.maksimal_tanggungan: 3
+    pph_final_honorarium_pns.I: 0
+    pph_final_honorarium_pns.II: 0
+    pph_final_honorarium_pns.III: 5
+    pph_final_honorarium_pns.IV: 15
+    biaya_pensiun.persen: 5
+    biaya_pensiun.maksimal_sebulan: 200000
+    biaya_pensiun.maksimal_setahun: 2400000
+    pph_final_manfaat_pensiun[0].batas_atas: 50000000
+    pph_final_manfaat_pensiun[0].persen: 0
+    pph_final_manfaat_pensiun[1].batas_atas: null
+    pph_final_manfaat_pensiun[1].persen: 5
+    tarif_pasal_17[0].batas_atas: 50000000
+    tarif_pasal_17[0].persen: 5
+    tarif_pasal_17[1].batas_atas: 250000000
+    tarif_pasal_17[1].persen: 15
+    tarif_pasal_17[2].batas_atas: 500000000
+    tarif_pasal_17[2].persen: 25
+    tarif_pasal_17[3].batas_atas: null
+    tarif_pasal_17[3].persen: 30
+    bukan_pegawai.dpp_persen: 50
+    pph_final_pesangon[0].batas_atas: 50000000
+    pph_final_pesangon[0].persen: 0
+    pph_final_pesangon[1].batas_atas: 100000000
+    pph_final_pesangon[1].persen: 5
+    pph_final_pesangon[2].batas_atas: 500000000
+    pph_final_pesangon[2].persen: 15
+    pph_final_pesangon[3].batas_atas: null
+    pph_final_pesangon[3].persen: 25
+    ter_harian.batas_bebas_harian: 450000
+    biaya_jabatan.persen: 5
+    biaya_jabatan.maksimal_sebulan: 500000
+    biaya_jabatan.maksimal_setahun: 6000000
+- tahun_pajak: 2022
+  peraturan_baru:
+  - UU 7 Tahun 2021
+  berubah:
+    tarif_pasal_17[0].batas_atas:
+      lama: 50000000
+      baru: 60000000
+    tarif_pasal_17[3].batas_atas:
+      lama: null
+      baru: 5000000000
+    tarif_pasal_17[4].persen:
+      lama: null
+      baru: 35
+  nilai_berlaku:
+    ptkp.wajib_pajak_sendiri: 54000000
+    ptkp.tambahan_kawin: 4500000
+    ptkp.tambahan_tanggungan: 4500000
+    ptkp.maksimal_tanggungan: 3
+    pph_final_honorarium_pns.I: 0
+    pph_final_honorarium_pns.II: 0
+    pph_final_honorarium_pns.III: 5
+    pph_final_honorarium_pns.IV: 15
+    biaya_pensiun.persen: 5
+    biaya_pensiun.maksimal_sebulan: 200000
+    biaya_pensiun.maksimal_setahun: 2400000
+    pph_final_manfaat_pensiun[0].batas_atas: 50000000
+    pph_final_manfaat_pensiun[0].persen: 0
+    pph_final_manfaat_pensiun[1].batas_atas: null
+    pph_final_manfaat_pensiun[1].persen: 5
+    tarif_pasal_17[0].batas_atas: 60000000
+    tarif_pasal_17[0].persen: 5
+    tarif_pasal_17[1].batas_atas: 250000000
+    tarif_pasal_17[1].persen: 15
+    tarif_pasal_17[2].batas_atas: 500000000
+    tarif_pasal_17[2].persen: 25
+    tarif_pasal_17[3].batas_atas: 5000000000
+    tarif_pasal_17[3].persen: 30
+    tarif_pasal_17[4].batas_atas: null
+    tarif_pasal_17[4].persen: 35
+    bukan_pegawai.dpp_persen: 50
+    pph_final_pesangon[0].batas_atas: 50000000
+    pph_final_pesangon[0].persen: 0
+    pph_final_pesangon[1].batas_atas: 100000000
+    pph_final_pesangon[1].persen: 5
+    pph_final_pesangon[2].batas_atas: 500000000
+    pph_final_pesangon[2].persen: 15
+    pph_final_pesangon[3].batas_atas: null
+    pph_final_pesangon[3].persen: 25
+    ter_harian.batas_bebas_harian: 450000
+    biaya_jabatan.persen: 5
+    biaya_jabatan.maksimal_sebulan: 500000
+    biaya_jabatan.maksimal_setahun: 6000000
+- tahun_pajak: 2024
+  peraturan_baru:
+  - PP 58 Tahun 2023
+  - PMK 168 Tahun 2023
+  berubah:
+    ter_bulanan.A[0].batas_atas:
+      lama: null
+      baru: 5400000
+    ter_bulanan.A[0].persen:
+      lama: null
+      baru: 0
+    ter_bulanan.A[1].batas_atas:
+      lama: null
+      baru: 5650000
+    ter_bulanan.A[1].persen:
+      lama: null
+      baru: 0.25
+    ter_bulanan.A[2].batas_atas:
+      lama: null
+      baru: 5950000
+    ter_bulanan.A[2].persen:
+      lama: null
+      baru: 0.5
+    ter_bulanan.A[3].batas_atas:
+      lama: null
+      baru: 6300000
+    ter_bulanan.A[3].persen:
+      lama: null
+      baru: 0.75
+    ter_bulanan.A[4].batas_atas:
+      lama: null
+      baru: 6750000
+    ter_bulanan.A[4].persen:
+      lama: null
+      baru: 1
+    ter_bulanan.A[5].batas_atas:
+      lama: null
+      baru: 7500000
+    ter_bulanan.A[5].persen:
+      lama: null
+      baru: 1.25
+    ter_bulanan.A[6].batas_atas:
+      lama: null
+      baru: 8550000
+    ter_bulanan.A[6].persen:
+      lama: null
+      baru: 1.5
+    ter_bulanan.A[7].batas_atas:
+      lama: null
+      baru: 9650000
+    ter_bulanan.A[7].persen:
+      lama: null
+      baru: 1.75
+    ter_bulanan.A[8].batas_atas:
+      lama: null
+      baru: 10050000
+    ter_bulanan.A[8].persen:
+      lama: null
+      baru: 2
+    ter_bulanan.A[9].batas_atas:
+      lama: null
+      baru: 10350000
+    ter_bulanan.A[9].persen:
+      lama: null
+      baru: 2.25
+    ter_bulanan.A[10].batas_atas:
+      lama: null
+      baru: 10700000
+    ter_bulanan.A[10].persen:
+      lama: null
+      baru: 2.5
+    ter_bulanan.A[11].batas_atas:
+      lama: null
+      baru: 11050000
+    ter_bulanan.A[11].persen:
+      lama: null
+      baru: 3
+    ter_bulanan.A[12].batas_atas:
+      lama: null
+      baru: 11600000
+    ter_bulanan.A[12].persen:
+      lama: null
+      baru: 3.5
+    ter_bulanan.A[13].batas_atas:
+      lama: null
+      baru: 12500000
+    ter_bulanan.A[13].persen:
+      lama: null
+      baru: 4
+    ter_bulanan.A[14].batas_atas:
+      lama: null
+      baru: 13750000
+    ter_bulanan.A[14].persen:
+      lama: null
+      baru: 5
+    ter_bulanan.A[15].batas_atas:
+      lama: null
+      baru: 15100000
+    ter_bulanan.A[15].persen:
+      lama: null
+      baru: 6
+    ter_bulanan.A[16].batas_atas:
+      lama: null
+      baru: 16950000
+    ter_bulanan.A[16].persen:
+      lama: null
+      baru: 7
+    ter_bulanan.A[17].batas_atas:
+      lama: null
+      baru: 19750000
+    ter_bulanan.A[17].persen:
+      lama: null
+      baru: 8
+    ter_bulanan.A[18].batas_atas:
+      lama: null
+      baru: 24150000
+    ter_bulanan.A[18].persen:
+      lama: null
+      baru: 9
+    ter_bulanan.A[19].batas_atas:
+      lama: null
+      baru: 26450000
+    ter_bulanan.A[19].persen:
+      lama: null
+      baru: 10
+    ter_bulanan.A[20].batas_atas:
+      lama: null
+      baru: 28000000
+    ter_bulanan.A[20].persen:
+      lama: null
+      baru: 11
+    ter_bulanan.A[21].batas_atas:
+      lama: null
+      baru: 30050000
+    ter_bulanan.A[21].persen:
+      lama: null
+      baru: 12
+    ter_bulanan.A[22].batas_atas:
+      lama: null
+      baru: 32400000
+    ter_bulanan.A[22].persen:
+      lama: null
+      baru: 13
+    ter_bulanan.A[23].batas_atas:
+      lama: null
+      baru: 35400000
+    ter_bulanan.A[23].persen:
+      lama: null
+      baru: 14
+    ter_bulanan.A[24].batas_atas:
+      lama: null
+      baru: 39100000
+    ter_bulanan.A[24].persen:
+      lama: null
+      baru: 15
+    ter_bulanan.A[25].batas_atas:
+      lama: null
+      baru: 43850000
+    ter_bulanan.A[25].persen:
+      lama: null
+      baru: 16
+    ter_bulanan.A[26].batas_atas:
+      lama: null
+      baru: 47800000
+    ter_bulanan.A[26].persen:
+      lama: null
+      baru: 17
+    ter_bulanan.A[27].batas_atas:
+      lama: null
+      baru: 51400000
+    ter_bulanan.A[27].persen:
+      lama: null
+      baru: 18
+    ter_bulanan.A[28].batas_atas:
+      lama: null
+      baru: 56300000
+    ter_bulanan.A[28].persen:
+      lama: null
+      baru: 19
+    ter_bulanan.A[29].batas_atas:
+      lama: null
+      baru: 62200000
+    ter_bulanan.A[29].persen:
+      lama: null
+      baru: 20
+    ter_bulanan.A[30].batas_atas:
+      lama: null
+      baru: 68600000
+    ter_bulanan.A[30].persen:
+      lama: null
+      baru: 21
+    ter_bulanan.A[31].batas_atas:
+      lama: null
+      baru: 77500000
+    ter_bulanan.A[31].persen:
+      lama: null
+      baru: 22
+    ter_bulanan.A[32].batas_atas:
+      lama: null
+      baru: 89000000
+    ter_bulanan.A[32].persen:
+      lama: null
+      baru: 23
+    ter_bulanan.A[33].batas_atas:
+      lama: null
+      baru: 103000000
+    ter_bulanan.A[33].persen:
+      lama: null
+      baru: 24
+    ter_bulanan.A[34].batas_atas:
+      lama: null
+      baru: 125000000
+    ter_bulanan.A[34].persen:
+      lama: null
+      baru: 25
+    ter_bulanan.A[35].batas_atas:
+      lama: null
+      baru: 157000000
+    ter_bulanan.A[35].persen:
+      lama: null
+      baru: 26
+    ter_bulanan.A[36].batas_atas:
+      lama: null
+      baru: 206000000
+    ter_bulanan.A[36].persen:
+      lama: null
+      baru: 27
+    ter_bulanan.A[37].batas_atas:
+      lama: null
+      baru: 337000000
+    ter_bulanan.A[37].persen:
+      lama: null
+      baru: 28
+    ter_bulanan.A[38].batas_atas:
+      lama: null
+      baru: 454000000
+    ter_bulanan.A[38].persen:
+      lama: null
+      baru: 29
+    ter_bulanan.A[39].batas_atas:
+      lama: null
+      baru: 550000000
+    ter_bulanan.A[39].persen:
+      lama: null
+      baru: 30
+    ter_bulanan.A[40].batas_atas:
+      lama: null
+      baru: 695000000
+    ter_bulanan.A[40].persen:
+      lama: null
+      baru: 31
+    ter_bulanan.A[41].batas_atas:
+      lama: null
+      baru: 910000000
+    ter_bulanan.A[41].persen:
+      lama: null
+      baru: 32
+    ter_bulanan.A[42].batas_atas:
+      lama: null
+      baru: 1400000000
+    ter_bulanan.A[42].persen:
+      lama: null
+      baru: 33
+    ter_bulanan.A[43].persen:
+      lama: null
+      baru: 34
+    ter_bulanan.B[0].batas_atas:
+      lama: null
+      baru: 6200000
+    ter_bulanan.B[0].persen:
+      lama: null
+      baru: 0
+    ter_bulanan.B[1].batas_atas:
+      lama: null
+      baru: 6500000
+    ter_bulanan.B[1].persen:
+      lama: null
+      baru: 0.25
+    ter_bulanan.B[2].batas_atas:
+      lama: null
+      baru: 6850000
+    ter_bulanan.B[2].persen:
+      lama: null
+      baru: 0.5
+    ter_bulanan.B[3].batas_atas:
+      lama: null
+      baru: 7300000
+    ter_bulanan.B[3].persen:
+      lama: null
+      baru: 0.75
+    ter_bulanan.B[4].batas_atas:
+      lama: null
+      baru: 9200000
+    ter_bulanan.B[4].persen:
+      lama: null
+      baru: 1
+    ter_bulanan.B[5].batas_atas:
+      lama: null
+      baru: 10750000
+    ter_bulanan.B[5].persen:
+      lama: null
+      baru: 1.5
+    ter_bulanan.B[6].batas_atas:
+      lama: null
+      baru: 11250000
+    ter_bulanan.B[6].persen:
+      lama: null
+      baru: 2
+    ter_bulanan.B[7].batas_atas:
+      lama: null
+      baru: 11600000
+    ter_bulanan.B[7].persen:
+      lama: null
+      baru: 2.5
+    ter_bulanan.B[8].batas_atas:
+      lama: null
+      baru: 12600000
+    ter_bulanan.B[8].persen:
+      lama: null
+      baru: 3
+    ter_bulanan.B[9].batas_atas:
+      lama: null
+      baru: 13600000
+    ter_bulanan.B[9].persen:
+      lama: null
+      baru: 4
+    ter_bulanan.B[10].batas_atas:
+      lama: null
+      baru: 14950000
+    ter_bulanan.B[10].persen:
+      lama: null
+      baru: 5
+    ter_bulanan.B[11].batas_atas:
+      lama: null
+      baru: 16400000
+    ter_bulanan.B[11].persen:
+      lama: null
+      baru: 6
+    ter_bulanan.B[12].batas_atas:
+      lama: null
+      baru: 18450000
+    ter_bulanan.B[12].persen:
+      lama: null
+      baru: 7
+    ter_bulanan.B[13].batas_atas:
+      lama: null
+      baru: 21850000
+    ter_bulanan.B[13].persen:
+      lama: null
+      baru: 8
+    ter_bulanan.B[14].batas_atas:
+      lama: null
+      baru: 26000000
+    ter_bulanan.B[14].persen:
+      lama: null
+      baru: 9
+    ter_bulanan.B[15].batas_atas:
+      lama: null
+      baru: 27700000
+    ter_bulanan.B[15].persen:
+      lama: null
+      baru: 10
+    ter_bulanan.B[16].batas_atas:
+      lama: null
+      baru: 29350000
+    ter_bulanan.B[16].persen:
+      lama: null
+      baru: 11
+    ter_bulanan.B[17].batas_atas:
+      lama: null
+      baru: 31450000
+    ter_bulanan.B[17].persen:
+      lama: null
+      baru: 12
+    ter_bulanan.B[18].batas_atas:
+      lama: null
+      baru: 33950000
+    ter_bulanan.B[18].persen:
+      lama: null
+      baru: 13
+    ter_bulanan.B[19].batas_atas:
+      lama: null
+      baru: 37100000
+    ter_bulanan.B[19].persen:
+      lama: null
+      baru: 14
+    ter_bulanan.B[20].batas_atas:
+      lama: null
+      baru: 41100000
+    ter_bulanan.B[20].persen:
+      lama: null
+      baru: 15
+    ter_bulanan.B[21].batas_atas:
+      lama: null
+      baru: 45800000
+    ter_bulanan.B[21].persen:
+      lama: null
+      baru: 16
+    ter_bulanan.B[22].batas_atas:
+      lama: null
+      baru: 49500000
+    ter_bulanan.B[22].persen:
+      lama: null
+      baru: 17
+    ter_bulanan.B[23].batas_atas:
+      lama: null
+      baru: 53800000
+    ter_bulanan.B[23].persen:
+      lama: null
+      baru: 18
+    ter_bulanan.B[24].batas_atas:
+      lama: null
+      baru: 58500000
+    ter_bulanan.B[24].persen:
+      lama: null
+      baru: 19
+    ter_bulanan.B[25].batas_atas:
+      lama: null
+      baru: 64000000
+    ter_bulanan.B[25].persen:
+      lama: null
+      baru: 20
+    ter_bulanan.B[26].batas_atas:
+      lama: null
+      baru: 71000000
+    ter_bulanan.B[26].persen:
+      lama: null
+      baru: 21
+    ter_bulanan.B[27].batas_atas:
+      lama: null
+      baru: 80000000
+    ter_bulanan.B[27].persen:
+      lama: null
+      baru: 22
+    ter_bulanan.B[28].batas_atas:
+      lama: null
+      baru: 93000000
+    ter_bulanan.B[28].persen:
+      lama: null
+      baru: 23
+    ter_bulanan.B[29].batas_atas:
+      lama: null
+      baru: 109000000
+    ter_bulanan.B[29].persen:
+      lama: null
+      baru: 24
+    ter_bulanan.B[30].batas_atas:
+      lama: null
+      baru: 129000000
+    ter_bulanan.B[30].persen:
+      lama: null
+      baru: 25
+    ter_bulanan.B[31].batas_atas:
+      lama: null
+      baru: 163000000
+    ter_bulanan.B[31].persen:
+      lama: null
+      baru: 26
+    ter_bulanan.B[32].batas_atas:
+      lama: null
+      baru: 211000000
+    ter_bulanan.B[32].persen:
+      lama: null
+      baru: 27
+    ter_bulanan.B[33].batas_atas:
+      lama: null
+      baru: 374000000
+    ter_bulanan.B[33].persen:
+      lama: null
+      baru: 28
+    ter_bulanan.B[34].batas_atas:
+      lama: null
+      baru: 459000000
+    ter_bulanan.B[34].persen:
+      lama: null
+      baru: 29
+    ter_bulanan.B[35].batas_atas:
+      lama: null
+      baru: 555000000
+    ter_bulanan.B[35].persen:
+      lama: null
+      baru: 30
+    ter_bulanan.B[36].batas_atas:
+      lama: null
+      baru: 704000000
+    ter_bulanan.B[36].persen:
+      lama: null
+      baru: 31
+    ter_bulanan.B[37].batas_atas:
+      lama: null
+      baru: 957000000
+    ter_bulanan.B[37].persen:
+      lama: null
+      baru: 32
+    ter_bulanan.B[38].batas_atas:
+      lama: null
+      baru: 1405000000
+    ter_bulanan.B[38].persen:
+      lama: null
+      baru: 33
+    ter_bulanan.B[39].persen:
+      lama: null
+      baru: 34
+    ter_bulanan.C[0].batas_atas:
+      lama: null
+      baru: 6600000
+    ter_bulanan.C[0].persen:
+      lama: null
+      baru: 0
+    ter_bulanan.C[1].batas_atas:
+      lama: null
+      baru: 6950000
+    ter_bulanan.C[1].persen:
+      lama: null
+      baru: 0.25
+    ter_bulanan.C[2].batas_atas:
+      lama: null
+      baru: 7350000
+    ter_bulanan.C[2].persen:
+      lama: null
+      baru: 0.5
+    ter_bulanan.C[3].batas_atas:
+      lama: null
+      baru: 7800000
+    ter_bulanan.C[3].persen:
+      lama: null
+      baru: 0.75
+    ter_bulanan.C[4].batas_atas:
+      lama: null
+      baru: 8850000
+    ter_bulanan.C[4].persen:
+      lama: null
+      baru: 1
+    ter_bulanan.C[5].batas_atas:
+      lama: null
+      baru: 9800000
+    ter_bulanan.C[5].persen:
+      lama: null
+      baru: 1.25
+    ter_bulanan.C[6].batas_atas:
+      lama: null
+      baru: 10950000
+    ter_bulanan.C[6].persen:
+      lama: null
+      baru: 1.5
+    ter_bulanan.C[7].batas_atas:
+      lama: null
+      baru: 11200000
+    ter_bulanan.C[7].persen:
+      lama: null
+      baru: 1.75
+    ter_bulanan.C[8].batas_atas:
+      lama: null
+      baru: 12050000
+    ter_bulanan.C[8].persen:
+      lama: null
+      baru: 2
+    ter_bulanan.C[9].batas_atas:
+      lama: null
+      baru: 12950000
+    ter_bulanan.C[9].persen:
+      lama: null
+      baru: 3
+    ter_bulanan.C[10].batas_atas:
+      lama: null
+      baru: 14150000
+    ter_bulanan.C[10].persen:
+      lama: null
+      baru: 4
+    ter_bulanan.C[11].batas_atas:
+      lama: null
+      baru: 15550000
+    ter_bulanan.C[11].persen:
+      lama: null
+      baru: 5
+    ter_bulanan.C[12].batas_atas:
+      lama: null
+      baru: 17050000
+    ter_bulanan.C[12].persen:
+      lama: null
+      baru: 6
+    ter_bulanan.C[13].batas_atas:
+      lama: null
+      baru: 19500000
+    ter_bulanan.C[13].persen:
+      lama: null
+      baru: 7
+    ter_bulanan.C[14].batas_atas:
+      lama: null
+      baru: 22700000
+    ter_bulanan.C[14].persen:
+      lama: null
+      baru: 8
+    ter_bulanan.C[15].batas_atas:
+      lama: null
+      baru: 26600000
+    ter_bulanan.C[15].persen:
+      lama: null
+      baru: 9
+    ter_bulanan.C[16].batas_atas:
+      lama: null
+      baru: 28100000
+    ter_bulanan.C[16].persen:
+      lama: null
+      baru: 10
+    ter_bulanan.C[17].batas_atas:
+      lama: null
+      baru: 30100000
+    ter_bulanan.C[17].persen:
+      lama: null
+      baru: 11
+    ter_bulanan.C[18].batas_atas:
+      lama: null
+      baru: 32600000
+    ter_bulanan.C[18].persen:
+      lama: null
+      baru: 12
+    ter_bulanan.C[19].batas_atas:
+      lama: null
+      baru: 35400000
+    ter_bulanan.C[19].persen:
+      lama: null
+      baru: 13
+    ter_bulanan.C[20].batas_atas:
+      lama: null
+      baru: 38900000
+    ter_bulanan.C[20].persen:
+      lama: null
+      baru: 14
+    ter_bulanan.C[21].batas_atas:
+      lama: null
+      baru: 43000000
+    ter_bulanan.C[21].persen:
+      lama: null
+      baru: 15
+    ter_bulanan.C[22].batas_atas:
+      lama: null
+      baru: 47400000
+    ter_bulanan.C[22].persen:
+      lama: null
+      baru: 16
+    ter_bulanan.C[23].batas_atas:
+      lama: null
+      baru: 51200000
+    ter_bulanan.C[23].persen:
+      lama: null
+      baru: 17
+    ter_bulanan.C[24].batas_atas:
+      lama: null
+      baru: 55800000
+    ter_bulanan.C[24].persen:
+      lama: null
+      baru: 18
+    ter_bulanan.C[25].batas_atas:
+      lama: null
+      baru: 60400000
+    ter_bulanan.C[25].persen:
+      lama: null
+      baru: 19
+    ter_bulanan.C[26].batas_atas:
+      lama: null
+      baru: 66700000
+    ter_bulanan.C[26].persen:
+      lama: null
+      baru: 20
+    ter_bulanan.C[27].batas_atas:
+      lama: null
+      baru: 74500000
+    ter_bulanan.C[27].persen:
+      lama: null
+      baru: 21
+    ter_bulanan.C[28].batas_atas:
+      lama: null
+      baru: 83200000
+    ter_bulanan.C[28].persen:
+      lama: null
+      baru: 22
+    ter_bulanan.C[29].batas_atas:
+      lama: null
+      baru: 95600000
+    ter_bulanan.C[29].persen:
+      lama: null
+      baru: 23
+    ter_bulanan.C[30].batas_atas:
+      lama: null
+      baru: 110000000
+    ter_bulanan.C[30].persen:
+      lama: null
+      baru: 24
+    ter_bulanan.C[31].batas_atas:
+      lama: null
+      baru: 134000000
+    ter_bulanan.C[31].persen:
+      lama: null
+      baru: 25
+    ter_bulanan.C[32].batas_atas:
+      lama: null
+      baru: 169000000
+    ter_bulanan.C[32].persen:
+      lama: null
+      baru: 26
+    ter_bulanan.C[33].batas_atas:
+      lama: null
+      baru: 221000000
+    ter_bulanan.C[33].persen:
+      lama: null
+      baru: 27
+    ter_bulanan.C[34].batas_atas:
+      lama: null
+      baru: 390000000
+    ter_bulanan.C[34].persen:
+      lama: null
+      baru: 28
+    ter_bulanan.C[35].batas_atas:
+      lama: null
+      baru: 463000000
+    ter_bulanan.C[35].persen:
+      lama: null
+      baru: 29
+    ter_bulanan.C[36].batas_atas:
+      lama: null
+      baru: 561000000
+    ter_bulanan.C[36].persen:
+      lama: null
+      baru: 30
+    ter_bulanan.C[37].batas_atas:
+      lama: null
+      baru: 709000000
+    ter_bulanan.C[37].persen:
+      lama: null
+      baru: 31
+    ter_bulanan.C[38].batas_atas:
+      lama: null
+      baru: 965000000
+    ter_bulanan.C[38].persen:
+      lama: null
+      baru: 32
+    ter_bulanan.C[39].batas_atas:
+      lama: null
+      baru: 1419000000
+    ter_bulanan.C[39].persen:
+      lama: null
+      baru: 33
+    ter_bulanan.C[40].persen:
+      lama: null
+      baru: 34
+    ter_harian.lapisan[0].batas_atas:
+      lama: null
+      baru: 450000
+    ter_harian.lapisan[0].persen:
+      lama: null
+      baru: 0
+    ter_harian.lapisan[1].batas_atas:
+      lama: null
+      baru: 2500000
+    ter_harian.lapisan[1].persen:
+      lama: null
+      baru: 0.5
+    ter_harian.batas_atas_ter_harian:
+      lama: null
+      baru: 2500000
+    ter_harian.dpp_persen_di_atas_batas:
+      lama: null
+      baru: 50
+  nilai_berlaku:
+    ptkp.wajib_pajak_sendiri: 54000000
+    ptkp.tambahan_kawin: 4500000
+    ptkp.tambahan_tanggungan: 4500000
+    ptkp.maksimal_tanggungan: 3
+    pph_final_honorarium_pns.I: 0
+    pph_final_honorarium_pns.II: 0
+    pph_final_honorarium_pns.III: 5
+    pph_final_honorarium_pns.IV: 15
+    ter_bulanan.A[0].batas_atas: 5400000
+    ter_bulanan.A[0].persen: 0
+    ter_bulanan.A[1].batas_atas: 5650000
+    ter_bulanan.A[1].persen: 0.25
+    ter_bulanan.A[2].batas_atas: 5950000
+    ter_bulanan.A[2].persen: 0.5
+    ter_bulanan.A[3].batas_atas: 6300000
+    ter_bulanan.A[3].persen: 0.75
+    ter_bulanan.A[4].batas_atas: 6750000
+    ter_bulanan.A[4].persen: 1
+    ter_bulanan.A[5].batas_atas: 7500000
+    ter_bulanan.A[5].persen: 1.25
+    ter_bulanan.A[6].batas_atas: 8550000
+    ter_bulanan.A[6].persen: 1.5
+    ter_bulanan.A[7].batas_atas: 9650000
+    ter_bulanan.A[7].persen: 1.75
+    ter_bulanan.A[8].batas_atas: 10050000
+    ter_bulanan.A[8].persen: 2
+    ter_bulanan.A[9].batas_atas: 10350000
+    ter_bulanan.A[9].persen: 2.25
+    ter_bulanan.A[10].batas_atas: 10700000
+    ter_bulanan.A[10].persen: 2.5
+    ter_bulanan.A[11].batas_atas: 11050000
+    ter_bulanan.A[11].persen: 3
+    ter_bulanan.A[12].batas_atas: 11600000
+    ter_bulanan.A[12].persen: 3.5
+    ter_bulanan.A[13].batas_atas: 12500000
+    ter_bulanan.A[13].persen: 4
+    ter_bulanan.A[14].batas_atas: 13750000
+    ter_bulanan.A[14].persen: 5
+    ter_bulanan.A[15].batas_atas: 15100000
+    ter_bulanan.A[15].persen: 6
+    ter_bulanan.A[16].batas_atas: 16950000
+    ter_bulanan.A[16].persen: 7
+    ter_bulanan.A[17].batas_atas: 19750000
+    ter_bulanan.A[17].persen: 8
+    ter_bulanan.A[18].batas_atas: 24150000
+    ter_bulanan.A[18].persen: 9
+    ter_bulanan.A[19].batas_atas: 26450000
+    ter_bulanan.A[19].persen: 10
+    ter_bulanan.A[20].batas_atas: 28000000
+    ter_bulanan.A[20].persen: 11
+    ter_bulanan.A[21].batas_atas: 30050000
+    ter_bulanan.A[21].persen: 12
+    ter_bulanan.A[22].batas_atas: 32400000
+    ter_bulanan.A[22].persen: 13
+    ter_bulanan.A[23].batas_atas: 35400000
+    ter_bulanan.A[23].persen: 14
+    ter_bulanan.A[24].batas_atas: 39100000
+    ter_bulanan.A[24].persen: 15
+    ter_bulanan.A[25].batas_atas: 43850000
+    ter_bulanan.A[25].persen: 16
+    ter_bulanan.A[26].batas_atas: 47800000
+    ter_bulanan.A[26].persen: 17
+    ter_bulanan.A[27].batas_atas: 51400000
+    ter_bulanan.A[27].persen: 18
+    ter_bulanan.A[28].batas_atas: 56300000
+    ter_bulanan.A[28].persen: 19
+    ter_bulanan.A[29].batas_atas: 62200000
+    ter_bulanan.A[29].persen: 20
+    ter_bulanan.A[30].batas_atas: 68600000
+    ter_bulanan.A[30].persen: 21
+    ter_bulanan.A[31].batas_atas: 77500000
+    ter_bulanan.A[31].persen: 22
+    ter_bulanan.A[32].batas_atas: 89000000
+    ter_bulanan.A[32].persen: 23
+    ter_bulanan.A[33].batas_atas: 103000000
+    ter_bulanan.A[33].persen: 24
+    ter_bulanan.A[34].batas_atas: 125000000
+    ter_bulanan.A[34].persen: 25
+    ter_bulanan.A[35].batas_atas: 157000000
+    ter_bulanan.A[35].persen: 26
+    ter_bulanan.A[36].batas_atas: 206000000
+    ter_bulanan.A[36].persen: 27
+    ter_bulanan.A[37].batas_atas: 337000000
+    ter_bulanan.A[37].persen: 28
+    ter_bulanan.A[38].batas_atas: 454000000
+    ter_bulanan.A[38].persen: 29
+    ter_bulanan.A[39].batas_atas: 550000000
+    ter_bulanan.A[39].persen: 30
+    ter_bulanan.A[40].batas_atas: 695000000
+    ter_bulanan.A[40].persen: 31
+    ter_bulanan.A[41].batas_atas: 910000000
+    ter_bulanan.A[41].persen: 32
+    ter_bulanan.A[42].batas_atas: 1400000000
+    ter_bulanan.A[42].persen: 33
+    ter_bulanan.A[43].batas_atas: null
+    ter_bulanan.A[43].persen: 34
+    ter_bulanan.B[0].batas_atas: 6200000
+    ter_bulanan.B[0].persen: 0
+    ter_bulanan.B[1].batas_atas: 6500000
+    ter_bulanan.B[1].persen: 0.25
+    ter_bulanan.B[2].batas_atas: 6850000
+    ter_bulanan.B[2].persen: 0.5
+    ter_bulanan.B[3].batas_atas: 7300000
+    ter_bulanan.B[3].persen: 0.75
+    ter_bulanan.B[4].batas_atas: 9200000
+    ter_bulanan.B[4].persen: 1
+    ter_bulanan.B[5].batas_atas: 10750000
+    ter_bulanan.B[5].persen: 1.5
+    ter_bulanan.B[6].batas_atas: 11250000
+    ter_bulanan.B[6].persen: 2
+    ter_bulanan.B[7].batas_atas: 11600000
+    ter_bulanan.B[7].persen: 2.5
+    ter_bulanan.B[8].batas_atas: 12600000
+    ter_bulanan.B[8].persen: 3
+    ter_bulanan.B[9].batas_atas: 13600000
+    ter_bulanan.B[9].persen: 4
+    ter_bulanan.B[10].batas_atas: 14950000
+    ter_bulanan.B[10].persen: 5
+    ter_bulanan.B[11].batas_atas: 16400000
+    ter_bulanan.B[11].persen: 6
+    ter_bulanan.B[12].batas_atas: 18450000
+    ter_bulanan.B[12].persen: 7
+    ter_bulanan.B[13].batas_atas: 21850000
+    ter_bulanan.B[13].persen: 8
+    ter_bulanan.B[14].batas_atas: 26000000
+    ter_bulanan.B[14].persen: 9
+    ter_bulanan.B[15].batas_atas: 27700000
+    ter_bulanan.B[15].persen: 10
+    ter_bulanan.B[16].batas_atas: 29350000
+    ter_bulanan.B[16].persen: 11
+    ter_bulanan.B[17].batas_atas: 31450000
+    ter_bulanan.B[17].persen: 12
+    ter_bulanan.B[18].batas_atas: 33950000
+    ter_bulanan.B[18].persen: 13
+    ter_bulanan.B[19].batas_atas: 37100000
+    ter_bulanan.B[19].persen: 14
+    ter_bulanan.B[20].batas_atas: 41100000
+    ter_bulanan.B[20].persen: 15
+    ter_bulanan.B[21].batas_atas: 45800000
+    ter_bulanan.B[21].persen: 16
+    ter_bulanan.B[22].batas_atas: 49500000
+    ter_bulanan.B[22].persen: 17
+    ter_bulanan.B[23].batas_atas: 53800000
+    ter_bulanan.B[23].persen: 18
+    ter_bulanan.B[24].batas_atas: 58500000
+    ter_bulanan.B[24].persen: 19
+    ter_bulanan.B[25].batas_atas: 64000000
+    ter_bulanan.B[25].persen: 20
+    ter_bulanan.B[26].batas_atas: 71000000
+    ter_bulanan.B[26].persen: 21
+    ter_bulanan.B[27].batas_atas: 80000000
+    ter_bulanan.B[27].persen: 22
+    ter_bulanan.B[28].batas_atas: 93000000
+    ter_bulanan.B[28].persen: 23
+    ter_bulanan.B[29].batas_atas: 109000000
+    ter_bulanan.B[29].persen: 24
+    ter_bulanan.B[30].batas_atas: 129000000
+    ter_bulanan.B[30].persen: 25
+    ter_bulanan.B[31].batas_atas: 163000000
+    ter_bulanan.B[31].persen: 26
+    ter_bulanan.B[32].batas_atas: 211000000
+    ter_bulanan.B[32].persen: 27
+    ter_bulanan.B[33].batas_atas: 374000000
+    ter_bulanan.B[33].persen: 28
+    ter_bulanan.B[34].batas_atas: 459000000
+    ter_bulanan.B[34].persen: 29
+    ter_bulanan.B[35].batas_atas: 555000000
+    ter_bulanan.B[35].persen: 30
+    ter_bulanan.B[36].batas_atas: 704000000
+    ter_bulanan.B[36].persen: 31
+    ter_bulanan.B[37].batas_atas: 957000000
+    ter_bulanan.B[37].persen: 32
+    ter_bulanan.B[38].batas_atas: 1405000000
+    ter_bulanan.B[38].persen: 33
+    ter_bulanan.B[39].batas_atas: null
+    ter_bulanan.B[39].persen: 34
+    ter_bulanan.C[0].batas_atas: 6600000
+    ter_bulanan.C[0].persen: 0
+    ter_bulanan.C[1].batas_atas: 6950000
+    ter_bulanan.C[1].persen: 0.25
+    ter_bulanan.C[2].batas_atas: 7350000
+    ter_bulanan.C[2].persen: 0.5
+    ter_bulanan.C[3].batas_atas: 7800000
+    ter_bulanan.C[3].persen: 0.75
+    ter_bulanan.C[4].batas_atas: 8850000
+    ter_bulanan.C[4].persen: 1
+    ter_bulanan.C[5].batas_atas: 9800000
+    ter_bulanan.C[5].persen: 1.25
+    ter_bulanan.C[6].batas_atas: 10950000
+    ter_bulanan.C[6].persen: 1.5
+    ter_bulanan.C[7].batas_atas: 11200000
+    ter_bulanan.C[7].persen: 1.75
+    ter_bulanan.C[8].batas_atas: 12050000
+    ter_bulanan.C[8].persen: 2
+    ter_bulanan.C[9].batas_atas: 12950000
+    ter_bulanan.C[9].persen: 3
+    ter_bulanan.C[10].batas_atas: 14150000
+    ter_bulanan.C[10].persen: 4
+    ter_bulanan.C[11].batas_atas: 15550000
+    ter_bulanan.C[11].persen: 5
+    ter_bulanan.C[12].batas_atas: 17050000
+    ter_bulanan.C[12].persen: 6
+    ter_bulanan.C[13].batas_atas: 19500000
+    ter_bulanan.C[13].persen: 7
+    ter_bulanan.C[14].batas_atas: 22700000
+    ter_bulanan.C[14].persen: 8
+    ter_bulanan.C[15].batas_atas: 26600000
+    ter_bulanan.C[15].persen: 9
+    ter_bulanan.C[16].batas_atas: 28100000
+    ter_bulanan.C[16].persen: 10
+    ter_bulanan.C[17].batas_atas: 30100000
+    ter_bulanan.C[17].persen: 11
+    ter_bulanan.C[18].batas_atas: 32600000
+    ter_bulanan.C[18].persen: 12
+    ter_bulanan.C[19].batas_atas: 35400000
+    ter_bulanan.C[19].persen: 13
+    ter_bulanan.C[20].batas_atas: 38900000
+    ter_bulanan.C[20].persen: 14
+    ter_bulanan.C[21].batas_atas: 43000000
+    ter_bulanan.C[21].persen: 15
+    ter_bulanan.C[22].batas_atas: 47400000
+    ter_bulanan.C[22].persen: 16
+    ter_bulanan.C[23].batas_atas: 51200000
+    ter_bulanan.C[23].persen: 17
+    ter_bulanan.C[24].batas_atas: 55800000
+    ter_bulanan.C[24].persen: 18
+    ter_bulanan.C[25].batas_atas: 60400000
+    ter_bulanan.C[25].persen: 19
+    ter_bulanan.C[26].batas_atas: 66700000
+    ter_bulanan.C[26].persen: 20
+    ter_bulanan.C[27].batas_atas: 74500000
+    ter_bulanan.C[27].persen: 21
+    ter_bulanan.C[28].batas_atas: 83200000
+    ter_bulanan.C[28].persen: 22
+    ter_bulanan.C[29].batas_atas: 95600000
+    ter_bulanan.C[29].persen: 23
+    ter_bulanan.C[30].batas_atas: 110000000
+    ter_bulanan.C[30].persen: 24
+    ter_bulanan.C[31].batas_atas: 134000000
+    ter_bulanan.C[31].persen: 25
+    ter_bulanan.C[32].batas_atas: 169000000
+    ter_bulanan.C[32].persen: 26
+    ter_bulanan.C[33].batas_atas: 221000000
+    ter_bulanan.C[33].persen: 27
+    ter_bulanan.C[34].batas_atas: 390000000
+    ter_bulanan.C[34].persen: 28
+    ter_bulanan.C[35].batas_atas: 463000000
+    ter_bulanan.C[35].persen: 29
+    ter_bulanan.C[36].batas_atas: 561000000
+    ter_bulanan.C[36].persen: 30
+    ter_bulanan.C[37].batas_atas: 709000000
+    ter_bulanan.C[37].persen: 31
+    ter_bulanan.C[38].batas_atas: 965000000
+    ter_bulanan.C[38].persen: 32
+    ter_bulanan.C[39].batas_atas: 1419000000
+    ter_bulanan.C[39].persen: 33
+    ter_bulanan.C[40].batas_atas: null
+    ter_bulanan.C[40].persen: 34
+    biaya_pensiun.persen: 5
+    biaya_pensiun.maksimal_sebulan: 200000
+    biaya_pensiun.maksimal_setahun: 2400000
+    pph_final_manfaat_pensiun[0].batas_atas: 50000000
+    pph_final_manfaat_pensiun[0].persen: 0
+    pph_final_manfaat_pensiun[1].batas_atas: null
+    pph_final_manfaat_pensiun[1].persen: 5
+    tarif_pasal_17[0].batas_atas: 60000000
+    tarif_pasal_17[0].persen: 5
+    tarif_pasal_17[1].batas_atas: 250000000
+    tarif_pasal_17[1].persen: 15
+    tarif_pasal_17[2].batas_atas: 500000000
+    tarif_pasal_17[2].persen: 25
+    tarif_pasal_17[3].batas_atas: 5000000000
+    tarif_pasal_17[3].persen: 30
+    tarif_pasal_17[4].batas_atas: null
+    tarif_pasal_17[4].persen: 35
+    bukan_pegawai.dpp_persen: 50
+    pph_final_pesangon[0].batas_atas: 50000000
+    pph_final_pesangon[0].persen: 0
+    pph_final_pesangon[1].batas_atas: 100000000
+    pph_final_pesangon[1].persen: 5
+    pph_final_pesangon[2].batas_atas: 500000000
+    pph_final_pesangon[2].persen: 15
+    pph_final_pesangon[3].batas_atas: null
+    pph_final_pesangon[3].persen: 25
+    ter_harian.lapisan[0].batas_atas: 450000
+    ter_harian.lapisan[0].persen: 0
+    ter_harian.lapisan[1].batas_atas: 2500000
+    ter_harian.lapisan[1].persen: 0.5
+    ter_harian.batas_bebas_harian: 450000
+    ter_harian.batas_atas_ter_harian: 2500000
+    ter_harian.dpp_persen_di_atas_batas: 50
+    biaya_jabatan.persen: 5
+    biaya_jabatan.maksimal_sebulan: 500000
+    biaya_jabatan.maksimal_setahun: 6000000

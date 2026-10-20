@@ -1,0 +1,247 @@
+kasus:
+  - id: al-01
+    kategori: info
+    tag: [uji_alami]
+    sumber: https://tanyapajak.flazztax.com/comment-page-164/#comment-22358
+    perilaku: info
+    pertanyaan: bonus yg dibayar desember potongannya sama kyk gaji bulanan ga sih atau beda tarif
+    tool: find_legal_basis
+    harus_memuat: [[pasal 17]]
+    dasar: PMK 168/2023, masa pajak terakhir memakai tarif Pasal 17 UU PPh atas penghasilan setahun dikurangi PPh yang sudah dipotong
+
+  - id: al-03
+    kategori: info
+    tag: [uji_alami]
+    sumber: https://tanyapajak.flazztax.com/comment-page-163/#comment-22332
+    perilaku: info
+    pertanyaan: pegawai tdk tetap harian itu ptkp nya gimana ya sebelum dipotong pake ter harian
+    tool: find_legal_basis
+    harus_memuat: [["450.000", "450 ribu", "450rb"], ["2.500.000", "2,5 juta", "2,5jt"]]
+    dasar: PMK 168/2023 dan PP 58/2023, TER harian (0% sampai Rp450.000 sehari, 0,5% sampai Rp2.500.000)
+
+  - id: al-05
+    kategori: info
+    tag: [uji_alami]
+    sumber: https://tanyapajak.flazztax.com/comment-page-158/#comment-21763
+    perilaku: info
+    pertanyaan: kalau karyawan pensiun tengah bulan / bulan mei, pph 21 nya dipotong gmn
+    tool: find_legal_basis
+    harus_memuat: [[pasal 17]]
+    dasar: >-
+      PMK 168/2023, bulan berhenti bekerja adalah masa pajak terakhir, dihitung dengan tarif Pasal 17 atas penghasilan
+      Januari sampai bulan itu (tidak disetahunkan, kecuali meninggalkan Indonesia; lihat contoh Lampiran I.2.2.1)
+
+  - id: al-06
+    kategori: info
+    tag: [uji_alami]
+    sumber: https://tanyapajak.flazztax.com/comment-page-154/#comment-21171
+    perilaku: info
+    pertanyaan: >-
+      di soal studi kasus karyawan swasta ga disebut biaya jabatan sama iuran pensiun, tetep ditulis jadi pengurang
+      ga?
+    tool: find_legal_basis
+    harus_memuat: [["5%", "5 persen"], ["6.000.000", "6 juta", "6jt"]]
+    dasar: PMK 168/2023, biaya jabatan 5% dari bruto, paling banyak Rp6.000.000 setahun
+
+  - id: al-07
+    kategori: info
+    tag: [uji_alami]
+    sumber: https://tanyapajak.flazztax.com/comment-page-157/#comment-21554
+    perilaku: info
+    pertanyaan: kantor kasih komisi ke marketing freelance, pajak apa yg dipotong dan tarifnya brp
+    tool: find_legal_basis
+    harus_memuat: [["50%", "50 persen"], [pasal 17]]
+    dasar: PMK 168/2023, bukan pegawai, DPP 50% dari bruto dikali tarif Pasal 17
+
+  - id: al-10
+    kategori: bukan_pegawai
+    tag: [uji_alami]
+    sumber: https://tanyapajak.flazztax.com/comment-page-151/#comment-20796
+    perilaku: hitung
+    pertanyaan: >-
+      kontrak tenaga ahli 126jt ditagih sekaligus tp bayarnya dicicil 21jt/bulan selama 6 bulan (2025), orgnya ada
+      npwp. pph21 nya dihitung dr total invoice atau per cicilan, brp per bulan
+    tool: calculate_pph21_non_employee
+    argumen: {penghasilan_bruto: 21000000, tahun_pajak: 2025}
+    argumen_dinilai: [penghasilan_bruto]
+    dasar: >-
+      PMK 168/2023, tenaga ahli adalah bukan pegawai; dipotong per pembayaran, DPP 50% dikali tarif Pasal 17, tidak
+      kumulatif (contoh Lampiran V.2). Jawaban situs (pegawai tidak tetap) tidak dipakai.
+
+  - id: al-11
+    kategori: tanya_balik
+    tag: [uji_alami]
+    sumber: https://tanyapajak.flazztax.com/comment-page-150/#comment-20711
+    perilaku: tanya_balik
+    pertanyaan: >-
+      gapok 3jt/bulan + uang makan dihitung per hari masuk, perusahaan lapor netto 41.719.250. udh bener belum ya
+    catatan: status PTKP, rincian tunjangan, dan masa kerja tidak disebut
+
+  - id: al-12
+    kategori: info
+    tag: [uji_alami]
+    sumber: https://tanyapajak.flazztax.com/comment-page-150/#comment-20690
+    perilaku: info
+    pertanyaan: >-
+      pensiunan pns gol IV dapet honor jadi wakil indonesia, dipotong 15%. beliau minta 5% krn udh bukan asn. bener
+      15% ga, aturannya apa
+    tool: find_legal_basis
+    harus_memuat: [["15%", "15 persen"]]
+    dasar: PP 80/2010, PPh 21 final atas honorarium dari APBN/APBD untuk PNS golongan IV dan pensiunannya 15%
+
+  - id: al-13
+    kategori: final
+    tag: [uji_alami]
+    sumber: https://tanyapajak.flazztax.com/comment-page-147/#comment-20300
+    perilaku: hitung
+    pertanyaan: >-
+      pindah kerja dpt pesangon 17.414.191 dipotong 8% tp ga dikasih bupot, kata hr udh masuk ke A1 gaji 2024. emang
+      gitu? hrsnya pph pesangonnya brp
+    tool: calculate_pph21_final
+    argumen: {jenis: pesangon, jumlah_bruto: 17414191, tahun_pajak: 2024}
+    argumen_dinilai: [jenis, jumlah_bruto]
+    dasar: PP 68/2009, pesangon sampai Rp50.000.000 dikenai PPh 21 final 0%
+
+  - id: al-15
+    kategori: tanya_balik
+    tag: [uji_alami]
+    sumber: https://tanyapajak.flazztax.com/comment-page-116/#comment-16486
+    perilaku: tanya_balik
+    pertanyaan: >-
+      gaji pokok 5jt tp dipotong pph 21 250rb, normal ga sih? kata konsultan kantor udh dihitung semua, temen gaji 8jt
+      aja ga segitu
+    catatan: status PTKP, tunjangan lain, dan bulan tidak disebut
+
+  - id: al-16
+    kategori: bukan_pegawai
+    tag: [uji_alami]
+    sumber: https://tanyapajak.flazztax.com/comment-page-117/#comment-16535
+    perilaku: hitung
+    pertanyaan: >-
+      ada orang pribadi yg ngerekomendasiin pt kami dpt kerjaan, dia dpt fee komisi 300jt. pas transfer dipotong pph 23
+      2% atau pph 21 tenaga ahli atau apa
+    tool: calculate_pph21_non_employee
+    argumen: {penghasilan_bruto: 300000000, tahun_pajak: 2024}
+    argumen_dinilai: [penghasilan_bruto]
+    dasar: PMK 168/2023, imbalan kepada orang pribadi bukan pegawai, DPP 50% dikali tarif Pasal 17 (bukan PPh 23)
+
+  - id: al-17
+    kategori: pegawai_tetap_bulanan
+    tag: [uji_alami]
+    sumber: https://tanyapajak.flazztax.com/comment-page-118/#comment-16667
+    perilaku: hitung
+    pertanyaan: >-
+      pegawai tk/0 gaji 4jt dpt bonus 20jt jadi total 24jt bulan itu (2024), ter kategori a 9% jadi dipotong 2,1jtan
+      bener? nanti desember jadi lebih bayar gmn
+    tool: calculate_pph21_permanent_monthly
+    argumen: {gaji_pokok: 4000000, bonus_thr_komisi: 20000000, status_ptkp: TK/0, masa_pajak: 2, tahun_pajak: 2024}
+    argumen_dinilai: [gaji_pokok, bonus_thr_komisi, status_ptkp, tahun_pajak]
+    dasar: PP 58/2023 Lampiran, TER kategori A untuk bruto Rp24.000.000 sebulan 9%
+
+  - id: al-18
+    kategori: tanya_balik
+    tag: [uji_alami]
+    sumber: https://tanyapajak.flazztax.com/comment-page-119/#comment-16761
+    perilaku: tanya_balik
+    pertanyaan: gaji sy tiap bulan kurang dr 7jt, ptkp k0, dipotong pph21 150rban tiap bulan. itungannya gmn
+    catatan: besar bruto sebulan tidak pasti
+
+  - id: al-19
+    kategori: info
+    tag: [uji_alami]
+    sumber: https://tanyapajak.flazztax.com/comment-page-119/#comment-16868
+    perilaku: info
+    pertanyaan: >-
+      karyawan swasta gapok 6,5jt bruto 7,6jt, bulan ini lembur jd sekitar 12jt, maret dpt thr 2x gapok. pph thr nya
+      digabung sama gaji atau dihitung pisah
+    tool: find_legal_basis
+    harus_memuat: [[digabung, dijumlah, ditambah, bersama, akumulasi, satu]]
+    dasar: PMK 168/2023, THR dijumlahkan dengan penghasilan bruto bulan itu lalu dikali TER
+
+  - id: al-20
+    kategori: tanya_balik
+    tag: [uji_alami]
+    sumber: https://tanyapajak.flazztax.com/comment-page-124/#comment-17386
+    perilaku: tanya_balik
+    pertanyaan: gaji di bawah 5jt sebulan kena pajak ga
+    catatan: status PTKP dan besar gaji pasti tidak disebut
+
+  - id: al-21
+    kategori: info
+    tag: [uji_alami]
+    sumber: https://tanyapajak.flazztax.com/comment-page-126/#comment-17606
+    perilaku: info
+    pertanyaan: >-
+      pakai ter, gaji bulanan di bawah ptkp jd ga dipotong. april ada thr jd kena potong, tapi akhir tahun ternyata
+      setahun masih di bawah ptkp. yg dipotong april hrs dibalikin ke karyawan?
+    tool: find_legal_basis
+    harus_memuat: [[pasal 17], [dikembalikan, kembalikan, lebih bayar, lebih dipotong, kelebihan]]
+    dasar: PMK 168/2023, masa pajak terakhir dihitung dengan tarif Pasal 17 setahun; kelebihan dikembalikan pemotong
+
+  - id: al-22
+    kategori: tanya_balik
+    tag: [uji_alami]
+    sumber: https://tanyapajak.flazztax.com/comment-page-126/#comment-17654
+    perilaku: tanya_balik
+    pertanyaan: >-
+      sy kurir lepas dibayar sesuai antaran harian tp dibayarnya bulanan, nikah anak 2. bulan lalu bruto 9.130.000
+      dipotong 1,75%, harusnya brp persen
+    catatan: status (pegawai tidak tetap atau bukan pegawai/mitra) menentukan cara hitung
+
+  - id: al-23
+    kategori: bukan_pegawai
+    tag: [uji_alami]
+    sumber: https://tanyapajak.flazztax.com/comment-page-130/#comment-18135
+    perilaku: hitung
+    pertanyaan: >-
+      honor bukan pegawai 4.674.000, pph nya yg terbaru gimana: (honor - ptkp) x 5%, atau (4.674.000 - 4.500.000) x 5%,
+      atau bruto x 50% x tarif pasal 17?
+    tool: calculate_pph21_non_employee
+    argumen: {penghasilan_bruto: 4674000, tahun_pajak: 2024}
+    argumen_dinilai: [penghasilan_bruto]
+    dasar: PMK 168/2023, bukan pegawai, DPP 50% dari bruto dikali tarif Pasal 17, tanpa PTKP
+
+  - id: al-24
+    kategori: info
+    tag: [uji_alami]
+    sumber: https://tanyapajak.flazztax.com/comment-page-131/#comment-18294
+    perilaku: info
+    pertanyaan: >-
+      sy pegawai tetap sales, komisi tiap bulan beda2. misal bulan ini gaji 5jt komisi 10jt, pajaknya ngitungnya gmn
+    tool: find_legal_basis
+    harus_memuat: [[ter]]
+    dasar: >-
+      PMK 168/2023, komisi pegawai tetap adalah penghasilan pegawai, dijumlahkan dengan gaji lalu dikali TER (bukan DPP
+      50% bukan pegawai); status PTKP tidak disebut sehingga angka tidak bisa dihitung
+
+  - id: al-25
+    kategori: info
+    tag: [uji_alami]
+    sumber: https://tanyapajak.flazztax.com/comment-page-134/#comment-18696
+    perilaku: info
+    pertanyaan: >-
+      pph21 pkwt di desember pake pasal 17 atau ter bulanan? terus januari 2024 sy tk/0 (kategori a), maret nikah dan
+      nanggung mertua (k/1), maret masuk kategori a atau b
+    tool: find_legal_basis
+    harus_memuat: [[pasal 17], [awal tahun, 1 januari]]
+    dasar: PMK 168/2023 (masa pajak terakhir tarif Pasal 17); UU PPh Pasal 7 ayat (2), status PTKP menurut keadaan awal tahun
+
+  - id: al-26
+    kategori: info
+    tag: [uji_alami]
+    sumber: https://tanyapajak.flazztax.com/comment-page-136/#comment-18865
+    perilaku: info
+    pertanyaan: pph 21 pesangon / santunan hari tua masih ngacu pp 68/2009 atau skrg uu hpp 7/2021
+    tool: find_legal_basis
+    harus_memuat: [["68/2009", "68 tahun 2009"]]
+    dasar: PP 68/2009 (tarif final pesangon dan manfaat pensiun sekaligus) masih berlaku; tidak dicabut PP 58/2023
+
+  - id: al-27
+    kategori: info
+    tag: [uji_alami]
+    sumber: https://tanyapajak.flazztax.com/comment-page-140/#comment-19403
+    perilaku: info
+    pertanyaan: potongan pajak tunjangan kinerja pppk gmn, brp, pph apa
+    tool: find_legal_basis
+    harus_memuat: [[ter]]
+    dasar: PMK 168/2023, PPPK pegawai tetap; tunjangan kinerja dijumlahkan dengan gaji dan dikali TER

@@ -1,0 +1,190 @@
+kasus:
+  - id: ur-01
+    kategori: pegawai_tetap_bulanan
+    tag: [uji_resmi]
+    perilaku: hitung
+    pertanyaan: >-
+      min sy wna baru pindah ke jkt sept 2024, kerja tetap gaji 15,5jt/bln, blm nikah ga ada tanggungan. pph21 bulan september brp ya
+    tool: calculate_pph21_permanent_monthly
+    argumen: {gaji_pokok: 15500000, status_ptkp: TK/0, masa_pajak: 9, tahun_pajak: 2024}
+    argumen_dinilai: [gaji_pokok, status_ptkp, masa_pajak, tahun_pajak]
+
+  - id: ur-02
+    kategori: pegawai_tetap_bulanan
+    tag: [uji_resmi, butuh_aritmetika]
+    perilaku: hitung
+    pertanyaan: >-
+      gaji suami dibayar pake dollar 2000 usd bulan januari 2024 kursnya 15rb. dia karyawan tetap, nikah anak 3. potongan pph 21 nya jadi brp
+    tool: calculate_pph21_permanent_monthly
+    argumen: {gaji_pokok: 30000000, status_ptkp: K/3, masa_pajak: 1, tahun_pajak: 2024}
+    argumen_dinilai: [gaji_pokok, status_ptkp, masa_pajak, tahun_pajak]
+
+  - id: ur-03
+    kategori: pegawai_tetap_bulanan
+    tag: [uji_resmi]
+    perilaku: hitung
+    pertanyaan: >-
+      halo mau tanya pph21 juli 2024, gaji 6,5jt + tunjangan pph dr kantor 300rb, iuran pensiun potong gaji 100rb. status k2 karyawan tetap
+    tool: calculate_pph21_permanent_monthly
+    argumen: {gaji_pokok: 6500000, tunjangan_pph: 300000, iuran_pensiun_dibayar_pegawai: 100000, status_ptkp: K/2, masa_pajak: 7, tahun_pajak: 2024}
+    argumen_dinilai: [gaji_pokok, tunjangan_pph, status_ptkp, masa_pajak, tahun_pajak]
+
+  - id: ur-04
+    kategori: pegawai_tetap_bulanan
+    tag: [uji_resmi]
+    perilaku: hitung
+    pertanyaan: >-
+      pns gol 3, punya istri 1 anak, januari 2024 gapok 3jt tunjangan2 tetapnya total 7.545.000 pph 21 nya berapa?
+    tool: calculate_pph21_permanent_monthly
+    argumen: {gaji_pokok: 3000000, tunjangan_tetap: 7545000, status_ptkp: K/1, masa_pajak: 1, tahun_pajak: 2024}
+    argumen_dinilai: [gaji_pokok, tunjangan_tetap, status_ptkp, masa_pajak, tahun_pajak]
+
+  - id: ur-05
+    kategori: pegawai_tetap_bulanan
+    tag: [uji_resmi]
+    perilaku: hitung
+    pertanyaan: >-
+      pns k1, juni 2024 terima gapok 3jt tunjangan tetap 7.017.000 sama gaji 13 sebesar 10.017.000. pph21 juni brp ya kok kayaknya gede
+    tool: calculate_pph21_permanent_monthly
+    argumen: {gaji_pokok: 3000000, tunjangan_tetap: 7017000, bonus_thr_komisi: 10017000, status_ptkp: K/1, masa_pajak: 6, tahun_pajak: 2024}
+    argumen_dinilai: [gaji_pokok, bonus_thr_komisi, status_ptkp, masa_pajak, tahun_pajak]
+
+  - id: ur-06
+    kategori: pegawai_tetap_masa_terakhir
+    tag: [uji_resmi]
+    perilaku: hitung
+    pertanyaan: >-
+      tolong hitungin pph21 final-period 2024 pns, sudah nikah anak satu, setahun gapok 36jt tunjangan tetap 87.504.000 gaji 13+14 12.017.000, jan-nov udh dipotong 3.359.085
+    tool: calculate_pph21_permanent_last_period
+    argumen: {gaji_pokok: 36000000, tunjangan_tetap: 87504000, bonus_thr_komisi: 12017000, status_ptkp: K/1, tahun_pajak: 2024, pph_sudah_dipotong: 3359085}
+    argumen_dinilai: [gaji_pokok, tunjangan_tetap, bonus_thr_komisi, status_ptkp, tahun_pajak, pph_sudah_dipotong]
+
+  - id: ur-07
+    kategori: pegawai_tetap_masa_terakhir
+    tag: [uji_resmi]
+    perilaku: hitung
+    pertanyaan: >-
+      karyawan tetap k/1 di kantor pertama. total 2024 gapok 36jt tunjangan 68.490.000 bonus 8.545.000, s.d nov udh potong pph 2.068.300 desember dipotong brp
+    tool: calculate_pph21_permanent_last_period
+    argumen: {gaji_pokok: 36000000, tunjangan_tetap: 68490000, bonus_thr_komisi: 8545000, status_ptkp: K/1, tahun_pajak: 2024, pph_sudah_dipotong: 2068300}
+    argumen_dinilai: [gaji_pokok, tunjangan_tetap, bonus_thr_komisi, status_ptkp, tahun_pajak, pph_sudah_dipotong]
+
+  - id: ur-08
+    kategori: pegawai_tetap_masa_terakhir
+    tag: [uji_resmi]
+    perilaku: hitung
+    pertanyaan: >-
+      kerja di 2 tempat thn 2024, udah nikah 1 anak. dr kantor kedua dpt tunjangan 17.115.000 setahun blm dipotong pph. bupot kantor pertama neto 107.383.250 pph 21 terutang 2.219.150. kantor kedua yg gabungin, desember potong brp
+    tool: calculate_pph21_permanent_last_period
+    argumen: {tunjangan_tetap: 17115000, status_ptkp: K/1, tahun_pajak: 2024, neto_pemberi_kerja_sebelumnya: 107383250, pph_dipotong_pemberi_kerja_sebelumnya: 2219150, pph_sudah_dipotong: 0}
+    argumen_dinilai: [tunjangan_tetap, status_ptkp, tahun_pajak, neto_pemberi_kerja_sebelumnya, pph_dipotong_pemberi_kerja_sebelumnya]
+
+  - id: ur-09
+    kategori: pensiunan
+    tag: [uji_resmi]
+    perilaku: hitung
+    pertanyaan: >-
+      bapak pensiunan pns, ibu masih ada dan 3 anaknya masih ditanggung, 2024 terima pensiun 2,5jt tiap bulan jd 30jt setahun + pensiun ke 13 2,5jt. blm pernah dipotong. pph21 masa terakhir gmn
+    tool: calculate_pph21_pensioner_last_period
+    argumen: {uang_pensiun: 30000000, penghasilan_lain: 2500000, status_ptkp: K/3, tahun_pajak: 2024, pph_sudah_dipotong: 0}
+    argumen_dinilai: [uang_pensiun, penghasilan_lain, status_ptkp, tahun_pajak]
+
+  - id: ur-10
+    kategori: pegawai_tidak_tetap
+    tag: [uji_resmi]
+    perilaku: hitung
+    pertanyaan: >-
+      tukang borongan renov 10 hari dibayar 4,5jt sekalian (2024) perlu potong pph21 ga
+    tool: calculate_pph21_non_permanent
+    argumen: {upah_per_periode: 4500000, skema: borongan, jumlah_hari: 10, tahun_pajak: 2024}
+    argumen_dinilai: [upah_per_periode, skema, jumlah_hari, tahun_pajak]
+
+  - id: ur-11
+    kategori: pegawai_tidak_tetap
+    tag: [uji_resmi]
+    perilaku: hitung
+    pertanyaan: >-
+      borongan 2024 selesai 5 hari upah totalnya 15jt pph 21 nya brp
+    tool: calculate_pph21_non_permanent
+    argumen: {upah_per_periode: 15000000, skema: borongan, jumlah_hari: 5, tahun_pajak: 2024}
+    argumen_dinilai: [upah_per_periode, skema, jumlah_hari, tahun_pajak]
+
+  - id: ur-12
+    kategori: pegawai_tidak_tetap
+    tag: [uji_resmi]
+    perilaku: hitung
+    pertanyaan: >-
+      pegawai tdk tetap tapi dibayar bulanan, lajang ga ada tanggungan, desember 2024 upahnya 8jt. pph21 brp
+    tool: calculate_pph21_non_permanent
+    argumen: {upah_per_periode: 8000000, skema: bulanan, status_ptkp: TK/0, tahun_pajak: 2024}
+    argumen_dinilai: [upah_per_periode, skema, status_ptkp, tahun_pajak]
+
+  - id: ur-13
+    kategori: bukan_pegawai
+    tag: [uji_resmi]
+    perilaku: hitung
+    pertanyaan: >-
+      dokter praktek di rs bukan pegawai rs. jasa desember 2024 40jt, total setahun udh sekitar 262jt. pph21 desembernya brp, naik tarif ga
+    tool: calculate_pph21_non_employee
+    argumen: {penghasilan_bruto: 40000000, tahun_pajak: 2024}
+    argumen_dinilai: [penghasilan_bruto, tahun_pajak]
+
+  - id: ur-14
+    kategori: pph26
+    tag: [uji_resmi, butuh_aritmetika]
+    perilaku: hitung
+    pertanyaan: >-
+      ada tenaga ahli wna ga tinggal di indo, gajinya 2500 usd 2024 kurs 15rb. pajak yg harus dipotong brp
+    tool: calculate_pph_pasal_26
+    argumen: {penghasilan_bruto: 37500000, tahun_pajak: 2024}
+    argumen_dinilai: [penghasilan_bruto, tahun_pajak]
+
+  - id: ur-15
+    kategori: natura
+    tag: [uji_resmi]
+    perilaku: hitung
+    pertanyaan: >-
+      pegawai lapangan dpt kupon makan 2,7jt/bln (2024) yg di kantor dpt makan senilai 2,5jt/bln. kuponnya kena pajak berapa
+    tool: calculate_taxable_natura
+    argumen: {kupon_makanan: 2700000, nilai_makanan_kantor_sebulan: 2500000, tahun_pajak: 2024}
+    argumen_dinilai: [kupon_makanan, nilai_makanan_kantor_sebulan, tahun_pajak]
+
+  - id: ur-16
+    kategori: natura
+    tag: [uji_resmi]
+    perilaku: hitung
+    pertanyaan: >-
+      kupon makan pegawai dinas luar 2,3jt sebulan 2024, makanan di kantor nilainya 1,5jt/bln. yg kena pajak bagian mana
+    tool: calculate_taxable_natura
+    argumen: {kupon_makanan: 2300000, nilai_makanan_kantor_sebulan: 1500000, tahun_pajak: 2024}
+    argumen_dinilai: [kupon_makanan, nilai_makanan_kantor_sebulan, tahun_pajak]
+
+  - id: ur-17
+    kategori: natura
+    tag: [uji_resmi]
+    perilaku: hitung
+    pertanyaan: >-
+      feb 2024 kantor kasih bingkisan imlek 500rb ke karyawan kena pph 21 ga
+    tool: calculate_taxable_natura
+    argumen: {bingkisan_hari_raya: 500000, tahun_pajak: 2024}
+    argumen_dinilai: [bingkisan_hari_raya, tahun_pajak]
+
+  - id: ur-18
+    kategori: natura
+    tag: [uji_resmi]
+    perilaku: hitung
+    pertanyaan: >-
+      karyawan dapet bingkisan (bukan hari raya) 4jt juni 2024, sebelumnya thn itu udh dpt 1jt. yg kena pajak dr bingkisan juni brp
+    tool: calculate_taxable_natura
+    argumen: {bingkisan_lain: 4000000, bingkisan_lain_sebelumnya_tahun_ini: 1000000, tahun_pajak: 2024}
+    argumen_dinilai: [bingkisan_lain, bingkisan_lain_sebelumnya_tahun_ini, tahun_pajak]
+
+  - id: ur-19
+    kategori: natura
+    tag: [uji_resmi]
+    perilaku: hitung
+    pertanyaan: >-
+      agustus 2024 karyawan dpt bingkisan lg 2jt bukan hari raya, total sebelumnya thn ini udh 5jt. yg kena pajak brp
+    tool: calculate_taxable_natura
+    argumen: {bingkisan_lain: 2000000, bingkisan_lain_sebelumnya_tahun_ini: 5000000, tahun_pajak: 2024}
+    argumen_dinilai: [bingkisan_lain, bingkisan_lain_sebelumnya_tahun_ini, tahun_pajak]

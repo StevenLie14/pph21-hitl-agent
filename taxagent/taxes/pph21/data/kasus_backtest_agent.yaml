@@ -1,0 +1,55 @@
+kasus:
+  - id: a2009
+    tahun: 2009
+    jenis: tahunan
+    peristiwa: [UU 36 Tahun 2008, PMK 250 Tahun 2008, PMK 254 Tahun 2008]
+    disebut: UU No. 36 Tahun 2008
+    klaim: PTKP diri sendiri naik menjadi Rp15.840.000 dan tarif lapisan pertama menjadi 5% sampai Rp50 juta
+  - id: a2013
+    tahun: 2013
+    jenis: tahunan
+    peristiwa: [PMK 162 Tahun 2012, PMK 206 Tahun 2012]
+    disebut: PMK No. 162/PMK.011/2012
+    klaim: PTKP diri sendiri naik menjadi Rp24.300.000 dan tambahan kawin Rp2.025.000
+  - id: a2015
+    tahun: 2015
+    jenis: tahunan
+    peristiwa: [PMK 122 Tahun 2015]
+    disebut: PMK No. 122/PMK.010/2015
+    klaim: PTKP diri sendiri naik menjadi Rp36.000.000 berlaku surut sejak Januari 2015
+  - id: a2016
+    tahun: 2016
+    jenis: tahunan
+    peristiwa: [PMK 101 Tahun 2016]
+    disebut: PMK No. 101/PMK.010/2016
+    klaim: PTKP diri sendiri naik menjadi Rp54.000.000 berlaku surut sejak Januari 2016
+  - id: a2022
+    tahun: 2022
+    jenis: tahunan
+    peristiwa: [UU 7 Tahun 2021]
+    disebut: UU No. 7 Tahun 2021 (UU HPP)
+    klaim: lapisan tarif 5% sekarang sampai Rp60 juta dan ada lapisan baru 35% di atas Rp5 miliar
+  - id: a2024
+    tahun: 2024
+    jenis: bulanan_ter
+    peristiwa: [PP 58 Tahun 2023, PMK 168 Tahun 2023]
+    disebut: PP No. 58 Tahun 2023
+    klaim: pemotongan bulanan sekarang memakai tarif efektif rata-rata (TER) kategori A, B, dan C
+    tabel_teradaptasi: tarif_2024
+
+  - id: a2013p
+    tahun: 2013
+    jenis: pensiunan_tahunan
+    gaji: 6000000
+    status: K/2
+    status_teks: sudah kawin dengan 2 anak tanggungan
+    peristiwa: [PMK 162 Tahun 2012, PMK 206 Tahun 2012]
+    disebut: PMK No. 162/PMK.011/2012
+    klaim: PTKP diri sendiri naik menjadi Rp24.300.000 dan tambahan kawin Rp2.025.000
+  - id: a2022b
+    tahun: 2022
+    jenis: bukan_pegawai
+    gaji: 150000000
+    peristiwa: [UU 7 Tahun 2021]
+    disebut: UU No. 7 Tahun 2021 (UU HPP)
+    klaim: lapisan tarif 5% sekarang sampai Rp60 juta

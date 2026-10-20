@@ -1,0 +1,120 @@
+kasus:
+  - id: gu-01
+    kategori: graf_status
+    tag: [uji_graf]
+    perilaku: graf
+    pertanyaan: aturan juklak potong pph21 karyawan yg dari 2008 itu masih dipake ga?
+    harus_memuat: [["168/pmk.010/2023", "168 tahun 2023", "pmk 168/2023", "pmk-168/2023", "pmk nomor 168/2023", "168/pmk.03/2023"], ["dicabut", "tidak berlaku", "tidak lagi", "sudah tidak", "diganti"]]
+    dasar: PMK 168/2023 Pasal 24 mencabut 252/PMK.03/2008
+
+  - id: gu-02
+    kategori: graf_status
+    tag: [uji_graf]
+    perilaku: graf
+    pertanyaan: biaya jabatan 5% maks 500rb sebulan itu masih pake aturan 2008 ga sih, atau udah ada yg baru?
+    harus_memuat: [["168/pmk.010/2023", "168 tahun 2023", "pmk 168/2023", "pmk-168/2023", "pmk nomor 168/2023", "168/pmk.03/2023"], ["dicabut", "tidak berlaku", "tidak lagi", "sudah tidak", "diganti"]]
+    dasar: PMK 168/2023 Pasal 24 mencabut 250/PMK.03/2008
+
+  - id: gu-03
+    kategori: graf_status
+    tag: [uji_graf]
+    perilaku: graf
+    pertanyaan: PMK 262/PMK.03/2010 soal pph21 pejabat negara dan PNS masih berlaku semuanya ga?
+    harus_memuat: [["168/pmk.010/2023", "168 tahun 2023", "pmk 168/2023", "pmk-168/2023", "pmk nomor 168/2023", "168/pmk.03/2023"], ["sebagian", "tidak seluruhnya", "tidak lagi seluruhnya", "beberapa ketentuan"]]
+    dasar: PMK 168/2023 Pasal 24 mencabut sebagian 262/PMK.03/2010
+
+  - id: gu-04
+    kategori: graf_relasi
+    tag: [uji_graf]
+    perilaku: graf
+    pertanyaan: batas upah pegawai harian yg ga kena potong pph21, aturan yg 2015 itu udh diganti sama apa?
+    harus_memuat: [["102/pmk.010/2016", "102 tahun 2016", "pmk 102/2016", "pmk-102/2016", "pmk nomor 102/2016"]]
+    dasar: 102/PMK.010/2016 Pasal 5 mencabut 152/PMK.010/2015
+
+  - id: gu-05
+    kategori: graf_status
+    tag: [uji_graf]
+    perilaku: graf
+    pertanyaan: ptkp 36jt setahun masih berlaku?
+    harus_memuat: [["101/pmk.010/2016", "101 tahun 2016", "pmk 101/2016", "pmk-101/2016", "pmk nomor 101/2016"], ["dicabut", "tidak berlaku", "tidak lagi", "sudah tidak", "diganti"]]
+    dasar: 101/PMK.010/2016 Pasal 4 mencabut 122/PMK.010/2015
+
+  - id: gu-06
+    kategori: graf_relasi
+    tag: [uji_graf]
+    perilaku: graf
+    pertanyaan: ptkp 24,3jt yg dulu itu dicabut sama aturan apa?
+    harus_memuat: [["122/pmk.010/2015", "122 tahun 2015", "pmk 122/2015", "pmk-122/2015", "pmk nomor 122/2015"]]
+    dasar: 122/PMK.010/2015 Pasal 4 mencabut 162/PMK.011/2012
+
+  - id: gu-07
+    kategori: graf_relasi
+    tag: [uji_graf]
+    perilaku: graf
+    pertanyaan: PMK 137/PMK.03/2005 soal PTKP itu dicabutnya sama aturan apa ya
+    harus_memuat: [["213/pmk.03/2018", "213 tahun 2018", "pmk 213/2018", "pmk-213/2018", "pmk nomor 213/2018"]]
+    dasar: 213/PMK.03/2018 Pasal 1 (daftar) mencabut 137/PMK.03/2005
+
+  - id: gu-08
+    kategori: graf_status
+    tag: [uji_graf]
+    perilaku: graf
+    pertanyaan: aturan makan minum yg disediain kantor buat semua pegawai, yg 2009 itu masih berlaku ga?
+    harus_memuat: [["167/pmk.03/2018", "167 tahun 2018", "pmk 167/2018", "pmk-167/2018", "pmk nomor 167/2018"], ["dicabut", "tidak berlaku", "tidak lagi", "sudah tidak", "diganti"]]
+    dasar: 167/PMK.03/2018 Pasal 10 mencabut 83/PMK.03/2009
+
+  - id: gu-09
+    kategori: graf_status
+    tag: [uji_graf]
+    perilaku: graf
+    pertanyaan: aturan potong pph21 pesangon yg dari PP tahun 2000 masih dipake?
+    harus_memuat: [["pp 68 tahun 2009", "pp nomor 68 tahun 2009", "pp 68/2009", "peraturan pemerintah nomor 68 tahun 2009", "peraturan pemerintah 68 tahun 2009", "pp no. 68 tahun 2009"], ["dicabut", "tidak berlaku", "tidak lagi", "sudah tidak", "diganti"]]
+    dasar: PP 68/2009 Pasal 12 mencabut PP 149/2000
+
+  - id: gu-10
+    kategori: graf_relasi
+    tag: [uji_graf]
+    perilaku: graf
+    pertanyaan: KMK 112/KMK.03/2001 tentang pesangon diganti aturan apa?
+    harus_memuat: [["16/pmk.03/2010", "16 tahun 2010", "pmk 16/2010", "pmk-16/2010", "pmk nomor 16/2010"]]
+    dasar: 16/PMK.03/2010 Pasal 12 mencabut 112/KMK.03/2001
+
+  - id: gu-11
+    kategori: graf_status
+    tag: [uji_graf]
+    perilaku: graf
+    pertanyaan: PP 45 tahun 1994 ttg pajak penghasilan pejabat negara dan PNS udah dicabut belum?
+    harus_memuat: [["pp 80 tahun 2010", "pp nomor 80 tahun 2010", "pp 80/2010", "peraturan pemerintah nomor 80 tahun 2010", "peraturan pemerintah 80 tahun 2010", "pp no. 80 tahun 2010"], ["dicabut", "tidak berlaku", "tidak lagi", "sudah tidak", "diganti"]]
+    dasar: PP 80/2010 Pasal 8 mencabut PP 45/1994
+
+  - id: gu-12
+    kategori: graf_status
+    tag: [uji_graf]
+    perilaku: graf
+    pertanyaan: PER-32/PJ/2015 pedoman potong pph21 masih berlaku ga?
+    harus_memuat: [["per-16/pj/2016", "per 16/pj/2016", "16/pj/2016"], ["dicabut", "tidak berlaku", "tidak lagi", "sudah tidak", "diganti"]]
+    dasar: PER-16/PJ/2016 Pasal 28 mencabut PER-32/PJ/2015
+
+  - id: gu-13
+    kategori: graf_status
+    tag: [uji_graf]
+    perilaku: graf
+    pertanyaan: bentuk bukti potong di PER-14/PJ/2013 masih dipake?
+    harus_memuat: [["per-2/pj/2024", "per-02/pj/2024", "per 2/pj/2024", "2/pj/2024", "02/pj/2024"], ["dicabut", "tidak berlaku", "tidak lagi", "sudah tidak", "diganti"]]
+    dasar: PER-2/PJ/2024 Pasal 13 mencabut PER-14/PJ/2013 (pajak.go.id masih menulis Aktif)
+
+  - id: gu-14
+    kategori: graf_relasi
+    tag: [uji_graf]
+    perilaku: graf
+    pertanyaan: pph21 ditanggung pemerintah 2025 aturannya udah ada perubahan belum?
+    harus_memuat: [["72/pmk.03/2025", "72 tahun 2025", "pmk 72/2025", "pmk-72/2025", "pmk nomor 72/2025", "72/pmk.010/2025"], ["diubah", "perubahan", "mengubah"]]
+    dasar: PMK 72/2025 Pasal I mengubah PMK 10/2025
+
+  - id: gu-15
+    kategori: graf_status
+    tag: [uji_graf]
+    perilaku: graf
+    pertanyaan: PMK 9/PMK.03/2021 insentif pajak covid masih berlaku?
+    harus_memuat: [["3/pmk.03/2022", "3 tahun 2022", "pmk 3/2022", "pmk-3/2022", "pmk nomor 3/2022"], ["dicabut", "tidak berlaku", "tidak lagi", "sudah tidak", "diganti"]]
+    dasar: 3/PMK.03/2022 Pasal 16 mencabut 9/PMK.03/2021

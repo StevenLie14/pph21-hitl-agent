@@ -1,0 +1,108 @@
+kasus:
+  - id: t26-01
+    kategori: pegawai_tetap_bulanan
+    tag: [uji_2026]
+    perilaku: hitung
+    pertanyaan: karyawan tetap gaji 9,5jt, belum nikah tp ibu sy ikut sy dan sepenuhnya sy yg nanggung, pph21 maret 2026 brp
+    tool: calculate_pph21_permanent_monthly
+    argumen: {gaji_pokok: 9500000, status_ptkp: TK/1, masa_pajak: 3, tahun_pajak: 2026}
+
+  - id: t26-02
+    kategori: pegawai_tetap_bulanan
+    tag: [uji_2026]
+    perilaku: hitung
+    pertanyaan: >-
+      gaji sy 14jt + tunjangan jabatan 2jt tiap bulan, k/2, april 2026 dapet thr 14jt. pph april jd brp
+    tool: calculate_pph21_permanent_monthly
+    argumen: {gaji_pokok: 14000000, tunjangan_tetap: 2000000, bonus_thr_komisi: 14000000, status_ptkp: K/2, masa_pajak: 4,
+              tahun_pajak: 2026}
+    argumen_dinilai: [gaji_pokok, bonus_thr_komisi, status_ptkp, masa_pajak, tahun_pajak]
+
+  - id: t26-03
+    kategori: pegawai_tetap_masa_terakhir
+    tag: [uji_2026]
+    perilaku: hitung
+    pertanyaan: >-
+      desember 2026 nih, setahun gaji total 156jt (13jt x 12), udah nikah blm punya anak, jan-nov udh dipotong total 6.270.000. desember
+      kurang bayar brp
+    tool: calculate_pph21_permanent_last_period
+    argumen: {gaji_pokok: 156000000, status_ptkp: K/0, tahun_pajak: 2026, pph_sudah_dipotong: 6270000}
+
+  - id: t26-04
+    kategori: bukan_pegawai
+    tag: [uji_2026]
+    perilaku: hitung
+    pertanyaan: sy diundang jd pembicara workshop, honornya 7,5jt dibayar september 2026. dipotong pph21 brp
+    tool: calculate_pph21_non_employee
+    argumen: {penghasilan_bruto: 7500000, tahun_pajak: 2026}
+    argumen_dinilai: [penghasilan_bruto, tahun_pajak]
+
+  - id: t26-05
+    kategori: pegawai_tidak_tetap
+    tag: [uji_2026]
+    perilaku: hitung
+    pertanyaan: tukang harian dibayar 350rb sehari, mei 2026 kerja 1 hari doang. potong pajak ga
+    tool: calculate_pph21_non_permanent
+    argumen: {upah_per_periode: 350000, skema: harian, jumlah_hari: 1, tahun_pajak: 2026}
+    argumen_dinilai: [upah_per_periode, skema, tahun_pajak]
+
+  - id: t26-06
+    kategori: pensiunan
+    tag: [uji_2026]
+    perilaku: hitung
+    pertanyaan: bapak sy pensiunan, ibu masih ada, 2 adik sy masih sekolah ditanggung bapak, terima uang pensiun 6jt sebulan. pph21 bulan juni 2026?
+    tool: calculate_pph21_pensioner_monthly
+    argumen: {uang_pensiun: 6000000, status_ptkp: K/2, masa_pajak: 6, tahun_pajak: 2026}
+
+  - id: t26-07
+    kategori: dewan_komisaris
+    tag: [uji_2026]
+    perilaku: hitung
+    pertanyaan: komisaris (bukan pegawai) honor 25jt bulan juli 2026, masih lajang. pph21 nya?
+    tool: calculate_pph21_commissioner
+    argumen: {penghasilan_bruto: 25000000, status_ptkp: TK/0, tahun_pajak: 2026}
+
+  - id: t26-08
+    kategori: final
+    tag: [uji_2026]
+    perilaku: hitung
+    pertanyaan: kena phk 2026, dapet pesangon 120jt dibayar sekaligus. pajaknya brp
+    tool: calculate_pph21_final
+    argumen: {jenis: pesangon, jumlah_bruto: 120000000, tahun_pajak: 2026}
+
+  - id: t26-09
+    kategori: pph26
+    tag: [uji_2026]
+    perilaku: hitung
+    pertanyaan: >-
+      konsultan orang pribadi WNA, tinggal di luar negeri, kami bayar fee 50jt di 2026 dan dia ga kasih SKD. pph 26
+      nya brp
+    tool: calculate_pph_pasal_26
+    argumen: {penghasilan_bruto: 50000000, tahun_pajak: 2026}
+
+  - id: t26-10
+    kategori: tolak
+    tag: [uji_2026]
+    perilaku: tolak
+    pertanyaan: pt kami pake jasa konsultan (badan/pt juga) 40jt, pph 23 nya brp ya
+  - id: t26-11
+    kategori: tolak
+    tag: [uji_2026]
+    perilaku: tolak
+    pertanyaan: jual barang 100jt tahun 2026, ppn nya berapa
+  - id: t26-12
+    kategori: tolak
+    tag: [uji_2026]
+    perilaku: tolak
+    pertanyaan: kwitansi 6jt perlu bea meterai brp
+  - id: t26-13
+    kategori: tolak
+    tag: [uji_2026]
+    perilaku: tolak
+    pertanyaan: sewa ruko 120jt setahun ke pt, pph 4 ayat 2 nya brp
+  - id: t26-14
+    kategori: tolak
+    tag: [uji_2026]
+    perilaku: tolak
+    pertanyaan: omzet warung sy 400jt setahun 2026, pajak umkm 0,5% nya brp
+    catatan: tidak menyebut nama pajak; pembatas di kode tidak menangkapnya, model sendiri harus menolak

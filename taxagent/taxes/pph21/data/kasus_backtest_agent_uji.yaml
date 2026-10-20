@@ -1,0 +1,91 @@
+kasus:
+  - id: u2009
+    tahun: 2009
+    jenis: tahunan
+    gaji: 12000000
+    status: TK/0
+    status_teks: belum menikah dan tidak punya tanggungan
+    peristiwa: [UU 36 Tahun 2008, PMK 250 Tahun 2008, PMK 254 Tahun 2008]
+    pertanyaan: "Berapa PPh 21 terutang saya sepanjang {tahun}? Saya karyawan tetap, {status}, gaji {gaji} sebulan dari Januari sampai Desember, tidak ada tunjangan atau iuran pensiun, dan saya punya NPWP."
+    kalimat_sadar: "Teman saya bilang {disebut} sudah berlaku, {klaim}."
+    disebut: UU 36/2008
+    klaim: PTKP naik jadi Rp15.840.000 setahun dan lapisan 5% sekarang sampai Rp50 juta
+  - id: u2013
+    tahun: 2013
+    jenis: tahunan
+    gaji: 12000000
+    status: TK/0
+    status_teks: lajang tanpa tanggungan
+    peristiwa: [PMK 162 Tahun 2012, PMK 206 Tahun 2012]
+    pertanyaan: "Tolong hitungkan PPh Pasal 21 tahunan {tahun} untuk pegawai tetap {status} dengan gaji {gaji} per bulan (12 bulan, tanpa tunjangan, tanpa iuran pensiun, ber-NPWP)."
+    kalimat_sadar: "Menurut {disebut}, {klaim}."
+    disebut: Peraturan Menteri Keuangan nomor 162 tahun 2012
+    klaim: PTKP wajib pajak sendiri menjadi Rp24.300.000
+  - id: u2015
+    tahun: 2015
+    jenis: tahunan
+    gaji: 12000000
+    status: TK/0
+    status_teks: belum kawin, tanpa tanggungan
+    peristiwa: [PMK 122 Tahun 2015]
+    pertanyaan: "Saya pegawai tetap, {status}, gaji {gaji} per bulan selama {tahun}, tanpa tunjangan lain dan tanpa iuran pensiun, punya NPWP. PPh 21 setahunnya berapa?"
+    kalimat_sadar: "Ada {disebut} yang katanya {klaim}."
+    disebut: PMK 122/2015
+    klaim: menaikkan PTKP menjadi Rp36 juta dan berlaku mulai Januari 2015
+  - id: u2016
+    tahun: 2016
+    jenis: tahunan
+    gaji: 12000000
+    status: TK/0
+    status_teks: belum menikah, tidak ada tanggungan
+    peristiwa: [PMK 101 Tahun 2016]
+    pertanyaan: "Hitung PPh 21 setahun untuk tahun pajak {tahun}: pegawai tetap {status}, gaji {gaji} per bulan selama 12 bulan, tanpa tunjangan dan tanpa iuran pensiun, punya NPWP."
+    kalimat_sadar: "Di berita disebut {disebut} {klaim}."
+    disebut: PMK-101/PMK.010/2016
+    klaim: mengubah PTKP menjadi Rp54.000.000 per tahun sejak awal 2016
+  - id: u2022
+    tahun: 2022
+    jenis: tahunan
+    gaji: 12000000
+    status: TK/0
+    status_teks: belum kawin tanpa tanggungan
+    peristiwa: [UU 7 Tahun 2021]
+    pertanyaan: "PPh 21 setahun {tahun} untuk karyawan tetap {status}, gaji {gaji} sebulan selama setahun penuh, tanpa tunjangan, tanpa iuran pensiun, punya NPWP, berapa?"
+    kalimat_sadar: "Setahu saya {disebut} {klaim}."
+    disebut: UU HPP
+    klaim: melebarkan lapisan tarif 5% sampai Rp60 juta
+  - id: u2024
+    tahun: 2024
+    jenis: bulanan_ter
+    gaji: 12000000
+    status: TK/0
+    status_teks: belum kawin tanpa tanggungan
+    peristiwa: [PP 58 Tahun 2023, PMK 168 Tahun 2023]
+    pertanyaan: "Berapa PPh 21 yang dipotong untuk gaji Januari {tahun}? Pegawai tetap, {status}, gaji {gaji}, tidak ada tunjangan lain, punya NPWP."
+    kalimat_sadar: "Saya dengar {disebut} {klaim}."
+    disebut: PP 58/2023
+    klaim: mengganti cara potong bulanan dengan tarif efektif rata-rata
+    tabel_teradaptasi: tarif_2024
+
+  - id: u2016p
+    tahun: 2016
+    jenis: pensiunan_tahunan
+    gaji: 8000000
+    status: K/2
+    status_teks: menikah dengan dua anak tanggungan
+    peristiwa: [PMK 101 Tahun 2016]
+    pertanyaan: "Bapak saya pensiunan, {status}, terima uang pensiun {gaji} tiap bulan sepanjang {tahun}, tidak ada penghasilan lain, punya NPWP. PPh 21 setahunnya berapa?"
+    kalimat_sadar: "Katanya {disebut} {klaim}."
+    disebut: PMK-101/PMK.010/2016
+    klaim: menaikkan PTKP jadi Rp54 juta setahun mulai Januari 2016
+  - id: u2022p
+    tahun: 2022
+    jenis: pensiunan_tahunan
+    gaji: 9000000
+    status: TK/0
+    status_teks: janda tanpa tanggungan
+    peristiwa: [UU 7 Tahun 2021]
+    pertanyaan: "Saya pensiunan, {status}, uang pensiun {gaji} sebulan selama {tahun}, tanpa penghasilan lain, ada NPWP. Berapa PPh 21 terutang setahun?"
+    kalimat_sadar: "Saya dengar {disebut} {klaim}."
+    disebut: UU HPP
+    klaim: melebarkan lapisan 5% sampai Rp60 juta

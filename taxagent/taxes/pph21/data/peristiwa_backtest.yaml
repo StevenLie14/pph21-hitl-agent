@@ -1,0 +1,172 @@
+peristiwa:
+  - id: e01
+    peraturan: KMK 564 Tahun 2004
+    tanggal: 2004-11-29
+    berlaku: 2005
+    kelompok: ptkp
+    lama: UU 17 Tahun 2000
+    harapan: siap
+  - id: e02
+    peraturan: PMK 10 Tahun 2005
+    tanggal: 2005-01-31
+    berlaku: 2005
+    kelompok: ter_harian.batas_bebas_harian
+    lama: tanpa_teks
+    harapan: siap
+  - id: e03
+    peraturan: PMK 137 Tahun 2005
+    tanggal: 2005-12-30
+    berlaku: 2006
+    kelompok: ptkp
+    lama: KMK 564 Tahun 2004
+    harapan: siap
+  - id: e04
+    peraturan: PMK 138 Tahun 2005
+    tanggal: 2005-12-30
+    berlaku: 2006
+    kelompok: ter_harian.batas_bebas_harian
+    lama: PMK 10 Tahun 2005
+    harapan: siap
+  - id: e05
+    peraturan: UU 36 Tahun 2008
+    tanggal: 2008-09-23
+    berlaku: 2009
+    kelompok: [ptkp, tarif_pasal_17]
+    lama: UU 17 Tahun 2000 (tarif), PMK 137 Tahun 2005 (PTKP)
+    harapan: tahan
+    gerbang: G1
+    label: baru
+    nomor: 36 TAHUN 2008
+    nilai:
+      ptkp.wajib_pajak_sendiri: 15840000
+      ptkp.tambahan_kawin: 1320000
+      ptkp.tambahan_tanggungan: 1320000
+      ptkp.maksimal_tanggungan: 3
+      tarif_pasal_17[0].batas_atas: 50000000
+      tarif_pasal_17[0].persen: 5
+      tarif_pasal_17[1].batas_atas: 250000000
+      tarif_pasal_17[1].persen: 15
+      tarif_pasal_17[2].batas_atas: 500000000
+      tarif_pasal_17[2].persen: 25
+      tarif_pasal_17[3].batas_atas: null
+      tarif_pasal_17[3].persen: 30
+    catatan: OCR teks menulis "lima puluh j juta" pada terbilang Rp250.000.000 (uji G3 alami)
+  - id: e06
+    peraturan: PMK 250 Tahun 2008
+    tanggal: 2008-12-31
+    berlaku: 2009
+    kelompok: [biaya_jabatan, biaya_pensiun]
+    lama: tanpa_teks
+    harapan: siap
+  - id: e07
+    peraturan: PMK 254 Tahun 2008
+    tanggal: 2008-12-31
+    berlaku: 2009
+    kelompok: ter_harian.batas_bebas_harian
+    lama: PMK 138 Tahun 2005
+    harapan: siap
+  - id: e08
+    peraturan: PP 68 Tahun 2009
+    tanggal: 2009-11-16
+    berlaku: null
+    kelompok: [pph_final_pesangon, pph_final_manfaat_pensiun]
+    lama: PP 149 Tahun 2000
+    harapan: tahan
+    gerbang: G6
+  - id: e09
+    peraturan: PP 80 Tahun 2010
+    tanggal: 2010-12-20
+    berlaku: 2011
+    kelompok: pph_final_honorarium_pns
+    lama: PP 45 Tahun 1994
+    harapan: siap
+  - id: e10
+    peraturan: PMK 162 Tahun 2012
+    tanggal: 2012-10-22
+    berlaku: 2013
+    kelompok: ptkp
+    lama: UU 36 Tahun 2008
+    harapan: siap
+  - id: e11
+    peraturan: PMK 206 Tahun 2012
+    tanggal: 2012-12-17
+    berlaku: 2013
+    kelompok: ter_harian.batas_bebas_harian
+    lama: PMK 254 Tahun 2008
+    harapan: siap
+  - id: e12
+    peraturan: PMK 122 Tahun 2015
+    tanggal: 2015-06-29
+    berlaku: 2015
+    kelompok: ptkp
+    lama: PMK 162 Tahun 2012
+    harapan: siap
+  - id: e13
+    peraturan: PMK 152 Tahun 2015
+    tanggal: 2015-08-06
+    berlaku: null
+    kelompok: ter_harian.batas_bebas_harian
+    lama: PMK 206 Tahun 2012
+    harapan: tahan
+    gerbang: G6
+  - id: e14
+    peraturan: PMK 101 Tahun 2016
+    tanggal: 2016-06-22
+    berlaku: 2016
+    kelompok: ptkp
+    lama: PMK 122 Tahun 2015
+    harapan: siap
+  - id: e15
+    peraturan: PMK 102 Tahun 2016
+    tanggal: 2016-06-22
+    berlaku: null
+    kelompok: ter_harian.batas_bebas_harian
+    lama: PMK 152 Tahun 2015
+    harapan: tahan
+    gerbang: G6
+  - id: e16
+    peraturan: UU 7 Tahun 2021
+    tanggal: 2021-10-29
+    berlaku: null
+    kelompok: tarif_pasal_17
+    lama: UU 36 Tahun 2008
+    harapan: tahan
+    gerbang: [G1, G6]
+  - id: e17
+    peraturan: PP 58 Tahun 2023
+    tanggal: 2023-12-27
+    berlaku: 2024
+    kelompok: ter_bulanan
+    kunci_fase1: [ter_bulanan, ter_harian]
+    lama: tidak_ada
+    harapan: tahan
+    gerbang: G1
+  - id: e18
+    peraturan: PMK 168 Tahun 2023
+    tanggal: 2023-12-29
+    berlaku: 2024
+    kelompok: [biaya_jabatan, biaya_pensiun, bukan_pegawai, ter_harian]
+    kunci_fase1: [biaya_jabatan, biaya_pensiun, bukan_pegawai, ter_harian, ter_bulanan]
+    lama: PMK 250 Tahun 2008, PER-16/PJ/2016, PMK 102 Tahun 2016
+    harapan: tahan
+    gerbang: G1
+
+tanpa_perubahan:
+  - {peraturan: PER-31/PJ/2009, tanggal: 2009-05-25}
+  - {peraturan: PMK 16 Tahun 2010, tanggal: 2010-01-25}
+  - {peraturan: PMK 262 Tahun 2010, tanggal: 2010-12-31}
+  - {peraturan: PER-31/PJ/2012, tanggal: 2012-12-27}
+  - {peraturan: PER-32/PJ/2015, tanggal: 2015-08-07}
+  - {peraturan: PER-16/PJ/2016, tanggal: 2016-09-29}
+
+kontrol_negatif:
+  - {peraturan: PP 41 Tahun 2016, tanggal: 2016-10-17}
+  - {peraturan: PMK 40 Tahun 2017, tanggal: 2017-03-10}
+  - {peraturan: PMK 167 Tahun 2018, tanggal: 2018-12-19}
+  - {peraturan: PMK 68 Tahun 2020, tanggal: 2020-06-15}
+  - {peraturan: PP 55 Tahun 2022, tanggal: 2022-12-20}
+  - {peraturan: PMK 66 Tahun 2023, tanggal: 2023-06-27}
+  - {peraturan: PMK 114 Tahun 2025, tanggal: 2025-12-30}
+
+awal:
+  - {peraturan: UU 17 Tahun 2000, tanggal: 2000-08-02}
