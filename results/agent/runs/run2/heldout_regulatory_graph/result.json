@@ -1,0 +1,2829 @@
+{
+  "meta": {
+    "provider": "azure",
+    "model": "gpt-6-luna",
+    "waktu": "2026-11-17T14:22:40",
+    "dataset": "taxagent/taxes/pph21/data/kasus_agent_uji_graf.yaml",
+    "n_kasus": 15,
+    "putaran_ulang_galat": 5
+  },
+  "ringkasan": {
+    "n_kasus": 15,
+    "n_error_api": 0,
+    "n_galat_api_diulang": 1,
+    "kasus_diulang": [
+      "gu-05"
+    ],
+    "akurasi_keseluruhan": 0.8,
+    "akurasi_satu_giliran": 0.8,
+    "klarifikasi_tidak_perlu": 0,
+    "kasus_hitung_memanggil_graf": 0,
+    "token": {
+      "masuk": 1183127,
+      "keluar": 4001,
+      "keluar_per_kasus": 266.7
+    },
+    "hitung": {
+      "n": 0,
+      "akurasi_tool": null,
+      "akurasi_tool_percobaan_pertama": null,
+      "akurasi_argumen_lengkap": null,
+      "akurasi_field": null,
+      "akurasi_angka_akhir": null
+    },
+    "non_hitung": {
+      "n": 15,
+      "akurasi": 0.8,
+      "per_perilaku": {
+        "tanya_balik": null,
+        "tolak": null,
+        "info": null
+      }
+    },
+    "per_kategori": {
+      "graf_relasi": {
+        "n": 5,
+        "perilaku_benar": 0.8
+      },
+      "graf_status": {
+        "n": 10,
+        "perilaku_benar": 0.8
+      }
+    },
+    "per_tag": {
+      "uji_graf": {
+        "n": 15,
+        "perilaku_benar": 0.8
+      }
+    },
+    "total_galat_tool": 2,
+    "kasus_tool_halusinasi": 0,
+    "jawaban_sitasi_bermasalah": 0,
+    "pemeriksa_sitasi": {
+      "jawaban_dikoreksi": 0,
+      "masih_bermasalah_setelah_koreksi": 0,
+      "jawaban_distempel_status": 2
+    },
+    "kesetiaan_angka": {
+      "jawaban_dengan_angka_tanpa_sumber": 0,
+      "pph_tool_di_jawaban": null
+    },
+    "rata_putaran": 4.4,
+    "rata_detik": 17.28
+  },
+  "kasus": [
+    {
+      "id": "gu-01",
+      "kategori": "graf_status",
+      "tag": [
+        "uji_graf"
+      ],
+      "perilaku": "graf",
+      "tool_harapan": null,
+      "tool_dipanggil": [
+        "find_regulation",
+        "amendment_chain",
+        "find_regulation",
+        "find_regulation",
+        "find_regulation",
+        "find_regulation",
+        "amendment_chain",
+        "find_regulation"
+      ],
+      "tool_hitung_pertama": null,
+      "tool_hitung_akhir": null,
+      "tool_benar": true,
+      "tool_benar_percobaan_pertama": true,
+      "argumen_benar": null,
+      "field_benar": 0,
+      "field_total": 0,
+      "argumen_salah": {},
+      "argumen_aktual": {},
+      "pph_harapan": null,
+      "pph_aktual": null,
+      "angka_benar": null,
+      "perilaku_benar": true,
+      "galat_tool": 0,
+      "tool_halusinasi": [],
+      "putaran": 9,
+      "detik": 24.23,
+      "jawaban": "Kalau yang dimaksud aturan juklak PPh 21 tahun 2008, **PMK 252/PMK.03/2008 sudah dicabut sejak 1 Januari 2024** oleh PMK 168 Tahun 2023. Jadi, aturan 2008 itu tidak dipakai sebagai aturan yang berlaku saat ini.\n\nHasil pengecekan juga menunjukkan PER-31/PJ/2009 telah dicabut sejak 1 Januari 2013, dan PER-31/PJ/2012 serta PER-32/PJ/2015 juga sudah dicabut. **PMK 168 Tahun 2023 tercatat berlaku per 17 November 2026.**\n\nCatatan: saya belum mengecek isi pasal atau apakah ada aturan lain yang mengatur kasus khusus Anda.",
+      "error": null,
+      "galat_api": [],
+      "perilaku_benar_satu_giliran": true,
+      "tool_graf": 8,
+      "klarifikasi": false,
+      "sitasi_belum_terverifikasi": [],
+      "sitasi_diperiksa": true,
+      "sitasi_audit_ablasi": [],
+      "sitasi_dikoreksi": [],
+      "status_distempel": [],
+      "angka_tanpa_sumber": [],
+      "pph_di_jawaban": null,
+      "token_masuk": 166089,
+      "token_keluar": 377,
+      "jejak": [
+        {
+          "tool": "find_regulation",
+          "argumen": {
+            "regulation": "PER-31/PJ/2009"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": [
+              {
+                "peraturan": "PER-31/PJ/2009",
+                "judul": "PEDOMAN TEKNIS TATA CARA PEMOTONGAN, PENYETORAN DAN PELAPORAN PAJAK PENGHASILAN PASAL 21 DAN/ATAU PAJAK PENGHASILAN PASAL 26 SEHUBUNGAN DENGAN PEKERJAAN, JASA, DAN KEGIATAN ORANG PRIBADI",
+                "teks_tersedia": true,
+                "url": "https://www.pajak.go.id/id/peraturan/pedoman-teknis-tata-cara-pemotongan-penyetoran-dan-pelaporan-pajak-penghasilan-pasal-21-1",
+                "berkas_pdf": null,
+                "status": "dicabut",
+                "sejak": "2013-01-01",
+                "oleh": [
+                  "PER-31/PJ/2012"
+                ],
+                "pasal_gugur": [],
+                "ayat_gugur": {},
+                "pasti": true,
+                "catatan": []
+              }
+            ],
+            "sumber": [
+              "PER-31/PJ/2009",
+              "PER-31/PJ/2012"
+            ]
+          }
+        },
+        {
+          "tool": "amendment_chain",
+          "argumen": {
+            "regulation": "PER-31/PJ/2009"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": "PER-31/PJ/2009",
+            "status": "dicabut",
+            "sejak": "2013-01-01",
+            "oleh": [
+              "PER-31/PJ/2012"
+            ],
+            "pasal_gugur": [],
+            "ayat_gugur": {},
+            "pasti": true,
+            "catatan": [],
+            "diubah_atau_dicabut_oleh": [
+              {
+                "jenis": "mengubah",
+                "peraturan": "PER-57/PJ/2009",
+                "bukti": "eksplisit",
+                "sumber": "teks",
+                "berlaku_efektif": "2009-01-01",
+                "tanggal_perkiraan": false,
+                "lewat": null,
+                "pasal_bukti": "Pasal I",
+                "pasal_terdampak": [
+                  "9",
+                  "10",
+                  "16"
+                ],
+                "kutipan": "Pasal I Beberapa ketentuan dalam Peraturan Direktur Jenderal Pajak Nomor PER-31/PJ/2009 tentang Pedoman Teknis Tata Cara Pemotongan, Penyetoran dan Pelaporan Pajak Penghasilan Pasal 21 dan/atau Pajak Penghasilan Pasal 26 Sehubungan Dengan Pekerjaan, Jasa, dan Kegiatan Orang Pribadi diubah sebagai berikut",
+                "status_peraturan": "berlaku_sebagian"
+              },
+              {
+                "jenis": "mencabut",
+                "peraturan": "PER-31/PJ/2012",
+                "bukti": "eksplisit",
+                "sumber": "teks",
+                "berlaku_efektif": "2013-01-01",
+                "tanggal_perkiraan": false,
+                "lewat": null,
+                "pasal_bukti": "Pasal 27",
+                "pasal_terdampak": [],
+                "kutipan": "Pasal 27 Dengan berlakunya Peraturan Direktur Jenderal Pajak ini, Peraturan Direktur Jenderal Pajak Nomor PER-31/PJ/2009 tentang Pedoman Teknis Tata Cara Pemotongan, Penyetoran dan Pelaporan Pajak Penghasilan Pasal 21 dan/atau Pajak Penghasilan Pasal 26 Sehubungan Dengan Pekerjaan, Jasa, dan Kegiatan Orang Pribadi sebagaimana telah diubah dengan Peraturan Direktur Jenderal Pajak Nomor PER-57/PJ/20",
+                "status_peraturan": "dicabut"
+              }
+            ],
+            "mengubah_atau_mencabut": [
+              {
+                "jenis": "mencabut",
+                "peraturan": "KEP-545/PJ/2000",
+                "bukti": "eksplisit",
+                "sumber": "teks_llm",
+                "berlaku_efektif": "2009-05-25",
+                "tanggal_perkiraan": true,
+                "lewat": null,
+                "pasal_bukti": null,
+                "pasal_terdampak": [],
+                "kutipan": "Dengan berlakunya Peraturan Direktur Jenderal Pajak ini, Keputusan Direktur Jenderal Pajak Nomor KEP-545/PJ./2000 tentang Petunjuk Pelaksanaan Pemotongan, penyetoran, dan Pelaporan Pajak Penghasilan Pasal 21 dan Pasal 26 Sehubungan dengan pekerjaan, Jasa, dan Kegiatan Orang Pribadi sebagaimana telah diubah dengan Peraturan Direktur Jenderal Pajak Nomor PER-15/PJ./2006, dicabut dan dinyatakan tidak",
+                "status_peraturan": "dicabut"
+              }
+            ],
+            "sumber": [
+              "PER-31/PJ/2009",
+              "PER-57/PJ/2009",
+              "PER-31/PJ/2012",
+              "KEP-545/PJ/2000"
+            ]
+          }
+        },
+        {
+          "tool": "find_regulation",
+          "argumen": {
+            "regulation": "PER-31/PJ/2012"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": [
+              {
+                "peraturan": "PER-31/PJ/2012",
+                "judul": "PEDOMAN TEKNIS TATA CARA PEMOTONGAN, PENYETORAN DAN PELAPORAN PAJAK PENGHASILAN PASAL 21 DAN/ATAU PAJAK PENGHASILAN PASAL 26 SEHUBUNGAN DENGAN PEKERJAAN, JASA, DAN KEGIATAN ORANG PRIBADI",
+                "teks_tersedia": true,
+                "url": "https://www.pajak.go.id/id/peraturan/pedoman-teknis-tata-cara-pemotongan-penyetoran-dan-pelaporan-pajak-penghasilan-pasal-21",
+                "berkas_pdf": null,
+                "status": "dicabut",
+                "sejak": "2015-08-07",
+                "oleh": [
+                  "PER-32/PJ/2015"
+                ],
+                "pasal_gugur": [],
+                "ayat_gugur": {},
+                "pasti": true,
+                "catatan": []
+              }
+            ],
+            "sumber": [
+              "PER-31/PJ/2012",
+              "PER-32/PJ/2015"
+            ]
+          }
+        },
+        {
+          "tool": "find_regulation",
+          "argumen": {
+            "regulation": "PER-32/PJ/2015"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": [
+              {
+                "peraturan": "PER-32/PJ/2015",
+                "judul": "PEDOMAN TEKNIS TATA CARA PEMOTONGAN, PENYETORAN , DAN PELAPORAN PAJAK PENGHASILAN PASAL 21 DAN /ATAU PAJAK PENGHASILAN PASAL 26 SEHUBUNGAN DENGAN PEKERJAAN, JASA, DAN KEGIATAN ORANG PRIBADI",
+                "teks_tersedia": true,
+                "url": "https://www.pajak.go.id/id/peraturan/pedoman-teknis-tata-cara-pemotongan-penyetoran-dan-pelaporan-pajak-penghasilan-pasal-21-2",
+                "berkas_pdf": null,
+                "status": "dicabut",
+                "sejak": "2016-09-29",
+                "oleh": [
+                  "PER-16/PJ/2016"
+                ],
+                "pasal_gugur": [],
+                "ayat_gugur": {},
+                "pasti": true,
+                "catatan": []
+              }
+            ],
+            "sumber": [
+              "PER-32/PJ/2015",
+              "PER-16/PJ/2016"
+            ]
+          }
+        },
+        {
+          "tool": "find_regulation",
+          "argumen": {
+            "regulation": "PER-16/PJ/2016"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": [
+              {
+                "peraturan": "PER-16/PJ/2016",
+                "judul": "PEDOMAN TEKNIS TATA CARA PEMOTONGAN, PENYETORAN DAN PELAPORAN PAJAK PENGHASILAN PASAL 21 DAN/ATAU PAJAK PENGHASILAN PASAL 26 SEHUBUNGAN DENGAN PEKERJAAN, JASA, DAN KEGIATAN ORANG PRIBADI",
+                "teks_tersedia": true,
+                "url": "https://www.pajak.go.id/id/peraturan/pedoman-teknis-tata-cara-pemotongan-penyetoran-dan-pelaporan-pajak-penghasilan-pasal-21-0",
+                "berkas_pdf": null,
+                "status": "berlaku",
+                "sejak": null,
+                "oleh": [],
+                "pasal_gugur": [],
+                "ayat_gugur": {},
+                "pasti": true,
+                "catatan": []
+              }
+            ],
+            "sumber": [
+              "PER-16/PJ/2016"
+            ]
+          }
+        },
+        {
+          "tool": "find_regulation",
+          "argumen": {
+            "regulation": "PMK 168 Tahun 2023"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": [
+              {
+                "peraturan": "PMK 168 Tahun 2023",
+                "judul": "Petunjuk Pelaksanaan Pemotongan Pajak atas Penghasilan sehubungan dengan Pekerjaan, Jasa, atau Kegiatan Pribadi",
+                "teks_tersedia": true,
+                "url": "https://jdih.kemenkeu.go.id/dok/pmk-168-tahun-2023",
+                "berkas_pdf": "https://jdih.kemenkeu.go.id/api/download/E60A82E0-B218-40F5-9D18-B924AA1E11CE/2023pmkeuangan168.pdf",
+                "status": "berlaku",
+                "sejak": null,
+                "oleh": [],
+                "pasal_gugur": [],
+                "ayat_gugur": {},
+                "pasti": true,
+                "catatan": []
+              }
+            ],
+            "sumber": [
+              "PMK 168 Tahun 2023"
+            ]
+          }
+        },
+        {
+          "tool": "amendment_chain",
+          "argumen": {
+            "regulation": "PMK 168 Tahun 2023"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": "PMK 168 Tahun 2023",
+            "status": "berlaku",
+            "sejak": null,
+            "oleh": [],
+            "pasal_gugur": [],
+            "ayat_gugur": {},
+            "pasti": true,
+            "catatan": [],
+            "diubah_atau_dicabut_oleh": [],
+            "mengubah_atau_mencabut": [
+              {
+                "jenis": "mencabut",
+                "peraturan": "PMK 102 Tahun 2016",
+                "bukti": "eksplisit",
+                "sumber": "jdih+teks",
+                "berlaku_efektif": "2024-01-01",
+                "tanggal_perkiraan": false,
+                "lewat": null,
+                "pasal_bukti": "Pasal 24",
+                "pasal_terdampak": [],
+                "kutipan": "Pasal 24 Pada saat Peraturan Menteri ini mulai berlaku: Peraturan Menteri Keuangan Nomor 250/PMK.03/2008 a. tentang Besarnya Biaya Jabatan atau Biaya Pensiun yang dapat Dikurangkan dari Penghasilan Bruto Pegawai Tetap atau Pensiunan; b. Peraturan Menteri Keuangan Nomor 252/PMK.03/2008 tentang Petunjuk Pelaksanaan Pemotongan Pajak atas Penghasilan Sehubungan dengan Pekerjaan Jasa, dan Kegiatan Oran",
+                "status_peraturan": "dicabut"
+              },
+              {
+                "jenis": "mencabut",
+                "peraturan": "PMK 252 Tahun 2008",
+                "bukti": "eksplisit",
+                "sumber": "jdih+teks",
+                "berlaku_efektif": "2024-01-01",
+                "tanggal_perkiraan": false,
+                "lewat": null,
+                "pasal_bukti": "Pasal 24",
+                "pasal_terdampak": [],
+                "kutipan": "Pasal 24 Pada saat Peraturan Menteri ini mulai berlaku: Peraturan Menteri Keuangan Nomor 250/PMK.03/2008 a. tentang Besarnya Biaya Jabatan atau Biaya Pensiun yang dapat Dikurangkan dari Penghasilan Bruto Pegawai Tetap atau Pensiunan; b. Peraturan Menteri Keuangan Nomor 252/PMK.03/2008 tentang Petunjuk Pelaksanaan Pemotongan Pajak atas Penghasilan Sehubungan dengan Pekerjaan Jasa, dan Kegiatan Oran",
+                "status_peraturan": "dicabut"
+              },
+              {
+                "jenis": "mencabut",
+                "peraturan": "PMK 250 Tahun 2008",
+                "bukti": "eksplisit",
+                "sumber": "jdih+teks",
+                "berlaku_efektif": "2024-01-01",
+                "tanggal_perkiraan": false,
+                "lewat": null,
+                "pasal_bukti": "Pasal 24",
+                "pasal_terdampak": [],
+                "kutipan": "Peraturan Menteri Keuangan Nomor 250/PMK.03/2008 a. tentang Besarnya Biaya Jabatan atau Biaya Pensiun yang dapat Dikurangkan dari Penghasilan Bruto Pegawai Tetap atau Pensiunan [...] dicabut dan dinyatakan tidak berlaku.",
+                "status_peraturan": "dicabut"
+              },
+              {
+                "jenis": "mencabut_sebagian",
+                "peraturan": "PMK 262 Tahun 2010",
+                "bukti": "eksplisit",
+                "sumber": "jdih+teks",
+                "berlaku_efektif": "2024-01-01",
+                "tanggal_perkiraan": false,
+                "lewat": null,
+                "pasal_bukti": "Pasal 24",
+                "pasal_terdampak": [
+                  "5",
+                  "8"
+                ],
+                "kutipan": "Pasal 5, Pasal 8, Bagian Pertama angka I, dan Bagian Kedua angka I Lampiran Peraturan Menteri Keuangan Nomor 262/PMK.03/2010 tentang Tata Cara Pemotongan Pajak Penghasilan Pasal 21 bagi Pejabat Negara, PNS, Anggota TNI, Anggota POLRI, dan Pensiunannya atas Penghasilan yang Menjadi Beban Anggaran Pendapatan dan Belanja Negara atau Anggaran Pendapatan dan Belanja Daerah (Berita Negara Republik Indon",
+                "status_peraturan": "berlaku_sebagian"
+              }
+            ],
+            "sumber": [
+              "PMK 168 Tahun 2023",
+              "PMK 102 Tahun 2016",
+              "PMK 252 Tahun 2008",
+              "PMK 250 Tahun 2008",
+              "PMK 262 Tahun 2010"
+            ]
+          }
+        },
+        {
+          "tool": "find_regulation",
+          "argumen": {
+            "regulation": "PMK 252/PMK.03/2008"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": [
+              {
+                "peraturan": "PMK 252 Tahun 2008",
+                "judul": "Petunjuk Pelaksanaan Pemotongan Pajak atas Penghasilan Sehubungan dengan Pekerjaan, Jasa, dan Kegiatan Orang Pribadi.",
+                "teks_tersedia": true,
+                "url": "https://jdih.kemenkeu.go.id/dok/252-pmk-03-2008",
+                "berkas_pdf": "https://jdih.kemenkeu.go.id/api/download/9077163E-911D-4A8E-B99F-2E9D7F2DD167/252~PMK.03~2008Per.HTM",
+                "status": "dicabut",
+                "sejak": "2024-01-01",
+                "oleh": [
+                  "PMK 168 Tahun 2023"
+                ],
+                "pasal_gugur": [],
+                "ayat_gugur": {},
+                "pasti": true,
+                "catatan": []
+              }
+            ],
+            "sumber": [
+              "PMK 252 Tahun 2008",
+              "PMK 168 Tahun 2023"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "gu-02",
+      "kategori": "graf_status",
+      "tag": [
+        "uji_graf"
+      ],
+      "perilaku": "graf",
+      "tool_harapan": null,
+      "tool_dipanggil": [
+        "find_legal_basis"
+      ],
+      "tool_hitung_pertama": null,
+      "tool_hitung_akhir": null,
+      "tool_benar": false,
+      "tool_benar_percobaan_pertama": false,
+      "argumen_benar": null,
+      "field_benar": 0,
+      "field_total": 0,
+      "argumen_salah": {},
+      "argumen_aktual": {},
+      "pph_harapan": null,
+      "pph_aktual": null,
+      "angka_benar": null,
+      "perilaku_benar": false,
+      "galat_tool": 0,
+      "tool_halusinasi": [],
+      "putaran": 2,
+      "detik": 9.34,
+      "jawaban": "Biaya jabatan **masih sebesar 5% dari penghasilan bruto, maksimal Rp500.000 sebulan atau Rp6.000.000 setahun**. Rujukan yang lebih baru untuk ketentuan ini adalah [PMK No. 168 Tahun 2023 Pasal 10 ayat (2), hlm. 11](https://jdih.kemenkeu.go.id/api/download/E60A82E0-B218-40F5-9D18-B924AA1E11CE/2023pmkeuangan168.pdf#page=11).\n\n**Asumsi yang dipakai:** Saya memahami pertanyaan ini merujuk pada biaya jabatan sebagai pengurang penghasilan pegawai tetap untuk PPh Pasal 21.",
+      "error": null,
+      "galat_api": [],
+      "perilaku_benar_satu_giliran": false,
+      "tool_graf": 0,
+      "klarifikasi": false,
+      "sitasi_belum_terverifikasi": [],
+      "sitasi_diperiksa": true,
+      "sitasi_audit_ablasi": [],
+      "sitasi_dikoreksi": [],
+      "status_distempel": [],
+      "angka_tanpa_sumber": [],
+      "pph_di_jawaban": null,
+      "token_masuk": 33612,
+      "token_keluar": 182,
+      "jejak": [
+        {
+          "tool": "find_legal_basis",
+          "argumen": {
+            "topic": "biaya_jabatan"
+          },
+          "hasil": {
+            "berhasil": true,
+            "topik": "biaya_jabatan",
+            "judul": "Biaya jabatan",
+            "rujukan": [
+              "PMK No. 168 Tahun 2023 Pasal 10 ayat (2)"
+            ],
+            "ringkasan": "Pengurang penghasilan bruto pegawai tetap sebesar 5% dari penghasilan bruto, paling banyak Rp500.000 sebulan atau Rp6.000.000 setahun.\n",
+            "lokasi_dasar_hukum": [
+              {
+                "rujukan": "PMK No. 168 Tahun 2023 Pasal 10 ayat (2)",
+                "peraturan": "PMK 168 Tahun 2023",
+                "pasal": "10",
+                "halaman_pdf": 11,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/E60A82E0-B218-40F5-9D18-B924AA1E11CE/2023pmkeuangan168.pdf#page=11"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "gu-03",
+      "kategori": "graf_status",
+      "tag": [
+        "uji_graf"
+      ],
+      "perilaku": "graf",
+      "tool_harapan": null,
+      "tool_dipanggil": [
+        "find_regulation",
+        "amendment_chain"
+      ],
+      "tool_hitung_pertama": null,
+      "tool_hitung_akhir": null,
+      "tool_benar": true,
+      "tool_benar_percobaan_pertama": true,
+      "argumen_benar": null,
+      "field_benar": 0,
+      "field_total": 0,
+      "argumen_salah": {},
+      "argumen_aktual": {},
+      "pph_harapan": null,
+      "pph_aktual": null,
+      "angka_benar": null,
+      "perilaku_benar": true,
+      "galat_tool": 0,
+      "tool_halusinasi": [],
+      "putaran": 3,
+      "detik": 10.91,
+      "jawaban": "Tidak semuanya. Berdasarkan status peraturan pada **17 November 2026**, PMK 262/PMK.03/2010 **berlaku sebagian**. Sejak 1 Januari 2024, **Pasal 5 dan Pasal 8** serta bagian tertentu dalam lampirannya dicabut melalui **PMK 168 Tahun 2023 Pasal 24**. Bagian lain dari PMK 262/2010 masih berlaku.\n\nRujukan: [PMK 168 Tahun 2023, Pasal 24](https://jdih.kemenkeu.go.id/dok/168-pmk-03-2023)\n\n### Asumsi yang dipakai\n- Saya memahami “masih berlaku semuanya ga?” sebagai pertanyaan tentang status PMK 262/PMK.03/2010 saat ini.",
+      "error": null,
+      "galat_api": [],
+      "perilaku_benar_satu_giliran": true,
+      "tool_graf": 2,
+      "klarifikasi": false,
+      "sitasi_belum_terverifikasi": [],
+      "sitasi_diperiksa": true,
+      "sitasi_audit_ablasi": [],
+      "sitasi_dikoreksi": [],
+      "status_distempel": [],
+      "angka_tanpa_sumber": [],
+      "pph_di_jawaban": null,
+      "token_masuk": 51740,
+      "token_keluar": 233,
+      "jejak": [
+        {
+          "tool": "find_regulation",
+          "argumen": {
+            "regulation": "PMK 262/PMK.03/2010"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": [
+              {
+                "peraturan": "PMK 262 Tahun 2010",
+                "judul": "Tata Cara Pemotongan Pajak Penghasilan Pasal 21 Bagi Pejabat Negara, Pns, Anggota Tni, Anggota Polri, dan Pensiunannya atas Penghasilan yang Menjadi Beban Anggaran Pendapatan dan Belanja Negara atau Anggaran Pendapatan dan Belanja Daerah.",
+                "teks_tersedia": true,
+                "url": "https://jdih.kemenkeu.go.id/dok/262-pmk-03-2010",
+                "berkas_pdf": "https://jdih.kemenkeu.go.id/api/download/1E1896C2-D857-46B5-8CB1-13551FFA4BE9/262~PMK.03~2010Per.HTM",
+                "status": "berlaku_sebagian",
+                "sejak": "2024-01-01",
+                "oleh": [
+                  "PMK 168 Tahun 2023"
+                ],
+                "pasal_gugur": [
+                  "5",
+                  "8"
+                ],
+                "ayat_gugur": {},
+                "pasti": true,
+                "catatan": []
+              }
+            ],
+            "sumber": [
+              "PMK 262 Tahun 2010",
+              "PMK 168 Tahun 2023"
+            ]
+          }
+        },
+        {
+          "tool": "amendment_chain",
+          "argumen": {
+            "regulation": "PMK 168 Tahun 2023"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": "PMK 168 Tahun 2023",
+            "status": "berlaku",
+            "sejak": null,
+            "oleh": [],
+            "pasal_gugur": [],
+            "ayat_gugur": {},
+            "pasti": true,
+            "catatan": [],
+            "diubah_atau_dicabut_oleh": [],
+            "mengubah_atau_mencabut": [
+              {
+                "jenis": "mencabut",
+                "peraturan": "PMK 102 Tahun 2016",
+                "bukti": "eksplisit",
+                "sumber": "jdih+teks",
+                "berlaku_efektif": "2024-01-01",
+                "tanggal_perkiraan": false,
+                "lewat": null,
+                "pasal_bukti": "Pasal 24",
+                "pasal_terdampak": [],
+                "kutipan": "Pasal 24 Pada saat Peraturan Menteri ini mulai berlaku: Peraturan Menteri Keuangan Nomor 250/PMK.03/2008 a. tentang Besarnya Biaya Jabatan atau Biaya Pensiun yang dapat Dikurangkan dari Penghasilan Bruto Pegawai Tetap atau Pensiunan; b. Peraturan Menteri Keuangan Nomor 252/PMK.03/2008 tentang Petunjuk Pelaksanaan Pemotongan Pajak atas Penghasilan Sehubungan dengan Pekerjaan Jasa, dan Kegiatan Oran",
+                "status_peraturan": "dicabut"
+              },
+              {
+                "jenis": "mencabut",
+                "peraturan": "PMK 252 Tahun 2008",
+                "bukti": "eksplisit",
+                "sumber": "jdih+teks",
+                "berlaku_efektif": "2024-01-01",
+                "tanggal_perkiraan": false,
+                "lewat": null,
+                "pasal_bukti": "Pasal 24",
+                "pasal_terdampak": [],
+                "kutipan": "Pasal 24 Pada saat Peraturan Menteri ini mulai berlaku: Peraturan Menteri Keuangan Nomor 250/PMK.03/2008 a. tentang Besarnya Biaya Jabatan atau Biaya Pensiun yang dapat Dikurangkan dari Penghasilan Bruto Pegawai Tetap atau Pensiunan; b. Peraturan Menteri Keuangan Nomor 252/PMK.03/2008 tentang Petunjuk Pelaksanaan Pemotongan Pajak atas Penghasilan Sehubungan dengan Pekerjaan Jasa, dan Kegiatan Oran",
+                "status_peraturan": "dicabut"
+              },
+              {
+                "jenis": "mencabut",
+                "peraturan": "PMK 250 Tahun 2008",
+                "bukti": "eksplisit",
+                "sumber": "jdih+teks",
+                "berlaku_efektif": "2024-01-01",
+                "tanggal_perkiraan": false,
+                "lewat": null,
+                "pasal_bukti": "Pasal 24",
+                "pasal_terdampak": [],
+                "kutipan": "Peraturan Menteri Keuangan Nomor 250/PMK.03/2008 a. tentang Besarnya Biaya Jabatan atau Biaya Pensiun yang dapat Dikurangkan dari Penghasilan Bruto Pegawai Tetap atau Pensiunan [...] dicabut dan dinyatakan tidak berlaku.",
+                "status_peraturan": "dicabut"
+              },
+              {
+                "jenis": "mencabut_sebagian",
+                "peraturan": "PMK 262 Tahun 2010",
+                "bukti": "eksplisit",
+                "sumber": "jdih+teks",
+                "berlaku_efektif": "2024-01-01",
+                "tanggal_perkiraan": false,
+                "lewat": null,
+                "pasal_bukti": "Pasal 24",
+                "pasal_terdampak": [
+                  "5",
+                  "8"
+                ],
+                "kutipan": "Pasal 5, Pasal 8, Bagian Pertama angka I, dan Bagian Kedua angka I Lampiran Peraturan Menteri Keuangan Nomor 262/PMK.03/2010 tentang Tata Cara Pemotongan Pajak Penghasilan Pasal 21 bagi Pejabat Negara, PNS, Anggota TNI, Anggota POLRI, dan Pensiunannya atas Penghasilan yang Menjadi Beban Anggaran Pendapatan dan Belanja Negara atau Anggaran Pendapatan dan Belanja Daerah (Berita Negara Republik Indon",
+                "status_peraturan": "berlaku_sebagian"
+              }
+            ],
+            "sumber": [
+              "PMK 168 Tahun 2023",
+              "PMK 102 Tahun 2016",
+              "PMK 252 Tahun 2008",
+              "PMK 250 Tahun 2008",
+              "PMK 262 Tahun 2010"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "gu-04",
+      "kategori": "graf_relasi",
+      "tag": [
+        "uji_graf"
+      ],
+      "perilaku": "graf",
+      "tool_harapan": null,
+      "tool_dipanggil": [
+        "find_regulation",
+        "search_text",
+        "find_regulation",
+        "get_article",
+        "get_article",
+        "get_article",
+        "search_text",
+        "find_legal_basis"
+      ],
+      "tool_hitung_pertama": null,
+      "tool_hitung_akhir": null,
+      "tool_benar": true,
+      "tool_benar_percobaan_pertama": true,
+      "argumen_benar": null,
+      "field_benar": 0,
+      "field_total": 0,
+      "argumen_salah": {},
+      "argumen_aktual": {},
+      "pph_harapan": null,
+      "pph_aktual": null,
+      "angka_benar": null,
+      "perilaku_benar": false,
+      "galat_tool": 2,
+      "tool_halusinasi": [],
+      "putaran": 9,
+      "detik": 38.26,
+      "jawaban": "Ya, ketentuan lama yang memakai batas **Rp450.000 per hari** dan batas kumulatif **Rp4.500.000 per bulan** sudah berbeda dengan aturan yang berlaku sekarang.\n\nUntuk pegawai tidak tetap yang dibayar harian, mingguan, satuan, atau borongan, aturan yang berlaku sekarang menggunakan **upah sehari atau rata-rata upah sehari**. Sampai dengan **Rp450.000 sehari**, tarif pemotongannya **0%**. Jika upah sehari **lebih dari Rp2.500.000**, PPh 21 dihitung dengan tarif Pasal 17 atas **50% dari bruto**. Jadi, tidak ada lagi batas kumulatif bulanan Rp4.500.000 sebagai penentu pemotongan untuk pembayaran nonbulanan.\n\nAturan yang berlaku sekarang adalah [PMK No. 168 Tahun 2023 Pasal 12 ayat (2), hlm. 13](https://jdih.kemenkeu.go.id/api/download/E60A82E0-B218-40F5-9D18-B924AA1E11CE/2023pmkeuangan168.pdf#page=13), dengan tarif efektif harian mengacu pada PP No. 58 Tahun 2023. **PMK No. 168 Tahun 2023 berstatus berlaku pada 17 November 2026.**\n\nCatatan: hasil pencarian juga menemukan ketentuan lama dalam PER-16/PJ/2016, tetapi saya belum dapat memastikan hubungan pencabutan atau penggantiannya secara rinci. Yang dapat saya pastikan dari hasil yang tersedia adalah ketentuan terkini di atas.",
+      "error": null,
+      "galat_api": [],
+      "perilaku_benar_satu_giliran": false,
+      "tool_graf": 7,
+      "klarifikasi": false,
+      "sitasi_belum_terverifikasi": [],
+      "sitasi_diperiksa": true,
+      "sitasi_audit_ablasi": [],
+      "sitasi_dikoreksi": [],
+      "status_distempel": [],
+      "angka_tanpa_sumber": [],
+      "pph_di_jawaban": null,
+      "token_masuk": 179174,
+      "token_keluar": 665,
+      "jejak": [
+        {
+          "tool": "find_regulation",
+          "argumen": {
+            "regulation": "aturan PPh 21 tahun 2015 untuk batas upah pegawai harian tidak dipotong PPh 21",
+            "date": ""
+          },
+          "hasil": {
+            "berhasil": false,
+            "galat": "'aturan PPh 21 tahun 2015 untuk batas upah pegawai harian tidak dipotong PPh 21' tidak ada di graf.",
+            "saran": "Graf hanya memuat peraturan korpus; jangan mengarang rujukan."
+          }
+        },
+        {
+          "tool": "search_text",
+          "argumen": {
+            "query": "batas upah pegawai tidak tetap harian yang tidak dipotong PPh Pasal 21, batas upah sehari dan kumulatif sebulan",
+            "date": "",
+            "in_force_only": true
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "metode": "semantik Gemini",
+            "hasil": [
+              {
+                "id": "PER-16/PJ/2016#23",
+                "peraturan": "PER-16/PJ/2016",
+                "pasal": "Pasal 15",
+                "halaman_pdf": null,
+                "tautan": "https://www.pajak.go.id/id/peraturan/pedoman-teknis-tata-cara-pemotongan-penyetoran-dan-pelaporan-pajak-penghasilan-pasal-21-0",
+                "status_peraturan": "berlaku",
+                "pasal_gugur": false,
+                "skor": 0.89,
+                "teks": "Pasal 15\n\n(1) Atas penghasilan yang diterima atau diperoleh Pegawai Tidak Tetap atau Tenaga Kerja Lepas berupa upah harian, upah mingguan, upah satuan, upah borongan, dan uang saku harian, sepanjang penghasilan tidak dibayarkan secara bulanan, tarif lapisan pertama sebagaimana dimaksud dalam Pasal 17 ayat (1) huruf a Undang-Undang Pajak Penghasilan diterapkan atas:\n\na. jumlah penghasilan bruto sehari yang melebihi Rp450.000,00 (empat ratus lima puluh ribu rupiah); atau\n\nb. jumlah penghasilan bruto dikurangi PTKP yang sebenarnya, dalam hal jumlah penghasilan kumulatif dalam 1 (satu) bulan kalender telah melebihi Rp4.500.000,00 (empat juta lima ratus ribu rupiah).\n\n(2) Dalam hal jumlah penghasilan kumulatif dalam satu bulan kalender telah melebihi Rp10.200.000,00 (sepuluh juta dua ratus ribu rupiah), PPh Pasal 21 dihitung dengan menerapkan tarif Pasal 17 ayat (1) huruf a Undang- Undang Paj"
+              },
+              {
+                "id": "PER-16/PJ/2016#19",
+                "peraturan": "PER-16/PJ/2016",
+                "pasal": "Pasal 12",
+                "halaman_pdf": null,
+                "tautan": "https://www.pajak.go.id/id/peraturan/pedoman-teknis-tata-cara-pemotongan-penyetoran-dan-pelaporan-pajak-penghasilan-pasal-21-0",
+                "status_peraturan": "berlaku",
+                "pasal_gugur": false,
+                "skor": 0.89,
+                "teks": "Pasal 12\n\n(1) Atas penghasilan bagi Pegawai Tidak Tetap atau Tenaga Kerja Lepas yang tidak dibayar secara bulanan atau jumlah kumulatifnya dalam 1 (satu) bulan kalender belum melebihi Rp4.500.000,00 (empat juta lima ratus ribu rupiah), berlaku ketentuan sebagai berikut:\n\na. tidak dilakukan pemotongan PPh Pasal 21, dalam hal penghasilan sehari atau rata-rata penghasilan sehari belum melebihi Rp450.000,00 (empat ratus lima puluh ribu rupiah);\n\nb. dilakukan pemotongan PPh Pasal 21, dalam hal penghasilan sehari atau rata-rata penghasilan sehari melebihi Rp450.000,00 (empat ratus lima puluh ribu rupiah), dan jumlah sebesar Rp450.000,00 (empat ratus lima puluh ribu rupiah) tersebut merupakan jumlah yang dapat dikurangkan dari penghasilan bruto.\n\n(2) Rata-rata penghasilan sehari sebagaimana dimaksud pada ayat (1) adalah rata-rata upah mingguan, upah satuan, atau upah borongan untuk setiap hari "
+              },
+              {
+                "id": "PMK 168 Tahun 2023#76",
+                "peraturan": "PMK 168 Tahun 2023",
+                "pasal": "Lampiran",
+                "halaman_pdf": 48,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/E60A82E0-B218-40F5-9D18-B924AA1E11CE/2023pmkeuangan168.pdf#page=48",
+                "status_peraturan": "berlaku",
+                "pasal_gugur": false,
+                "skor": 0.89,
+                "teks": " Pegawai Tidak Tetap\nyang Menerima atau Memperoleh Upah Harian dengan Jumlah\nPenghasilan Bruto sampai dengan Rp2.500.000,00 (Dua Juta Lima\nRatus Ribu Rupiah) Sehari\nTuan K bekerja di PT P. Pada bulan Januari 2024, Tuan K melakukan\npekerjaan perakitan jam tangan selama 20 (dua puluh) hari dan\nmenerima atau memperoleh penghasilan yang dibayarkan secara harian\nsebesar Rp500.000,00 (lima ratus ribu rupiah) per hari.\na. Berdasarkan jumlah penghasilan bruto sehari sebesar Rp500.000,00\n(lima ratus ribu rupiah), besarnya Pajak Penghasilan Pasal 21\nterutang atas penghasilan yang diterima atau diperoleh Tuan K dalam\nsehari dihitung berdasarkan tarif efektif harian sebagaimana diatur\ndalam Peraturan Pemerintah yang mengatur mengenai Tarif\nPemotongan Pajak Penghasilan Pasal 21 atas Penghasilan\nSehubungan dengan Pekerjaan, Jasa, atau Kegiatan Wajib Pajak\nOrang Pribadi, yaitu dengan tarif efektif hari"
+              },
+              {
+                "id": "PMK 168 Tahun 2023#46",
+                "peraturan": "PMK 168 Tahun 2023",
+                "pasal": "Lampiran",
+                "halaman_pdf": 30,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/E60A82E0-B218-40F5-9D18-B924AA1E11CE/2023pmkeuangan168.pdf#page=30",
+                "status_peraturan": "berlaku",
+                "pasal_gugur": false,
+                "skor": 0.88,
+                "teks": " Penghasilan Pasal 21 atas penghasilan yang\nditerima atau diperoleh secara bulanan.\nIII.1. Penghitungan Pajak Penghasilan Pasal 21 untuk Pegawai Tidak Tetap\natas Penghasilan yang Diterima atau Diperoleh Tidak Secara Bulanan\n1. Besarnya Pajak Penghasilan Pasal 21 terutang atas penghasilan yang\nditerima atau diperoleh Pegawai Tidak Tetap, yang tidak diterima atau\ndiperoleh secara bulanan dihitung berdasarkan:\na. tarif efektif harian sebagaimana diatur dalam Peraturan\nPemerintah yang mengatur mengenai Tarif Pemotongan dan\nPengenaan Pajak Penghasilan Pasal 21 atas Penghasilan\nSehubungan dengan Pekerjaan, Jasa, atau Kegiatan Wajib Pajak\nOrang Pribadi; atau\nb. tarif Pasal 17 ayat (1) huruf a Undang-Undang Pajak Penghasilan.\n2. Penggunaan tarif sebagaimana dimaksud pada angka 1, ditentukan\nberdasarkan:\na. jumlah penghasilan bruto Pegawai Tidak Tetap sehari, dalam hal\npenghasilan diterima atau d"
+              },
+              {
+                "id": "PER-16/PJ/2016#15",
+                "peraturan": "PER-16/PJ/2016",
+                "pasal": "Pasal 9",
+                "halaman_pdf": null,
+                "tautan": "https://www.pajak.go.id/id/peraturan/pedoman-teknis-tata-cara-pemotongan-penyetoran-dan-pelaporan-pajak-penghasilan-pasal-21-0",
+                "status_peraturan": "berlaku",
+                "pasal_gugur": false,
+                "skor": 0.87,
+                "teks": "Pasal 9\n\n(1) Dasar pengenaan dan pemotongan PPh Pasal 21 adalah sebagai berikut:\n\na. Penghasilan Kena Pajak, yang berlaku bagi:\n\n1. Pegawai Tetap;\n\n2. penerima pensiun berkala;\n\n3. Pegawai Tidak Tetap yang penghasilannya dibayar secara bulanan atau jumlah kumulatif penghasilan yang diterima dalam 1 (satu) bulan kalender telah melebihi Rp4.500.000,00 (empat juta lima ratus ribu rupiah); dan\n\n4. Bukan Pegawai sebagaimana dimaksud dalam Pasal 3 huruf c yang menerima imbalan yang bersifat berkesinambungan.\n\nb. Jumlah penghasilan yang melebihi Rp450.000,00 (empat ratus lima puluh ribu rupiah) sehari, yang berlaku bagi Pegawai Tidak Tetap atau Tenaga Kerja Lepas yang menerima upah harian, upah mingguan, upah satuan atau upah borongan, sepanjang penghasilan kumulatif yang diterima dalam 1 (satu) bulan kalender belum melebihi Rp4.500.000,00 (empat juta lima ratus ribu rupiah);\n\nc. 50% (lima pulu"
+              }
+            ],
+            "dibuang_tidak_berlaku": 18,
+            "sumber": [
+              "PER-16/PJ/2016#23",
+              "PER-16/PJ/2016#19",
+              "PMK 168 Tahun 2023#76",
+              "PMK 168 Tahun 2023#46",
+              "PER-16/PJ/2016#15",
+              "PER-16/PJ/2016",
+              "PMK 168 Tahun 2023"
+            ]
+          }
+        },
+        {
+          "tool": "find_regulation",
+          "argumen": {
+            "regulation": "PMK 168 Tahun 2023",
+            "date": ""
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": [
+              {
+                "peraturan": "PMK 168 Tahun 2023",
+                "judul": "Petunjuk Pelaksanaan Pemotongan Pajak atas Penghasilan sehubungan dengan Pekerjaan, Jasa, atau Kegiatan Pribadi",
+                "teks_tersedia": true,
+                "url": "https://jdih.kemenkeu.go.id/dok/pmk-168-tahun-2023",
+                "berkas_pdf": "https://jdih.kemenkeu.go.id/api/download/E60A82E0-B218-40F5-9D18-B924AA1E11CE/2023pmkeuangan168.pdf",
+                "status": "berlaku",
+                "sejak": null,
+                "oleh": [],
+                "pasal_gugur": [],
+                "ayat_gugur": {},
+                "pasti": true,
+                "catatan": []
+              }
+            ],
+            "sumber": [
+              "PMK 168 Tahun 2023"
+            ]
+          }
+        },
+        {
+          "tool": "get_article",
+          "argumen": {
+            "regulation": "PMK 168 Tahun 2023",
+            "article": "26",
+            "date": ""
+          },
+          "hasil": {
+            "berhasil": false,
+            "galat": "Pasal 26 tidak ditemukan di PMK 168 Tahun 2023.",
+            "saran": "Pasal yang ada: Pasal 1, Pasal 2, Pasal 3, Pasal 4, Pasal 5, Pasal 6, Pasal 7, Pasal 8, Pasal 9, Pasal 10, Pasal 11, Pasal 12, Pasal 13, Pasal 14, Pasal 15, Pasal 16, Pasal 17, Pasal 18, Pasal 19, Pasal 20, Pasal 21, Pasal 22, Pasal 23, Pasal 24, Pasal 25"
+          }
+        },
+        {
+          "tool": "get_article",
+          "argumen": {
+            "regulation": "PMK 168 Tahun 2023",
+            "article": "12",
+            "date": ""
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": "PMK 168 Tahun 2023",
+            "pasal": "12",
+            "label": [
+              "Pasal 12 ayat (1)-(4)",
+              "Pasal 12 ayat (5)-(9)"
+            ],
+            "teks": "Pasal 12\n(1) Dasar pengenaan dan pemotongan Pajak Penghasilan\nPasal 21 untuk anggota dewan komisaris atau anggota\ndewan pengawas yang menerima atau memperoleh\npenghasilan secara tidak teratur yaitu sebesar jumlah\npenghasilan bruto sebagaimana dimaksud dalam Pasal 5\nayat (1) huruf c.\n(2)\nDasar pengenaan dan pemotongan Pajak Penghasilan\nPasal 21 untuk Pegawai Tidak Tetap yaitu dalam hal\npenghasilan bruto sebagaimana dimaksud dalam Pasal 5\nayat (1) huruf d:\ntidak diterima atau diperoleh secara bulanan dan\na.\njumlah penghasilan bruto sehari sampai dengan\nRp2.500.000,00 (dua juta lima ratus ribu rupiah),\nsebesar:\n1.\npenghasilan bruto sehari, dalam hal penghasilan\nditerima atau diperoleh harian; atau\n2.\nrata-rata penghasilan bruto sehari, dalam hal\npenghasilan diterima atau diperoleh selain\nharian.\nb.\ntidak diterima atau diperoleh secara bulanan dan\njumlah penghasilan bruto sehari lebih dari\nRp2.500.000,00 (dua juta lima ratus ribu rupiah,\nsebesar 50% (lima puluh persen) dari jumlah\npenghasilan bruto; atau\nC.\nditerima atau diperoleh secara bulanan, sebesar\njumlah penghasilan bruto.\n(3)\nDasar pengenaan dan pemotongan Pajak Penghasilan\nPasal 21 untuk Bukan Pegawai yaitu sebesar 50% (lima\npuluh persen) dari jumlah penghasilan bruto sebagaimana\ndimaksud dalam Pasal 5 ayat (1) huruf e.\n(4)\nJumlah penghasilan bruto untuk Bukan Pegawai\nsebagaimana dimaksud pada ayat (3):\na.\nuntuk jasa katering merupakan seluruh jumlah\npenghasilan dengan nama dan dalam bentuk apa pun\nyang diterima atau diperoleh Bukan Pegawai dari\nPemotong Pajak; atau\nb.\nuntuk jasa selain jasa katering merupakan seluruh\njumlah penghasilan dengan nama dan dalam bentuk\napa pun yang diterima atau diperoleh Bukan Pegawai\ndari Pemotong Pajak, tidak termasuk:\n1.\npembayaran gaji, upah, honorarium, tunjangan,\ndanpembayaran\nn lain sebagai\nimbalan\nsehubungan dengan pekerjaan yang diterima\natau diperoleh tenaga kerja yang dipekerjakan\noleh Bukan Pegawai;\n2.\npembayaran pengadaan atau pembelian atas\nbarang atau material, yang diterima atau\ndiperoleh penyedia barang atau material dari\nBukan Pegawai, yang terkait dengan jasa yang\ndiberikan oleh Bukan Pegawai; dan/atau\n3.\npembayaran yang diterima atau diperoleh pihak\nketiga dari Bukan Pegawai atas jasa yang\ndiberikan oleh pihak ketiga tersebut,\n1d\njdih.kemenkeu.go.id\n-14-\nberdasarkan kontrak atau\nperjanjian\ndengan\nPemotong\nPajak,\nkecuali\napabila\ndalam\nkontrak/perjanjian tidak dapat dipisahkan, maka\nbesarnya penghasilan bruto tersebut merupakan\nsebesar jumlah yang diterima atau diperoleh Bukan\nPegawai.\n\n(5)\nPembayaran sebagaimana dimaksud pada ayat (4) huruf b\nangka 1, angka 2, dan angka 3 tidak termasuk dalam\njumlah bruto sebagai dasar pemotongan Pajak\nPenghasilan sebagaimana dimaksud pada ayat (3)\nsepanjang dapat dibuktikan dengan:\nkontrak kerja dan daftar pembayaran gaji, upah,\na.\nhonorarium, tunjangan dan pemberian lain sebagai\nimbalan sehubungan dengan pekerjaan sebagaimana\ndimaksud pada ayat (4) huruf b angka 1;\nb.\nfaktur pembelian atas pengadaan/pembeli",
+            "halaman_pdf": 13,
+            "tautan": "https://jdih.kemenkeu.go.id/api/download/E60A82E0-B218-40F5-9D18-B924AA1E11CE/2023pmkeuangan168.pdf#page=13",
+            "status_peraturan": "berlaku",
+            "peringatan": [],
+            "sumber": [
+              "PMK 168 Tahun 2023",
+              "PMK 168 Tahun 2023#20",
+              "PMK 168 Tahun 2023#21"
+            ]
+          }
+        },
+        {
+          "tool": "get_article",
+          "argumen": {
+            "regulation": "PMK 168 Tahun 2023",
+            "article": "13",
+            "date": ""
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": "PMK 168 Tahun 2023",
+            "pasal": "13",
+            "label": [
+              "Pasal 13"
+            ],
+            "teks": "Pasal 13\n(1) Tarif pemotongan Pajak Penghasilan Pasal 21 terdiri atas:\na.\ntarif efektif pemotongan Pajak Penghasilan Pasal 21;\ndan\nb.\ntarif berdasarkan Pasal 17 ayat (1) huruf a Undang-\nUndang Pajak Penghasilan.\n(2) Tarif efektif pemotongan Pajak Penghasilan Pasal 21\nsebagaimana dimaksud pada ayat (1) huruf a terdiri atas:\na.\ntarif efektif bulanan; atau\nb.\ntarif efektif harian,\nA\njdih.kemenkeu.go.id\n-15-\nsebagaimana diatur dalam peraturan pemerintah yang\nmengatur mengenai tarif pemotongan Pajak Penghasilan\nPasal 21 atas penghasilan sehubungan dengan pekerjaan,\njasa, atau kegiatan wajib pajak orang pribadi.\n(3)\nTarif pemotongan Pajak Penghasilan Pasal 21 berdasarkan\ntarif Pasal 17 ayat (1) huruf a Undang-Undang Pajak\nPenghasilan sebagaimana dimaksud pada ayat (1) huruf b\ndigunakan atas penghasilan dari pekerjaan, jasa, atau\nkegiatan wajib pajak orang pribadi.\n",
+            "halaman_pdf": 14,
+            "tautan": "https://jdih.kemenkeu.go.id/api/download/E60A82E0-B218-40F5-9D18-B924AA1E11CE/2023pmkeuangan168.pdf#page=14",
+            "status_peraturan": "berlaku",
+            "peringatan": [],
+            "sumber": [
+              "PMK 168 Tahun 2023",
+              "PMK 168 Tahun 2023#22"
+            ]
+          }
+        },
+        {
+          "tool": "search_text",
+          "argumen": {
+            "query": "pegawai tidak tetap upah harian tidak dilakukan pemotongan PPh 21 bruto sehari sampai dengan Rp2.500.000 tarif efektif harian",
+            "regulation": "PMK 168 Tahun 2023",
+            "date": "",
+            "in_force_only": true
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "metode": "semantik Gemini",
+            "hasil": [
+              {
+                "id": "PMK 168 Tahun 2023#76",
+                "peraturan": "PMK 168 Tahun 2023",
+                "pasal": "Lampiran",
+                "halaman_pdf": 48,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/E60A82E0-B218-40F5-9D18-B924AA1E11CE/2023pmkeuangan168.pdf#page=48",
+                "status_peraturan": "berlaku",
+                "pasal_gugur": false,
+                "skor": 0.91,
+                "teks": " Pegawai Tidak Tetap\nyang Menerima atau Memperoleh Upah Harian dengan Jumlah\nPenghasilan Bruto sampai dengan Rp2.500.000,00 (Dua Juta Lima\nRatus Ribu Rupiah) Sehari\nTuan K bekerja di PT P. Pada bulan Januari 2024, Tuan K melakukan\npekerjaan perakitan jam tangan selama 20 (dua puluh) hari dan\nmenerima atau memperoleh penghasilan yang dibayarkan secara harian\nsebesar Rp500.000,00 (lima ratus ribu rupiah) per hari.\na. Berdasarkan jumlah penghasilan bruto sehari sebesar Rp500.000,00\n(lima ratus ribu rupiah), besarnya Pajak Penghasilan Pasal 21\nterutang atas penghasilan yang diterima atau diperoleh Tuan K dalam\nsehari dihitung berdasarkan tarif efektif harian sebagaimana diatur\ndalam Peraturan Pemerintah yang mengatur mengenai Tarif\nPemotongan Pajak Penghasilan Pasal 21 atas Penghasilan\nSehubungan dengan Pekerjaan, Jasa, atau Kegiatan Wajib Pajak\nOrang Pribadi, yaitu dengan tarif efektif hari"
+              },
+              {
+                "id": "PMK 168 Tahun 2023#47",
+                "peraturan": "PMK 168 Tahun 2023",
+                "pasal": "Lampiran",
+                "halaman_pdf": 31,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/E60A82E0-B218-40F5-9D18-B924AA1E11CE/2023pmkeuangan168.pdf#page=31",
+                "status_peraturan": "berlaku",
+                "pasal_gugur": false,
+                "skor": 0.89,
+                "teks": " jumlah hari Pegawai Tidak Tetap bersangkutan bekerja.\n5. Dalam hal jumlah penghasilan bruto sehari atau rata-rata jumlah\npenghasilan bruto sehari sebagaimana dimaksud pada angka 2:\na. sampai dengan Rp2.500.000,00 (dua juta lima ratus ribu rupiah)\nsehari, besarnya Pajak Penghasilan Pasal 21 terutang dihitung\ndengan menggunakan tarif efektif harian dikalikan dengan jumlah\npenghasilan bruto sehari atau rata-rata jumlah penghasilan bruto\nsehari; atau\nb. lebih dari Rp2.500.000,00 (dua juta lima ratus ribu rupiah) sehari,\nbesarnya Pajak Penghasilan Pasal 21 terutang dihitung dengan\nmenggunakan tarif Pasal 17 ayat (1) huruf a Undang-Undang Pajak\nPenghasilan dikalikan dengan 50% (lima puluh persen) dari jumlah\npenghasilan bruto sehari atau rata-rata jumlah penghasilan bruto\nsehari.\nIII.2. Penghitungan Pajak Penghasilan Pasal 21 untuk Pegawai Tidak Tetap\natas Penghasilan yang Diterima atau Diper"
+              },
+              {
+                "id": "PMK 168 Tahun 2023#77",
+                "peraturan": "PMK 168 Tahun 2023",
+                "pasal": "Lampiran",
+                "halaman_pdf": 49,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/E60A82E0-B218-40F5-9D18-B924AA1E11CE/2023pmkeuangan168.pdf#page=49",
+                "status_peraturan": "berlaku",
+                "pasal_gugur": false,
+                "skor": 0.89,
+                "teks": " atau Memperoleh Upah Borongan dengan Jumlah\nPenghasilan Bruto sampai dengan Rp2.500.000,00 (Dua Juta Lima\nRatus Ribu Rupiah) Sehari\nTuan L bekerja pada PT O. Pada bulan Juni 2024, Tuan L melakukan\npekerjaan perakitan bingkai foto selama 10 (sepuluh) hari. Atas\npenyelesaian pekerjaan tersebut, Tuan L menerima atau memperoleh\npenghasilan sebesar Rp4.500.000,00 (empat juta lima ratus ribu rupiah).\na. Rata-rata jumlah penghasilan bruto sehari yang diterima atau\ndiperoleh Tuan L atas pekerjaan pemasangan bingkai yaitu sebesar\nRp4.500.000,00 : 10 = Rp450.000,00\nb. Berdasarkan rata-rata jumlah penghasilan bruto sehari sebesar\nRp450.000,00 (empat ratus lima puluh ribu rupiah), besarnya Pajak\nPenghasilan Pasal 21 terutang atas penghasilan yang diterima atau\ndiperoleh Tuan L dalam sehari dihitung berdasarkan tarif efektif\nharian sebagaimana diatur dalam Peraturan Pemerintah yang\nmengatur mengenai"
+              },
+              {
+                "id": "PMK 168 Tahun 2023#46",
+                "peraturan": "PMK 168 Tahun 2023",
+                "pasal": "Lampiran",
+                "halaman_pdf": 30,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/E60A82E0-B218-40F5-9D18-B924AA1E11CE/2023pmkeuangan168.pdf#page=30",
+                "status_peraturan": "berlaku",
+                "pasal_gugur": false,
+                "skor": 0.89,
+                "teks": " Penghasilan Pasal 21 atas penghasilan yang\nditerima atau diperoleh secara bulanan.\nIII.1. Penghitungan Pajak Penghasilan Pasal 21 untuk Pegawai Tidak Tetap\natas Penghasilan yang Diterima atau Diperoleh Tidak Secara Bulanan\n1. Besarnya Pajak Penghasilan Pasal 21 terutang atas penghasilan yang\nditerima atau diperoleh Pegawai Tidak Tetap, yang tidak diterima atau\ndiperoleh secara bulanan dihitung berdasarkan:\na. tarif efektif harian sebagaimana diatur dalam Peraturan\nPemerintah yang mengatur mengenai Tarif Pemotongan dan\nPengenaan Pajak Penghasilan Pasal 21 atas Penghasilan\nSehubungan dengan Pekerjaan, Jasa, atau Kegiatan Wajib Pajak\nOrang Pribadi; atau\nb. tarif Pasal 17 ayat (1) huruf a Undang-Undang Pajak Penghasilan.\n2. Penggunaan tarif sebagaimana dimaksud pada angka 1, ditentukan\nberdasarkan:\na. jumlah penghasilan bruto Pegawai Tidak Tetap sehari, dalam hal\npenghasilan diterima atau d"
+              },
+              {
+                "id": "PMK 168 Tahun 2023#78",
+                "peraturan": "PMK 168 Tahun 2023",
+                "pasal": "Lampiran",
+                "halaman_pdf": 49,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/E60A82E0-B218-40F5-9D18-B924AA1E11CE/2023pmkeuangan168.pdf#page=49",
+                "status_peraturan": "berlaku",
+                "pasal_gugur": false,
+                "skor": 0.88,
+                "teks": " Pajak\nPenghasilan Pasal 21 gabungan untuk beberapa hari).\n2. Atas bukti pemotongan Pajak Penghasilan Pasal 21 tersebut, Tuan L\nwajib melaporkan penghasilan yang diterima atau diperoleh dari PT\nO tersebut dalam Surat Pemberitahuan Tahunan Tahun Pajak 2024.\nIV.1.3.Penghitungan Pajak Penghasilan Pasal 21 atas Pegawai Tidak Tetap\nyang Menerima atau Memperoleh Upah Satuan dengan Jumlah\nPenghasilan Bruto Lebih dari Rp2.500.000,00 (Dua Juta Lima Ratus\nRibu Rupiah) Sehari\nTuan M bekerja pada PT N. Tuan M menerima atau memperoleh\npenghasilan harian berdasarkan jumlah unit TV yang diperbaiki dengan\nbesaran penghasilan yang dibayarkan adalah sebesar Rp300.000,00 (tiga\nratus ribu rupiah) per unit TV. Tuan M menyelesaikan perbaikan TV\nsebanyak 10 (sepuluh) buah dalam sehari dan menerima atau\nmemperoleh penghasilan sebesar Rp3.000.000,00 (tiga juga rupiah).\nPenghitungan Pajak Penghasilan Pasal 21 ata"
+              }
+            ],
+            "dibuang_tidak_berlaku": 0,
+            "sumber": [
+              "PMK 168 Tahun 2023#76",
+              "PMK 168 Tahun 2023#47",
+              "PMK 168 Tahun 2023#77",
+              "PMK 168 Tahun 2023#46",
+              "PMK 168 Tahun 2023#78",
+              "PMK 168 Tahun 2023"
+            ]
+          }
+        },
+        {
+          "tool": "find_legal_basis",
+          "argumen": {
+            "topic": "pegawai_tidak_tetap"
+          },
+          "hasil": {
+            "berhasil": true,
+            "topik": "pegawai_tidak_tetap",
+            "judul": "Pegawai tidak tetap",
+            "rujukan": [
+              "PP No. 58 Tahun 2023",
+              "PMK No. 168 Tahun 2023 Pasal 12 ayat (2) dan Pasal 16 ayat (2)"
+            ],
+            "ringkasan": "Upah harian/mingguan/satuan/borongan: dasar pengenaan dan tarifnya ditentukan murni oleh upah sehari (atau rata-rata upah sehari) periode pembayaran itu sendiri, TIDAK kumulatif lintas pembayaran dalam bulan yang sama. Sampai dengan Rp450.000 sehari dikenakan 0%. Bila upah sehari melebihi Rp2.500.000, dikenakan tarif Pasal 17 atas 50% penghasilan bruto.\n",
+            "lokasi_dasar_hukum": [
+              {
+                "rujukan": "PP No. 58 Tahun 2023",
+                "peraturan": "PP 58 Tahun 2023",
+                "pasal": null,
+                "halaman_pdf": null,
+                "tautan": "https://jdih.kemenkeu.go.id/dok/pp-58-tahun-2023"
+              },
+              {
+                "rujukan": "PMK No. 168 Tahun 2023 Pasal 12 ayat (2) dan Pasal 16 ayat (2)",
+                "peraturan": "PMK 168 Tahun 2023",
+                "pasal": "12",
+                "halaman_pdf": 13,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/E60A82E0-B218-40F5-9D18-B924AA1E11CE/2023pmkeuangan168.pdf#page=13"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "gu-05",
+      "kategori": "graf_status",
+      "tag": [
+        "uji_graf"
+      ],
+      "perilaku": "graf",
+      "tool_harapan": null,
+      "tool_dipanggil": [
+        "find_legal_basis",
+        "skill_value"
+      ],
+      "tool_hitung_pertama": null,
+      "tool_hitung_akhir": null,
+      "tool_benar": true,
+      "tool_benar_percobaan_pertama": false,
+      "argumen_benar": null,
+      "field_benar": 0,
+      "field_total": 0,
+      "argumen_salah": {},
+      "argumen_aktual": {},
+      "pph_harapan": null,
+      "pph_aktual": null,
+      "angka_benar": null,
+      "perilaku_benar": false,
+      "galat_tool": 0,
+      "tool_halusinasi": [],
+      "putaran": 3,
+      "detik": 12.64,
+      "jawaban": "Tidak. **PTKP untuk diri Wajib Pajak orang pribadi saat ini Rp54.000.000 setahun**, bukan Rp36.000.000. Rujukan: [PMK No. 101/PMK.010/2016](https://jdih.kemenkeu.go.id/dok/101-pmk-010-2016); ketentuan terkait juga tercantum dalam UU PPh Pasal 7 ayat (1).",
+      "error": null,
+      "galat_api": [
+        "OpenAIConnectionError: Connection error."
+      ],
+      "perilaku_benar_satu_giliran": false,
+      "tool_graf": 1,
+      "klarifikasi": false,
+      "sitasi_belum_terverifikasi": [],
+      "sitasi_diperiksa": true,
+      "sitasi_audit_ablasi": [],
+      "sitasi_dikoreksi": [],
+      "status_distempel": [],
+      "angka_tanpa_sumber": [],
+      "pph_di_jawaban": null,
+      "token_masuk": 50760,
+      "token_keluar": 136,
+      "jejak": [
+        {
+          "tool": "find_legal_basis",
+          "argumen": {
+            "topic": "ptkp"
+          },
+          "hasil": {
+            "berhasil": true,
+            "topik": "ptkp",
+            "judul": "Penghasilan Tidak Kena Pajak",
+            "rujukan": [
+              "UU PPh Pasal 7 ayat (1)",
+              "PMK No. 101/PMK.010/2016"
+            ],
+            "ringkasan": "PTKP untuk diri Wajib Pajak orang pribadi Rp54.000.000 setahun, tambahan Rp4.500.000 untuk WP kawin, dan tambahan Rp4.500.000 untuk setiap anggota keluarga sedarah/semenda dalam garis keturunan lurus serta anak angkat yang menjadi tanggungan sepenuhnya, paling banyak 3 orang.\n",
+            "lokasi_dasar_hukum": [
+              {
+                "rujukan": "PMK No. 101/PMK.010/2016",
+                "peraturan": "PMK 101 Tahun 2016",
+                "pasal": null,
+                "halaman_pdf": null,
+                "tautan": "https://jdih.kemenkeu.go.id/dok/101-pmk-010-2016"
+              }
+            ]
+          }
+        },
+        {
+          "tool": "skill_value",
+          "argumen": {
+            "key": "ptkp"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "key": "ptkp",
+            "tahun_pajak": 2026,
+            "nilai": {
+              "wajib_pajak_sendiri": 54000000,
+              "tambahan_kawin": 4500000,
+              "tambahan_tanggungan": 4500000,
+              "maksimal_tanggungan": 3
+            },
+            "dasar_hukum": "UU PPh Pasal 7 ayat (1); PMK No. 101/PMK.010/2016",
+            "terakhir_dicek": "2026-09-22",
+            "didefinisikan_oleh": [
+              {
+                "peraturan": "PMK 101 Tahun 2016",
+                "pasal": [],
+                "status": "berlaku"
+              },
+              {
+                "peraturan": "UU 7 Tahun 1983",
+                "pasal": [
+                  "7"
+                ],
+                "status": "berlaku_diubah"
+              }
+            ],
+            "peringatan": [],
+            "sumber": [
+              "PMK 101 Tahun 2016",
+              "UU 7 Tahun 1983"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "gu-06",
+      "kategori": "graf_relasi",
+      "tag": [
+        "uji_graf"
+      ],
+      "perilaku": "graf",
+      "tool_harapan": null,
+      "tool_dipanggil": [
+        "find_legal_basis",
+        "find_regulation",
+        "find_regulation",
+        "find_regulation"
+      ],
+      "tool_hitung_pertama": null,
+      "tool_hitung_akhir": null,
+      "tool_benar": true,
+      "tool_benar_percobaan_pertama": false,
+      "argumen_benar": null,
+      "field_benar": 0,
+      "field_total": 0,
+      "argumen_salah": {},
+      "argumen_aktual": {},
+      "pph_harapan": null,
+      "pph_aktual": null,
+      "angka_benar": null,
+      "perilaku_benar": true,
+      "galat_tool": 0,
+      "tool_halusinasi": [],
+      "putaran": 5,
+      "detik": 13.13,
+      "jawaban": "PTKP **Rp24,3 juta setahun** ditetapkan oleh **PMK 162/PMK.011/2012**. [Status per 2026-11-17 menurut graf peraturan: PMK 162 Tahun 2012 dicabut sejak 2015-06-29 oleh PMK 122 Tahun 2015.] Aturan itu kemudian **dicabut oleh PMK 122/PMK.010/2015**, yang selanjutnya **dicabut oleh PMK 101/PMK.010/2016**. Berdasarkan hasil pencarian, PMK 101 Tahun 2016 masih berstatus berlaku pada **17 November 2026**.\n\nRujukan: [PMK 101 Tahun 2016](https://jdih.kemenkeu.go.id/dok/101-pmk-010-2016).",
+      "error": null,
+      "galat_api": [],
+      "perilaku_benar_satu_giliran": true,
+      "tool_graf": 3,
+      "klarifikasi": false,
+      "sitasi_belum_terverifikasi": [],
+      "sitasi_diperiksa": true,
+      "sitasi_audit_ablasi": [],
+      "sitasi_dikoreksi": [],
+      "status_distempel": [
+        "PMK 162 Tahun 2012"
+      ],
+      "angka_tanpa_sumber": [],
+      "pph_di_jawaban": null,
+      "token_masuk": 85919,
+      "token_keluar": 240,
+      "jejak": [
+        {
+          "tool": "find_legal_basis",
+          "argumen": {
+            "topic": "ptkp"
+          },
+          "hasil": {
+            "berhasil": true,
+            "topik": "ptkp",
+            "judul": "Penghasilan Tidak Kena Pajak",
+            "rujukan": [
+              "UU PPh Pasal 7 ayat (1)",
+              "PMK No. 101/PMK.010/2016"
+            ],
+            "ringkasan": "PTKP untuk diri Wajib Pajak orang pribadi Rp54.000.000 setahun, tambahan Rp4.500.000 untuk WP kawin, dan tambahan Rp4.500.000 untuk setiap anggota keluarga sedarah/semenda dalam garis keturunan lurus serta anak angkat yang menjadi tanggungan sepenuhnya, paling banyak 3 orang.\n",
+            "lokasi_dasar_hukum": [
+              {
+                "rujukan": "PMK No. 101/PMK.010/2016",
+                "peraturan": "PMK 101 Tahun 2016",
+                "pasal": null,
+                "halaman_pdf": null,
+                "tautan": "https://jdih.kemenkeu.go.id/dok/101-pmk-010-2016"
+              }
+            ]
+          }
+        },
+        {
+          "tool": "find_regulation",
+          "argumen": {
+            "regulation": "PMK 101 Tahun 2016"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": [
+              {
+                "peraturan": "PMK 101 Tahun 2016",
+                "judul": "Penyesuaian Besarnya Penghasilan Tidak Kena Pajak.",
+                "teks_tersedia": true,
+                "url": "https://jdih.kemenkeu.go.id/dok/101-pmk-010-2016",
+                "berkas_pdf": "https://jdih.kemenkeu.go.id/api/download/D8072ADC-8F62-48D1-95E0-7D25C92B6362/101~PMK.010~2016Per.pdf",
+                "status": "berlaku",
+                "sejak": null,
+                "oleh": [],
+                "pasal_gugur": [],
+                "ayat_gugur": {},
+                "pasti": true,
+                "catatan": []
+              }
+            ],
+            "sumber": [
+              "PMK 101 Tahun 2016"
+            ]
+          }
+        },
+        {
+          "tool": "find_regulation",
+          "argumen": {
+            "regulation": "PMK 162/PMK.011/2012"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": [
+              {
+                "peraturan": "PMK 162 Tahun 2012",
+                "judul": "Penyesuaian Besarnya Penghasilan Tidak Kena Pajak.",
+                "teks_tersedia": true,
+                "url": "https://jdih.kemenkeu.go.id/dok/162-pmk-011-2012",
+                "berkas_pdf": "https://jdih.kemenkeu.go.id/api/download/0A93D8A9-E012-4D61-AE5B-8F7CC44B53D5/162~PMK.011~2012Per.HTM",
+                "status": "dicabut",
+                "sejak": "2015-06-29",
+                "oleh": [
+                  "PMK 122 Tahun 2015"
+                ],
+                "pasal_gugur": [],
+                "ayat_gugur": {},
+                "pasti": true,
+                "catatan": []
+              }
+            ],
+            "sumber": [
+              "PMK 162 Tahun 2012",
+              "PMK 122 Tahun 2015"
+            ]
+          }
+        },
+        {
+          "tool": "find_regulation",
+          "argumen": {
+            "regulation": "PMK 122 Tahun 2015"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": [
+              {
+                "peraturan": "PMK 122 Tahun 2015",
+                "judul": "Penyesuaian Besarnya Penghasilan Tidak Kena Pajak.",
+                "teks_tersedia": true,
+                "url": "https://jdih.kemenkeu.go.id/dok/122-pmk-010-2015",
+                "berkas_pdf": "https://jdih.kemenkeu.go.id/api/download/ECB6CDEF-7873-4AD6-9B2D-F86B6B6C93EB/122~PMK.010~2015Per.pdf",
+                "status": "dicabut",
+                "sejak": "2016-06-22",
+                "oleh": [
+                  "PMK 101 Tahun 2016"
+                ],
+                "pasal_gugur": [],
+                "ayat_gugur": {},
+                "pasti": true,
+                "catatan": []
+              }
+            ],
+            "sumber": [
+              "PMK 122 Tahun 2015",
+              "PMK 101 Tahun 2016"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "gu-07",
+      "kategori": "graf_relasi",
+      "tag": [
+        "uji_graf"
+      ],
+      "perilaku": "graf",
+      "tool_harapan": null,
+      "tool_dipanggil": [
+        "find_regulation",
+        "amendment_chain"
+      ],
+      "tool_hitung_pertama": null,
+      "tool_hitung_akhir": null,
+      "tool_benar": true,
+      "tool_benar_percobaan_pertama": true,
+      "argumen_benar": null,
+      "field_benar": 0,
+      "field_total": 0,
+      "argumen_salah": {},
+      "argumen_aktual": {},
+      "pph_harapan": null,
+      "pph_aktual": null,
+      "angka_benar": null,
+      "perilaku_benar": true,
+      "galat_tool": 0,
+      "tool_halusinasi": [],
+      "putaran": 3,
+      "detik": 33.76,
+      "jawaban": "PMK 137/PMK.03/2005 tentang Penyesuaian Besarnya Penghasilan Tidak Kena Pajak dicabut oleh **PMK 213 Tahun 2018**, efektif **31 Desember 2018**. Pencabutan itu tercantum dalam **Pasal 1 PMK 213 Tahun 2018**. Peraturan tersebut berstatus berlaku pada tanggal pemeriksaan, 17 November 2026.",
+      "error": null,
+      "galat_api": [],
+      "perilaku_benar_satu_giliran": true,
+      "tool_graf": 2,
+      "klarifikasi": false,
+      "sitasi_belum_terverifikasi": [],
+      "sitasi_diperiksa": true,
+      "sitasi_audit_ablasi": [],
+      "sitasi_dikoreksi": [],
+      "status_distempel": [],
+      "angka_tanpa_sumber": [],
+      "pph_di_jawaban": null,
+      "token_masuk": 59009,
+      "token_keluar": 151,
+      "jejak": [
+        {
+          "tool": "find_regulation",
+          "argumen": {
+            "regulation": "PMK 137/PMK.03/2005"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": [
+              {
+                "peraturan": "PMK 137 Tahun 2005",
+                "judul": "Penyesuaian Besarnya Penghasilan Tidak Kena Pajak",
+                "teks_tersedia": true,
+                "url": "https://jdih.kemenkeu.go.id/dok/137-pmk-03-2005",
+                "berkas_pdf": "https://jdih.kemenkeu.go.id/api/download/B23B815A-88DE-466A-91BC-0F45D8D9C8D9/137~PMK.03~2005Per.HTM",
+                "status": "dicabut",
+                "sejak": "2018-12-31",
+                "oleh": [
+                  "PMK 213 Tahun 2018"
+                ],
+                "pasal_gugur": [],
+                "ayat_gugur": {},
+                "pasti": true,
+                "catatan": []
+              }
+            ],
+            "sumber": [
+              "PMK 137 Tahun 2005",
+              "PMK 213 Tahun 2018"
+            ]
+          }
+        },
+        {
+          "tool": "amendment_chain",
+          "argumen": {
+            "regulation": "PMK 213 Tahun 2018"
+          },
+          "hasil": {
+            "terpotong": true,
+            "teks": "{\"berhasil\": true, \"tanggal\": \"2026-11-17\", \"peraturan\": \"PMK 213 Tahun 2018\", \"status\": \"berlaku\", \"sejak\": null, \"oleh\": [], \"pasal_gugur\": [], \"ayat_gugur\": {}, \"pasti\": true, \"catatan\": [], \"diubah_atau_dicabut_oleh\": [], \"mengubah_atau_mencabut\": [{\"jenis\": \"mencabut\", \"peraturan\": \"PMK 137 Tahun 2005\", \"bukti\": \"eksplisit\", \"sumber\": \"jdih\", \"berlaku_efektif\": \"2018-12-31\", \"tanggal_perkiraan\": false, \"lewat\": null, \"pasal_bukti\": \"Pasal 1\", \"pasal_terdampak\": [], \"kutipan\": \"aj. Peraturan Menteri KeuanganNomor 137/PMK.03/2005 tentang Penyesuaian Besarnya Penghasilan Tidak Kena Pajak [...] dicabut dan dinyatakan tidak berlaku.\", \"status_peraturan\": \"dicabut\"}, {\"jenis\": \"mencabut\", \"peraturan\": \"KMK 456/KMK012/1984\", \"bukti\": \"eksplisit\", \"sumber\": \"jdih\", \"berlaku_efektif\": \"2018-12-31\", \"tanggal_perkiraan\": false, \"lewat\": null, \"pasal_bukti\": \"Pasal 1\", \"pasal_terdampak\": [], \"kutipan\": \"C. KeputusanMenteri KeuanganNomor 456/KMK.012/1984 tentang Tata Cara Perhitungan dan Penyetoran Kewajiban Pertamina Kepada Pemerintah atas Hasil Operasi Pertamina Sendiri [...] dicabut dan dinyatakan tidak berlaku.\", \"status_peraturan\": \"dicabut\"}, {\"jenis\": \"mencabut\", \"peraturan\": \"KMK 1442/KMK04/1988\", \"bukti\": \"eksplisit\", \"sumber\": \"jdih\", \"berlaku_efektif\": \"2018-12-31\", \"tanggal_perkiraan\": false, \"lewat\": null, \"pasal_bukti\": \"Pasal 1\", \"pasal_terdampak\": [], \"kutipan\": \"m. Keputusan Menteri Keuangan Nomor 1442/KMK.04/1988 tentang Pengembalian Pajak Penghasilan atas Bunga Deposito Berjangka, Sertifikat Deposito dan Tabungan [...] dicabut dan dinyatakan tidak berlaku.\", \"status_peraturan\": \"dicabut\"}, {\"jenis\": \"mencabut\", \"peraturan\": \"KMK 499/KMK03/2003\", \"bukti\": \"tersirat\", \"sumber\": \"jdih\", \"berlaku_efektif\": \"2018-12-31\", \"tanggal_perkiraan\": false, \"lewat\": \"KMK 391/KMK04/2000\", \"pasal_bukti\": \"Pasal 1\", \"pasal_terdampak\": [], \"kutipan\": \"wajiban Pembayaran Pajak Penghasilan Orang Pribadi yang Akan Bertolak ke Luar Negeri Dalam Kawasan Kerjasama Ekonomi Sub Regional ASEAN sebagaimana telah beberapa kali diubah terakhir dengan Keputusan Menteri KeuanganNomor499/KMK.03/2003tentangPerubahan Kedua atas Keputusan Menteri Keuangan Nomor 391/KMK.04/2000 tentang Pelabuhan atau Tempat Pemberangkatan ke Luar Negeri Dalam Daerah Kerjasama Eko\", \"status_peraturan\": \"berlaku_sebagian\"}, {\"jenis\": \"mencabut\", \"peraturan\": \"KMK 356/KMK04/1986\", \"bukti\": \"eksplisit\", \"sumber\": \"jdih\", \"berlaku_efektif\": \"2018-12-31\", \"tanggal_perkiraan\": false, \"lewat\": null, \"pasal_bukti\": \"Pasal 1\", \"pasal_terdampak\": [], \"kutipan\": \"h. Keputusan Menteri Keuangan Nomor 356/KMK.04/1986 tentang Pelaksanaan Pemotongan Pajak Penghasilan atas Penghasilan Sehubungan dengan Pekerjaan dari Tenaga Ahli atau Persekutuan Tenaga Ahli Sebagai Wajib Pajak Dalam Negeri Berupa Honorarium atau Pembayaran Lain Sebagai Imbalan atas Jasa Profesi yang Dilakukan di Indonesia [...] dicabut dan dinyatakan tidak berlaku.\", \"status_peraturan\": \"dicabut\"}, {\"jenis\": \"mencabut\", \"peraturan\": \"KMK 422/KMK04/1994\", \"bukti\": \"eksplisit\", \"sumber\": \"jdih\", \"berlaku_efektif\": \"2018-12-31\", \"tanggal_perkiraan\": false, \"lewat\": null, \"pasal_bukti\": \"Pasal 1\", \"pasal_terdampak\": [], \"kutipan\": \"u. Keputusan MenteriKeuanganNomor 422/KMK.04/1994 tentang Faktor Penyesuaian untuk Penghitungan Pajak Penghasilan dari Penjualan atau Pengalihan Harta Tahun 1994 [...] dicabut dan dinyatakan tidak berlaku.\", \"status_peraturan\": \"dicabut\"}, {\"jenis\": \"mencabut\", \"peraturan\": \"KMK 361/KMK04/1998\", \"bukti\": \"eksplisit\", \"sumber\": \"jdih\", \"berlaku_efektif\": \"2018-12-31\", \"tanggal_perkiraan\": false, \"lewat\": null, \"pasal_bukti\": \"Pasal 1\", \"pasal_terdampak\": [], \"kutipan\": \"ab. Keputusan Menteri Keuangan 361/KMK.04/1998 tentang Faktor Penyesuaian Besarnya Penghasilan Tidak Kena Pajak [...] dicabut dan dinyatakan tidak berlaku.\", \"status_peraturan\": \"dicabut\"}, {\"jenis\": \"mencabut\", \"peraturan\": \"KMK 118/KMK03/2003\", \"bukti\": \"tersirat\", \"sumber\": \"jdih\", \"berlaku_efektif\": \"2018-12-31\", \"tanggal_perkiraan\": false, \"lewat\": \"KMK 391/KMK04/2000\", \"pasal_bukti\": \"Pasal 1\", \"pasal_terdampak\": [], \"kutipan\": \"wajiban Pembayaran Pajak Penghasilan Orang Pribadi yang Akan Bertolak ke Luar Negeri Dalam Kawasan Kerjasama Ekonomi Sub Regional ASEAN sebagaimana telah beberapa kali diubah terakhir dengan Keputusan Menteri KeuanganNomor499/KMK.03/2003tentangPerubahan Kedua atas Keputusan Menteri Keuangan Nomor 391/KMK.04/2000 tentang Pelabuhan atau Tempat Pemberangkatan ke Luar Negeri Dalam Daerah Kerjasama Eko\", \"status_peraturan\": \"dicabut\"}, {\"jenis\": \"mencabut\", \"peraturan\": \"KMK 714/KMK04/1984\", \"bukti\": \"eksplisit\", \"sumber\": \"jdih\", \"berlaku_efektif\": \"2018-12-31\", \"tanggal_perkiraan\": false, \"lewat\": null, \"pasal_bukti\": \"Pasal 1\", \"pasal_terdampak\": [], \"kutipan\": \"e. Keputusan Menteri Keuangan Nomor 714/KMK.04/1984 tentang Norma Penghitungan Khusus Penghasilan Kena Pajak dari Wajib Pajak Badan yangMelakukan Kegiatan Usaha di Bidang Pengeboran Minyak dan Gas Bumi serta Angsuran Pajak Dalam Tahun Berjalan oleh Wajib Pajak Sendiri [...] dicabut dan dinyatakan tidak berlaku.\", \"status_peraturan\": \"dicabut\"}, {\"jenis\": \"mencabut\", \"peraturan\": \"KMK 747/KMK04/1990\", \"bukti\": \"eksplisit\", \"sumber\": \"jdih\", \"berlaku_efektif\": \"2018-12-31\", \"tanggal_perkiraan\": false, \"lewat\": null, \"pasal_bukti\": \"Pasal 1\", \"pasal_terdampak\": [], \"kutipan\": \"o. Keputusan Menteri Keuangan Nomor 747/KMK.04/1990 tentang Perlakuan Pajak Penghasilan bagi Investasi di Wilayah Tertentu [...] dicabut dan dinyatakan tidak berlaku.\", \"status_peraturan\": \"dicabut\"}, {\"jenis\": \"mencabut\", \"peraturan\": \"KMK 391/KMK04/2000\", \"bukti\": \"eksplisit\", \"sumber\": \"jdih\", \"berlaku_efektif\": \"2018-12-31\", \"tanggal_perkiraan\": false, \"lewat\": null, \"pasal_bukti\": \"Pasal 1\", \"pasal_terdampak\": [], \"kutipan\": \"wajiban Pembayaran Pajak Penghasilan Orang Pribadi yang Akan Bertolak ke Luar Negeri Dalam Kawasan Kerjasama Ekonomi Sub Regional ASEAN sebagaimana telah beberapa kali diubah terakhir dengan Keputusan Menteri KeuanganNomor499/KMK.03/2003tentangPerubahan Kedua atas Keputusan Menteri Keuangan Nomor 391/KMK.04/2000 tentang Pelabuhan atau Tempat Pemberangkatan ke Luar Negeri Dalam Daerah Kerjasama Eko\", \"status_peraturan\": \"dicabut\"}, {\"jenis\": \"mencabut\", \"peraturan\": \"KMK 759/KMK04/1986\", \"bukti\": \"tanpa_bukti\", \"sumber\": \"jdih\", \"berlaku_efektif\": \"2018-12-31\", \"tanggal_perkiraan\": false, \"lewat\": null, \"pasal_bukti\": null, \"pasal_terdampak\": [], \"kutipan\": \"\", \"status_peraturan\": \"tidak_diketahui\"}, {\"jenis\": \"mencabut\", \"peraturan\": \"KMK 1075/KMK04/1992\", \"bukti\": \"tanpa_bukti\", \"sumber\": \"jdih\", \"berlaku_efektif\": \"2018-12-31\", \"tanggal_perkiraan\": false, \"lewat\": null, \"pasal_bukti\": null, \"pasal_terdampak\": [], \"kutipan\": \"\", \"status_peraturan\": \"tidak_diketahui\"}, {\"jenis\": \"mencabut\", \"peraturan\": \"KMK 830/KMK04/1986\", \"bukti\": \"eksplisit\", \"sumber\": \"jdih\", \"berlaku_efektif\": \"2018-12-31\", \"tanggal_perkiraan\": false, \"lewat\": null, \"pasal_bukti\": \"Pasal 1\", \"pasal_terdampak\": [], \"kutipan\": \"k. Keputusan Menteri Keuangan Nomor 830/KMK.04/1986 tentang Pembebasan dari Pemilikan Surat Keterangan Fiskal Luar Negeri (SKFLN) bagi Warga Negara Indonesia yang Bertempat Tinggal Tetap di Luar Wilayah Republik Indonesia [...] dicabut dan dinyatakan tidak berlaku.\", \"status_peraturan\": \"dicabut\"}, {\"jenis\": \"mencabut\", \"peraturan\": \"KMK 358/KMK04/1999\", \"bukti\": \"tersirat\", \"sumber\": \"jdih\", \"berlaku_efektif\": \"2018-12-31\", \"tanggal_perkiraan\": false, \"lewat\": \"PP 45 Tahun 1996\", \"pasal_bukti\": \"Pasal 1\", \"pasal_terdampak\": [], \"kutipan\": \"aa. Keputusan Menteri Keuangan Nomor 44/KMK.04/1998 tentang Pajak Penghasilan yang Ditanggung Pemerintah atas Penghasilan Wajib Pajak Badan untuk Usaha Industri Tertentu Sesuai Peraturan Pemerintah Nomor 45 Tahun 1996 sebagaimana telah diubah dengan Keputusan Menteri Keuangan Nomor 358/KMK.04/1999 tentang Perubahan atas KMK 44/KMK.04/1998 tentang 49 www.jdih.kemenkeu.go.id - 6 - Pajak Penghasilan \", \"status_peraturan\": \"berlaku_sebagian\"}, "
+          }
+        }
+      ]
+    },
+    {
+      "id": "gu-08",
+      "kategori": "graf_status",
+      "tag": [
+        "uji_graf"
+      ],
+      "perilaku": "graf",
+      "tool_harapan": null,
+      "tool_dipanggil": [
+        "find_regulation",
+        "amendment_chain",
+        "find_legal_basis"
+      ],
+      "tool_hitung_pertama": null,
+      "tool_hitung_akhir": null,
+      "tool_benar": true,
+      "tool_benar_percobaan_pertama": true,
+      "argumen_benar": null,
+      "field_benar": 0,
+      "field_total": 0,
+      "argumen_salah": {},
+      "argumen_aktual": {},
+      "pph_harapan": null,
+      "pph_aktual": null,
+      "angka_benar": null,
+      "perilaku_benar": true,
+      "galat_tool": 0,
+      "tool_halusinasi": [],
+      "putaran": 4,
+      "detik": 16.76,
+      "jawaban": "Tidak. **PMK 83 Tahun 2009 sudah dicabut sejak 19 Desember 2018 oleh PMK 167 Tahun 2018**. Untuk perlakuan PPh atas makanan/minuman yang disediakan di tempat kerja bagi seluruh pegawai, rujukan yang tersedia adalah [PMK 66 Tahun 2023 Pasal 3, halaman PDF 5](https://jdih.kemenkeu.go.id/api/download/DCE5DAF1-D4E5-4BD1-BC4E-2C086AE33C04/2023pmkeuangan066.pdf#page=5). Ketentuan tersebut mengecualikan makanan/minuman di tempat kerja bagi seluruh pegawai dari objek PPh.\n\n**Asumsi yang dipakai**\n- Yang dimaksud “aturan makan minum yang disediakan kantor” adalah fasilitas makanan/minuman di tempat kerja yang disediakan bagi seluruh pegawai.",
+      "error": null,
+      "galat_api": [],
+      "perilaku_benar_satu_giliran": true,
+      "tool_graf": 2,
+      "klarifikasi": false,
+      "sitasi_belum_terverifikasi": [],
+      "sitasi_diperiksa": true,
+      "sitasi_audit_ablasi": [],
+      "sitasi_dikoreksi": [],
+      "status_distempel": [],
+      "angka_tanpa_sumber": [],
+      "pph_di_jawaban": null,
+      "token_masuk": 69454,
+      "token_keluar": 271,
+      "jejak": [
+        {
+          "tool": "find_regulation",
+          "argumen": {
+            "regulation": "PMK 83/PMK.03/2009"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": [
+              {
+                "peraturan": "PMK 83 Tahun 2009",
+                "judul": "Penyediaan Makanan dan Minuman Bagi Seluruh Pegawai Serta Penggantian atau Imbalan dalam Bentuk Natura dan Kenikmatan di Daerah Tertentu dan yang Berkaitan dengan Pelaksanaan Pekerjaan yang Dapat Dikurangkan Dari Penghasilan Bruto Pemberi Kerja.",
+                "teks_tersedia": true,
+                "url": "https://jdih.kemenkeu.go.id/dok/83-pmk-03-2009",
+                "berkas_pdf": "https://jdih.kemenkeu.go.id/api/download/CF43BB15-5ABE-407B-B2A6-89D88DA07946/83~PMK.03~2009Per.HTM",
+                "status": "dicabut",
+                "sejak": "2018-12-19",
+                "oleh": [
+                  "PMK 167 Tahun 2018"
+                ],
+                "pasal_gugur": [],
+                "ayat_gugur": {},
+                "pasti": true,
+                "catatan": []
+              }
+            ],
+            "sumber": [
+              "PMK 83 Tahun 2009",
+              "PMK 167 Tahun 2018"
+            ]
+          }
+        },
+        {
+          "tool": "amendment_chain",
+          "argumen": {
+            "regulation": "PMK 83 Tahun 2009"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": "PMK 83 Tahun 2009",
+            "status": "dicabut",
+            "sejak": "2018-12-19",
+            "oleh": [
+              "PMK 167 Tahun 2018"
+            ],
+            "pasal_gugur": [],
+            "ayat_gugur": {},
+            "pasti": true,
+            "catatan": [],
+            "diubah_atau_dicabut_oleh": [
+              {
+                "jenis": "mencabut",
+                "peraturan": "PMK 167 Tahun 2018",
+                "bukti": "eksplisit",
+                "sumber": "jdih+teks",
+                "berlaku_efektif": "2018-12-19",
+                "tanggal_perkiraan": false,
+                "lewat": null,
+                "pasal_bukti": "Pasal 10",
+                "pasal_terdampak": [],
+                "kutipan": "www.jdih.kemenkeu.go.id - 9 - Pasal 10 Pada saat Peraturan Menteri ini berlaku, Peraturan Menteri Keuangan Nomor 83/PMK.03/2009 tentang Penyediaan Makanan dan Minuman bagi Seluruh Pegawai serta Penggantian atau Imbalan Dalam Bentuk Natura dan Kenikmatan di Daerah Tertentu dan yang Berkaitan dengan Pelaksanaan Pekerjaan Yang Dapat Dikurangkan dari Penghasilan Bruto Pemberi Kerja, dicabut dan dinyat",
+                "status_peraturan": "dicabut"
+              }
+            ],
+            "mengubah_atau_mencabut": [
+              {
+                "jenis": "mencabut",
+                "peraturan": "KMK 466/KMK04/2000",
+                "bukti": "eksplisit",
+                "sumber": "jdih+teks",
+                "berlaku_efektif": "2009-01-01",
+                "tanggal_perkiraan": false,
+                "lewat": null,
+                "pasal_bukti": "Pasal 7",
+                "pasal_terdampak": [],
+                "kutipan": "Pasal 7 Pada saat Peraturan Menteri Keuangan ini mulai berlaku, Keputusan Menteri Keuangan Nomor 466/KMK.04/2000 tentang Penyediaan Makanan Dan Minuman Bagi Seluruh Pegawai Dan Penggantian Atau Imbalan Sehubungan Dengan Pekerjaan Atau Jasa Yang Diberikan Dalam Bentuk Natura Dan Kenikmatan Di Daerah Tertentu Serta Yang Berkaitan Dengan Pelaksanaan Pekerjaan Yang Dapat Dikurangkan Dari Penghasilan B",
+                "status_peraturan": "dicabut"
+              }
+            ],
+            "sumber": [
+              "PMK 83 Tahun 2009",
+              "PMK 167 Tahun 2018",
+              "KMK 466/KMK04/2000"
+            ]
+          }
+        },
+        {
+          "tool": "find_legal_basis",
+          "argumen": {
+            "topic": "natura"
+          },
+          "hasil": {
+            "berhasil": true,
+            "topik": "natura",
+            "judul": "Natura dan kenikmatan",
+            "rujukan": [
+              "UU HPP",
+              "PP No. 55 Tahun 2022",
+              "PMK No. 66 Tahun 2023 Pasal 3 sampai Pasal 8 dan Lampiran huruf A dan B"
+            ],
+            "ringkasan": "Natura dan kenikmatan pada dasarnya objek PPh, kecuali: makanan/minuman di tempat kerja bagi seluruh pegawai; kupon makanan s.d. Rp2.000.000 sebulan (atau s.d. nilai makanan di kantor bila lebih besar); natura yang wajib untuk pekerjaan (seragam, alat keselamatan, antar jemput); natura di daerah tertentu yang ditetapkan DJP; dan jenis dengan batasan tertentu: bingkisan hari raya keagamaan bagi seluruh pegawai (tanpa batas), bingkisan lain s.d. Rp3.000.000 setahun, peralatan kerja, layanan kesehatan akibat kerja, olahraga s.d. Rp1.500.000 setahun, tempat tinggal komunal, tempat tinggal individual s.d. Rp2.000.000 sebulan, kendaraan bagi pegawai tanpa penyertaan modal dengan rata-rata bruto s.d. Rp100.000.000 sebulan, iuran dana pensiun, dan fasilitas peribadatan. Selisih di atas batasan adalah objek PPh; batasan setahun dihitung kumulatif.\n",
+            "lokasi_dasar_hukum": [
+              {
+                "rujukan": "PP No. 55 Tahun 2022",
+                "peraturan": "PP 55 Tahun 2022",
+                "pasal": null,
+                "halaman_pdf": null,
+                "tautan": "https://jdih.kemenkeu.go.id/dok/pp-55-tahun-2022"
+              },
+              {
+                "rujukan": "PMK No. 66 Tahun 2023 Pasal 3 sampai Pasal 8 dan Lampiran huruf A dan B",
+                "peraturan": "PMK 66 Tahun 2023",
+                "pasal": "3",
+                "halaman_pdf": 5,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/DCE5DAF1-D4E5-4BD1-BC4E-2C086AE33C04/2023pmkeuangan066.pdf#page=5"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "gu-09",
+      "kategori": "graf_status",
+      "tag": [
+        "uji_graf"
+      ],
+      "perilaku": "graf",
+      "tool_harapan": null,
+      "tool_dipanggil": [
+        "find_regulation",
+        "find_regulation",
+        "amendment_chain"
+      ],
+      "tool_hitung_pertama": null,
+      "tool_hitung_akhir": null,
+      "tool_benar": true,
+      "tool_benar_percobaan_pertama": true,
+      "argumen_benar": null,
+      "field_benar": 0,
+      "field_total": 0,
+      "argumen_salah": {},
+      "argumen_aktual": {},
+      "pph_harapan": null,
+      "pph_aktual": null,
+      "angka_benar": null,
+      "perilaku_benar": true,
+      "galat_tool": 0,
+      "tool_halusinasi": [],
+      "putaran": 4,
+      "detik": 13.06,
+      "jawaban": "Tidak. **PP 149 Tahun 2000 sudah dicabut sejak 16 November 2009 oleh PP 68 Tahun 2009.** Pada tanggal sekarang, **PP 68 Tahun 2009 berstatus berlaku** dan mengatur tarif PPh Pasal 21 atas uang pesangon serta pembayaran manfaat pensiun, THT, atau JHT secara sekaligus.\n\nPP 68 Tahun 2009 **Pasal 12** menyatakan PP 149 Tahun 2000 dicabut dan dinyatakan tidak berlaku.\n\n### Asumsi yang dipakai\n- Saya memahami pertanyaan Anda merujuk pada **PP 149 Tahun 2000**, tentang pemotongan PPh Pasal 21 atas uang pesangon, tebusan pensiun, THT, atau JHT.\n\n### Peringatan\n- Tidak ada.",
+      "error": null,
+      "galat_api": [],
+      "perilaku_benar_satu_giliran": true,
+      "tool_graf": 3,
+      "klarifikasi": false,
+      "sitasi_belum_terverifikasi": [],
+      "sitasi_diperiksa": true,
+      "sitasi_audit_ablasi": [],
+      "sitasi_dikoreksi": [],
+      "status_distempel": [],
+      "angka_tanpa_sumber": [],
+      "pph_di_jawaban": null,
+      "token_masuk": 68520,
+      "token_keluar": 264,
+      "jejak": [
+        {
+          "tool": "find_regulation",
+          "argumen": {
+            "regulation": "PP 149 Tahun 2000",
+            "date": ""
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": [
+              {
+                "peraturan": "PP 149 Tahun 2000",
+                "judul": "Pemotongan Pajak Penghasilan Pasal 21 atas Penghasilan Berupa Uang Pesangon, Uang Tebusan Pensiun, dan Tunjangan Hari Tua atau Jaminan Hari Tua.",
+                "teks_tersedia": true,
+                "url": "https://jdih.kemenkeu.go.id/dok/pp-149-tahun-2000",
+                "berkas_pdf": "https://jdih.kemenkeu.go.id/api/download/7D5D29E6-032D-4974-A28D-B878D5935D87/149TAHUN2000PP.HTM",
+                "status": "dicabut",
+                "sejak": "2009-11-16",
+                "oleh": [
+                  "PP 68 Tahun 2009"
+                ],
+                "pasal_gugur": [],
+                "ayat_gugur": {},
+                "pasti": true,
+                "catatan": []
+              }
+            ],
+            "sumber": [
+              "PP 149 Tahun 2000",
+              "PP 68 Tahun 2009"
+            ]
+          }
+        },
+        {
+          "tool": "find_regulation",
+          "argumen": {
+            "regulation": "PP 68 Tahun 2009",
+            "date": ""
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": [
+              {
+                "peraturan": "PP 68 Tahun 2009",
+                "judul": "Tarif Pajak Penghasilan Pasal 21 atas Penghasilan Berupa Uang Pesangon, Uang Manfaat Pensiun, Tunjangan Hari Tua, dan Jaminan Hari Tua yang Dibayarkan Sekaligus.",
+                "teks_tersedia": true,
+                "url": "https://jdih.kemenkeu.go.id/dok/pp-68-tahun-2009",
+                "berkas_pdf": "https://jdih.kemenkeu.go.id/api/download/02154A3A-81A3-41FE-9E98-C1535CF0CD8A/68TAHUN2009PP.HTM",
+                "status": "berlaku",
+                "sejak": null,
+                "oleh": [],
+                "pasal_gugur": [],
+                "ayat_gugur": {},
+                "pasti": true,
+                "catatan": []
+              }
+            ],
+            "sumber": [
+              "PP 68 Tahun 2009"
+            ]
+          }
+        },
+        {
+          "tool": "amendment_chain",
+          "argumen": {
+            "regulation": "PP 149 Tahun 2000",
+            "date": ""
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": "PP 149 Tahun 2000",
+            "status": "dicabut",
+            "sejak": "2009-11-16",
+            "oleh": [
+              "PP 68 Tahun 2009"
+            ],
+            "pasal_gugur": [],
+            "ayat_gugur": {},
+            "pasti": true,
+            "catatan": [],
+            "diubah_atau_dicabut_oleh": [
+              {
+                "jenis": "mencabut",
+                "peraturan": "PP 68 Tahun 2009",
+                "bukti": "eksplisit",
+                "sumber": "jdih+teks",
+                "berlaku_efektif": "2009-11-16",
+                "tanggal_perkiraan": false,
+                "lewat": null,
+                "pasal_bukti": "Pasal 12",
+                "pasal_terdampak": [],
+                "kutipan": "Pasal 12 Pada saat Peraturan Pemerintah ini mulai berlaku, Peraturan Pemerintah Nomor 149 Tahun 2000 tentang Pemotongan Pajak Penghasilan Pasal 21 atas Penghasilan berupa Uang Pesangon, Uang Tebusan Pensiun, dan Tunjangan Hari Tua atau Jaminan Hari Tua (Lembaran Negara Republik Indonesia Tahun 2000 Nomor 266, Tambahan Lembaran Negara Republik Indonesia Nomor 4067), dicabut dan dinyatakan tidak ber",
+                "status_peraturan": "berlaku"
+              }
+            ],
+            "mengubah_atau_mencabut": [],
+            "sumber": [
+              "PP 149 Tahun 2000",
+              "PP 68 Tahun 2009"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "gu-10",
+      "kategori": "graf_relasi",
+      "tag": [
+        "uji_graf"
+      ],
+      "perilaku": "graf",
+      "tool_harapan": null,
+      "tool_dipanggil": [
+        "find_regulation",
+        "amendment_chain",
+        "find_regulation"
+      ],
+      "tool_hitung_pertama": null,
+      "tool_hitung_akhir": null,
+      "tool_benar": true,
+      "tool_benar_percobaan_pertama": true,
+      "argumen_benar": null,
+      "field_benar": 0,
+      "field_total": 0,
+      "argumen_salah": {},
+      "argumen_aktual": {},
+      "pph_harapan": null,
+      "pph_aktual": null,
+      "angka_benar": null,
+      "perilaku_benar": true,
+      "galat_tool": 0,
+      "tool_halusinasi": [],
+      "putaran": 4,
+      "detik": 12.52,
+      "jawaban": "KMK 112/KMK.03/2001 dicabut dan dinyatakan tidak berlaku sejak **16 November 2009**. Aturan penggantinya adalah **PMK 16 Tahun 2010**, *Tata Cara Pemotongan Pajak Penghasilan Pasal 21 atas Penghasilan Berupa Uang Pesangon, Uang Manfaat Pensiun, Tunjangan Hari Tua, dan Jaminan Hari Tua yang Dibayarkan Sekaligus*. Berdasarkan hasil penelusuran, PMK tersebut berstatus **berlaku** pada 17 November 2026. Pencabutannya disebut dalam **Pasal 12 PMK 16 Tahun 2010**.\n\n### Asumsi yang dipakai\n- Saya menafsirkan pertanyaan sebagai menanyakan aturan yang mencabut dan menggantikan KMK tersebut terkait pemotongan PPh 21 atas pesangon dan pembayaran sekaligus.",
+      "error": null,
+      "galat_api": [],
+      "perilaku_benar_satu_giliran": true,
+      "tool_graf": 3,
+      "klarifikasi": false,
+      "sitasi_belum_terverifikasi": [],
+      "sitasi_diperiksa": true,
+      "sitasi_audit_ablasi": [],
+      "sitasi_dikoreksi": [],
+      "status_distempel": [],
+      "angka_tanpa_sumber": [],
+      "pph_di_jawaban": null,
+      "token_masuk": 68608,
+      "token_keluar": 279,
+      "jejak": [
+        {
+          "tool": "find_regulation",
+          "argumen": {
+            "regulation": "KMK 112/KMK.03/2001"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": [
+              {
+                "peraturan": "KMK 112/KMK03/2001",
+                "judul": "Pemotongan Pajak Penghasilan Pasal 21 atas Penghasilan Berupa Uang Pesangon, Uang Tebusan Pensiun dan Tunjangan Hari Tua atau Jaminan Hari Tua",
+                "teks_tersedia": true,
+                "url": "https://jdih.kemenkeu.go.id/dok/112-kmk-03-2001",
+                "berkas_pdf": "https://jdih.kemenkeu.go.id/api/download/1DF8A914-CC4C-4A07-9E18-262D72233D81/112~KMK.03~2001Kep.htm",
+                "status": "dicabut",
+                "sejak": "2009-11-16",
+                "oleh": [
+                  "PMK 16 Tahun 2010"
+                ],
+                "pasal_gugur": [],
+                "ayat_gugur": {},
+                "pasti": true,
+                "catatan": []
+              }
+            ],
+            "sumber": [
+              "KMK 112/KMK03/2001",
+              "PMK 16 Tahun 2010"
+            ]
+          }
+        },
+        {
+          "tool": "amendment_chain",
+          "argumen": {
+            "regulation": "PMK 16 Tahun 2010"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": "PMK 16 Tahun 2010",
+            "status": "berlaku",
+            "sejak": null,
+            "oleh": [],
+            "pasal_gugur": [],
+            "ayat_gugur": {},
+            "pasti": true,
+            "catatan": [],
+            "diubah_atau_dicabut_oleh": [],
+            "mengubah_atau_mencabut": [
+              {
+                "jenis": "mencabut",
+                "peraturan": "KMK 112/KMK03/2001",
+                "bukti": "eksplisit",
+                "sumber": "jdih+teks",
+                "berlaku_efektif": "2009-11-16",
+                "tanggal_perkiraan": false,
+                "lewat": null,
+                "pasal_bukti": "Pasal 12",
+                "pasal_terdampak": [],
+                "kutipan": "Pasal 12 Pada saat berlakunya Peraturan Menteri Keuangan ini, Keputusan Menteri Keuangan Nomor 112/KMK.03/2001 Tentang Pemotongan Pajak Penghasilan Pasal 21 atas Penghasilan Berupa Uang Pesangon, Uang Tebusan Pensiun, dan Tunjangan Hari Tua atau Jaminan Hari Tua, dicabut dan dinyatakan tidak berlaku.",
+                "status_peraturan": "dicabut"
+              }
+            ],
+            "sumber": [
+              "PMK 16 Tahun 2010",
+              "KMK 112/KMK03/2001"
+            ]
+          }
+        },
+        {
+          "tool": "find_regulation",
+          "argumen": {
+            "regulation": "PMK 16 Tahun 2010"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": [
+              {
+                "peraturan": "PMK 16 Tahun 2010",
+                "judul": "Tata Cara Pemotongan Pajak Penghasilan Pasal 21 atas Penghasilan Berupa Uang Pesangon, Uang Manfaat Pensiun, Tunjangan Hari Tua, dan Jaminan Hari Tua yang Dibayarkan Sekaligus.",
+                "teks_tersedia": true,
+                "url": "https://jdih.kemenkeu.go.id/dok/16-pmk-03-2010",
+                "berkas_pdf": "https://jdih.kemenkeu.go.id/api/download/B9F68A8A-B321-4305-ACC0-FB8BB0E77DCC/16~PMK.03~2010Per.HTM",
+                "status": "berlaku",
+                "sejak": null,
+                "oleh": [],
+                "pasal_gugur": [],
+                "ayat_gugur": {},
+                "pasti": true,
+                "catatan": []
+              }
+            ],
+            "sumber": [
+              "PMK 16 Tahun 2010"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "gu-11",
+      "kategori": "graf_status",
+      "tag": [
+        "uji_graf"
+      ],
+      "perilaku": "graf",
+      "tool_harapan": null,
+      "tool_dipanggil": [
+        "find_regulation",
+        "amendment_chain"
+      ],
+      "tool_hitung_pertama": null,
+      "tool_hitung_akhir": null,
+      "tool_benar": true,
+      "tool_benar_percobaan_pertama": true,
+      "argumen_benar": null,
+      "field_benar": 0,
+      "field_total": 0,
+      "argumen_salah": {},
+      "argumen_aktual": {},
+      "pph_harapan": null,
+      "pph_aktual": null,
+      "angka_benar": null,
+      "perilaku_benar": true,
+      "galat_tool": 0,
+      "tool_halusinasi": [],
+      "putaran": 3,
+      "detik": 10.64,
+      "jawaban": "Ya. **PP 45 Tahun 1994 sudah dicabut sejak 1 Januari 2011 oleh PP 80 Tahun 2010**, berdasarkan Pasal 8 PP 80 Tahun 2010.\n\n### Asumsi yang dipakai\n- Saya menafsirkan pertanyaan sebagai menanyakan status peraturan saat ini.",
+      "error": null,
+      "galat_api": [],
+      "perilaku_benar_satu_giliran": true,
+      "tool_graf": 2,
+      "klarifikasi": false,
+      "sitasi_belum_terverifikasi": [],
+      "sitasi_diperiksa": true,
+      "sitasi_audit_ablasi": [],
+      "sitasi_dikoreksi": [],
+      "status_distempel": [],
+      "angka_tanpa_sumber": [],
+      "pph_di_jawaban": null,
+      "token_masuk": 51224,
+      "token_keluar": 121,
+      "jejak": [
+        {
+          "tool": "find_regulation",
+          "argumen": {
+            "regulation": "PP 45 Tahun 1994"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": [
+              {
+                "peraturan": "PP 45 Tahun 1994",
+                "judul": "Pajak Penghasilan Bagi Pejabat Negara, Pegawai Negeri Sipil, Anggota Angkatan Bersenjata Republik Indonesia, dan Para Pensiunan atas Penghasilan yang Dibebankan Kepada Keuangan Negara atau Keuangan Daerah .",
+                "teks_tersedia": true,
+                "url": "https://jdih.kemenkeu.go.id/dok/pp-45-tahun-1994",
+                "berkas_pdf": "https://jdih.kemenkeu.go.id/api/download/65965F18-2072-466D-8A8F-3C1BA228C830/45TAHUN~1994PP.HTM",
+                "status": "dicabut",
+                "sejak": "2011-01-01",
+                "oleh": [
+                  "PP 80 Tahun 2010"
+                ],
+                "pasal_gugur": [],
+                "ayat_gugur": {},
+                "pasti": true,
+                "catatan": []
+              }
+            ],
+            "sumber": [
+              "PP 45 Tahun 1994",
+              "PP 80 Tahun 2010"
+            ]
+          }
+        },
+        {
+          "tool": "amendment_chain",
+          "argumen": {
+            "regulation": "PP 45 Tahun 1994"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": "PP 45 Tahun 1994",
+            "status": "dicabut",
+            "sejak": "2011-01-01",
+            "oleh": [
+              "PP 80 Tahun 2010"
+            ],
+            "pasal_gugur": [],
+            "ayat_gugur": {},
+            "pasti": true,
+            "catatan": [],
+            "diubah_atau_dicabut_oleh": [
+              {
+                "jenis": "mencabut",
+                "peraturan": "PP 80 Tahun 2010",
+                "bukti": "eksplisit",
+                "sumber": "jdih+teks",
+                "berlaku_efektif": "2011-01-01",
+                "tanggal_perkiraan": false,
+                "lewat": null,
+                "pasal_bukti": "Pasal 8",
+                "pasal_terdampak": [],
+                "kutipan": "Pasal 8 Pada saat Peraturan Pemerintah ini mulai berlaku, Peraturan Pemerintah Nomor 45 Tahun 1994 tentang Pajak Penghasilan bagi Pejabat Negara, Pegawai Negeri Sipil, Anggota Angkatan Bersenjat.a Republik Indonesia, dan Para Pensiunan atas Penghasilan yang Dibebankan kepada Keuangan Negara atau Keuangan Daerah (Lembaran Negara Republik Indonesia Tahun 1994 Nomor 74, Tambahan Lembaran Negara Repub",
+                "status_peraturan": "berlaku_sebagian"
+              }
+            ],
+            "mengubah_atau_mencabut": [
+              {
+                "jenis": "mencabut",
+                "peraturan": "PP 40 Tahun 1985",
+                "bukti": "eksplisit",
+                "sumber": "teks",
+                "berlaku_efektif": "1994-12-26",
+                "tanggal_perkiraan": true,
+                "lewat": null,
+                "pasal_bukti": "Pasal 5",
+                "pasal_terdampak": [],
+                "kutipan": "Pasal 5 Dengan berlakunya Peraturan Pemerintah ini, maka Peraturan Pemerintah Nomor 40 Tahun 1985 tentang Tunjangan Pajak Penghasilan bagi Pejabat Negara, Pegawai Negeri Sipil, Anggota Angkatan Bersenjata Republik Indonesia, dan para Pensiunan atas Penghasilan Berupa Gaji, Honorarium, Uang Pensiun, dan Tunjangan Tunjangan Lainnya yang Dibebankan kepada Keuangan Negara, dinyatakan tidak berlaku",
+                "status_peraturan": "dicabut"
+              }
+            ],
+            "sumber": [
+              "PP 45 Tahun 1994",
+              "PP 80 Tahun 2010",
+              "PP 40 Tahun 1985"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "gu-12",
+      "kategori": "graf_status",
+      "tag": [
+        "uji_graf"
+      ],
+      "perilaku": "graf",
+      "tool_harapan": null,
+      "tool_dipanggil": [
+        "find_regulation",
+        "amendment_chain"
+      ],
+      "tool_hitung_pertama": null,
+      "tool_hitung_akhir": null,
+      "tool_benar": true,
+      "tool_benar_percobaan_pertama": true,
+      "argumen_benar": null,
+      "field_benar": 0,
+      "field_total": 0,
+      "argumen_salah": {},
+      "argumen_aktual": {},
+      "pph_harapan": null,
+      "pph_aktual": null,
+      "angka_benar": null,
+      "perilaku_benar": true,
+      "galat_tool": 0,
+      "tool_halusinasi": [],
+      "putaran": 3,
+      "detik": 13.49,
+      "jawaban": "Tidak. **PER-32/PJ/2015 sudah dicabut dan dinyatakan tidak berlaku sejak 29 September 2016** oleh **PER-16/PJ/2016**. Dasarnya adalah Pasal 28 PER-16/PJ/2016.\n\nPada tanggal saat ini, PER-16/PJ/2016 tercatat berstatus **berlaku**.",
+      "error": null,
+      "galat_api": [],
+      "perilaku_benar_satu_giliran": true,
+      "tool_graf": 2,
+      "klarifikasi": false,
+      "sitasi_belum_terverifikasi": [],
+      "sitasi_diperiksa": true,
+      "sitasi_audit_ablasi": [],
+      "sitasi_dikoreksi": [],
+      "status_distempel": [],
+      "angka_tanpa_sumber": [],
+      "pph_di_jawaban": null,
+      "token_masuk": 51229,
+      "token_keluar": 135,
+      "jejak": [
+        {
+          "tool": "find_regulation",
+          "argumen": {
+            "regulation": "PER-32/PJ/2015"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": [
+              {
+                "peraturan": "PER-32/PJ/2015",
+                "judul": "PEDOMAN TEKNIS TATA CARA PEMOTONGAN, PENYETORAN , DAN PELAPORAN PAJAK PENGHASILAN PASAL 21 DAN /ATAU PAJAK PENGHASILAN PASAL 26 SEHUBUNGAN DENGAN PEKERJAAN, JASA, DAN KEGIATAN ORANG PRIBADI",
+                "teks_tersedia": true,
+                "url": "https://www.pajak.go.id/id/peraturan/pedoman-teknis-tata-cara-pemotongan-penyetoran-dan-pelaporan-pajak-penghasilan-pasal-21-2",
+                "berkas_pdf": null,
+                "status": "dicabut",
+                "sejak": "2016-09-29",
+                "oleh": [
+                  "PER-16/PJ/2016"
+                ],
+                "pasal_gugur": [],
+                "ayat_gugur": {},
+                "pasti": true,
+                "catatan": []
+              }
+            ],
+            "sumber": [
+              "PER-32/PJ/2015",
+              "PER-16/PJ/2016"
+            ]
+          }
+        },
+        {
+          "tool": "amendment_chain",
+          "argumen": {
+            "regulation": "PER-32/PJ/2015"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": "PER-32/PJ/2015",
+            "status": "dicabut",
+            "sejak": "2016-09-29",
+            "oleh": [
+              "PER-16/PJ/2016"
+            ],
+            "pasal_gugur": [],
+            "ayat_gugur": {},
+            "pasti": true,
+            "catatan": [],
+            "diubah_atau_dicabut_oleh": [
+              {
+                "jenis": "mencabut",
+                "peraturan": "PER-16/PJ/2016",
+                "bukti": "eksplisit",
+                "sumber": "teks",
+                "berlaku_efektif": "2016-09-29",
+                "tanggal_perkiraan": false,
+                "lewat": null,
+                "pasal_bukti": "Pasal 28",
+                "pasal_terdampak": [],
+                "kutipan": "Pasal 28 Pada saat Peraturan Direktur Jenderal Pajak ini berlaku, Peraturan Direktur Jenderal Pajak Nomor PER-32/PJ/2015 tentang Pedoman Teknis Tata Cara Pemotongan, Penyetoran dan Pelaporan Pajak Penghasilan Pasal 21 dan/atau Pajak Penghasilan Pasal 26 Sehubungan dengan Pekerjaan, Jasa, dan Kegiatan Orang Pribadi dicabut dan dinyatakan tidak berlaku",
+                "status_peraturan": "berlaku"
+              }
+            ],
+            "mengubah_atau_mencabut": [
+              {
+                "jenis": "mencabut",
+                "peraturan": "PER-31/PJ/2012",
+                "bukti": "eksplisit",
+                "sumber": "teks",
+                "berlaku_efektif": "2015-08-07",
+                "tanggal_perkiraan": false,
+                "lewat": null,
+                "pasal_bukti": "Pasal 28",
+                "pasal_terdampak": [],
+                "kutipan": "Pasal 28 Pada saat berlakunya Peraturan Direktur Jenderal Pajak ini, Peraturan Direktur Jenderal Pajak Nomor PER-31/PJ/2012 tentang Pedoman Teknis Tata Cara Pemotongan, Penyetoran dan Pelaporan Pajak Penghasilan Pasal 21 dan/atau Pajak Penghasilan Pasal 26 Sehubungan dengan Pekerjaan , Jasa, dan Kegiatan Orang Pribadi dicabut dan dinyatakan tidak berlaku",
+                "status_peraturan": "dicabut"
+              }
+            ],
+            "sumber": [
+              "PER-32/PJ/2015",
+              "PER-16/PJ/2016",
+              "PER-31/PJ/2012"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "gu-13",
+      "kategori": "graf_status",
+      "tag": [
+        "uji_graf"
+      ],
+      "perilaku": "graf",
+      "tool_harapan": null,
+      "tool_dipanggil": [
+        "find_regulation",
+        "amendment_chain",
+        "find_regulation",
+        "find_regulation",
+        "get_article",
+        "search_text"
+      ],
+      "tool_hitung_pertama": null,
+      "tool_hitung_akhir": null,
+      "tool_benar": true,
+      "tool_benar_percobaan_pertama": true,
+      "argumen_benar": null,
+      "field_benar": 0,
+      "field_total": 0,
+      "argumen_salah": {},
+      "argumen_aktual": {},
+      "pph_harapan": null,
+      "pph_aktual": null,
+      "angka_benar": null,
+      "perilaku_benar": true,
+      "galat_tool": 0,
+      "tool_halusinasi": [],
+      "putaran": 7,
+      "detik": 23.59,
+      "jawaban": "Tidak. **PER-14/PJ/2013 sudah dicabut dan dinyatakan tidak berlaku**, sehingga bentuk bukti potong di dalamnya tidak lagi menjadi acuan. Ketentuan itu dicabut oleh PER-2/PJ/2024, yang kemudian juga dicabut oleh PER-11/PJ/2025. Pada tanggal 17 November 2026, PER-11/PJ/2025 berstatus **berlaku sebagian**.\n\nUntuk bentuk bukti potong PPh 21/26, rujukan yang berlaku adalah [PER-11/PJ/2025 Pasal 6, hlm. 16](https://jdih.kemenkeu.go.id/api/download/A94EDEE5-E585-4EEB-B9E7-A76F616C92FB/PER-11_PJ_2025.pdf#page=16). Pasal itu menyebut formulir BPA1, BPA2, BP21, dan BP26; bukti potong dibuat sebagai dokumen elektronik melalui modul eBupot.\n\n**Asumsi yang dipakai**\n- Saya mengartikan “bentuk bukti potong” sebagai format/formulir bukti potong PPh 21/26 yang diatur dalam PER-14/PJ/2013.\n\n**Peringatan**\n- Pasal 95 PER-11/PJ/2025 sudah dicabut oleh PER-3/PJ/2026.",
+      "error": null,
+      "galat_api": [],
+      "perilaku_benar_satu_giliran": true,
+      "tool_graf": 6,
+      "klarifikasi": false,
+      "sitasi_belum_terverifikasi": [],
+      "sitasi_diperiksa": true,
+      "sitasi_audit_ablasi": [],
+      "sitasi_dikoreksi": [],
+      "status_distempel": [],
+      "angka_tanpa_sumber": [],
+      "pph_di_jawaban": null,
+      "token_masuk": 127338,
+      "token_keluar": 520,
+      "jejak": [
+        {
+          "tool": "find_regulation",
+          "argumen": {
+            "regulation": "PER-14/PJ/2013"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": [
+              {
+                "peraturan": "PER-14/PJ/2013",
+                "judul": "BENTUK, ISI, TATA CARA PENGISIAN DAN PENYAMPAIAN SURAT PEMBERITAHUAN MASA PAJAK PENGHASILAN PASAL 21 DAN/ATAU PASAL 26 SERTA BENTUK BUKTI PEMOTONGAN PAJAK PENGHASILAN PASAL 21 DAN/ATAU PASAL 26",
+                "teks_tersedia": true,
+                "url": "https://www.pajak.go.id/id/peraturan/bentuk-isi-tata-cara-pengisian-dan-penyampaian-surat-pemberitahuan-masa-pajak-0",
+                "berkas_pdf": null,
+                "status": "dicabut",
+                "sejak": "2024-01-19",
+                "oleh": [
+                  "PER-2/PJ/2024"
+                ],
+                "pasal_gugur": [],
+                "ayat_gugur": {},
+                "pasti": false,
+                "catatan": []
+              }
+            ],
+            "sumber": [
+              "PER-14/PJ/2013",
+              "PER-2/PJ/2024"
+            ]
+          }
+        },
+        {
+          "tool": "amendment_chain",
+          "argumen": {
+            "regulation": "PER-14/PJ/2013",
+            "date": "2026-11-17"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": "PER-14/PJ/2013",
+            "status": "dicabut",
+            "sejak": "2024-01-19",
+            "oleh": [
+              "PER-2/PJ/2024"
+            ],
+            "pasal_gugur": [],
+            "ayat_gugur": {},
+            "pasti": false,
+            "catatan": [],
+            "diubah_atau_dicabut_oleh": [
+              {
+                "jenis": "mencabut",
+                "peraturan": "PER-2/PJ/2024",
+                "bukti": "eksplisit",
+                "sumber": "teks",
+                "berlaku_efektif": "2024-01-19",
+                "tanggal_perkiraan": true,
+                "lewat": null,
+                "pasal_bukti": "Pasal 13",
+                "pasal_terdampak": [],
+                "kutipan": "Pasal 13 Pada saat Peraturan Direktur Jenderal ini mulai berlaku, Peraturan Direktur Jenderal Pajak Nomor PER-14/PJ/2013 tentang Bentuk, Isi, Tata Cara Pengisian dan Penyampaian Surat Pemberitahuan Masa Pajak Penghasilan Pasal 21 dan/atau Pasal 26 serta Bentuk Bukti Pemotongan Pajak Penghasilan Pasal 21 dan/atau Pasal 26 dicabut dan dinyatakan tidak berlaku",
+                "status_peraturan": "dicabut"
+              }
+            ],
+            "mengubah_atau_mencabut": [
+              {
+                "jenis": "mencabut",
+                "peraturan": "PER-32/PJ/2009",
+                "bukti": "eksplisit",
+                "sumber": "teks",
+                "berlaku_efektif": "2014-01-01",
+                "tanggal_perkiraan": false,
+                "lewat": null,
+                "pasal_bukti": "Pasal 9",
+                "pasal_terdampak": [],
+                "kutipan": "Pasal 9 Pada saat Peraturan Direktur Jenderal Pajak ini mulai berlaku, Peraturan Direktur Jenderal Pajak Nomor PER-32/PJ/2009 tentang Bentuk Formulir Surat Pemberitahuan Masa Pajak Penghasilan Pasal 21 dan/atau Pasal 26 dan Bukti Pemotongan/Pemungutan Pajak Penghasilan Pasal 21 dan/atau Pasal 26 dicabut dan dinyatakan tidak berlaku",
+                "status_peraturan": "dicabut"
+              }
+            ],
+            "sumber": [
+              "PER-14/PJ/2013",
+              "PER-2/PJ/2024",
+              "PER-32/PJ/2009"
+            ]
+          }
+        },
+        {
+          "tool": "find_regulation",
+          "argumen": {
+            "regulation": "PER-2/PJ/2024",
+            "date": "2026-11-17"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": [
+              {
+                "peraturan": "PER-2/PJ/2024",
+                "judul": "BENTUK DAN TATA CARA PEMBUATAN BUKTI PEMOTONGAN PAJAK PENGHASILAN PASAL 21 DAN/ATAU PAJAK PENGHASILAN PASAL 26 SERTA BENTUK, ISI, TATA CARA PENGISIAN, DAN TATA CARA PENYAMPAIAN SURAT PEMBERITAHUAN MASA PAJAK PENGHASILAN PASAL 21 DAN/ATAU PAJAK PENGHASILAN PASAL 26",
+                "teks_tersedia": true,
+                "url": "https://www.pajak.go.id/id/peraturan/bentuk-dan-tata-cara-pembuatan-bukti-pemotongan-pajak-penghasilan-pasal-21-danatau-pajak",
+                "berkas_pdf": null,
+                "status": "dicabut",
+                "sejak": "2025-05-22",
+                "oleh": [
+                  "PER-11/PJ/2025"
+                ],
+                "pasal_gugur": [],
+                "ayat_gugur": {},
+                "pasti": true,
+                "catatan": []
+              }
+            ],
+            "sumber": [
+              "PER-2/PJ/2024",
+              "PER-11/PJ/2025"
+            ]
+          }
+        },
+        {
+          "tool": "find_regulation",
+          "argumen": {
+            "regulation": "PER-11/PJ/2025",
+            "date": "2026-11-17"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": [
+              {
+                "peraturan": "PER-11/PJ/2025",
+                "judul": "Ketentuan Pelaporan Pajak Penghasilan, Pajak Pertambahan Nilai, Pajak Penjualan atas Barang Mewah, dan Bea Meterai dalam rangka Pelaksanaan Sistem Inti Administrasi Perpajakan",
+                "teks_tersedia": true,
+                "url": "https://jdih.kemenkeu.go.id/dok/per-11pj2025",
+                "berkas_pdf": "https://jdih.kemenkeu.go.id/api/download/A94EDEE5-E585-4EEB-B9E7-A76F616C92FB/PER-11_PJ_2025.pdf",
+                "status": "berlaku_sebagian",
+                "sejak": "2026-03-16",
+                "oleh": [
+                  "PER-3/PJ/2026"
+                ],
+                "pasal_gugur": [
+                  "95",
+                  "112",
+                  "127",
+                  "128"
+                ],
+                "ayat_gugur": {
+                  "2": [
+                    "1"
+                  ]
+                },
+                "pasti": true,
+                "catatan": []
+              }
+            ],
+            "sumber": [
+              "PER-11/PJ/2025",
+              "PER-3/PJ/2026"
+            ]
+          }
+        },
+        {
+          "tool": "get_article",
+          "argumen": {
+            "regulation": "PER-11/PJ/2025",
+            "article": "95",
+            "date": "2026-11-17"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": "PER-11/PJ/2025",
+            "pasal": "95",
+            "label": [
+              "Pasal 95"
+            ],
+            "teks": "Pasal 95\n(1)\nSetiap Wajib Pajak wajib mengisi Surat Pemberitahuan\ndengan benar, lengkap, dan jelas, dalam bahasa Indonesia\ndengan menggunakan huruf Latin, angka Arab, satuan\nmata\nuang\nrupiah,\ndan\nmenandatangani\nserta\nmenyampaikannya ke kantor Direktorat Jenderal Pajak\n\n- 83 -\ntempat Wajib Pajak terdaftar atau dikukuhkan, atau\ntempat lain yang ditetapkan oleh Direktur Jenderal Pajak.\n(2)\nWajib\nPajak\nBadan\nyang\ndiizinkan\nuntuk\nmenyelenggarakan\npembukuan\ndengan\nmenggunakan\nbahasa Inggris dan satuan mata uang dolar Amerika\nSerikat, wajib menyampaikan Surat Pemberitahuan Pajak\nPenghasilan\nWajib\nPajak\nBadan\nbeserta\nlampirannya\ndalam bahasa Indonesia kecuali lampiran berupa laporan\nkeuangan, dan menggunakan satuan mata uang dolar\nAmerika Serikat.\nBagian Kedua\nBatas Waktu Penyampaian Surat Pemberitahuan Tahunan\nPajak Penghasilan\n",
+            "halaman_pdf": 82,
+            "tautan": "https://jdih.kemenkeu.go.id/api/download/A94EDEE5-E585-4EEB-B9E7-A76F616C92FB/PER-11_PJ_2025.pdf#page=82",
+            "status_peraturan": "berlaku_sebagian",
+            "peringatan": [
+              "Pasal 95 PER-11/PJ/2025 sudah dicabut oleh PER-3/PJ/2026"
+            ],
+            "sumber": [
+              "PER-11/PJ/2025",
+              "PER-11/PJ/2025#143"
+            ]
+          }
+        },
+        {
+          "tool": "search_text",
+          "argumen": {
+            "query": "bentuk bukti pemotongan PPh Pasal 21 dan tata cara pembuatannya",
+            "date": "2026-11-17",
+            "in_force_only": true
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "metode": "semantik Gemini",
+            "hasil": [
+              {
+                "id": "PER-11/PJ/2025#28",
+                "peraturan": "PER-11/PJ/2025",
+                "pasal": "Pasal 7 ayat (1)",
+                "halaman_pdf": 16,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/A94EDEE5-E585-4EEB-B9E7-A76F616C92FB/PER-11_PJ_2025.pdf#page=16",
+                "status_peraturan": "berlaku_sebagian",
+                "pasal_gugur": false,
+                "skor": 0.89,
+                "teks": "Pasal 7\n(1)\nBukti\nPemotongan\nPajak\nPenghasilan\nPasal\n21/26\nsebagaimana dimaksud dalam Pasal 6 ayat (1) dibuat\ndengan ketentuan:\na.\nterhadap pemotongan Pajak Penghasilan Pasal 21\natas penghasilan yang diberikan kepada pegawai\ntetap dan pensiunan yang menerima uang terkait\npensiun\nsecara\nberkala,\ndibuatkan\nBukti\nPemotongan Pajak Penghasilan Pasal 21/26 Formulir\nBPA1 - Bukti Pemotongan Pajak Penghasilan Pasal\n21\nbagi\nPegawai\nTetap\natau\nPensiunan\nyang\nMenerima Uang terkait Pensiun secara Berkala;\nb.\nterhadap pemotongan Pajak Penghasilan Pasal 21\natas penghasilan sehubungan dengan pekerjaan atau\njabatan yang diberikan kepada pegawai negeri sipil,\nanggota\nTentara\nNasional\nIndonesia,\nanggota\nKepolisian Republik Indonesia, pejabat negara, dan\npensiunannya, dibuatkan Bukti Pemotongan Pajak\nPenghasilan Pasal 21/26 Formulir BPA2 - Pajak\nPenghasilan Pasal 21 bagi Pegawai Negeri Sipil atau\nAnggota Te"
+              },
+              {
+                "id": "PER-11/PJ/2025#30",
+                "peraturan": "PER-11/PJ/2025",
+                "pasal": "Pasal 7 ayat (5)-(9)",
+                "halaman_pdf": 18,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/A94EDEE5-E585-4EEB-B9E7-A76F616C92FB/PER-11_PJ_2025.pdf#page=18",
+                "status_peraturan": "berlaku_sebagian",
+                "pasal_gugur": false,
+                "skor": 0.89,
+                "teks": "(5)\nSatu Bukti Pemotongan Pajak Penghasilan Pasal 21/26\nFormulir BP21 - Bukti Pemotongan Pajak Penghasilan\nPasal 21 yang Tidak Bersifat Final dan Pajak Penghasilan\nPasal\n21\nyang\nTidak\nBersifat\nFinal\ndan/atau\nBukti\nPemotongan Pajak Penghasilan Pasal 21/26 Formulir\nBP26 - Bukti Pemotongan Pajak Penghasilan Pasal 26 atau\nWithholding\nSlip\nArticle\n26\nIncome\nTax\nsebagaimana\ndimaksud dalam Pasal 6 ayat (1) huruf c dan huruf d\ndigunakan untuk:\na.\n1 (satu) penerima penghasilan;\nb.\n1 (satu) kode objek pajak; dan\nc.\n1 (satu) Masa Pajak.\n(6)\nBukti\nPemotongan\nPajak\nPenghasilan\nPasal\n21/26\nsebagaimana dimaksud dalam Pasal 6 ayat (1):\na.\ndibuat sesuai contoh format; dan\nb.\ndiisi sesuai petunjuk pengisian,\nsebagaimana tercantum dalam Lampiran huruf A yang\nmerupakan\nbagian\ntidak\nterpisahkan\ndari\nPeraturan\nDirektur Jenderal ini.\n(7)\nKode objek pajak sebagaimana dimaksud pada ayat (4)\nhuruf b dan ayat (5) "
+              },
+              {
+                "id": "PER-11/PJ/2025#27",
+                "peraturan": "PER-11/PJ/2025",
+                "pasal": "Pasal 6",
+                "halaman_pdf": 15,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/A94EDEE5-E585-4EEB-B9E7-A76F616C92FB/PER-11_PJ_2025.pdf#page=15",
+                "status_peraturan": "berlaku_sebagian",
+                "pasal_gugur": false,
+                "skor": 0.89,
+                "teks": "Pasal 6\n(1)\nBukti\nPemotongan\nPajak\nPenghasilan\nPasal\n21/26\nsebagaimana dimaksud dalam Pasal 4 ayat (1) huruf a\nterdiri atas: \na.\nFormulir\nBPA1\n-\nBukti\nPemotongan\nPajak\nPenghasilan\nPasal\n21\nbagi\nPegawai\nTetap\natau\nPensiunan yang Menerima Uang terkait Pensiun\nsecara Berkala; \nb.\nFormulir\nBPA2\n-\nBukti\nPemotongan\nPajak\nPenghasilan Pasal 21 bagi Pegawai Negeri Sipil atau\nAnggota Tentara Nasional Indonesia atau Anggota\nKepolisian Republik Indonesia atau Pejabat Negara\natau Pensiunannya;\nc.\nFormulir\nBP21\n-\nBukti\nPemotongan\nPajak\nPenghasilan Pasal 21 yang Tidak Bersifat Final dan\nPajak Penghasilan Pasal 21 yang Bersifat Final; dan\n\n- 16 -\nd.\nFormulir\nBP26\n-\nBukti\nPemotongan\nPajak\nPenghasilan Pasal 26 atau Withholding Slip Article 26\nIncome Tax.\n(2)\nBukti\nPemotongan\nPajak\nPenghasilan\nPasal\n21/26\nsebagaimana dimaksud pada ayat (1) berbentuk Dokumen\nElektronik\nyang\ndibuat\nmelalui\nmodul\neBupot\ndan\nd"
+              },
+              {
+                "id": "PER-16/PJ/2016#30",
+                "peraturan": "PER-16/PJ/2016",
+                "pasal": "Pasal 23",
+                "halaman_pdf": null,
+                "tautan": "https://www.pajak.go.id/id/peraturan/pedoman-teknis-tata-cara-pemotongan-penyetoran-dan-pelaporan-pajak-penghasilan-pasal-21-0",
+                "status_peraturan": "berlaku",
+                "pasal_gugur": false,
+                "skor": 0.88,
+                "teks": "Pasal 23\n\n(1) Pemotong PPh Pasal 21 dan/atau PPh Pasal 26 harus memberikan bukti pemotongan PPh Pasal 21 atas penghasilan yang diterima atau diperoleh Pegawai Tetap atau penerima pensiun berkala paling lama 1 (satu) bulan setelah tahun kalender berakhir.\n\n(2) Dalam hal Pegawai Tetap berhenti bekerja sebelum bulan Desember, bukti pemotongan PPh Pasal 21 sebagaimana dimaksud pada ayat (1) harus diberikan paling lama 1 (satu) bulan setelah yang bersangkutan berhenti bekerja.\n\n(3) Pemotong PPh Pasal 21 dan/atau PPh Pasal 26 harus memberikan bukti pemotongan PPh Pasal 21 atas pemotongan PPh Pasal 21 selain Pegawai Tetap dan penerima pensiun berkala sebagaimana dimaksud pada ayat (1), serta bukti pemotongan PPh Pasal 26 setiap kali melakukan pemotongan PPh Pasal 26.\n\n(4) Dalam hal dalam 1 (satu) bulan kalender, kepada satu penerima penghasilan dilakukan lebih dari 1 (satu) kali pembayaran peng"
+              },
+              {
+                "id": "PER-11/PJ/2025#29",
+                "peraturan": "PER-11/PJ/2025",
+                "pasal": "Pasal 7 ayat (2)-(4)",
+                "halaman_pdf": 17,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/A94EDEE5-E585-4EEB-B9E7-A76F616C92FB/PER-11_PJ_2025.pdf#page=17",
+                "status_peraturan": "berlaku_sebagian",
+                "pasal_gugur": false,
+                "skor": 0.88,
+                "teks": "(2)\nPemotong\nPajak\nPenghasilan\nPasal\n21/26\nharus\nmemberikan Bukti Pemotongan Pajak Penghasilan Pasal\n21/26\nFormulir\nBPA1\n-\nBukti\nPemotongan\nPajak\nPenghasilan Pasal 21 bagi Pegawai Tetap atau Pensiunan\nyang Menerima Uang terkait Pensiun secara Berkala\ndan/atau Bukti Pemotongan Pajak Penghasilan Pasal\n21/26\nFormulir\nBPA2\n-\nBukti\nPemotongan\nPajak\nPenghasilan Pasal 21 bagi Pegawai Negeri Sipil atau\nAnggota\nTentara\nNasional\nIndonesia\natau\nAnggota\nKepolisian Republik Indonesia atau Pejabat Negara atau\nPensiunannya sebagaimana dimaksud dalam Pasal 6 ayat\n(1) huruf a dan huruf b kepada penerima penghasilan\npaling lama 1 (satu) bulan setelah Masa Pajak terakhir\nberakhir.\n(3)\nPemotong\nPajak\nPenghasilan\nPasal\n21/26\nharus\nmemberikan Bukti Pemotongan Pajak Penghasilan Pasal\n21/26\nFormulir\nBP21\n-\nBukti\nPemotongan\nPajak\nPenghasilan Pasal 21 yang Tidak Bersifat Final dan Pajak\nPenghasilan Pasal 21 yang "
+              }
+            ],
+            "dibuang_tidak_berlaku": 26,
+            "sumber": [
+              "PER-11/PJ/2025#28",
+              "PER-11/PJ/2025#30",
+              "PER-11/PJ/2025#27",
+              "PER-16/PJ/2016#30",
+              "PER-11/PJ/2025#29",
+              "PER-11/PJ/2025",
+              "PER-16/PJ/2016"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "gu-14",
+      "kategori": "graf_relasi",
+      "tag": [
+        "uji_graf"
+      ],
+      "perilaku": "graf",
+      "tool_harapan": null,
+      "tool_dipanggil": [
+        "find_regulation",
+        "find_regulation",
+        "amendment_chain"
+      ],
+      "tool_hitung_pertama": null,
+      "tool_hitung_akhir": null,
+      "tool_benar": true,
+      "tool_benar_percobaan_pertama": true,
+      "argumen_benar": null,
+      "field_benar": 0,
+      "field_total": 0,
+      "argumen_salah": {},
+      "argumen_aktual": {},
+      "pph_harapan": null,
+      "pph_aktual": null,
+      "angka_benar": null,
+      "perilaku_benar": true,
+      "galat_tool": 0,
+      "tool_halusinasi": [],
+      "putaran": 4,
+      "detik": 16.89,
+      "jawaban": "Ya. **PMK 10 Tahun 2025 berstatus diubah** oleh **PMK 72 Tahun 2025**, dan perubahan tersebut efektif **28 Oktober 2025**. [Status per 2026-11-17 menurut graf peraturan: PMK 10 Tahun 2025 berakhir sejak 2025-12-31.] [Status per 2026-11-17 menurut graf peraturan: PMK 72 Tahun 2025 berakhir sejak 2025-12-31.] Menurut riwayat perubahan, ketentuan yang terdampak adalah Pasal 2, 3, 4A, dan 5. Pada **31 Desember 2025**, PMK 72 Tahun 2025 berstatus berlaku, sementara PMK 10 Tahun 2025 berstatus berlaku dengan perubahan.\n\n**Asumsi yang dipakai**\n- Saya menafsirkan pertanyaan sebagai menanyakan perubahan aturan PPh Pasal 21 ditanggung pemerintah untuk stimulus ekonomi tahun anggaran 2025, yaitu PMK 10 Tahun 2025.\n- Status aturan yang disampaikan merujuk pada 31 Desember 2025.",
+      "error": null,
+      "galat_api": [],
+      "perilaku_benar_satu_giliran": true,
+      "tool_graf": 3,
+      "klarifikasi": false,
+      "sitasi_belum_terverifikasi": [],
+      "sitasi_diperiksa": true,
+      "sitasi_audit_ablasi": [],
+      "sitasi_dikoreksi": [],
+      "status_distempel": [
+        "PMK 10 Tahun 2025",
+        "PMK 72 Tahun 2025"
+      ],
+      "angka_tanpa_sumber": [],
+      "pph_di_jawaban": null,
+      "token_masuk": 68564,
+      "token_keluar": 283,
+      "jejak": [
+        {
+          "tool": "find_regulation",
+          "argumen": {
+            "regulation": "PMK 10 Tahun 2025",
+            "date": "2025-12-31"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2025-12-31",
+            "peraturan": [
+              {
+                "peraturan": "PMK 10 Tahun 2025",
+                "judul": "Pajak Penghasilan Pasal 21 atas Penghasilan Tertentu yang Ditanggung Pemerintah dalam Rangka Stimulus Ekonomi Tahun Anggaran 2025",
+                "teks_tersedia": true,
+                "url": "https://jdih.kemenkeu.go.id/dok/pmk-10-tahun-2025",
+                "berkas_pdf": "https://jdih.kemenkeu.go.id/api/download/2F54E482-F912-4076-8D39-DB4694DA9253/2025pmkeuangan10.pdf",
+                "status": "berlaku_diubah",
+                "sejak": "2025-10-28",
+                "oleh": [
+                  "PMK 72 Tahun 2025"
+                ],
+                "pasal_gugur": [],
+                "ayat_gugur": {},
+                "pasti": true,
+                "catatan": []
+              }
+            ],
+            "sumber": [
+              "PMK 10 Tahun 2025",
+              "PMK 72 Tahun 2025"
+            ]
+          }
+        },
+        {
+          "tool": "find_regulation",
+          "argumen": {
+            "regulation": "PMK 72 Tahun 2025",
+            "date": "2025-12-31"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2025-12-31",
+            "peraturan": [
+              {
+                "peraturan": "PMK 72 Tahun 2025",
+                "judul": "Perubahan atas Peraturan Menteri Keuangan Nomor 10 Tahun 2025 tentang Pajak Penghasilan Pasal 21 atas Penghasilan Tertentu yang Ditanggung Pemerintah dalam rangka Stimulus Ekonomi Tahun Anggaran 2025;",
+                "teks_tersedia": true,
+                "url": "https://jdih.kemenkeu.go.id/dok/pmk-72-tahun-2025",
+                "berkas_pdf": "https://jdih.kemenkeu.go.id/api/download/26C9B53E-7ADB-4D16-8A97-86E92EA30FF3/2025pmkeuangan072.pdf",
+                "status": "berlaku",
+                "sejak": null,
+                "oleh": [],
+                "pasal_gugur": [],
+                "ayat_gugur": {},
+                "pasti": true,
+                "catatan": []
+              }
+            ],
+            "sumber": [
+              "PMK 72 Tahun 2025"
+            ]
+          }
+        },
+        {
+          "tool": "amendment_chain",
+          "argumen": {
+            "regulation": "PMK 72 Tahun 2025",
+            "date": "2025-12-31"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2025-12-31",
+            "peraturan": "PMK 72 Tahun 2025",
+            "status": "berlaku",
+            "sejak": null,
+            "oleh": [],
+            "pasal_gugur": [],
+            "ayat_gugur": {},
+            "pasti": true,
+            "catatan": [],
+            "diubah_atau_dicabut_oleh": [],
+            "mengubah_atau_mencabut": [
+              {
+                "jenis": "mengubah",
+                "peraturan": "PMK 10 Tahun 2025",
+                "bukti": "eksplisit",
+                "sumber": "jdih+teks",
+                "berlaku_efektif": "2025-10-28",
+                "tanggal_perkiraan": false,
+                "lewat": null,
+                "pasal_bukti": "Pasal 21",
+                "pasal_terdampak": [
+                  "2",
+                  "3",
+                  "4A",
+                  "5"
+                ],
+                "kutipan": "PERATURAN MENTERI KEUANGAN TENTANG PERUBAHAN ATAS PERATURAN MENTERI KEUANGAN NOMOR 10 TAHUN 2025 TENTANG PAJAK PENGHASILAN PASAL 21 ATAS PENGHASILAN TERTENTU YANG DITANGGUNG PEMERINTAH DALAM RANGKA STIMULUS EKONOMI TAHUN ANGGARAN 2025. - 3 - Pasal I Beberapa ketentuan dalam Peraturan Menteri Keuangan Nomor 10 Tahun 2025 tentang Pajak Penghasilan Pasal 21 atas Penghasilan Tertentu yang Ditanggung P",
+                "status_peraturan": "berlaku_diubah"
+              }
+            ],
+            "sumber": [
+              "PMK 72 Tahun 2025",
+              "PMK 10 Tahun 2025"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "gu-15",
+      "kategori": "graf_status",
+      "tag": [
+        "uji_graf"
+      ],
+      "perilaku": "graf",
+      "tool_harapan": null,
+      "tool_dipanggil": [
+        "find_regulation",
+        "amendment_chain"
+      ],
+      "tool_hitung_pertama": null,
+      "tool_hitung_akhir": null,
+      "tool_benar": true,
+      "tool_benar_percobaan_pertama": true,
+      "argumen_benar": null,
+      "field_benar": 0,
+      "field_total": 0,
+      "argumen_salah": {},
+      "argumen_aktual": {},
+      "pph_harapan": null,
+      "pph_aktual": null,
+      "angka_benar": null,
+      "perilaku_benar": true,
+      "galat_tool": 0,
+      "tool_halusinasi": [],
+      "putaran": 3,
+      "detik": 9.99,
+      "jawaban": "Tidak. **PMK 9 Tahun 2021** tentang insentif pajak bagi wajib pajak terdampak pandemi Covid-19 berstatus **dicabut sejak 25 Januari 2022** oleh **PMK 3 Tahun 2022**. Aturan tersebut sebelumnya juga diubah oleh PMK 82 Tahun 2021 dan PMK 149 Tahun 2021.",
+      "error": null,
+      "galat_api": [],
+      "perilaku_benar_satu_giliran": true,
+      "tool_graf": 2,
+      "klarifikasi": false,
+      "sitasi_belum_terverifikasi": [],
+      "sitasi_diperiksa": true,
+      "sitasi_audit_ablasi": [],
+      "sitasi_dikoreksi": [],
+      "status_distempel": [],
+      "angka_tanpa_sumber": [],
+      "pph_di_jawaban": null,
+      "token_masuk": 51887,
+      "token_keluar": 144,
+      "jejak": [
+        {
+          "tool": "find_regulation",
+          "argumen": {
+            "regulation": "PMK 9/PMK.03/2021"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": [
+              {
+                "peraturan": "PMK 9 Tahun 2021",
+                "judul": "Insentif Pajak untuk Wajib Pajak Terdampak Pandemi Corona Virus Disease 2019",
+                "teks_tersedia": true,
+                "url": "https://jdih.kemenkeu.go.id/dok/9-pmk-03-2021",
+                "berkas_pdf": "https://jdih.kemenkeu.go.id/api/download/60B9E432-E111-4A92-A65F-7E760BB67750/9~PMK.03~2021Per.pdf",
+                "status": "dicabut",
+                "sejak": "2022-01-25",
+                "oleh": [
+                  "PMK 3 Tahun 2022"
+                ],
+                "pasal_gugur": [],
+                "ayat_gugur": {},
+                "pasti": true,
+                "catatan": []
+              }
+            ],
+            "sumber": [
+              "PMK 9 Tahun 2021",
+              "PMK 3 Tahun 2022"
+            ]
+          }
+        },
+        {
+          "tool": "amendment_chain",
+          "argumen": {
+            "regulation": "PMK 9/PMK.03/2021"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": "PMK 9 Tahun 2021",
+            "status": "dicabut",
+            "sejak": "2022-01-25",
+            "oleh": [
+              "PMK 3 Tahun 2022"
+            ],
+            "pasal_gugur": [],
+            "ayat_gugur": {},
+            "pasti": true,
+            "catatan": [],
+            "diubah_atau_dicabut_oleh": [
+              {
+                "jenis": "mengubah",
+                "peraturan": "PMK 82 Tahun 2021",
+                "bukti": "eksplisit",
+                "sumber": "jdih+teks",
+                "berlaku_efektif": "2021-07-01",
+                "tanggal_perkiraan": false,
+                "lewat": null,
+                "pasal_bukti": "Pasal I",
+                "pasal_terdampak": [
+                  "18",
+                  "19A",
+                  "19B"
+                ],
+                "kutipan": "Pasal I Beberapa ketentuan dalam Peraturan Menteri Keuangan Nomor 9/PMK.03/2021 tentang Insentif Pajak untuk Wajib Pajak Terdampak Pandemi Corona Virus Disease 2019 (Berita Negara Republik Indonesia Tahun 2021 Nomor 83) diubah sebagai berikut:",
+                "status_peraturan": "dicabut"
+              },
+              {
+                "jenis": "mengubah",
+                "peraturan": "PMK 149 Tahun 2021",
+                "bukti": "eksplisit",
+                "sumber": "jdih+teks",
+                "berlaku_efektif": "2021-10-26",
+                "tanggal_perkiraan": false,
+                "lewat": null,
+                "pasal_bukti": "Pasal I",
+                "pasal_terdampak": [
+                  "19B",
+                  "19C"
+                ],
+                "kutipan": "Pasal I Beberapa ketentuan dalam Peraturan Menteri Keuangan Nomor 9/PMK.03/2021 tentang Insentif Pajak untuk Wajib Pajak Terdampak Pandemi Corona Virus Disease 2019 (Berita Negara Republik Indonesia Tahun 2021 Nomor 83) sebagaimana telah diubah dengan Peraturan Menteri Keuangan Nomor 82/PMK.03/2021 tentang Perubahan atas Peraturan Menteri Keuangan Nomor 9/PMK.03/2021 tentang Insentif Pajak untuk W",
+                "status_peraturan": "berlaku_sebagian"
+              },
+              {
+                "jenis": "mencabut",
+                "peraturan": "PMK 3 Tahun 2022",
+                "bukti": "eksplisit",
+                "sumber": "jdih+teks",
+                "berlaku_efektif": "2022-01-25",
+                "tanggal_perkiraan": false,
+                "lewat": null,
+                "pasal_bukti": "Pasal 16",
+                "pasal_terdampak": [],
+                "kutipan": "BAB VIII KETENTUAN PENUTUP Pasal 16 Pada saat Peraturan Menteri ini mulai berlaku, Peraturan Menteri Keuangan Nomor 9/PMK.03/2021 tentang Insentif Pajak untuk Wajib Pajak Terdampak Pandemi Corona Virus Disease 2019 (Berita Negara Republik Indonesia Tahun 2021 Nomor 83) sebagaimana telah beberapa kali diubah terakhir dengan Peraturan Menteri Keuangan Nomor 149/PMK.03/2021 tentang Perubahan Kedua at",
+                "status_peraturan": "berlaku_diubah"
+              }
+            ],
+            "mengubah_atau_mencabut": [
+              {
+                "jenis": "mencabut",
+                "peraturan": "PMK 110 Tahun 2020",
+                "bukti": "tersirat",
+                "sumber": "jdih+teks",
+                "berlaku_efektif": "2021-02-02",
+                "tanggal_perkiraan": false,
+                "lewat": "PMK 86 Tahun 2020",
+                "pasal_bukti": "Pasal 21",
+                "pasal_terdampak": [],
+                "kutipan": "BAB XI KETENTUAN PENUTUP Pasal 21 Pada saat Peraturan Menteri ini mulai berlaku, Peraturan 2 P Menteri Keuangan Nomor 86/PMK.03/2020 tentang Insentif Pajak untuk Wajib Pajak Terdampak Pandemi Corona Virus Disease 2019 (Berita Negara Republik Indonesia Tahun 2020 Nomor 781) sebagaimana telah diubah dengan Peraturan Menteri Keuangan Nomor 110/PMK.03/2020 tentang Perubahan atas Peraturan Menteri Keua",
+                "status_peraturan": "dicabut"
+              },
+              {
+                "jenis": "mencabut",
+                "peraturan": "PMK 86 Tahun 2020",
+                "bukti": "eksplisit",
+                "sumber": "jdih+teks",
+                "berlaku_efektif": "2021-02-02",
+                "tanggal_perkiraan": false,
+                "lewat": null,
+                "pasal_bukti": "Pasal 21",
+                "pasal_terdampak": [],
+                "kutipan": "BAB XI KETENTUAN PENUTUP Pasal 21 Pada saat Peraturan Menteri ini mulai berlaku, Peraturan 2 P Menteri Keuangan Nomor 86/PMK.03/2020 tentang Insentif Pajak untuk Wajib Pajak Terdampak Pandemi Corona Virus Disease 2019 (Berita Negara Republik Indonesia Tahun 2020 Nomor 781) sebagaimana telah diubah dengan Peraturan Menteri Keuangan Nomor 110/PMK.03/2020 tentang Perubahan atas Peraturan Menteri Keua",
+                "status_peraturan": "dicabut"
+              }
+            ],
+            "sumber": [
+              "PMK 9 Tahun 2021",
+              "PMK 82 Tahun 2021",
+              "PMK 149 Tahun 2021",
+              "PMK 3 Tahun 2022",
+              "PMK 110 Tahun 2020",
+              "PMK 86 Tahun 2020"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

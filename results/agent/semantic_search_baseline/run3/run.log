@@ -1,0 +1,26 @@
+[1/15] gu-01      BENAR tool=- pph=-
+[2/15] gu-02      SALAH tool=- pph=-
+[3/15] gu-03      SALAH tool=- pph=-
+[4/15] gu-04      SALAH tool=- pph=-
+[5/15] gu-05      SALAH tool=- pph=-
+[6/15] gu-06      SALAH tool=- pph=-
+[7/15] gu-07      SALAH tool=- pph=-
+[8/15] gu-08      SALAH tool=- pph=-
+[9/15] gu-09      SALAH tool=- pph=-
+[10/15] gu-10      BENAR tool=- pph=-
+[11/15] gu-11      BENAR tool=- pph=-
+[12/15] gu-12      BENAR tool=- pph=-
+[13/15] gu-13      BENAR tool=- pph=-
+[14/15] gu-14      BENAR tool=- pph=-
+[15/15] gu-15      SALAH tool=- pph=-
+
+Akurasi keseluruhan : 0.4 (maks. 1 klarifikasi)
+Akurasi satu giliran: 0.4
+Klarifikasi tak perlu: 0
+Kasus hitung yang memanggil graf: 0
+Token LLM: masuk 1671217, keluar 5009 (rata-rata keluar per kasus 333.9)
+Hitung - tool       : None (percobaan pertama None)
+Hitung - argumen    : None (per field None)
+Hitung - angka akhir: None
+Non-hitung          : {'tanya_balik': None, 'tolak': None, 'info': None}
+Laporan: hasil_evaluasi\akhir_20261117\rag_tanpa_graf\run3\20261119-211116_azure_gpt-6-luna.md

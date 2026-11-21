@@ -1,0 +1,28 @@
+[1/15] gu-01      BENAR tool=- pph=-
+[2/15] gu-02      SALAH tool=- pph=-
+[3/15] gu-03      BENAR tool=- pph=-
+[4/15] gu-04      SALAH tool=- pph=-
+ERROR neo4j.io: [#EC36]  _: <CONNECTION> error: Failed to write data to connection IPv4Address(('<neo4j-host>', 8688)) (ResolvedIPv4Address(('<ip>', 8688))): ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host')
+WARNING neo4j.session: Transaction failed and will be retried in 0.815563026817187s (Failed to write data to connection IPv4Address(('<neo4j-host>', 8688)) (ResolvedIPv4Address(('<ip>', 8688))))
+[5/15] gu-05      SALAH tool=- pph=-
+[6/15] gu-06      BENAR tool=- pph=-
+[7/15] gu-07      BENAR tool=- pph=-
+[8/15] gu-08      BENAR tool=- pph=-
+[9/15] gu-09      BENAR tool=- pph=-
+[10/15] gu-10      BENAR tool=- pph=-
+[11/15] gu-11      BENAR tool=- pph=-
+[12/15] gu-12      BENAR tool=- pph=-
+[13/15] gu-13      BENAR tool=- pph=-
+[14/15] gu-14      BENAR tool=- pph=-
+[15/15] gu-15      BENAR tool=- pph=-
+
+Akurasi keseluruhan : 0.8 (maks. 1 klarifikasi)
+Akurasi satu giliran: 0.8
+Klarifikasi tak perlu: 0
+Kasus hitung yang memanggil graf: 0
+Token LLM: masuk 1183127, keluar 4001 (rata-rata keluar per kasus 266.7)
+Hitung - tool       : None (percobaan pertama None)
+Hitung - argumen    : None (per field None)
+Hitung - angka akhir: None
+Non-hitung          : {'tanya_balik': None, 'tolak': None, 'info': None}
+Laporan: hasil_evaluasi\akhir_20261117\sitasi\run2\uji_graf\20261117-142240_azure_gpt-6-luna.md

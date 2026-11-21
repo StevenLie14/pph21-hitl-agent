@@ -1,0 +1,1035 @@
+{
+ "meta": {
+  "provider": "azure",
+  "model": "gpt-6-luna",
+  "waktu": "2026-11-17T20:50:37",
+  "ulang": 3,
+  "draf_backtest": "hasil_evaluasi/akhir_20261117/backtest_ulang/draf_backtest.json",
+  "kasus": "taxagent/taxes/pph21/data/kasus_backtest_agent_uji.yaml"
+ },
+ "kasus": [
+  {
+   "kasus": "u2009",
+   "tahun": 2009,
+   "peristiwa": [
+    "UU 36 Tahun 2008",
+    "PMK 250 Tahun 2008",
+    "PMK 254 Tahun 2008"
+   ],
+   "beku": "2008-09-23",
+   "potong_teradaptasi": "2009-01-01",
+   "sumber_patch": "manusia",
+   "kunci_ditinjau": 19,
+   "jeda_hari": 100,
+   "pph_lama": null,
+   "pph_baru": "13324000",
+   "sebagian": false
+  },
+  {
+   "kasus": "u2013",
+   "tahun": 2013,
+   "peristiwa": [
+    "PMK 162 Tahun 2012",
+    "PMK 206 Tahun 2012"
+   ],
+   "beku": "2012-10-22",
+   "potong_teradaptasi": "2012-12-18",
+   "sumber_patch": "manusia",
+   "kunci_ditinjau": 5,
+   "jeda_hari": 71,
+   "pph_lama": "13324000",
+   "pph_baru": "12055000",
+   "sebagian": false
+  },
+  {
+   "kasus": "u2015",
+   "tahun": 2015,
+   "peristiwa": [
+    "PMK 122 Tahun 2015"
+   ],
+   "beku": "2015-06-29",
+   "potong_teradaptasi": "2015-06-30",
+   "sumber_patch": "pipeline",
+   "kunci_ditinjau": 4,
+   "jeda_hari": -179,
+   "pph_lama": "12055000",
+   "pph_baru": "10300000",
+   "sebagian": false
+  },
+  {
+   "kasus": "u2016",
+   "tahun": 2016,
+   "peristiwa": [
+    "PMK 101 Tahun 2016"
+   ],
+   "beku": "2016-06-22",
+   "potong_teradaptasi": "2016-06-23",
+   "sumber_patch": "pipeline",
+   "kunci_ditinjau": 4,
+   "jeda_hari": -173,
+   "pph_lama": "10300000",
+   "pph_baru": "7600000",
+   "sebagian": false
+  },
+  {
+   "kasus": "u2022",
+   "tahun": 2022,
+   "peristiwa": [
+    "UU 7 Tahun 2021"
+   ],
+   "beku": "2021-10-29",
+   "potong_teradaptasi": "2021-10-30",
+   "sumber_patch": "manusia",
+   "kunci_ditinjau": 14,
+   "jeda_hari": 64,
+   "pph_lama": "7600000",
+   "pph_baru": "6600000",
+   "sebagian": false
+  },
+  {
+   "kasus": "u2024",
+   "tahun": 2024,
+   "peristiwa": [
+    "PP 58 Tahun 2023",
+    "PMK 168 Tahun 2023"
+   ],
+   "beku": "2023-12-27",
+   "potong_teradaptasi": "2023-12-30",
+   "sumber_patch": "manusia",
+   "kunci_ditinjau": 263,
+   "jeda_hari": 5,
+   "pph_lama": null,
+   "pph_baru": "480000",
+   "sebagian": false
+  },
+  {
+   "kasus": "u2016p",
+   "tahun": 2016,
+   "peristiwa": [
+    "PMK 101 Tahun 2016"
+   ],
+   "beku": "2016-06-22",
+   "potong_teradaptasi": "2016-06-23",
+   "sumber_patch": "pipeline",
+   "kunci_ditinjau": 4,
+   "jeda_hari": -173,
+   "pph_lama": "2430000",
+   "pph_baru": "1305000",
+   "sebagian": false
+  },
+  {
+   "kasus": "u2022p",
+   "tahun": 2022,
+   "peristiwa": [
+    "UU 7 Tahun 2021"
+   ],
+   "beku": "2021-10-29",
+   "potong_teradaptasi": "2021-10-30",
+   "sumber_patch": "manusia",
+   "kunci_ditinjau": 14,
+   "jeda_hari": 64,
+   "pph_lama": "2740000",
+   "pph_baru": "2580000",
+   "sebagian": false
+  },
+  {
+   "kasus": "u2010f",
+   "tahun": 2010,
+   "peristiwa": [
+    "PP 68 Tahun 2009"
+   ],
+   "beku": "2009-11-16",
+   "potong_teradaptasi": "2009-11-17",
+   "sumber_patch": "manusia",
+   "kunci_ditinjau": 12,
+   "jeda_hari": 46,
+   "pph_lama": null,
+   "pph_baru": "17500000",
+   "sebagian": true
+  },
+  {
+   "kasus": "u2011f",
+   "tahun": 2011,
+   "peristiwa": [
+    "PP 80 Tahun 2010"
+   ],
+   "beku": "2010-12-20",
+   "potong_teradaptasi": "2010-12-21",
+   "sumber_patch": "manusia",
+   "kunci_ditinjau": 4,
+   "jeda_hari": 12,
+   "pph_lama": null,
+   "pph_baru": "1200000",
+   "sebagian": true
+  }
+ ],
+ "run": [
+  {
+   "kasus": "u2009",
+   "fase": "sadar",
+   "ulang": 1,
+   "pertanyaan": "Teman saya bilang UU 36/2008 sudah berlaku, PTKP naik jadi Rp15.840.000 setahun dan lapisan 5% sekarang sampai Rp50 juta. Berapa PPh 21 terutang saya sepanjang 2009? Saya karyawan tetap, belum menikah dan tidak punya tanggungan, gaji Rp12.000.000 sebulan dari Januari sampai Desember, tidak ada tunjangan atau iuran pensiun, dan saya punya NPWP.",
+   "jawaban": "Saya belum dapat menghitung PPh 21 terutang Anda untuk tahun 2009: tool hitung tidak berhasil memproses tahun pajak tersebut. Jadi, saya tidak bisa memastikan nominalnya dari kalkulator ini.\n\nUntuk konteks, hasil lookup menetapkan status **TK/0** dan PTKP setahun **Rp13.200.000**, bukan Rp15.840.000. Hasil itu mencantumkan dasar hukum: **UU PPh Pasal 7 ayat (1)** dan **PMK 137 Tahun 2005**. Angka lapisan tarif yang disebut teman Anda belum dapat saya verifikasi dari hasil yang tersedia.\n\n**Asumsi yang dipakai**\n- Gaji bulanan yang disebutkan diterima tetap selama Januari–Desember.\n- Tidak ada penghasilan atau komponen lain selain yang Anda sebutkan.\n- Anda memiliki NPWP, sesuai keterangan Anda.",
+   "tool": [
+    "calculate_pph21_permanent_annual",
+    "find_legal_basis",
+    "lookup_ptkp",
+    "report_possibly_stale"
+   ],
+   "melapor": false,
+   "alasan_lapor": [],
+   "hitung": [],
+   "angka_benar": false,
+   "angka_lama": false,
+   "angka_baru": false,
+   "angka_asli_di_ubah": false,
+   "sebut_peristiwa": false,
+   "tanggapi_klaim": true,
+   "anakronis": [],
+   "putaran": 5,
+   "detik": 16.2,
+   "token_masuk": 86273,
+   "token_keluar": 638,
+   "koreksi_sitasi": [],
+   "status_distempel": [],
+   "galat": null,
+   "hasil": "tanpa_angka"
+  },
+  {
+   "kasus": "u2009",
+   "fase": "sadar",
+   "ulang": 2,
+   "pertanyaan": "Teman saya bilang UU 36/2008 sudah berlaku, PTKP naik jadi Rp15.840.000 setahun dan lapisan 5% sekarang sampai Rp50 juta. Berapa PPh 21 terutang saya sepanjang 2009? Saya karyawan tetap, belum menikah dan tidak punya tanggungan, gaji Rp12.000.000 sebulan dari Januari sampai Desember, tidak ada tunjangan atau iuran pensiun, dan saya punya NPWP.",
+   "jawaban": "Saya belum bisa menghitung PPh 21 Anda untuk tahun 2009. Tool hitung gagal karena tabel tarif untuk tahun tersebut tidak tersedia atau bermasalah, dan pencatatan permintaan pemeriksaan juga gagal karena tanggal fakta tidak valid. Karena itu, saya tidak akan menerapkan angka PTKP atau lapisan tarif dari pesan teman Anda sebagai pengganti data kalkulator.\n\n**Asumsi yang dipakai**\n- Status PTKP: TK/0, berdasarkan “belum menikah dan tidak punya tanggungan”.\n- Gaji Rp12.000.000 diterima setiap bulan dari Januari sampai Desember.\n- Tidak ada tunjangan atau iuran pensiun.\n- Anda memiliki NPWP.\n\nData kalkulator mungkin belum mencakup aturan atau tabel yang diperlukan untuk tahun 2009.",
+   "tool": [
+    "calculate_pph21_permanent_annual",
+    "report_possibly_stale"
+   ],
+   "melapor": false,
+   "alasan_lapor": [],
+   "hitung": [],
+   "angka_benar": false,
+   "angka_lama": false,
+   "angka_baru": false,
+   "angka_asli_di_ubah": false,
+   "sebut_peristiwa": false,
+   "tanggapi_klaim": false,
+   "anakronis": [],
+   "putaran": 3,
+   "detik": 8.6,
+   "token_masuk": 50678,
+   "token_keluar": 321,
+   "koreksi_sitasi": [],
+   "status_distempel": [],
+   "galat": null,
+   "hasil": "tanpa_angka"
+  },
+  {
+   "kasus": "u2009",
+   "fase": "sadar",
+   "ulang": 3,
+   "pertanyaan": "Teman saya bilang UU 36/2008 sudah berlaku, PTKP naik jadi Rp15.840.000 setahun dan lapisan 5% sekarang sampai Rp50 juta. Berapa PPh 21 terutang saya sepanjang 2009? Saya karyawan tetap, belum menikah dan tidak punya tanggungan, gaji Rp12.000.000 sebulan dari Januari sampai Desember, tidak ada tunjangan atau iuran pensiun, dan saya punya NPWP.",
+   "jawaban": "Saya belum dapat memberikan angka PPh 21 terutang untuk tahun pajak 2009. Kalkulator gagal memproses tahun tersebut, dan rujukan yang tersedia untuk tarif Pasal 17 tidak memuat dasar hukum yang bisa saya kutip.\n\nAsumsi yang dipakai\n- Status PTKP: TK/0, berdasarkan keterangan “belum menikah dan tidak punya tanggungan”.\n- Gaji Rp12.000.000 diterima setiap bulan selama Januari–Desember.\n- Tidak ada tunjangan, iuran, atau komponen penghasilan lain.\n- Anda memiliki NPWP.\n\nPeringatan: data kalkulator mungkin belum mencakup aturan yang diperlukan untuk tahun pajak 2009.",
+   "tool": [
+    "calculate_pph21_permanent_annual",
+    "find_legal_basis",
+    "report_possibly_stale"
+   ],
+   "melapor": false,
+   "alasan_lapor": [],
+   "hitung": [],
+   "angka_benar": false,
+   "angka_lama": false,
+   "angka_baru": false,
+   "angka_asli_di_ubah": false,
+   "sebut_peristiwa": false,
+   "tanggapi_klaim": false,
+   "anakronis": [],
+   "putaran": 4,
+   "detik": 11.1,
+   "token_masuk": 67705,
+   "token_keluar": 314,
+   "koreksi_sitasi": [],
+   "status_distempel": [],
+   "galat": null,
+   "hasil": "tanpa_angka"
+  },
+  {
+   "kasus": "u2013",
+   "fase": "sadar",
+   "ulang": 1,
+   "pertanyaan": "Menurut Peraturan Menteri Keuangan nomor 162 tahun 2012, PTKP wajib pajak sendiri menjadi Rp24.300.000. Tolong hitungkan PPh Pasal 21 tahunan 2013 untuk pegawai tetap lajang tanpa tanggungan dengan gaji Rp12.000.000 per bulan (12 bulan, tanpa tunjangan, tanpa iuran pensiun, ber-NPWP).",
+   "jawaban": "Data yang dihitung: PPh 21 pegawai tetap, setahun (Pasal 17); tahun pajak 2013, 12 bulan masa perolehan; status TK/0; ber-NPWP; gaji pokok Rp12.000.000 per bulan x 12 bulan; penghasilan bruto yang dihitung Rp144.000.000.\n\n**PPh Pasal 21 terutang setahun: Rp13.324.000.**\n\n| Langkah | Perhitungan | Hasil |\n|---|---:|---:|\n| Penghasilan bruto | gaji pokok Rp144.000.000 | Rp144.000.000 |\n| Biaya jabatan | min(5% x 144.000.000 = 7.200.000, batas 6.000.000) | Rp6.000.000 |\n| Penghasilan neto setahun | 144.000.000 - 6.000.000 - 0 | Rp138.000.000 |\n| PTKP TK/0 | diri Wajib Pajak Rp15.840.000 | Rp15.840.000 |\n| Penghasilan Kena Pajak | max(138.000.000 - 15.840.000, 0), dibulatkan ke bawah kelipatan 1.000 | Rp122.160.000 |\n| Lapisan 5% | 50.000.000 x 5% | Rp2.500.000 |\n| Lapisan 15% | 72.160.000 x 15% | Rp10.824.000 |\n| **PPh 21 setahun** |  | **Rp13.324.000** |\n\n### Dasar hukum\nHasil kalkulator mencantumkan UU PPh Pasal 17 ayat (1) huruf a, UU PPh Pasal 7 ayat (1), PMK 250 Tahun 2008, dan UU 36 Tahun 2008. Rujukan yang diberikan:\n- [PMK 250 Tahun 2008](https://jdih.kemenkeu.go.id/dok/250-pmk-03-2008)\n- [UU 36 Tahun 2008](https://jdih.kemenkeu.go.id/dok/uu-36-tahun-2008)\n\n### Asumsi yang dipakai\n- Nilai gaji Rp12.000.000 adalah jumlah per bulan; kalkulator mengalikannya dengan 12 bulan.\n- Tidak ada tunjangan atau komponen penghasilan lain, iuran pensiun, maupun zakat yang mengurangi penghasilan.\n\n**Catatan:** hasil kalkulator memakai PTKP TK/0 sebesar Rp15.840.000, bukan Rp24.300.000. Data kalkulator mungkin belum mencakup aturan terbaru yang Anda sebutkan; permintaan pemeriksaan atas peraturan tersebut telah dicatat.\n\nHasil ini merupakan alat bantu hitung, bukan nasihat pajak resmi. Untuk pelaporan, konfirmasikan kepada konsultan pajak atau DJP.",
+   "tool": [
+    "report_possibly_stale",
+    "calculate_pph21_permanent_annual"
+   ],
+   "melapor": true,
+   "alasan_lapor": [
+    "peraturan_tidak_dikenal"
+   ],
+   "hitung": [
+    {
+     "tahun_pajak": 2013,
+     "pph": "13324000"
+    }
+   ],
+   "angka_benar": false,
+   "angka_lama": true,
+   "angka_baru": false,
+   "angka_asli_di_ubah": false,
+   "sebut_peristiwa": false,
+   "tanggapi_klaim": true,
+   "anakronis": [],
+   "putaran": 3,
+   "detik": 15.5,
+   "token_masuk": 52007,
+   "token_keluar": 951,
+   "koreksi_sitasi": [],
+   "status_distempel": [],
+   "galat": null,
+   "hasil": "melapor_dengan_angka"
+  },
+  {
+   "kasus": "u2013",
+   "fase": "sadar",
+   "ulang": 2,
+   "pertanyaan": "Menurut Peraturan Menteri Keuangan nomor 162 tahun 2012, PTKP wajib pajak sendiri menjadi Rp24.300.000. Tolong hitungkan PPh Pasal 21 tahunan 2013 untuk pegawai tetap lajang tanpa tanggungan dengan gaji Rp12.000.000 per bulan (12 bulan, tanpa tunjangan, tanpa iuran pensiun, ber-NPWP).",
+   "jawaban": "Data yang dihitung: PPh 21 pegawai tetap, setahun (Pasal 17); tahun pajak 2013, 12 bulan masa perolehan; status TK/0; ber-NPWP; gaji pokok Rp12.000.000 per bulan x 12 bulan; penghasilan bruto yang dihitung Rp144.000.000.\n\n**PPh Pasal 21 terutang setahun: Rp13.324.000.**\n\n| Langkah | Rincian | Hasil |\n|---|---|---:|\n| Penghasilan bruto | Gaji pokok | Rp144.000.000 |\n| Biaya jabatan | Dibatasi sesuai batas pada hasil kalkulator | Rp6.000.000 |\n| Penghasilan neto setahun |  | Rp138.000.000 |\n| PTKP TK/0 |  | Rp15.840.000 |\n| Penghasilan Kena Pajak |  | Rp122.160.000 |\n| Lapisan 5% |  | Rp2.500.000 |\n| Lapisan 15% |  | Rp10.824.000 |\n| **PPh 21 setahun** |  | **Rp13.324.000** |\n\n**Dasar hukum menurut hasil kalkulator:** UU PPh Pasal 17 ayat (1) huruf a; UU PPh Pasal 7 ayat (1); PMK 250 Tahun 2008; UU 36 Tahun 2008.\n\nUntuk ketentuan PTKP, rujukan yang tersedia dari pencarian dasar hukum adalah **UU PPh Pasal 7 ayat (1)**. Saya tidak dapat memverifikasi rujukan peraturan yang disebut dalam pertanyaan melalui sumber yang tersedia di percakapan ini.\n\n**Asumsi yang dipakai**\n- Status “lajang tanpa tanggungan” dipetakan sebagai TK/0.\n- Gaji Rp12.000.000 diperlakukan sebagai jumlah per bulan selama 12 bulan.\n- Tidak ada tunjangan, iuran, penghasilan lain, atau pengurang selain yang disebutkan.\n- Diasumsikan memiliki NPWP.\n\nHasil ini merupakan alat bantu hitung, bukan nasihat pajak resmi. Untuk pelaporan, konfirmasikan kepada konsultan pajak atau DJP.",
+   "tool": [
+    "find_regulation",
+    "report_possibly_stale",
+    "calculate_pph21_permanent_annual",
+    "find_legal_basis"
+   ],
+   "melapor": true,
+   "alasan_lapor": [
+    "peraturan_tidak_dikenal"
+   ],
+   "hitung": [
+    {
+     "tahun_pajak": 2013,
+     "pph": "13324000"
+    }
+   ],
+   "angka_benar": false,
+   "angka_lama": true,
+   "angka_baru": false,
+   "angka_asli_di_ubah": false,
+   "sebut_peristiwa": false,
+   "tanggapi_klaim": false,
+   "anakronis": [],
+   "putaran": 6,
+   "detik": 25.2,
+   "token_masuk": 107267,
+   "token_keluar": 1351,
+   "koreksi_sitasi": [
+    "PMK 162 Tahun 2012 disebut tetapi tidak berasal dari hasil tool di percakapan ini"
+   ],
+   "status_distempel": [],
+   "galat": null,
+   "hasil": "melapor_dengan_angka"
+  },
+  {
+   "kasus": "u2013",
+   "fase": "sadar",
+   "ulang": 3,
+   "pertanyaan": "Menurut Peraturan Menteri Keuangan nomor 162 tahun 2012, PTKP wajib pajak sendiri menjadi Rp24.300.000. Tolong hitungkan PPh Pasal 21 tahunan 2013 untuk pegawai tetap lajang tanpa tanggungan dengan gaji Rp12.000.000 per bulan (12 bulan, tanpa tunjangan, tanpa iuran pensiun, ber-NPWP).",
+   "jawaban": "Data yang dihitung: PPh 21 pegawai tetap, setahun (Pasal 17); tahun pajak 2013, 12 bulan masa perolehan; status TK/0; ber-NPWP; gaji pokok Rp12.000.000 per bulan x 12 bulan; penghasilan bruto yang dihitung Rp144.000.000.\n\n**PPh Pasal 21 terutang setahun: Rp13.324.000.**\n\n| Langkah | Perhitungan | Nilai |\n|---|---:|---:|\n| Penghasilan bruto | Gaji pokok | Rp144.000.000 |\n| Biaya jabatan | Batas maksimum setahun | Rp6.000.000 |\n| Penghasilan neto setahun |  | Rp138.000.000 |\n| PTKP TK/0 | Diri Wajib Pajak | Rp15.840.000 |\n| Penghasilan Kena Pajak |  | Rp122.160.000 |\n| Lapisan 5% |  | Rp2.500.000 |\n| Lapisan 15% |  | Rp10.824.000 |\n| **PPh 21 setahun** |  | **Rp13.324.000** |\n\n**Dasar hukum:** UU PPh Pasal 17 ayat (1) huruf a; UU PPh Pasal 7 ayat (1); PMK 250 Tahun 2008; UU 36 Tahun 2008.\n\n**Asumsi yang dipakai**\n- Gaji Rp12.000.000 adalah jumlah per bulan selama 12 bulan.\n- Tidak ada tunjangan, iuran pensiun, atau penghasilan lain yang dimasukkan.\n\n**Disclaimer:** Hasil ini merupakan alat bantu hitung, bukan nasihat pajak resmi. Untuk pelaporan, konfirmasikan kepada konsultan pajak atau DJP.",
+   "tool": [
+    "calculate_pph21_permanent_annual"
+   ],
+   "melapor": false,
+   "alasan_lapor": [],
+   "hitung": [
+    {
+     "tahun_pajak": 2013,
+     "pph": "13324000"
+    }
+   ],
+   "angka_benar": false,
+   "angka_lama": true,
+   "angka_baru": false,
+   "angka_asli_di_ubah": false,
+   "sebut_peristiwa": false,
+   "tanggapi_klaim": false,
+   "anakronis": [],
+   "putaran": 2,
+   "detik": 9.1,
+   "token_masuk": 34835,
+   "token_keluar": 476,
+   "koreksi_sitasi": [],
+   "status_distempel": [],
+   "galat": null,
+   "hasil": "angka_lama_diam"
+  },
+  {
+   "kasus": "u2015",
+   "fase": "sadar",
+   "ulang": 1,
+   "pertanyaan": "Ada PMK 122/2015 yang katanya menaikkan PTKP menjadi Rp36 juta dan berlaku mulai Januari 2015. Saya pegawai tetap, belum kawin, tanpa tanggungan, gaji Rp12.000.000 per bulan selama 2015, tanpa tunjangan lain dan tanpa iuran pensiun, punya NPWP. PPh 21 setahunnya berapa?",
+   "jawaban": "**PPh 21 setahun terutang: Rp12.055.000.**\n\nKoreksi sitasi: PMK 122 Tahun 2015 tidak ditemukan di graf peraturan, sehingga saya tidak dapat memastikan status berlakunya atau mengutipnya sebagai dasar hukum. Perhitungan di atas menggunakan hasil kalkulator yang tersedia, bukan verifikasi atas klaim tentang PMK tersebut.\n\n**Dasar hukum yang tercantum pada hasil kalkulator:** UU PPh Pasal 17 ayat (1) huruf a; UU PPh Pasal 7 ayat (1); PMK 250 Tahun 2008; PMK 162 Tahun 2012; UU 36 Tahun 2008.\n\n**Asumsi yang dipakai**\n- Gaji Rp12.000.000 per bulan diterima selama setahun penuh.\n- Status “belum kawin, tanpa tanggungan” diperlakukan sebagai TK/0.\n- Tidak ada tunjangan, iuran, atau penghasilan lain yang dihitung.\n- Diasumsikan memiliki NPWP, sesuai keterangan Anda.\n\nHasil ini merupakan alat bantu hitung, bukan nasihat pajak resmi. Untuk pelaporan, konfirmasikan kepada konsultan pajak atau DJP.\n\nCatatan pemeriksa sitasi otomatis: sitasi berikut belum terverifikasi; periksa sumbernya sebelum dipakai.\n- PMK 122 Tahun 2015 disebut tetapi tidak berasal dari hasil tool di percakapan ini",
+   "tool": [
+    "find_regulation",
+    "report_possibly_stale",
+    "calculate_pph21_permanent_annual",
+    "find_regulation"
+   ],
+   "melapor": true,
+   "alasan_lapor": [
+    "peraturan_tidak_dikenal"
+   ],
+   "hitung": [
+    {
+     "tahun_pajak": 2015,
+     "pph": "12055000"
+    }
+   ],
+   "angka_benar": false,
+   "angka_lama": true,
+   "angka_baru": false,
+   "angka_asli_di_ubah": false,
+   "sebut_peristiwa": true,
+   "tanggapi_klaim": true,
+   "anakronis": [],
+   "putaran": 6,
+   "detik": 24.9,
+   "token_masuk": 107754,
+   "token_keluar": 1165,
+   "koreksi_sitasi": [
+    "PMK 122 Tahun 2015 disebut tetapi tidak berasal dari hasil tool di percakapan ini"
+   ],
+   "status_distempel": [],
+   "galat": null,
+   "hasil": "melapor_dengan_angka"
+  },
+  {
+   "kasus": "u2015",
+   "fase": "sadar",
+   "ulang": 2,
+   "pertanyaan": "Ada PMK 122/2015 yang katanya menaikkan PTKP menjadi Rp36 juta dan berlaku mulai Januari 2015. Saya pegawai tetap, belum kawin, tanpa tanggungan, gaji Rp12.000.000 per bulan selama 2015, tanpa tunjangan lain dan tanpa iuran pensiun, punya NPWP. PPh 21 setahunnya berapa?",
+   "jawaban": "Data yang dihitung: PPh 21 pegawai tetap, setahun (Pasal 17); tahun pajak 2015, 12 bulan masa perolehan; status TK/0; ber-NPWP; gaji pokok Rp12.000.000 per bulan x 12 bulan; penghasilan bruto yang dihitung Rp144.000.000.\n\nPPh 21 setahun terutang adalah **Rp12.055.000**.\n\n| Langkah | Perhitungan | Hasil |\n|---|---:|---:|\n| Penghasilan bruto | Gaji pokok | Rp144.000.000 |\n| Biaya jabatan | Maksimal setahun | Rp6.000.000 |\n| Penghasilan neto setahun |  | Rp138.000.000 |\n| PTKP TK/0 |  | Rp24.300.000 |\n| Penghasilan Kena Pajak |  | Rp113.700.000 |\n| Lapisan 5% |  | Rp2.500.000 |\n| Lapisan 15% |  | Rp9.555.000 |\n| **PPh 21 setahun** |  | **Rp12.055.000** |\n\n**Dasar hukum** yang dicantumkan hasil kalkulasi: [UU PPh Pasal 17 ayat (1) huruf a](https://jdih.kemenkeu.go.id/dok/uu-36-tahun-2008), [UU PPh Pasal 7 ayat (1)](https://jdih.kemenkeu.go.id/dok/uu-36-tahun-2008), [PMK 250 Tahun 2008](https://jdih.kemenkeu.go.id/dok/250-pmk-03-2008), [PMK 162 Tahun 2012](https://jdih.kemenkeu.go.id/dok/162-pmk-011-2012), dan [UU 36 Tahun 2008](https://jdih.kemenkeu.go.id/dok/uu-36-tahun-2008).\n\n### Asumsi yang dipakai\n- Nilai gaji yang diberikan adalah jumlah sebulan; kalkulator mengalikannya dengan 12 bulan.\n- Tidak ada tunjangan, iuran pensiun, atau komponen penghasilan lain selain yang disebutkan.\n- Dianggap memiliki NPWP, sesuai keterangan Anda.\n\n### Peringatan\nPMK 122/2015 yang Anda sebut tidak ditemukan dalam graf peraturan, sehingga saya belum dapat memverifikasi klaim tentang peraturan tersebut. Data kalkulator mungkin belum mencakup aturan terbaru.\n\n*Hasil ini merupakan alat bantu hitung, bukan nasihat pajak resmi. Untuk pelaporan, konfirmasikan kepada konsultan pajak atau DJP.*",
+   "tool": [
+    "calculate_pph21_permanent_annual",
+    "find_regulation",
+    "report_possibly_stale"
+   ],
+   "melapor": true,
+   "alasan_lapor": [
+    "peraturan_tidak_dikenal"
+   ],
+   "hitung": [
+    {
+     "tahun_pajak": 2015,
+     "pph": "12055000"
+    }
+   ],
+   "angka_benar": false,
+   "angka_lama": true,
+   "angka_baru": false,
+   "angka_asli_di_ubah": false,
+   "sebut_peristiwa": false,
+   "tanggapi_klaim": false,
+   "anakronis": [],
+   "putaran": 4,
+   "detik": 15.7,
+   "token_masuk": 72207,
+   "token_keluar": 946,
+   "koreksi_sitasi": [],
+   "status_distempel": [],
+   "galat": null,
+   "hasil": "melapor_dengan_angka"
+  },
+  {
+   "kasus": "u2015",
+   "fase": "sadar",
+   "ulang": 3,
+   "pertanyaan": "Ada PMK 122/2015 yang katanya menaikkan PTKP menjadi Rp36 juta dan berlaku mulai Januari 2015. Saya pegawai tetap, belum kawin, tanpa tanggungan, gaji Rp12.000.000 per bulan selama 2015, tanpa tunjangan lain dan tanpa iuran pensiun, punya NPWP. PPh 21 setahunnya berapa?",
+   "jawaban": "Data yang dihitung: PPh 21 pegawai tetap, setahun (Pasal 17); tahun pajak 2015, 12 bulan masa perolehan; status TK/0; ber-NPWP; gaji pokok Rp12.000.000 per bulan x 12 bulan; penghasilan bruto yang dihitung Rp144.000.000.\n\nPPh 21 terutang setahun adalah **Rp12.055.000**.\n\n| Langkah | Perhitungan | Hasil |\n|---|---:|---:|\n| Penghasilan bruto | Gaji pokok Rp144.000.000 | Rp144.000.000 |\n| Biaya jabatan | Sesuai batas | Rp6.000.000 |\n| Penghasilan neto setahun |  | Rp138.000.000 |\n| PTKP TK/0 |  | Rp24.300.000 |\n| Penghasilan Kena Pajak |  | Rp113.700.000 |\n| Lapisan 5% |  | Rp2.500.000 |\n| Lapisan 15% |  | Rp9.555.000 |\n| **PPh 21 setahun** |  | **Rp12.055.000** |\n\n**Dasar hukum:** UU PPh Pasal 17 ayat (1) huruf a; UU PPh Pasal 7 ayat (1); PMK 250 Tahun 2008; PMK 162 Tahun 2012; UU 36 Tahun 2008.\n\nPMK 122 Tahun 2015 tidak ditemukan dalam graf peraturan, sehingga saya tidak dapat memverifikasi klaim mengenai peraturan tersebut. Data kalkulator mungkin belum mencakup aturan terbaru.\n\n### Asumsi yang dipakai\n- Gaji Rp12.000.000 merupakan jumlah yang sama setiap bulan selama setahun penuh.\n- Tidak ada tunjangan, iuran, atau penghasilan lain.\n- “Belum kawin, tanpa tanggungan” dipetakan sebagai TK/0.\n- Penerima memiliki NPWP.\n\n**Disclaimer:** Hasil ini merupakan alat bantu hitung, bukan nasihat pajak resmi. Untuk pelaporan, konfirmasikan kepada konsultan pajak atau DJP.\n\nCatatan pemeriksa sitasi otomatis: sitasi berikut belum terverifikasi; periksa sumbernya sebelum dipakai.\n- PMK 122 Tahun 2015 disebut tetapi tidak berasal dari hasil tool di percakapan ini",
+   "tool": [
+    "calculate_pph21_permanent_annual",
+    "find_regulation",
+    "report_possibly_stale",
+    "find_regulation",
+    "report_possibly_stale"
+   ],
+   "melapor": true,
+   "alasan_lapor": [
+    "peraturan_tidak_dikenal",
+    "peraturan_tidak_dikenal"
+   ],
+   "hitung": [
+    {
+     "tahun_pajak": 2015,
+     "pph": "12055000"
+    }
+   ],
+   "angka_benar": false,
+   "angka_lama": true,
+   "angka_baru": false,
+   "angka_asli_di_ubah": false,
+   "sebut_peristiwa": true,
+   "tanggapi_klaim": true,
+   "anakronis": [],
+   "putaran": 7,
+   "detik": 31.1,
+   "token_masuk": 129269,
+   "token_keluar": 1298,
+   "koreksi_sitasi": [
+    "PMK 122 Tahun 2015 disebut tetapi tidak berasal dari hasil tool di percakapan ini"
+   ],
+   "status_distempel": [],
+   "galat": null,
+   "hasil": "melapor_dengan_angka"
+  },
+  {
+   "kasus": "u2016",
+   "fase": "sadar",
+   "ulang": 1,
+   "pertanyaan": "Di berita disebut PMK-101/PMK.010/2016 mengubah PTKP menjadi Rp54.000.000 per tahun sejak awal 2016. Hitung PPh 21 setahun untuk tahun pajak 2016: pegawai tetap belum menikah, tidak ada tanggungan, gaji Rp12.000.000 per bulan selama 12 bulan, tanpa tunjangan dan tanpa iuran pensiun, punya NPWP.",
+   "jawaban": "Data yang dihitung: PPh 21 pegawai tetap, setahun (Pasal 17); tahun pajak 2016, 12 bulan masa perolehan; status TK/0; ber-NPWP; gaji pokok Rp12.000.000 per bulan x 12 bulan; penghasilan bruto yang dihitung Rp144.000.000.\n\nPPh 21 terutang setahun adalah **Rp10.300.000**.\n\n| Langkah | Rincian |\n|---|---:|\n| Penghasilan bruto (pemberi kerja ini) | Rp144.000.000 |\n| Biaya jabatan | Rp6.000.000 |\n| Penghasilan neto setahun | Rp138.000.000 |\n| PTKP TK/0 | Rp36.000.000 |\n| Penghasilan Kena Pajak | Rp102.000.000 |\n| Lapisan 5% | Rp2.500.000 |\n| Lapisan 15% | Rp7.800.000 |\n| PPh 21 setahun (sebelum penyesuaian) | **Rp10.300.000** |\n\n**Dasar hukum dari hasil kalkulasi:** UU PPh Pasal 17 ayat (1) huruf a; UU PPh Pasal 7 ayat (1); PMK 250 Tahun 2008; PMK 122 Tahun 2015; UU 36 Tahun 2008.\n\n### Asumsi yang dipakai\n- Nilai gaji adalah jumlah sebulan selama 12 bulan.\n- Tidak ada iuran atau pengurang lain karena tidak disebutkan.\n- Penerima dianggap memiliki NPWP.\n- Status PTKP yang digunakan adalah TK/0; hasil lookup untuk tahun pajak tersebut menetapkan PTKP sebesar Rp36.000.000.\n\n### Peringatan\nGraf peraturan tidak menemukan PMK 101 Tahun 2016 yang ditanyakan, sehingga saya tidak dapat memastikan klaim berita tersebut dari rujukan yang tersedia. Permintaan pemeriksaan data sudah dicatat; data kalkulator mungkin belum mencakup aturan terbaru.\n\nHasil ini merupakan alat bantu hitung, bukan nasihat pajak resmi. Untuk pelaporan, konfirmasikan kepada konsultan pajak atau DJP.\n\nCatatan pemeriksa sitasi otomatis: sitasi berikut belum terverifikasi; periksa sumbernya sebelum dipakai.\n- PMK 101 Tahun 2016 disebut tetapi tidak berasal dari hasil tool di percakapan ini",
+   "tool": [
+    "lookup_ptkp",
+    "calculate_pph21_permanent_annual",
+    "report_possibly_stale",
+    "find_regulation",
+    "report_possibly_stale"
+   ],
+   "melapor": true,
+   "alasan_lapor": [
+    "peraturan_tidak_dikenal",
+    "peraturan_tidak_dikenal"
+   ],
+   "hitung": [
+    {
+     "tahun_pajak": 2016,
+     "pph": "10300000"
+    }
+   ],
+   "angka_benar": false,
+   "angka_lama": true,
+   "angka_baru": false,
+   "angka_asli_di_ubah": false,
+   "sebut_peristiwa": true,
+   "tanggapi_klaim": true,
+   "anakronis": [],
+   "putaran": 7,
+   "detik": 31.7,
+   "token_masuk": 129879,
+   "token_keluar": 1336,
+   "koreksi_sitasi": [
+    "PMK 101 Tahun 2016 disebut tetapi tidak berasal dari hasil tool di percakapan ini"
+   ],
+   "status_distempel": [],
+   "galat": null,
+   "hasil": "melapor_dengan_angka"
+  },
+  {
+   "kasus": "u2016",
+   "fase": "sadar",
+   "ulang": 2,
+   "pertanyaan": "Di berita disebut PMK-101/PMK.010/2016 mengubah PTKP menjadi Rp54.000.000 per tahun sejak awal 2016. Hitung PPh 21 setahun untuk tahun pajak 2016: pegawai tetap belum menikah, tidak ada tanggungan, gaji Rp12.000.000 per bulan selama 12 bulan, tanpa tunjangan dan tanpa iuran pensiun, punya NPWP.",
+   "jawaban": "**PPh 21 setahun yang dihitung adalah Rp10.300.000**, berdasarkan hasil hitung yang sudah tersedia untuk pegawai tetap berstatus TK/0, bergaji Rp12.000.000 per bulan selama 12 bulan, dan memiliki NPWP.\n\nSaya belum dapat memverifikasi rujukan yang disebut dalam pertanyaan atau memastikan status hukumnya. Karena rujukan tersebut tidak tersedia dalam hasil pemeriksaan yang ada, saya tidak mencantumkannya sebagai dasar hukum terverifikasi.\n\n**Asumsi yang dipakai**\n- Gaji yang disebut diterima dalam jumlah sama setiap bulan selama setahun.\n- Tidak ada tunjangan, iuran, zakat, atau penghasilan lain.\n- Penerima memiliki NPWP.",
+   "tool": [
+    "find_regulation",
+    "report_possibly_stale",
+    "calculate_pph21_permanent_annual",
+    "find_regulation",
+    "report_possibly_stale",
+    "find_regulation",
+    "report_possibly_stale"
+   ],
+   "melapor": true,
+   "alasan_lapor": [
+    "peraturan_tidak_dikenal",
+    "peraturan_tidak_dikenal",
+    "peraturan_tidak_dikenal"
+   ],
+   "hitung": [
+    {
+     "tahun_pajak": 2016,
+     "pph": "10300000"
+    }
+   ],
+   "angka_benar": false,
+   "angka_lama": true,
+   "angka_baru": false,
+   "angka_asli_di_ubah": false,
+   "sebut_peristiwa": false,
+   "tanggapi_klaim": false,
+   "anakronis": [],
+   "putaran": 9,
+   "detik": 34.4,
+   "token_masuk": 186435,
+   "token_keluar": 1637,
+   "koreksi_sitasi": [
+    "PMK 101 Tahun 2016 disebut tetapi tidak berasal dari hasil tool di percakapan ini"
+   ],
+   "status_distempel": [],
+   "galat": null,
+   "hasil": "melapor_dengan_angka"
+  },
+  {
+   "kasus": "u2016",
+   "fase": "sadar",
+   "ulang": 3,
+   "pertanyaan": "Di berita disebut PMK-101/PMK.010/2016 mengubah PTKP menjadi Rp54.000.000 per tahun sejak awal 2016. Hitung PPh 21 setahun untuk tahun pajak 2016: pegawai tetap belum menikah, tidak ada tanggungan, gaji Rp12.000.000 per bulan selama 12 bulan, tanpa tunjangan dan tanpa iuran pensiun, punya NPWP.",
+   "jawaban": "Data yang dihitung: PPh 21 pegawai tetap, setahun (Pasal 17); tahun pajak 2016, 12 bulan masa perolehan; status TK/0; ber-NPWP; gaji pokok Rp12.000.000 per bulan x 12 bulan; penghasilan bruto yang dihitung Rp144.000.000.\n\n**PPh 21 setahun terutang: Rp10.300.000.**\n\n| Langkah | Perhitungan | Hasil |\n|---|---:|---:|\n| Penghasilan bruto | Gaji pokok Rp144.000.000 | Rp144.000.000 |\n| Biaya jabatan | Sesuai batas tahunan | Rp6.000.000 |\n| Penghasilan neto setahun |  | Rp138.000.000 |\n| PTKP TK/0 |  | Rp36.000.000 |\n| Penghasilan Kena Pajak |  | Rp102.000.000 |\n| Lapisan 5% |  | Rp2.500.000 |\n| Lapisan 15% |  | Rp7.800.000 |\n| **PPh 21 setahun** |  | **Rp10.300.000** |\n\n**Catatan atas angka PTKP:** hasil kalkulator untuk TK/0 menggunakan PTKP Rp36.000.000, bukan Rp54.000.000 seperti yang disebut dalam pertanyaan. Karena hasil kalkulator mencantumkan dasar hukum PMK 122 Tahun 2015 untuk PTKP tahun pajak 2016, perhitungan di atas mengikuti data tersebut.\n\n**Dasar hukum:** UU PPh Pasal 17 ayat (1) huruf a; UU PPh Pasal 7 ayat (1); PMK 250 Tahun 2008; PMK 122 Tahun 2015; UU 36 Tahun 2008.\n\n### Asumsi yang dipakai\n- Nilai gaji Rp12.000.000 adalah gaji per bulan yang sama selama 12 bulan; tool mengalikannya.\n- Tidak ada tunjangan, bonus, iuran, atau komponen penghasilan lain.\n- Pegawai memiliki NPWP.\n\n*Hasil ini merupakan alat bantu hitung, bukan nasihat pajak resmi. Untuk pelaporan, konfirmasikan kepada konsultan pajak atau DJP.*",
+   "tool": [
+    "lookup_ptkp",
+    "calculate_pph21_permanent_annual"
+   ],
+   "melapor": false,
+   "alasan_lapor": [],
+   "hitung": [
+    {
+     "tahun_pajak": 2016,
+     "pph": "10300000"
+    }
+   ],
+   "angka_benar": false,
+   "angka_lama": true,
+   "angka_baru": false,
+   "angka_asli_di_ubah": false,
+   "sebut_peristiwa": false,
+   "tanggapi_klaim": true,
+   "anakronis": [],
+   "putaran": 3,
+   "detik": 19.4,
+   "token_masuk": 52737,
+   "token_keluar": 844,
+   "koreksi_sitasi": [],
+   "status_distempel": [],
+   "galat": null,
+   "hasil": "angka_lama_dengan_catatan"
+  },
+  {
+   "kasus": "u2022",
+   "fase": "sadar",
+   "ulang": 1,
+   "pertanyaan": "Setahu saya UU HPP melebarkan lapisan tarif 5% sampai Rp60 juta. PPh 21 setahun 2022 untuk karyawan tetap belum kawin tanpa tanggungan, gaji Rp12.000.000 sebulan selama setahun penuh, tanpa tunjangan, tanpa iuran pensiun, punya NPWP, berapa?",
+   "jawaban": "Data yang dihitung: PPh 21 pegawai tetap, setahun (Pasal 17); tahun pajak 2022, 12 bulan masa perolehan; status TK/0; ber-NPWP; gaji pokok Rp12.000.000 per bulan x 12 bulan; penghasilan bruto yang dihitung Rp144.000.000.\n\nPPh 21 setahun terutang adalah **Rp7.600.000**.\n\n| Langkah | Rincian | Nilai |\n|---|---|---:|\n| Penghasilan bruto | Gaji pokok setahun | Rp144.000.000 |\n| Biaya jabatan |  | Rp6.000.000 |\n| Penghasilan neto setahun |  | Rp138.000.000 |\n| PTKP TK/0 |  | Rp54.000.000 |\n| Penghasilan Kena Pajak |  | Rp84.000.000 |\n| Lapisan 5% |  | Rp2.500.000 |\n| Lapisan 15% |  | Rp5.100.000 |\n| **PPh 21 setahun** |  | **Rp7.600.000** |\n\n**Dasar hukum:** UU PPh Pasal 17 ayat (1) huruf a s.t.d.t.d UU HPP; UU PPh Pasal 7 ayat (1); PMK 250 Tahun 2008; PMK 101 Tahun 2016; UU 36 Tahun 2008.\n\n**Asumsi yang dipakai**\n- Nilai gaji yang diberikan adalah jumlah sebulan; perhitungan mencakup 12 bulan.\n- Tidak ada tunjangan, iuran pensiun, atau komponen penghasilan/pengurang lain yang belum disebutkan.\n- Penerima memiliki NPWP.\n\n**Disclaimer:** Hasil ini merupakan alat bantu hitung, bukan nasihat pajak resmi. Untuk pelaporan, konfirmasikan kepada konsultan pajak atau DJP.",
+   "tool": [
+    "calculate_pph21_permanent_annual"
+   ],
+   "melapor": false,
+   "alasan_lapor": [],
+   "hitung": [
+    {
+     "tahun_pajak": 2022,
+     "pph": "7600000"
+    }
+   ],
+   "angka_benar": false,
+   "angka_lama": true,
+   "angka_baru": false,
+   "angka_asli_di_ubah": false,
+   "sebut_peristiwa": false,
+   "tanggapi_klaim": false,
+   "anakronis": [],
+   "putaran": 2,
+   "detik": 9.9,
+   "token_masuk": 34981,
+   "token_keluar": 502,
+   "koreksi_sitasi": [],
+   "status_distempel": [],
+   "galat": null,
+   "hasil": "angka_lama_diam"
+  },
+  {
+   "kasus": "u2022",
+   "fase": "sadar",
+   "ulang": 2,
+   "pertanyaan": "Setahu saya UU HPP melebarkan lapisan tarif 5% sampai Rp60 juta. PPh 21 setahun 2022 untuk karyawan tetap belum kawin tanpa tanggungan, gaji Rp12.000.000 sebulan selama setahun penuh, tanpa tunjangan, tanpa iuran pensiun, punya NPWP, berapa?",
+   "jawaban": "Data yang dihitung: PPh 21 pegawai tetap, setahun (Pasal 17); tahun pajak 2022, 12 bulan masa perolehan; status TK/0; ber-NPWP; gaji pokok Rp12.000.000 per bulan x 12 bulan; penghasilan bruto yang dihitung Rp144.000.000.\n\nPPh 21 setahun terutang adalah **Rp7.600.000**.\n\n| Langkah | Rincian | Nilai |\n|---|---|---:|\n| Penghasilan bruto (pemberi kerja ini) | Gaji pokok | Rp144.000.000 |\n| Biaya jabatan |  | Rp6.000.000 |\n| Penghasilan neto setahun |  | Rp138.000.000 |\n| PTKP TK/0 |  | Rp54.000.000 |\n| Penghasilan Kena Pajak |  | Rp84.000.000 |\n| Lapisan 5% |  | Rp2.500.000 |\n| Lapisan 15% |  | Rp5.100.000 |\n| **PPh 21 setahun** |  | **Rp7.600.000** |\n\n**Dasar hukum:** UU PPh Pasal 17 ayat (1) huruf a s.t.d.t.d UU HPP; UU PPh Pasal 7 ayat (1); PMK 250 Tahun 2008; PMK 101 Tahun 2016; UU 36 Tahun 2008.\n\n**Asumsi yang dipakai**\n- Gaji Rp12.000.000 adalah jumlah per bulan yang sama selama 12 bulan; tidak ada tunjangan maupun iuran pensiun.\n- “Belum kawin tanpa tanggungan” dipetakan sebagai status PTKP TK/0.\n- Diasumsikan memiliki NPWP.\n\n**Disclaimer:** Hasil ini merupakan alat bantu hitung, bukan nasihat pajak resmi. Untuk pelaporan, konfirmasikan kepada konsultan pajak atau DJP.",
+   "tool": [
+    "calculate_pph21_permanent_annual"
+   ],
+   "melapor": false,
+   "alasan_lapor": [],
+   "hitung": [
+    {
+     "tahun_pajak": 2022,
+     "pph": "7600000"
+    }
+   ],
+   "angka_benar": false,
+   "angka_lama": true,
+   "angka_baru": false,
+   "angka_asli_di_ubah": false,
+   "sebut_peristiwa": false,
+   "tanggapi_klaim": false,
+   "anakronis": [],
+   "putaran": 2,
+   "detik": 15.4,
+   "token_masuk": 34988,
+   "token_keluar": 518,
+   "koreksi_sitasi": [],
+   "status_distempel": [],
+   "galat": null,
+   "hasil": "angka_lama_diam"
+  },
+  {
+   "kasus": "u2022",
+   "fase": "sadar",
+   "ulang": 3,
+   "pertanyaan": "Setahu saya UU HPP melebarkan lapisan tarif 5% sampai Rp60 juta. PPh 21 setahun 2022 untuk karyawan tetap belum kawin tanpa tanggungan, gaji Rp12.000.000 sebulan selama setahun penuh, tanpa tunjangan, tanpa iuran pensiun, punya NPWP, berapa?",
+   "jawaban": "Data yang dihitung: PPh 21 pegawai tetap, setahun (Pasal 17); tahun pajak 2022, 12 bulan masa perolehan; status TK/0; ber-NPWP; gaji pokok Rp12.000.000 per bulan x 12 bulan; penghasilan bruto yang dihitung Rp144.000.000.\n\n**PPh 21 terutang setahun adalah Rp7.600.000.**\n\n| Rincian | Hasil |\n|---|---:|\n| Penghasilan bruto | Rp144.000.000 |\n| Biaya jabatan | Rp6.000.000 |\n| Penghasilan neto setahun | Rp138.000.000 |\n| PTKP TK/0 | Rp54.000.000 |\n| Penghasilan Kena Pajak | Rp84.000.000 |\n| Lapisan 5% | Rp2.500.000 |\n| Lapisan 15% | Rp5.100.000 |\n| **PPh 21 setahun** | **Rp7.600.000** |\n\nDasar hukum dari hasil kalkulator: UU PPh Pasal 17 ayat (1) huruf a s.t.d.t.d UU HPP; UU PPh Pasal 7 ayat (1); PMK 250 Tahun 2008; PMK 101 Tahun 2016; UU 36 Tahun 2008.\n\n**Asumsi yang dipakai**\n- “Belum kawin tanpa tanggungan” dipetakan sebagai TK/0.\n- Gaji Rp12.000.000 diterima sama setiap bulan selama setahun penuh.\n- Tidak ada tunjangan, iuran pensiun/JHT/JP pegawai, atau komponen penghasilan lain.\n- Penerima memiliki NPWP.\n\n**Disclaimer:** Hasil ini merupakan alat bantu hitung, bukan nasihat pajak resmi. Untuk pelaporan, konfirmasikan kepada konsultan pajak atau DJP.",
+   "tool": [
+    "calculate_pph21_permanent_annual"
+   ],
+   "melapor": false,
+   "alasan_lapor": [],
+   "hitung": [
+    {
+     "tahun_pajak": 2022,
+     "pph": "7600000"
+    }
+   ],
+   "angka_benar": false,
+   "angka_lama": true,
+   "angka_baru": false,
+   "angka_asli_di_ubah": false,
+   "sebut_peristiwa": false,
+   "tanggapi_klaim": false,
+   "anakronis": [],
+   "putaran": 2,
+   "detik": 10.5,
+   "token_masuk": 35150,
+   "token_keluar": 662,
+   "koreksi_sitasi": [],
+   "status_distempel": [],
+   "galat": null,
+   "hasil": "angka_lama_diam"
+  },
+  {
+   "kasus": "u2024",
+   "fase": "sadar",
+   "ulang": 1,
+   "pertanyaan": "Saya dengar PP 58/2023 mengganti cara potong bulanan dengan tarif efektif rata-rata. Berapa PPh 21 yang dipotong untuk gaji Januari 2024? Pegawai tetap, belum kawin tanpa tanggungan, gaji Rp12.000.000, tidak ada tunjangan lain, punya NPWP.",
+   "jawaban": "Maaf, kalkulator mengalami galat saat menghitung, sehingga saya tidak dapat memberikan nominal potongan PPh 21 yang terverifikasi untuk data ini. Saya juga tidak memiliki rujukan hukum TER yang dapat dikutip dari hasil pencarian.\n\n**Asumsi yang dipakai**\n- Status PTKP: TK/0, berdasarkan keterangan “belum kawin tanpa tanggungan”.\n- Tidak ada iuran, premi perusahaan, zakat, natura, atau penghasilan lain selain gaji.\n- Pegawai memiliki NPWP.\n\n**Peringatan**\n- Data kalkulator mungkin belum mencakup aturan terbaru.",
+   "tool": [
+    "calculate_pph21_permanent_monthly",
+    "calculate_pph21_permanent_monthly",
+    "report_possibly_stale",
+    "find_legal_basis"
+   ],
+   "melapor": false,
+   "alasan_lapor": [],
+   "hitung": [],
+   "angka_benar": false,
+   "angka_lama": false,
+   "angka_baru": false,
+   "angka_asli_di_ubah": false,
+   "sebut_peristiwa": false,
+   "tanggapi_klaim": false,
+   "anakronis": [],
+   "putaran": 5,
+   "detik": 18.0,
+   "token_masuk": 85356,
+   "token_keluar": 541,
+   "koreksi_sitasi": [],
+   "status_distempel": [],
+   "galat": null,
+   "hasil": "tanpa_angka"
+  },
+  {
+   "kasus": "u2024",
+   "fase": "sadar",
+   "ulang": 2,
+   "pertanyaan": "Saya dengar PP 58/2023 mengganti cara potong bulanan dengan tarif efektif rata-rata. Berapa PPh 21 yang dipotong untuk gaji Januari 2024? Pegawai tetap, belum kawin tanpa tanggungan, gaji Rp12.000.000, tidak ada tunjangan lain, punya NPWP.",
+   "jawaban": "Saya belum dapat memberikan angka PPh 21 yang dapat diandalkan. Kalkulator gagal memproses kategori TER untuk tahun pajak yang diminta, dan data yang tersedia mungkin belum mencakup aturan yang berlaku untuk periode tersebut.\n\n**Asumsi yang dipakai**\n- “Gaji Januari 2024” berarti masa pajak Januari 2024.\n- “Belum kawin tanpa tanggungan” berarti status PTKP TK/0.\n- Tidak ada komponen penghasilan atau pengurang lain selain yang disebutkan.\n- Pegawai memiliki NPWP.\n\n**Peringatan:** data kalkulator mungkin belum mencakup aturan terbaru.",
+   "tool": [
+    "calculate_pph21_permanent_monthly",
+    "lookup_ptkp",
+    "calculate_pph21_permanent_monthly",
+    "lookup_ter",
+    "report_possibly_stale"
+   ],
+   "melapor": false,
+   "alasan_lapor": [],
+   "hitung": [],
+   "angka_benar": false,
+   "angka_lama": false,
+   "angka_baru": false,
+   "angka_asli_di_ubah": false,
+   "sebut_peristiwa": false,
+   "tanggapi_klaim": false,
+   "anakronis": [],
+   "putaran": 6,
+   "detik": 26.0,
+   "token_masuk": 103522,
+   "token_keluar": 455,
+   "koreksi_sitasi": [],
+   "status_distempel": [],
+   "galat": null,
+   "hasil": "tanpa_angka"
+  },
+  {
+   "kasus": "u2024",
+   "fase": "sadar",
+   "ulang": 3,
+   "pertanyaan": "Saya dengar PP 58/2023 mengganti cara potong bulanan dengan tarif efektif rata-rata. Berapa PPh 21 yang dipotong untuk gaji Januari 2024? Pegawai tetap, belum kawin tanpa tanggungan, gaji Rp12.000.000, tidak ada tunjangan lain, punya NPWP.",
+   "jawaban": "Saya belum dapat memberikan angka PPh 21 yang dapat diverifikasi: alat hitung gagal memproses Januari 2024, dan tidak menghasilkan jumlah pajak. Saya tidak akan memperkirakan angkanya.\n\nRujukan yang tersedia untuk TER tidak memuat rincian dasar hukum yang bisa saya kutip.\n\n### Asumsi yang dipakai\n- Status PTKP: TK/0, berdasarkan keterangan “belum kawin tanpa tanggungan”.\n- Tidak ada penghasilan atau potongan lain selain gaji yang disebutkan.\n- Pegawai memiliki NPWP.",
+   "tool": [
+    "calculate_pph21_permanent_monthly",
+    "calculate_pph21_permanent_monthly",
+    "report_possibly_stale",
+    "find_legal_basis"
+   ],
+   "melapor": false,
+   "alasan_lapor": [],
+   "hitung": [],
+   "angka_benar": false,
+   "angka_lama": false,
+   "angka_baru": false,
+   "angka_asli_di_ubah": false,
+   "sebut_peristiwa": false,
+   "tanggapi_klaim": false,
+   "anakronis": [],
+   "putaran": 5,
+   "detik": 14.1,
+   "token_masuk": 84829,
+   "token_keluar": 354,
+   "koreksi_sitasi": [],
+   "status_distempel": [],
+   "galat": null,
+   "hasil": "tanpa_angka"
+  },
+  {
+   "kasus": "u2016p",
+   "fase": "sadar",
+   "ulang": 1,
+   "pertanyaan": "Katanya PMK-101/PMK.010/2016 menaikkan PTKP jadi Rp54 juta setahun mulai Januari 2016. Bapak saya pensiunan, menikah dengan dua anak tanggungan, terima uang pensiun Rp8.000.000 tiap bulan sepanjang 2016, tidak ada penghasilan lain, punya NPWP. PPh 21 setahunnya berapa?",
+   "jawaban": "**Data yang dihitung:** PPh 21 pensiunan, setahun (Pasal 17); tahun pajak 2016, 12 bulan masa perolehan; status K/2; ber-NPWP; uang pensiun Rp8.000.000 per bulan x 12 bulan; penghasilan bruto yang dihitung Rp96.000.000.\n\nPPh 21 setahun terutang adalah **Rp2.430.000**.\n\n| Langkah | Rincian |\n|---|---:|\n| Penghasilan bruto | Rp96.000.000 |\n| Biaya pensiun | Rp2.400.000 |\n| Penghasilan neto setahun | Rp93.600.000 |\n| PTKP K/2 | Rp45.000.000 |\n| Penghasilan Kena Pajak | Rp48.600.000 |\n| PPh 21 setahun | **Rp2.430.000** |\n\n**Catatan soal PTKP:** perhitungan ini memakai PTKP K/2 sebesar Rp45.000.000, sesuai hasil kalkulator untuk tahun pajak 2016—bukan Rp54.000.000.\n\n**Dasar hukum:** UU PPh Pasal 17 ayat (1) huruf a; UU PPh Pasal 7 ayat (1); PMK 250 Tahun 2008; PMK 122 Tahun 2015; UU 36 Tahun 2008.\n\n### Asumsi yang dipakai\n- Nilai uang pensiun adalah jumlah sebulan; dikalikan oleh tool untuk masa perolehan 12 bulan.\n- Tidak ada penghasilan lain atau zakat/sumbangan keagamaan wajib yang dibayarkan melalui pembayar pensiun.\n- Bapak memiliki NPWP.\n\n**Peringatan:** Tidak ada.\n\n*Hasil ini merupakan alat bantu hitung, bukan nasihat pajak resmi. Untuk pelaporan, konfirmasikan kepada konsultan pajak atau DJP.*",
+   "tool": [
+    "lookup_ptkp",
+    "calculate_pph21_pensioner_annual"
+   ],
+   "melapor": false,
+   "alasan_lapor": [],
+   "hitung": [
+    {
+     "tahun_pajak": 2016,
+     "pph": "2430000"
+    }
+   ],
+   "angka_benar": false,
+   "angka_lama": true,
+   "angka_baru": false,
+   "angka_asli_di_ubah": false,
+   "sebut_peristiwa": false,
+   "tanggapi_klaim": false,
+   "anakronis": [],
+   "putaran": 3,
+   "detik": 13.6,
+   "token_masuk": 52497,
+   "token_keluar": 566,
+   "koreksi_sitasi": [],
+   "status_distempel": [],
+   "galat": null,
+   "hasil": "angka_lama_diam"
+  },
+  {
+   "kasus": "u2016p",
+   "fase": "sadar",
+   "ulang": 2,
+   "pertanyaan": "Katanya PMK-101/PMK.010/2016 menaikkan PTKP jadi Rp54 juta setahun mulai Januari 2016. Bapak saya pensiunan, menikah dengan dua anak tanggungan, terima uang pensiun Rp8.000.000 tiap bulan sepanjang 2016, tidak ada penghasilan lain, punya NPWP. PPh 21 setahunnya berapa?",
+   "jawaban": "Data yang dihitung: PPh 21 pensiunan, setahun (Pasal 17); tahun pajak 2016, 12 bulan masa perolehan; status K/2; ber-NPWP; uang pensiun Rp8.000.000 per bulan x 12 bulan; penghasilan bruto yang dihitung Rp96.000.000.\n\nPPh 21 setahun yang terutang adalah **Rp2.430.000**.\n\n| Langkah | Rincian | Nilai |\n|---|---|---:|\n| Penghasilan bruto | Uang pensiun selama setahun | Rp96.000.000 |\n| Biaya pensiun |  | Rp2.400.000 |\n| Penghasilan neto setahun |  | Rp93.600.000 |\n| PTKP K/2 |  | Rp45.000.000 |\n| Penghasilan Kena Pajak |  | Rp48.600.000 |\n| PPh 21 setahun |  | **Rp2.430.000** |\n\n**Dasar hukum:** UU PPh Pasal 17 ayat (1) huruf a; UU PPh Pasal 7 ayat (1); PMK 250 Tahun 2008; PMK 122 Tahun 2015; UU 36 Tahun 2008.\n\n**Asumsi yang dipakai**\n- Uang pensiun Rp8.000.000 diterima setiap bulan selama setahun penuh.\n- Tidak ada zakat atau sumbangan keagamaan wajib yang dibayarkan melalui pembayar pensiun.\n- Bapak memiliki NPWP, sesuai keterangan Anda.\n\n**Peringatan:** PMK 101 Tahun 2016 tidak ditemukan dalam graf peraturan. Data kalkulator mungkin belum mencakup aturan terbaru.\n\nHasil ini merupakan alat bantu hitung, bukan nasihat pajak resmi. Untuk pelaporan, konfirmasikan kepada konsultan pajak atau DJP.\n\nCatatan pemeriksa sitasi otomatis: sitasi berikut belum terverifikasi; periksa sumbernya sebelum dipakai.\n- PMK 101 Tahun 2016 disebut tetapi tidak berasal dari hasil tool di percakapan ini",
+   "tool": [
+    "lookup_ptkp",
+    "find_regulation",
+    "report_possibly_stale",
+    "calculate_pph21_pensioner_annual",
+    "find_regulation",
+    "report_possibly_stale"
+   ],
+   "melapor": true,
+   "alasan_lapor": [
+    "peraturan_tidak_dikenal",
+    "peraturan_tidak_dikenal"
+   ],
+   "hitung": [
+    {
+     "tahun_pajak": 2016,
+     "pph": "2430000"
+    }
+   ],
+   "angka_benar": false,
+   "angka_lama": true,
+   "angka_baru": false,
+   "angka_asli_di_ubah": false,
+   "sebut_peristiwa": true,
+   "tanggapi_klaim": true,
+   "anakronis": [],
+   "putaran": 8,
+   "detik": 27.4,
+   "token_masuk": 145797,
+   "token_keluar": 1203,
+   "koreksi_sitasi": [
+    "PMK 101 Tahun 2016 disebut tetapi tidak berasal dari hasil tool di percakapan ini"
+   ],
+   "status_distempel": [],
+   "galat": null,
+   "hasil": "melapor_dengan_angka"
+  },
+  {
+   "kasus": "u2016p",
+   "fase": "sadar",
+   "ulang": 3,
+   "pertanyaan": "Katanya PMK-101/PMK.010/2016 menaikkan PTKP jadi Rp54 juta setahun mulai Januari 2016. Bapak saya pensiunan, menikah dengan dua anak tanggungan, terima uang pensiun Rp8.000.000 tiap bulan sepanjang 2016, tidak ada penghasilan lain, punya NPWP. PPh 21 setahunnya berapa?",
+   "jawaban": "Data yang dihitung: PPh 21 pensiunan, setahun (Pasal 17); tahun pajak 2016, 12 bulan masa perolehan; status K/2; ber-NPWP; uang pensiun Rp8.000.000 per bulan x 12 bulan; penghasilan bruto yang dihitung Rp96.000.000.\n\n**PPh 21 setahun terutang: Rp2.430.000.**\n\n| Langkah | Rincian |\n|---|---:|\n| Penghasilan bruto | Rp96.000.000 |\n| Biaya pensiun | Rp2.400.000 |\n| Penghasilan neto setahun | Rp93.600.000 |\n| PTKP K/2 | Rp45.000.000 |\n| Penghasilan Kena Pajak | Rp48.600.000 |\n| PPh 21 setahun | Rp2.430.000 |\n\nCatatan: untuk tahun pajak 2016, hasil penghitungan ini memakai PTKP K/2 sebesar Rp45.000.000, bukan Rp54.000.000. Kalkulator mencantumkan dasar PTKP berupa PMK 122 Tahun 2015.\n\n**Dasar hukum:** UU PPh Pasal 17 ayat (1) huruf a; UU PPh Pasal 7 ayat (1); PMK 250 Tahun 2008; PMK 122 Tahun 2015; UU 36 Tahun 2008.\n\n### Asumsi yang dipakai\n- Nilai yang diisi adalah jumlah sebulan; tool mengalikannya dengan 12 bulan.\n- Zakat atau sumbangan keagamaan wajib melalui pembayar pensiun diasumsikan tidak ada.\n- Tidak ada penghasilan neto dari pemberi kerja atau pembayar pensiun lain pada tahun yang sama.\n- Pensiunan memiliki NPWP, sesuai keterangan Anda.\n\nHasil ini merupakan alat bantu hitung, bukan nasihat pajak resmi. Untuk pelaporan, konfirmasikan kepada konsultan pajak atau DJP.",
+   "tool": [
+    "lookup_ptkp",
+    "calculate_pph21_pensioner_annual"
+   ],
+   "melapor": false,
+   "alasan_lapor": [],
+   "hitung": [
+    {
+     "tahun_pajak": 2016,
+     "pph": "2430000"
+    }
+   ],
+   "angka_benar": false,
+   "angka_lama": true,
+   "angka_baru": false,
+   "angka_asli_di_ubah": false,
+   "sebut_peristiwa": false,
+   "tanggapi_klaim": false,
+   "anakronis": [],
+   "putaran": 3,
+   "detik": 66.8,
+   "token_masuk": 52510,
+   "token_keluar": 597,
+   "koreksi_sitasi": [],
+   "status_distempel": [],
+   "galat": null,
+   "hasil": "angka_lama_diam"
+  },
+  {
+   "kasus": "u2022p",
+   "fase": "sadar",
+   "ulang": 1,
+   "pertanyaan": "Saya dengar UU HPP melebarkan lapisan 5% sampai Rp60 juta. Saya pensiunan, janda tanpa tanggungan, uang pensiun Rp9.000.000 sebulan selama 2022, tanpa penghasilan lain, ada NPWP. Berapa PPh 21 terutang setahun?",
+   "jawaban": "Data yang dihitung: PPh 21 pensiunan, setahun (Pasal 17); tahun pajak 2022, 12 bulan masa perolehan; status TK/0; ber-NPWP; uang pensiun Rp9.000.000 per bulan x 12 bulan; penghasilan bruto yang dihitung Rp108.000.000.\n\nPPh 21 terutang setahun adalah **Rp2.740.000**.\n\n| Langkah | Perhitungan | Nilai |\n|---|---:|---:|\n| Penghasilan bruto | uang pensiun Rp108.000.000 | Rp108.000.000 |\n| Biaya pensiun | sesuai batas biaya pensiun | Rp2.400.000 |\n| Penghasilan neto setahun |  | Rp105.600.000 |\n| PTKP TK/0 |  | Rp54.000.000 |\n| Penghasilan Kena Pajak |  | Rp51.600.000 |\n| Lapisan 5% | Rp50.000.000 x 5% | Rp2.500.000 |\n| Lapisan 15% | Rp1.600.000 x 15% | Rp240.000 |\n| **PPh 21 setahun** |  | **Rp2.740.000** |\n\n**Dasar hukum:** UU PPh Pasal 17 ayat (1) huruf a s.t.d.t.d UU HPP; UU PPh Pasal 7 ayat (1); PMK 250 Tahun 2008; PMK 101 Tahun 2016; UU 36 Tahun 2008.\n\n### Asumsi yang dipakai\n- Nilai uang pensiun yang disampaikan adalah jumlah sebulan; tool mengalikannya dengan 12 bulan.\n- Penerima memiliki NPWP, sesuai keterangan Anda.\n- Tidak ada penghasilan lain atau zakat melalui pembayar pensiun.\n\n**Disclaimer:** Hasil ini merupakan alat bantu hitung, bukan nasihat pajak resmi. Untuk pelaporan, konfirmasikan kepada konsultan pajak atau DJP.",
+   "tool": [
+    "lookup_ptkp",
+    "calculate_pph21_pensioner_annual"
+   ],
+   "melapor": false,
+   "alasan_lapor": [],
+   "hitung": [
+    {
+     "tahun_pajak": 2022,
+     "pph": "2740000"
+    }
+   ],
+   "angka_benar": false,
+   "angka_lama": true,
+   "angka_baru": false,
+   "angka_asli_di_ubah": false,
+   "sebut_peristiwa": false,
+   "tanggapi_klaim": false,
+   "anakronis": [],
+   "putaran": 3,
+   "detik": 13.3,
+   "token_masuk": 52511,
+   "token_keluar": 601,
+   "koreksi_sitasi": [],
+   "status_distempel": [],
+   "galat": null,
+   "hasil": "angka_lama_diam"
+  },
+  {
+   "kasus": "u2022p",
+   "fase": "sadar",
+   "ulang": 2,
+   "pertanyaan": "Saya dengar UU HPP melebarkan lapisan 5% sampai Rp60 juta. Saya pensiunan, janda tanpa tanggungan, uang pensiun Rp9.000.000 sebulan selama 2022, tanpa penghasilan lain, ada NPWP. Berapa PPh 21 terutang setahun?",
+   "jawaban": "Data yang dihitung: PPh 21 pensiunan, setahun (Pasal 17); tahun pajak 2022, 12 bulan masa perolehan; status TK/0; ber-NPWP; uang pensiun Rp9.000.000 per bulan x 12 bulan; penghasilan bruto yang dihitung Rp108.000.000.\n\nPPh 21 terutang setahun adalah **Rp2.740.000**. Untuk hitungan ini, penghasilan kena pajak berada pada lapisan 5% sampai Rp50.000.000 dan lapisan 15% atas sisanya.\n\n| Langkah | Perhitungan | Nilai |\n|---|---:|---:|\n| Penghasilan bruto | Uang pensiun setahun | Rp108.000.000 |\n| Biaya pensiun | Dibatasi maksimum setahun | Rp2.400.000 |\n| Penghasilan neto setahun |  | Rp105.600.000 |\n| PTKP TK/0 |  | Rp54.000.000 |\n| Penghasilan kena pajak |  | Rp51.600.000 |\n| Pajak lapisan 5% |  | Rp2.500.000 |\n| Pajak lapisan 15% |  | Rp240.000 |\n| **PPh 21 setahun** |  | **Rp2.740.000** |\n\n**Dasar hukum:** UU PPh Pasal 17 ayat (1) huruf a s.t.d.t.d UU HPP; UU PPh Pasal 7 ayat (1); PMK 250 Tahun 2008; PMK 101 Tahun 2016; UU 36 Tahun 2008.\n\n### Asumsi yang dipakai\n- “Janda tanpa tanggungan” diperlakukan sebagai status **TK/0**.\n- Rp9.000.000 adalah uang pensiun bulanan yang sama selama 12 bulan.\n- Tidak ada penghasilan lain, zakat melalui pembayar pensiun, atau penghasilan neto dari pembayar lain.\n- Penerima memiliki NPWP.\n\n**Peringatan:** Tidak ada.\n\n*Hasil ini merupakan alat bantu hitung, bukan nasihat pajak resmi. Untuk pelaporan, konfirmasikan kepada konsultan pajak atau DJP.*",
+   "tool": [
+    "calculate_pph21_pensioner_annual"
+   ],
+   "melapor": false,
+   "alasan_lapor": [],
+   "hitung": [
+    {
+     "tahun_pajak": 2022,
+     "pph": "2740000"
+    }
+   ],
+   "angka_benar": false,
+   "angka_lama": true,
+   "angka_baru": false,
+   "angka_asli_di_ubah": false,
+   "sebut_peristiwa": false,
+   "tanggapi_klaim": false,
+   "anakronis": [],
+   "putaran": 2,
+   "detik": 9.8,
+   "token_masuk": 35002,
+   "token_keluar": 600,
+   "koreksi_sitasi": [],
+   "status_distempel": [],
+   "galat": null,
+   "hasil": "angka_lama_diam"
+  },
+  {
+   "kasus": "u2022p",
+   "fase": "sadar",
+   "ulang": 3,
+   "pertanyaan": "Saya dengar UU HPP melebarkan lapisan 5% sampai Rp60 juta. Saya pensiunan, janda tanpa tanggungan, uang pensiun Rp9.000.000 sebulan selama 2022, tanpa penghasilan lain, ada NPWP. Berapa PPh 21 terutang setahun?",
+   "jawaban": "Data yang dihitung: PPh 21 pensiunan, setahun (Pasal 17); tahun pajak 2022, 12 bulan masa perolehan; status TK/0; ber-NPWP; uang pensiun Rp9.000.000 per bulan x 12 bulan; penghasilan bruto yang dihitung Rp108.000.000.\n\nPPh Pasal 21 terutang setahun adalah **Rp2.740.000**.\n\n| Rincian | Nilai |\n|---|---:|\n| Penghasilan bruto | Rp108.000.000 |\n| Biaya pensiun | Rp2.400.000 |\n| Penghasilan neto setahun | Rp105.600.000 |\n| PTKP TK/0 | Rp54.000.000 |\n| Penghasilan Kena Pajak | Rp51.600.000 |\n| PPh lapisan 5% | Rp2.500.000 |\n| PPh lapisan 15% | Rp240.000 |\n| **PPh 21 setahun** | **Rp2.740.000** |\n\nLapisan tarif 5% sampai Rp60 juta yang Anda dengar tidak berlaku untuk penghitungan tahun pajak 2022 dalam hasil ini: PPh dihitung dengan lapisan 5% atas Rp50 juta pertama dan lapisan berikutnya 15%.\n\n**Dasar hukum:** UU PPh Pasal 17 ayat (1) huruf a s.t.d.t.d UU HPP; UU PPh Pasal 7 ayat (1); PMK 250 Tahun 2008; PMK 101 Tahun 2016; UU 36 Tahun 2008.\n\n### Asumsi yang dipakai\n- Rp9.000.000 adalah uang pensiun yang sama setiap bulan selama 12 bulan.\n- Tidak ada penghasilan lain atau zakat melalui pembayar pensiun.\n- Memiliki NPWP.\n- Status “janda tanpa tanggungan” dipetakan menjadi TK/0.\n- Nilai bulanan dikalikan oleh kalkulator untuk menghitung setahun.\n\n**Peringatan:** tidak ada.\n\n*Hasil ini merupakan alat bantu hitung, bukan nasihat pajak resmi. Untuk pelaporan, konfirmasikan kepada konsultan pajak atau DJP.*",
+   "tool": [
+    "lookup_ptkp",
+    "calculate_pph21_pensioner_annual"
+   ],
+   "melapor": false,
+   "alasan_lapor": [],
+   "hitung": [
+    {
+     "tahun_pajak": 2022,
+     "pph": "2740000"
+    }
+   ],
+   "angka_benar": false,
+   "angka_lama": true,
+   "angka_baru": false,
+   "angka_asli_di_ubah": false,
+   "sebut_peristiwa": false,
+   "tanggapi_klaim": false,
+   "anakronis": [],
+   "putaran": 3,
+   "detik": 16.0,
+   "token_masuk": 52500,
+   "token_keluar": 628,
+   "koreksi_sitasi": [],
+   "status_distempel": [],
+   "galat": null,
+   "hasil": "angka_lama_diam"
+  }
+ ],
+ "ringkasan": {
+  "sadar": {
+   "n": 24,
+   "hasil": {
+    "tanpa_angka": 6,
+    "melapor_dengan_angka": 8,
+    "angka_lama_diam": 9,
+    "angka_lama_dengan_catatan": 1
+   },
+   "melapor": 8,
+   "sebut_peristiwa": 4,
+   "anakronis": 0,
+   "detik_median": 16.0,
+   "putaran_median": 4
+  }
+ },
+ "ringkasan_sebagian": {},
+ "token": {
+  "masuk": 1846689,
+  "keluar": 18504,
+  "keluar_per_run": 771.0
+ },
+ "tabel": "label"
+}

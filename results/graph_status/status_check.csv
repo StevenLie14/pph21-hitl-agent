@@ -1,0 +1,62 @@
+regulation,source_set,graph_status,graph_changed_by,status_from_text,graph_correct
+KEP-158/PJ/2020,monitor:pajakgoid:prosedural,berlaku,,berlaku,yes
+KMK 564 Tahun 2004,backtest:peristiwa,dicabut,PMK 137 Tahun 2005,dicabut,yes
+PER-11/PJ/2025,monitor:kurasi:prosedural,berlaku_sebagian,PER-3/PJ/2026,berlaku_sebagian,yes
+PER-16/PJ/2016,monitor:pajakgoid:dasar,berlaku,,berlaku,yes
+PER-17/PJ/2021,monitor:pajakgoid:prosedural,dicabut,PER-11/PJ/2025,dicabut,yes
+PER-2/PJ/2024,monitor:kurasi:prosedural,dicabut,PER-11/PJ/2025,dicabut,yes
+PER-23/PJ/2025,monitor:pajakgoid:dasar,berlaku,,berlaku,yes
+PER-31/PJ/2009,backtest:tanpa_perubahan,dicabut,PER-31/PJ/2012,dicabut,yes
+PER-31/PJ/2012,backtest:tanpa_perubahan,dicabut,PER-32/PJ/2015,dicabut,yes
+PER-32/PJ/2015,backtest:tanpa_perubahan,dicabut,PER-16/PJ/2016,dicabut,yes
+PER-5/PJ/2024,monitor:pajakgoid:prosedural,dicabut,PER-11/PJ/2025,dicabut,yes
+PER-7/PJ/2023,monitor:pajakgoid:prosedural,berlaku,,berlaku,yes
+PMK 10 Tahun 2005,backtest:peristiwa,dicabut,PMK 138 Tahun 2005,dicabut,yes
+PMK 10 Tahun 2025,monitor:kurasi:fasilitas,berakhir,,berakhir,yes
+PMK 101 Tahun 2016,monitor:kurasi:dasar,berlaku,,berlaku,yes
+PMK 102 Tahun 2016,monitor:pajakgoid:dasar,dicabut,PMK 168 Tahun 2023,dicabut,yes
+PMK 105 Tahun 2025,monitor:kurasi:fasilitas,berlaku,,berlaku,yes
+PMK 110 Tahun 2020,monitor:pajakgoid:fasilitas,dicabut,PMK 9 Tahun 2021,dicabut,yes
+PMK 114 Tahun 2025,monitor:pajakgoid:dasar,berlaku,,berlaku,yes
+PMK 122 Tahun 2015,monitor:kurasi:dasar,dicabut,PMK 101 Tahun 2016,dicabut,yes
+PMK 137 Tahun 2005,backtest:peristiwa,dicabut,PMK 213 Tahun 2018,dicabut,yes
+PMK 138 Tahun 2005,backtest:peristiwa,dicabut,PMK 254 Tahun 2008,dicabut,yes
+PMK 143 Tahun 2020,monitor:pajakgoid:fasilitas,dicabut,PMK 239 Tahun 2020,dicabut,yes
+PMK 149 Tahun 2021,monitor:pajakgoid:fasilitas,berlaku_sebagian,PMK 3 Tahun 2022,dicabut,no
+PMK 152 Tahun 2015,backtest:peristiwa,dicabut,PMK 102 Tahun 2016,dicabut,yes
+PMK 16 Tahun 2010,backtest:tanpa_perubahan,berlaku,,berlaku,yes
+PMK 162 Tahun 2012,backtest:peristiwa,dicabut,PMK 122 Tahun 2015,dicabut,yes
+PMK 167 Tahun 2018,monitor:pajakgoid:dasar,dicabut,PMK 66 Tahun 2023,dicabut,yes
+PMK 168 Tahun 2023,monitor:kurasi:dasar,berlaku,,berlaku,yes
+PMK 206 Tahun 2012,backtest:peristiwa,dicabut,PMK 152 Tahun 2015,dicabut,yes
+PMK 23 Tahun 2020,monitor:pajakgoid:fasilitas,dicabut,PMK 44 Tahun 2020,dicabut,yes
+PMK 239 Tahun 2020,monitor:pajakgoid:fasilitas,dicabut,PMK 226 Tahun 2021,dicabut,yes
+PMK 250 Tahun 2008,monitor:kurasi:dasar,dicabut,PMK 168 Tahun 2023,dicabut,yes
+PMK 252 Tahun 2008,monitor:kurasi:dasar,dicabut,PMK 168 Tahun 2023,dicabut,yes
+PMK 254 Tahun 2008,backtest:peristiwa,dicabut,PMK 206 Tahun 2012,dicabut,yes
+PMK 262 Tahun 2010,backtest:tanpa_perubahan,berlaku_sebagian,PMK 168 Tahun 2023,berlaku_sebagian,yes
+PMK 28 Tahun 2020,monitor:pajakgoid:fasilitas,dicabut,PMK 143 Tahun 2020,dicabut,yes
+PMK 28 Tahun 2024,monitor:pajakgoid:fasilitas,berlaku,,berlaku,yes
+PMK 3 Tahun 2022,monitor:pajakgoid:fasilitas,berlaku_diubah,PMK 114 Tahun 2022,berlaku_diubah,yes
+PMK 40 Tahun 2017,monitor:pajakgoid:dasar,berlaku,,berlaku,yes
+PMK 44 Tahun 2020,monitor:pajakgoid:fasilitas,dicabut,PMK 86 Tahun 2020,dicabut,yes
+PMK 66 Tahun 2023,monitor:kurasi:dasar,berlaku,,berlaku,yes
+PMK 68 Tahun 2020,monitor:pajakgoid:dasar,berlaku,,berlaku,yes
+PMK 72 Tahun 2025,monitor:kurasi:fasilitas,berakhir,,berakhir,yes
+PMK 81 Tahun 2024,monitor:pajakgoid:prosedural,berlaku_diubah,PMK 11 Tahun 2025; PMK 54 Tahun 2025; PMK 53 Tahun 2025; PMK 1 Tahun 2026,berlaku_diubah,yes
+PMK 82 Tahun 2021,monitor:pajakgoid:fasilitas,dicabut,PMK 3 Tahun 2022,dicabut,yes
+PMK 83 Tahun 2021,monitor:pajakgoid:fasilitas,berlaku_sebagian,PMK 226 Tahun 2021,dicabut,no
+PMK 86 Tahun 2020,monitor:kurasi:fasilitas,dicabut,PMK 9 Tahun 2021,dicabut,yes
+PMK 9 Tahun 2021,monitor:kurasi:fasilitas,dicabut,PMK 3 Tahun 2022,dicabut,yes
+PP 12 Tahun 2023,monitor:pajakgoid:fasilitas,berlaku,,berlaku,yes
+PP 29 Tahun 2020,monitor:pajakgoid:fasilitas,berlaku_sebagian,PP 55 Tahun 2022,berlaku_sebagian,yes
+PP 41 Tahun 2016,monitor:pajakgoid:dasar,berlaku,,berlaku,yes
+PP 55 Tahun 2022,monitor:pajakgoid:dasar,berlaku_diubah,PERPRES 20 Tahun 2026; PP 20 Tahun 2026,berlaku_diubah,yes
+PP 58 Tahun 2023,monitor:kurasi:dasar,berlaku,,berlaku,yes
+PP 68 Tahun 2009,monitor:kurasi:dasar,berlaku,,berlaku,yes
+PP 73 Tahun 2016,monitor:pajakgoid:dasar,berlaku,,berlaku,yes
+PP 80 Tahun 2010,monitor:kurasi:dasar,berlaku_sebagian,PP 58 Tahun 2023,berlaku_sebagian,yes
+UU 11 Tahun 2020,monitor:pajakgoid:dasar,dicabut,UU 1 Tahun 2022; PERPPU 2 Tahun 2022; UU 6 Tahun 2023,dicabut,yes
+UU 17 Tahun 2000,backtest:awal,berlaku_sebagian,PMK 45 Tahun 2008; PMK 74 Tahun 2010,berlaku_diubah,no
+UU 36 Tahun 2008,backtest:peristiwa,berlaku_diubah,PMK 24 Tahun 2012; PMK 233 Tahun 2015; UU 11 Tahun 2020; UU 7 Tahun 2021,berlaku_diubah,yes
+UU 7 Tahun 2021,monitor:pajakgoid:dasar,berlaku_diubah,PERPPU 2 Tahun 2022; UU 6 Tahun 2023,berlaku_diubah,yes

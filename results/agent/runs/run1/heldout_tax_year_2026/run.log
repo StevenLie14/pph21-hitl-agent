@@ -1,0 +1,25 @@
+[1/14] t26-01     BENAR tool=calculate_pph21_permanent_monthly pph=166250
+[2/14] t26-02     BENAR tool=calculate_pph21_permanent_monthly pph=3600000
+[3/14] t26-03     BENAR tool=calculate_pph21_permanent_last_period pph=1455000
+[4/14] t26-04     BENAR tool=calculate_pph21_non_employee pph=187500
+[5/14] t26-05     BENAR tool=calculate_pph21_non_permanent pph=0
+[6/14] t26-06     SALAH tool=- pph=-
+[7/14] t26-07     BENAR tool=calculate_pph21_commissioner pph=2500000
+[8/14] t26-08     BENAR tool=calculate_pph21_final pph=5500000
+[9/14] t26-09     BENAR tool=calculate_pph_pasal_26 pph=10000000
+[10/14] t26-10     BENAR tool=calculate_pph21_non_employee pph=-
+[11/14] t26-11     BENAR tool=- pph=-
+[12/14] t26-12     BENAR tool=- pph=-
+[13/14] t26-13     BENAR tool=- pph=-
+[14/14] t26-14     BENAR tool=- pph=-
+
+Akurasi keseluruhan : 0.9286 (maks. 1 klarifikasi)
+Akurasi satu giliran: 0.9286
+Klarifikasi tak perlu: 1
+Kasus hitung yang memanggil graf: 0
+Token LLM: masuk 985598, keluar 6148 (rata-rata keluar per kasus 439.1)
+Hitung - tool       : 0.8889 (percobaan pertama 0.8889)
+Hitung - argumen    : 0.7778 (per field 0.9615)
+Hitung - angka akhir: 0.8889
+Non-hitung          : {'tanya_balik': None, 'tolak': 1.0, 'info': None}
+Laporan: hasil_evaluasi\akhir_20261117\sitasi\run1\uji_2026\20261117-125817_azure_gpt-6-luna.md

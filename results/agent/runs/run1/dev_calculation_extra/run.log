@@ -1,0 +1,29 @@
+[1/18] h-01       BENAR tool=calculate_pph21_permanent_last_period pph=-1600000
+[2/18] h-02       BENAR tool=calculate_pph21_permanent_last_period pph=-1075000
+[3/18] h-03       BENAR tool=calculate_pph21_permanent_annual pph=2325000
+[4/18] h-04       BENAR tool=calculate_pph21_pensioner_last_period pph=0
+[5/18] h-05       BENAR tool=calculate_pph21_non_permanent pph=0
+[6/18] h-06       BENAR tool=calculate_pph21_non_employee pph=375000
+[7/18] h-07       BENAR tool=calculate_pph21_non_employee pph=750000
+[8/18] h-08       BENAR tool=calculate_pph21_commissioner pph=2500000
+[9/18] h-09       BENAR tool=- pph=-
+[10/18] h-10       BENAR tool=- pph=-
+[11/18] h-11       BENAR tool=- pph=-
+[12/18] h-12       BENAR tool=calculate_pph21_permanent_monthly pph=1978021
+[13/18] h-13       BENAR tool=calculate_pph21_permanent_monthly pph=2700000
+[14/18] h-14       BENAR tool=calculate_pph_pasal_26 pph=10000000
+[15/18] h-15       BENAR tool=calculate_pph21_final pph=87500000
+[16/18] h-16       BENAR tool=calculate_pph21_direct_pasal_17 pph=6000000
+[17/18] h-17       BENAR tool=calculate_pph21_permanent_last_period pph=500000
+[18/18] h-18       BENAR tool=- pph=-
+
+Akurasi keseluruhan : 1.0 (maks. 1 klarifikasi)
+Akurasi satu giliran: 1.0
+Klarifikasi tak perlu: 0
+Kasus hitung yang memanggil graf: 0
+Token LLM: masuk 618985, keluar 8207 (rata-rata keluar per kasus 455.9)
+Hitung - tool       : 1.0 (percobaan pertama 1.0)
+Hitung - argumen    : 1.0 (per field 1.0)
+Hitung - angka akhir: 1.0
+Non-hitung          : {'tanya_balik': 1.0, 'tolak': 1.0, 'info': 1.0}
+Laporan: hasil_evaluasi\akhir_20261117\sitasi\run1\dev_holdout\20261117-124337_azure_gpt-6-luna.md

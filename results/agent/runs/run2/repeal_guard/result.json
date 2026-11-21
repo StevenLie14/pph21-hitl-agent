@@ -1,0 +1,216 @@
+[
+ {
+  "id": "q1",
+  "dicabut": true,
+  "sebelum_pencabutan": true,
+  "run": 1,
+  "hitung_berhasil": true,
+  "laporan_otomatis": 0,
+  "laporan_model": 0,
+  "catatan_kode": false,
+  "jawaban_menyebut_dicabut": true,
+  "klaim_masih_berlaku": false,
+  "benar": true,
+  "jawaban": "Data yang dihitung: PPh 21 pegawai tetap, satu masa pajak (TER); masa pajak Maret 2025; status TK/0; ber-NPWP; gaji pokok Rp15.000.000; penghasilan bruto yang dihitung Rp15.000.000.\n\n**PPh 21 terutang untuk Maret 2025 adalah Rp900.000.**\n\n| Langkah | Hasil |\n|---|---:|\n| Penghasilan bruto sebulan | Rp15.000.000 |\n| Status PTKP TK/0 | Kategori TER A |\n| Tarif efektif bulanan | 6% |\n| PPh 21 masa | Rp900.000 |\n\n**Dasar hukum:** PP No. 58 Tahun 2023; PMK No. 168 Tahun 2023. [Status per 2026-11-17 menurut graf peraturan: PMK 168 Tahun 2023 dicabut sejak 2025-07-01 oleh PMK 12 Tahun 2025.]\n\n### Asumsi yang dipakai\n- Memiliki NPWP atau NIK yang telah dipadankan.\n- Tidak ada komponen penghasilan lain atau pengurang yang disebutkan.\n- Metode TER digunakan untuk masa pajak selain masa pajak terakhir. Pengurang seperti biaya jabatan dan iuran pensiun tidak diperhitungkan di sini, melainkan pada perhitungan ulang masa pajak terakhir.\n\n**Disclaimer:** Hasil ini merupakan alat bantu hitung, bukan nasihat pajak resmi. Untuk pelaporan, konfirmasikan kepada konsultan pajak atau DJP.",
+  "tool": [
+   "calculate_pph21_permanent_monthly"
+  ]
+ },
+ {
+  "id": "q2",
+  "dicabut": true,
+  "sebelum_pencabutan": false,
+  "run": 1,
+  "hitung_berhasil": true,
+  "laporan_otomatis": 1,
+  "laporan_model": 1,
+  "catatan_kode": true,
+  "jawaban_menyebut_dicabut": true,
+  "klaim_masih_berlaku": false,
+  "benar": true,
+  "jawaban": "Data yang dihitung: PPh 21 pegawai tetap, satu masa pajak (TER); masa pajak Agustus 2025; status K/1; ber-NPWP; gaji pokok Rp20.000.000; penghasilan bruto yang dihitung Rp20.000.000.\n\nPPh 21 terutang untuk Agustus 2025 adalah **Rp1.600.000**.\n\n| Langkah | Rincian |\n|---|---|\n| Penghasilan bruto sebulan | Gaji pokok: Rp20.000.000 |\n| Status PTKP K/1 | Kategori TER B |\n| Tarif efektif bulanan | 8% |\n| PPh 21 masa | Rp1.600.000 |\n\n**Dasar hukum:** PP No. 58 Tahun 2023; PMK No. 168 Tahun 2023.\n\n**Asumsi yang dipakai**\n- Memiliki NPWP atau NIK yang telah dipadankan.\n- Tidak ada komponen penghasilan lain, premi perusahaan, atau pengurang yang disebutkan.\n- Metode TER dipakai untuk masa pajak selain masa pajak terakhir. Pengurang seperti biaya jabatan dan iuran pensiun tidak diperhitungkan di sini, melainkan pada perhitungan ulang masa pajak terakhir.\n\n**Peringatan:** PMK 168 Tahun 2023 sudah dicabut pada tanggal hitungan, dan data kalkulator mungkin belum mengikuti aturan penggantinya.\n\nHasil ini merupakan alat bantu hitung, bukan nasihat pajak resmi. Untuk pelaporan, konfirmasikan kepada konsultan pajak atau DJP.\n\nCatatan: dasar hukum hitungan di atas sudah tidak berlaku menurut graf peraturan (PMK 168 Tahun 2023); permintaan pemeriksaan sudah dicatat. Angka di atas memakai data kalkulator yang mungkin belum mengikuti aturan penggantinya.",
+  "tool": [
+   "calculate_pph21_permanent_monthly",
+   "report_possibly_stale",
+   "report_possibly_stale"
+  ]
+ },
+ {
+  "id": "q3",
+  "dicabut": true,
+  "sebelum_pencabutan": false,
+  "run": 1,
+  "hitung_berhasil": true,
+  "laporan_otomatis": 1,
+  "laporan_model": 1,
+  "catatan_kode": true,
+  "jawaban_menyebut_dicabut": true,
+  "klaim_masih_berlaku": false,
+  "benar": true,
+  "jawaban": "Data yang dihitung: PPh 21 pegawai tetap, setahun (Pasal 17); tahun pajak 2025, 12 bulan masa perolehan; status K/2; ber-NPWP; gaji pokok Rp12.000.000 per bulan x 12 bulan; penghasilan bruto yang dihitung Rp144.000.000.\n\n**PPh 21 setahun terutang: Rp4.575.000.**\n\n| Rincian langkah | Nilai |\n|---|---:|\n| Penghasilan bruto | Rp144.000.000 |\n| Biaya jabatan | Rp6.000.000 |\n| Penghasilan neto setahun | Rp138.000.000 |\n| PTKP K/2 | Rp67.500.000 |\n| Penghasilan Kena Pajak | Rp70.500.000 |\n| Lapisan 5% | Rp3.000.000 |\n| Lapisan 15% | Rp1.575.000 |\n| **PPh 21 setahun** | **Rp4.575.000** |\n\n**Dasar hukum dari hasil kalkulator:** UU PPh Pasal 17 ayat (1) huruf a s.t.d.t.d UU HPP; UU PPh Pasal 7 ayat (1); PMK No. 168 Tahun 2023.\n\n**Asumsi yang dipakai**\n- Gaji Rp12.000.000 adalah jumlah per bulan selama 12 bulan.\n- Tidak ada tunjangan, penghasilan lain, atau iuran/pengurang lain.\n- Pegawai memiliki NPWP atau NIK yang telah dipadankan.\n\n**Peringatan:** PMK 168 Tahun 2023 berstatus dicabut sejak 2025-07-01 oleh PMK 12 Tahun 2025. Angka ini memakai data kalkulator yang mungkin belum mengikuti aturan penggantinya.\n\nHasil ini merupakan alat bantu hitung, bukan nasihat pajak resmi. Untuk pelaporan, konfirmasikan kepada konsultan pajak atau DJP.\n\nCatatan: dasar hukum hitungan di atas sudah tidak berlaku menurut graf peraturan (PMK 168 Tahun 2023); permintaan pemeriksaan sudah dicatat. Angka di atas memakai data kalkulator yang mungkin belum mengikuti aturan penggantinya.",
+  "tool": [
+   "calculate_pph21_permanent_annual",
+   "report_possibly_stale",
+   "report_possibly_stale",
+   "find_regulation"
+  ]
+ },
+ {
+  "id": "q4",
+  "dicabut": true,
+  "sebelum_pencabutan": false,
+  "run": 1,
+  "hitung_berhasil": true,
+  "laporan_otomatis": 1,
+  "laporan_model": 1,
+  "catatan_kode": true,
+  "jawaban_menyebut_dicabut": true,
+  "klaim_masih_berlaku": false,
+  "benar": true,
+  "jawaban": "Data yang dihitung: PPh 21 bukan pegawai; tahun pajak 2025; ber-NPWP; penghasilan bruto Rp25.000.000; jenis jasa: tenaga_ahli; penghasilan bruto yang dihitung Rp25.000.000.\n\nPPh 21 terutang untuk honor tersebut adalah **Rp625.000**.\n\n| Langkah | Perhitungan | Nilai |\n|---|---:|---:|\n| Penghasilan bruto |  | Rp25.000.000 |\n| Dasar pengenaan pajak | 50% x 25.000.000 | Rp12.500.000 |\n| Lapisan 5% | 12.500.000 x 5% | Rp625.000 |\n| PPh 21 masa ini | Pasal 17 atas DPP masa pajak ini, tidak kumulatif | **Rp625.000** |\n\n**Dasar hukum:** PMK No. 168 Tahun 2023 Pasal 12 ayat (3) dan Pasal 16 ayat (3).\n\n### Asumsi yang dipakai\n- Tidak ada pembayaran terkait jasa yang dikecualikan dari penghasilan bruto karena tidak disebutkan.\n- Penerima jasa dikategorikan sebagai tenaga ahli/konsultan.\n\n### Peringatan\n[Pemeriksaan otomatis, bukan pengguna] Dasar hukum hitungan ini sudah tidak berlaku pada tanggalnya menurut graf: PMK 168 Tahun 2023. Permintaan pemeriksaan untuk pemantau sudah dicatat (jangan panggil report_possibly_stale lagi untuknya). Katakan statusnya dan bahwa angka memakai data kalkulator yang mungkin belum mengikuti aturan penggantinya.\n\nHasil ini merupakan alat bantu hitung, bukan nasihat pajak resmi. Untuk pelaporan, konfirmasikan kepada konsultan pajak atau DJP.\n\nCatatan: dasar hukum hitungan di atas sudah tidak berlaku menurut graf peraturan (PMK 168 Tahun 2023); permintaan pemeriksaan sudah dicatat. Angka di atas memakai data kalkulator yang mungkin belum mengikuti aturan penggantinya.",
+  "tool": [
+   "calculate_pph21_non_employee",
+   "report_possibly_stale",
+   "report_possibly_stale"
+  ]
+ },
+ {
+  "id": "q5",
+  "dicabut": true,
+  "sebelum_pencabutan": false,
+  "run": 1,
+  "hitung_berhasil": true,
+  "laporan_otomatis": 1,
+  "laporan_model": 1,
+  "catatan_kode": true,
+  "jawaban_menyebut_dicabut": true,
+  "klaim_masih_berlaku": false,
+  "benar": true,
+  "jawaban": "Data yang dihitung: PPh 21 pegawai tetap, masa pajak terakhir; tahun pajak 2025, 12 bulan masa perolehan; masa pajak terakhir Desember; status TK/1; ber-NPWP; gaji pokok Rp9.000.000 per bulan x 12 bulan; penghasilan bruto yang dihitung Rp108.000.000.\n\n**Mohon periksa**\n- PPh 21 yang sudah dipotong pada masa-masa sebelumnya diisi Rp0, sehingga hasil masa pajak terakhir sama dengan PPh setahun penuh. Bila PPh sudah dipotong setiap bulan, hasilnya jauh lebih kecil: sebutkan jumlah di bukti potong, atau minta diperkirakan dari TER bulanan.\n\nPPh 21 masa pajak terakhir yang dihitung adalah **Rp2.205.000**.\n\n| Langkah | Perhitungan | Hasil |\n|---|---|---:|\n| Penghasilan bruto (pemberi kerja ini) | gaji pokok 108000000 | Rp108.000.000 |\n| Biaya jabatan | min(5% x 108000000 = 5400000, batas 6000000) | Rp5.400.000 |\n| Penghasilan neto setahun | 108000000 - 5400000 - 0 | Rp102.600.000 |\n| PTKP TK/1 | diri Wajib Pajak Rp54.000.000 + 1 tanggungan x Rp4.500.000 | Rp58.500.000 |\n| Penghasilan Kena Pajak | max(102600000 - 58500000, 0) dibulatkan ke bawah kelipatan 1000 | Rp44.100.000 |\n| Lapisan 5% | 44100000 x 5% | Rp2.205.000 |\n| PPh 21 setahun (sebelum penyesuaian) |  | Rp2.205.000 |\n| PPh 21 terutang setahun |  | Rp2.205.000 |\n| PPh 21 yang telah dipotong pemberi kerja ini |  | Rp0 |\n| PPh 21 masa pajak terakhir | 2205000 - 0 | Rp2.205.000 |\n\n**Dasar hukum dari hasil kalkulator:** UU PPh Pasal 17 ayat (1) huruf a s.t.d.t.d UU HPP; UU PPh Pasal 7 ayat (1); PMK No. 168 Tahun 2023; PMK No. 168 Tahun 2023 Pasal 15 ayat (1) huruf b dan ayat (2).\n\n**Status dasar hukum:** Menurut hasil kalkulator, PMK 168 Tahun 2023 dicabut pada tanggal perhitungan, 31 Desember 2025. Pemeriksaan terpisah menemukan PMK 12 Tahun 2025 berstatus berlaku pada tanggal tersebut. Angka hasil kalkulator mungkin belum mengikuti aturan pengganti.\n\n### Asumsi yang dipakai\n- Gaji Rp9.000.000 adalah jumlah yang sama setiap bulan selama 12 bulan.\n- PPh 21 yang sudah dipotong pada masa-masa sebelumnya dianggap Rp0, sesuai nilai yang dipakai dalam perhitungan.\n- Penerima dianggap memiliki NPWP/NIK yang telah dipadankan.\n\nHasil ini merupakan alat bantu hitung, bukan nasihat pajak resmi. Untuk pelaporan, konfirmasikan kepada konsultan pajak atau DJP.\n\nCatatan: dasar hukum hitungan di atas sudah tidak berlaku menurut graf peraturan (PMK 168 Tahun 2023); permintaan pemeriksaan sudah dicatat. Angka di atas memakai data kalkulator yang mungkin belum mengikuti aturan penggantinya.",
+  "tool": [
+   "calculate_pph21_permanent_last_period",
+   "report_possibly_stale",
+   "report_possibly_stale",
+   "find_regulation"
+  ]
+ },
+ {
+  "id": "q6",
+  "dicabut": true,
+  "sebelum_pencabutan": true,
+  "run": 1,
+  "hitung_berhasil": true,
+  "laporan_otomatis": 0,
+  "laporan_model": 0,
+  "catatan_kode": false,
+  "jawaban_menyebut_dicabut": true,
+  "klaim_masih_berlaku": false,
+  "benar": true,
+  "jawaban": "Data yang dihitung: PPh 21 pensiunan, satu masa pajak (TER); masa pajak Mei 2025; status K/0; ber-NPWP; uang pensiun Rp6.000.000; penghasilan bruto yang dihitung Rp6.000.000.\n\nPPh 21 terutang untuk Mei 2025 adalah **Rp45.000**.\n\n| Langkah | Perhitungan | Nilai |\n|---|---:|---:|\n| Penghasilan bruto sebulan | Uang pensiun Rp6.000.000 | Rp6.000.000 |\n| Status PTKP K/0 | Kategori TER A | — |\n| Tarif efektif bulanan | 0,75% | — |\n| PPh 21 masa | Rp6.000.000 × 0,75% | Rp45.000 |\n\n**Dasar hukum:** PP No. 58 Tahun 2023; PMK No. 168 Tahun 2023 Pasal 15 ayat (1). [Status per 2026-11-17 menurut graf peraturan: PMK 168 Tahun 2023 dicabut sejak 2025-07-01 oleh PMK 12 Tahun 2025.]\n\n### Asumsi yang dipakai\n- Pensiun dibayarkan secara teratur dan Mei bukan masa pajak terakhir.\n- Penerima ber-NPWP.\n- Tidak ada penghasilan lain, biaya pensiun, atau zakat yang diperhitungkan untuk masa ini. Biaya pensiun dan zakat diperhitungkan pada penghitungan ulang masa pajak terakhir.\n\nHasil ini merupakan alat bantu hitung, bukan nasihat pajak resmi. Untuk pelaporan, konfirmasikan kepada konsultan pajak atau DJP.",
+  "tool": [
+   "calculate_pph21_pensioner_monthly"
+  ]
+ },
+ {
+  "id": "q1",
+  "dicabut": false,
+  "sebelum_pencabutan": true,
+  "run": 1,
+  "hitung_berhasil": true,
+  "laporan_otomatis": 0,
+  "laporan_model": 0,
+  "catatan_kode": false,
+  "jawaban_menyebut_dicabut": false,
+  "klaim_masih_berlaku": false,
+  "benar": true,
+  "jawaban": "Data yang dihitung: PPh 21 pegawai tetap, satu masa pajak (TER); masa pajak Maret 2025; status TK/0; ber-NPWP; gaji pokok Rp15.000.000; penghasilan bruto yang dihitung Rp15.000.000.\n\nPPh 21 terutang untuk Maret 2025 adalah **Rp900.000**.\n\n| Langkah | Hasil |\n|---|---:|\n| Penghasilan bruto sebulan | Rp15.000.000 |\n| Status PTKP TK/0 masuk kategori TER A | — |\n| Tarif efektif bulanan | 6% |\n| PPh 21 masa | Rp900.000 |\n\n**Dasar hukum:** PP No. 58 Tahun 2023; PMK No. 168 Tahun 2023.\n\n### Asumsi yang dipakai\n- Diasumsikan memiliki NPWP atau NIK yang telah dipadankan.\n- Tidak ada tunjangan, bonus, premi perusahaan, natura kena pajak, penghasilan lain, iuran pegawai, atau zakat yang disampaikan.\n\n**Disclaimer:** Hasil ini merupakan alat bantu hitung, bukan nasihat pajak resmi. Untuk pelaporan, konfirmasikan kepada konsultan pajak atau DJP.",
+  "tool": [
+   "calculate_pph21_permanent_monthly"
+  ]
+ },
+ {
+  "id": "q2",
+  "dicabut": false,
+  "sebelum_pencabutan": false,
+  "run": 1,
+  "hitung_berhasil": true,
+  "laporan_otomatis": 0,
+  "laporan_model": 0,
+  "catatan_kode": false,
+  "jawaban_menyebut_dicabut": false,
+  "klaim_masih_berlaku": false,
+  "benar": true,
+  "jawaban": "Data yang dihitung: PPh 21 pegawai tetap, satu masa pajak (TER); masa pajak Agustus 2025; status K/1; ber-NPWP; gaji pokok Rp20.000.000; penghasilan bruto yang dihitung Rp20.000.000.\n\nPPh 21 terutang untuk Agustus 2025 adalah **Rp1.600.000**.\n\n| Langkah | Rincian |\n|---|---|\n| Penghasilan bruto sebulan | Gaji pokok: Rp20.000.000 |\n| Kategori TER | K/1 masuk kategori TER B |\n| Tarif efektif bulanan | 8% |\n| PPh 21 masa | Rp1.600.000 |\n\n**Dasar hukum:** PP No. 58 Tahun 2023; PMK No. 168 Tahun 2023.\n\n### Asumsi yang dipakai\n- Diasumsikan Anda memiliki NPWP atau NIK yang telah dipadankan.\n- Diasumsikan tidak ada komponen penghasilan atau potongan lain yang perlu diperhitungkan.\n- Metode TER dipakai untuk masa pajak selain masa pajak terakhir. Pengurang seperti biaya jabatan dan iuran pensiun tidak diperhitungkan di sini, melainkan pada perhitungan ulang masa pajak terakhir.\n\n**Disclaimer:** Hasil ini merupakan alat bantu hitung, bukan nasihat pajak resmi. Untuk pelaporan, konfirmasikan kepada konsultan pajak atau DJP.",
+  "tool": [
+   "calculate_pph21_permanent_monthly"
+  ]
+ },
+ {
+  "id": "q3",
+  "dicabut": false,
+  "sebelum_pencabutan": false,
+  "run": 1,
+  "hitung_berhasil": true,
+  "laporan_otomatis": 0,
+  "laporan_model": 0,
+  "catatan_kode": false,
+  "jawaban_menyebut_dicabut": false,
+  "klaim_masih_berlaku": false,
+  "benar": true,
+  "jawaban": "Data yang dihitung: PPh 21 pegawai tetap, setahun (Pasal 17); tahun pajak 2025, 12 bulan masa perolehan; status K/2; ber-NPWP; gaji pokok Rp12.000.000 per bulan x 12 bulan; penghasilan bruto yang dihitung Rp144.000.000.\n\nPPh 21 terutang setahun adalah **Rp4.575.000**.\n\n| Langkah | Perhitungan | Hasil |\n|---|---:|---:|\n| Penghasilan bruto | Gaji pokok setahun | Rp144.000.000 |\n| Biaya jabatan |  | Rp6.000.000 |\n| Penghasilan neto setahun |  | Rp138.000.000 |\n| PTKP K/2 |  | Rp67.500.000 |\n| Penghasilan Kena Pajak |  | Rp70.500.000 |\n| Lapisan 5% |  | Rp3.000.000 |\n| Lapisan 15% |  | Rp1.575.000 |\n| **PPh 21 setahun** |  | **Rp4.575.000** |\n\n**Dasar hukum:** UU PPh Pasal 17 ayat (1) huruf a s.t.d.t.d UU HPP; UU PPh Pasal 7 ayat (1); PMK No. 168 Tahun 2023.\n\n### Asumsi yang dipakai\n- Nilai gaji yang disebut merupakan jumlah per bulan dan dihitung selama 12 bulan.\n- Pegawai memiliki NPWP atau NIK yang telah dipadankan.\n- Tidak ada penghasilan, tunjangan, iuran, atau pengurang lain selain yang disebutkan.\n\n**Disclaimer:** Hasil ini merupakan alat bantu hitung, bukan nasihat pajak resmi. Untuk pelaporan, konfirmasikan kepada konsultan pajak atau DJP.",
+  "tool": [
+   "calculate_pph21_permanent_annual"
+  ]
+ },
+ {
+  "id": "q4",
+  "dicabut": false,
+  "sebelum_pencabutan": false,
+  "run": 1,
+  "hitung_berhasil": true,
+  "laporan_otomatis": 0,
+  "laporan_model": 0,
+  "catatan_kode": false,
+  "jawaban_menyebut_dicabut": false,
+  "klaim_masih_berlaku": false,
+  "benar": true,
+  "jawaban": "Data yang dihitung: PPh 21 bukan pegawai; tahun pajak 2025; ber-NPWP; penghasilan bruto Rp25.000.000; jenis jasa: tenaga_ahli; penghasilan bruto yang dihitung Rp25.000.000.\n\nPPh 21 terutang atas honor tersebut adalah **Rp625.000**.\n\n| Langkah | Perhitungan | Nilai |\n|---|---:|---:|\n| Penghasilan bruto |  | Rp25.000.000 |\n| Dasar pengenaan pajak | 50% x 25000000 | Rp12.500.000 |\n| Lapisan 5% | 12500000 x 5% | Rp625.000 |\n| PPh 21 masa ini | Pasal 17 atas DPP masa pajak ini (12500000), tidak kumulatif | Rp625.000 |\n\n**Dasar hukum:** PMK No. 168 Tahun 2023 Pasal 12 ayat (3) dan Pasal 16 ayat (3).\n\n### Asumsi yang dipakai\n- Tidak ada pembayaran yang dikecualikan dari penghasilan bruto.\n\nHasil ini merupakan alat bantu hitung, bukan nasihat pajak resmi. Untuk pelaporan, konfirmasikan kepada konsultan pajak atau DJP.",
+  "tool": [
+   "calculate_pph21_non_employee"
+  ]
+ },
+ {
+  "id": "q5",
+  "dicabut": false,
+  "sebelum_pencabutan": false,
+  "run": 1,
+  "hitung_berhasil": true,
+  "laporan_otomatis": 0,
+  "laporan_model": 0,
+  "catatan_kode": false,
+  "jawaban_menyebut_dicabut": false,
+  "klaim_masih_berlaku": false,
+  "benar": true,
+  "jawaban": "Data yang dihitung: PPh 21 pegawai tetap, masa pajak terakhir; tahun pajak 2025, 12 bulan masa perolehan; masa pajak terakhir Desember; status TK/1; ber-NPWP; gaji pokok Rp9.000.000 per bulan x 12 bulan; penghasilan bruto yang dihitung Rp108.000.000.\n\nPPh 21 masa pajak terakhir **Desember 2025 adalah Rp472.500**.\n\n| Langkah | Perhitungan | Nilai |\n|---|---:|---:|\n| Penghasilan bruto (pemberi kerja ini) | Gaji pokok | Rp108.000.000 |\n| Biaya jabatan | 5% dari bruto, dibatasi maksimum setahun | Rp5.400.000 |\n| Penghasilan neto setahun | Bruto dikurangi biaya jabatan | Rp102.600.000 |\n| PTKP TK/1 |  | Rp58.500.000 |\n| Penghasilan Kena Pajak |  | Rp44.100.000 |\n| PPh 21 setahun sebelum penyesuaian |  | Rp2.205.000 |\n| PPh 21 yang telah dipotong sebelumnya | Estimasi TER bulanan selama masa sebelumnya | Rp1.732.500 |\n| **PPh 21 masa pajak terakhir** |  | **Rp472.500** |\n\n**Dasar hukum:** UU PPh Pasal 17 ayat (1) huruf a s.t.d.t.d UU HPP; UU PPh Pasal 7 ayat (1); PMK No. 168 Tahun 2023; PMK No. 168 Tahun 2023 Pasal 15 ayat (1) huruf b dan ayat (2).\n\n### Asumsi yang dipakai\n- Gaji Rp9.000.000 adalah jumlah per bulan selama 12 bulan.\n- PPh 21 yang sudah dipotong pada masa sebelumnya tidak diberikan, sehingga diperkirakan memakai TER bulanan dengan penghasilan yang sama setiap bulan. Jika jumlah pada bukti potong berbeda, hasil masa pajak terakhir perlu disesuaikan.\n- Diasumsikan memiliki NPWP atau NIK yang telah dipadankan.\n\nHasil ini merupakan alat bantu hitung, bukan nasihat pajak resmi. Untuk pelaporan, konfirmasikan kepada konsultan pajak atau DJP.",
+  "tool": [
+   "calculate_pph21_permanent_last_period"
+  ]
+ },
+ {
+  "id": "q6",
+  "dicabut": false,
+  "sebelum_pencabutan": true,
+  "run": 1,
+  "hitung_berhasil": true,
+  "laporan_otomatis": 0,
+  "laporan_model": 0,
+  "catatan_kode": false,
+  "jawaban_menyebut_dicabut": false,
+  "klaim_masih_berlaku": false,
+  "benar": true,
+  "jawaban": "Data yang dihitung: PPh 21 pensiunan, satu masa pajak (TER); masa pajak Mei 2025; status K/0; ber-NPWP; uang pensiun Rp6.000.000; penghasilan bruto yang dihitung Rp6.000.000.\n\nPPh 21 terutang untuk Mei 2025 adalah **Rp45.000**.\n\n| Langkah | Rincian | Nilai |\n|---|---|---:|\n| Penghasilan bruto sebulan | Uang pensiun | Rp6.000.000 |\n| Status PTKP | K/0, kategori TER A | — |\n| Tarif efektif bulanan | 0,75% | — |\n| PPh 21 masa | Rp6.000.000 × 0,75% | Rp45.000 |\n\n**Dasar hukum:** PP No. 58 Tahun 2023; PMK No. 168 Tahun 2023 Pasal 15 ayat (1).\n\n### Asumsi yang dipakai\n- Penerima ber-NPWP.\n- Tidak ada penghasilan lain dari pembayar pensiun pada masa pajak ini.\n- Perhitungan menggunakan metode TER untuk masa pajak selain masa pajak terakhir. Biaya pensiun dan zakat tidak diperhitungkan di sini, melainkan pada perhitungan ulang masa pajak terakhir.\n\n**Disclaimer:** Hasil ini merupakan alat bantu hitung, bukan nasihat pajak resmi. Untuk pelaporan, konfirmasikan kepada konsultan pajak atau DJP.",
+  "tool": [
+   "calculate_pph21_pensioner_monthly"
+  ]
+ }
+]

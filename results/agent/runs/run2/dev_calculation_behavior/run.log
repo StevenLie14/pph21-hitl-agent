@@ -1,0 +1,58 @@
+[1/47] pt-ter-01  BENAR tool=calculate_pph21_permanent_monthly pph=960000
+[2/47] pt-ter-02  BENAR tool=calculate_pph21_permanent_monthly pph=200000
+[3/47] pt-ter-03  BENAR tool=calculate_pph21_permanent_monthly pph=3910400
+[4/47] pt-ter-04  BENAR tool=calculate_pph21_permanent_monthly pph=124800
+[5/47] pt-ter-05  BENAR tool=calculate_pph21_permanent_monthly pph=576000
+[6/47] pt-ter-06  BENAR tool=calculate_pph21_permanent_monthly pph=13777062
+[7/47] pt-ter-07  BENAR tool=calculate_pph21_permanent_monthly pph=9014400
+[8/47] pt-ter-08  BENAR tool=calculate_pph21_permanent_monthly pph=10450000
+[9/47] pt-des-01  BENAR tool=calculate_pph21_permanent_last_period pph=1890000
+[10/47] pt-des-02  BENAR tool=calculate_pph21_permanent_last_period pph=14595000
+[11/47] pt-des-03  BENAR tool=calculate_pph21_permanent_last_period pph=-3620000
+[12/47] pt-des-04  BENAR tool=calculate_pph21_permanent_last_period pph=7065000
+[13/47] pt-des-05  BENAR tool=calculate_pph21_permanent_last_period pph=580000
+[14/47] pt-thn-01  BENAR tool=calculate_pph21_permanent_annual pph=12450000
+[15/47] pt-thn-02  BENAR tool=calculate_pph21_permanent_annual pph=12000000
+[16/47] pen-01     BENAR tool=calculate_pph21_pensioner_monthly pph=15750
+[17/47] pen-02     BENAR tool=calculate_pph21_pensioner_last_period pph=111750
+[18/47] pen-03     BENAR tool=calculate_pph21_pensioner_monthly pph=0
+[19/47] pen-04     BENAR tool=calculate_pph21_pensioner_last_period pph=292750
+[20/47] pen-05     BENAR tool=calculate_pph21_pensioner_last_period pph=111750
+[21/47] ptt-01     BENAR tool=calculate_pph21_non_permanent pph=2500
+[22/47] ptt-02     BENAR tool=calculate_pph21_non_permanent pph=15000
+[23/47] ptt-03     BENAR tool=calculate_pph21_non_permanent pph=157500
+[24/47] ptt-04     BENAR tool=calculate_pph21_non_permanent pph=75000
+[25/47] bp-01      BENAR tool=calculate_pph21_non_employee pph=24000000
+[26/47] bp-02      BENAR tool=calculate_pph21_non_employee pph=175000
+[27/47] bp-03      BENAR tool=calculate_pph21_non_employee pph=112500
+[28/47] bp-04      BENAR tool=calculate_pph21_non_employee pph=1125000
+[29/47] dk-01      BENAR tool=calculate_pph21_commissioner pph=12000000
+[30/47] dk-02      BENAR tool=calculate_pph21_commissioner pph=150000
+[31/47] p17-01     BENAR tool=calculate_pph21_direct_pasal_17 pph=24000000
+[32/47] p17-02     BENAR tool=calculate_pph21_direct_pasal_17 pph=1000000
+[33/47] p17-03     BENAR tool=calculate_pph21_direct_pasal_17 pph=3000000
+[34/47] fin-01     BENAR tool=calculate_pph21_final pph=17500000
+[35/47] fin-02     BENAR tool=calculate_pph21_final pph=2500000
+[36/47] fin-03     BENAR tool=calculate_pph21_final pph=250000
+[37/47] p26-01     BENAR tool=calculate_pph_pasal_26 pph=8000000
+[38/47] p26-02     BENAR tool=calculate_pph_pasal_26 pph=10000000
+[39/47] tb-01      BENAR tool=- pph=-
+[40/47] tb-02      BENAR tool=- pph=-
+[41/47] tb-03      BENAR tool=- pph=-
+[42/47] tb-04      BENAR tool=- pph=-
+[43/47] tl-01      BENAR tool=- pph=-
+[44/47] tl-02      BENAR tool=- pph=-
+[45/47] tl-03      BENAR tool=- pph=-
+[46/47] inf-01     BENAR tool=- pph=-
+[47/47] inf-02     BENAR tool=- pph=-
+
+Akurasi keseluruhan : 1.0 (maks. 1 klarifikasi)
+Akurasi satu giliran: 1.0
+Klarifikasi tak perlu: 0
+Kasus hitung yang memanggil graf: 0
+Token LLM: masuk 1834697, keluar 21681 (rata-rata keluar per kasus 461.3)
+Hitung - tool       : 1.0 (percobaan pertama 1.0)
+Hitung - argumen    : 1.0 (per field 1.0)
+Hitung - angka akhir: 1.0
+Non-hitung          : {'tanya_balik': 1.0, 'tolak': 1.0, 'info': 1.0}
+Laporan: hasil_evaluasi\akhir_20261117\sitasi\run2\dev_utama\20261117-134911_azure_gpt-6-luna.md

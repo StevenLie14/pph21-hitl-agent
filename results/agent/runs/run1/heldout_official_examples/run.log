@@ -1,0 +1,30 @@
+[1/19] ur-01      BENAR tool=calculate_pph21_permanent_monthly pph=1085000
+[2/19] ur-02      BENAR tool=calculate_pph21_permanent_monthly pph=3300000
+[3/19] ur-03      BENAR tool=calculate_pph21_permanent_monthly pph=34000
+[4/19] ur-04      BENAR tool=calculate_pph21_permanent_monthly pph=158175
+[5/19] ur-05      BENAR tool=calculate_pph21_permanent_monthly pph=1602720
+[6/19] ur-06      SALAH tool=calculate_pph21_final pph=-
+[7/19] ur-07      BENAR tool=calculate_pph21_permanent_last_period pph=150850
+[8/19] ur-08      BENAR tool=calculate_pph21_permanent_last_period pph=877150
+[9/19] ur-09      BENAR tool=calculate_pph21_pensioner_last_period pph=0
+[10/19] ur-10      BENAR tool=calculate_pph21_non_permanent pph=0
+[11/19] ur-11      BENAR tool=calculate_pph21_non_permanent pph=375000
+[12/19] ur-12      BENAR tool=calculate_pph21_non_permanent pph=120000
+[13/19] ur-13      BENAR tool=calculate_pph21_non_employee pph=1000000
+[14/19] ur-14      BENAR tool=calculate_pph_pasal_26 pph=7500000
+[15/19] ur-15      BENAR tool=calculate_taxable_natura pph=200000
+[16/19] ur-16      BENAR tool=calculate_taxable_natura pph=300000
+[17/19] ur-17      BENAR tool=calculate_taxable_natura pph=0
+[18/19] ur-18      BENAR tool=calculate_taxable_natura pph=2000000
+[19/19] ur-19      BENAR tool=calculate_taxable_natura pph=2000000
+
+Akurasi keseluruhan : 0.9474 (maks. 1 klarifikasi)
+Akurasi satu giliran: 0.8947
+Klarifikasi tak perlu: 1
+Kasus hitung yang memanggil graf: 0
+Token LLM: masuk 826683, keluar 9125 (rata-rata keluar per kasus 480.3)
+Hitung - tool       : 0.9474 (percobaan pertama 0.9474)
+Hitung - argumen    : 0.8421 (per field 0.9706)
+Hitung - angka akhir: 0.9474
+Non-hitung          : {'tanya_balik': None, 'tolak': None, 'info': None}
+Laporan: hasil_evaluasi\akhir_20261117\sitasi\run1\uji_resmi\20261117-124940_azure_gpt-6-luna.md

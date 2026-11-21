@@ -1,0 +1,91 @@
+u2009 basi_hilang       #1 melapor                   9.9s tabel_tarif_belum_ada
+u2009 basi_lanjutan     #1 tanpa_angka               7.8s -
+u2009 sadar             #1 melapor                  32.4s otomatis:peraturan_tidak_dikenal
+u2009 teradaptasi_asli  #1 tanpa_angka              12.4s -
+u2013 basi_hilang       #1 melapor                  10.5s tabel_tarif_belum_ada
+u2013 basi_lanjutan     #1 tanpa_angka               8.7s -
+u2013 sadar             #1 melapor                  14.5s otomatis:peraturan_tidak_dikenal,peraturan_tidak_dikenal
+u2013 teradaptasi_asli  #1 tanpa_angka              10.3s -
+u2015 basi_hilang       #1 melapor                   9.0s tabel_tarif_belum_ada
+u2015 basi_lanjutan     #1 tanpa_angka              29.4s -
+u2015 sadar             #1 melapor                  15.8s otomatis:peraturan_tidak_dikenal,peraturan_tidak_dikenal
+u2015 teradaptasi_asli  #1 tanpa_angka              15.1s -
+u2016 basi_hilang       #1 melapor                  10.0s tabel_tarif_belum_ada
+u2016 basi_lanjutan     #1 tanpa_angka              20.1s -
+u2016 sadar             #1 melapor                  10.1s otomatis:peraturan_tidak_dikenal
+u2016 teradaptasi_asli  #1 tanpa_angka              19.4s -
+u2022 basi_hilang       #1 melapor                  18.2s tabel_tarif_belum_ada
+u2022 basi_lanjutan     #1 tanpa_angka              14.8s -
+u2022 sadar             #1 tanpa_angka              12.6s -
+u2022 teradaptasi_asli  #1 tanpa_angka              14.8s -
+u2024 basi_hilang       #1 melapor                   8.3s tabel_tarif_belum_ada
+u2024 basi_lanjutan     #1 tanpa_angka              13.2s -
+u2024 sadar             #1 melapor                  15.4s otomatis:peraturan_tidak_dikenal,peraturan_tidak_dikenal
+u2024 teradaptasi_asli  #1 tanpa_angka              17.2s -
+u2016p basi_hilang       #1 melapor                   9.5s tabel_tarif_belum_ada
+u2016p basi_lanjutan     #1 tanpa_angka              12.4s -
+u2016p sadar             #1 melapor                  29.6s otomatis:peraturan_tidak_dikenal,peraturan_tidak_dikenal
+u2016p teradaptasi_asli  #1 tanpa_angka              11.3s -
+u2022p basi_hilang       #1 melapor                   9.3s tabel_tarif_belum_ada
+u2022p basi_lanjutan     #1 tanpa_angka              15.3s -
+u2022p sadar             #1 tanpa_angka              23.5s -
+u2022p teradaptasi_asli  #1 tanpa_angka              17.1s -
+u2010f teradaptasi_asli  #1 tanpa_angka               8.1s -
+u2011f teradaptasi_asli  #1 tanpa_angka              17.0s -
+# Backtest temporal tingkat agent
+
+Model: gpt-6-luna (azure), 2026-11-17T16:23:10, ulangan 1.
+
+Tabel: sendiri (umpan ke jawaban) (hasil_evaluasi/akhir_20261117/kumulatif/draf_kumulatif_umpan_ke_jawaban.json).
+
+Dunia beku: tabel tarif, regulasi.yaml (tanpa ringkasan), provenans (kosong), graf (peraturan yang terbit pada/sesudah tanggal potong disembunyikan; FAQ mati). Tidak beku: kode, prompt, dan dasar_hukum bawaan mesin.
+
+## Kasus
+
+| Kasus | Peristiwa | Beku | Jeda ke 1 Jan (hari) | Patch | Kunci ditinjau | PPh lama | PPh baru | PPh x1,2 |
+|---|---|---|---|---|---|---|---|---|
+| u2009 | UU 36 Tahun 2008, PMK 250 Tahun 2008, PMK 254 Tahun 2008 | 2008-09-23 | 100 | sistem | 19 | - | - | - |
+| u2013 | PMK 162 Tahun 2012, PMK 206 Tahun 2012 | 2012-10-22 | 71 | sistem | 5 | - | - | - |
+| u2015 | PMK 122 Tahun 2015 | 2015-06-29 | -179 | sistem | 4 | - | - | - |
+| u2016 | PMK 101 Tahun 2016 | 2016-06-22 | -173 | sistem | 4 | - | - | - |
+| u2022 | UU 7 Tahun 2021 | 2021-10-29 | 64 | sistem | 14 | - | - | - |
+| u2024 | PP 58 Tahun 2023, PMK 168 Tahun 2023 | 2023-12-27 | 5 | sistem | 263 | - | - | - |
+| u2016p | PMK 101 Tahun 2016 | 2016-06-22 | -173 | sistem | 4 | - | - | - |
+| u2022p | UU 7 Tahun 2021 | 2021-10-29 | 64 | sistem | 14 | - | - | - |
+| u2010f | PP 68 Tahun 2009 | 2009-11-16 | 46 | sistem | 12 | - | - | - |
+| u2011f | PP 80 Tahun 2010 | 2010-12-20 | 12 | sistem | 4 | - | - | - |
+
+## Hasil per fase
+
+| Kasus | basi_hilang | basi_lanjutan | sadar | teradaptasi_asli | teradaptasi_ubah |
+|---|---|---|---|---|---|
+| u2009 | melapor 1 | tanpa_angka 1 | melapor 1 | tanpa_angka 1 | - |
+| u2013 | melapor 1 | tanpa_angka 1 | melapor 1 | tanpa_angka 1 | - |
+| u2015 | melapor 1 | tanpa_angka 1 | melapor 1 | tanpa_angka 1 | - |
+| u2016 | melapor 1 | tanpa_angka 1 | melapor 1 | tanpa_angka 1 | - |
+| u2022 | melapor 1 | tanpa_angka 1 | tanpa_angka 1 | tanpa_angka 1 | - |
+| u2024 | melapor 1 | tanpa_angka 1 | melapor 1 | tanpa_angka 1 | - |
+| u2016p | melapor 1 | tanpa_angka 1 | melapor 1 | tanpa_angka 1 | - |
+| u2022p | melapor 1 | tanpa_angka 1 | tanpa_angka 1 | tanpa_angka 1 | - |
+| u2010f | - | - | - | tanpa_angka 1 | - |
+| u2011f | - | - | - | tanpa_angka 1 | - |
+
+## Ringkasan (kasus lima fase)
+
+| Fase | n | Hasil | Melapor | Sebut peristiwa | Sitasi anakronis | Detik (median) | Putaran (median) |
+|---|---|---|---|---|---|---|---|
+| basi_hilang | 8 | melapor 8 | 8 | 0 | 0 | 9.9 | 3 |
+| basi_lanjutan | 8 | tanpa_angka 8 | 0 | 0 | 0 | 14.8 | 4 |
+| sadar | 8 | melapor 6, tanpa_angka 2 | 6 | 4 | 0 | 15.8 | 5 |
+| teradaptasi_asli | 8 | tanpa_angka 8 | 0 | 0 | 0 | 15.1 | 4 |
+
+## Ringkasan kasus sebagian (hanya fase teradaptasi)
+
+| Fase | n | Hasil | Melapor | Sebut peristiwa | Sitasi anakronis | Detik (median) | Putaran (median) |
+|---|---|---|---|---|---|---|---|
+| teradaptasi_asli | 2 | tanpa_angka 2 | 0 | 1 | 0 | 17.0 | 7 |
+
+Token LLM masuk / keluar: 2431362 / 15073 (443.3 keluar per run).
+
+Label hasil: `melapor` (report_possibly_stale tercatat, tanpa angka), `melapor_dengan_angka`, `angka_lama_diam` (menghitung dengan nilai lama tanpa melapor), `angka_lama_dengan_catatan` (sama, tetapi menyebut klaim pengguna), `angka_baru_tanpa_lapor` (angka dari ingatan atau nilai pengguna), `benar`, `ingatan` (varian x1,2 dijawab dengan nilai asli), `melapor_keliru`, `salah`, `tanpa_angka`, `galat`.
+

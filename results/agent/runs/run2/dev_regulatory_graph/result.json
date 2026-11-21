@@ -1,0 +1,2058 @@
+{
+  "meta": {
+    "provider": "azure",
+    "model": "gpt-6-luna",
+    "waktu": "2026-11-17T14:00:16",
+    "dataset": "taxagent/taxes/pph21/data/kasus_agent_graf.yaml",
+    "n_kasus": 12,
+    "putaran_ulang_galat": 5
+  },
+  "ringkasan": {
+    "n_kasus": 12,
+    "n_error_api": 0,
+    "n_galat_api_diulang": 0,
+    "kasus_diulang": [],
+    "akurasi_keseluruhan": 1.0,
+    "akurasi_satu_giliran": 1.0,
+    "klarifikasi_tidak_perlu": 0,
+    "kasus_hitung_memanggil_graf": 0,
+    "token": {
+      "masuk": 849653,
+      "keluar": 4097,
+      "keluar_per_kasus": 341.4
+    },
+    "hitung": {
+      "n": 0,
+      "akurasi_tool": null,
+      "akurasi_tool_percobaan_pertama": null,
+      "akurasi_argumen_lengkap": null,
+      "akurasi_field": null,
+      "akurasi_angka_akhir": null
+    },
+    "non_hitung": {
+      "n": 12,
+      "akurasi": 1.0,
+      "per_perilaku": {
+        "tanya_balik": null,
+        "tolak": null,
+        "info": null
+      }
+    },
+    "per_kategori": {
+      "graf_cari": {
+        "n": 1,
+        "perilaku_benar": 1.0
+      },
+      "graf_pasal": {
+        "n": 1,
+        "perilaku_benar": 1.0
+      },
+      "graf_relasi": {
+        "n": 6,
+        "perilaku_benar": 1.0
+      },
+      "graf_skill": {
+        "n": 2,
+        "perilaku_benar": 1.0
+      },
+      "graf_status": {
+        "n": 2,
+        "perilaku_benar": 1.0
+      }
+    },
+    "per_tag": {},
+    "total_galat_tool": 0,
+    "kasus_tool_halusinasi": 0,
+    "jawaban_sitasi_bermasalah": 1,
+    "pemeriksa_sitasi": {
+      "jawaban_dikoreksi": 2,
+      "masih_bermasalah_setelah_koreksi": 1,
+      "jawaban_distempel_status": 3
+    },
+    "kesetiaan_angka": {
+      "jawaban_dengan_angka_tanpa_sumber": 0,
+      "pph_tool_di_jawaban": null
+    },
+    "rata_putaran": 3.67,
+    "rata_detik": 22.96
+  },
+  "kasus": [
+    {
+      "id": "g-01",
+      "kategori": "graf_status",
+      "tag": [],
+      "perilaku": "graf",
+      "tool_harapan": null,
+      "tool_dipanggil": [
+        "find_regulation",
+        "amendment_chain"
+      ],
+      "tool_hitung_pertama": null,
+      "tool_hitung_akhir": null,
+      "tool_benar": true,
+      "tool_benar_percobaan_pertama": true,
+      "argumen_benar": null,
+      "field_benar": 0,
+      "field_total": 0,
+      "argumen_salah": {},
+      "argumen_aktual": {},
+      "pph_harapan": null,
+      "pph_aktual": null,
+      "angka_benar": null,
+      "perilaku_benar": true,
+      "galat_tool": 0,
+      "tool_halusinasi": [],
+      "putaran": 3,
+      "detik": 11.43,
+      "jawaban": "Tidak. **PMK 102/PMK.010/2016 telah dicabut sejak 1 Januari 2024 oleh PMK 168 Tahun 2023.**\n\n**Asumsi yang dipakai**\n- Saya menafsirkan pertanyaan sebagai status peraturan saat ini, per 17 November 2026.",
+      "error": null,
+      "galat_api": [],
+      "perilaku_benar_satu_giliran": true,
+      "tool_graf": 2,
+      "klarifikasi": false,
+      "sitasi_belum_terverifikasi": [],
+      "sitasi_diperiksa": true,
+      "sitasi_audit_ablasi": [],
+      "sitasi_dikoreksi": [],
+      "status_distempel": [],
+      "angka_tanpa_sumber": [],
+      "pph_di_jawaban": null,
+      "token_masuk": 51261,
+      "token_keluar": 131,
+      "jejak": [
+        {
+          "tool": "find_regulation",
+          "argumen": {
+            "regulation": "PMK 102/PMK.010/2016"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": [
+              {
+                "peraturan": "PMK 102 Tahun 2016",
+                "judul": "Penetapan Bagian Penghasilan Sehubungan dengan Pekerjaan Dari Pegawai Harian dan Mingguan Serta Pegawai Tidak Tetap Lainnya yang Tidak Dikenakan Pemotongan Pajak Penghasilan.",
+                "teks_tersedia": true,
+                "url": "https://jdih.kemenkeu.go.id/dok/102-pmk-010-2016",
+                "berkas_pdf": "https://jdih.kemenkeu.go.id/api/download/63BBCECB-4EF4-4C7A-ABCF-8D786583E7A7/102~PMK.010~2016Per.pdf",
+                "status": "dicabut",
+                "sejak": "2024-01-01",
+                "oleh": [
+                  "PMK 168 Tahun 2023"
+                ],
+                "pasal_gugur": [],
+                "ayat_gugur": {},
+                "pasti": true,
+                "catatan": []
+              }
+            ],
+            "sumber": [
+              "PMK 102 Tahun 2016",
+              "PMK 168 Tahun 2023"
+            ]
+          }
+        },
+        {
+          "tool": "amendment_chain",
+          "argumen": {
+            "regulation": "PMK 102/PMK.010/2016"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": "PMK 102 Tahun 2016",
+            "status": "dicabut",
+            "sejak": "2024-01-01",
+            "oleh": [
+              "PMK 168 Tahun 2023"
+            ],
+            "pasal_gugur": [],
+            "ayat_gugur": {},
+            "pasti": true,
+            "catatan": [],
+            "diubah_atau_dicabut_oleh": [
+              {
+                "jenis": "mencabut",
+                "peraturan": "PMK 168 Tahun 2023",
+                "bukti": "eksplisit",
+                "sumber": "jdih+teks",
+                "berlaku_efektif": "2024-01-01",
+                "tanggal_perkiraan": false,
+                "lewat": null,
+                "pasal_bukti": "Pasal 24",
+                "pasal_terdampak": [],
+                "kutipan": "Pasal 24 Pada saat Peraturan Menteri ini mulai berlaku: Peraturan Menteri Keuangan Nomor 250/PMK.03/2008 a. tentang Besarnya Biaya Jabatan atau Biaya Pensiun yang dapat Dikurangkan dari Penghasilan Bruto Pegawai Tetap atau Pensiunan; b. Peraturan Menteri Keuangan Nomor 252/PMK.03/2008 tentang Petunjuk Pelaksanaan Pemotongan Pajak atas Penghasilan Sehubungan dengan Pekerjaan Jasa, dan Kegiatan Oran",
+                "status_peraturan": "berlaku"
+              }
+            ],
+            "mengubah_atau_mencabut": [
+              {
+                "jenis": "mencabut",
+                "peraturan": "PMK 152 Tahun 2015",
+                "bukti": "eksplisit",
+                "sumber": "jdih+teks",
+                "berlaku_efektif": "2016-06-22",
+                "tanggal_perkiraan": false,
+                "lewat": null,
+                "pasal_bukti": "Pasal 5",
+                "pasal_terdampak": [],
+                "kutipan": "Pasal 5 Pada saat Peraturan Menteri ini mulai berlaku, Peraturan Menteri Keuangan Nomor 152/PMK.010/2015 tentang Penetapan Bagian Penghasilan Sehubungan Dengan Pekerjaan dari Pegawai Harian dan Mingguan serta Pegawai Tidak Tetap Lainnya yang Tidak Dikenakan Pemotongan Pajak Penghasilan, dicabut dan dinyatakan tidak berlaku.",
+                "status_peraturan": "dicabut"
+              }
+            ],
+            "sumber": [
+              "PMK 102 Tahun 2016",
+              "PMK 168 Tahun 2023",
+              "PMK 152 Tahun 2015"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "g-02",
+      "kategori": "graf_relasi",
+      "tag": [],
+      "perilaku": "graf",
+      "tool_harapan": null,
+      "tool_dipanggil": [
+        "find_regulation"
+      ],
+      "tool_hitung_pertama": null,
+      "tool_hitung_akhir": null,
+      "tool_benar": true,
+      "tool_benar_percobaan_pertama": true,
+      "argumen_benar": null,
+      "field_benar": 0,
+      "field_total": 0,
+      "argumen_salah": {},
+      "argumen_aktual": {},
+      "pph_harapan": null,
+      "pph_aktual": null,
+      "angka_benar": null,
+      "perilaku_benar": true,
+      "galat_tool": 0,
+      "tool_halusinasi": [],
+      "putaran": 2,
+      "detik": 27.96,
+      "jawaban": "Keputusan Menteri Keuangan Nomor 447/KMK.03/2002 dicabut oleh **PMK 138 Tahun 2005**, efektif sejak **1 Januari 2006**. Peraturan tersebut berstatus dicabut.",
+      "error": null,
+      "galat_api": [],
+      "perilaku_benar_satu_giliran": true,
+      "tool_graf": 1,
+      "klarifikasi": false,
+      "sitasi_belum_terverifikasi": [],
+      "sitasi_diperiksa": true,
+      "sitasi_audit_ablasi": [],
+      "sitasi_dikoreksi": [],
+      "status_distempel": [],
+      "angka_tanpa_sumber": [],
+      "pph_di_jawaban": null,
+      "token_masuk": 33700,
+      "token_keluar": 84,
+      "jejak": [
+        {
+          "tool": "find_regulation",
+          "argumen": {
+            "regulation": "Keputusan Menteri Keuangan Nomor 447/KMK.03/2002"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": [
+              {
+                "peraturan": "KMK 447/KMK03/2002",
+                "judul": "RALAT KEPUTUSAN MENTERI KEUANGAN REPUBLIK INDONESIA NOMOR 447/KMK.03/2002 TANGGAL 22 OKTOBER 2002 TENTANG BAGIAN PENGHASILAN SEHUBUNGAN DENGAN PEKERJAAN DARI PEGAWAI HARIAN DAN MINGGUAN SERTA PEGAWAI TIDAK TETAP LAINNYA YANG TIDAK DIKENAKAN PEMOTONGAN PAJAK PENGHASILAN",
+                "teks_tersedia": true,
+                "url": "https://www.pajak.go.id/id/peraturan/ralat-keputusan-menteri-keuangan-republik-indonesia-nomor-447kmk032002-tanggal-22-oktober",
+                "berkas_pdf": null,
+                "status": "dicabut",
+                "sejak": "2006-01-01",
+                "oleh": [
+                  "PMK 138 Tahun 2005"
+                ],
+                "pasal_gugur": [],
+                "ayat_gugur": {},
+                "pasti": true,
+                "catatan": []
+              }
+            ],
+            "sumber": [
+              "KMK 447/KMK03/2002",
+              "PMK 138 Tahun 2005"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "g-03",
+      "kategori": "graf_relasi",
+      "tag": [],
+      "perilaku": "graf",
+      "tool_harapan": null,
+      "tool_dipanggil": [
+        "amendment_chain"
+      ],
+      "tool_hitung_pertama": null,
+      "tool_hitung_akhir": null,
+      "tool_benar": true,
+      "tool_benar_percobaan_pertama": true,
+      "argumen_benar": null,
+      "field_benar": 0,
+      "field_total": 0,
+      "argumen_salah": {},
+      "argumen_aktual": {},
+      "pph_harapan": null,
+      "pph_aktual": null,
+      "angka_benar": null,
+      "perilaku_benar": true,
+      "galat_tool": 0,
+      "tool_halusinasi": [],
+      "putaran": 2,
+      "detik": 14.58,
+      "jawaban": "UU HPP mengubah ketentuan **Pasal 4, 6, 7, 9, 11, 11A, 17, 18, 32A, dan 32C** dalam UU Pajak Penghasilan. Perubahan itu tercantum dalam **Pasal 3 UU 7 Tahun 2021**.\n\nCatatan: UU 7 Tahun 2021 kemudian berstatus **berlaku diubah**; perubahan berikutnya oleh PERPPU 2 Tahun 2022 dan UU 6 Tahun 2023 menyasar Pasal 2 dan Pasal 26 UU Pajak Penghasilan. [Status per 2026-11-17 menurut graf peraturan: PERPPU 2 Tahun 2022 ditetapkan menjadi undang-undang sejak 2025-02-24 oleh UU 1 Tahun 2025.]",
+      "error": null,
+      "galat_api": [],
+      "perilaku_benar_satu_giliran": true,
+      "tool_graf": 1,
+      "klarifikasi": false,
+      "sitasi_belum_terverifikasi": [],
+      "sitasi_diperiksa": true,
+      "sitasi_audit_ablasi": [],
+      "sitasi_dikoreksi": [],
+      "status_distempel": [
+        "PERPPU 2 Tahun 2022"
+      ],
+      "angka_tanpa_sumber": [],
+      "pph_di_jawaban": null,
+      "token_masuk": 38435,
+      "token_keluar": 161,
+      "jejak": [
+        {
+          "tool": "amendment_chain",
+          "argumen": {
+            "regulation": "UU 7 Tahun 2021"
+          },
+          "hasil": {
+            "terpotong": true,
+            "teks": "{\"berhasil\": true, \"tanggal\": \"2026-11-17\", \"peraturan\": \"UU 7 Tahun 2021\", \"status\": \"berlaku_diubah\", \"sejak\": \"2022-12-30\", \"oleh\": [\"PERPPU 2 Tahun 2022\", \"UU 6 Tahun 2023\"], \"pasal_gugur\": [], \"ayat_gugur\": {}, \"pasti\": true, \"catatan\": [], \"diubah_atau_dicabut_oleh\": [{\"jenis\": \"ditetapkan_menjadi\", \"peraturan\": \"PERPPU 5 Tahun 2008\", \"bukti\": \"eksplisit\", \"sumber\": \"teks\", \"berlaku_efektif\": \"2021-10-29\", \"tanggal_perkiraan\": false, \"lewat\": null, \"pasal_bukti\": \"Judul\", \"pasal_terdampak\": [], \"kutipan\": \"Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 5 Tahun 2008\", \"status_peraturan\": \"ditetapkan_menjadi\"}, {\"jenis\": \"mengubah\", \"peraturan\": \"PERPPU 2 Tahun 2022\", \"bukti\": \"eksplisit\", \"sumber\": \"teks\", \"berlaku_efektif\": \"2022-12-30\", \"tanggal_perkiraan\": false, \"lewat\": null, \"pasal_bukti\": \"Pasal 111\", \"pasal_terdampak\": [\"2\", \"26\"], \"kutipan\": \"SK No 137243 A PRESIDEN REPUBLIK INDONESIA - 623- Pasal 111 Beberapa ketentuan dalam Undang-Undang Nomor 7 Tahun 1983 tentang Pajak Penghasilan (Lembaran Negara Republik Indonesia Tahun 1983 Nomor 50, Tambahan Lembaran Negara Republik Indonesia Nomor 3263) sebagaimana telah beberapa kali diubah terakhir dengan Undang-Undang Nomor 7 Tahun 2021 tentang Harmonisasi Peraturan Perpajakan (Lembaran Nega\", \"status_peraturan\": \"ditetapkan_menjadi\"}, {\"jenis\": \"mengubah\", \"peraturan\": \"UU 6 Tahun 2023\", \"bukti\": \"eksplisit\", \"sumber\": \"teks\", \"berlaku_efektif\": \"2022-12-30\", \"tanggal_perkiraan\": false, \"lewat\": null, \"pasal_bukti\": \"Pasal 111\", \"pasal_terdampak\": [\"2\", \"26\"], \"kutipan\": \"SK No 171632 A jdih.kemenkeu.go.id PRESIDEN REPUBLIK INDONESIA - 623 - Pasal 111 Beberapa ketentuan dalam Undang-Undang Nomor 7 Tahun 1983 tentang Pajak Penghasilan (Lembaran Negara Republik Indonesia Tahun 1983 Nomor 50, Tambahan Lembaran Negara Republik Indonesia Nomor 3263) sebagaimana telah beberapa kali diubah terakhir dengan Undang-Undang Nomor 7 Tahun 2021 tentang Harmonisasi Peraturan Perp\", \"status_peraturan\": \"berlaku_diubah\"}], \"mengubah_atau_mencabut\": [{\"jenis\": \"mencabut_sebagian\", \"peraturan\": \"PERPPU 1 Tahun 2020\", \"bukti\": \"eksplisit\", \"sumber\": \"jdih+teks\", \"berlaku_efektif\": \"2021-10-29\", \"tanggal_perkiraan\": false, \"lewat\": null, \"pasal_bukti\": \"Pasal 18\", \"pasal_terdampak\": [\"5(1)\"], \"kutipan\": \"Pasal 18 Ketentuan Pasal 5 ayat (1) huruf b Peraturan Pemerintah Pengganti Undang-Undang Nomor 1 Tahun 2020 tentang Kebijakan Keuangan Negara dan Stabilitas Sistem Keuangan Untuk Penanganan Pandemi Corona Virus Disease 2019 (COVID-19) dan/atau Dalam Rangka Menghadapi Ancaman yang Membahayakan Perekonomian Nasional dan/atau Stabilitas Sistem Keuangan (Lembaran Negara Republik Indonesia Tahun 2020 N\", \"status_peraturan\": \"ditetapkan_menjadi\"}, {\"jenis\": \"mencabut_sebagian\", \"peraturan\": \"UU 2 Tahun 2020\", \"bukti\": \"eksplisit\", \"sumber\": \"jdih+teks\", \"berlaku_efektif\": \"2021-10-29\", \"tanggal_perkiraan\": false, \"lewat\": null, \"pasal_bukti\": \"Pasal 18\", \"pasal_terdampak\": [\"5(1)\"], \"kutipan\": \"Pasal 18 Ketentuan Pasal 5 ayat (1) huruf b Peraturan Pemerintah Pengganti Undang-Undang Nomor 1 Tahun 2020 tentang Kebijakan Keuangan Negara dan Stabilitas Sistem Keuangan Untuk Penanganan Pandemi Corona Virus Disease 2019 (COVID-19) dan/atau Dalam Rangka Menghadapi Ancaman yang Membahayakan Perekonomian Nasional dan/atau Stabilitas Sistem Keuangan (Lembaran Negara Republik Indonesia Tahun 2020 N\", \"status_peraturan\": \"berlaku_sebagian\"}, {\"jenis\": \"mengubah\", \"peraturan\": \"UU 36 Tahun 2008\", \"bukti\": \"tersirat\", \"sumber\": \"jdih+teks\", \"berlaku_efektif\": \"2021-10-29\", \"tanggal_perkiraan\": false, \"lewat\": \"UU 7 Tahun 1983\", \"pasal_bukti\": \"Pasal 3\", \"pasal_terdampak\": [], \"kutipan\": \"SK No 115536 A PRESIDEN REPUBLIK INDONESIA - 35 - BAB III PAJAK PENGHASILAN Pasal 3 Beberapa ketentuan dalam Undang-Undang Nomor 7 Tahun 1983 tentang Pajak Penghasilan (Lembaran Negara Republik Indonesia Tahun 1983 Nomor 50, Tambahan Lembaran Negara Republik Indonesia Nomor 3263) sebagaimana telah beberapa kali diubah terakhir dengan Undang-Undang Nomor 36 Tahun 2008 tentang Perubahan Keempat atas\", \"status_peraturan\": \"berlaku_diubah\"}, {\"jenis\": \"mengubah\", \"peraturan\": \"UU 7 Tahun 1983\", \"bukti\": \"eksplisit\", \"sumber\": \"jdih+teks\", \"berlaku_efektif\": \"2021-10-29\", \"tanggal_perkiraan\": false, \"lewat\": null, \"pasal_bukti\": \"Pasal 3\", \"pasal_terdampak\": [\"4\", \"6\", \"7\", \"9\", \"11\", \"11A\", \"17\", \"18\", \"32A\", \"32C\"], \"kutipan\": \"SK No 115536 A PRESIDEN REPUBLIK INDONESIA - 35 - BAB III PAJAK PENGHASILAN Pasal 3 Beberapa ketentuan dalam Undang-Undang Nomor 7 Tahun 1983 tentang Pajak Penghasilan (Lembaran Negara Republik Indonesia Tahun 1983 Nomor 50, Tambahan Lembaran Negara Republik Indonesia Nomor 3263) sebagaimana telah beberapa kali diubah terakhir dengan Undang-Undang Nomor 36 Tahun 2008 tentang Perubahan Keempat atas\", \"status_peraturan\": \"berlaku_diubah\"}, {\"jenis\": \"mengubah\", \"peraturan\": \"UU 39 Tahun 2007\", \"bukti\": \"tersirat\", \"sumber\": \"jdih\", \"berlaku_efektif\": \"2021-10-29\", \"tanggal_perkiraan\": false, \"lewat\": \"UU 11 Tahun 1995\", \"pasal_bukti\": \"Pasal 14\", \"pasal_terdampak\": [], \"kutipan\": \"BAB VII CUKAI Pasal 14 Beberapa ketentuan dalam Undang-Undang Nomor 11 Tahun 1995 tentang Cukai (Lembaran Negara Republik Indonesia Tahun 1995 Nomor 76, Tambahan Lembaran Negara Republik Indonesia Tahun 1995 Nomor 3613) sebagaimana telah diubah dengan Undang-Undang Nomor 39 Tahun 2007 tentang Perubahan atas Undang-Undang Nomor 11 Tahun 1995 tentang Cukai (Lembaran Negara Republik Indonesia Tahun 2\", \"status_peraturan\": \"berlaku_diubah\"}, {\"jenis\": \"mengubah\", \"peraturan\": \"UU 11 Tahun 1994\", \"bukti\": \"tersirat\", \"sumber\": \"jdih\", \"berlaku_efektif\": \"2021-10-29\", \"tanggal_perkiraan\": false, \"lewat\": \"UU 8 Tahun 1983\", \"pasal_bukti\": \"Pasal 4\", \"pasal_terdampak\": [], \"kutipan\": \"SK No 115566 A PRESIDEN REPUBLIK INDONESIA - 65 - BAB IV PAJAK PERTAMBAHAN NILAI Pasal 4 Beberapa ketentuan dalam Undang-Undang Nomor 8 Tahun 1983 tentang Pajak Pertambahan Nilai Barang dan Jasa dan Pajak Penjualan atas Barang Mewah (Lembaran Negara Republik Indonesia Tahun 1983 Nomor 51, Tambahan Lembaran Negara Republik Indonesia Nomor 3264) sebagaimana telah beberapa kali diubah terakhir dengan\", \"status_peraturan\": \"berlaku_sebagian\"}, {\"jenis\": \"mengubah\", \"peraturan\": \"UU 16 Tahun 2009\", \"bukti\": \"tersirat\", \"sumber\": \"jdih+teks\", \"berlaku_efektif\": \"2021-10-29\", \"tanggal_perkiraan\": false, \"lewat\": \"UU 6 Tahun 1983\", \"pasal_bukti\": \"Pasal 2\", \"pasal_terdampak\": [], \"kutipan\": \"BAB II KETENTUAN UMUM DAN TATA CARA PERPAJAKAN Pasal 2 Beberapa ketentuan dalam Undang-Undang Nomor 6 Tahun 1983 tentang Ketentuan Umum dan Tata Cara Perpajakan (Lembaran Negara Republik Indonesia Tahun 1983 Nomor 49, Tambahan Lembaran Negara Republik Indonesia Nomor 3262) sebagaimana telah beberapa kali diubah terakhir dengan Undang-Undang Nomor 16 Tahun 2009 tentang Penetapan Peraturan Pemerinta\", \"status_peraturan\": \"berlaku_sebagian\"}, {\"jenis\": \"mengubah\", \"peraturan\": \"UU 8 Tahun 1983\", \"bukti\": \"eksplisit\", \"sumber\": \"jdih+teks\", \"berlaku_efektif\": \"2021-10-29\", \"tanggal_perkiraan\": false, \"lewat\": null, \"pasal_bukti\": \"Pasal 4\", \"pasal_terdampak\": [\"7\", \"8A\", \"9\", \"9A\", \"16B\", \"16G\"], \"kutipan\": \"SK No 115566 A PRESIDEN REPUBLIK INDONESIA - 65 - BAB IV PAJAK PERTAMBAHAN NILAI Pasal 4 Beberapa ketentuan dalam Undang-Undang Nomor 8 Tahun 1983 tentang Pajak Pertambahan Nilai Barang dan Jasa dan Pajak Penjualan atas Barang Mewah (Lembaran Negara Republik Indonesia Tahun 1983 Nomor 51, Tambahan Lembaran Negara Republik Indonesia Nomor 3264) sebagaimana telah beberapa kali diubah terakhir dengan\", \"status_peraturan\": \"berlaku_diubah\"}, {\"jenis\": \"mengubah\", \"peraturan\": \"UU 16 Tahun 2000\", \"bukti\": \"tersirat\", \"sumber\": \"jdih\", \"berlaku_efektif\": \"2021-10-29\", \"tanggal_perkiraan\": false, \"lewat\": \"UU 6 Tahun 1983\", \"pasal_bukti\": \"Pasal 2\", \"pasal_terdampak\": [], \"kutipan\": \"BAB II KETENTUAN UMUM DAN TATA CARA PERPAJAKAN Pasal 2 Beberapa ketentuan dalam Undang-Undang Nomor 6 Tahun 19"
+          }
+        }
+      ]
+    },
+    {
+      "id": "g-04",
+      "kategori": "graf_pasal",
+      "tag": [],
+      "perilaku": "graf",
+      "tool_harapan": null,
+      "tool_dipanggil": [
+        "get_article"
+      ],
+      "tool_hitung_pertama": null,
+      "tool_hitung_akhir": null,
+      "tool_benar": true,
+      "tool_benar_percobaan_pertama": true,
+      "argumen_benar": null,
+      "field_benar": 0,
+      "field_total": 0,
+      "argumen_salah": {},
+      "argumen_aktual": {},
+      "pph_harapan": null,
+      "pph_aktual": null,
+      "angka_benar": null,
+      "perilaku_benar": true,
+      "galat_tool": 0,
+      "tool_halusinasi": [],
+      "putaran": 2,
+      "detik": 12.46,
+      "jawaban": "Bunyi Pasal 10 PMK 168 Tahun 2023:\n\n> **Pasal 10**\n>\n> (1) Pengurangan yang diperbolehkan sebagaimana dimaksud dalam Pasal 8 ayat (5) bagi Pegawai Tetap, yaitu:  \n> a. biaya jabatan, sebagaimana diatur dalam Pasal 21 ayat (3) Undang-Undang Pajak Penghasilan;  \n> b. iuran terkait program pensiun dan hari tua, yang terkait dengan gaji, yang dibayar oleh Pegawai melalui pemberi kerja kepada:  \n> 1. dana pensiun yang pendiriannya telah disahkan oleh Menteri atau telah mendapatkan izin dari Otoritas Jasa Keuangan;  \n> 2. badan penyelenggara jaminan sosial ketenagakerjaan; dan  \n> 3. badan penyelenggara tunjangan hari tua yang pendiriannya sesuai dengan ketentuan peraturan perundang-undangan; dan  \n> c. zakat atau sumbangan keagamaan yang sifatnya wajib bagi pemeluk agama yang diakui di Indonesia, yang dibayarkan melalui pemberi kerja kepada badan amil zakat, lembaga amil zakat, dan lembaga keagamaan yang dibentuk atau disahkan oleh pemerintah.\n>\n> (2) Besarnya biaya jabatan sebagaimana dimaksud pada ayat (1) huruf a ditetapkan sebesar 5% (lima persen) dari penghasilan bruto, paling banyak Rp6.000.000,00 (enam juta rupiah) setahun atau paling banyak Rp500.000,00 (lima ratus ribu rupiah) sebulan.\n>\n> (3) Dalam hal Pegawai Tetap menerima atau memperoleh penghasilan lebih dari satu pemberi kerja, biaya jabatan sebagaimana dimaksud pada ayat (1) huruf a dihitung pada masing-masing pemberi kerja.\n>\n> (4) Dalam hal Pegawai Tetap menerima atau memperoleh penghasilan dari pemberi kerja yang bukan merupakan Pemotong Pajak, biaya jabatan sebagaimana dimaksud pada ayat (1) huruf a dan iuran pensiun yang dibayar sendiri dikurangkan dari penghasilan bruto oleh Pegawai Tetap dalam penghitungan Pajak Penghasilan pada Surat Pemberitahuan Tahunan Pajak Penghasilan Wajib Pajak Orang Pribadi yang bersangkutan.\n\n[PMK 168 Tahun 2023 Pasal 10, hlm. 11 PDF](https://jdih.kemenkeu.go.id/api/download/E60A82E0-B218-40F5-9D18-B924AA1E11CE/2023pmkeuangan168.pdf#page=11)\n\n**Status peraturan pada 17 November 2026: berlaku.**",
+      "error": null,
+      "galat_api": [],
+      "perilaku_benar_satu_giliran": true,
+      "tool_graf": 1,
+      "klarifikasi": false,
+      "sitasi_belum_terverifikasi": [],
+      "sitasi_diperiksa": true,
+      "sitasi_audit_ablasi": [],
+      "sitasi_dikoreksi": [],
+      "status_distempel": [],
+      "angka_tanpa_sumber": [],
+      "pph_di_jawaban": null,
+      "token_masuk": 34080,
+      "token_keluar": 613,
+      "jejak": [
+        {
+          "tool": "get_article",
+          "argumen": {
+            "regulation": "PMK 168 Tahun 2023",
+            "article": "10"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": "PMK 168 Tahun 2023",
+            "pasal": "10",
+            "label": [
+              "Pasal 10"
+            ],
+            "teks": "Pasal 10\nPengurangan yang diperbolehkan sebagaimana dimaksud\ndalam Pasal 8 ayat (5) bagi Pegawai Tetap, yaitu:\nbiaya jabatan, sebagaimana diatur dalam Pasal 21\na.\nayat (3) Undang-Undang Pajak Penghasilan;\nb.\niuran terkait program pensiun dan hari tua, yang\nterkait dengan gaji, yang dibayar oleh Pegawai melalui\npemberi kerja kepada:\n1.\ndana pensiun yang pendiriannya telah disahkan\noleh Menteri atau telah mendapatkan izin dari\nOtoritas Jasa Keuangan;\nto\njdih.kemenkeu.go.id\n- 12 -\n2.\nbadan\npenyelenggara\njaminan\nsosial\nketenagakerjaan; dan\n3.\nbadan penyelenggara tunjangan hari tua yang\npendiriannya\nsesuai\ndengan\nketentuan\nperaturan perundang-undangan; dan\nzakat atau sumbangan keagamaan yang sifatnya\nC.\nwajib bagi pemeluk agama yang diakui di Indonesia,\nyang dibayarkan melalui pemberi kerja kepada badan\namil zakat, lembaga amil zakat, dan lembaga\nkeagamaan yang dibentuk atau disahkan oleh\npemerintah.\n(2)\nBesarnya biaya jabatan sebagaimana dimaksud pada ayat\n(1) huruf a ditetapkan sebesar 5% (lima persen) dari\npenghasilan bruto, paling banyak Rp6.000.000,00 (enam\njuta rupiah) setahun atau paling banyak Rp500.000,00\n(lima ratus ribu rupiah) sebulan.\n(3)\nDalam hal Pegawai Tetap menerima atau memperoleh\npenghasilan lebih dari satu pemberi kerja, biaya jabatan\nsebagaimana dimaksud pada ayat (1) huruf a dihitung\npada masing-masing pemberi kerja.\n(4)\nDalam hal Pegawai Tetap menerima atau memperoleh\npenghasilan dari pemberi kerja yang bukan merupakan\nPemotong Pajak, biaya jabatan sebagaimana dimaksud\npada ayat (1) huruf a dan iuran pensiun yang dibayar\nsendiri dikurangkan dari penghasilan bruto oleh Pegawai\nTetap dalam penghitungan Pajak Penghasilan pada Surat\nPemberitahuan Tahunan Pajak Penghasilan Wajib Pajak\nOrang Pribadi yang bersangkutan.\n",
+            "halaman_pdf": 11,
+            "tautan": "https://jdih.kemenkeu.go.id/api/download/E60A82E0-B218-40F5-9D18-B924AA1E11CE/2023pmkeuangan168.pdf#page=11",
+            "status_peraturan": "berlaku",
+            "peringatan": [],
+            "sumber": [
+              "PMK 168 Tahun 2023",
+              "PMK 168 Tahun 2023#18"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "g-05",
+      "kategori": "graf_skill",
+      "tag": [],
+      "perilaku": "graf",
+      "tool_harapan": null,
+      "tool_dipanggil": [
+        "skill_value",
+        "find_legal_basis"
+      ],
+      "tool_hitung_pertama": null,
+      "tool_hitung_akhir": null,
+      "tool_benar": true,
+      "tool_benar_percobaan_pertama": true,
+      "argumen_benar": null,
+      "field_benar": 0,
+      "field_total": 0,
+      "argumen_salah": {},
+      "argumen_aktual": {},
+      "pph_harapan": null,
+      "pph_aktual": null,
+      "angka_benar": null,
+      "perilaku_benar": true,
+      "galat_tool": 0,
+      "tool_halusinasi": [],
+      "putaran": 3,
+      "detik": 10.55,
+      "jawaban": "PTKP untuk diri Wajib Pajak orang pribadi yang dipakai kalkulator ini adalah **Rp54.000.000 setahun**.\n\nDasar hukum: [UU PPh Pasal 7 ayat (1)](https://jdih.kemenkeu.go.id/dok/101-pmk-010-2016) dan [PMK No. 101/PMK.010/2016](https://jdih.kemenkeu.go.id/dok/101-pmk-010-2016). Kalkulator mencatat PMK tersebut berstatus **berlaku**, sedangkan UU 7 Tahun 1983 berstatus **berlaku diubah** pada tanggal pengecekan 17 November 2026.",
+      "error": null,
+      "galat_api": [],
+      "perilaku_benar_satu_giliran": true,
+      "tool_graf": 1,
+      "klarifikasi": false,
+      "sitasi_belum_terverifikasi": [],
+      "sitasi_diperiksa": true,
+      "sitasi_audit_ablasi": [],
+      "sitasi_dikoreksi": [],
+      "status_distempel": [],
+      "angka_tanpa_sumber": [],
+      "pph_di_jawaban": null,
+      "token_masuk": 50796,
+      "token_keluar": 192,
+      "jejak": [
+        {
+          "tool": "skill_value",
+          "argumen": {
+            "key": "ptkp"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "key": "ptkp",
+            "tahun_pajak": 2026,
+            "nilai": {
+              "wajib_pajak_sendiri": 54000000,
+              "tambahan_kawin": 4500000,
+              "tambahan_tanggungan": 4500000,
+              "maksimal_tanggungan": 3
+            },
+            "dasar_hukum": "UU PPh Pasal 7 ayat (1); PMK No. 101/PMK.010/2016",
+            "terakhir_dicek": "2026-09-22",
+            "didefinisikan_oleh": [
+              {
+                "peraturan": "PMK 101 Tahun 2016",
+                "pasal": [],
+                "status": "berlaku"
+              },
+              {
+                "peraturan": "UU 7 Tahun 1983",
+                "pasal": [
+                  "7"
+                ],
+                "status": "berlaku_diubah"
+              }
+            ],
+            "peringatan": [],
+            "sumber": [
+              "PMK 101 Tahun 2016",
+              "UU 7 Tahun 1983"
+            ]
+          }
+        },
+        {
+          "tool": "find_legal_basis",
+          "argumen": {
+            "topic": "ptkp"
+          },
+          "hasil": {
+            "berhasil": true,
+            "topik": "ptkp",
+            "judul": "Penghasilan Tidak Kena Pajak",
+            "rujukan": [
+              "UU PPh Pasal 7 ayat (1)",
+              "PMK No. 101/PMK.010/2016"
+            ],
+            "ringkasan": "PTKP untuk diri Wajib Pajak orang pribadi Rp54.000.000 setahun, tambahan Rp4.500.000 untuk WP kawin, dan tambahan Rp4.500.000 untuk setiap anggota keluarga sedarah/semenda dalam garis keturunan lurus serta anak angkat yang menjadi tanggungan sepenuhnya, paling banyak 3 orang.\n",
+            "lokasi_dasar_hukum": [
+              {
+                "rujukan": "PMK No. 101/PMK.010/2016",
+                "peraturan": "PMK 101 Tahun 2016",
+                "pasal": null,
+                "halaman_pdf": null,
+                "tautan": "https://jdih.kemenkeu.go.id/dok/101-pmk-010-2016"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "g-06",
+      "kategori": "graf_relasi",
+      "tag": [],
+      "perilaku": "graf",
+      "tool_harapan": null,
+      "tool_dipanggil": [
+        "find_regulation",
+        "amendment_chain",
+        "search_text",
+        "search_text",
+        "get_article"
+      ],
+      "tool_hitung_pertama": null,
+      "tool_hitung_akhir": null,
+      "tool_benar": true,
+      "tool_benar_percobaan_pertama": true,
+      "argumen_benar": null,
+      "field_benar": 0,
+      "field_total": 0,
+      "argumen_salah": {},
+      "argumen_aktual": {},
+      "pph_harapan": null,
+      "pph_aktual": null,
+      "angka_benar": null,
+      "perilaku_benar": true,
+      "galat_tool": 0,
+      "tool_halusinasi": [],
+      "putaran": 7,
+      "detik": 39.63,
+      "jawaban": "Koreksi: daftar sebelumnya keliru pada bagian pencabutan sebagian. **Pasal 72 PP 55 Tahun 2022** menyebut pencabutan berikut:\n\n- **PP 18 Tahun 2009** — dicabut seluruhnya.\n- **Pasal 2A PP 94 Tahun 2010** — ketentuan tersebut dicabut.\n- **PP 23 Tahun 2018** — dicabut seluruhnya.\n- **Pasal 10 PP 29 Tahun 2020** — ketentuan tersebut dicabut.\n- **PP 30 Tahun 2020** — dicabut seluruhnya.\n\nRujukan: [PP 55 Tahun 2022 Pasal 72, halaman PDF 66](https://jdih.kemenkeu.go.id/api/download/CAB6EC99-3DBC-47C6-ADBF-EA5F0F7117D6/55TAHUN2022PP.pdf#page=66).\n\n**Asumsi yang dipakai:** Saya menafsirkan pertanyaan sebagai daftar pencabutan yang ditetapkan Pasal 72, termasuk pencabutan atas pasal tertentu saja.\n\nCatatan pemeriksa sitasi otomatis: sitasi berikut belum terverifikasi; periksa sumbernya sebelum dipakai.\n- Pasal 2A PP 94 Tahun 2010: pasal itu tidak ada di teks PP 94 Tahun 2010 pada graf",
+      "error": null,
+      "galat_api": [],
+      "perilaku_benar_satu_giliran": true,
+      "tool_graf": 5,
+      "klarifikasi": false,
+      "sitasi_belum_terverifikasi": [
+        "Pasal 2A PP 94 Tahun 2010: pasal itu tidak ada di teks PP 94 Tahun 2010 pada graf"
+      ],
+      "sitasi_diperiksa": true,
+      "sitasi_audit_ablasi": [],
+      "sitasi_dikoreksi": [
+        "Pasal 2A PP 94 Tahun 2010: pasal itu tidak ada di teks PP 94 Tahun 2010 pada graf",
+        "Pasal 2A PP 45 Tahun 2019: pasal itu tidak ada di teks PP 45 Tahun 2019 pada graf"
+      ],
+      "status_distempel": [],
+      "angka_tanpa_sumber": [],
+      "pph_di_jawaban": null,
+      "token_masuk": 141822,
+      "token_keluar": 750,
+      "jejak": [
+        {
+          "tool": "find_regulation",
+          "argumen": {
+            "regulation": "PP 55 Tahun 2022"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": [
+              {
+                "peraturan": "PP 55 Tahun 2022",
+                "judul": "Penyesuaian Pengaturan di Bidang Pajak Penghasilan",
+                "teks_tersedia": true,
+                "url": "https://jdih.kemenkeu.go.id/dok/pp-55-tahun-2022",
+                "berkas_pdf": "https://jdih.kemenkeu.go.id/api/download/CAB6EC99-3DBC-47C6-ADBF-EA5F0F7117D6/55TAHUN2022PP.pdf",
+                "status": "berlaku_diubah",
+                "sejak": "2026-04-22",
+                "oleh": [
+                  "PERPRES 20 Tahun 2026",
+                  "PP 20 Tahun 2026"
+                ],
+                "pasal_gugur": [],
+                "ayat_gugur": {},
+                "pasti": false,
+                "catatan": []
+              }
+            ],
+            "sumber": [
+              "PP 55 Tahun 2022",
+              "PERPRES 20 Tahun 2026",
+              "PP 20 Tahun 2026"
+            ]
+          }
+        },
+        {
+          "tool": "amendment_chain",
+          "argumen": {
+            "regulation": "PP 55 Tahun 2022"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": "PP 55 Tahun 2022",
+            "status": "berlaku_diubah",
+            "sejak": "2026-04-22",
+            "oleh": [
+              "PERPRES 20 Tahun 2026",
+              "PP 20 Tahun 2026"
+            ],
+            "pasal_gugur": [],
+            "ayat_gugur": {},
+            "pasti": false,
+            "catatan": [],
+            "diubah_atau_dicabut_oleh": [
+              {
+                "jenis": "mengubah",
+                "peraturan": "PERPRES 20 Tahun 2026",
+                "bukti": "eksplisit",
+                "sumber": "teks",
+                "berlaku_efektif": "2026-04-22",
+                "tanggal_perkiraan": true,
+                "lewat": null,
+                "pasal_bukti": "Pasal I",
+                "pasal_terdampak": [
+                  "20A",
+                  "56",
+                  "57",
+                  "58",
+                  "59"
+                ],
+                "kutipan": "Pasal I Beberapa ketentuan dalam Peraturan Pemerintah Nomor 55 Tahun 2022 tentang Penyesuaian Pengaturan di Bidang Pajak Penghasilan (Lembaran Negara Republik Indonesia Tahun 2022 Nomor 231, Tambahan Lembaran Negara Republik Indonesia Nomor 6836), diubah sebagai berikut",
+                "status_peraturan": "berlaku"
+              },
+              {
+                "jenis": "mengubah",
+                "peraturan": "PP 20 Tahun 2026",
+                "bukti": "eksplisit",
+                "sumber": "jdih+teks",
+                "berlaku_efektif": "2026-04-22",
+                "tanggal_perkiraan": false,
+                "lewat": null,
+                "pasal_bukti": "Pasal I",
+                "pasal_terdampak": [
+                  "20A",
+                  "56",
+                  "57",
+                  "58",
+                  "59"
+                ],
+                "kutipan": "Pasal I Beberapa ketentuan dalam Peraturan Pemerintah Nomor 55 Tahun 2022 tentang Penyesuaian Pengaturan di Bidang Pajak Penghasilan (Lembaran Negara Republik Indonesia Tahun 2022 Nomor 231, Tambahan Lembaran Negara Republik Indonesia Nomor 6836), diubah sebagai berikut:",
+                "status_peraturan": "berlaku"
+              }
+            ],
+            "mengubah_atau_mencabut": [
+              {
+                "jenis": "mencabut",
+                "peraturan": "PP 18 Tahun 2009",
+                "bukti": "eksplisit",
+                "sumber": "jdih+teks",
+                "berlaku_efektif": "2022-12-20",
+                "tanggal_perkiraan": false,
+                "lewat": null,
+                "pasal_bukti": "Pasal 72",
+                "pasal_terdampak": [],
+                "kutipan": "Pasal 72 Pada saat Peraturan Pemerintah ini mulai berlaku: a. Peraturan Pemerintah Nomor 18 Tahun 2009 tentang Bantuan atau Sumbangan Termasuk Zakat atau Sumbangan Keagamaan yang Sifatnya Wajib yang Dikecualikan dari Objek Pajak Penghasilan (Lembaran Negara Republik Indonesia Tahun 2009 Nomor 35, Tambahan Lembaran Negara Republik Indonesia Nomor 4984), dicabut dan dinyatakan tidak berlaku; b.",
+                "status_peraturan": "dicabut"
+              },
+              {
+                "jenis": "mencabut",
+                "peraturan": "PP 23 Tahun 2018",
+                "bukti": "eksplisit",
+                "sumber": "jdih+teks",
+                "berlaku_efektif": "2022-12-20",
+                "tanggal_perkiraan": false,
+                "lewat": null,
+                "pasal_bukti": "Pasal 72",
+                "pasal_terdampak": [],
+                "kutipan": "Peraturan Pemerintah Nomor 23 Tahun 2018 tentang Pajak Penghasilan atas Penghasilan dari Usaha yang Diterima atau Diperoleh Wajib Pajak yang Memiliki Peredaran Bruto Tertentu (Lembaran Negara Republik Indonesia Tahun 2018 Nomor 89, Tambahan Lembaran Negara Republik Indonesia Nomor 6214), dicabut dan dinyatakan tidak berlaku; d.",
+                "status_peraturan": "dicabut"
+              },
+              {
+                "jenis": "mencabut",
+                "peraturan": "PP 30 Tahun 2020",
+                "bukti": "eksplisit",
+                "sumber": "jdih+teks",
+                "berlaku_efektif": "2022-12-20",
+                "tanggal_perkiraan": false,
+                "lewat": null,
+                "pasal_bukti": "Pasal 72",
+                "pasal_terdampak": [],
+                "kutipan": "Peraturan Pemerintah Nomor 30 Tahun 2020 tentang Penurunan Tarif Pajak Penghasilan bagi Wajib Pajak Badan Dalam Negeri yang Berbentuk Perseroan Terbuka (Lembaran Negara Republik Indonesia Tahun 2020 Nomor 152, Tambahan Lembaran Negara Republik Indonesia Nomor 6530), dicabut dan dinyatakan tidak berlaku.",
+                "status_peraturan": "dicabut"
+              },
+              {
+                "jenis": "mencabut",
+                "peraturan": "PP 29 Tahun 2020",
+                "bukti": "eksplisit",
+                "sumber": "jdih",
+                "berlaku_efektif": "2022-12-20",
+                "tanggal_perkiraan": false,
+                "lewat": null,
+                "pasal_bukti": "Pasal 72",
+                "pasal_terdampak": [],
+                "kutipan": "ketentuan Pasal 10 Peraturan Pemerintah Nomor 29 Tahun 2020 tentang Fasilitas Pajak Penghasilan dalam rangka Penanganan Corona Virus Disease 2019 (COVID-19) (Lembaran Negara Republik Indonesia Tahun 2020 Nomor 148, Tambahan Lembaran Negara Republik Indonesia Nomor 6526), dicabut dan dinyatakan tidak berlaku; dan e.",
+                "status_peraturan": "dicabut"
+              },
+              {
+                "jenis": "mencabut_sebagian",
+                "peraturan": "PP 29 Tahun 2020",
+                "bukti": "eksplisit",
+                "sumber": "teks",
+                "berlaku_efektif": "2022-12-20",
+                "tanggal_perkiraan": false,
+                "lewat": null,
+                "pasal_bukti": "Pasal 72",
+                "pasal_terdampak": [
+                  "10"
+                ],
+                "kutipan": "SK No 156779 A PRESIDEN REPUBLIK INDONESIA - 67 - c. Peraturan Pemerintah Nomor 23 Tahun 2018 tentang Pajak Penghasilan atas Penghasilan dari Usaha yang Diterima atau Diperoleh Wajib Pajak yang Memiliki Peredaran Bruto Tertentu (Lembaran Negara Republik Indonesia Tahun 2018 Nomor 89, Tambahan Lembaran Negara Republik Indonesia Nomor 6214), dicabut dan dinyatakan tidak berlaku; d. ketentuan Pasal 1",
+                "status_peraturan": "dicabut"
+              },
+              {
+                "jenis": "mencabut_sebagian",
+                "peraturan": "PP 94 Tahun 2010",
+                "bukti": "eksplisit",
+                "sumber": "jdih+teks",
+                "berlaku_efektif": "2022-12-20",
+                "tanggal_perkiraan": false,
+                "lewat": null,
+                "pasal_bukti": "Pasal 72",
+                "pasal_terdampak": [
+                  "2A"
+                ],
+                "kutipan": "Pasal 72 Pada saat Peraturan Pemerintah ini mulai berlaku: a. Peraturan Pemerintah Nomor 18 Tahun 2009 tentang Bantuan atau Sumbangan Termasuk Zakat atau Sumbangan Keagamaan yang Sifatnya Wajib yang Dikecualikan dari Objek Pajak Penghasilan (Lembaran Negara Republik Indonesia Tahun 2009 Nomor 35, Tambahan Lembaran Negara Republik Indonesia Nomor 4984), dicabut dan dinyatakan tidak berlaku; b. kete",
+                "status_peraturan": "berlaku_sebagian"
+              },
+              {
+                "jenis": "mencabut_sebagian",
+                "peraturan": "PP 45 Tahun 2019",
+                "bukti": "tersirat",
+                "sumber": "jdih",
+                "berlaku_efektif": "2022-12-20",
+                "tanggal_perkiraan": false,
+                "lewat": "PP 94 Tahun 2010",
+                "pasal_bukti": "Pasal 72",
+                "pasal_terdampak": [
+                  "2A"
+                ],
+                "kutipan": "Pasal 72 Pada saat Peraturan Pemerintah ini mulai berlaku: a. Peraturan Pemerintah Nomor 18 Tahun 2009 tentang Bantuan atau Sumbangan Termasuk Zakat atau Sumbangan Keagamaan yang Sifatnya Wajib yang Dikecualikan dari Objek Pajak Penghasilan (Lembaran Negara Republik Indonesia Tahun 2009 Nomor 35, Tambahan Lembaran Negara Republik Indonesia Nomor 4984), dicabut dan dinyatakan tidak berlaku; b. kete",
+                "status_peraturan": "berlaku_sebagian"
+              },
+              {
+                "jenis": "mencabut_sebagian",
+                "peraturan": "PP 9 Tahun 2021",
+                "bukti": "eksplisit",
+                "sumber": "jdih+teks",
+                "berlaku_efektif": "2022-12-20",
+                "tanggal_perkiraan": false,
+                "lewat": null,
+                "pasal_bukti": "Pasal 72",
+                "pasal_terdampak": [
+                  "2A"
+                ],
+                "kutipan": "ketentuan Pasal 2A Peraturan Pemerintah Nomor 94 Tahun 2010 tentang Penghitungan Penghasilan Kena Pajak dan Pelunasan Pajak Penghasilan dalam Tahun Berjalan (Lembaran Negara Republik Indonesia Tahun 2010 Nomor 161, Tambahan Lembaran Negara Republik Indonesia Nomor 5183) sebagaimana telah beberapa kali diubah terakhir dengan Peraturan Pemerintah Nomor 9 Tahun 2021 tentang Perlakuan Perpajakan untuk",
+                "status_peraturan": "berlaku_sebagian"
+              }
+            ],
+            "sumber": [
+              "PP 55 Tahun 2022",
+              "PERPRES 20 Tahun 2026",
+              "PP 20 Tahun 2026",
+              "PP 18 Tahun 2009",
+              "PP 23 Tahun 2018",
+              "PP 30 Tahun 2020",
+              "PP 29 Tahun 2020",
+              "PP 29 Tahun 2020",
+              "PP 94 Tahun 2010",
+              "PP 45 Tahun 2019",
+              "PP 9 Tahun 2021"
+            ]
+          }
+        },
+        {
+          "tool": "search_text",
+          "argumen": {
+            "query": "PP 55 Tahun 2022 Pasal 72 pencabutan peraturan dan ketentuan yang dicabut",
+            "regulation": "PP 55 Tahun 2022",
+            "date": "2026-11-17",
+            "in_force_only": false
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "metode": "semantik Gemini",
+            "hasil": [
+              {
+                "id": "PP 55 Tahun 2022#86",
+                "peraturan": "PP 55 Tahun 2022",
+                "pasal": "Pasal 72",
+                "halaman_pdf": 66,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/CAB6EC99-3DBC-47C6-ADBF-EA5F0F7117D6/55TAHUN2022PP.pdf#page=66",
+                "status_peraturan": "berlaku_diubah",
+                "pasal_gugur": false,
+                "skor": 0.93,
+                "teks": "Pasal 72\nPada saat Peraturan Pemerintah ini mulai berlaku:\na. Peraturan Pemerintah Nomor 18 Tahun 2009 tentang\nBantuan atau Sumbangan Termasuk\nZakat\natau\nSumbangan Keagamaan yang Sifatnya\nWajib yang\nDikecualikan dari Objek Pajak Penghasilan (Lembaran\nNegara Republik Indonesia Tahun 2009 Nomor 35,\nTambahan Lembaran Negara Republik Indonesia Nomor\n4984), dicabut dan dinyatakan tidak berlaku;\nb. ketentuan Pasal 2A Peraturan Pemerintah Nomor 94 Tahun\n2010 tentang Penghitungan Penghasilan Kena Pajak dan\nPelunasan Pajak Penghasilan dalam Tahun Berjalan\n(Lembaran Negara Republik Indonesia Tahun 2010 Nomor\n161, Tambahan Lembaran Negara Republik Indonesia\nNomor 5183) sebagaimana telah beberapa kali diubah\nterakhir dengan Peraturan Pemerintah Nomor 9 Tahun\n2021 tentang Perlakuan Perpajakan untuk Mendukung\nKemudahan Berusaha (Lembaran Negara Republik\nIndonesia Tahun 2021 Nomor 19, Tambahan Lembaran"
+              },
+              {
+                "id": "PP 55 Tahun 2022#85",
+                "peraturan": "PP 55 Tahun 2022",
+                "pasal": "Pasal 71",
+                "halaman_pdf": 66,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/CAB6EC99-3DBC-47C6-ADBF-EA5F0F7117D6/55TAHUN2022PP.pdf#page=66",
+                "status_peraturan": "berlaku_diubah",
+                "pasal_gugur": false,
+                "skor": 0.9,
+                "teks": "Pasal 71\nPada saat Peraturan Pemerintah ini mulai berlaku, semua\nperaturan pelaksanaan dari Undang-Undang Nomor 7 Tahun\n1983 tentang Pajak Penghasilan (Lembaran Negara Republik\nIndonesia Tahun 1983 Nomor 50, Tambahan Lembaran Negara\nRepublik Indonesia Nomor 3263) sebagaimana telah beberapa\nkali diubah terakhir dengan Undang-Undang Nomor 11 Tahun\n2020 tentang Cipta Kerja (Lembaran Negara Republik Indonesia\nTahun 2020 Nomor 245, Tambahan Lembaran Negara Republik\nIndonesia Nomor 6573), dinyatakan masih tetap berlaku\nsepanjang tidak bertentangan dengan ketentuan dalam\nPeraturan Pemerintah ini.\n"
+              },
+              {
+                "id": "PP 55 Tahun 2022#0",
+                "peraturan": "PP 55 Tahun 2022",
+                "pasal": "Pembukaan",
+                "halaman_pdf": 1,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/CAB6EC99-3DBC-47C6-ADBF-EA5F0F7117D6/55TAHUN2022PP.pdf#page=1",
+                "status_peraturan": "berlaku_diubah",
+                "pasal_gugur": false,
+                "skor": 0.89,
+                "teks": "SALINAN\nPRESIDEN\nREPUBLIK INDONESIA\nPERATURAN PEMERINTAH REPUBLIK INDONESIA\nNOMOR 55 TAHUN 2022\nTENTANG\nPENYESUAIAN PENGATURAN DI BIDANG PAJAK PENGHASILAN\nDENGAN RAHMAT TUHAN YANG MAHA ESA\nPRESIDEN REPUBLIK INDONESIA,\nMenimbang : a. bahwa\nuntuk\nmemberikan\nkepastian hukum,\npenyederhanaan administrasi perpajakan, kemudahan,\ndan keadilan kepada wajib pajak yang memiliki peredaran\nbruto tertentu dalam jangka waktu tertentu, serta untuk\nmelaksanakan perjanjian internasional di bidang\nperpajakan dengan tetap memperhatikan tata kelola\npemerintahan yang baik, perlu diberikan kebijakan fiskal\nmelalui penyesuaian pengaturan di bidang pajak\npenghasilan;\nb. bahwa dengan telah diundangkannya Undang-Undang\nNomor 7 Tahun 2021 tentang Harmonisasi Peraturan\nPerpajakan, perlu penyesuaian pengaturan kebijakan\nperpajakan yang bersifat komprehensif dan konsolidatif;\nbahwa berdasarkan pertimbangan sebagaimana"
+              },
+              {
+                "id": "PP 55 Tahun 2022#1",
+                "peraturan": "PP 55 Tahun 2022",
+                "pasal": "Penetapan",
+                "halaman_pdf": 2,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/CAB6EC99-3DBC-47C6-ADBF-EA5F0F7117D6/55TAHUN2022PP.pdf#page=2",
+                "status_peraturan": "berlaku_diubah",
+                "pasal_gugur": false,
+                "skor": 0.89,
+                "teks": ":\nMenetapkan : PERATURAN\nPEMERINTAH\nTENTANG\nPENYESUAIAN\nPENGATURAN DI BIDANG PAJAK PENGHASILAN.\nBAB I\nKETENTUAN UMUM\n"
+              },
+              {
+                "id": "PP 55 Tahun 2022#81",
+                "peraturan": "PP 55 Tahun 2022",
+                "pasal": "Pasal 69 ayat (2)",
+                "halaman_pdf": 63,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/CAB6EC99-3DBC-47C6-ADBF-EA5F0F7117D6/55TAHUN2022PP.pdf#page=63",
+                "status_peraturan": "berlaku_diubah",
+                "pasal_gugur": false,
+                "skor": 0.89,
+                "teks": "(2) Wajib Pajak orang pribadi dan Wajib Pajak badan\nberbentuk koperasi, persekutuan komanditer, firma,\natau perseroan terbatas yang\nterdaftar sebelum\nberlakunya Peraturan Pemerintah ini dan tidak lagi\nmemenuhi syarat untuk menjalankan kewajiban\nperpajakan berdasarkan Peraturan Pemerintah Nomor 23\nTahun 2018 tentang Pajak Penghasilan atas Penghasilan\ndari Usaha yang Diterima atau Diperoleh Wajib Pajak\nyang Memiliki Peredaran Bruto Tertentu, tidak dapat\ndikenai Pajak Penghasilan bersifat final berdasarkan\nPeraturan Pemerintah ini.\nBAB XIII\nKETENTUAN PENUTUP\n"
+              }
+            ],
+            "dibuang_tidak_berlaku": 0,
+            "sumber": [
+              "PP 55 Tahun 2022#86",
+              "PP 55 Tahun 2022#85",
+              "PP 55 Tahun 2022#0",
+              "PP 55 Tahun 2022#1",
+              "PP 55 Tahun 2022#81",
+              "PP 55 Tahun 2022"
+            ]
+          }
+        },
+        {
+          "tool": "search_text",
+          "argumen": {
+            "query": "Pasal 72 PP 55 Tahun 2022 huruf c d e: pencabutan PP 23 Tahun 2018, Pasal 10 PP 29 Tahun 2020, PP 30 Tahun 2020",
+            "regulation": "PP 55 Tahun 2022",
+            "date": "2026-11-17",
+            "in_force_only": false
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "metode": "semantik Gemini",
+            "hasil": [
+              {
+                "id": "PP 55 Tahun 2022#86",
+                "peraturan": "PP 55 Tahun 2022",
+                "pasal": "Pasal 72",
+                "halaman_pdf": 66,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/CAB6EC99-3DBC-47C6-ADBF-EA5F0F7117D6/55TAHUN2022PP.pdf#page=66",
+                "status_peraturan": "berlaku_diubah",
+                "pasal_gugur": false,
+                "skor": 0.93,
+                "teks": "Pasal 72\nPada saat Peraturan Pemerintah ini mulai berlaku:\na. Peraturan Pemerintah Nomor 18 Tahun 2009 tentang\nBantuan atau Sumbangan Termasuk\nZakat\natau\nSumbangan Keagamaan yang Sifatnya\nWajib yang\nDikecualikan dari Objek Pajak Penghasilan (Lembaran\nNegara Republik Indonesia Tahun 2009 Nomor 35,\nTambahan Lembaran Negara Republik Indonesia Nomor\n4984), dicabut dan dinyatakan tidak berlaku;\nb. ketentuan Pasal 2A Peraturan Pemerintah Nomor 94 Tahun\n2010 tentang Penghitungan Penghasilan Kena Pajak dan\nPelunasan Pajak Penghasilan dalam Tahun Berjalan\n(Lembaran Negara Republik Indonesia Tahun 2010 Nomor\n161, Tambahan Lembaran Negara Republik Indonesia\nNomor 5183) sebagaimana telah beberapa kali diubah\nterakhir dengan Peraturan Pemerintah Nomor 9 Tahun\n2021 tentang Perlakuan Perpajakan untuk Mendukung\nKemudahan Berusaha (Lembaran Negara Republik\nIndonesia Tahun 2021 Nomor 19, Tambahan Lembaran"
+              },
+              {
+                "id": "PP 55 Tahun 2022#81",
+                "peraturan": "PP 55 Tahun 2022",
+                "pasal": "Pasal 69 ayat (2)",
+                "halaman_pdf": 63,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/CAB6EC99-3DBC-47C6-ADBF-EA5F0F7117D6/55TAHUN2022PP.pdf#page=63",
+                "status_peraturan": "berlaku_diubah",
+                "pasal_gugur": false,
+                "skor": 0.9,
+                "teks": "(2) Wajib Pajak orang pribadi dan Wajib Pajak badan\nberbentuk koperasi, persekutuan komanditer, firma,\natau perseroan terbatas yang\nterdaftar sebelum\nberlakunya Peraturan Pemerintah ini dan tidak lagi\nmemenuhi syarat untuk menjalankan kewajiban\nperpajakan berdasarkan Peraturan Pemerintah Nomor 23\nTahun 2018 tentang Pajak Penghasilan atas Penghasilan\ndari Usaha yang Diterima atau Diperoleh Wajib Pajak\nyang Memiliki Peredaran Bruto Tertentu, tidak dapat\ndikenai Pajak Penghasilan bersifat final berdasarkan\nPeraturan Pemerintah ini.\nBAB XIII\nKETENTUAN PENUTUP\n"
+              },
+              {
+                "id": "PP 55 Tahun 2022#85",
+                "peraturan": "PP 55 Tahun 2022",
+                "pasal": "Pasal 71",
+                "halaman_pdf": 66,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/CAB6EC99-3DBC-47C6-ADBF-EA5F0F7117D6/55TAHUN2022PP.pdf#page=66",
+                "status_peraturan": "berlaku_diubah",
+                "pasal_gugur": false,
+                "skor": 0.9,
+                "teks": "Pasal 71\nPada saat Peraturan Pemerintah ini mulai berlaku, semua\nperaturan pelaksanaan dari Undang-Undang Nomor 7 Tahun\n1983 tentang Pajak Penghasilan (Lembaran Negara Republik\nIndonesia Tahun 1983 Nomor 50, Tambahan Lembaran Negara\nRepublik Indonesia Nomor 3263) sebagaimana telah beberapa\nkali diubah terakhir dengan Undang-Undang Nomor 11 Tahun\n2020 tentang Cipta Kerja (Lembaran Negara Republik Indonesia\nTahun 2020 Nomor 245, Tambahan Lembaran Negara Republik\nIndonesia Nomor 6573), dinyatakan masih tetap berlaku\nsepanjang tidak bertentangan dengan ketentuan dalam\nPeraturan Pemerintah ini.\n"
+              },
+              {
+                "id": "PP 55 Tahun 2022#0",
+                "peraturan": "PP 55 Tahun 2022",
+                "pasal": "Pembukaan",
+                "halaman_pdf": 1,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/CAB6EC99-3DBC-47C6-ADBF-EA5F0F7117D6/55TAHUN2022PP.pdf#page=1",
+                "status_peraturan": "berlaku_diubah",
+                "pasal_gugur": false,
+                "skor": 0.89,
+                "teks": "SALINAN\nPRESIDEN\nREPUBLIK INDONESIA\nPERATURAN PEMERINTAH REPUBLIK INDONESIA\nNOMOR 55 TAHUN 2022\nTENTANG\nPENYESUAIAN PENGATURAN DI BIDANG PAJAK PENGHASILAN\nDENGAN RAHMAT TUHAN YANG MAHA ESA\nPRESIDEN REPUBLIK INDONESIA,\nMenimbang : a. bahwa\nuntuk\nmemberikan\nkepastian hukum,\npenyederhanaan administrasi perpajakan, kemudahan,\ndan keadilan kepada wajib pajak yang memiliki peredaran\nbruto tertentu dalam jangka waktu tertentu, serta untuk\nmelaksanakan perjanjian internasional di bidang\nperpajakan dengan tetap memperhatikan tata kelola\npemerintahan yang baik, perlu diberikan kebijakan fiskal\nmelalui penyesuaian pengaturan di bidang pajak\npenghasilan;\nb. bahwa dengan telah diundangkannya Undang-Undang\nNomor 7 Tahun 2021 tentang Harmonisasi Peraturan\nPerpajakan, perlu penyesuaian pengaturan kebijakan\nperpajakan yang bersifat komprehensif dan konsolidatif;\nbahwa berdasarkan pertimbangan sebagaimana"
+              },
+              {
+                "id": "PP 55 Tahun 2022#80",
+                "peraturan": "PP 55 Tahun 2022",
+                "pasal": "Pasal 69 ayat (1)",
+                "halaman_pdf": 62,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/CAB6EC99-3DBC-47C6-ADBF-EA5F0F7117D6/55TAHUN2022PP.pdf#page=62",
+                "status_peraturan": "berlaku_diubah",
+                "pasal_gugur": false,
+                "skor": 0.89,
+                "teks": "Pasal 69\n(1) Penghitungan jangka waktu pengenaan\nPajak\nPenghasilan bersifat final bagi Wajib Pajak orang pribadi\ndan Wajib Pajak badan berbentuk koperasi, persekutuan\nkomanditer, firma, atau perseroan terbatas yang\nterdaftar:\na. sebelum berlakunya Peraturan Pemerintah Nomor 23\nTahun 2018 tentang Pajak Penghasilan atas\nPenghasilan dari Usaha yang Diterima atau Diperoleh\nWajib Pajak yang Memiliki Peredaran Bruto Tertentu,\njangka waktu pengenaan Pajak Penghasilan bersifat\nfinal dihitung sejak Tahun Pajak 2018 sampai dengan:\n1. berakhirnya jangka waktu sebagaimana dimaksud\ndalam Pasal 5 Peraturan Pemerintah Nomor 23\nTahun 2018 tentang Pajak Penghasilan atas\nPenghasilan dari Usaha yang Diterima atau\nDiperoleh Wajib Pajak yang Memiliki Peredaran\nBruto Tertentu, sepanjang Wajib Pajak yang\nbersangkutan masih memenuhi kriteria untuk\ndikenai Pajak Penghasilan bersifat\nfinal\nberdasarkan Peraturan P"
+              }
+            ],
+            "dibuang_tidak_berlaku": 0,
+            "sumber": [
+              "PP 55 Tahun 2022#86",
+              "PP 55 Tahun 2022#81",
+              "PP 55 Tahun 2022#85",
+              "PP 55 Tahun 2022#0",
+              "PP 55 Tahun 2022#80",
+              "PP 55 Tahun 2022"
+            ]
+          }
+        },
+        {
+          "tool": "get_article",
+          "argumen": {
+            "regulation": "PP 55 Tahun 2022",
+            "article": "72",
+            "date": "2026-11-17"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": "PP 55 Tahun 2022",
+            "pasal": "72",
+            "label": [
+              "Pasal 72"
+            ],
+            "teks": "Pasal 72\nPada saat Peraturan Pemerintah ini mulai berlaku:\na. Peraturan Pemerintah Nomor 18 Tahun 2009 tentang\nBantuan atau Sumbangan Termasuk\nZakat\natau\nSumbangan Keagamaan yang Sifatnya\nWajib yang\nDikecualikan dari Objek Pajak Penghasilan (Lembaran\nNegara Republik Indonesia Tahun 2009 Nomor 35,\nTambahan Lembaran Negara Republik Indonesia Nomor\n4984), dicabut dan dinyatakan tidak berlaku;\nb. ketentuan Pasal 2A Peraturan Pemerintah Nomor 94 Tahun\n2010 tentang Penghitungan Penghasilan Kena Pajak dan\nPelunasan Pajak Penghasilan dalam Tahun Berjalan\n(Lembaran Negara Republik Indonesia Tahun 2010 Nomor\n161, Tambahan Lembaran Negara Republik Indonesia\nNomor 5183) sebagaimana telah beberapa kali diubah\nterakhir dengan Peraturan Pemerintah Nomor 9 Tahun\n2021 tentang Perlakuan Perpajakan untuk Mendukung\nKemudahan Berusaha (Lembaran Negara Republik\nIndonesia Tahun 2021 Nomor 19, Tambahan Lembaran\nNegara Republik Indonesia Nomor 6621), dicabut dan\ndinyatakan tidak berlaku;\nc. Peraturan . . .\nSK No 156779 A\nPRESIDEN\nREPUBLIK INDONESIA\n- 67 -\nc. Peraturan Pemerintah Nomor 23 Tahun 2018 tentang Pajak\nPenghasilan atas Penghasilan dari Usaha yang Diterima\natau Diperoleh Wajib Pajak yang Memiliki Peredaran Bruto\nTertentu (Lembaran Negara Republik Indonesia Tahun 2018\nNomor 89, Tambahan Lembaran Negara Republik Indonesia\nNomor 6214), dicabut dan dinyatakan tidak berlaku;\nd. ketentuan Pasal 10 Peraturan Pemerintah Nomor 29 Tahun\n2020 tentang Fasilitas Pajak Penghasilan dalam rangka\nPenanganan Corona Virus Disease 2019 (COVID-19)\n(Lembaran Negara Republik Indonesia Tahun 2020 Nomor\n148, Tambahan Lembaran Negara Republik Indonesia\nNomor 6526), dicabut dan dinyatakan tidak berlaku; dan\ne. Peraturan Pemerintah Nomor 30 Tahun 2020 tentang\nPenurunan Tarif Pajak Penghasilan bagi Wajib Pajak Badan\nDalam Negeri yang Berbentuk Perseroan Terbuka\n(Lembaran Negara Republik Indonesia Tahun 2020 Nomor\n152, Tambahan Lembaran Negara Republik Indonesia\nNomor 6530), dicabut dan dinyatakan tidak berlaku.\n",
+            "halaman_pdf": 66,
+            "tautan": "https://jdih.kemenkeu.go.id/api/download/CAB6EC99-3DBC-47C6-ADBF-EA5F0F7117D6/55TAHUN2022PP.pdf#page=66",
+            "status_peraturan": "berlaku_diubah",
+            "peringatan": [],
+            "sumber": [
+              "PP 55 Tahun 2022",
+              "PP 55 Tahun 2022#86"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "g-07",
+      "kategori": "graf_status",
+      "tag": [],
+      "perilaku": "graf",
+      "tool_harapan": null,
+      "tool_dipanggil": [
+        "find_regulation",
+        "amendment_chain"
+      ],
+      "tool_hitung_pertama": null,
+      "tool_hitung_akhir": null,
+      "tool_benar": true,
+      "tool_benar_percobaan_pertama": true,
+      "argumen_benar": null,
+      "field_benar": 0,
+      "field_total": 0,
+      "argumen_salah": {},
+      "argumen_aktual": {},
+      "pph_harapan": null,
+      "pph_aktual": null,
+      "angka_benar": null,
+      "perilaku_benar": true,
+      "galat_tool": 0,
+      "tool_halusinasi": [],
+      "putaran": 3,
+      "detik": 33.02,
+      "jawaban": "Tidak. **PP 80 Tahun 2010 berstatus berlaku sebagian** pada **17 November 2026**. PP 58 Tahun 2023 mencabut **Pasal 2 ayat (3)** PP 80 Tahun 2010, efektif sejak **1 Januari 2024**. Tidak ada pasal atau ayat lain yang tercatat gugur dalam hasil penelusuran, jadi peraturan itu tidak dicabut seluruhnya.\n\n**Sumber:** PP 80 Tahun 2010 dan PP 58 Tahun 2023.",
+      "error": null,
+      "galat_api": [],
+      "perilaku_benar_satu_giliran": true,
+      "tool_graf": 2,
+      "klarifikasi": false,
+      "sitasi_belum_terverifikasi": [],
+      "sitasi_diperiksa": true,
+      "sitasi_audit_ablasi": [],
+      "sitasi_dikoreksi": [],
+      "status_distempel": [],
+      "angka_tanpa_sumber": [],
+      "pph_di_jawaban": null,
+      "token_masuk": 51260,
+      "token_keluar": 165,
+      "jejak": [
+        {
+          "tool": "find_regulation",
+          "argumen": {
+            "regulation": "PP 80 Tahun 2010"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": [
+              {
+                "peraturan": "PP 80 Tahun 2010",
+                "judul": "Tarif Pemotongan dan Pengenaan Pajak Penghasilan Pasal 21 atas Penghasilan yang Menjadi Beban Anggaran Pendapatan dan Belanja Negara atau Anggaran Pendapatan dan Belanja Daerah.",
+                "teks_tersedia": true,
+                "url": "https://jdih.kemenkeu.go.id/dok/pp-80-tahun-2010",
+                "berkas_pdf": "https://jdih.kemenkeu.go.id/api/download/756F0865-685F-4653-BCFC-B229D1A6C3E3/80TAHUN2010PP.HTM",
+                "status": "berlaku_sebagian",
+                "sejak": "2024-01-01",
+                "oleh": [
+                  "PP 58 Tahun 2023"
+                ],
+                "pasal_gugur": [],
+                "ayat_gugur": {
+                  "2": [
+                    "3"
+                  ]
+                },
+                "pasti": true,
+                "catatan": []
+              }
+            ],
+            "sumber": [
+              "PP 80 Tahun 2010",
+              "PP 58 Tahun 2023"
+            ]
+          }
+        },
+        {
+          "tool": "amendment_chain",
+          "argumen": {
+            "regulation": "PP 80 Tahun 2010"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": "PP 80 Tahun 2010",
+            "status": "berlaku_sebagian",
+            "sejak": "2024-01-01",
+            "oleh": [
+              "PP 58 Tahun 2023"
+            ],
+            "pasal_gugur": [],
+            "ayat_gugur": {
+              "2": [
+                "3"
+              ]
+            },
+            "pasti": true,
+            "catatan": [],
+            "diubah_atau_dicabut_oleh": [
+              {
+                "jenis": "mencabut_sebagian",
+                "peraturan": "PP 58 Tahun 2023",
+                "bukti": "eksplisit",
+                "sumber": "jdih+teks",
+                "berlaku_efektif": "2024-01-01",
+                "tanggal_perkiraan": false,
+                "lewat": null,
+                "pasal_bukti": "Pasal 4",
+                "pasal_terdampak": [
+                  "2(3)"
+                ],
+                "kutipan": "BAB III KETENTUAN PENUTUP Pasal 4 Pada saat Peraturan Pemerintah ini mulai berlaku, Pasal 2 ayat (3) Peraturan Pemerintah Nomor 80 Tahun 2010 tentang Tarif Pemotongan dan Pengenaan Pajak Penghasilan Pasal 21 atas Penghasilan yang Menjadi Beban Anggaran Pendapatan dan Belanja Negara atau Anggaran Pendapatan dan Belanja Daerah (Lembaran Negara Republik Indonesia Tahun 2010 Nomor 140, Tambahan Lembar",
+                "status_peraturan": "berlaku"
+              }
+            ],
+            "mengubah_atau_mencabut": [
+              {
+                "jenis": "mencabut",
+                "peraturan": "PP 45 Tahun 1994",
+                "bukti": "eksplisit",
+                "sumber": "jdih+teks",
+                "berlaku_efektif": "2011-01-01",
+                "tanggal_perkiraan": false,
+                "lewat": null,
+                "pasal_bukti": "Pasal 8",
+                "pasal_terdampak": [],
+                "kutipan": "Pasal 8 Pada saat Peraturan Pemerintah ini mulai berlaku, Peraturan Pemerintah Nomor 45 Tahun 1994 tentang Pajak Penghasilan bagi Pejabat Negara, Pegawai Negeri Sipil, Anggota Angkatan Bersenjat.a Republik Indonesia, dan Para Pensiunan atas Penghasilan yang Dibebankan kepada Keuangan Negara atau Keuangan Daerah (Lembaran Negara Republik Indonesia Tahun 1994 Nomor 74, Tambahan Lembaran Negara Repub",
+                "status_peraturan": "dicabut"
+              }
+            ],
+            "sumber": [
+              "PP 80 Tahun 2010",
+              "PP 58 Tahun 2023",
+              "PP 45 Tahun 1994"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "g-08",
+      "kategori": "graf_cari",
+      "tag": [],
+      "perilaku": "graf",
+      "tool_harapan": null,
+      "tool_dipanggil": [
+        "search_text",
+        "find_regulation",
+        "search_text"
+      ],
+      "tool_hitung_pertama": null,
+      "tool_hitung_akhir": null,
+      "tool_benar": true,
+      "tool_benar_percobaan_pertama": true,
+      "argumen_benar": null,
+      "field_benar": 0,
+      "field_total": 0,
+      "argumen_salah": {},
+      "argumen_aktual": {},
+      "pph_harapan": null,
+      "pph_aktual": null,
+      "angka_benar": null,
+      "perilaku_benar": true,
+      "galat_tool": 0,
+      "tool_halusinasi": [],
+      "putaran": 5,
+      "detik": 46.64,
+      "jawaban": "Maaf, rujukan sebelumnya tidak saya sajikan dengan tepat. Peraturan yang secara khusus mencakup bantuan atau sumbangan, termasuk zakat atau sumbangan keagamaan wajib, serta harta hibahan adalah **PMK 114 Tahun 2025**, yang berstatus berlaku pada 17 November 2026.\n\n- [PMK 114 Tahun 2025 Pasal 2, hlm. 4](https://jdih.kemenkeu.go.id/api/download/956C4A77-A4BB-4C97-A4A9-989BC6A98C79/2025pmkeuangan114.pdf#page=4) menjelaskan perlakuan bantuan, sumbangan, dan harta hibahan, termasuk pengecualian untuk zakat atau sumbangan keagamaan wajib.\n- [PMK 114 Tahun 2025 Pasal 9, hlm. 7](https://jdih.kemenkeu.go.id/api/download/956C4A77-A4BB-4C97-A4A9-989BC6A98C79/2025pmkeuangan114.pdf#page=7) memuat syarat zakat atau sumbangan keagamaan wajib agar dapat dikurangkan dari penghasilan bruto.\n\n### Sumber:\n- [PMK 114 Tahun 2025, teks peraturan](https://jdih.kemenkeu.go.id/dok/pmk-114-tahun-2025)",
+      "error": null,
+      "galat_api": [],
+      "perilaku_benar_satu_giliran": true,
+      "tool_graf": 3,
+      "klarifikasi": false,
+      "sitasi_belum_terverifikasi": [],
+      "sitasi_diperiksa": true,
+      "sitasi_audit_ablasi": [],
+      "sitasi_dikoreksi": [
+        "PMK 254 Tahun 2010 disebut tetapi tidak berasal dari hasil tool di percakapan ini"
+      ],
+      "status_distempel": [],
+      "angka_tanpa_sumber": [],
+      "pph_di_jawaban": null,
+      "token_masuk": 96516,
+      "token_keluar": 893,
+      "jejak": [
+        {
+          "tool": "search_text",
+          "argumen": {
+            "query": "Peraturan Menteri Keuangan yang khusus mengatur zakat atau sumbangan keagamaan yang dapat dikurangkan dari penghasilan bruto, beserta bantuan dan harta hibahan",
+            "date": "",
+            "in_force_only": true
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "metode": "full-text BM25",
+            "hasil": [
+              {
+                "id": "PMK 114 Tahun 2025#25",
+                "peraturan": "PMK 114 Tahun 2025",
+                "pasal": "Pasal 24",
+                "halaman_pdf": 16,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/956C4A77-A4BB-4C97-A4A9-989BC6A98C79/2025pmkeuangan114.pdf#page=16",
+                "status_peraturan": "berlaku",
+                "pasal_gugur": false,
+                "skor": 30.82,
+                "teks": "Pasal 24 \nPada saat Peraturan Menteri ini mulai berlaku:  \na. Peraturan Menteri Keuangan Nomor 245/PMK.03/2008 \ntentang Badan-badan dan Orang Pribadi yang Menjalankan \nUsaha Mikro dan Kecil yang Menerima Harta Hibah, \nBantuan, atau Sumbangan yang Tidak Termasuk sebagai \nObjek Pajak Penghasilan; \nb. Peraturan Menteri Keuangan Nomor 254/PMK.03/2010 \ntentang Tata Cara Pembebanan Zakat atau Sumbangan \nKeagamaan yang Sifatnya Wajib yang Dapat Dikurangkan \ndari Penghasilan Bruto (Berita Negara Republik Indonesia \nTahun 2010 Nomor 668); \nc. Peraturan Menteri Keuangan Nomor 76/PMK.03/2011 \ntentang Tata Cara Pencatatan dan Pelaporan Sumbangan \nPenanggulangan Bencana Nasional, Sumbangan Penelitian \ndan Pengembangan, Sumbangan Fasilitas Pendidikan, \nSumbangan Pembinaan Olahraga, dan Biaya Pembangunan \nInfrastruktur \nSosial \nyang \nDapat \nDikurangkan \ndari \nPenghasilan Bruto (Berita Negara Republik I"
+              },
+              {
+                "id": "PMK 114 Tahun 2025#24",
+                "peraturan": "PMK 114 Tahun 2025",
+                "pasal": "Pasal 23",
+                "halaman_pdf": 16,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/956C4A77-A4BB-4C97-A4A9-989BC6A98C79/2025pmkeuangan114.pdf#page=16",
+                "status_peraturan": "berlaku",
+                "pasal_gugur": false,
+                "skor": 30.69,
+                "teks": "Pasal 23 \nPada saat Peraturan Menteri ini mulai berlaku: \na. \nbiaya penyusutan atau amortisasi atas harta dalam \nbentuk barang yang diperoleh dari bantuan, sumbangan, \natau hibah sebelum berlakunya Peraturan Menteri ini, \ntidak dapat dikurangkan dari penghasilan bruto dalam \nmenentukan Penghasilan Kena Pajak sejak berlakunya \nPeraturan Menteri ini; dan \nb. \ndaftar badan atau lembaga yang telah ditetapkan sebagai \npenerima zakat atau sumbangan keagamaan yang sifatnya \nwajib yang dapat dikurangkan dari penghasilan bruto \nsebelum Peraturan Menteri ini berlaku, dinyatakan sah \ndan \ntetap \nberlaku \nsampai \ndengan \nditerbitkannya \nperaturan atau penetapan daftar badan atau lembaga yang \nbaru berdasarkan Peraturan Menteri ini. \n \nBAB V \nKETENTUAN PENUTUP \n \n"
+              },
+              {
+                "id": "PER-4/PJ/2026#0",
+                "peraturan": "PER-4/PJ/2026",
+                "pasal": "Pembukaan",
+                "halaman_pdf": 1,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/81b88742-77a0-4189-843a-649524d15466/PER-4_PJ_2026.pdf#page=1",
+                "status_peraturan": "berlaku",
+                "pasal_gugur": false,
+                "skor": 29.69,
+                "teks": "KEMENTERIAN KEUANGAN REPUBLIK INDONESIA\nPERATURAN DIREKTUR JENDERAL PAJAK\nNOMOR PER-4/PJ/2026\nTENTANG\nBADAN ATAU LEMBAGA YANG DIBENTUK ATAU DISAHKAN OLEH \nPEMERINTAH YANG DITETAPKAN SEBAGAI PENERIMA ZAKAT ATAU\nSUMBANGAN KEAGAMAAN YANG SIFATNYA WAJIB YANG DAPAT\nDIKURANGKAN DARI PENGHASILAN BRUTO\nDIREKTUR JENDERAL PAJAK,\nMenimbang\n:\na.\nbahwa ketentuan mengenai badan atau lembaga yang\ndibentuk atau disahkan oleh pemerintah yang ditetapkan\nsebagai penerima zakat atau sumbangan keagamaan yang\nsifatnya wajib yang dapat dikurangkan dari penghasilan\nbruto telah diatur dalam Peraturan Direktur Jenderal Pajak\nNomor PER-04/PJ/2022 tentang Badan atau Lembaga yang\nDibentuk atau Disahkan oleh Pemerintah yang Ditetapkan\nsebagai Penerima Zakat atau Sumbangan Keagamaan yang\nSifatnya Wajib yang Dapat Dikurangkan dari Penghasilan\nBruto sebagaimana telah beberapa kali diubah terakhir\ndengan Peraturan Direkt"
+              },
+              {
+                "id": "PMK 114 Tahun 2025#3",
+                "peraturan": "PMK 114 Tahun 2025",
+                "pasal": "Pasal 2",
+                "halaman_pdf": 4,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/956C4A77-A4BB-4C97-A4A9-989BC6A98C79/2025pmkeuangan114.pdf#page=4",
+                "status_peraturan": "berlaku",
+                "pasal_gugur": false,
+                "skor": 29.64,
+                "teks": "Pasal 2 \nHarta yang dihibahkan, bantuan, atau sumbangan tidak boleh \ndikurangkan dari penghasilan bruto untuk menentukan \nbesarnya Penghasilan Kena Pajak bagi Wajib Pajak pemberi, \nkecuali: \na. \nsumbangan untuk penanggulangan bencana nasional, \npenelitian dan pengembangan, fasilitas pendidikan, dan \npembinaan \nolahraga, \nserta \nbiaya \npembangunan \ninfrastruktur sosial; dan \nb. \nzakat yang dibayarkan kepada badan amil zakat atau \nlembaga amil zakat yang dibentuk atau disahkan oleh \npemerintah, atau sumbangan keagamaan yang sifatnya \nwajib bagi pemeluk agama selain agama Islam yang diakui \ndi Indonesia yang dibayarkan kepada lembaga keagamaan \nyang dibentuk atau disahkan oleh pemerintah. \n \nBagian Kedua  \nSumbangan untuk Penanggulangan Bencana Nasional, \nPenelitian dan Pengembangan, Fasilitas Pendidikan, dan \nPembinaan Olahraga, serta Biaya Pembangunan Infrastruktur \nSosial yang Dapat Diku"
+              },
+              {
+                "id": "PMK 114 Tahun 2025#10",
+                "peraturan": "PMK 114 Tahun 2025",
+                "pasal": "Pasal 9",
+                "halaman_pdf": 7,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/956C4A77-A4BB-4C97-A4A9-989BC6A98C79/2025pmkeuangan114.pdf#page=7",
+                "status_peraturan": "berlaku",
+                "pasal_gugur": false,
+                "skor": 29.43,
+                "teks": "Pasal 9 \n(1) \nZakat \natau \nsumbangan \nkeagamaan \nsebagaimana \ndimaksud dalam Pasal 8 ayat (1) dapat dikurangkan dari \npenghasilan bruto bagi Wajib Pajak pemberi dengan syarat: \na. \npembayaran zakat atau sumbangan keagamaan tidak \nmenyebabkan rugi fiskal pada Tahun Pajak zakat \natau sumbangan keagamaan dibayarkan; \nb. \ndidukung oleh bukti pembayaran yang sah; dan \nc. \nditerima oleh badan amil zakat, lembaga amil zakat, \natau lembaga keagamaan yang memiliki Nomor Pokok \nWajib Pajak. \n(2) \nBesarnya nilai zakat atau sumbangan keagamaan yang \nsifatnya wajib yang dapat dikurangkan dari penghasilan \nbruto sebagaimana dimaksud pada ayat (1) dibatasi tidak \nmelebihi besaran kewajiban sesuai dengan ketentuan \nagama masing-masing. \n \n\n- 8 - \n \n \n(3) \nDalam hal pembayaran zakat atau sumbangan keagamaan \nyang sifatnya wajib menyebabkan rugi fiskal sebagaimana \ndimaksud pada ayat (1) huruf a, besaran "
+              }
+            ],
+            "dibuang_tidak_berlaku": 0,
+            "sumber": [
+              "PMK 114 Tahun 2025#25",
+              "PMK 114 Tahun 2025#24",
+              "PER-4/PJ/2026#0",
+              "PMK 114 Tahun 2025#3",
+              "PMK 114 Tahun 2025#10",
+              "PER-4/PJ/2026",
+              "PMK 114 Tahun 2025"
+            ]
+          }
+        },
+        {
+          "tool": "find_regulation",
+          "argumen": {
+            "regulation": "PMK 114 Tahun 2025",
+            "date": ""
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": [
+              {
+                "peraturan": "PMK 114 Tahun 2025",
+                "judul": "Perlakuan atas Bantuan atau Sumbangan Termasuk Zakat atau Sumbangan Keagamaan yang Sifatnya Wajib, serta Harta Hibahan dalam Pajak Penghasilan",
+                "teks_tersedia": true,
+                "url": "https://jdih.kemenkeu.go.id/dok/pmk-114-tahun-2025",
+                "berkas_pdf": "https://jdih.kemenkeu.go.id/api/download/956C4A77-A4BB-4C97-A4A9-989BC6A98C79/2025pmkeuangan114.pdf",
+                "status": "berlaku",
+                "sejak": null,
+                "oleh": [],
+                "pasal_gugur": [],
+                "ayat_gugur": {},
+                "pasti": true,
+                "catatan": []
+              }
+            ],
+            "sumber": [
+              "PMK 114 Tahun 2025"
+            ]
+          }
+        },
+        {
+          "tool": "search_text",
+          "argumen": {
+            "query": "aturan yang mengatur zakat atau sumbangan keagamaan wajib yang dapat dikurangkan dari penghasilan bruto serta bantuan dan harta hibahan",
+            "date": "",
+            "in_force_only": true
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "metode": "full-text BM25",
+            "hasil": [
+              {
+                "id": "PMK 114 Tahun 2025#3",
+                "peraturan": "PMK 114 Tahun 2025",
+                "pasal": "Pasal 2",
+                "halaman_pdf": 4,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/956C4A77-A4BB-4C97-A4A9-989BC6A98C79/2025pmkeuangan114.pdf#page=4",
+                "status_peraturan": "berlaku",
+                "pasal_gugur": false,
+                "skor": 31.87,
+                "teks": "Pasal 2 \nHarta yang dihibahkan, bantuan, atau sumbangan tidak boleh \ndikurangkan dari penghasilan bruto untuk menentukan \nbesarnya Penghasilan Kena Pajak bagi Wajib Pajak pemberi, \nkecuali: \na. \nsumbangan untuk penanggulangan bencana nasional, \npenelitian dan pengembangan, fasilitas pendidikan, dan \npembinaan \nolahraga, \nserta \nbiaya \npembangunan \ninfrastruktur sosial; dan \nb. \nzakat yang dibayarkan kepada badan amil zakat atau \nlembaga amil zakat yang dibentuk atau disahkan oleh \npemerintah, atau sumbangan keagamaan yang sifatnya \nwajib bagi pemeluk agama selain agama Islam yang diakui \ndi Indonesia yang dibayarkan kepada lembaga keagamaan \nyang dibentuk atau disahkan oleh pemerintah. \n \nBagian Kedua  \nSumbangan untuk Penanggulangan Bencana Nasional, \nPenelitian dan Pengembangan, Fasilitas Pendidikan, dan \nPembinaan Olahraga, serta Biaya Pembangunan Infrastruktur \nSosial yang Dapat Diku"
+              },
+              {
+                "id": "PMK 114 Tahun 2025#10",
+                "peraturan": "PMK 114 Tahun 2025",
+                "pasal": "Pasal 9",
+                "halaman_pdf": 7,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/956C4A77-A4BB-4C97-A4A9-989BC6A98C79/2025pmkeuangan114.pdf#page=7",
+                "status_peraturan": "berlaku",
+                "pasal_gugur": false,
+                "skor": 31.28,
+                "teks": "Pasal 9 \n(1) \nZakat \natau \nsumbangan \nkeagamaan \nsebagaimana \ndimaksud dalam Pasal 8 ayat (1) dapat dikurangkan dari \npenghasilan bruto bagi Wajib Pajak pemberi dengan syarat: \na. \npembayaran zakat atau sumbangan keagamaan tidak \nmenyebabkan rugi fiskal pada Tahun Pajak zakat \natau sumbangan keagamaan dibayarkan; \nb. \ndidukung oleh bukti pembayaran yang sah; dan \nc. \nditerima oleh badan amil zakat, lembaga amil zakat, \natau lembaga keagamaan yang memiliki Nomor Pokok \nWajib Pajak. \n(2) \nBesarnya nilai zakat atau sumbangan keagamaan yang \nsifatnya wajib yang dapat dikurangkan dari penghasilan \nbruto sebagaimana dimaksud pada ayat (1) dibatasi tidak \nmelebihi besaran kewajiban sesuai dengan ketentuan \nagama masing-masing. \n \n\n- 8 - \n \n \n(3) \nDalam hal pembayaran zakat atau sumbangan keagamaan \nyang sifatnya wajib menyebabkan rugi fiskal sebagaimana \ndimaksud pada ayat (1) huruf a, besaran "
+              },
+              {
+                "id": "PMK 114 Tahun 2025#24",
+                "peraturan": "PMK 114 Tahun 2025",
+                "pasal": "Pasal 23",
+                "halaman_pdf": 16,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/956C4A77-A4BB-4C97-A4A9-989BC6A98C79/2025pmkeuangan114.pdf#page=16",
+                "status_peraturan": "berlaku",
+                "pasal_gugur": false,
+                "skor": 31.07,
+                "teks": "Pasal 23 \nPada saat Peraturan Menteri ini mulai berlaku: \na. \nbiaya penyusutan atau amortisasi atas harta dalam \nbentuk barang yang diperoleh dari bantuan, sumbangan, \natau hibah sebelum berlakunya Peraturan Menteri ini, \ntidak dapat dikurangkan dari penghasilan bruto dalam \nmenentukan Penghasilan Kena Pajak sejak berlakunya \nPeraturan Menteri ini; dan \nb. \ndaftar badan atau lembaga yang telah ditetapkan sebagai \npenerima zakat atau sumbangan keagamaan yang sifatnya \nwajib yang dapat dikurangkan dari penghasilan bruto \nsebelum Peraturan Menteri ini berlaku, dinyatakan sah \ndan \ntetap \nberlaku \nsampai \ndengan \nditerbitkannya \nperaturan atau penetapan daftar badan atau lembaga yang \nbaru berdasarkan Peraturan Menteri ini. \n \nBAB V \nKETENTUAN PENUTUP \n \n"
+              },
+              {
+                "id": "PMK 114 Tahun 2025#25",
+                "peraturan": "PMK 114 Tahun 2025",
+                "pasal": "Pasal 24",
+                "halaman_pdf": 16,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/956C4A77-A4BB-4C97-A4A9-989BC6A98C79/2025pmkeuangan114.pdf#page=16",
+                "status_peraturan": "berlaku",
+                "pasal_gugur": false,
+                "skor": 30.71,
+                "teks": "Pasal 24 \nPada saat Peraturan Menteri ini mulai berlaku:  \na. Peraturan Menteri Keuangan Nomor 245/PMK.03/2008 \ntentang Badan-badan dan Orang Pribadi yang Menjalankan \nUsaha Mikro dan Kecil yang Menerima Harta Hibah, \nBantuan, atau Sumbangan yang Tidak Termasuk sebagai \nObjek Pajak Penghasilan; \nb. Peraturan Menteri Keuangan Nomor 254/PMK.03/2010 \ntentang Tata Cara Pembebanan Zakat atau Sumbangan \nKeagamaan yang Sifatnya Wajib yang Dapat Dikurangkan \ndari Penghasilan Bruto (Berita Negara Republik Indonesia \nTahun 2010 Nomor 668); \nc. Peraturan Menteri Keuangan Nomor 76/PMK.03/2011 \ntentang Tata Cara Pencatatan dan Pelaporan Sumbangan \nPenanggulangan Bencana Nasional, Sumbangan Penelitian \ndan Pengembangan, Sumbangan Fasilitas Pendidikan, \nSumbangan Pembinaan Olahraga, dan Biaya Pembangunan \nInfrastruktur \nSosial \nyang \nDapat \nDikurangkan \ndari \nPenghasilan Bruto (Berita Negara Republik I"
+              },
+              {
+                "id": "PER-4/PJ/2026#0",
+                "peraturan": "PER-4/PJ/2026",
+                "pasal": "Pembukaan",
+                "halaman_pdf": 1,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/81b88742-77a0-4189-843a-649524d15466/PER-4_PJ_2026.pdf#page=1",
+                "status_peraturan": "berlaku",
+                "pasal_gugur": false,
+                "skor": 29.72,
+                "teks": "KEMENTERIAN KEUANGAN REPUBLIK INDONESIA\nPERATURAN DIREKTUR JENDERAL PAJAK\nNOMOR PER-4/PJ/2026\nTENTANG\nBADAN ATAU LEMBAGA YANG DIBENTUK ATAU DISAHKAN OLEH \nPEMERINTAH YANG DITETAPKAN SEBAGAI PENERIMA ZAKAT ATAU\nSUMBANGAN KEAGAMAAN YANG SIFATNYA WAJIB YANG DAPAT\nDIKURANGKAN DARI PENGHASILAN BRUTO\nDIREKTUR JENDERAL PAJAK,\nMenimbang\n:\na.\nbahwa ketentuan mengenai badan atau lembaga yang\ndibentuk atau disahkan oleh pemerintah yang ditetapkan\nsebagai penerima zakat atau sumbangan keagamaan yang\nsifatnya wajib yang dapat dikurangkan dari penghasilan\nbruto telah diatur dalam Peraturan Direktur Jenderal Pajak\nNomor PER-04/PJ/2022 tentang Badan atau Lembaga yang\nDibentuk atau Disahkan oleh Pemerintah yang Ditetapkan\nsebagai Penerima Zakat atau Sumbangan Keagamaan yang\nSifatnya Wajib yang Dapat Dikurangkan dari Penghasilan\nBruto sebagaimana telah beberapa kali diubah terakhir\ndengan Peraturan Direkt"
+              }
+            ],
+            "dibuang_tidak_berlaku": 0,
+            "sumber": [
+              "PMK 114 Tahun 2025#3",
+              "PMK 114 Tahun 2025#10",
+              "PMK 114 Tahun 2025#24",
+              "PMK 114 Tahun 2025#25",
+              "PER-4/PJ/2026#0",
+              "PER-4/PJ/2026",
+              "PMK 114 Tahun 2025"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "g-09",
+      "kategori": "graf_relasi",
+      "tag": [],
+      "perilaku": "graf",
+      "tool_harapan": null,
+      "tool_dipanggil": [
+        "find_regulation",
+        "amendment_chain"
+      ],
+      "tool_hitung_pertama": null,
+      "tool_hitung_akhir": null,
+      "tool_benar": true,
+      "tool_benar_percobaan_pertama": true,
+      "argumen_benar": null,
+      "field_benar": 0,
+      "field_total": 0,
+      "argumen_salah": {},
+      "argumen_aktual": {},
+      "pph_harapan": null,
+      "pph_aktual": null,
+      "angka_benar": null,
+      "perilaku_benar": true,
+      "galat_tool": 0,
+      "tool_halusinasi": [],
+      "putaran": 3,
+      "detik": 12.31,
+      "jawaban": "PMK 66 Tahun 2023 mencabut **PMK 167/PMK.03/2018**, tentang penyediaan makanan dan minuman bagi seluruh pegawai serta penggantian atau imbalan dalam bentuk natura dan kenikmatan di daerah tertentu dan yang berkaitan dengan pelaksanaan pekerjaan yang dapat dikurangkan dari penghasilan bruto pemberi kerja. [Status per 2026-11-17 menurut graf peraturan: PMK 167 Tahun 2018 dicabut sejak 2023-06-27 oleh PMK 66 Tahun 2023.]\n\nPencabutan tersebut tercantum dalam **Pasal 26 PMK 66 Tahun 2023** dan berlaku sejak **27 Juni 2023**. PMK 66 Tahun 2023 berstatus berlaku pada tanggal pemeriksaan, **17 November 2026**.\n\n### Asumsi yang dipakai\n- Saya memahami pertanyaan sebagai menanyakan peraturan yang secara eksplisit dicabut oleh PMK 66 Tahun 2023.",
+      "error": null,
+      "galat_api": [],
+      "perilaku_benar_satu_giliran": true,
+      "tool_graf": 2,
+      "klarifikasi": false,
+      "sitasi_belum_terverifikasi": [],
+      "sitasi_diperiksa": true,
+      "sitasi_audit_ablasi": [],
+      "sitasi_dikoreksi": [],
+      "status_distempel": [
+        "PMK 167 Tahun 2018"
+      ],
+      "angka_tanpa_sumber": [],
+      "pph_di_jawaban": null,
+      "token_masuk": 50933,
+      "token_keluar": 224,
+      "jejak": [
+        {
+          "tool": "find_regulation",
+          "argumen": {
+            "regulation": "PMK 66 Tahun 2023"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": [
+              {
+                "peraturan": "PMK 66 Tahun 2023",
+                "judul": "Perlakuan Pajak Penghasilan atas Penggantian atau Imbalan Sehubungan dengan Pekerjaan atau Jasa yang Diterima atau Diperoleh Dalam Bentuk Natura dan/atau Kenikmatan",
+                "teks_tersedia": true,
+                "url": "https://jdih.kemenkeu.go.id/dok/pmk-66-tahun-2023",
+                "berkas_pdf": "https://jdih.kemenkeu.go.id/api/download/DCE5DAF1-D4E5-4BD1-BC4E-2C086AE33C04/2023pmkeuangan066.pdf",
+                "status": "berlaku",
+                "sejak": null,
+                "oleh": [],
+                "pasal_gugur": [],
+                "ayat_gugur": {},
+                "pasti": true,
+                "catatan": []
+              }
+            ],
+            "sumber": [
+              "PMK 66 Tahun 2023"
+            ]
+          }
+        },
+        {
+          "tool": "amendment_chain",
+          "argumen": {
+            "regulation": "PMK 66 Tahun 2023"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": "PMK 66 Tahun 2023",
+            "status": "berlaku",
+            "sejak": null,
+            "oleh": [],
+            "pasal_gugur": [],
+            "ayat_gugur": {},
+            "pasti": true,
+            "catatan": [],
+            "diubah_atau_dicabut_oleh": [],
+            "mengubah_atau_mencabut": [
+              {
+                "jenis": "mencabut",
+                "peraturan": "PMK 167 Tahun 2018",
+                "bukti": "eksplisit",
+                "sumber": "jdih+teks",
+                "berlaku_efektif": "2023-06-27",
+                "tanggal_perkiraan": false,
+                "lewat": null,
+                "pasal_bukti": "Pasal 26",
+                "pasal_terdampak": [],
+                "kutipan": "BAB VI KETENTUAN PENUTUP Pasal 26 Pada saat Peraturan Menteri ini mulai berlaku, Peraturan Menteri Keuangan Nomor 167/PMK.03/2018 tentang Penyediaan Makanan dan Minuman bagi Seluruh Pegawai serta Penggantian atau Imbalan dalam Bentuk Natura dan Kenikmatan di Daerah Tertentu dan yang Berkaitan dengan Pelaksanaan Pekerjaan yang Dapat Dikurangkan dari Penghasilan Bruto Pemberi Kerja (Berita Negara Re",
+                "status_peraturan": "dicabut"
+              }
+            ],
+            "sumber": [
+              "PMK 66 Tahun 2023",
+              "PMK 167 Tahun 2018"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "g-10",
+      "kategori": "graf_relasi",
+      "tag": [],
+      "perilaku": "graf",
+      "tool_harapan": null,
+      "tool_dipanggil": [
+        "find_regulation",
+        "amendment_chain"
+      ],
+      "tool_hitung_pertama": null,
+      "tool_hitung_akhir": null,
+      "tool_benar": true,
+      "tool_benar_percobaan_pertama": true,
+      "argumen_benar": null,
+      "field_benar": 0,
+      "field_total": 0,
+      "argumen_salah": {},
+      "argumen_aktual": {},
+      "pph_harapan": null,
+      "pph_aktual": null,
+      "angka_benar": null,
+      "perilaku_benar": true,
+      "galat_tool": 0,
+      "tool_halusinasi": [],
+      "putaran": 3,
+      "detik": 9.74,
+      "jawaban": "KMK 447/KMK.03/2002 **diubah oleh PMK 10 Tahun 2005**. [Status per 2026-11-17 menurut graf peraturan: PMK 10 Tahun 2005 dicabut sejak 2006-01-01 oleh PMK 138 Tahun 2005.] Pasal I PMK 10 Tahun 2005 mengubah **Pasal 1 dan Pasal 2** KMK tersebut.\n\nKMK 447/KMK.03/2002 kemudian **dicabut oleh PMK 138 Tahun 2005**, efektif sejak 1 Januari 2006.\n\n### Asumsi yang dipakai\n- Saya menafsirkan “peraturan apa yang mengubah” sebagai peraturan yang secara langsung mengubah KMK tersebut, bukan peraturan yang kemudian mencabutnya.",
+      "error": null,
+      "galat_api": [],
+      "perilaku_benar_satu_giliran": true,
+      "tool_graf": 2,
+      "klarifikasi": false,
+      "sitasi_belum_terverifikasi": [],
+      "sitasi_diperiksa": true,
+      "sitasi_audit_ablasi": [],
+      "sitasi_dikoreksi": [],
+      "status_distempel": [
+        "PMK 10 Tahun 2005"
+      ],
+      "angka_tanpa_sumber": [],
+      "pph_di_jawaban": null,
+      "token_masuk": 51264,
+      "token_keluar": 192,
+      "jejak": [
+        {
+          "tool": "find_regulation",
+          "argumen": {
+            "regulation": "KMK 447/KMK.03/2002"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": [
+              {
+                "peraturan": "KMK 447/KMK03/2002",
+                "judul": "RALAT KEPUTUSAN MENTERI KEUANGAN REPUBLIK INDONESIA NOMOR 447/KMK.03/2002 TANGGAL 22 OKTOBER 2002 TENTANG BAGIAN PENGHASILAN SEHUBUNGAN DENGAN PEKERJAAN DARI PEGAWAI HARIAN DAN MINGGUAN SERTA PEGAWAI TIDAK TETAP LAINNYA YANG TIDAK DIKENAKAN PEMOTONGAN PAJAK PENGHASILAN",
+                "teks_tersedia": true,
+                "url": "https://www.pajak.go.id/id/peraturan/ralat-keputusan-menteri-keuangan-republik-indonesia-nomor-447kmk032002-tanggal-22-oktober",
+                "berkas_pdf": null,
+                "status": "dicabut",
+                "sejak": "2006-01-01",
+                "oleh": [
+                  "PMK 138 Tahun 2005"
+                ],
+                "pasal_gugur": [],
+                "ayat_gugur": {},
+                "pasti": true,
+                "catatan": []
+              }
+            ],
+            "sumber": [
+              "KMK 447/KMK03/2002",
+              "PMK 138 Tahun 2005"
+            ]
+          }
+        },
+        {
+          "tool": "amendment_chain",
+          "argumen": {
+            "regulation": "KMK 447/KMK.03/2002"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": "KMK 447/KMK03/2002",
+            "status": "dicabut",
+            "sejak": "2006-01-01",
+            "oleh": [
+              "PMK 138 Tahun 2005"
+            ],
+            "pasal_gugur": [],
+            "ayat_gugur": {},
+            "pasti": true,
+            "catatan": [],
+            "diubah_atau_dicabut_oleh": [
+              {
+                "jenis": "mengubah",
+                "peraturan": "PMK 10 Tahun 2005",
+                "bukti": "eksplisit",
+                "sumber": "teks",
+                "berlaku_efektif": "2005-01-01",
+                "tanggal_perkiraan": false,
+                "lewat": null,
+                "pasal_bukti": "Pasal I",
+                "pasal_terdampak": [
+                  "1",
+                  "2"
+                ],
+                "kutipan": "Mengubah beberapa ketentuan dalam Keputusan Menteri Keuangan Nomor 447/KMK.03/2002, sebagai berikut",
+                "status_peraturan": "dicabut"
+              },
+              {
+                "jenis": "mencabut",
+                "peraturan": "PMK 138 Tahun 2005",
+                "bukti": "eksplisit",
+                "sumber": "teks",
+                "berlaku_efektif": "2006-01-01",
+                "tanggal_perkiraan": false,
+                "lewat": null,
+                "pasal_bukti": "Pasal 5",
+                "pasal_terdampak": [],
+                "kutipan": "Pasal 5 Pada saat Peraturan Menteri Keuangan ini mulai berlaku, Keputusan Menteri Keuangan Nomor 447/KMK.03/2002 tentang Bagian Penghasilan Sehubungan Dengan Pekerjaan Dari Pegawai Harian Dan Mingguan Serta Pegawai Tidak Tetap Lainnya Yang Tidak Dikenakan Pemotongan Pajak Penghasilan sebagaimana telah diubah dengan Peraturan Menteri Keuangan Nomor 10/PMK.03/2005 dicabut dan dinyatakan tidak berlak",
+                "status_peraturan": "dicabut"
+              }
+            ],
+            "mengubah_atau_mencabut": [],
+            "sumber": [
+              "KMK 447/KMK03/2002",
+              "PMK 10 Tahun 2005",
+              "PMK 138 Tahun 2005"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "g-11",
+      "kategori": "graf_skill",
+      "tag": [],
+      "perilaku": "graf",
+      "tool_harapan": null,
+      "tool_dipanggil": [
+        "find_legal_basis"
+      ],
+      "tool_hitung_pertama": null,
+      "tool_hitung_akhir": null,
+      "tool_benar": true,
+      "tool_benar_percobaan_pertama": true,
+      "argumen_benar": null,
+      "field_benar": 0,
+      "field_total": 0,
+      "argumen_salah": {},
+      "argumen_aktual": {},
+      "pph_harapan": null,
+      "pph_aktual": null,
+      "angka_benar": null,
+      "perilaku_benar": true,
+      "galat_tool": 0,
+      "tool_halusinasi": [],
+      "putaran": 2,
+      "detik": 6.98,
+      "jawaban": "Angka biaya jabatan maksimal **Rp500.000 sebulan** berasal dari [PMK No. 168 Tahun 2023 Pasal 10 ayat (2), halaman PDF 11](https://jdih.kemenkeu.go.id/api/download/E60A82E0-B218-40F5-9D18-B924AA1E11CE/2023pmkeuangan168.pdf#page=11). Ketentuan itu menetapkan biaya jabatan sebesar 5% dari penghasilan bruto pegawai tetap, dengan batas maksimal Rp500.000 sebulan atau Rp6.000.000 setahun.",
+      "error": null,
+      "galat_api": [],
+      "perilaku_benar_satu_giliran": true,
+      "tool_graf": 0,
+      "klarifikasi": false,
+      "sitasi_belum_terverifikasi": [],
+      "sitasi_diperiksa": true,
+      "sitasi_audit_ablasi": [],
+      "sitasi_dikoreksi": [],
+      "status_distempel": [],
+      "angka_tanpa_sumber": [],
+      "pph_di_jawaban": null,
+      "token_masuk": 33596,
+      "token_keluar": 154,
+      "jejak": [
+        {
+          "tool": "find_legal_basis",
+          "argumen": {
+            "topic": "biaya_jabatan"
+          },
+          "hasil": {
+            "berhasil": true,
+            "topik": "biaya_jabatan",
+            "judul": "Biaya jabatan",
+            "rujukan": [
+              "PMK No. 168 Tahun 2023 Pasal 10 ayat (2)"
+            ],
+            "ringkasan": "Pengurang penghasilan bruto pegawai tetap sebesar 5% dari penghasilan bruto, paling banyak Rp500.000 sebulan atau Rp6.000.000 setahun.\n",
+            "lokasi_dasar_hukum": [
+              {
+                "rujukan": "PMK No. 168 Tahun 2023 Pasal 10 ayat (2)",
+                "peraturan": "PMK 168 Tahun 2023",
+                "pasal": "10",
+                "halaman_pdf": 11,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/E60A82E0-B218-40F5-9D18-B924AA1E11CE/2023pmkeuangan168.pdf#page=11"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "g-12",
+      "kategori": "graf_relasi",
+      "tag": [],
+      "perilaku": "graf",
+      "tool_harapan": null,
+      "tool_dipanggil": [
+        "find_regulation",
+        "amendment_chain",
+        "get_article",
+        "get_article",
+        "search_text",
+        "get_article",
+        "search_text",
+        "find_regulation"
+      ],
+      "tool_hitung_pertama": null,
+      "tool_hitung_akhir": null,
+      "tool_benar": true,
+      "tool_benar_percobaan_pertama": true,
+      "argumen_benar": null,
+      "field_benar": 0,
+      "field_total": 0,
+      "argumen_salah": {},
+      "argumen_aktual": {},
+      "pph_harapan": null,
+      "pph_aktual": null,
+      "angka_benar": null,
+      "perilaku_benar": true,
+      "galat_tool": 0,
+      "tool_halusinasi": [],
+      "putaran": 9,
+      "detik": 50.22,
+      "jawaban": "Ya. Berdasarkan hasil yang tersedia, **Pasal 18 UU 7 Tahun 2021** mencabut sebagian ketentuan **Pasal 5 ayat (1) huruf b Perppu 1 Tahun 2020**. Ketentuan itu berkaitan dengan perubahan tarif Pajak Penghasilan badan. [UU 7 Tahun 2021 Pasal 18, hlm. 103](https://jdih.kemenkeu.go.id/api/download/A9FAAB97-ACA7-4F87-9FDC-FAA8123D1454/7TAHUN2021UU.pdf#page=103)\n\nJadi, yang dicabut bukan seluruh Perppu 1 Tahun 2020, melainkan hanya ketentuan tersebut. Perppu itu sebelumnya telah ditetapkan menjadi UU 2 Tahun 2020. Rincian isi Pasal 5 ayat (1) huruf b yang dicabut belum sempat saya verifikasi dari teks pasalnya.",
+      "error": null,
+      "galat_api": [],
+      "perilaku_benar_satu_giliran": true,
+      "tool_graf": 8,
+      "klarifikasi": false,
+      "sitasi_belum_terverifikasi": [],
+      "sitasi_diperiksa": true,
+      "sitasi_audit_ablasi": [],
+      "sitasi_dikoreksi": [],
+      "status_distempel": [],
+      "angka_tanpa_sumber": [],
+      "pph_di_jawaban": null,
+      "token_masuk": 215990,
+      "token_keluar": 538,
+      "jejak": [
+        {
+          "tool": "find_regulation",
+          "argumen": {
+            "regulation": "UU 7 Tahun 2021"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": [
+              {
+                "peraturan": "UU 7 Tahun 2021",
+                "judul": "Harmonisasi Peraturan Perpajakan",
+                "teks_tersedia": true,
+                "url": "https://jdih.kemenkeu.go.id/dok/uu-7-tahun-2021",
+                "berkas_pdf": "https://jdih.kemenkeu.go.id/api/download/A9FAAB97-ACA7-4F87-9FDC-FAA8123D1454/7TAHUN2021UU.pdf",
+                "status": "berlaku_diubah",
+                "sejak": "2022-12-30",
+                "oleh": [
+                  "PERPPU 2 Tahun 2022",
+                  "UU 6 Tahun 2023"
+                ],
+                "pasal_gugur": [],
+                "ayat_gugur": {},
+                "pasti": true,
+                "catatan": []
+              }
+            ],
+            "sumber": [
+              "UU 7 Tahun 2021",
+              "PERPPU 2 Tahun 2022",
+              "UU 6 Tahun 2023"
+            ]
+          }
+        },
+        {
+          "tool": "amendment_chain",
+          "argumen": {
+            "regulation": "UU 7 Tahun 2021"
+          },
+          "hasil": {
+            "terpotong": true,
+            "teks": "{\"berhasil\": true, \"tanggal\": \"2026-11-17\", \"peraturan\": \"UU 7 Tahun 2021\", \"status\": \"berlaku_diubah\", \"sejak\": \"2022-12-30\", \"oleh\": [\"PERPPU 2 Tahun 2022\", \"UU 6 Tahun 2023\"], \"pasal_gugur\": [], \"ayat_gugur\": {}, \"pasti\": true, \"catatan\": [], \"diubah_atau_dicabut_oleh\": [{\"jenis\": \"ditetapkan_menjadi\", \"peraturan\": \"PERPPU 5 Tahun 2008\", \"bukti\": \"eksplisit\", \"sumber\": \"teks\", \"berlaku_efektif\": \"2021-10-29\", \"tanggal_perkiraan\": false, \"lewat\": null, \"pasal_bukti\": \"Judul\", \"pasal_terdampak\": [], \"kutipan\": \"Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 5 Tahun 2008\", \"status_peraturan\": \"ditetapkan_menjadi\"}, {\"jenis\": \"mengubah\", \"peraturan\": \"PERPPU 2 Tahun 2022\", \"bukti\": \"eksplisit\", \"sumber\": \"teks\", \"berlaku_efektif\": \"2022-12-30\", \"tanggal_perkiraan\": false, \"lewat\": null, \"pasal_bukti\": \"Pasal 111\", \"pasal_terdampak\": [\"2\", \"26\"], \"kutipan\": \"SK No 137243 A PRESIDEN REPUBLIK INDONESIA - 623- Pasal 111 Beberapa ketentuan dalam Undang-Undang Nomor 7 Tahun 1983 tentang Pajak Penghasilan (Lembaran Negara Republik Indonesia Tahun 1983 Nomor 50, Tambahan Lembaran Negara Republik Indonesia Nomor 3263) sebagaimana telah beberapa kali diubah terakhir dengan Undang-Undang Nomor 7 Tahun 2021 tentang Harmonisasi Peraturan Perpajakan (Lembaran Nega\", \"status_peraturan\": \"ditetapkan_menjadi\"}, {\"jenis\": \"mengubah\", \"peraturan\": \"UU 6 Tahun 2023\", \"bukti\": \"eksplisit\", \"sumber\": \"teks\", \"berlaku_efektif\": \"2022-12-30\", \"tanggal_perkiraan\": false, \"lewat\": null, \"pasal_bukti\": \"Pasal 111\", \"pasal_terdampak\": [\"2\", \"26\"], \"kutipan\": \"SK No 171632 A jdih.kemenkeu.go.id PRESIDEN REPUBLIK INDONESIA - 623 - Pasal 111 Beberapa ketentuan dalam Undang-Undang Nomor 7 Tahun 1983 tentang Pajak Penghasilan (Lembaran Negara Republik Indonesia Tahun 1983 Nomor 50, Tambahan Lembaran Negara Republik Indonesia Nomor 3263) sebagaimana telah beberapa kali diubah terakhir dengan Undang-Undang Nomor 7 Tahun 2021 tentang Harmonisasi Peraturan Perp\", \"status_peraturan\": \"berlaku_diubah\"}], \"mengubah_atau_mencabut\": [{\"jenis\": \"mencabut_sebagian\", \"peraturan\": \"PERPPU 1 Tahun 2020\", \"bukti\": \"eksplisit\", \"sumber\": \"jdih+teks\", \"berlaku_efektif\": \"2021-10-29\", \"tanggal_perkiraan\": false, \"lewat\": null, \"pasal_bukti\": \"Pasal 18\", \"pasal_terdampak\": [\"5(1)\"], \"kutipan\": \"Pasal 18 Ketentuan Pasal 5 ayat (1) huruf b Peraturan Pemerintah Pengganti Undang-Undang Nomor 1 Tahun 2020 tentang Kebijakan Keuangan Negara dan Stabilitas Sistem Keuangan Untuk Penanganan Pandemi Corona Virus Disease 2019 (COVID-19) dan/atau Dalam Rangka Menghadapi Ancaman yang Membahayakan Perekonomian Nasional dan/atau Stabilitas Sistem Keuangan (Lembaran Negara Republik Indonesia Tahun 2020 N\", \"status_peraturan\": \"ditetapkan_menjadi\"}, {\"jenis\": \"mencabut_sebagian\", \"peraturan\": \"UU 2 Tahun 2020\", \"bukti\": \"eksplisit\", \"sumber\": \"jdih+teks\", \"berlaku_efektif\": \"2021-10-29\", \"tanggal_perkiraan\": false, \"lewat\": null, \"pasal_bukti\": \"Pasal 18\", \"pasal_terdampak\": [\"5(1)\"], \"kutipan\": \"Pasal 18 Ketentuan Pasal 5 ayat (1) huruf b Peraturan Pemerintah Pengganti Undang-Undang Nomor 1 Tahun 2020 tentang Kebijakan Keuangan Negara dan Stabilitas Sistem Keuangan Untuk Penanganan Pandemi Corona Virus Disease 2019 (COVID-19) dan/atau Dalam Rangka Menghadapi Ancaman yang Membahayakan Perekonomian Nasional dan/atau Stabilitas Sistem Keuangan (Lembaran Negara Republik Indonesia Tahun 2020 N\", \"status_peraturan\": \"berlaku_sebagian\"}, {\"jenis\": \"mengubah\", \"peraturan\": \"UU 36 Tahun 2008\", \"bukti\": \"tersirat\", \"sumber\": \"jdih+teks\", \"berlaku_efektif\": \"2021-10-29\", \"tanggal_perkiraan\": false, \"lewat\": \"UU 7 Tahun 1983\", \"pasal_bukti\": \"Pasal 3\", \"pasal_terdampak\": [], \"kutipan\": \"SK No 115536 A PRESIDEN REPUBLIK INDONESIA - 35 - BAB III PAJAK PENGHASILAN Pasal 3 Beberapa ketentuan dalam Undang-Undang Nomor 7 Tahun 1983 tentang Pajak Penghasilan (Lembaran Negara Republik Indonesia Tahun 1983 Nomor 50, Tambahan Lembaran Negara Republik Indonesia Nomor 3263) sebagaimana telah beberapa kali diubah terakhir dengan Undang-Undang Nomor 36 Tahun 2008 tentang Perubahan Keempat atas\", \"status_peraturan\": \"berlaku_diubah\"}, {\"jenis\": \"mengubah\", \"peraturan\": \"UU 7 Tahun 1983\", \"bukti\": \"eksplisit\", \"sumber\": \"jdih+teks\", \"berlaku_efektif\": \"2021-10-29\", \"tanggal_perkiraan\": false, \"lewat\": null, \"pasal_bukti\": \"Pasal 3\", \"pasal_terdampak\": [\"4\", \"6\", \"7\", \"9\", \"11\", \"11A\", \"17\", \"18\", \"32A\", \"32C\"], \"kutipan\": \"SK No 115536 A PRESIDEN REPUBLIK INDONESIA - 35 - BAB III PAJAK PENGHASILAN Pasal 3 Beberapa ketentuan dalam Undang-Undang Nomor 7 Tahun 1983 tentang Pajak Penghasilan (Lembaran Negara Republik Indonesia Tahun 1983 Nomor 50, Tambahan Lembaran Negara Republik Indonesia Nomor 3263) sebagaimana telah beberapa kali diubah terakhir dengan Undang-Undang Nomor 36 Tahun 2008 tentang Perubahan Keempat atas\", \"status_peraturan\": \"berlaku_diubah\"}, {\"jenis\": \"mengubah\", \"peraturan\": \"UU 39 Tahun 2007\", \"bukti\": \"tersirat\", \"sumber\": \"jdih\", \"berlaku_efektif\": \"2021-10-29\", \"tanggal_perkiraan\": false, \"lewat\": \"UU 11 Tahun 1995\", \"pasal_bukti\": \"Pasal 14\", \"pasal_terdampak\": [], \"kutipan\": \"BAB VII CUKAI Pasal 14 Beberapa ketentuan dalam Undang-Undang Nomor 11 Tahun 1995 tentang Cukai (Lembaran Negara Republik Indonesia Tahun 1995 Nomor 76, Tambahan Lembaran Negara Republik Indonesia Tahun 1995 Nomor 3613) sebagaimana telah diubah dengan Undang-Undang Nomor 39 Tahun 2007 tentang Perubahan atas Undang-Undang Nomor 11 Tahun 1995 tentang Cukai (Lembaran Negara Republik Indonesia Tahun 2\", \"status_peraturan\": \"berlaku_diubah\"}, {\"jenis\": \"mengubah\", \"peraturan\": \"UU 11 Tahun 1994\", \"bukti\": \"tersirat\", \"sumber\": \"jdih\", \"berlaku_efektif\": \"2021-10-29\", \"tanggal_perkiraan\": false, \"lewat\": \"UU 8 Tahun 1983\", \"pasal_bukti\": \"Pasal 4\", \"pasal_terdampak\": [], \"kutipan\": \"SK No 115566 A PRESIDEN REPUBLIK INDONESIA - 65 - BAB IV PAJAK PERTAMBAHAN NILAI Pasal 4 Beberapa ketentuan dalam Undang-Undang Nomor 8 Tahun 1983 tentang Pajak Pertambahan Nilai Barang dan Jasa dan Pajak Penjualan atas Barang Mewah (Lembaran Negara Republik Indonesia Tahun 1983 Nomor 51, Tambahan Lembaran Negara Republik Indonesia Nomor 3264) sebagaimana telah beberapa kali diubah terakhir dengan\", \"status_peraturan\": \"berlaku_sebagian\"}, {\"jenis\": \"mengubah\", \"peraturan\": \"UU 16 Tahun 2009\", \"bukti\": \"tersirat\", \"sumber\": \"jdih+teks\", \"berlaku_efektif\": \"2021-10-29\", \"tanggal_perkiraan\": false, \"lewat\": \"UU 6 Tahun 1983\", \"pasal_bukti\": \"Pasal 2\", \"pasal_terdampak\": [], \"kutipan\": \"BAB II KETENTUAN UMUM DAN TATA CARA PERPAJAKAN Pasal 2 Beberapa ketentuan dalam Undang-Undang Nomor 6 Tahun 1983 tentang Ketentuan Umum dan Tata Cara Perpajakan (Lembaran Negara Republik Indonesia Tahun 1983 Nomor 49, Tambahan Lembaran Negara Republik Indonesia Nomor 3262) sebagaimana telah beberapa kali diubah terakhir dengan Undang-Undang Nomor 16 Tahun 2009 tentang Penetapan Peraturan Pemerinta\", \"status_peraturan\": \"berlaku_sebagian\"}, {\"jenis\": \"mengubah\", \"peraturan\": \"UU 8 Tahun 1983\", \"bukti\": \"eksplisit\", \"sumber\": \"jdih+teks\", \"berlaku_efektif\": \"2021-10-29\", \"tanggal_perkiraan\": false, \"lewat\": null, \"pasal_bukti\": \"Pasal 4\", \"pasal_terdampak\": [\"7\", \"8A\", \"9\", \"9A\", \"16B\", \"16G\"], \"kutipan\": \"SK No 115566 A PRESIDEN REPUBLIK INDONESIA - 65 - BAB IV PAJAK PERTAMBAHAN NILAI Pasal 4 Beberapa ketentuan dalam Undang-Undang Nomor 8 Tahun 1983 tentang Pajak Pertambahan Nilai Barang dan Jasa dan Pajak Penjualan atas Barang Mewah (Lembaran Negara Republik Indonesia Tahun 1983 Nomor 51, Tambahan Lembaran Negara Republik Indonesia Nomor 3264) sebagaimana telah beberapa kali diubah terakhir dengan\", \"status_peraturan\": \"berlaku_diubah\"}, {\"jenis\": \"mengubah\", \"peraturan\": \"UU 16 Tahun 2000\", \"bukti\": \"tersirat\", \"sumber\": \"jdih\", \"berlaku_efektif\": \"2021-10-29\", \"tanggal_perkiraan\": false, \"lewat\": \"UU 6 Tahun 1983\", \"pasal_bukti\": \"Pasal 2\", \"pasal_terdampak\": [], \"kutipan\": \"BAB II KETENTUAN UMUM DAN TATA CARA PERPAJAKAN Pasal 2 Beberapa ketentuan dalam Undang-Undang Nomor 6 Tahun 19"
+          }
+        },
+        {
+          "tool": "get_article",
+          "argumen": {
+            "regulation": "UU 7 Tahun 2021",
+            "article": "18"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": "UU 7 Tahun 2021",
+            "pasal": "18",
+            "label": [
+              "Pasal 18 ayat (1)-(3)",
+              "Pasal 18 ayat (4)-(5)",
+              "Pasal 18"
+            ],
+            "teks": "Pasal 18\n(1)\nMenteri Keuangan berwenang mengatur batasan\njumlah biaya pinjaman yang dapat dibebankan untuk\nkeperluan penghitungan pajak berdasarkan Undang-\nUndang ini.\n(2)\nMenteri Keuangan berwenang menetapkan saat\ndiperolehnya dividen oleh Wajib Pajak dalam negeri\natas penyertaan modal pada badan usaha di luar\nnegeri selain badan usaha yang menjual sahamnya di\nbursa efek, dengan ketentuan sebagai berikut:\na.\nbesarnya penyertaan modal Wajib Pajak dalam\nnegeri tersebut paling rendah 50% (lima puluh\npersen) dari jumlah saham yang disetor; atau\nb.\nsecara bersama-sama dengan Wajib Pajak dalam\nnegeri lainnya memiliki penyertaan modal paling\nrendah 50% (lima puluh persen) dari jumlah\nsaham yang disetor.\n(3) Direktur Jenderal\nPajakberwenang\nguntuk\nmenentukan kembali besarnya penghasilan dan\npengurangan serta menentukan utang sebagai modal\nuntuk menghitung besarnya Penghasilan Kena Pajak\nbagi Wajib Pajak yang mempunyai hubungan\nistimewa dengan Wajib Pajak lainnya sesuai dengan\nkewajaran dan kelaziman usaha yang tidak\ndipengaruhi oleh hubungan istimewa dengan\nmenggunakan metode perbandingan harga antara\npihak yang independen, metode harga penjualan\nkembali, metode biaya-plus, atau metode lainnya.\n(3a) Direktur ...\nSK No 115560 A\nPRESIDEN\nREPUBLIK INDONESIA\n- 59 -\n(3a) Direktur Jenderal Pajak berwenang melakukan\nperjanjian dengan Wajib Pajak dan bekerja sama\ndengan pihak otoritas pajak negara lain untuk\nmenentukan harga transaksi antar pihak-pihak yang\nmempunyai hubungan istimewa sebagaimana\ndimaksud dalam ayat (4), yang berlaku selama suatu\nperiode tertentu dan mengawasi pelaksanaannya\nserta melakukan renegosiasi setelah periode tertentu\ntersebut berakhir.\n(3b) Wajib Pajak yang melakukan pembelian saham atau\naktiva perusahaan melalui pihak lain atau badan\nyang dibentuk untuk maksud demikian (special\npurpose company), dapat ditetapkan sebagai pihak\nyang sebenarnya melakukan pembelian tersebut\nsepanjang\nWajib Pajak yang\nbersangkutan\nmempunyai hubungan istimewa dengan pihak lain\natau badan tersebut dan terdapat ketidakwajaran\npenetapan harga.\n(3c) Penjualan atau pengalihan saham perusahaan antara\n(conduit company atau special purpose company) yang\ndidirikan atau bertempat kedudukan di negara yang\nmemberikan perlindungan pajak (tax haven country)\nyang mempunyai hubungan istimewa dengan badan\nyang\ndidirikan\natau\nbertempatkedudukan\ndi Indonesia atau bentuk usaha tetap di Indonesia\ndapat ditetapkan sebagai penjualan atau pengalihan\nsaham badan yang didirikan atau bertempat\nkedudukan\ndi Indonesia atau bentuk usaha\ntetap di Indonesia.\n(3d) Besarnya penghasilan yang diperoleh Wajib Pajak\norang pribadi dalam negeri dari pemberi kerja yang\nmemiliki hubungan istimewa dengan perusahaan lain\nyang tidak didirikan dan tidak bertempat kedudukan\ndi Indonesia dapat ditentukan kembali, dalam hal\npemberi kerja mengalihkan seluruh atau sebagian\npenghasilan Wajib Pajak orang pribadi dalam negeri\ntersebut ke dalam bentuk biaya atau pengeluaran\nlainnya yang dibayarkan kepada perus",
+            "halaman_pdf": 58,
+            "tautan": "https://jdih.kemenkeu.go.id/api/download/A9FAAB97-ACA7-4F87-9FDC-FAA8123D1454/7TAHUN2021UU.pdf#page=58",
+            "status_peraturan": "berlaku_diubah",
+            "peringatan": [],
+            "sumber": [
+              "UU 7 Tahun 2021",
+              "UU 7 Tahun 2021#55",
+              "UU 7 Tahun 2021#56",
+              "UU 7 Tahun 2021#98"
+            ]
+          }
+        },
+        {
+          "tool": "get_article",
+          "argumen": {
+            "regulation": "UU 7 Tahun 2021",
+            "article": "18"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": "UU 7 Tahun 2021",
+            "pasal": "18",
+            "label": [
+              "Pasal 18 ayat (1)-(3)",
+              "Pasal 18 ayat (4)-(5)",
+              "Pasal 18"
+            ],
+            "teks": "Pasal 18\n(1)\nMenteri Keuangan berwenang mengatur batasan\njumlah biaya pinjaman yang dapat dibebankan untuk\nkeperluan penghitungan pajak berdasarkan Undang-\nUndang ini.\n(2)\nMenteri Keuangan berwenang menetapkan saat\ndiperolehnya dividen oleh Wajib Pajak dalam negeri\natas penyertaan modal pada badan usaha di luar\nnegeri selain badan usaha yang menjual sahamnya di\nbursa efek, dengan ketentuan sebagai berikut:\na.\nbesarnya penyertaan modal Wajib Pajak dalam\nnegeri tersebut paling rendah 50% (lima puluh\npersen) dari jumlah saham yang disetor; atau\nb.\nsecara bersama-sama dengan Wajib Pajak dalam\nnegeri lainnya memiliki penyertaan modal paling\nrendah 50% (lima puluh persen) dari jumlah\nsaham yang disetor.\n(3) Direktur Jenderal\nPajakberwenang\nguntuk\nmenentukan kembali besarnya penghasilan dan\npengurangan serta menentukan utang sebagai modal\nuntuk menghitung besarnya Penghasilan Kena Pajak\nbagi Wajib Pajak yang mempunyai hubungan\nistimewa dengan Wajib Pajak lainnya sesuai dengan\nkewajaran dan kelaziman usaha yang tidak\ndipengaruhi oleh hubungan istimewa dengan\nmenggunakan metode perbandingan harga antara\npihak yang independen, metode harga penjualan\nkembali, metode biaya-plus, atau metode lainnya.\n(3a) Direktur ...\nSK No 115560 A\nPRESIDEN\nREPUBLIK INDONESIA\n- 59 -\n(3a) Direktur Jenderal Pajak berwenang melakukan\nperjanjian dengan Wajib Pajak dan bekerja sama\ndengan pihak otoritas pajak negara lain untuk\nmenentukan harga transaksi antar pihak-pihak yang\nmempunyai hubungan istimewa sebagaimana\ndimaksud dalam ayat (4), yang berlaku selama suatu\nperiode tertentu dan mengawasi pelaksanaannya\nserta melakukan renegosiasi setelah periode tertentu\ntersebut berakhir.\n(3b) Wajib Pajak yang melakukan pembelian saham atau\naktiva perusahaan melalui pihak lain atau badan\nyang dibentuk untuk maksud demikian (special\npurpose company), dapat ditetapkan sebagai pihak\nyang sebenarnya melakukan pembelian tersebut\nsepanjang\nWajib Pajak yang\nbersangkutan\nmempunyai hubungan istimewa dengan pihak lain\natau badan tersebut dan terdapat ketidakwajaran\npenetapan harga.\n(3c) Penjualan atau pengalihan saham perusahaan antara\n(conduit company atau special purpose company) yang\ndidirikan atau bertempat kedudukan di negara yang\nmemberikan perlindungan pajak (tax haven country)\nyang mempunyai hubungan istimewa dengan badan\nyang\ndidirikan\natau\nbertempatkedudukan\ndi Indonesia atau bentuk usaha tetap di Indonesia\ndapat ditetapkan sebagai penjualan atau pengalihan\nsaham badan yang didirikan atau bertempat\nkedudukan\ndi Indonesia atau bentuk usaha\ntetap di Indonesia.\n(3d) Besarnya penghasilan yang diperoleh Wajib Pajak\norang pribadi dalam negeri dari pemberi kerja yang\nmemiliki hubungan istimewa dengan perusahaan lain\nyang tidak didirikan dan tidak bertempat kedudukan\ndi Indonesia dapat ditentukan kembali, dalam hal\npemberi kerja mengalihkan seluruh atau sebagian\npenghasilan Wajib Pajak orang pribadi dalam negeri\ntersebut ke dalam bentuk biaya atau pengeluaran\nlainnya yang dibayarkan kepada perus",
+            "halaman_pdf": 58,
+            "tautan": "https://jdih.kemenkeu.go.id/api/download/A9FAAB97-ACA7-4F87-9FDC-FAA8123D1454/7TAHUN2021UU.pdf#page=58",
+            "status_peraturan": "berlaku_diubah",
+            "peringatan": [],
+            "sumber": [
+              "UU 7 Tahun 2021",
+              "UU 7 Tahun 2021#55",
+              "UU 7 Tahun 2021#56",
+              "UU 7 Tahun 2021#98"
+            ]
+          }
+        },
+        {
+          "tool": "search_text",
+          "argumen": {
+            "query": "Pasal 5 ayat (1) huruf b Perppu 1 Tahun 2020 dicabut sebagian: ketentuan perubahan tarif PPh badan",
+            "regulation": "UU 7 Tahun 2021",
+            "date": "2021-10-29",
+            "in_force_only": false
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2021-10-29",
+            "metode": "semantik Gemini",
+            "hasil": [
+              {
+                "id": "UU 7 Tahun 2021#98",
+                "peraturan": "UU 7 Tahun 2021",
+                "pasal": "Pasal 18",
+                "halaman_pdf": 103,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/A9FAAB97-ACA7-4F87-9FDC-FAA8123D1454/7TAHUN2021UU.pdf#page=103",
+                "status_peraturan": "berlaku",
+                "pasal_gugur": false,
+                "skor": 0.9,
+                "teks": "Pasal 18\nKetentuan Pasal 5 ayat (1) huruf b Peraturan Pemerintah\nPengganti Undang-Undang Nomor 1 Tahun 2020 tentang\nKebijakan Keuangan Negara dan Stabilitas Sistem Keuangan\nUntuk Penanganan Pandemi Corona Virus Disease 2019\n(COVID-19) dan/atau Dalam Rangka Menghadapi Ancaman\nyang Membahayakan Perekonomian Nasional dan/atau\nStabilitas Sistem Keuangan (Lembaran Negara Republik\nIndonesia Tahun 2020 Nomor 87, Tambahan Lembaran Negara\nRepublik Indonesia Nomor 6485) yang telah ditetapkan menjadi\nUndang-Undang Nomor 2 Tahun 2020 tentang Penetapan\nPeraturan Pemerintah Pengganti Undang-Undang Nomor\n1 Tahun 2020 tentang Kebijakan Keuangan Negara dan\nStabilitas Sistem Keuangan untuk Penanganan Pandemi\nCorona Virus Disease 2019 (COVID-19) dan/atau Dalam\nRangkaMenghadapi\nAncaman yang\nMembahayakan\nPerekonomian Nasional dan/atau Stabilitas Sistem Keuangan\nMenjadi Undang-Undang (Lembaran Negara Republik"
+              },
+              {
+                "id": "UU 7 Tahun 2021#53",
+                "peraturan": "UU 7 Tahun 2021",
+                "pasal": "Pasal 17 ayat (1)-(2)",
+                "halaman_pdf": 56,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/A9FAAB97-ACA7-4F87-9FDC-FAA8123D1454/7TAHUN2021UU.pdf#page=56",
+                "status_peraturan": "berlaku",
+                "pasal_gugur": false,
+                "skor": 0.87,
+                "teks": "Pasal 17\n(1) Tarif pajak yang diterapkan atas Penghasilan Kena\nPajak bagi:\nWajib Pajak orang pribadi dalam negeri sebagai\na.\nberikut:\nLapisan Penghasilan\nTarif Pajak\nKena Pajak\nsampai\ndengan\n5%\nRp60.000.000,00\n(enam\n(lima persen)\npuluh juta rupiah)\ndi atas Rp60.000.000,00\n15%\n(enam puluh juta rupiah)\n(lima belas\nsampai\ndengan\npersen)\nRp250.000.000,00\n(dua\nratus lima puluh juta\nrupiah)\ndi atas Rp250.000.000,00\n25%\n(dua ratus lima puluh\n(dua puluh lima\njuta\nrupiah)\nsampai\npersen)\ndengan\nRp500.000.000,00\n(lima\nratus juta rupiah)\ndi atas Rp500.000.000,00\n30%\n(lima ratus juta rupiah)\n(tiga puluh\nsampai\ndengan\npersen)\nRp5.000.000.000,00\n(lima miliar rupiah)\ndi atas\n35%\nRp5.000.000.000,00\n(tiga puluh lima\n(lima miliar rupiah)\npersen)\nb.\nWajib Pajak badan dalam negeri dan bentuk\nusaha tetap sebesar 22% (dua puluh dua persen)\nyang mulai berlaku pada tahun pajak 2022.\n(2)\nTarif sebagaimana dimaksu"
+              },
+              {
+                "id": "UU 7 Tahun 2021#34",
+                "peraturan": "UU 7 Tahun 2021",
+                "pasal": "Pasal 3",
+                "halaman_pdf": 35,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/A9FAAB97-ACA7-4F87-9FDC-FAA8123D1454/7TAHUN2021UU.pdf#page=35",
+                "status_peraturan": "berlaku",
+                "pasal_gugur": false,
+                "skor": 0.86,
+                "teks": "Pasal 3\nBeberapa ketentuan dalam Undang-Undang Nomor 7\nTahun 1983 tentang Pajak Penghasilan (Lembaran Negara\nRepublik Indonesia Tahun 1983 Nomor 50, Tambahan\nLembaran Negara Republik Indonesia\nNomor 3263)\nsebagaimana telah beberapa kali diubah terakhir dengan\nUndang-Undang Nomor 36 Tahun 2008 tentang Perubahan\nKeempat atas Undang-Undang Nomor 7 Tahun 1983 tentang\nPajak Penghasilan (Lembaran Negara Republik Indonesia\nTahun 2008 Nomor 133, Tambahan Lembaran Negara Republik\nIndonesia Nomor 4893) diubah sebagai berikut:\n1.\nKetentuan ayat (1), ayat (1a), ayat (2), dan ayat (3) Pasal 4\ndiubah serta Pasal 4 ayat (1d) dihapus sehingga Pasal 4\nberbunyi sebagai berikut:\n"
+              },
+              {
+                "id": "UU 7 Tahun 2021#8",
+                "peraturan": "UU 7 Tahun 2021",
+                "pasal": "Pasal 2 ayat (5)-(7)",
+                "halaman_pdf": 7,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/A9FAAB97-ACA7-4F87-9FDC-FAA8123D1454/7TAHUN2021UU.pdf#page=7",
+                "status_peraturan": "berlaku",
+                "pasal_gugur": false,
+                "skor": 0.85,
+                "teks": "(5) Dihapus.\n(6)\nPenghapusan Nomor Pokok Wajib Pajak dilakukan\noleh Direktur Jenderal Pajak apabila:\ndiajukan permohonan penghapusan Nomor\na.\nPokok Wajib Pajak oleh Wajib Pajak dan/atau\nahli warisnya apabila Wajib Pajak sudah tidak\nmemenuhi persyaratan subjektif dan/atau\nobjektif sesuai dengan ketentuan peraturan\nperundang-undangan perpajakan;\nb.\nWajib Pajak\nbadandilikuidasi\nkarena\npenghentian atau penggabungan usaha;\nC.\nWajib Pajak bentuk usaha tetap menghentikan\nkegiatan usahanya di Indonesia; atau\nd.\ndianggap perlu oleh Direktur Jenderal Pajak\nuntuk menghapuskan Nomor Pokok Wajib Pajak\ndari Wajib Pajak yang sudah tidak memenuhi\npersyaratan subjektif dan/atau objektif sesuai\ndengan ketentuan\nperaturan\nperundang-\nundangan perpajakan.\n(7) Direktur Jenderal Pajak setelah melakukan\npemeriksaan harus memberikan keputusan atas\npermohonan penghapusan Nomor Pokok Wajib Pajak\ndalam jangka waktu"
+              },
+              {
+                "id": "UU 7 Tahun 2021#54",
+                "peraturan": "UU 7 Tahun 2021",
+                "pasal": "Pasal 17 ayat (3)-(7)",
+                "halaman_pdf": 57,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/A9FAAB97-ACA7-4F87-9FDC-FAA8123D1454/7TAHUN2021UU.pdf#page=57",
+                "status_peraturan": "berlaku",
+                "pasal_gugur": false,
+                "skor": 0.85,
+                "teks": "(3)\nBesarnyalapisan\nPenghasilan\nKena\nPajak\nsebagaimana dimaksud pada ayat (1) huruf a dapat\ndiubah dengan Peraturan Menteri Keuangan.\n(4)\nUntuk keperluan penerapan tarif pajak sebagaimana\ndimaksud pada ayat (1), jumlah Penghasilan Kena\nPajak dibulatkan ke bawah dalam ribuan rupiah\npenuh.\n(5)\nBesarnya pajak yang terutang bagi Wajib Pajak orang\npribadi dalam negeri yang terutang pajak dalam\nbagian tahun pajak sebagaimana dimaksud dalam\nPasal 16 ayat (4), dihitung sebanyak jumlah hari\ndalam bagian tahun pajak tersebut dibagi 360 (tiga\nratus enam puluh) dikalikan dengan pajak yang\nterutang untuk 1 (satu) tahun pajak.\n(6)\nUntuk keperluan penghitungan pajak sebagaimana\ndimaksud pada ayat (5), tiap bulan yang penuh\ndihitung 30 (tiga puluh) hari.\n(7) Dengan ...\nSK No 115559 A\nPRESIDEN\nREPUBLIK INDONESIA\n-58 -\n(7) Dengan Peraturan Pemerintah dapat ditetapkan tarif\npajak tersendiri atas penghasila"
+              }
+            ],
+            "dibuang_tidak_berlaku": 0,
+            "sumber": [
+              "UU 7 Tahun 2021#98",
+              "UU 7 Tahun 2021#53",
+              "UU 7 Tahun 2021#34",
+              "UU 7 Tahun 2021#8",
+              "UU 7 Tahun 2021#54",
+              "UU 7 Tahun 2021"
+            ]
+          }
+        },
+        {
+          "tool": "get_article",
+          "argumen": {
+            "regulation": "UU 7 Tahun 2021",
+            "article": "18",
+            "date": "2021-10-29"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2021-10-29",
+            "peraturan": "UU 7 Tahun 2021",
+            "pasal": "18",
+            "label": [
+              "Pasal 18 ayat (1)-(3)",
+              "Pasal 18 ayat (4)-(5)",
+              "Pasal 18"
+            ],
+            "teks": "Pasal 18\n(1)\nMenteri Keuangan berwenang mengatur batasan\njumlah biaya pinjaman yang dapat dibebankan untuk\nkeperluan penghitungan pajak berdasarkan Undang-\nUndang ini.\n(2)\nMenteri Keuangan berwenang menetapkan saat\ndiperolehnya dividen oleh Wajib Pajak dalam negeri\natas penyertaan modal pada badan usaha di luar\nnegeri selain badan usaha yang menjual sahamnya di\nbursa efek, dengan ketentuan sebagai berikut:\na.\nbesarnya penyertaan modal Wajib Pajak dalam\nnegeri tersebut paling rendah 50% (lima puluh\npersen) dari jumlah saham yang disetor; atau\nb.\nsecara bersama-sama dengan Wajib Pajak dalam\nnegeri lainnya memiliki penyertaan modal paling\nrendah 50% (lima puluh persen) dari jumlah\nsaham yang disetor.\n(3) Direktur Jenderal\nPajakberwenang\nguntuk\nmenentukan kembali besarnya penghasilan dan\npengurangan serta menentukan utang sebagai modal\nuntuk menghitung besarnya Penghasilan Kena Pajak\nbagi Wajib Pajak yang mempunyai hubungan\nistimewa dengan Wajib Pajak lainnya sesuai dengan\nkewajaran dan kelaziman usaha yang tidak\ndipengaruhi oleh hubungan istimewa dengan\nmenggunakan metode perbandingan harga antara\npihak yang independen, metode harga penjualan\nkembali, metode biaya-plus, atau metode lainnya.\n(3a) Direktur ...\nSK No 115560 A\nPRESIDEN\nREPUBLIK INDONESIA\n- 59 -\n(3a) Direktur Jenderal Pajak berwenang melakukan\nperjanjian dengan Wajib Pajak dan bekerja sama\ndengan pihak otoritas pajak negara lain untuk\nmenentukan harga transaksi antar pihak-pihak yang\nmempunyai hubungan istimewa sebagaimana\ndimaksud dalam ayat (4), yang berlaku selama suatu\nperiode tertentu dan mengawasi pelaksanaannya\nserta melakukan renegosiasi setelah periode tertentu\ntersebut berakhir.\n(3b) Wajib Pajak yang melakukan pembelian saham atau\naktiva perusahaan melalui pihak lain atau badan\nyang dibentuk untuk maksud demikian (special\npurpose company), dapat ditetapkan sebagai pihak\nyang sebenarnya melakukan pembelian tersebut\nsepanjang\nWajib Pajak yang\nbersangkutan\nmempunyai hubungan istimewa dengan pihak lain\natau badan tersebut dan terdapat ketidakwajaran\npenetapan harga.\n(3c) Penjualan atau pengalihan saham perusahaan antara\n(conduit company atau special purpose company) yang\ndidirikan atau bertempat kedudukan di negara yang\nmemberikan perlindungan pajak (tax haven country)\nyang mempunyai hubungan istimewa dengan badan\nyang\ndidirikan\natau\nbertempatkedudukan\ndi Indonesia atau bentuk usaha tetap di Indonesia\ndapat ditetapkan sebagai penjualan atau pengalihan\nsaham badan yang didirikan atau bertempat\nkedudukan\ndi Indonesia atau bentuk usaha\ntetap di Indonesia.\n(3d) Besarnya penghasilan yang diperoleh Wajib Pajak\norang pribadi dalam negeri dari pemberi kerja yang\nmemiliki hubungan istimewa dengan perusahaan lain\nyang tidak didirikan dan tidak bertempat kedudukan\ndi Indonesia dapat ditentukan kembali, dalam hal\npemberi kerja mengalihkan seluruh atau sebagian\npenghasilan Wajib Pajak orang pribadi dalam negeri\ntersebut ke dalam bentuk biaya atau pengeluaran\nlainnya yang dibayarkan kepada perus",
+            "halaman_pdf": 58,
+            "tautan": "https://jdih.kemenkeu.go.id/api/download/A9FAAB97-ACA7-4F87-9FDC-FAA8123D1454/7TAHUN2021UU.pdf#page=58",
+            "status_peraturan": "berlaku",
+            "peringatan": [],
+            "sumber": [
+              "UU 7 Tahun 2021",
+              "UU 7 Tahun 2021#55",
+              "UU 7 Tahun 2021#56",
+              "UU 7 Tahun 2021#98"
+            ]
+          }
+        },
+        {
+          "tool": "search_text",
+          "argumen": {
+            "query": "Ketentuan Pasal 5 ayat (1) huruf b Peraturan Pemerintah Pengganti Undang-Undang Nomor 1 Tahun 2020",
+            "regulation": "UU 7 Tahun 2021",
+            "date": "2021-10-29",
+            "in_force_only": false
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2021-10-29",
+            "metode": "semantik Gemini",
+            "hasil": [
+              {
+                "id": "UU 7 Tahun 2021#98",
+                "peraturan": "UU 7 Tahun 2021",
+                "pasal": "Pasal 18",
+                "halaman_pdf": 103,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/A9FAAB97-ACA7-4F87-9FDC-FAA8123D1454/7TAHUN2021UU.pdf#page=103",
+                "status_peraturan": "berlaku",
+                "pasal_gugur": false,
+                "skor": 0.9,
+                "teks": "Pasal 18\nKetentuan Pasal 5 ayat (1) huruf b Peraturan Pemerintah\nPengganti Undang-Undang Nomor 1 Tahun 2020 tentang\nKebijakan Keuangan Negara dan Stabilitas Sistem Keuangan\nUntuk Penanganan Pandemi Corona Virus Disease 2019\n(COVID-19) dan/atau Dalam Rangka Menghadapi Ancaman\nyang Membahayakan Perekonomian Nasional dan/atau\nStabilitas Sistem Keuangan (Lembaran Negara Republik\nIndonesia Tahun 2020 Nomor 87, Tambahan Lembaran Negara\nRepublik Indonesia Nomor 6485) yang telah ditetapkan menjadi\nUndang-Undang Nomor 2 Tahun 2020 tentang Penetapan\nPeraturan Pemerintah Pengganti Undang-Undang Nomor\n1 Tahun 2020 tentang Kebijakan Keuangan Negara dan\nStabilitas Sistem Keuangan untuk Penanganan Pandemi\nCorona Virus Disease 2019 (COVID-19) dan/atau Dalam\nRangkaMenghadapi\nAncaman yang\nMembahayakan\nPerekonomian Nasional dan/atau Stabilitas Sistem Keuangan\nMenjadi Undang-Undang (Lembaran Negara Republik"
+              },
+              {
+                "id": "UU 7 Tahun 2021#76",
+                "peraturan": "UU 7 Tahun 2021",
+                "pasal": "Pasal 7 ayat (5)",
+                "halaman_pdf": 85,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/A9FAAB97-ACA7-4F87-9FDC-FAA8123D1454/7TAHUN2021UU.pdf#page=85",
+                "status_peraturan": "berlaku",
+                "pasal_gugur": false,
+                "skor": 0.85,
+                "teks": "(5) Ketentuan ...\nSK No 115587 A\nPRESIDEN\nREPUBLIK INDONESIA\n- 86 -\n(5) Ketentuan lebih lanjut mengenai:\ntata cara pengalihan harta bersih ke dalam wilayah\na.\nNegara Kesatuan Republik Indonesia;\nb.\ninvestasi harta bersih pada kegiatan usaha sektor\npengolahan sumber daya alam atau sektor energi\nterbarukan di dalam wilayah Negara Kesatuan\nRepublik Indonesia; dan\ninstrumen surat berharga negara yang digunakan\nC.\nuntuk investasi,\ndiatur dengan Peraturan Menteri Keuangan.\n"
+              },
+              {
+                "id": "UU 7 Tahun 2021#72",
+                "peraturan": "UU 7 Tahun 2021",
+                "pasal": "Pasal 5 ayat (1)-(7)",
+                "halaman_pdf": 80,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/A9FAAB97-ACA7-4F87-9FDC-FAA8123D1454/7TAHUN2021UU.pdf#page=80",
+                "status_peraturan": "berlaku",
+                "pasal_gugur": false,
+                "skor": 0.85,
+                "teks": "Pasal 5\n(1) Wajib Pajak dapat mengungkapkan harta bersih yang\nbelum atau kurang diungkapkan dalam surat pernyataan\nsepanjang Direktur Jenderal Pajak belum menemukan\ndata dan/atau informasi mengenai harta dimaksud.\n(2)\nHarta bersih sebagaimana dimaksud pada ayat (1)\nmerupakan nilai harta dikurangi nilai utang sebagaimana\ndimaksud dalam Undang-Undang Nomor 11 Tahun 2016\ntentang Pengampunan Pajak.\n(3)\nSurat pernyataan sebagaimana dimaksud pada ayat (1)\nmerupakan surat pernyataan sebagaimana dimaksud\ndalam Undang-Undang Nomor 11 Tahun 2016 tentang\nPengampunan Pajak.\n(4)\nHarta sebagaimana dimaksud pada ayat (2) merupakan\nharta yang diperoleh Wajib Pajak sejak tanggal 1 Januari\n1985 sampai dengan tanggal 31 Desember 2015.\n(5)\nHarta bersih sebagaimana dimaksud pada ayat (1)\ndianggap sebagai tambahan penghasilan dan dikenai\nPajak Penghasilan yang bersifat final.\n(6) Pajak ...\nSK No 115582 A\nPRES"
+              },
+              {
+                "id": "UU 7 Tahun 2021#12",
+                "peraturan": "UU 7 Tahun 2021",
+                "pasal": "Pasal 13 ayat (1)-(2)",
+                "halaman_pdf": 11,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/A9FAAB97-ACA7-4F87-9FDC-FAA8123D1454/7TAHUN2021UU.pdf#page=11",
+                "status_peraturan": "berlaku",
+                "pasal_gugur": false,
+                "skor": 0.85,
+                "teks": "Pasal 13\n(1)\n Direktur Jenderal Pajak dapat menerbitkan Surat\nKetetapan Pajak Kurang Bayar dalam jangka waktu 5\n(lima) tahun setelah saat terutangnya pajak atau\nberakhirnya Masa Pajak, Bagian Tahun Pajak, atau\nTahun\nPajak\nsetelah\ndilakukan\ntindakan\npemeriksaan dalam hal sebagai berikut:\na.\nterdapat pajak yang tidak atau kurang dibayar;\nb.\nSurat Pemberitahuan tidak disampaikan dalam\njangka waktu sebagaimana dimaksud dalam\nPasal 3 ayat (3) dan setelah ditegur secara\ntertulis tidak disampaikan pada waktunya\nsebagaimana ditentukan dalam Surat Teguran;\nterdapat Pajak Pertambahan Nilai dan Pajak\nC.\nPenjualan atas Barang Mewah ternyata tidak\nseharusnya dikompensasikan selisih lebih pajak\natau tidak seharusnya dikenai tarif O% (nol\npersen);\nd. terdapat ...\nSK No 115513 A\nPRESIDEN\nREPUBLIK INDONESIA\n-12-\nd.\nterdapat kewajiban sebagaimana dimaksud\ndalam Pasal 28 atau Pasal 29 yang tidak\ndipenuhi s"
+              },
+              {
+                "id": "UU 7 Tahun 2021#15",
+                "peraturan": "UU 7 Tahun 2021",
+                "pasal": "Pasal 14 ayat (2)-(5)",
+                "halaman_pdf": 15,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/A9FAAB97-ACA7-4F87-9FDC-FAA8123D1454/7TAHUN2021UU.pdf#page=15",
+                "status_peraturan": "berlaku",
+                "pasal_gugur": false,
+                "skor": 0.84,
+                "teks": "(2) Surat Tagihan Pajak sebagaimana dimaksud pada\nayat (1) mempunyai kekuatan hukum yang sama\ndengan surat ketetapan pajak.\n(3)\nJumlah kekurangan pajak yang terutang dalam Surat\nTagihan Pajak sebagaimana dimaksud pada ayat (1)\nhuruf a dan huruf b ditambah dengan sanksi\nadministratif berupa bunga sebesar tarif bunga per\nbulan yang ditetapkan oleh Menteri Keuangan\ndihitung sejak saat terutangnya pajak atau\nberakhirnya Masa Pajak, bagian Tahun Pajak, atau\nTahun Pajak sampai dengan diterbitkannya Surat\nTagihan Pajak, dan dikenakan paling lama 24 (dua\npuluh empat) bulan serta bagian dari bulan dihitung\npenuh 1 (satu) bulan.\n(4) Terhadap ...\nSK No 115517 A\nPRESIDEN\nREPUBLIK INDONESIA\n-16-\n(4) Terhadap pengusaha atau Pengusaha Kena Pajak\nsebagaimana dimaksud pada ayat (1) huruf d atau\nhuruf e masing-masing, selain wajib menyetor pajak\nyang terutang, dikenai sanksi administratif berupa\ndenda seb"
+              }
+            ],
+            "dibuang_tidak_berlaku": 0,
+            "sumber": [
+              "UU 7 Tahun 2021#98",
+              "UU 7 Tahun 2021#76",
+              "UU 7 Tahun 2021#72",
+              "UU 7 Tahun 2021#12",
+              "UU 7 Tahun 2021#15",
+              "UU 7 Tahun 2021"
+            ]
+          }
+        },
+        {
+          "tool": "find_regulation",
+          "argumen": {
+            "regulation": "Perppu 1 Tahun 2020",
+            "date": "2021-10-29"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2021-10-29",
+            "peraturan": [
+              {
+                "peraturan": "PERPPU 1 Tahun 2020",
+                "judul": "Kebijakan Keuangan Negara dan Stabilitas Sistem Keuangan untuk Penanganan Pandemi Corona Virus Disease 2019 (Covid-19) dan/atau dalam Rangka Menghadapi Ancaman yang Membahayakan Perekonomian Nasional dan/atau Stabilitas Sistem Keuangan.",
+                "teks_tersedia": true,
+                "url": "https://jdih.kemenkeu.go.id/dok/perpu-1-tahun-2020",
+                "berkas_pdf": "https://jdih.kemenkeu.go.id/api/download/151110BE-2990-46B6-86C7-AA912D8C93B3/1TAHUN2020PERPPU.pdf",
+                "status": "ditetapkan_menjadi",
+                "sejak": "2020-03-31",
+                "oleh": [
+                  "UU 2 Tahun 2020"
+                ],
+                "pasal_gugur": [],
+                "ayat_gugur": {},
+                "pasti": true,
+                "catatan": []
+              }
+            ],
+            "sumber": [
+              "PERPPU 1 Tahun 2020",
+              "UU 2 Tahun 2020"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

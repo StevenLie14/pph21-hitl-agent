@@ -1,0 +1,1689 @@
+{
+ "meta": {
+  "model": "azure:gpt-6-luna",
+  "prompt": "dampak-v2-2026-10-06",
+  "harga (USD per 1 juta token, asumsi)": "masuk 0.4, keluar 1.6",
+  "label diverifikasi": "16/16",
+  "positif tanpa teks (dilewati)": "-",
+  "sumber teks (JDIH dulu)": {
+   "KEP-158/PJ/2020": "pajak.go.id",
+   "PER-11/PJ/2025": "jdih",
+   "PER-16/PJ/2016": "pajak.go.id",
+   "PER-17/PJ/2021": "pajak.go.id",
+   "PER-2/PJ/2024": "pajak.go.id",
+   "PER-23/PJ/2025": "pajak.go.id",
+   "PER-5/PJ/2024": "pajak.go.id",
+   "PER-7/PJ/2023": "pajak.go.id",
+   "PMK 10 Tahun 2025": "jdih",
+   "PMK 101 Tahun 2016": "jdih",
+   "PMK 102 Tahun 2016": "pajak.go.id",
+   "PMK 105 Tahun 2025": "jdih",
+   "PMK 110 Tahun 2020": "jdih",
+   "PMK 114 Tahun 2025": "jdih",
+   "PMK 143 Tahun 2020": "pajak.go.id",
+   "PMK 149 Tahun 2021": "pajak.go.id",
+   "PMK 167 Tahun 2018": "jdih",
+   "PMK 168 Tahun 2023": "jdih",
+   "PMK 23 Tahun 2020": "jdih",
+   "PMK 239 Tahun 2020": "pajak.go.id",
+   "PMK 28 Tahun 2020": "jdih",
+   "PMK 28 Tahun 2024": "pajak.go.id",
+   "PMK 3 Tahun 2022": "jdih",
+   "PMK 40 Tahun 2017": "pajak.go.id",
+   "PMK 44 Tahun 2020": "pajak.go.id",
+   "PMK 66 Tahun 2023": "jdih",
+   "PMK 68 Tahun 2020": "pajak.go.id",
+   "PMK 72 Tahun 2025": "pajak.go.id",
+   "PMK 81 Tahun 2024": "pajak.go.id",
+   "PMK 82 Tahun 2021": "jdih",
+   "PMK 83 Tahun 2021": "pajak.go.id",
+   "PMK 86 Tahun 2020": "jdih",
+   "PMK 9 Tahun 2021": "pajak.go.id",
+   "PP 12 Tahun 2023": "pajak.go.id",
+   "PP 29 Tahun 2020": "pajak.go.id",
+   "PP 41 Tahun 2016": "pajak.go.id",
+   "PP 55 Tahun 2022": "pajak.go.id",
+   "PP 58 Tahun 2023": "jdih",
+   "PP 73 Tahun 2016": "pajak.go.id",
+   "UU 11 Tahun 2020": "pajak.go.id",
+   "UU 7 Tahun 2021": "jdih"
+  }
+ },
+ "ringkas": {
+  "aturan": {
+   "dasar": {
+    "n": 16,
+    "tp": 12,
+    "fp": 3,
+    "fn": 13,
+    "presisi": 0.8,
+    "recall": 0.48,
+    "f1": 0.6,
+    "set_tepat": 4
+   },
+   "bukan_dasar": {
+    "n": 25,
+    "dokumen_dengan_key": 0,
+    "key_palsu": 0
+   },
+   "token_masuk": 0,
+   "token_keluar": 0,
+   "biaya_usd": 0.0,
+   "biaya_usd_per_dokumen": 0.0,
+   "latensi_median_detik": 0.0019992999732494354,
+   "latensi_p90_detik": 0.008497500093653798,
+   "latensi_lokal_median_ms": 1.9992999732494354,
+   "panggilan_llm": 0,
+   "tidak_valid": 0,
+   "dibuang_kutipan": 0,
+   "key_tak_dikenal": 0
+  },
+  "gabungan_utuh": {
+   "dasar": {
+    "n": 16,
+    "tp": 20,
+    "fp": 20,
+    "fn": 5,
+    "presisi": 0.5,
+    "recall": 0.8,
+    "f1": 0.6153846153846154,
+    "set_tepat": 7
+   },
+   "bukan_dasar": {
+    "n": 25,
+    "dokumen_dengan_key": 0,
+    "key_palsu": 0
+   },
+   "token_masuk": 1041760,
+   "token_keluar": 4518,
+   "biaya_usd": 0.4239328,
+   "biaya_usd_per_dokumen": 0.010339824390243902,
+   "latensi_median_detik": 2.3511578000616282,
+   "latensi_p90_detik": 9.907018399331719,
+   "latensi_lokal_median_ms": 6.45570014603436,
+   "panggilan_llm": 37,
+   "tidak_valid": 0,
+   "dibuang_kutipan": 1,
+   "key_tak_dikenal": 0
+  }
+ },
+ "dokumen": {
+  "PMK 114 Tahun 2025": {
+   "aturan": {
+    "keys": [],
+    "alasan": [
+     "klasifikasi: kata kunci PPh 21/26: ZAKAT; jenis PMK dapat mengubah angka; key data terdampak tidak teridentifikasi dari judul, tinjau manual"
+    ],
+    "detik": 0.0034110001288354397,
+    "token_masuk": 0,
+    "token_keluar": 0,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   },
+   "gabungan_utuh": {
+    "keys": [
+     "mekanisme_pemotongan"
+    ],
+    "alasan": [
+     "gabungan: kunci aturan + LLM teks utuh",
+     "klasifikasi: kata kunci PPh 21/26: ZAKAT; jenis PMK dapat mengubah angka; key data terdampak tidak teridentifikasi dari judul, tinjau manual",
+     "LLM: Peraturan ini mengatur langsung pengurangan zakat dalam penghitungan PPh Pasal 21 melalui mekanisme pemotongan, tetapi tidak mengatur tarif PPh final honorarium."
+    ],
+    "detik": 2.9348126004915684,
+    "token_masuk": 18501,
+    "token_keluar": 111,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [
+     "calc_annual",
+     "calc_article17_direct",
+     "calc_commissioner",
+     "calc_final",
+     "calc_final_period",
+     "calc_final_period_gross_up",
+     "calc_in_kind",
+     "calc_lump_sum_third_year",
+     "calc_monthly_ter",
+     "calc_monthly_ter_gross_up",
+     "calc_non_employee",
+     "calc_non_permanent_employee",
+     "calc_pensioner_annual",
+     "calc_pensioner_final_period",
+     "calc_pensioner_monthly_ter",
+     "calc_pph26",
+     "calc_progressive"
+    ],
+    "test": [
+     "test_ikn_third_year_object_codes.py",
+     "test_monitor_impact.py",
+     "test_progressive_brackets.py",
+     "test_properties.py",
+     "test_rates.py",
+     "test_validation.py"
+    ]
+   }
+  },
+  "PMK 105 Tahun 2025": {
+   "aturan": {
+    "keys": [],
+    "alasan": [
+     "klasifikasi: kata kunci PPh 21/26: PASAL 21; fasilitas: DITANGGUNG PEMERINTAH, STIMULUS"
+    ],
+    "detik": 0.0022944998927414417,
+    "token_masuk": 0,
+    "token_keluar": 0,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   },
+   "gabungan_utuh": {
+    "keys": [],
+    "alasan": [
+     "gabungan: kunci aturan + LLM teks utuh",
+     "klasifikasi: kata kunci PPh 21/26: PASAL 21; fasilitas: DITANGGUNG PEMERINTAH, STIMULUS",
+     "LLM: Peraturan ini hanya memberikan insentif PPh Pasal 21 ditanggung pemerintah dan menetapkan kriteria pemanfaatannya, tanpa mengubah langsung angka atau logika penghitungan pajak."
+    ],
+    "detik": 2.723681400064379,
+    "token_masuk": 21360,
+    "token_keluar": 54,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   }
+  },
+  "PER-23/PJ/2025": {
+   "aturan": {
+    "keys": [],
+    "alasan": [],
+    "detik": 0.00197380012832582,
+    "token_masuk": 0,
+    "token_keluar": 0,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   },
+   "gabungan_utuh": {
+    "keys": [],
+    "alasan": [
+     "gabungan: kunci aturan + LLM teks utuh",
+     "LLM: Peraturan ini mengatur penentuan status subjek pajak, bukan besaran PTKP atau tarif PPh final honorarium PNS."
+    ],
+    "detik": 2.3969030999578536,
+    "token_masuk": 5075,
+    "token_keluar": 43,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   }
+  },
+  "PMK 72 Tahun 2025": {
+   "aturan": {
+    "keys": [],
+    "alasan": [
+     "klasifikasi: menyebut peraturan watchlist: PMK 10 Tahun 2025"
+    ],
+    "detik": 0.0019992999732494354,
+    "token_masuk": 0,
+    "token_keluar": 0,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   },
+   "gabungan_utuh": {
+    "keys": [],
+    "alasan": [
+     "gabungan: kunci aturan + LLM teks utuh",
+     "klasifikasi: menyebut peraturan watchlist: PMK 10 Tahun 2025",
+     "LLM: Peraturan ini hanya mengubah fasilitas PPh Pasal 21 ditanggung pemerintah beserta kriteria, jangka waktu, dan administrasinya, bukan angka atau logika hitung PPh Pasal 21."
+    ],
+    "detik": 2.2764977996703237,
+    "token_masuk": 3728,
+    "token_keluar": 58,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   }
+  },
+  "PER-11/PJ/2025": {
+   "aturan": {
+    "keys": [],
+    "alasan": [
+     "klasifikasi: peraturan Dirjen Pajak tentang PPh/pemotongan, prosedural: PELAPORAN, SISTEM INTI ADMINISTRASI PERPAJAKAN"
+    ],
+    "detik": 0.013920399826020002,
+    "token_masuk": 0,
+    "token_keluar": 0,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   },
+   "gabungan_utuh": {
+    "keys": [],
+    "alasan": [
+     "gabungan: kunci aturan + LLM teks utuh",
+     "klasifikasi: peraturan Dirjen Pajak tentang PPh/pemotongan, prosedural: PELAPORAN, SISTEM INTI ADMINISTRASI PERPAJAKAN",
+     "bagian 1/2: Peraturan ini mengatur bentuk, pengisian, dan penyampaian pelaporan pajak, bukan angka atau logika hitung PPh Pasal 21.",
+     "bagian 2/2: Peraturan ini mengatur pelaporan dan administrasi SPT, bukan angka atau logika penghitungan PPh Pasal 21 dalam katalog."
+    ],
+    "detik": 6.289719900349155,
+    "token_masuk": 75610,
+    "token_keluar": 92,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   }
+  },
+  "PMK 10 Tahun 2025": {
+   "aturan": {
+    "keys": [],
+    "alasan": [
+     "klasifikasi: kata kunci PPh 21/26: PASAL 21; fasilitas: DITANGGUNG PEMERINTAH, STIMULUS"
+    ],
+    "detik": 0.0021019000560045242,
+    "token_masuk": 0,
+    "token_keluar": 0,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   },
+   "gabungan_utuh": {
+    "keys": [],
+    "alasan": [
+     "gabungan: kunci aturan + LLM teks utuh",
+     "klasifikasi: kata kunci PPh 21/26: PASAL 21; fasilitas: DITANGGUNG PEMERINTAH, STIMULUS",
+     "LLM: Peraturan ini hanya memberikan insentif PPh Pasal 21 ditanggung pemerintah dan menetapkan kriteria serta pelaporannya, tanpa mengubah langsung key hitungan kalkulator."
+    ],
+    "detik": 2.260342000052333,
+    "token_masuk": 14534,
+    "token_keluar": 51,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   }
+  },
+  "PMK 81 Tahun 2024": {
+   "aturan": {
+    "keys": [],
+    "alasan": [],
+    "detik": 0.037426300114020705,
+    "token_masuk": 0,
+    "token_keluar": 0,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   },
+   "gabungan_utuh": {
+    "keys": [],
+    "alasan": [
+     "gabungan: kunci aturan + LLM teks utuh",
+     "bagian 1/5: Peraturan ini mengatur tata cara administrasi dan pendaftaran, tetapi tidak menetapkan langsung angka atau logika perhitungan PPh Pasal 21.",
+     "bagian 2/5: Cuplikan PMK 81 Tahun 2024 mengatur tata cara pembayaran, penyetoran, pengembalian, dan imbalan bunga, bukan angka atau logika penghitungan PPh Pasal 21 yang tercantum dalam katalog.",
+     "bagian 3/5: Cuplikan ini mengatur pelaporan, administrasi, dan pajak lain, tetapi tidak mengatur langsung angka atau logika hitung PPh Pasal 21.",
+     "bagian 4/5: PMK 81 Tahun 2024 tidak mengatur langsung key kalkulator PPh Pasal 21 yang tersedia dalam katalog.",
+     "bagian 5/5: Ketentuan yang menyebut PPh Pasal 26 membahas prosedur pemotongan dan bukan tarif maupun logika hitung PPh Pasal 21, sedangkan ketentuan lainnya tidak mengatur langsung perhitungan PPh Pasal 21."
+    ],
+    "detik": 9.907018399331719,
+    "token_masuk": 200647,
+    "token_keluar": 269,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   }
+  },
+  "PER-5/PJ/2024": {
+   "aturan": {
+    "keys": [],
+    "alasan": [
+     "klasifikasi: peraturan Dirjen Pajak tentang PPh/pemotongan, prosedural: BUKTI PEMOTONGAN, SURAT PEMBERITAHUAN, TATA CARA"
+    ],
+    "detik": 0.0021988998632878065,
+    "token_masuk": 0,
+    "token_keluar": 0,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   },
+   "gabungan_utuh": {
+    "keys": [],
+    "alasan": [
+     "gabungan: kunci aturan + LLM teks utuh",
+     "klasifikasi: peraturan Dirjen Pajak tentang PPh/pemotongan, prosedural: BUKTI PEMOTONGAN, SURAT PEMBERITAHUAN, TATA CARA",
+     "LLM: Peraturan ini hanya mengatur bukti pemotongan dan pelaporan, bukan angka atau logika penghitungan PPh Pasal 21."
+    ],
+    "detik": 2.180506299715489,
+    "token_masuk": 8844,
+    "token_keluar": 44,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   }
+  },
+  "PMK 28 Tahun 2024": {
+   "aturan": {
+    "keys": [],
+    "alasan": [
+     "klasifikasi: fasilitas pajak tanpa menyebut objeknya (FASILITAS); bisa mencakup PPh 21 DTP"
+    ],
+    "detik": 0.0019425000064074993,
+    "token_masuk": 0,
+    "token_keluar": 0,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   },
+   "gabungan_utuh": {
+    "keys": [],
+    "alasan": [
+     "gabungan: kunci aturan + LLM teks utuh",
+     "klasifikasi: fasilitas pajak tanpa menyebut objeknya (FASILITAS); bisa mencakup PPh 21 DTP",
+     "LLM: Ketentuan PPh Pasal 21 dalam dokumen ini hanya memberikan fasilitas ditanggung pemerintah dan bersifat final, yang tidak mengubah angka atau logika hitung kalkulator."
+    ],
+    "detik": 1.3085092001128942,
+    "token_masuk": 6020,
+    "token_keluar": 51,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   }
+  },
+  "PER-2/PJ/2024": {
+   "aturan": {
+    "keys": [],
+    "alasan": [
+     "klasifikasi: kata kunci PPh 21/26: PASAL 21, PASAL 26; peraturan Dirjen Pajak bersifat prosedural: BUKTI PEMOTONGAN, SURAT PEMBERITAHUAN, TATA CARA"
+    ],
+    "detik": 0.002336899982765317,
+    "token_masuk": 0,
+    "token_keluar": 0,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   },
+   "gabungan_utuh": {
+    "keys": [],
+    "alasan": [
+     "gabungan: kunci aturan + LLM teks utuh",
+     "klasifikasi: kata kunci PPh 21/26: PASAL 21, PASAL 26; peraturan Dirjen Pajak bersifat prosedural: BUKTI PEMOTONGAN, SURAT PEMBERITAHUAN, TATA CARA",
+     "LLM: Peraturan ini mengatur bentuk dan tata cara bukti potong serta penyampaian SPT Masa, bukan angka atau logika penghitungan PPh Pasal 21."
+    ],
+    "detik": 1.820570700103417,
+    "token_masuk": 8158,
+    "token_keluar": 50,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   }
+  },
+  "PMK 168 Tahun 2023": {
+   "aturan": {
+    "keys": [
+     "biaya_jabatan",
+     "biaya_pensiun",
+     "mekanisme_pemotongan"
+    ],
+    "alasan": [
+     "klasifikasi: kata kunci PPh 21/26: SEHUBUNGAN DENGAN PEKERJAAN; jenis PMK dapat mengubah angka"
+    ],
+    "detik": 0.004660499980673194,
+    "token_masuk": 0,
+    "token_keluar": 0,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   },
+   "gabungan_utuh": {
+    "keys": [
+     "biaya_jabatan",
+     "biaya_pensiun",
+     "bukan_pegawai",
+     "kategori_ter",
+     "mekanisme_pemotongan",
+     "natura",
+     "pembulatan_pkp",
+     "pph26"
+    ],
+    "alasan": [
+     "gabungan: kunci aturan + LLM teks utuh",
+     "klasifikasi: kata kunci PPh 21/26: SEHUBUNGAN DENGAN PEKERJAAN; jenis PMK dapat mengubah angka",
+     "LLM: PMK 168 Tahun 2023 secara langsung menetapkan pengurang, pembulatan PKP, tata cara pengenaan dan pemotongan serta perlakuan natura, sementara TER dan tarif Pasal 17 hanya dirujuk ke peraturan lain."
+    ],
+    "detik": 5.671483000041917,
+    "token_masuk": 48254,
+    "token_keluar": 590,
+    "dibuang_kutipan": [],
+    "turunan": [
+     "ter_bulanan"
+    ],
+    "fungsi": [
+     "calc_annual",
+     "calc_article17_direct",
+     "calc_commissioner",
+     "calc_final",
+     "calc_final_period",
+     "calc_final_period_gross_up",
+     "calc_in_kind",
+     "calc_lump_sum_third_year",
+     "calc_monthly_ter",
+     "calc_monthly_ter_gross_up",
+     "calc_non_employee",
+     "calc_non_permanent_employee",
+     "calc_pensioner_annual",
+     "calc_pensioner_final_period",
+     "calc_pensioner_monthly_ter",
+     "calc_pph26",
+     "calc_progressive"
+    ],
+    "test": [
+     "test_ikn_third_year_object_codes.py",
+     "test_monitor_impact.py",
+     "test_progressive_brackets.py",
+     "test_properties.py",
+     "test_rates.py",
+     "test_validation.py"
+    ]
+   }
+  },
+  "PP 58 Tahun 2023": {
+   "aturan": {
+    "keys": [
+     "kategori_ter",
+     "pph_final_honorarium_pns",
+     "ter_bulanan",
+     "ter_harian"
+    ],
+    "alasan": [
+     "klasifikasi: kata kunci PPh 21/26: PASAL 21, SEHUBUNGAN DENGAN PEKERJAAN; jenis PP dapat mengubah angka",
+     "mencabut_sebagian PP 80 Tahun 2010 -> pph_final_honorarium_pns"
+    ],
+    "detik": 0.0013376998249441385,
+    "token_masuk": 0,
+    "token_keluar": 0,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   },
+   "gabungan_utuh": {
+    "keys": [
+     "kategori_ter",
+     "pph_final_honorarium_pns",
+     "tarif_pasal_17",
+     "ter_bulanan",
+     "ter_harian"
+    ],
+    "alasan": [
+     "gabungan: kunci aturan + LLM teks utuh",
+     "klasifikasi: kata kunci PPh 21/26: PASAL 21, SEHUBUNGAN DENGAN PEKERJAAN; jenis PP dapat mengubah angka",
+     "mencabut_sebagian PP 80 Tahun 2010 -> pph_final_honorarium_pns",
+     "LLM: mencabut_sebagian PP 80 Tahun 2010 -> pph_final_honorarium_pns",
+     "LLM: PP ini menetapkan kategori dan tarif efektif bulanan/harian serta penggunaan tarif Pasal 17, sedangkan pencabutan sebagian PP 80 Tahun 2010 tidak dengan sendirinya mengatur ulang tarif final honorarium PNS."
+    ],
+    "detik": 3.108858299907297,
+    "token_masuk": 12346,
+    "token_keluar": 260,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [
+     "calc_annual",
+     "calc_article17_direct",
+     "calc_commissioner",
+     "calc_final",
+     "calc_final_period",
+     "calc_final_period_gross_up",
+     "calc_lump_sum_third_year",
+     "calc_monthly_ter",
+     "calc_monthly_ter_gross_up",
+     "calc_non_employee",
+     "calc_non_permanent_employee",
+     "calc_pensioner_annual",
+     "calc_pensioner_final_period",
+     "calc_pensioner_monthly_ter"
+    ],
+    "test": [
+     "test_ikn_third_year_object_codes.py",
+     "test_monitor_impact.py",
+     "test_properties.py",
+     "test_validation.py"
+    ]
+   }
+  },
+  "PER-7/PJ/2023": {
+   "aturan": {
+    "keys": [],
+    "alasan": [],
+    "detik": 0.0013246000744402409,
+    "token_masuk": 0,
+    "token_keluar": 0,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   },
+   "gabungan_utuh": {
+    "keys": [],
+    "alasan": [
+     "gabungan: kunci aturan + LLM teks utuh",
+     "LLM: Peraturan ini mengatur keberatan dan perpanjangan penetapan lokasi usaha, bukan angka atau logika penghitungan PPh Pasal 21."
+    ],
+    "detik": 1.7807132999878377,
+    "token_masuk": 2292,
+    "token_keluar": 47,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   }
+  },
+  "PMK 66 Tahun 2023": {
+   "aturan": {
+    "keys": [
+     "natura"
+    ],
+    "alasan": [
+     "klasifikasi: kata kunci PPh 21/26: NATURA, SEHUBUNGAN DENGAN PEKERJAAN; jenis PMK dapat mengubah angka"
+    ],
+    "detik": 0.0036514000967144966,
+    "token_masuk": 0,
+    "token_keluar": 0,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   },
+   "gabungan_utuh": {
+    "keys": [
+     "mekanisme_pemotongan",
+     "natura"
+    ],
+    "alasan": [
+     "gabungan: kunci aturan + LLM teks utuh",
+     "klasifikasi: kata kunci PPh 21/26: NATURA, SEHUBUNGAN DENGAN PEKERJAAN; jenis PMK dapat mengubah angka",
+     "LLM: PMK ini mengatur perlakuan natura sebagai objek penghasilan pegawai beserta penilaian dan mekanisme pemotongan PPh atas natura dan/atau kenikmatan."
+    ],
+    "detik": 2.9563840001355857,
+    "token_masuk": 29684,
+    "token_keluar": 170,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [
+     "calc_annual",
+     "calc_article17_direct",
+     "calc_commissioner",
+     "calc_final",
+     "calc_final_period",
+     "calc_final_period_gross_up",
+     "calc_in_kind",
+     "calc_lump_sum_third_year",
+     "calc_monthly_ter",
+     "calc_monthly_ter_gross_up",
+     "calc_non_employee",
+     "calc_non_permanent_employee",
+     "calc_pensioner_annual",
+     "calc_pensioner_final_period",
+     "calc_pensioner_monthly_ter",
+     "calc_pph26",
+     "calc_progressive"
+    ],
+    "test": [
+     "test_ikn_third_year_object_codes.py",
+     "test_monitor_impact.py",
+     "test_progressive_brackets.py",
+     "test_properties.py",
+     "test_rates.py",
+     "test_validation.py"
+    ]
+   }
+  },
+  "PP 12 Tahun 2023": {
+   "aturan": {
+    "keys": [],
+    "alasan": [],
+    "detik": 0.005195199977606535,
+    "token_masuk": 0,
+    "token_keluar": 0,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   },
+   "gabungan_utuh": {
+    "keys": [],
+    "alasan": [
+     "gabungan: kunci aturan + LLM teks utuh",
+     "LLM: PP ini hanya memberi fasilitas PPh Pasal 21 ditanggung pemerintah dan bersifat final, bukan mengatur langsung key tarif atau logika hitung PPh 21."
+    ],
+    "detik": 1.9512008999008685,
+    "token_masuk": 32551,
+    "token_keluar": 49,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   }
+  },
+  "PP 55 Tahun 2022": {
+   "aturan": {
+    "keys": [],
+    "alasan": [
+     "klasifikasi: PP tentang perpajakan/PPh secara umum: bisa mengubah UU PPh atau aturan PPh 21 tanpa menyebutnya di judul"
+    ],
+    "detik": 0.00705949985422194,
+    "token_masuk": 0,
+    "token_keluar": 0,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   },
+   "gabungan_utuh": {
+    "keys": [
+     "natura",
+     "tarif_pasal_17"
+    ],
+    "alasan": [
+     "gabungan: kunci aturan + LLM teks utuh",
+     "klasifikasi: PP tentang perpajakan/PPh secara umum: bisa mengubah UU PPh atau aturan PPh 21 tanpa menyebutnya di judul",
+     "LLM: PP ini langsung mengatur natura sebagai objek penghasilan pegawai dan menetapkan kapan penghasilan usaha tertentu dikenai tarif Pasal 17, tetapi tidak mengatur key PPh 26, honorarium PNS, atau logika pemotongan PPh 21."
+    ],
+    "detik": 2.128838900011033,
+    "token_masuk": 43450,
+    "token_keluar": 150,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [
+     "calc_annual",
+     "calc_article17_direct",
+     "calc_final",
+     "calc_final_period",
+     "calc_final_period_gross_up",
+     "calc_in_kind",
+     "calc_lump_sum_third_year",
+     "calc_monthly_ter",
+     "calc_monthly_ter_gross_up",
+     "calc_non_employee",
+     "calc_non_permanent_employee",
+     "calc_pensioner_annual",
+     "calc_pensioner_final_period",
+     "calc_pensioner_monthly_ter"
+    ],
+    "test": [
+     "test_ikn_third_year_object_codes.py",
+     "test_monitor_impact.py",
+     "test_properties.py",
+     "test_validation.py"
+    ]
+   }
+  },
+  "PMK 3 Tahun 2022": {
+   "aturan": {
+    "keys": [],
+    "alasan": [
+     "klasifikasi: fasilitas pajak tanpa menyebut objeknya (INSENTIF); bisa mencakup PPh 21 DTP"
+    ],
+    "detik": 0.0022538998164236546,
+    "token_masuk": 0,
+    "token_keluar": 0,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   },
+   "gabungan_utuh": {
+    "keys": [],
+    "alasan": [
+     "gabungan: kunci aturan + LLM teks utuh",
+     "klasifikasi: fasilitas pajak tanpa menyebut objeknya (INSENTIF); bisa mencakup PPh 21 DTP",
+     "LLM: Peraturan ini mengatur insentif pajak dan tidak mengatur langsung tarif PPh final atas honorarium atau imbalan beban APBN/APBD bagi PNS, TNI/Polri."
+    ],
+    "detik": 1.817691900068894,
+    "token_masuk": 20905,
+    "token_keluar": 56,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   }
+  },
+  "UU 7 Tahun 2021": {
+   "aturan": {
+    "keys": [
+     "natura",
+     "ptkp",
+     "tarif_pasal_17"
+    ],
+    "alasan": [
+     "klasifikasi: UU tentang perpajakan/PPh secara umum: bisa mengubah UU PPh atau aturan PPh 21 tanpa menyebutnya di judul",
+     "mengubah UU 7 Tahun 1983 (pasal diubah 4, 6, 7, 9, 11, 11A, 17, 18, 32A, 32B; berdampak: 4, 7, 17) -> natura, ptkp, tarif_pasal_17"
+    ],
+    "detik": 0.018710799980908632,
+    "token_masuk": 0,
+    "token_keluar": 0,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   },
+   "gabungan_utuh": {
+    "keys": [
+     "natura",
+     "ptkp",
+     "tarif_pasal_17"
+    ],
+    "alasan": [
+     "gabungan: kunci aturan + LLM teks utuh",
+     "klasifikasi: UU tentang perpajakan/PPh secara umum: bisa mengubah UU PPh atau aturan PPh 21 tanpa menyebutnya di judul",
+     "mengubah UU 7 Tahun 1983 (pasal diubah 4, 6, 7, 9, 11, 11A, 17, 18, 32A, 32B; berdampak: 4, 7, 17) -> natura, ptkp, tarif_pasal_17",
+     "bagian 1/2: mengubah UU 7 Tahun 1983 (pasal diubah 4, 6, 7, 9, 11, 11A, 17, 18, 32A, 32B; berdampak: 4, 7, 17) -> natura, ptkp, tarif_pasal_17",
+     "bagian 1/2: UU ini secara langsung mengatur objek natura, pengurang penghasilan berupa biaya natura, besaran PTKP, tarif progresif Pasal 17, dan pembulatan PKP sebelum penerapan tarif.",
+     "bagian 2/2: Penjelasan Pasal 7 mengatur langsung pengurangan PTKP, sedangkan penjelasan Pasal 17 menetapkan penerapan lapisan tarif orang pribadi; pembulatan PKP yang disebut hanya dalam contoh tidak mengatur logika pembulatan secara langsung."
+    ],
+    "detik": 7.698198999743909,
+    "token_masuk": 87937,
+    "token_keluar": 343,
+    "dibuang_kutipan": [],
+    "turunan": [
+     "kategori_ter",
+     "ter_bulanan"
+    ],
+    "fungsi": [
+     "calc_annual",
+     "calc_article17_direct",
+     "calc_commissioner",
+     "calc_final",
+     "calc_final_period",
+     "calc_final_period_gross_up",
+     "calc_in_kind",
+     "calc_lump_sum_third_year",
+     "calc_monthly_ter",
+     "calc_monthly_ter_gross_up",
+     "calc_non_employee",
+     "calc_non_permanent_employee",
+     "calc_pensioner_annual",
+     "calc_pensioner_final_period",
+     "calc_pensioner_monthly_ter"
+    ],
+    "test": [
+     "test_ikn_third_year_object_codes.py",
+     "test_monitor_impact.py",
+     "test_properties.py",
+     "test_validation.py"
+    ]
+   }
+  },
+  "PMK 149 Tahun 2021": {
+   "aturan": {
+    "keys": [],
+    "alasan": [
+     "klasifikasi: fasilitas pajak tanpa menyebut objeknya (INSENTIF); bisa mencakup PPh 21 DTP"
+    ],
+    "detik": 0.001631600083783269,
+    "token_masuk": 0,
+    "token_keluar": 0,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   },
+   "gabungan_utuh": {
+    "keys": [],
+    "alasan": [
+     "gabungan: kunci aturan + LLM teks utuh",
+     "klasifikasi: fasilitas pajak tanpa menyebut objeknya (INSENTIF); bisa mencakup PPh 21 DTP",
+     "LLM: tidak ada istilah parameter di teks: LLM tidak dipanggil"
+    ],
+    "detik": 0.003422300098463893,
+    "token_masuk": 0,
+    "token_keluar": 0,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   }
+  },
+  "PER-17/PJ/2021": {
+   "aturan": {
+    "keys": [],
+    "alasan": [
+     "klasifikasi: peraturan Dirjen Pajak tentang PPh/pemotongan, prosedural: BUKTI PEMOTONGAN, SURAT PEMBERITAHUAN, TATA CARA"
+    ],
+    "detik": 0.0017489998135715723,
+    "token_masuk": 0,
+    "token_keluar": 0,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   },
+   "gabungan_utuh": {
+    "keys": [],
+    "alasan": [
+     "gabungan: kunci aturan + LLM teks utuh",
+     "klasifikasi: peraturan Dirjen Pajak tentang PPh/pemotongan, prosedural: BUKTI PEMOTONGAN, SURAT PEMBERITAHUAN, TATA CARA",
+     "LLM: Peraturan ini hanya mengatur bentuk dan tata cara bukti pemotongan serta pelaporan SPT Masa, bukan angka atau logika penghitungan PPh Pasal 21."
+    ],
+    "detik": 1.1219113001134247,
+    "token_masuk": 12657,
+    "token_keluar": 51,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   }
+  },
+  "PMK 83 Tahun 2021": {
+   "aturan": {
+    "keys": [],
+    "alasan": [
+     "klasifikasi: fasilitas pajak tanpa menyebut objeknya (FASILITAS); bisa mencakup PPh 21 DTP"
+    ],
+    "detik": 0.0014458999503403902,
+    "token_masuk": 0,
+    "token_keluar": 0,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   },
+   "gabungan_utuh": {
+    "keys": [],
+    "alasan": [
+     "gabungan: kunci aturan + LLM teks utuh",
+     "klasifikasi: fasilitas pajak tanpa menyebut objeknya (FASILITAS); bisa mencakup PPh 21 DTP",
+     "LLM: tidak ada istilah parameter di teks: LLM tidak dipanggil"
+    ],
+    "detik": 0.002908299909904599,
+    "token_masuk": 0,
+    "token_keluar": 0,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   }
+  },
+  "PMK 82 Tahun 2021": {
+   "aturan": {
+    "keys": [],
+    "alasan": [
+     "klasifikasi: fasilitas pajak tanpa menyebut objeknya (INSENTIF); bisa mencakup PPh 21 DTP"
+    ],
+    "detik": 0.005131599958986044,
+    "token_masuk": 0,
+    "token_keluar": 0,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   },
+   "gabungan_utuh": {
+    "keys": [],
+    "alasan": [
+     "gabungan: kunci aturan + LLM teks utuh",
+     "klasifikasi: fasilitas pajak tanpa menyebut objeknya (INSENTIF); bisa mencakup PPh 21 DTP",
+     "LLM: Peraturan ini hanya memperpanjang dan mengatur persyaratan serta pelaporan insentif PPh Pasal 21 ditanggung pemerintah, tanpa mengubah langsung angka atau logika penghitungan PPh Pasal 21."
+    ],
+    "detik": 1.5076022001449019,
+    "token_masuk": 55621,
+    "token_keluar": 61,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   }
+  },
+  "PMK 9 Tahun 2021": {
+   "aturan": {
+    "keys": [],
+    "alasan": [
+     "klasifikasi: fasilitas pajak tanpa menyebut objeknya (INSENTIF); bisa mencakup PPh 21 DTP"
+    ],
+    "detik": 0.002388899913057685,
+    "token_masuk": 0,
+    "token_keluar": 0,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   },
+   "gabungan_utuh": {
+    "keys": [],
+    "alasan": [
+     "gabungan: kunci aturan + LLM teks utuh",
+     "klasifikasi: fasilitas pajak tanpa menyebut objeknya (INSENTIF); bisa mencakup PPh 21 DTP",
+     "LLM: Peraturan ini hanya memberikan insentif PPh Pasal 21 ditanggung pemerintah dan tidak mengatur langsung tarif PPh final atas honorarium atau imbalan beban APBN/APBD bagi PNS, TNI/Polri."
+    ],
+    "detik": 10.215167500078678,
+    "token_masuk": 14553,
+    "token_keluar": 63,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   }
+  },
+  "PMK 239 Tahun 2020": {
+   "aturan": {
+    "keys": [],
+    "alasan": [
+     "klasifikasi: fasilitas pajak tanpa menyebut objeknya (FASILITAS); bisa mencakup PPh 21 DTP"
+    ],
+    "detik": 0.0015535000711679459,
+    "token_masuk": 0,
+    "token_keluar": 0,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   },
+   "gabungan_utuh": {
+    "keys": [],
+    "alasan": [
+     "gabungan: kunci aturan + LLM teks utuh",
+     "klasifikasi: fasilitas pajak tanpa menyebut objeknya (FASILITAS); bisa mencakup PPh 21 DTP",
+     "LLM: tidak ada istilah parameter di teks: LLM tidak dipanggil"
+    ],
+    "detik": 0.004065499873831868,
+    "token_masuk": 0,
+    "token_keluar": 0,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   }
+  },
+  "UU 11 Tahun 2020": {
+   "aturan": {
+    "keys": [
+     "natura",
+     "pph26"
+    ],
+    "alasan": [
+     "klasifikasi: UU tentang perpajakan/PPh secara umum: bisa mengubah UU PPh atau aturan PPh 21 tanpa menyebutnya di judul",
+     "mengubah UU 7 Tahun 1983 (pasal diubah 2, 4, 26; berdampak: 4, 26) -> natura, pph26"
+    ],
+    "detik": 0.009368000086396933,
+    "token_masuk": 0,
+    "token_keluar": 0,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   },
+   "gabungan_utuh": {
+    "keys": [
+     "natura",
+     "pph26"
+    ],
+    "alasan": [
+     "gabungan: kunci aturan + LLM teks utuh",
+     "klasifikasi: UU tentang perpajakan/PPh secara umum: bisa mengubah UU PPh atau aturan PPh 21 tanpa menyebutnya di judul",
+     "mengubah UU 7 Tahun 1983 (pasal diubah 2, 4, 26; berdampak: 4, 26) -> natura, pph26",
+     "LLM: mengubah UU 7 Tahun 1983 (pasal diubah 2, 4, 26; berdampak: 4, 26) -> natura, pph26",
+     "LLM: UU ini secara langsung mengubah perlakuan natura sebagai objek pajak dan menetapkan tarif pemotongan PPh Pasal 26, sedangkan ketentuan lain tidak mengatur langsung key kalkulator PPh Pasal 21."
+    ],
+    "detik": 8.63724540034309,
+    "token_masuk": 44661,
+    "token_keluar": 130,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [
+     "calc_in_kind",
+     "calc_pph26"
+    ],
+    "test": []
+   }
+  },
+  "PMK 143 Tahun 2020": {
+   "aturan": {
+    "keys": [],
+    "alasan": [
+     "klasifikasi: fasilitas pajak tanpa menyebut objeknya (FASILITAS); bisa mencakup PPh 21 DTP"
+    ],
+    "detik": 0.001756400102749467,
+    "token_masuk": 0,
+    "token_keluar": 0,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   },
+   "gabungan_utuh": {
+    "keys": [],
+    "alasan": [
+     "gabungan: kunci aturan + LLM teks utuh",
+     "klasifikasi: fasilitas pajak tanpa menyebut objeknya (FASILITAS); bisa mencakup PPh 21 DTP",
+     "LLM: tidak ada istilah parameter di teks: LLM tidak dipanggil"
+    ],
+    "detik": 0.004323899978771806,
+    "token_masuk": 0,
+    "token_keluar": 0,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   }
+  },
+  "PMK 110 Tahun 2020": {
+   "aturan": {
+    "keys": [],
+    "alasan": [
+     "klasifikasi: fasilitas pajak tanpa menyebut objeknya (INSENTIF); bisa mencakup PPh 21 DTP"
+    ],
+    "detik": 0.008497500093653798,
+    "token_masuk": 0,
+    "token_keluar": 0,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   },
+   "gabungan_utuh": {
+    "keys": [],
+    "alasan": [
+     "gabungan: kunci aturan + LLM teks utuh",
+     "klasifikasi: fasilitas pajak tanpa menyebut objeknya (INSENTIF); bisa mencakup PPh 21 DTP",
+     "bagian 1/3: Peraturan ini mengatur insentif pajak, bukan tarif PPh final atas honorarium dan imbalan beban APBN/APBD bagi PNS, TNI/Polri.",
+     "bagian 2/3: Peraturan ini memberikan insentif PPh Pasal 21 ditanggung Pemerintah dan ketentuan administrasi, tanpa mengubah langsung angka atau logika penghitungan PPh Pasal 21.",
+     "bagian 3/3: tidak ada istilah parameter di teks: LLM tidak dipanggil"
+    ],
+    "detik": 12.609654400032014,
+    "token_masuk": 83321,
+    "token_keluar": 109,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   }
+  },
+  "PMK 86 Tahun 2020": {
+   "aturan": {
+    "keys": [],
+    "alasan": [
+     "klasifikasi: fasilitas pajak tanpa menyebut objeknya (INSENTIF); bisa mencakup PPh 21 DTP"
+    ],
+    "detik": 0.008246200159192085,
+    "token_masuk": 0,
+    "token_keluar": 0,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   },
+   "gabungan_utuh": {
+    "keys": [],
+    "alasan": [
+     "gabungan: kunci aturan + LLM teks utuh",
+     "klasifikasi: fasilitas pajak tanpa menyebut objeknya (INSENTIF); bisa mencakup PPh 21 DTP",
+     "bagian 1/3: PMK ini hanya memberikan insentif PPh Pasal 21 ditanggung Pemerintah, sementara tidak mengatur langsung tarif final atas honorarium dan imbalan beban APBN/APBD bagi PNS, TNI/Polri.",
+     "bagian 2/3: PMK ini hanya mengatur fasilitas PPh Pasal 21 ditanggung pemerintah dan ketentuan terkait, bukan besaran PTKP, biaya jabatan, atau logika dasar penghitungan PPh Pasal 21.",
+     "bagian 3/3: tidak ada istilah parameter di teks: LLM tidak dipanggil"
+    ],
+    "detik": 18.198275999864563,
+    "token_masuk": 90431,
+    "token_keluar": 123,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   }
+  },
+  "PMK 68 Tahun 2020": {
+   "aturan": {
+    "keys": [],
+    "alasan": [],
+    "detik": 0.0011001999955624342,
+    "token_masuk": 0,
+    "token_keluar": 0,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   },
+   "gabungan_utuh": {
+    "keys": [],
+    "alasan": [
+     "gabungan: kunci aturan + LLM teks utuh",
+     "LLM: Peraturan ini mengatur perlakuan beasiswa dan sisa lebih badan pendidikan/penelitian, bukan logika penghitungan atau pemotongan PPh Pasal 21."
+    ],
+    "detik": 11.511288200039417,
+    "token_masuk": 5116,
+    "token_keluar": 51,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   }
+  },
+  "PP 29 Tahun 2020": {
+   "aturan": {
+    "keys": [],
+    "alasan": [
+     "klasifikasi: PP tentang perpajakan/PPh secara umum: bisa mengubah UU PPh atau aturan PPh 21 tanpa menyebutnya di judul"
+    ],
+    "detik": 0.001627500168979168,
+    "token_masuk": 0,
+    "token_keluar": 0,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   },
+   "gabungan_utuh": {
+    "keys": [],
+    "alasan": [
+     "gabungan: kunci aturan + LLM teks utuh",
+     "klasifikasi: PP tentang perpajakan/PPh secara umum: bisa mengubah UU PPh atau aturan PPh 21 tanpa menyebutnya di judul",
+     "LLM: PP ini menetapkan objek dan perlakuan pemotongan PPh Pasal 21 atas tambahan penghasilan tenaga kesehatan, tetapi tidak menetapkan logika hitung umum; tarif final 0% tersebut merupakan fasilitas sehingga tidak mengubah key tarif atau mekanisme kalkulator."
+    ],
+    "detik": 1.540510900085792,
+    "token_masuk": 12346,
+    "token_keluar": 119,
+    "dibuang_kutipan": [
+     "mekanisme_pemotongan"
+    ],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   }
+  },
+  "PMK 44 Tahun 2020": {
+   "aturan": {
+    "keys": [],
+    "alasan": [
+     "klasifikasi: fasilitas pajak tanpa menyebut objeknya (INSENTIF); bisa mencakup PPh 21 DTP"
+    ],
+    "detik": 0.0015135998837649822,
+    "token_masuk": 0,
+    "token_keluar": 0,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   },
+   "gabungan_utuh": {
+    "keys": [],
+    "alasan": [
+     "gabungan: kunci aturan + LLM teks utuh",
+     "klasifikasi: fasilitas pajak tanpa menyebut objeknya (INSENTIF); bisa mencakup PPh 21 DTP",
+     "LLM: PMK 44 Tahun 2020 hanya memberikan insentif PPh Pasal 21 ditanggung pemerintah, yang tidak mengubah tarif PPh final atas honorarium dan imbalan beban APBN/APBD."
+    ],
+    "detik": 2.3511578000616282,
+    "token_masuk": 9753,
+    "token_keluar": 59,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   }
+  },
+  "PMK 28 Tahun 2020": {
+   "aturan": {
+    "keys": [],
+    "alasan": [
+     "klasifikasi: fasilitas pajak tanpa menyebut objeknya (FASILITAS); bisa mencakup PPh 21 DTP"
+    ],
+    "detik": 0.0016872999258339405,
+    "token_masuk": 0,
+    "token_keluar": 0,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   },
+   "gabungan_utuh": {
+    "keys": [],
+    "alasan": [
+     "gabungan: kunci aturan + LLM teks utuh",
+     "klasifikasi: fasilitas pajak tanpa menyebut objeknya (FASILITAS); bisa mencakup PPh 21 DTP",
+     "LLM: PMK ini hanya memberikan pembebasan pemotongan PPh Pasal 21 sebagai fasilitas, tanpa mengatur langsung tarif atau logika perhitungan PPh Pasal 21."
+    ],
+    "detik": 9.534108300227672,
+    "token_masuk": 12937,
+    "token_keluar": 52,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   }
+  },
+  "PMK 23 Tahun 2020": {
+   "aturan": {
+    "keys": [],
+    "alasan": [
+     "klasifikasi: fasilitas pajak tanpa menyebut objeknya (INSENTIF); bisa mencakup PPh 21 DTP"
+    ],
+    "detik": 0.002283599926158786,
+    "token_masuk": 0,
+    "token_keluar": 0,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   },
+   "gabungan_utuh": {
+    "keys": [],
+    "alasan": [
+     "gabungan: kunci aturan + LLM teks utuh",
+     "klasifikasi: fasilitas pajak tanpa menyebut objeknya (INSENTIF); bisa mencakup PPh 21 DTP",
+     "LLM: Peraturan ini hanya memberikan insentif PPh Pasal 21 ditanggung pemerintah dan tidak mengubah angka atau logika hitung PPh Pasal 21."
+    ],
+    "detik": 1.2465084998402745,
+    "token_masuk": 26928,
+    "token_keluar": 48,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   }
+  },
+  "KEP-158/PJ/2020": {
+   "aturan": {
+    "keys": [],
+    "alasan": [
+     "klasifikasi: kata kunci PPh 21/26: PASAL 21, PASAL 26; peraturan Dirjen Pajak bersifat prosedural: SURAT PEMBERITAHUAN"
+    ],
+    "detik": 0.0012941998429596424,
+    "token_masuk": 0,
+    "token_keluar": 0,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   },
+   "gabungan_utuh": {
+    "keys": [],
+    "alasan": [
+     "gabungan: kunci aturan + LLM teks utuh",
+     "klasifikasi: kata kunci PPh 21/26: PASAL 21, PASAL 26; peraturan Dirjen Pajak bersifat prosedural: SURAT PEMBERITAHUAN",
+     "LLM: Keputusan ini hanya mengecualikan sanksi denda atas keterlambatan penyampaian SPT Masa dan tidak mengatur tarif PPh Pasal 26 atau logika hitung PPh 21."
+    ],
+    "detik": 3.464112700195983,
+    "token_masuk": 2244,
+    "token_keluar": 59,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   }
+  },
+  "PMK 167 Tahun 2018": {
+   "aturan": {
+    "keys": [
+     "natura"
+    ],
+    "alasan": [
+     "klasifikasi: kata kunci PPh 21/26: NATURA; jenis PMK dapat mengubah angka"
+    ],
+    "detik": 0.001705799950286746,
+    "token_masuk": 0,
+    "token_keluar": 0,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   },
+   "gabungan_utuh": {
+    "keys": [
+     "natura"
+    ],
+    "alasan": [
+     "gabungan: kunci aturan + LLM teks utuh",
+     "klasifikasi: kata kunci PPh 21/26: NATURA; jenis PMK dapat mengubah angka",
+     "LLM: Peraturan ini secara langsung menetapkan perlakuan natura dan kenikmatan bagi pegawai sebagai bukan penghasilan."
+    ],
+    "detik": 3.020474099786952,
+    "token_masuk": 4223,
+    "token_keluar": 83,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [
+     "calc_in_kind"
+    ],
+    "test": []
+   }
+  },
+  "PMK 40 Tahun 2017": {
+   "aturan": {
+    "keys": [],
+    "alasan": [
+     "klasifikasi: kata kunci PPh 21/26: PASAL 21; jenis PMK dapat mengubah angka; key data terdampak tidak teridentifikasi dari judul, tinjau manual"
+    ],
+    "detik": 0.0013796999119222164,
+    "token_masuk": 0,
+    "token_keluar": 0,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   },
+   "gabungan_utuh": {
+    "keys": [
+     "mekanisme_pemotongan"
+    ],
+    "alasan": [
+     "gabungan: kunci aturan + LLM teks utuh",
+     "klasifikasi: kata kunci PPh 21/26: PASAL 21; jenis PMK dapat mengubah angka; key data terdampak tidak teridentifikasi dari judul, tinjau manual",
+     "LLM: Peraturan ini secara langsung menetapkan tarif final khusus dan tata cara penghitungan PPh 21 bagi pegawai pemberi kerja berkriteria tertentu, tanpa mengubah PTKP atau tarif PPh 26 maupun honorarium PNS."
+    ],
+    "detik": 1.6850574002601206,
+    "token_masuk": 3464,
+    "token_keluar": 125,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [
+     "calc_annual",
+     "calc_article17_direct",
+     "calc_commissioner",
+     "calc_final",
+     "calc_final_period",
+     "calc_final_period_gross_up",
+     "calc_in_kind",
+     "calc_lump_sum_third_year",
+     "calc_monthly_ter",
+     "calc_monthly_ter_gross_up",
+     "calc_non_employee",
+     "calc_non_permanent_employee",
+     "calc_pensioner_annual",
+     "calc_pensioner_final_period",
+     "calc_pensioner_monthly_ter",
+     "calc_pph26",
+     "calc_progressive"
+    ],
+    "test": [
+     "test_ikn_third_year_object_codes.py",
+     "test_monitor_impact.py",
+     "test_progressive_brackets.py",
+     "test_properties.py",
+     "test_rates.py",
+     "test_validation.py"
+    ]
+   }
+  },
+  "PP 73 Tahun 2016": {
+   "aturan": {
+    "keys": [],
+    "alasan": [
+     "klasifikasi: PP tentang perpajakan/PPh secara umum: bisa mengubah UU PPh atau aturan PPh 21 tanpa menyebutnya di judul"
+    ],
+    "detik": 0.0005489001050591469,
+    "token_masuk": 0,
+    "token_keluar": 0,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   },
+   "gabungan_utuh": {
+    "keys": [
+     "mekanisme_pemotongan"
+    ],
+    "alasan": [
+     "gabungan: kunci aturan + LLM teks utuh",
+     "klasifikasi: PP tentang perpajakan/PPh secara umum: bisa mengubah UU PPh atau aturan PPh 21 tanpa menyebutnya di judul",
+     "LLM: PP ini secara langsung mengatur perlakuan iuran sebagai pengurang penghasilan peserta, yang termasuk logika hitung PPh 21."
+    ],
+    "detik": 2.380946900229901,
+    "token_masuk": 3428,
+    "token_keluar": 97,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [
+     "calc_annual",
+     "calc_article17_direct",
+     "calc_commissioner",
+     "calc_final",
+     "calc_final_period",
+     "calc_final_period_gross_up",
+     "calc_in_kind",
+     "calc_lump_sum_third_year",
+     "calc_monthly_ter",
+     "calc_monthly_ter_gross_up",
+     "calc_non_employee",
+     "calc_non_permanent_employee",
+     "calc_pensioner_annual",
+     "calc_pensioner_final_period",
+     "calc_pensioner_monthly_ter",
+     "calc_pph26",
+     "calc_progressive"
+    ],
+    "test": [
+     "test_ikn_third_year_object_codes.py",
+     "test_monitor_impact.py",
+     "test_progressive_brackets.py",
+     "test_properties.py",
+     "test_rates.py",
+     "test_validation.py"
+    ]
+   }
+  },
+  "PP 41 Tahun 2016": {
+   "aturan": {
+    "keys": [],
+    "alasan": [
+     "klasifikasi: kata kunci PPh 21/26: PASAL 21; jenis PP dapat mengubah angka; key data terdampak tidak teridentifikasi dari judul, tinjau manual"
+    ],
+    "detik": 0.00145619991235435,
+    "token_masuk": 0,
+    "token_keluar": 0,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   },
+   "gabungan_utuh": {
+    "keys": [
+     "tarif_pasal_17"
+    ],
+    "alasan": [
+     "gabungan: kunci aturan + LLM teks utuh",
+     "klasifikasi: kata kunci PPh 21/26: PASAL 21; jenis PP dapat mengubah angka; key data terdampak tidak teridentifikasi dari judul, tinjau manual",
+     "LLM: PP ini mengatur tarif Pasal 17 untuk tahun berikutnya bagi pegawai tertentu; tarif final khusus dan batasnya tidak termasuk key yang tersedia."
+    ],
+    "detik": 1.3898538001812994,
+    "token_masuk": 2961,
+    "token_keluar": 101,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [
+     "calc_annual",
+     "calc_article17_direct",
+     "calc_final",
+     "calc_final_period",
+     "calc_final_period_gross_up",
+     "calc_lump_sum_third_year",
+     "calc_monthly_ter",
+     "calc_monthly_ter_gross_up",
+     "calc_non_employee",
+     "calc_non_permanent_employee",
+     "calc_pensioner_annual",
+     "calc_pensioner_final_period",
+     "calc_pensioner_monthly_ter"
+    ],
+    "test": [
+     "test_ikn_third_year_object_codes.py",
+     "test_monitor_impact.py",
+     "test_properties.py",
+     "test_validation.py"
+    ]
+   }
+  },
+  "PER-16/PJ/2016": {
+   "aturan": {
+    "keys": [],
+    "alasan": [
+     "klasifikasi: kata kunci PPh 21/26: PASAL 21, PASAL 26, SEHUBUNGAN DENGAN PEKERJAAN; peraturan Dirjen Pajak bersifat prosedural: PELAPORAN, TATA CARA"
+    ],
+    "detik": 0.0020130998454988003,
+    "token_masuk": 0,
+    "token_keluar": 0,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   },
+   "gabungan_utuh": {
+    "keys": [
+     "biaya_jabatan",
+     "biaya_pensiun",
+     "bukan_pegawai",
+     "mekanisme_pemotongan",
+     "natura",
+     "non_npwp",
+     "pembulatan_pkp",
+     "pph26",
+     "ptkp",
+     "tarif_pasal_17",
+     "ter_harian"
+    ],
+    "alasan": [
+     "gabungan: kunci aturan + LLM teks utuh",
+     "klasifikasi: kata kunci PPh 21/26: PASAL 21, PASAL 26, SEHUBUNGAN DENGAN PEKERJAAN; peraturan Dirjen Pajak bersifat prosedural: PELAPORAN, TATA CARA",
+     "LLM: Peraturan ini secara langsung menetapkan PTKP, biaya jabatan dan pensiun, pembulatan PKP, tarif Pasal 17 dan PPh 26, perlakuan harian dan bukan pegawai, natura, serta logika dasar penghitungan pemotongan."
+    ],
+    "detik": 6.284387799911201,
+    "token_masuk": 13516,
+    "token_keluar": 497,
+    "dibuang_kutipan": [],
+    "turunan": [
+     "kategori_ter",
+     "ter_bulanan"
+    ],
+    "fungsi": [
+     "calc_annual",
+     "calc_article17_direct",
+     "calc_commissioner",
+     "calc_final",
+     "calc_final_period",
+     "calc_final_period_gross_up",
+     "calc_in_kind",
+     "calc_lump_sum_third_year",
+     "calc_monthly_ter",
+     "calc_monthly_ter_gross_up",
+     "calc_non_employee",
+     "calc_non_permanent_employee",
+     "calc_pensioner_annual",
+     "calc_pensioner_final_period",
+     "calc_pensioner_monthly_ter",
+     "calc_pph26",
+     "calc_progressive"
+    ],
+    "test": [
+     "test_ikn_third_year_object_codes.py",
+     "test_monitor_impact.py",
+     "test_progressive_brackets.py",
+     "test_properties.py",
+     "test_rates.py",
+     "test_validation.py"
+    ]
+   }
+  },
+  "PMK 102 Tahun 2016": {
+   "aturan": {
+    "keys": [],
+    "alasan": [
+     "klasifikasi: kata kunci PPh 21/26: SEHUBUNGAN DENGAN PEKERJAAN; jenis PMK dapat mengubah angka; key data terdampak tidak teridentifikasi dari judul, tinjau manual"
+    ],
+    "detik": 0.0009713999461382627,
+    "token_masuk": 0,
+    "token_keluar": 0,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   },
+   "gabungan_utuh": {
+    "keys": [
+     "ter_harian"
+    ],
+    "alasan": [
+     "gabungan: kunci aturan + LLM teks utuh",
+     "klasifikasi: kata kunci PPh 21/26: SEHUBUNGAN DENGAN PEKERJAAN; jenis PMK dapat mengubah angka; key data terdampak tidak teridentifikasi dari judul, tinjau manual",
+     "LLM: Peraturan ini menetapkan langsung batas penghasilan harian yang tidak dipotong dan batas bulanan pengecualiannya bagi pegawai tidak tetap."
+    ],
+    "detik": 1.8525285001378506,
+    "token_masuk": 1912,
+    "token_keluar": 130,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [
+     "calc_non_permanent_employee"
+    ],
+    "test": [
+     "test_monitor_impact.py"
+    ]
+   }
+  },
+  "PMK 101 Tahun 2016": {
+   "aturan": {
+    "keys": [
+     "ptkp"
+    ],
+    "alasan": [
+     "klasifikasi: kata kunci PPh 21/26: PENGHASILAN TIDAK KENA PAJAK; jenis PMK dapat mengubah angka"
+    ],
+    "detik": 0.0009453999809920788,
+    "token_masuk": 0,
+    "token_keluar": 0,
+    "dibuang_kutipan": [],
+    "turunan": [],
+    "fungsi": [],
+    "test": []
+   },
+   "gabungan_utuh": {
+    "keys": [
+     "ptkp"
+    ],
+    "alasan": [
+     "gabungan: kunci aturan + LLM teks utuh",
+     "klasifikasi: kata kunci PPh 21/26: PENGHASILAN TIDAK KENA PAJAK; jenis PMK dapat mengubah angka",
+     "LLM: Pasal 1 secara langsung menetapkan besaran PTKP untuk diri, kawin, isteri yang penghasilannya digabung, dan tanggungan."
+    ],
+    "detik": 2.6762661999091506,
+    "token_masuk": 1792,
+    "token_keluar": 72,
+    "dibuang_kutipan": [],
+    "turunan": [
+     "kategori_ter",
+     "ter_bulanan"
+    ],
+    "fungsi": [
+     "calc_annual",
+     "calc_commissioner",
+     "calc_final_period",
+     "calc_final_period_gross_up",
+     "calc_monthly_ter",
+     "calc_monthly_ter_gross_up",
+     "calc_non_permanent_employee",
+     "calc_pensioner_annual",
+     "calc_pensioner_final_period",
+     "calc_pensioner_monthly_ter"
+    ],
+    "test": [
+     "test_monitor_impact.py",
+     "test_properties.py",
+     "test_validation.py"
+    ]
+   }
+  }
+ }
+}

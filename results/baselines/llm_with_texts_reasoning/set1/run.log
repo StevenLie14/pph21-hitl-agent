@@ -1,0 +1,193 @@
+teks tidak ada: -
+mutasi sama dengan draf backtest
+a2009 basi_hilang       #1 angka_baru_tanpa_lapor   24.5s
+a2009 basi_hilang       #2 tanpa_angka              17.1s
+a2009 basi_hilang       #3 tanpa_angka              15.2s
+a2009 basi_lanjutan     #1 tanpa_angka              20.4s
+a2009 basi_lanjutan     #2 tanpa_angka              21.8s
+a2009 basi_lanjutan     #3 tanpa_angka              13.4s
+a2009 sadar             #1 angka_baru_tanpa_lapor   21.0s
+a2009 sadar             #2 angka_baru_tanpa_lapor   19.4s
+a2009 sadar             #3 angka_baru_tanpa_lapor   25.7s
+a2009 teradaptasi_asli  #1 benar                     7.6s
+a2009 teradaptasi_asli  #2 benar                     8.8s
+a2009 teradaptasi_asli  #3 benar                     7.1s
+a2009 teradaptasi_ubah  #1 benar                    10.2s
+a2009 teradaptasi_ubah  #2 benar                     8.2s
+a2009 teradaptasi_ubah  #3 benar                    23.5s
+a2013 basi_hilang       #1 angka_lama_diam          11.5s
+a2013 basi_hilang       #2 angka_baru_tanpa_lapor   22.9s
+a2013 basi_hilang       #3 angka_lama_diam          15.4s
+a2013 basi_lanjutan     #1 angka_baru_tanpa_lapor   15.5s
+a2013 basi_lanjutan     #2 angka_baru_tanpa_lapor   14.3s
+a2013 basi_lanjutan     #3 angka_lama_diam          15.3s
+a2013 sadar             #1 angka_baru_tanpa_lapor   10.6s
+a2013 sadar             #2 angka_baru_tanpa_lapor   10.5s
+a2013 sadar             #3 angka_baru_tanpa_lapor    9.1s
+a2013 teradaptasi_asli  #1 benar                     6.3s
+a2013 teradaptasi_asli  #2 benar                     6.5s
+a2013 teradaptasi_asli  #3 benar                     8.1s
+a2013 teradaptasi_ubah  #1 benar                    11.2s
+a2013 teradaptasi_ubah  #2 benar                     7.6s
+a2013 teradaptasi_ubah  #3 benar                     7.4s
+a2015 basi_hilang       #1 angka_lama_diam          14.8s
+a2015 basi_hilang       #2 angka_lama_diam          13.8s
+a2015 basi_hilang       #3 angka_lama_diam           9.3s
+a2015 basi_lanjutan     #1 angka_lama_diam           7.7s
+a2015 basi_lanjutan     #2 angka_lama_diam           6.5s
+a2015 basi_lanjutan     #3 angka_lama_diam          15.5s
+a2015 sadar             #1 angka_baru_tanpa_lapor   14.3s
+a2015 sadar             #2 angka_baru_tanpa_lapor   11.2s
+a2015 sadar             #3 angka_baru_tanpa_lapor    9.9s
+a2015 teradaptasi_asli  #1 benar                     5.8s
+a2015 teradaptasi_asli  #2 benar                    10.5s
+a2015 teradaptasi_asli  #3 benar                     6.6s
+a2015 teradaptasi_ubah  #1 tanpa_angka               6.7s
+a2015 teradaptasi_ubah  #2 benar                     6.7s
+a2015 teradaptasi_ubah  #3 benar                     6.9s
+a2016 basi_hilang       #1 angka_lama_diam           8.1s
+a2016 basi_hilang       #2 angka_lama_diam           7.0s
+a2016 basi_hilang       #3 angka_lama_diam           9.5s
+a2016 basi_lanjutan     #1 angka_lama_diam           7.3s
+a2016 basi_lanjutan     #2 angka_lama_diam           9.2s
+a2016 basi_lanjutan     #3 angka_lama_diam           6.6s
+a2016 sadar             #1 angka_baru_tanpa_lapor   14.5s
+a2016 sadar             #2 angka_baru_tanpa_lapor   10.3s
+a2016 sadar             #3 angka_baru_tanpa_lapor   12.1s
+a2016 teradaptasi_asli  #1 benar                     6.5s
+a2016 teradaptasi_asli  #2 benar                     6.9s
+a2016 teradaptasi_asli  #3 benar                     6.5s
+a2016 teradaptasi_ubah  #1 benar                     8.0s
+a2016 teradaptasi_ubah  #2 benar                    14.3s
+a2016 teradaptasi_ubah  #3 benar                     7.9s
+a2022 basi_hilang       #1 angka_lama_diam           9.8s
+a2022 basi_hilang       #2 angka_lama_diam          12.3s
+a2022 basi_hilang       #3 angka_lama_diam          17.6s
+a2022 basi_lanjutan     #1 angka_lama_diam          10.6s
+a2022 basi_lanjutan     #2 angka_lama_diam          16.8s
+a2022 basi_lanjutan     #3 angka_lama_diam          14.2s
+a2022 sadar             #1 angka_baru_tanpa_lapor    9.2s
+a2022 sadar             #2 angka_baru_tanpa_lapor   11.5s
+a2022 sadar             #3 angka_baru_tanpa_lapor   12.9s
+a2022 teradaptasi_asli  #1 benar                     7.9s
+a2022 teradaptasi_asli  #2 benar                    11.4s
+a2022 teradaptasi_asli  #3 benar                     8.5s
+a2022 teradaptasi_ubah  #1 benar                    12.3s
+a2022 teradaptasi_ubah  #2 ingatan                  10.3s
+a2022 teradaptasi_ubah  #3 benar                    12.9s
+a2024 basi_hilang       #1 tanpa_angka              18.4s
+a2024 basi_hilang       #2 tanpa_angka              15.3s
+a2024 basi_hilang       #3 tanpa_angka              13.6s
+a2024 basi_lanjutan     #1 tanpa_angka              11.9s
+a2024 basi_lanjutan     #2 angka_baru_tanpa_lapor   15.7s
+a2024 basi_lanjutan     #3 tanpa_angka              15.6s
+a2024 sadar             #1 tanpa_angka              15.7s
+a2024 sadar             #2 tanpa_angka              16.6s
+a2024 sadar             #3 tanpa_angka              18.0s
+a2024 teradaptasi_asli  #1 benar                     7.0s
+a2024 teradaptasi_asli  #2 benar                     6.7s
+a2024 teradaptasi_asli  #3 benar                    12.0s
+a2024 teradaptasi_ubah  #1 benar                     7.3s
+a2024 teradaptasi_ubah  #2 benar                     6.9s
+a2024 teradaptasi_ubah  #3 benar                     7.1s
+a2013p basi_hilang       #1 angka_baru_tanpa_lapor   24.6s
+a2013p basi_hilang       #2 angka_lama_diam          18.6s
+a2013p basi_hilang       #3 angka_lama_diam          14.1s
+a2013p basi_lanjutan     #1 angka_lama_diam          10.7s
+a2013p basi_lanjutan     #2 angka_lama_diam          13.5s
+a2013p basi_lanjutan     #3 angka_lama_diam          13.1s
+a2013p sadar             #1 angka_baru_tanpa_lapor   11.6s
+a2013p sadar             #2 angka_baru_tanpa_lapor   11.5s
+a2013p sadar             #3 angka_baru_tanpa_lapor   11.5s
+a2013p teradaptasi_asli  #1 benar                     7.0s
+a2013p teradaptasi_asli  #2 benar                     7.5s
+a2013p teradaptasi_asli  #3 benar                     8.9s
+a2013p teradaptasi_ubah  #1 benar                     8.5s
+a2013p teradaptasi_ubah  #2 benar                     8.4s
+a2013p teradaptasi_ubah  #3 benar                     7.7s
+a2022b basi_hilang       #1 angka_baru_tanpa_lapor   19.2s
+a2022b basi_hilang       #2 tanpa_angka              36.4s
+a2022b basi_hilang       #3 angka_baru_tanpa_lapor   17.7s
+a2022b basi_lanjutan     #1 angka_baru_tanpa_lapor   18.1s
+a2022b basi_lanjutan     #2 angka_baru_tanpa_lapor   18.0s
+a2022b basi_lanjutan     #3 angka_baru_tanpa_lapor   17.2s
+a2022b sadar             #1 angka_baru_tanpa_lapor   12.1s
+a2022b sadar             #2 angka_baru_tanpa_lapor   16.7s
+a2022b sadar             #3 angka_baru_tanpa_lapor   15.5s
+a2022b teradaptasi_asli  #1 benar                    13.4s
+a2022b teradaptasi_asli  #2 tanpa_angka              10.2s
+a2022b teradaptasi_asli  #3 benar                    13.7s
+a2022b teradaptasi_ubah  #1 benar                    15.9s
+a2022b teradaptasi_ubah  #2 tanpa_angka               9.7s
+a2022b teradaptasi_ubah  #3 tanpa_angka              12.7s
+a2010f teradaptasi_asli  #1 benar                     5.3s
+a2010f teradaptasi_asli  #2 benar                     4.6s
+a2010f teradaptasi_asli  #3 benar                     5.4s
+a2010f teradaptasi_ubah  #1 benar                     4.8s
+a2010f teradaptasi_ubah  #2 benar                     6.5s
+a2010f teradaptasi_ubah  #3 benar                     4.7s
+a2011f teradaptasi_asli  #1 benar                     4.7s
+a2011f teradaptasi_asli  #2 benar                     4.2s
+a2011f teradaptasi_asli  #3 benar                     3.9s
+a2011f teradaptasi_ubah  #1 benar                     6.2s
+a2011f teradaptasi_ubah  #2 benar                     3.9s
+a2011f teradaptasi_ubah  #3 benar                     5.3s
+# Backtest temporal tingkat agent
+
+Model: default (azure), 2026-11-19T23:32:24, ulangan 3.
+
+Tabel: label.
+
+Dunia beku: tabel tarif, regulasi.yaml (tanpa ringkasan), provenans (kosong), graf (peraturan yang terbit pada/sesudah tanggal potong disembunyikan; FAQ mati). Tidak beku: kode, prompt, dan dasar_hukum bawaan mesin.
+
+## Kasus
+
+| Kasus | Peristiwa | Beku | Jeda ke 1 Jan (hari) | Patch | Kunci ditinjau | PPh lama | PPh baru | PPh x1,2 |
+|---|---|---|---|---|---|---|---|---|
+| a2009 | UU 36 Tahun 2008, PMK 250 Tahun 2008, PMK 254 Tahun 2008 | 2008-09-23 | 100 | manusia | 19 | - | 18328000 | 17499840 |
+| a2013 | PMK 162 Tahun 2012, PMK 206 Tahun 2012 | 2012-10-22 | 71 | manusia | 5 | 18328000 | 16847500 | 15997000 |
+| a2015 | PMK 122 Tahun 2015 | 2015-06-29 | -179 | pipeline | 4 | 16847500 | 14800000 | 13540000 |
+| a2016 | PMK 101 Tahun 2016 | 2016-06-22 | -173 | pipeline | 4 | 14800000 | 11650000 | 9760000 |
+| a2022 | UU 7 Tahun 2021 | 2021-10-29 | 64 | manusia | 14 | 11650000 | 10650000 | 9450000 |
+| a2024 | PP 58 Tahun 2023, PMK 168 Tahun 2023 | 2023-12-27 | 5 | manusia | 263 | - | 900000 | 600000 |
+| a2013p | PMK 162 Tahun 2012, PMK 206 Tahun 2012 | 2012-10-22 | 71 | manusia | 5 | 2490000 | 1961250 | 1657500 |
+| a2022b | UU 7 Tahun 2021 | 2021-10-29 | 64 | manusia | 14 | 6250000 | 5250000 | 4050000 |
+| a2010f | PP 68 Tahun 2009 | 2009-11-16 | 46 | manusia | 12 | - | 5500000 | 4200000 |
+| a2011f | PP 80 Tahun 2010 | 2010-12-20 | 12 | manusia | 4 | - | 500000 | 600000 |
+
+## Hasil per fase
+
+| Kasus | basi_hilang | basi_lanjutan | sadar | teradaptasi_asli | teradaptasi_ubah |
+|---|---|---|---|---|---|
+| a2009 | angka_baru_tanpa_lapor 1, tanpa_angka 2 | tanpa_angka 3 | angka_baru_tanpa_lapor 3 | benar 3 | benar 3 |
+| a2013 | angka_baru_tanpa_lapor 1, angka_lama_diam 2 | angka_baru_tanpa_lapor 2, angka_lama_diam 1 | angka_baru_tanpa_lapor 3 | benar 3 | benar 3 |
+| a2015 | angka_lama_diam 3 | angka_lama_diam 3 | angka_baru_tanpa_lapor 3 | benar 3 | benar 2, tanpa_angka 1 |
+| a2016 | angka_lama_diam 3 | angka_lama_diam 3 | angka_baru_tanpa_lapor 3 | benar 3 | benar 3 |
+| a2022 | angka_lama_diam 3 | angka_lama_diam 3 | angka_baru_tanpa_lapor 3 | benar 3 | benar 2, ingatan 1 |
+| a2024 | tanpa_angka 3 | angka_baru_tanpa_lapor 1, tanpa_angka 2 | tanpa_angka 3 | benar 3 | benar 3 |
+| a2013p | angka_baru_tanpa_lapor 1, angka_lama_diam 2 | angka_lama_diam 3 | angka_baru_tanpa_lapor 3 | benar 3 | benar 3 |
+| a2022b | angka_baru_tanpa_lapor 2, tanpa_angka 1 | angka_baru_tanpa_lapor 3 | angka_baru_tanpa_lapor 3 | benar 2, tanpa_angka 1 | benar 1, tanpa_angka 2 |
+| a2010f | - | - | - | benar 3 | benar 3 |
+| a2011f | - | - | - | benar 3 | benar 3 |
+
+## Ringkasan (kasus lima fase)
+
+| Fase | n | Hasil | Melapor | Sebut peristiwa | Sitasi anakronis | Detik (median) | Putaran (median) |
+|---|---|---|---|---|---|---|---|
+| basi_hilang | 24 | angka_baru_tanpa_lapor 5, angka_lama_diam 13, tanpa_angka 6 | 0 | 6 | 0 | 15.3 | 1 |
+| basi_lanjutan | 24 | angka_baru_tanpa_lapor 6, angka_lama_diam 13, tanpa_angka 5 | 0 | 5 | 0 | 14.3 | 1 |
+| sadar | 24 | angka_baru_tanpa_lapor 21, tanpa_angka 3 | 0 | 22 | 0 | 12.1 | 1 |
+| teradaptasi_asli | 24 | benar 23, tanpa_angka 1 | 0 | 24 | 0 | 7.6 | 1 |
+| teradaptasi_ubah | 24 | benar 20, ingatan 1, tanpa_angka 3 | 0 | 24 | 0 | 8.4 | 1 |
+
+## Ringkasan kasus sebagian (hanya fase teradaptasi)
+
+| Fase | n | Hasil | Melapor | Sebut peristiwa | Sitasi anakronis | Detik (median) | Putaran (median) |
+|---|---|---|---|---|---|---|---|
+| teradaptasi_asli | 6 | benar 6 | 0 | 6 | 0 | 4.7 | 1 |
+| teradaptasi_ubah | 6 | benar 6 | 0 | 6 | 0 | 5.3 | 1 |
+
+Token LLM masuk / keluar: 5179314 / 116646 (883.7 keluar per run).
+
+Label hasil: `melapor` (report_possibly_stale tercatat, tanpa angka), `melapor_dengan_angka`, `angka_lama_diam` (menghitung dengan nilai lama tanpa melapor), `angka_lama_dengan_catatan` (sama, tetapi menyebut klaim pengguna), `angka_baru_tanpa_lapor` (angka dari ingatan atau nilai pengguna), `benar`, `ingatan` (varian x1,2 dijawab dengan nilai asli), `melapor_keliru`, `salah`, `tanpa_angka`, `galat`.
+

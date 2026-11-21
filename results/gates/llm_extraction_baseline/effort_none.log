@@ -1,0 +1,2 @@
+{"model": "azure:gpt-6-luna", "reasoning_effort": "none", "dokumen": 31, "lama_27dok_digit_salah": 82, "lama_27dok_digit_n": 87, "berlabel_digit_salah": 109, "berlabel_digit_n": 117, "berlabel_asli_salah": 0, "asli_n": 31, "berlabel_digit_salah_27dok": 81, "digit_tidak_valid": 0}
+rc none 0

@@ -1,0 +1,94 @@
+# Evaluasi Fase 2: draf tarif dan gerbang
+
+Dibuat oleh `pph21 draft-evaluate`. Pasangan G4: pola+llm. Model LLM: azure:gpt-6-luna, prompt draf-llm-v3-2026-11-16-teks-utuh. Label: `taxagent/taxes/pph21/data/draf_label.yaml` (belum ada penilai kedua).
+
+## 1. Replay ekstraksi (per angka)
+
+| set | ekstraktor | benar | salah | terlewat | presisi | recall |
+|---|---|---|---|---|---|---|
+| dev | det | 38 | 5 | 2 | 88.4% | 95.0% |
+| dev | llm | 40 | 7 | 0 | 85.1% | 100.0% |
+| dev | sepakat | 38 | 2 | 2 | 95.0% | 95.0% |
+| dev | tabel_ocr | 254 | 0 | 0 | 100.0% | 100.0% |
+| dev | tabel_visi | 254 | 0 | 0 | 100.0% | 100.0% |
+| uji | det | 62 | 0 | 48 | 100.0% | 56.4% |
+| uji | llm | 108 | 2 | 2 | 98.2% | 98.2% |
+| uji | sepakat | 62 | 0 | 48 | 100.0% | 56.4% |
+
+`det` = pola regex; `llm` = LLM jendela teks; `graf` = LLM lewat bukti graf; `llm2` = LLM kedua; `sepakat` = angka yang dibaca SAMA oleh kedua ekstraktor pasangan G4 (yang bisa lolos gerbang); `tabel_ocr` / `tabel_visi` = tabel TER lampiran dibaca dari PDF JDIH (OCR kotak / LLM vision), dinilai terpisah; ekstraktor teks dinilai tanpa daun tabel.
+
+Sumber teks (urutan sistem terpasang: JDIH andal, pajak.go.id, JDIH perlu_dicek): jdih 20, pajak.go.id 11.
+Tabel lampiran: PDF JDIH lokal: OCR kotak + LLM vision.
+
+Salah (dev, det):
+
+- PMK 66 Tahun 2023: natura.kupon_batas_sebulan=2000000 (label tidak ada)
+- PMK 66 Tahun 2023: natura.bingkisan_batas_setahun=3000000 (label tidak ada)
+- PMK 66 Tahun 2023: natura.olahraga_batas_setahun=1500000 (label tidak ada)
+- PMK 66 Tahun 2023: natura.tempat_tinggal_batas_sebulan=2000000 (label tidak ada)
+- PMK 66 Tahun 2023: natura.kendaraan_batas_rata_bruto_sebulan=100000000 (label tidak ada)
+
+Salah (dev, llm):
+
+- PMK 168 Tahun 2023: ter_harian.batas_bebas_harian=450000 (label tidak ada)
+- PER-16/PJ/2016: ter_harian.batas_atas_ter_harian=450000 (label tidak ada)
+- PP 58 Tahun 2023: biaya_jabatan.persen=5 (label tidak ada)
+- PP 58 Tahun 2023: ter_harian.batas_atas_ter_harian=2500000 (label tidak ada)
+- PP 58 Tahun 2023: ter_harian.dpp_persen_di_atas_batas=0.5 (label tidak ada)
+- PMK 66 Tahun 2023: natura.kupon_batas_sebulan=2000000 (label tidak ada)
+- PMK 66 Tahun 2023: natura.kendaraan_batas_rata_bruto_sebulan=100000000 (label tidak ada)
+
+Salah (dev, sepakat):
+
+- PMK 66 Tahun 2023: natura.kupon_batas_sebulan=2000000 (label tidak ada)
+- PMK 66 Tahun 2023: natura.kendaraan_batas_rata_bruto_sebulan=100000000 (label tidak ada)
+
+Salah (uji, llm):
+
+- PER-31/PJ/2009: ter_harian.batas_atas_ter_harian=150000 (label tidak ada)
+- PER-32/PJ/2015: ter_harian.batas_atas_ter_harian=300000 (label tidak ada)
+
+## 2. Tanggal berlaku (G6)
+
+| set | benar | salah |
+|---|---|---|
+| dev | 13 | 0 |
+| uji | 17 | 1 |
+
+- PMK 162 Tahun 2012: terbaca None (mulai berlaku 2012-10-22 (tengah tahun)), label 2013
+
+## 3. Mutasi
+
+| set | jenis | n | siap | tahan | tidak ada perubahan | ditolak | dilewati | **salah lolos** | gerbang yang menahan |
+|---|---|---|---|---|---|---|---|---|---|
+| dev | asli | 13 | 0 | 3 | 10 | 0 | 0 | **0** | G1 1, G3 1, G4 2 |
+| dev | ubah | 33 | 15 | 18 | 0 | 0 | 0 | **0** | G1 2, G3 1, G4 14, G5 8 |
+| dev | digit | 33 | 0 | 33 | 0 | 0 | 0 | **0** | G1 31, G2 2, G3 33, G4 31, G5 3 |
+| dev | kata | 33 | 0 | 33 | 0 | 0 | 0 | **0** | G1 31, G2 2, G3 33, G4 11, G5 3 |
+| dev | kali10 | 33 | 0 | 30 | 0 | 3 | 0 | **0** | G1 2, G3 1, G4 11, G5 28 |
+| dev | tengah | 33 | 0 | 33 | 0 | 0 | 0 | **0** | G1 2, G3 1, G4 14, G5 8, G6 31 |
+| uji | asli | 18 | 0 | 10 | 8 | 0 | 0 | **0** | G1 10, G4 2 |
+| uji | ubah | 84 | 17 | 67 | 0 | 0 | 0 | **0** | G1 42, G2 1, G4 57, G5 21 |
+| uji | digit | 84 | 0 | 84 | 0 | 0 | 0 | **0** | G1 78, G2 3, G3 84, G4 81, G5 6 |
+| uji | kata | 84 | 0 | 84 | 0 | 0 | 0 | **0** | G1 78, G2 3, G3 84, G4 21, G5 6 |
+| uji | kali10 | 84 | 0 | 80 | 0 | 0 | 4 | **0** | G1 39, G4 53, G5 46 |
+| uji | tengah | 84 | 0 | 84 | 0 | 0 | 0 | **0** | G1 42, G2 1, G4 57, G5 21, G6 49 |
+
+### Pembanding (dari run yang sama, tanpa panggilan LLM tambahan)
+
+Nilai salah yang masuk tabel bila draf diterima tanpa gerbang (pola saja), bila bacaan LLM diterima langsung (LLM saja), dan bila hanya kesepakatan dua ekstraktor (G4) yang dipakai. Penahan tunggal: draf salah yang hanya ditahan satu gerbang; mematikan gerbang itu meloloskannya.
+
+| set | jenis | n | salah lolos (G1-G8) | pola saja | LLM saja | G4 saja | penahan tunggal |
+|---|---|---|---|---|---|---|---|
+| dev | asli | 13 | 0 | 0 | 2 | 0 | - |
+| dev | ubah | 33 | 0 | 0 | 10 | 0 | - |
+| dev | digit | 33 | 0 | 3 | 31 | 0 | - |
+| dev | kata | 33 | 0 | 3 | 10 | 0 | - |
+| dev | kali10 | 33 | 0 | 0 | 10 | 0 | - |
+| dev | tengah | 33 | 0 | 0 | 10 | 0 | - |
+| uji | asli | 18 | 0 | 0 | 2 | 0 | - |
+| uji | ubah | 84 | 0 | 0 | 21 | 0 | - |
+| uji | digit | 84 | 0 | 6 | 81 | 0 | - |
+| uji | kata | 84 | 0 | 6 | 19 | 0 | - |
+| uji | kali10 | 84 | 0 | 0 | 21 | 0 | - |
+| uji | tengah | 84 | 0 | 0 | 21 | 0 | - |

@@ -1,0 +1,15 @@
+q1 dicabut 1 benar {'laporan_otomatis': 0, 'laporan_model': 0, 'catatan_kode': False, 'klaim_masih_berlaku': False}
+q2 dicabut 1 benar {'laporan_otomatis': 1, 'laporan_model': 1, 'catatan_kode': True, 'klaim_masih_berlaku': False}
+q3 dicabut 1 benar {'laporan_otomatis': 1, 'laporan_model': 1, 'catatan_kode': True, 'klaim_masih_berlaku': False}
+q4 dicabut 1 benar {'laporan_otomatis': 1, 'laporan_model': 1, 'catatan_kode': True, 'klaim_masih_berlaku': False}
+q5 dicabut 1 benar {'laporan_otomatis': 1, 'laporan_model': 1, 'catatan_kode': True, 'klaim_masih_berlaku': False}
+q6 dicabut 1 benar {'laporan_otomatis': 0, 'laporan_model': 0, 'catatan_kode': False, 'klaim_masih_berlaku': False}
+q1 kontrol 1 benar {'laporan_otomatis': 0, 'laporan_model': 0, 'catatan_kode': False, 'klaim_masih_berlaku': False}
+q2 kontrol 1 benar {'laporan_otomatis': 0, 'laporan_model': 0, 'catatan_kode': False, 'klaim_masih_berlaku': False}
+q3 kontrol 1 benar {'laporan_otomatis': 0, 'laporan_model': 0, 'catatan_kode': False, 'klaim_masih_berlaku': False}
+q4 kontrol 1 benar {'laporan_otomatis': 0, 'laporan_model': 0, 'catatan_kode': False, 'klaim_masih_berlaku': False}
+q5 kontrol 1 benar {'laporan_otomatis': 0, 'laporan_model': 0, 'catatan_kode': False, 'klaim_masih_berlaku': False}
+q6 kontrol 1 benar {'laporan_otomatis': 0, 'laporan_model': 0, 'catatan_kode': False, 'klaim_masih_berlaku': False}
+dicabut 4/4 benar
+dicabut, masa sebelum pencabutan 2/2 benar
+kontrol 6/6 benar

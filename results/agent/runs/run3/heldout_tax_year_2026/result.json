@@ -1,0 +1,2683 @@
+{
+  "meta": {
+    "provider": "azure",
+    "model": "gpt-6-luna",
+    "waktu": "2026-11-17T15:41:43",
+    "dataset": "taxagent/taxes/pph21/data/kasus_agent_uji_2026.yaml",
+    "n_kasus": 14,
+    "putaran_ulang_galat": 5
+  },
+  "ringkasan": {
+    "n_kasus": 14,
+    "n_error_api": 0,
+    "n_galat_api_diulang": 0,
+    "kasus_diulang": [],
+    "akurasi_keseluruhan": 0.8571,
+    "akurasi_satu_giliran": 0.8571,
+    "klarifikasi_tidak_perlu": 1,
+    "kasus_hitung_memanggil_graf": 0,
+    "token": {
+      "masuk": 921454,
+      "keluar": 6171,
+      "keluar_per_kasus": 440.8
+    },
+    "hitung": {
+      "n": 9,
+      "akurasi_tool": 1.0,
+      "akurasi_tool_percobaan_pertama": 1.0,
+      "akurasi_argumen_lengkap": 0.7778,
+      "akurasi_field": 0.9333,
+      "akurasi_angka_akhir": 0.8889
+    },
+    "non_hitung": {
+      "n": 5,
+      "akurasi": 0.8,
+      "per_perilaku": {
+        "tanya_balik": null,
+        "tolak": 0.8,
+        "info": null
+      }
+    },
+    "per_kategori": {
+      "bukan_pegawai": {
+        "n": 1,
+        "perilaku_benar": 1.0
+      },
+      "dewan_komisaris": {
+        "n": 1,
+        "perilaku_benar": 1.0
+      },
+      "final": {
+        "n": 1,
+        "perilaku_benar": 1.0
+      },
+      "pegawai_tetap_bulanan": {
+        "n": 2,
+        "perilaku_benar": 1.0
+      },
+      "pegawai_tetap_masa_terakhir": {
+        "n": 1,
+        "perilaku_benar": 1.0
+      },
+      "pegawai_tidak_tetap": {
+        "n": 1,
+        "perilaku_benar": 1.0
+      },
+      "pensiunan": {
+        "n": 1,
+        "perilaku_benar": 0.0
+      },
+      "pph26": {
+        "n": 1,
+        "perilaku_benar": 1.0
+      },
+      "tolak": {
+        "n": 5,
+        "perilaku_benar": 0.8
+      }
+    },
+    "per_tag": {
+      "uji_2026": {
+        "n": 14,
+        "perilaku_benar": 0.8571
+      }
+    },
+    "total_galat_tool": 7,
+    "kasus_tool_halusinasi": 0,
+    "jawaban_sitasi_bermasalah": 0,
+    "pemeriksa_sitasi": {
+      "jawaban_dikoreksi": 0,
+      "masih_bermasalah_setelah_koreksi": 0,
+      "jawaban_distempel_status": 0
+    },
+    "kesetiaan_angka": {
+      "jawaban_dengan_angka_tanpa_sumber": 0,
+      "pph_tool_di_jawaban": 0.8889
+    },
+    "rata_putaran": 3.71,
+    "rata_detik": 15.87
+  },
+  "kasus": [
+    {
+      "id": "t26-01",
+      "kategori": "pegawai_tetap_bulanan",
+      "tag": [
+        "uji_2026"
+      ],
+      "perilaku": "hitung",
+      "tool_harapan": "calculate_pph21_permanent_monthly",
+      "tool_dipanggil": [
+        "lookup_ptkp",
+        "calculate_pph21_permanent_monthly"
+      ],
+      "tool_hitung_pertama": "calculate_pph21_permanent_monthly",
+      "tool_hitung_akhir": "calculate_pph21_permanent_monthly",
+      "tool_benar": true,
+      "tool_benar_percobaan_pertama": true,
+      "argumen_benar": true,
+      "field_benar": 4,
+      "field_total": 4,
+      "argumen_salah": {},
+      "argumen_aktual": {
+        "tahun_pajak": 2026,
+        "gaji_pokok": 9500000,
+        "status_ptkp": "TK/1",
+        "kutipan_status_ptkp": "belum nikah tp ibu sy ikut sy dan sepenuhnya sy yg nanggung",
+        "masa_pajak": 3,
+        "punya_npwp": true,
+        "gross_up": false
+      },
+      "pph_harapan": "166250",
+      "pph_aktual": "166250",
+      "angka_benar": true,
+      "perilaku_benar": true,
+      "galat_tool": 0,
+      "tool_halusinasi": [],
+      "putaran": 3,
+      "detik": 13.02,
+      "jawaban": "Data yang dihitung: PPh 21 pegawai tetap, satu masa pajak (TER); masa pajak Maret 2026; status TK/1; ber-NPWP; gaji pokok Rp9.500.000; penghasilan bruto yang dihitung Rp9.500.000.\n\nPPh Pasal 21 terutang untuk Maret 2026 adalah **Rp166.250**.\n\n| Rincian | Hasil |\n|---|---:|\n| Penghasilan bruto sebulan | Rp9.500.000 |\n| Status PTKP TK/1, kategori TER A | — |\n| Tarif efektif bulanan | 1,75% |\n| PPh 21 masa | **Rp166.250** |\n\n**Dasar hukum:** PP No. 58 Tahun 2023; PMK No. 168 Tahun 2023.\n\n### Asumsi yang dipakai\n- Anda memiliki NPWP atau NIK yang telah dipadankan.\n- Tidak ada komponen penghasilan atau potongan lain yang disebutkan.\n- Metode TER dipakai untuk masa pajak selain masa pajak terakhir; pengurang seperti biaya jabatan dan iuran pensiun diperhitungkan saat penghitungan ulang masa pajak terakhir.\n- Ibu yang sepenuhnya Anda tanggung dihitung sebagai satu tanggungan, sesuai keterangan Anda.\n\nHasil ini merupakan alat bantu hitung, bukan nasihat pajak resmi. Untuk pelaporan, konfirmasikan kepada konsultan pajak atau DJP.",
+      "error": null,
+      "galat_api": [],
+      "perilaku_benar_satu_giliran": true,
+      "tool_graf": 0,
+      "klarifikasi": false,
+      "sitasi_belum_terverifikasi": [],
+      "sitasi_diperiksa": true,
+      "sitasi_audit_ablasi": [],
+      "sitasi_dikoreksi": [],
+      "status_distempel": [],
+      "angka_tanpa_sumber": [],
+      "pph_di_jawaban": true,
+      "token_masuk": 51600,
+      "token_keluar": 459,
+      "jejak": [
+        {
+          "tool": "lookup_ptkp",
+          "argumen": {
+            "tahun_pajak": 2026,
+            "kawin": false,
+            "jumlah_tanggungan": 1,
+            "kutipan_status_ptkp": "belum nikah tp ibu sy ikut sy dan sepenuhnya sy yg nanggung"
+          },
+          "hasil": {
+            "berhasil": true,
+            "status_ptkp": "TK/1",
+            "ptkp_setahun": "58500000",
+            "ptkp_setahun_terbaca": "Rp58.500.000",
+            "kategori_ter": "A",
+            "peringatan": [],
+            "dasar_hukum": [
+              "UU PPh Pasal 7 ayat (1)"
+            ],
+            "status_dasar_hukum": [
+              {
+                "peraturan": "UU 7 Tahun 1983",
+                "status": "berlaku_diubah",
+                "pada": "2026-11-17",
+                "oleh": [
+                  "UU 7 Tahun 1991",
+                  "UU 10 Tahun 1994",
+                  "UU 17 Tahun 2000",
+                  "UU 36 Tahun 2008",
+                  "PMK 24 Tahun 2012",
+                  "PMK 233 Tahun 2015",
+                  "UU 11 Tahun 2020",
+                  "UU 7 Tahun 2021",
+                  "PERPPU 2 Tahun 2022",
+                  "UU 6 Tahun 2023"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "tool": "calculate_pph21_permanent_monthly",
+          "argumen": {
+            "tahun_pajak": 2026,
+            "gaji_pokok": 9500000,
+            "status_ptkp": "TK/1",
+            "kutipan_status_ptkp": "belum nikah tp ibu sy ikut sy dan sepenuhnya sy yg nanggung",
+            "masa_pajak": 3,
+            "punya_npwp": true,
+            "gross_up": false
+          },
+          "hasil": {
+            "berhasil": true,
+            "perlu_konfirmasi": [],
+            "ringkasan_masukan": "PPh 21 pegawai tetap, satu masa pajak (TER); masa pajak Maret 2026; status TK/1; ber-NPWP; gaji pokok Rp9.500.000; penghasilan bruto yang dihitung Rp9.500.000.",
+            "jenis_perhitungan": "pegawai_tetap_bulanan_ter",
+            "tahun_pajak": 2026,
+            "masa_pajak": 3,
+            "metode_tarif": "TER kategori A, tarif 1.75%",
+            "penghasilan_bruto": "9500000",
+            "dasar_pengenaan_pajak": "9500000",
+            "pph_sebelum_penalti": "166250",
+            "penalti_non_npwp": "0",
+            "pph_terutang": "166250",
+            "pph_terutang_terbaca": "Rp166.250",
+            "objek_pajak": {
+              "kode": "21-100-01",
+              "objek": "Penghasilan yang diterima atau diperoleh Pegawai Tetap",
+              "formulir": "BPA1",
+              "final": false,
+              "sumber": "Lampiran PER-11/PJ/2025"
+            },
+            "langkah": [
+              {
+                "label": "Penghasilan bruto sebulan",
+                "formula": "gaji pokok 9500000",
+                "nilai": "9500000",
+                "nilai_terbaca": "Rp9.500.000",
+                "catatan": ""
+              },
+              {
+                "label": "Status PTKP TK/1 masuk kategori TER A",
+                "formula": "",
+                "nilai": null,
+                "nilai_terbaca": null,
+                "catatan": "Kategori TER ditentukan status PTKP, bukan besaran penghasilan."
+              },
+              {
+                "label": "Tarif efektif bulanan 1.75%",
+                "formula": "",
+                "nilai": null,
+                "nilai_terbaca": null,
+                "catatan": "Bracket penghasilan bruto sampai dengan Rp9.650.000."
+              },
+              {
+                "label": "PPh 21 masa (sebelum penyesuaian)",
+                "formula": "9500000 x 1.75%",
+                "nilai": "166250",
+                "nilai_terbaca": "Rp166.250",
+                "catatan": ""
+              }
+            ],
+            "dasar_hukum": [
+              "PP No. 58 Tahun 2023",
+              "PMK No. 168 Tahun 2023"
+            ],
+            "asumsi": [
+              "Metode TER dipakai untuk masa pajak selain masa pajak terakhir. Pengurang seperti biaya jabatan dan iuran pensiun tidak diperhitungkan di sini, melainkan pada perhitungan ulang masa pajak terakhir."
+            ],
+            "peringatan": [],
+            "disclaimer": "Hasil ini merupakan alat bantu hitung, bukan nasihat pajak resmi. Untuk pelaporan, konfirmasikan kepada konsultan pajak atau DJP.",
+            "status_dasar_hukum": [
+              {
+                "peraturan": "PP 58 Tahun 2023",
+                "status": "berlaku",
+                "pada": "2026-03-31",
+                "oleh": []
+              },
+              {
+                "peraturan": "PMK 168 Tahun 2023",
+                "status": "berlaku",
+                "pada": "2026-03-31",
+                "oleh": []
+              }
+            ],
+            "lokasi_dasar_hukum": [
+              {
+                "rujukan": "PP No. 58 Tahun 2023",
+                "peraturan": "PP 58 Tahun 2023",
+                "pasal": null,
+                "halaman_pdf": null,
+                "tautan": "https://jdih.kemenkeu.go.id/dok/pp-58-tahun-2023"
+              },
+              {
+                "rujukan": "PMK No. 168 Tahun 2023",
+                "peraturan": "PMK 168 Tahun 2023",
+                "pasal": null,
+                "halaman_pdf": null,
+                "tautan": "https://jdih.kemenkeu.go.id/dok/pmk-168-tahun-2023"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "t26-02",
+      "kategori": "pegawai_tetap_bulanan",
+      "tag": [
+        "uji_2026"
+      ],
+      "perilaku": "hitung",
+      "tool_harapan": "calculate_pph21_permanent_monthly",
+      "tool_dipanggil": [
+        "calculate_pph21_permanent_monthly"
+      ],
+      "tool_hitung_pertama": "calculate_pph21_permanent_monthly",
+      "tool_hitung_akhir": "calculate_pph21_permanent_monthly",
+      "tool_benar": true,
+      "tool_benar_percobaan_pertama": true,
+      "argumen_benar": true,
+      "field_benar": 5,
+      "field_total": 5,
+      "argumen_salah": {},
+      "argumen_aktual": {
+        "tahun_pajak": 2026,
+        "gaji_pokok": 14000000,
+        "tunjangan_tetap": 2000000,
+        "bonus_thr_komisi": 14000000,
+        "status_ptkp": "K/2",
+        "kutipan_status_ptkp": "k/2",
+        "punya_npwp": true,
+        "masa_pajak": 4
+      },
+      "pph_harapan": "3600000",
+      "pph_aktual": "3600000",
+      "angka_benar": true,
+      "perilaku_benar": true,
+      "galat_tool": 0,
+      "tool_halusinasi": [],
+      "putaran": 2,
+      "detik": 8.58,
+      "jawaban": "Data yang dihitung: PPh 21 pegawai tetap, satu masa pajak (TER); masa pajak April 2026; status K/2; ber-NPWP; gaji pokok Rp14.000.000; tunjangan tetap Rp2.000.000; bonus thr komisi Rp14.000.000; penghasilan bruto yang dihitung Rp30.000.000.\n\nPPh 21 April 2026 yang terutang adalah **Rp3.600.000**.\n\n| Langkah | Rincian |\n|---|---|\n| Penghasilan bruto sebulan | Gaji pokok Rp14.000.000 + tunjangan tetap Rp2.000.000 + bonus/THR/komisi Rp14.000.000 = **Rp30.000.000** |\n| Status PTKP | K/2 masuk kategori TER B |\n| Tarif efektif bulanan | **12%** |\n| PPh 21 masa | **Rp3.600.000** |\n\n**Dasar hukum:** PP No. 58 Tahun 2023; PMK No. 168 Tahun 2023.\n\n### Asumsi yang dipakai\n- Anda ber-NPWP.\n- Tidak ada komponen penghasilan atau potongan lain yang disebutkan.\n- Metode TER digunakan untuk masa pajak selain masa pajak terakhir. Pengurang seperti biaya jabatan dan iuran pensiun tidak diperhitungkan di sini, melainkan pada perhitungan ulang masa pajak terakhir.\n\n**Disclaimer:** Hasil ini merupakan alat bantu hitung, bukan nasihat pajak resmi. Untuk pelaporan, konfirmasikan kepada konsultan pajak atau DJP.",
+      "error": null,
+      "galat_api": [],
+      "perilaku_benar_satu_giliran": true,
+      "tool_graf": 0,
+      "klarifikasi": false,
+      "sitasi_belum_terverifikasi": [],
+      "sitasi_diperiksa": true,
+      "sitasi_audit_ablasi": [],
+      "sitasi_dikoreksi": [],
+      "status_distempel": [],
+      "angka_tanpa_sumber": [],
+      "pph_di_jawaban": true,
+      "token_masuk": 34381,
+      "token_keluar": 439,
+      "jejak": [
+        {
+          "tool": "calculate_pph21_permanent_monthly",
+          "argumen": {
+            "tahun_pajak": 2026,
+            "gaji_pokok": 14000000,
+            "tunjangan_tetap": 2000000,
+            "bonus_thr_komisi": 14000000,
+            "status_ptkp": "K/2",
+            "kutipan_status_ptkp": "k/2",
+            "punya_npwp": true,
+            "masa_pajak": 4
+          },
+          "hasil": {
+            "berhasil": true,
+            "perlu_konfirmasi": [],
+            "ringkasan_masukan": "PPh 21 pegawai tetap, satu masa pajak (TER); masa pajak April 2026; status K/2; ber-NPWP; gaji pokok Rp14.000.000; tunjangan tetap Rp2.000.000; bonus thr komisi Rp14.000.000; penghasilan bruto yang dihitung Rp30.000.000.",
+            "jenis_perhitungan": "pegawai_tetap_bulanan_ter",
+            "tahun_pajak": 2026,
+            "masa_pajak": 4,
+            "metode_tarif": "TER kategori B, tarif 12%",
+            "penghasilan_bruto": "30000000",
+            "dasar_pengenaan_pajak": "30000000",
+            "pph_sebelum_penalti": "3600000",
+            "penalti_non_npwp": "0",
+            "pph_terutang": "3600000",
+            "pph_terutang_terbaca": "Rp3.600.000",
+            "objek_pajak": {
+              "kode": "21-100-01",
+              "objek": "Penghasilan yang diterima atau diperoleh Pegawai Tetap",
+              "formulir": "BPA1",
+              "final": false,
+              "sumber": "Lampiran PER-11/PJ/2025"
+            },
+            "langkah": [
+              {
+                "label": "Penghasilan bruto sebulan",
+                "formula": "gaji pokok 14000000 + tunjangan tetap 2000000 + bonus/THR/komisi 14000000",
+                "nilai": "30000000",
+                "nilai_terbaca": "Rp30.000.000",
+                "catatan": ""
+              },
+              {
+                "label": "Status PTKP K/2 masuk kategori TER B",
+                "formula": "",
+                "nilai": null,
+                "nilai_terbaca": null,
+                "catatan": "Kategori TER ditentukan status PTKP, bukan besaran penghasilan."
+              },
+              {
+                "label": "Tarif efektif bulanan 12%",
+                "formula": "",
+                "nilai": null,
+                "nilai_terbaca": null,
+                "catatan": "Bracket penghasilan bruto sampai dengan Rp31.450.000."
+              },
+              {
+                "label": "PPh 21 masa (sebelum penyesuaian)",
+                "formula": "30000000 x 12%",
+                "nilai": "3600000",
+                "nilai_terbaca": "Rp3.600.000",
+                "catatan": ""
+              }
+            ],
+            "dasar_hukum": [
+              "PP No. 58 Tahun 2023",
+              "PMK No. 168 Tahun 2023"
+            ],
+            "asumsi": [
+              "Metode TER dipakai untuk masa pajak selain masa pajak terakhir. Pengurang seperti biaya jabatan dan iuran pensiun tidak diperhitungkan di sini, melainkan pada perhitungan ulang masa pajak terakhir."
+            ],
+            "peringatan": [],
+            "disclaimer": "Hasil ini merupakan alat bantu hitung, bukan nasihat pajak resmi. Untuk pelaporan, konfirmasikan kepada konsultan pajak atau DJP.",
+            "status_dasar_hukum": [
+              {
+                "peraturan": "PP 58 Tahun 2023",
+                "status": "berlaku",
+                "pada": "2026-04-30",
+                "oleh": []
+              },
+              {
+                "peraturan": "PMK 168 Tahun 2023",
+                "status": "berlaku",
+                "pada": "2026-04-30",
+                "oleh": []
+              }
+            ],
+            "lokasi_dasar_hukum": [
+              {
+                "rujukan": "PP No. 58 Tahun 2023",
+                "peraturan": "PP 58 Tahun 2023",
+                "pasal": null,
+                "halaman_pdf": null,
+                "tautan": "https://jdih.kemenkeu.go.id/dok/pp-58-tahun-2023"
+              },
+              {
+                "rujukan": "PMK No. 168 Tahun 2023",
+                "peraturan": "PMK 168 Tahun 2023",
+                "pasal": null,
+                "halaman_pdf": null,
+                "tautan": "https://jdih.kemenkeu.go.id/dok/pmk-168-tahun-2023"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "t26-03",
+      "kategori": "pegawai_tetap_masa_terakhir",
+      "tag": [
+        "uji_2026"
+      ],
+      "perilaku": "hitung",
+      "tool_harapan": "calculate_pph21_permanent_last_period",
+      "tool_dipanggil": [
+        "lookup_ptkp",
+        "calculate_pph21_permanent_last_period"
+      ],
+      "tool_hitung_pertama": "calculate_pph21_permanent_last_period",
+      "tool_hitung_akhir": "calculate_pph21_permanent_last_period",
+      "tool_benar": true,
+      "tool_benar_percobaan_pertama": true,
+      "argumen_benar": false,
+      "field_benar": 3,
+      "field_total": 4,
+      "argumen_salah": {
+        "gaji_pokok": {
+          "harapan": 156000000,
+          "aktual": 13000000
+        }
+      },
+      "argumen_aktual": {
+        "tahun_pajak": 2026,
+        "gaji_pokok": 13000000,
+        "status_ptkp": "K/0",
+        "kutipan_status_ptkp": "udah nikah blm punya anak",
+        "punya_npwp": true,
+        "bulan_masa_perolehan": 12,
+        "nilai_per_bulan": true,
+        "pph_sudah_dipotong": 6270000,
+        "masa_pajak": 12
+      },
+      "pph_harapan": "1455000",
+      "pph_aktual": "1455000",
+      "angka_benar": true,
+      "perilaku_benar": true,
+      "galat_tool": 0,
+      "tool_halusinasi": [],
+      "putaran": 3,
+      "detik": 15.41,
+      "jawaban": "Data yang dihitung: PPh 21 pegawai tetap, masa pajak terakhir; tahun pajak 2026, 12 bulan masa perolehan; masa pajak terakhir Desember; status K/0; ber-NPWP; gaji pokok Rp13.000.000 per bulan x 12 bulan; pph sudah dipotong Rp6.270.000; penghasilan bruto yang dihitung Rp156.000.000.\n\nPPh 21 yang masih harus dipotong pada Desember adalah **Rp1.455.000**.\n\n| Langkah | Hasil |\n|---|---:|\n| Penghasilan bruto setahun | Rp156.000.000 |\n| Biaya jabatan | Rp6.000.000 |\n| Penghasilan neto setahun | Rp150.000.000 |\n| PTKP K/0 | Rp58.500.000 |\n| Penghasilan Kena Pajak | Rp91.500.000 |\n| PPh 21 terutang setahun | Rp7.725.000 |\n| PPh 21 sudah dipotong Januari–November | Rp6.270.000 |\n| **PPh 21 masa pajak Desember** | **Rp1.455.000** |\n\n**Dasar hukum:** UU PPh Pasal 17 ayat (1) huruf a s.t.d.t.d UU HPP; UU PPh Pasal 7 ayat (1); PMK No. 168 Tahun 2023; [PMK No. 168 Tahun 2023 Pasal 15 ayat (1) huruf b dan ayat (2), hlm. 15](https://jdih.kemenkeu.go.id/api/download/E60A82E0-B218-40F5-9D18-B924AA1E11CE/2023pmkeuangan168.pdf#page=15).\n\n### Asumsi yang dipakai\n- Nilai gaji Rp13.000.000 adalah gaji yang sama setiap bulan selama 12 bulan.\n- Penerima memiliki NPWP atau NIK yang telah dipadankan.\n- Tidak ada komponen penghasilan, pengurang, atau kredit pajak lain selain yang disebutkan.\n\nHasil ini merupakan alat bantu hitung, bukan nasihat pajak resmi. Untuk pelaporan, konfirmasikan kepada konsultan pajak atau DJP.",
+      "error": null,
+      "galat_api": [],
+      "perilaku_benar_satu_giliran": true,
+      "tool_graf": 0,
+      "klarifikasi": false,
+      "sitasi_belum_terverifikasi": [],
+      "sitasi_diperiksa": true,
+      "sitasi_audit_ablasi": [],
+      "sitasi_dikoreksi": [],
+      "status_distempel": [],
+      "angka_tanpa_sumber": [],
+      "pph_di_jawaban": true,
+      "token_masuk": 52279,
+      "token_keluar": 644,
+      "jejak": [
+        {
+          "tool": "lookup_ptkp",
+          "argumen": {
+            "tahun_pajak": 2026,
+            "kawin": true,
+            "jumlah_tanggungan": 0,
+            "kutipan_status_ptkp": "udah nikah blm punya anak"
+          },
+          "hasil": {
+            "berhasil": true,
+            "status_ptkp": "K/0",
+            "ptkp_setahun": "58500000",
+            "ptkp_setahun_terbaca": "Rp58.500.000",
+            "kategori_ter": "A",
+            "peringatan": [],
+            "dasar_hukum": [
+              "UU PPh Pasal 7 ayat (1)"
+            ],
+            "status_dasar_hukum": [
+              {
+                "peraturan": "UU 7 Tahun 1983",
+                "status": "berlaku_diubah",
+                "pada": "2026-11-17",
+                "oleh": [
+                  "UU 7 Tahun 1991",
+                  "UU 10 Tahun 1994",
+                  "UU 17 Tahun 2000",
+                  "UU 36 Tahun 2008",
+                  "PMK 24 Tahun 2012",
+                  "PMK 233 Tahun 2015",
+                  "UU 11 Tahun 2020",
+                  "UU 7 Tahun 2021",
+                  "PERPPU 2 Tahun 2022",
+                  "UU 6 Tahun 2023"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "tool": "calculate_pph21_permanent_last_period",
+          "argumen": {
+            "tahun_pajak": 2026,
+            "gaji_pokok": 13000000,
+            "status_ptkp": "K/0",
+            "kutipan_status_ptkp": "udah nikah blm punya anak",
+            "punya_npwp": true,
+            "bulan_masa_perolehan": 12,
+            "nilai_per_bulan": true,
+            "pph_sudah_dipotong": 6270000,
+            "masa_pajak": 12
+          },
+          "hasil": {
+            "berhasil": true,
+            "perlu_konfirmasi": [],
+            "ringkasan_masukan": "PPh 21 pegawai tetap, masa pajak terakhir; tahun pajak 2026, 12 bulan masa perolehan; masa pajak terakhir Desember; status K/0; ber-NPWP; gaji pokok Rp13.000.000 per bulan x 12 bulan; pph sudah dipotong Rp6.270.000; penghasilan bruto yang dihitung Rp156.000.000.",
+            "jenis_perhitungan": "pegawai_tetap_masa_pajak_terakhir",
+            "tahun_pajak": 2026,
+            "masa_pajak": 12,
+            "metode_tarif": "Tarif Pasal 17 UU HPP",
+            "penghasilan_bruto": "156000000",
+            "dasar_pengenaan_pajak": "91500000",
+            "pph_sebelum_penalti": "7725000",
+            "penalti_non_npwp": "0",
+            "pph_terutang": "1455000",
+            "pph_terutang_terbaca": "Rp1.455.000",
+            "objek_pajak": {
+              "kode": "21-100-01",
+              "objek": "Penghasilan yang diterima atau diperoleh Pegawai Tetap",
+              "formulir": "BPA1",
+              "final": false,
+              "sumber": "Lampiran PER-11/PJ/2025"
+            },
+            "langkah": [
+              {
+                "label": "Penghasilan bruto (pemberi kerja ini)",
+                "formula": "gaji pokok 156000000",
+                "nilai": "156000000",
+                "nilai_terbaca": "Rp156.000.000",
+                "catatan": ""
+              },
+              {
+                "label": "Biaya jabatan",
+                "formula": "min(5% x 156000000 = 7800000, batas 6000000)",
+                "nilai": "6000000",
+                "nilai_terbaca": "Rp6.000.000",
+                "catatan": "Paling banyak Rp500.000 sebulan atau Rp6.000.000 setahun."
+              },
+              {
+                "label": "Penghasilan neto setahun",
+                "formula": "156000000 - 6000000 - 0",
+                "nilai": "150000000",
+                "nilai_terbaca": "Rp150.000.000",
+                "catatan": ""
+              },
+              {
+                "label": "PTKP K/0",
+                "formula": "diri Wajib Pajak Rp54.000.000 + tambahan kawin Rp4.500.000",
+                "nilai": "58500000",
+                "nilai_terbaca": "Rp58.500.000",
+                "catatan": ""
+              },
+              {
+                "label": "Penghasilan Kena Pajak",
+                "formula": "max(150000000 - 58500000, 0) dibulatkan ke bawah kelipatan 1000",
+                "nilai": "91500000",
+                "nilai_terbaca": "Rp91.500.000",
+                "catatan": ""
+              },
+              {
+                "label": "Lapisan 5%",
+                "formula": "60000000 x 5%",
+                "nilai": "3000000",
+                "nilai_terbaca": "Rp3.000.000",
+                "catatan": ""
+              },
+              {
+                "label": "Lapisan 15%",
+                "formula": "31500000 x 15%",
+                "nilai": "4725000",
+                "nilai_terbaca": "Rp4.725.000",
+                "catatan": ""
+              },
+              {
+                "label": "PPh 21 setahun (sebelum penyesuaian)",
+                "formula": "",
+                "nilai": "7725000",
+                "nilai_terbaca": "Rp7.725.000",
+                "catatan": ""
+              },
+              {
+                "label": "PPh 21 terutang setahun",
+                "formula": "",
+                "nilai": "7725000",
+                "nilai_terbaca": "Rp7.725.000",
+                "catatan": ""
+              },
+              {
+                "label": "PPh 21 yang telah dipotong pemberi kerja ini",
+                "formula": "",
+                "nilai": "6270000",
+                "nilai_terbaca": "Rp6.270.000",
+                "catatan": "Jumlah dari bukti potong masa-masa pajak sebelumnya di pemberi kerja ini."
+              },
+              {
+                "label": "PPh 21 masa pajak terakhir",
+                "formula": "7725000 - 6270000",
+                "nilai": "1455000",
+                "nilai_terbaca": "Rp1.455.000",
+                "catatan": ""
+              }
+            ],
+            "dasar_hukum": [
+              "UU PPh Pasal 17 ayat (1) huruf a s.t.d.t.d UU HPP",
+              "UU PPh Pasal 7 ayat (1)",
+              "PMK No. 168 Tahun 2023",
+              "PMK No. 168 Tahun 2023 Pasal 15 ayat (1) huruf b dan ayat (2)"
+            ],
+            "asumsi": [
+              "Nilai yang diisi adalah jumlah sebulan; tool mengalikannya dengan 12 bulan."
+            ],
+            "peringatan": [],
+            "disclaimer": "Hasil ini merupakan alat bantu hitung, bukan nasihat pajak resmi. Untuk pelaporan, konfirmasikan kepada konsultan pajak atau DJP.",
+            "status_dasar_hukum": [
+              {
+                "peraturan": "PMK 168 Tahun 2023",
+                "status": "berlaku",
+                "pada": "2026-11-17",
+                "oleh": []
+              },
+              {
+                "peraturan": "UU 7 Tahun 1983",
+                "status": "berlaku_diubah",
+                "pada": "2026-11-17",
+                "oleh": [
+                  "UU 7 Tahun 1991",
+                  "UU 10 Tahun 1994",
+                  "UU 17 Tahun 2000",
+                  "UU 36 Tahun 2008",
+                  "PMK 24 Tahun 2012",
+                  "PMK 233 Tahun 2015",
+                  "UU 11 Tahun 2020",
+                  "UU 7 Tahun 2021",
+                  "PERPPU 2 Tahun 2022",
+                  "UU 6 Tahun 2023"
+                ]
+              }
+            ],
+            "lokasi_dasar_hukum": [
+              {
+                "rujukan": "PMK No. 168 Tahun 2023",
+                "peraturan": "PMK 168 Tahun 2023",
+                "pasal": null,
+                "halaman_pdf": null,
+                "tautan": "https://jdih.kemenkeu.go.id/dok/pmk-168-tahun-2023"
+              },
+              {
+                "rujukan": "PMK No. 168 Tahun 2023 Pasal 15 ayat (1) huruf b dan ayat (2)",
+                "peraturan": "PMK 168 Tahun 2023",
+                "pasal": "15",
+                "halaman_pdf": 15,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/E60A82E0-B218-40F5-9D18-B924AA1E11CE/2023pmkeuangan168.pdf#page=15"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "t26-04",
+      "kategori": "bukan_pegawai",
+      "tag": [
+        "uji_2026"
+      ],
+      "perilaku": "hitung",
+      "tool_harapan": "calculate_pph21_non_employee",
+      "tool_dipanggil": [
+        "calculate_pph21_non_employee"
+      ],
+      "tool_hitung_pertama": "calculate_pph21_non_employee",
+      "tool_hitung_akhir": "calculate_pph21_non_employee",
+      "tool_benar": true,
+      "tool_benar_percobaan_pertama": true,
+      "argumen_benar": true,
+      "field_benar": 2,
+      "field_total": 2,
+      "argumen_salah": {},
+      "argumen_aktual": {
+        "tahun_pajak": 2026,
+        "penghasilan_bruto": 7500000,
+        "pembayaran_dikecualikan": 0,
+        "jasa_katering": false,
+        "jenis_jasa": "penasihat_pengajar",
+        "punya_npwp": true
+      },
+      "pph_harapan": "187500",
+      "pph_aktual": "187500",
+      "angka_benar": true,
+      "perilaku_benar": true,
+      "galat_tool": 0,
+      "tool_halusinasi": [],
+      "putaran": 2,
+      "detik": 11.2,
+      "jawaban": "Data yang dihitung: PPh 21 bukan pegawai; tahun pajak 2026; ber-NPWP; penghasilan bruto Rp7.500.000; jenis jasa: penasihat_pengajar; penghasilan bruto yang dihitung Rp7.500.000.\n\nPPh 21 yang dipotong adalah **Rp187.500**.\n\n| Langkah | Perhitungan | Nilai |\n|---|---:|---:|\n| Penghasilan bruto |  | Rp7.500.000 |\n| Dasar pengenaan pajak | 50% × Rp7.500.000 | Rp3.750.000 |\n| Lapisan 5% | Rp3.750.000 × 5% | Rp187.500 |\n| PPh 21 masa ini | Tarif Pasal 17 atas DPP masa ini | **Rp187.500** |\n\n**Dasar hukum:** PMK No. 168 Tahun 2023 Pasal 12 ayat (3) dan Pasal 16 ayat (3) — [PMK No. 168 Tahun 2023 Pasal 12, halaman PDF 13](https://jdih.kemenkeu.go.id/api/download/E60A82E0-B218-40F5-9D18-B924AA1E11CE/2023pmkeuangan168.pdf#page=13).\n\n### Asumsi yang dipakai\n- Honorarium ini merupakan imbalan sebagai pembicara/pengajar workshop.\n- Penerima memiliki NPWP atau NIK yang telah dipadankan.\n- Tidak ada pembayaran tenaga kerja, material, atau pihak ketiga yang dikecualikan dari bruto.\n- Tidak ada natura atau pembayaran lain yang termasuk dalam honorarium.\n\n**Disclaimer:** Hasil ini merupakan alat bantu hitung, bukan nasihat pajak resmi. Untuk pelaporan, konfirmasikan kepada konsultan pajak atau DJP.",
+      "error": null,
+      "galat_api": [],
+      "perilaku_benar_satu_giliran": true,
+      "tool_graf": 0,
+      "klarifikasi": false,
+      "sitasi_belum_terverifikasi": [],
+      "sitasi_diperiksa": true,
+      "sitasi_audit_ablasi": [],
+      "sitasi_dikoreksi": [],
+      "status_distempel": [],
+      "angka_tanpa_sumber": [],
+      "pph_di_jawaban": true,
+      "token_masuk": 34191,
+      "token_keluar": 467,
+      "jejak": [
+        {
+          "tool": "calculate_pph21_non_employee",
+          "argumen": {
+            "tahun_pajak": 2026,
+            "penghasilan_bruto": 7500000,
+            "pembayaran_dikecualikan": 0,
+            "jasa_katering": false,
+            "jenis_jasa": "penasihat_pengajar",
+            "punya_npwp": true
+          },
+          "hasil": {
+            "berhasil": true,
+            "perlu_konfirmasi": [],
+            "ringkasan_masukan": "PPh 21 bukan pegawai; tahun pajak 2026; ber-NPWP; penghasilan bruto Rp7.500.000; jenis jasa: penasihat_pengajar; penghasilan bruto yang dihitung Rp7.500.000.",
+            "jenis_perhitungan": "bukan_pegawai",
+            "tahun_pajak": 2026,
+            "masa_pajak": null,
+            "metode_tarif": "Tarif Pasal 17 atas DPP masa pajak ini",
+            "penghasilan_bruto": "7500000",
+            "dasar_pengenaan_pajak": "3750000",
+            "pph_sebelum_penalti": "187500",
+            "penalti_non_npwp": "0",
+            "pph_terutang": "187500",
+            "pph_terutang_terbaca": "Rp187.500",
+            "objek_pajak": {
+              "kode": "21-100-18",
+              "objek": "Imbalan kepada penasihat, pengajar, pelatih, penceramah, penyuluh, dan moderator",
+              "formulir": "BP21",
+              "final": false,
+              "sumber": "Lampiran PER-11/PJ/2025"
+            },
+            "langkah": [
+              {
+                "label": "Penghasilan bruto",
+                "formula": "",
+                "nilai": "7500000",
+                "nilai_terbaca": "Rp7.500.000",
+                "catatan": ""
+              },
+              {
+                "label": "Dasar pengenaan pajak",
+                "formula": "50% x 7500000",
+                "nilai": "3750000",
+                "nilai_terbaca": "Rp3.750.000",
+                "catatan": ""
+              },
+              {
+                "label": "Lapisan 5%",
+                "formula": "3750000 x 5%",
+                "nilai": "187500",
+                "nilai_terbaca": "Rp187.500",
+                "catatan": ""
+              },
+              {
+                "label": "PPh 21 masa ini",
+                "formula": "Pasal 17 atas DPP masa pajak ini (3750000), tidak kumulatif",
+                "nilai": "187500",
+                "nilai_terbaca": "Rp187.500",
+                "catatan": ""
+              }
+            ],
+            "dasar_hukum": [
+              "PMK No. 168 Tahun 2023 Pasal 12 ayat (3) dan Pasal 16 ayat (3)"
+            ],
+            "asumsi": [],
+            "peringatan": [],
+            "disclaimer": "Hasil ini merupakan alat bantu hitung, bukan nasihat pajak resmi. Untuk pelaporan, konfirmasikan kepada konsultan pajak atau DJP.",
+            "status_dasar_hukum": [
+              {
+                "peraturan": "PMK 168 Tahun 2023",
+                "status": "berlaku",
+                "pada": "2026-11-17",
+                "oleh": []
+              }
+            ],
+            "lokasi_dasar_hukum": [
+              {
+                "rujukan": "PMK No. 168 Tahun 2023 Pasal 12 ayat (3) dan Pasal 16 ayat (3)",
+                "peraturan": "PMK 168 Tahun 2023",
+                "pasal": "12",
+                "halaman_pdf": 13,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/E60A82E0-B218-40F5-9D18-B924AA1E11CE/2023pmkeuangan168.pdf#page=13"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "t26-05",
+      "kategori": "pegawai_tidak_tetap",
+      "tag": [
+        "uji_2026"
+      ],
+      "perilaku": "hitung",
+      "tool_harapan": "calculate_pph21_non_permanent",
+      "tool_dipanggil": [
+        "calculate_pph21_non_permanent"
+      ],
+      "tool_hitung_pertama": "calculate_pph21_non_permanent",
+      "tool_hitung_akhir": "calculate_pph21_non_permanent",
+      "tool_benar": true,
+      "tool_benar_percobaan_pertama": true,
+      "argumen_benar": true,
+      "field_benar": 3,
+      "field_total": 3,
+      "argumen_salah": {},
+      "argumen_aktual": {
+        "tahun_pajak": 2026,
+        "upah_per_periode": 350000,
+        "skema": "harian",
+        "jumlah_hari": 1,
+        "punya_npwp": true,
+        "fasilitas_ikn": false
+      },
+      "pph_harapan": "0",
+      "pph_aktual": "0",
+      "angka_benar": true,
+      "perilaku_benar": true,
+      "galat_tool": 0,
+      "tool_halusinasi": [],
+      "putaran": 2,
+      "detik": 8.29,
+      "jawaban": "Data yang dihitung: PPh 21 pegawai tidak tetap; tahun pajak 2026; ber-NPWP; upah per periode Rp350.000; skema: harian; 1 hari; penghasilan bruto yang dihitung Rp350.000.\n\n**Tidak ada PPh 21 yang dipotong. PPh 21 terutang: Rp0.**\n\n| Rincian | Hasil |\n|---|---:|\n| Tarif efektif harian | 0% |\n| PPh 21 | Rp0 |\n\n**Dasar hukum:** PP No. 58 Tahun 2023; [PMK No. 168 Tahun 2023 Pasal 12 ayat (2), hlm. 13](https://jdih.kemenkeu.go.id/api/download/E60A82E0-B218-40F5-9D18-B924AA1E11CE/2023pmkeuangan168.pdf#page=13).\n\n### Asumsi yang dipakai\n- Penerima memiliki NPWP atau NIK yang telah dipadankan.\n- Tidak disebutkan adanya fasilitas PPh 21 ditanggung pemerintah di IKN.\n\n**Disclaimer:** Hasil ini merupakan alat bantu hitung, bukan nasihat pajak resmi. Untuk pelaporan, konfirmasikan kepada konsultan pajak atau DJP.",
+      "error": null,
+      "galat_api": [],
+      "perilaku_benar_satu_giliran": true,
+      "tool_graf": 0,
+      "klarifikasi": false,
+      "sitasi_belum_terverifikasi": [],
+      "sitasi_diperiksa": true,
+      "sitasi_audit_ablasi": [],
+      "sitasi_dikoreksi": [],
+      "status_distempel": [],
+      "angka_tanpa_sumber": [],
+      "pph_di_jawaban": true,
+      "token_masuk": 34180,
+      "token_keluar": 342,
+      "jejak": [
+        {
+          "tool": "calculate_pph21_non_permanent",
+          "argumen": {
+            "tahun_pajak": 2026,
+            "upah_per_periode": 350000,
+            "skema": "harian",
+            "jumlah_hari": 1,
+            "punya_npwp": true,
+            "fasilitas_ikn": false
+          },
+          "hasil": {
+            "berhasil": true,
+            "perlu_konfirmasi": [],
+            "ringkasan_masukan": "PPh 21 pegawai tidak tetap; tahun pajak 2026; ber-NPWP; upah per periode Rp350.000; skema: harian; 1 hari; penghasilan bruto yang dihitung Rp350.000.",
+            "jenis_perhitungan": "pegawai_tidak_tetap_harian",
+            "tahun_pajak": 2026,
+            "masa_pajak": null,
+            "metode_tarif": "TER harian 0%",
+            "penghasilan_bruto": "350000",
+            "dasar_pengenaan_pajak": "350000",
+            "pph_sebelum_penalti": "0",
+            "penalti_non_npwp": "0",
+            "pph_terutang": "0",
+            "pph_terutang_terbaca": "Rp0",
+            "objek_pajak": {
+              "kode": "21-100-24",
+              "objek": "Upah pegawai tidak tetap harian, mingguan, satuan, borongan sampai dengan Rp2.500.000 sehari",
+              "formulir": "BP21",
+              "final": false,
+              "sumber": "Lampiran PER-11/PJ/2025"
+            },
+            "langkah": [
+              {
+                "label": "Tarif efektif harian 0%",
+                "formula": "",
+                "nilai": null,
+                "nilai_terbaca": null,
+                "catatan": "Upah sehari 350000 berada pada bracket sampai dengan Rp450.000."
+              },
+              {
+                "label": "PPh 21",
+                "formula": "350000 x 0%",
+                "nilai": "0",
+                "nilai_terbaca": "Rp0",
+                "catatan": ""
+              }
+            ],
+            "dasar_hukum": [
+              "PP No. 58 Tahun 2023",
+              "PMK No. 168 Tahun 2023 Pasal 12 ayat (2) dan Pasal 16 ayat (2)"
+            ],
+            "asumsi": [],
+            "peringatan": [],
+            "disclaimer": "Hasil ini merupakan alat bantu hitung, bukan nasihat pajak resmi. Untuk pelaporan, konfirmasikan kepada konsultan pajak atau DJP.",
+            "status_dasar_hukum": [
+              {
+                "peraturan": "PP 58 Tahun 2023",
+                "status": "berlaku",
+                "pada": "2026-11-17",
+                "oleh": []
+              },
+              {
+                "peraturan": "PMK 168 Tahun 2023",
+                "status": "berlaku",
+                "pada": "2026-11-17",
+                "oleh": []
+              }
+            ],
+            "lokasi_dasar_hukum": [
+              {
+                "rujukan": "PP No. 58 Tahun 2023",
+                "peraturan": "PP 58 Tahun 2023",
+                "pasal": null,
+                "halaman_pdf": null,
+                "tautan": "https://jdih.kemenkeu.go.id/dok/pp-58-tahun-2023"
+              },
+              {
+                "rujukan": "PMK No. 168 Tahun 2023 Pasal 12 ayat (2) dan Pasal 16 ayat (2)",
+                "peraturan": "PMK 168 Tahun 2023",
+                "pasal": "12",
+                "halaman_pdf": 13,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/E60A82E0-B218-40F5-9D18-B924AA1E11CE/2023pmkeuangan168.pdf#page=13"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "t26-06",
+      "kategori": "pensiunan",
+      "tag": [
+        "uji_2026"
+      ],
+      "perilaku": "hitung",
+      "tool_harapan": "calculate_pph21_pensioner_monthly",
+      "tool_dipanggil": [
+        "lookup_ptkp",
+        "lookup_ptkp",
+        "find_legal_basis",
+        "calculate_pph21_pensioner_monthly"
+      ],
+      "tool_hitung_pertama": "calculate_pph21_pensioner_monthly",
+      "tool_hitung_akhir": "calculate_pph21_pensioner_monthly",
+      "tool_benar": true,
+      "tool_benar_percobaan_pertama": true,
+      "argumen_benar": false,
+      "field_benar": 3,
+      "field_total": 4,
+      "argumen_salah": {
+        "status_ptkp": {
+          "harapan": "K/2",
+          "aktual": "K/0"
+        }
+      },
+      "argumen_aktual": {
+        "tahun_pajak": 2026,
+        "uang_pensiun": 6000000,
+        "status_ptkp": "K/0",
+        "kutipan_status_ptkp": "ibu masih ada, 2 adik sy masih sekolah ditanggung bapak",
+        "punya_npwp": true,
+        "masa_pajak": 6,
+        "penghasilan_lain": 0
+      },
+      "pph_harapan": "0",
+      "pph_aktual": null,
+      "angka_benar": false,
+      "perilaku_benar": false,
+      "galat_tool": 3,
+      "tool_halusinasi": [],
+      "putaran": 6,
+      "detik": 21.35,
+      "jawaban": "Saya belum bisa menghitung dengan “default” untuk status PTKP, karena status kawin dan tanggungan Bapak belum disebutkan secara pasti. Informasi bahwa Ibu masih ada dan dua adik ditanggung Bapak belum memastikan kode PTKP.\n\nMohon sebutkan **kode PTKP Bapak** (misalnya K/0 atau K/2), atau status kawin serta jumlah tanggungan yang memenuhi ketentuan PTKP.",
+      "error": null,
+      "galat_api": [],
+      "perilaku_benar_satu_giliran": false,
+      "tool_graf": 0,
+      "klarifikasi": true,
+      "sitasi_belum_terverifikasi": [],
+      "sitasi_diperiksa": true,
+      "sitasi_audit_ablasi": [],
+      "sitasi_dikoreksi": [],
+      "status_distempel": [],
+      "angka_tanpa_sumber": [],
+      "pph_di_jawaban": null,
+      "token_masuk": 103831,
+      "token_keluar": 475,
+      "jejak": [
+        {
+          "tool": "lookup_ptkp",
+          "argumen": {
+            "tahun_pajak": 2026,
+            "kawin": true,
+            "jumlah_tanggungan": 2,
+            "kutipan_status_ptkp": "ibu masih ada, 2 adik sy masih sekolah ditanggung bapak"
+          },
+          "hasil": {
+            "berhasil": false,
+            "galat": "kutipan_status_ptkp kosong, tidak ada persis di pesan pengguna, atau tidak menyebut status kawin/tanggungan: status PTKP tidak boleh ditebak.",
+            "saran": "Isi kutipan_status_ptkp dengan potongan kalimat pengguna yang menyebut status kawin/tanggungan atau kode PTKP, disalin persis. Kalau pengguna belum menyebutnya, tanyakan status kawin dan jumlah tanggungan (boleh sekaligus dengan data lain yang kurang), sebagai pertanyaan baru tanpa menyebut galat ini."
+          }
+        },
+        {
+          "tool": "lookup_ptkp",
+          "argumen": {
+            "tahun_pajak": 2026,
+            "kawin": true,
+            "jumlah_tanggungan": 2,
+            "kutipan_status_ptkp": "ibu masih ada, 2 adik sy masih sekolah ditanggung bapak"
+          },
+          "hasil": {
+            "berhasil": false,
+            "galat": "kutipan_status_ptkp kosong, tidak ada persis di pesan pengguna, atau tidak menyebut status kawin/tanggungan: status PTKP tidak boleh ditebak.",
+            "saran": "Isi kutipan_status_ptkp dengan potongan kalimat pengguna yang menyebut status kawin/tanggungan atau kode PTKP, disalin persis. Kalau pengguna belum menyebutnya, tanyakan status kawin dan jumlah tanggungan (boleh sekaligus dengan data lain yang kurang), sebagai pertanyaan baru tanpa menyebut galat ini."
+          }
+        },
+        {
+          "tool": "find_legal_basis",
+          "argumen": {
+            "topic": "pensiunan"
+          },
+          "hasil": {
+            "berhasil": true,
+            "topik": "pensiunan",
+            "judul": "Pensiunan penerima uang pensiun bulanan reguler",
+            "rujukan": [
+              "PMK No. 168 Tahun 2023 Pasal 3 ayat (1) huruf b",
+              "PMK No. 168 Tahun 2023 Pasal 15 ayat (1)"
+            ],
+            "ringkasan": "Kategori penerima TERPISAH dari Pegawai Tetap (huruf a), tapi Pasal 15 ayat (1) menggabungkan keduanya di bawah mekanisme perhitungan yang SAMA: TER bulanan untuk masa pajak selain masa pajak terakhir, tarif Pasal 17 progresif untuk masa pajak terakhir (Desember atau bulan pensiun berhenti dibayarkan). Satu-satunya perbedaan adalah pengurang: biaya pensiun (bukan biaya jabatan). BUKAN kategori yang sama dengan manfaat pensiun/JHT/THT yang dibayarkan SEKALIGUS (PPh final, calculate_pph21_final) maupun penarikan manfaat pensiun oleh pegawai aktif (calculate_pph21_direct_pasal_17, jenis peserta_pensiun_pegawai) -- ketiganya kategori berbeda meski sama-sama menyangkut \"pensiun\".\n",
+            "lokasi_dasar_hukum": [
+              {
+                "rujukan": "PMK No. 168 Tahun 2023 Pasal 3 ayat (1) huruf b",
+                "peraturan": "PMK 168 Tahun 2023",
+                "pasal": "3",
+                "halaman_pdf": 6,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/E60A82E0-B218-40F5-9D18-B924AA1E11CE/2023pmkeuangan168.pdf#page=6"
+              },
+              {
+                "rujukan": "PMK No. 168 Tahun 2023 Pasal 15 ayat (1)",
+                "peraturan": "PMK 168 Tahun 2023",
+                "pasal": "15",
+                "halaman_pdf": 15,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/E60A82E0-B218-40F5-9D18-B924AA1E11CE/2023pmkeuangan168.pdf#page=15"
+              }
+            ]
+          }
+        },
+        {
+          "tool": "calculate_pph21_pensioner_monthly",
+          "argumen": {
+            "tahun_pajak": 2026,
+            "uang_pensiun": 6000000,
+            "status_ptkp": "K/0",
+            "kutipan_status_ptkp": "ibu masih ada, 2 adik sy masih sekolah ditanggung bapak",
+            "punya_npwp": true,
+            "masa_pajak": 6,
+            "penghasilan_lain": 0
+          },
+          "hasil": {
+            "berhasil": false,
+            "galat": "kutipan_status_ptkp kosong, tidak ada persis di pesan pengguna, atau tidak menyebut status kawin/tanggungan: status PTKP tidak boleh ditebak.",
+            "saran": "Isi kutipan_status_ptkp dengan potongan kalimat pengguna yang menyebut status kawin/tanggungan atau kode PTKP, disalin persis. Kalau pengguna belum menyebutnya, tanyakan status kawin dan jumlah tanggungan (boleh sekaligus dengan data lain yang kurang), sebagai pertanyaan baru tanpa menyebut galat ini."
+          }
+        }
+      ]
+    },
+    {
+      "id": "t26-07",
+      "kategori": "dewan_komisaris",
+      "tag": [
+        "uji_2026"
+      ],
+      "perilaku": "hitung",
+      "tool_harapan": "calculate_pph21_commissioner",
+      "tool_dipanggil": [
+        "lookup_ptkp",
+        "calculate_pph21_commissioner"
+      ],
+      "tool_hitung_pertama": "calculate_pph21_commissioner",
+      "tool_hitung_akhir": "calculate_pph21_commissioner",
+      "tool_benar": true,
+      "tool_benar_percobaan_pertama": true,
+      "argumen_benar": true,
+      "field_benar": 3,
+      "field_total": 3,
+      "argumen_salah": {},
+      "argumen_aktual": {
+        "tahun_pajak": 2026,
+        "penghasilan_bruto": 25000000,
+        "status_ptkp": "TK/0",
+        "kutipan_status_ptkp": "masih lajang",
+        "punya_npwp": true
+      },
+      "pph_harapan": "2500000",
+      "pph_aktual": "2500000",
+      "angka_benar": true,
+      "perilaku_benar": true,
+      "galat_tool": 0,
+      "tool_halusinasi": [],
+      "putaran": 3,
+      "detik": 10.54,
+      "jawaban": "Data yang dihitung: PPh 21 anggota dewan komisaris/pengawas; tahun pajak 2026; status TK/0; ber-NPWP; penghasilan bruto Rp25.000.000; penghasilan bruto yang dihitung Rp25.000.000.\n\nPPh 21 terutang untuk honorarium komisaris tersebut adalah **Rp2.500.000**.\n\n| Langkah | Perhitungan | Nilai |\n|---|---:|---:|\n| Penghasilan bruto |  | Rp25.000.000 |\n| TER bulanan kategori A | Tarif 10%, berdasarkan status TK/0 |  |\n| PPh 21 |  | Rp2.500.000 |\n\n**Dasar hukum:** PP No. 58 Tahun 2023; PMK No. 168 Tahun 2023 Pasal 12 ayat (1) dan Pasal 16 ayat (1), [PMK 168/2023 Pasal 12, hlm. 13](https://jdih.kemenkeu.go.id/api/download/E60A82E0-B218-40F5-9D18-B924AA1E11CE/2023pmkeuangan168.pdf#page=13).\n\n### Asumsi yang dipakai\n- Honorarium dibayarkan sebagai penghasilan tidak teratur kepada komisaris yang bukan pegawai tetap.\n- Penerima memiliki NPWP atau NIK yang telah dipadankan.\n- Tidak ada komponen penghasilan lain yang ditambahkan.\n\n**Disclaimer:** Hasil ini merupakan alat bantu hitung, bukan nasihat pajak resmi. Untuk pelaporan, konfirmasikan kepada konsultan pajak atau DJP.",
+      "error": null,
+      "galat_api": [],
+      "perilaku_benar_satu_giliran": true,
+      "tool_graf": 0,
+      "klarifikasi": false,
+      "sitasi_belum_terverifikasi": [],
+      "sitasi_diperiksa": true,
+      "sitasi_audit_ablasi": [],
+      "sitasi_dikoreksi": [],
+      "status_distempel": [],
+      "angka_tanpa_sumber": [],
+      "pph_di_jawaban": true,
+      "token_masuk": 51454,
+      "token_keluar": 458,
+      "jejak": [
+        {
+          "tool": "lookup_ptkp",
+          "argumen": {
+            "kawin": false,
+            "jumlah_tanggungan": 0,
+            "kutipan_status_ptkp": "masih lajang",
+            "tahun_pajak": 2026
+          },
+          "hasil": {
+            "berhasil": true,
+            "status_ptkp": "TK/0",
+            "ptkp_setahun": "54000000",
+            "ptkp_setahun_terbaca": "Rp54.000.000",
+            "kategori_ter": "A",
+            "peringatan": [],
+            "dasar_hukum": [
+              "UU PPh Pasal 7 ayat (1)"
+            ],
+            "status_dasar_hukum": [
+              {
+                "peraturan": "UU 7 Tahun 1983",
+                "status": "berlaku_diubah",
+                "pada": "2026-11-17",
+                "oleh": [
+                  "UU 7 Tahun 1991",
+                  "UU 10 Tahun 1994",
+                  "UU 17 Tahun 2000",
+                  "UU 36 Tahun 2008",
+                  "PMK 24 Tahun 2012",
+                  "PMK 233 Tahun 2015",
+                  "UU 11 Tahun 2020",
+                  "UU 7 Tahun 2021",
+                  "PERPPU 2 Tahun 2022",
+                  "UU 6 Tahun 2023"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "tool": "calculate_pph21_commissioner",
+          "argumen": {
+            "tahun_pajak": 2026,
+            "penghasilan_bruto": 25000000,
+            "status_ptkp": "TK/0",
+            "kutipan_status_ptkp": "masih lajang",
+            "punya_npwp": true
+          },
+          "hasil": {
+            "berhasil": true,
+            "perlu_konfirmasi": [],
+            "ringkasan_masukan": "PPh 21 anggota dewan komisaris/pengawas; tahun pajak 2026; status TK/0; ber-NPWP; penghasilan bruto Rp25.000.000; penghasilan bruto yang dihitung Rp25.000.000.",
+            "jenis_perhitungan": "dewan_komisaris",
+            "tahun_pajak": 2026,
+            "masa_pajak": null,
+            "metode_tarif": "TER bulanan kategori A, tarif 10%",
+            "penghasilan_bruto": "25000000",
+            "dasar_pengenaan_pajak": "25000000",
+            "pph_sebelum_penalti": "2500000",
+            "penalti_non_npwp": "0",
+            "pph_terutang": "2500000",
+            "pph_terutang_terbaca": "Rp2.500.000",
+            "objek_pajak": {
+              "kode": "21-100-10",
+              "objek": "Honorarium anggota dewan komisaris atau dewan pengawas yang diterima tidak teratur",
+              "formulir": "BP21",
+              "final": false,
+              "sumber": "Lampiran PER-11/PJ/2025"
+            },
+            "langkah": [
+              {
+                "label": "Penghasilan bruto",
+                "formula": "",
+                "nilai": "25000000",
+                "nilai_terbaca": "Rp25.000.000",
+                "catatan": ""
+              },
+              {
+                "label": "TER bulanan kategori A",
+                "formula": "",
+                "nilai": null,
+                "nilai_terbaca": null,
+                "catatan": "tarif 10%, berdasarkan status TK/0"
+              },
+              {
+                "label": "PPh 21",
+                "formula": "25000000 x 10%",
+                "nilai": "2500000",
+                "nilai_terbaca": "Rp2.500.000",
+                "catatan": ""
+              }
+            ],
+            "dasar_hukum": [
+              "PP No. 58 Tahun 2023",
+              "PMK No. 168 Tahun 2023 Pasal 12 ayat (1) dan Pasal 16 ayat (1)"
+            ],
+            "asumsi": [],
+            "peringatan": [],
+            "disclaimer": "Hasil ini merupakan alat bantu hitung, bukan nasihat pajak resmi. Untuk pelaporan, konfirmasikan kepada konsultan pajak atau DJP.",
+            "status_dasar_hukum": [
+              {
+                "peraturan": "PP 58 Tahun 2023",
+                "status": "berlaku",
+                "pada": "2026-11-17",
+                "oleh": []
+              },
+              {
+                "peraturan": "PMK 168 Tahun 2023",
+                "status": "berlaku",
+                "pada": "2026-11-17",
+                "oleh": []
+              }
+            ],
+            "lokasi_dasar_hukum": [
+              {
+                "rujukan": "PP No. 58 Tahun 2023",
+                "peraturan": "PP 58 Tahun 2023",
+                "pasal": null,
+                "halaman_pdf": null,
+                "tautan": "https://jdih.kemenkeu.go.id/dok/pp-58-tahun-2023"
+              },
+              {
+                "rujukan": "PMK No. 168 Tahun 2023 Pasal 12 ayat (1) dan Pasal 16 ayat (1)",
+                "peraturan": "PMK 168 Tahun 2023",
+                "pasal": "12",
+                "halaman_pdf": 13,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/E60A82E0-B218-40F5-9D18-B924AA1E11CE/2023pmkeuangan168.pdf#page=13"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "t26-08",
+      "kategori": "final",
+      "tag": [
+        "uji_2026"
+      ],
+      "perilaku": "hitung",
+      "tool_harapan": "calculate_pph21_final",
+      "tool_dipanggil": [
+        "calculate_pph21_final"
+      ],
+      "tool_hitung_pertama": "calculate_pph21_final",
+      "tool_hitung_akhir": "calculate_pph21_final",
+      "tool_benar": true,
+      "tool_benar_percobaan_pertama": true,
+      "argumen_benar": true,
+      "field_benar": 3,
+      "field_total": 3,
+      "argumen_salah": {},
+      "argumen_aktual": {
+        "tahun_pajak": 2026,
+        "jenis": "pesangon",
+        "jumlah_bruto": 120000000,
+        "tahun_pembayaran_ke": 1,
+        "punya_npwp": true
+      },
+      "pph_harapan": "5500000",
+      "pph_aktual": "5500000",
+      "angka_benar": true,
+      "perilaku_benar": true,
+      "galat_tool": 0,
+      "tool_halusinasi": [],
+      "putaran": 2,
+      "detik": 10.02,
+      "jawaban": "Data yang dihitung: PPh 21 final; tahun pajak 2026; ber-NPWP; jenis: pesangon; jumlah bruto Rp120.000.000; penghasilan bruto yang dihitung Rp120.000.000.\n\nPPh 21 final atas pesangon tersebut adalah **Rp5.500.000**.\n\n| Rincian | Perhitungan | PPh |\n|---|---:|---:|\n| Lapisan 0% |  | Rp0 |\n| Lapisan 5% |  | Rp2.500.000 |\n| Lapisan 15% |  | Rp3.000.000 |\n| **PPh final** |  | **Rp5.500.000** |\n\n**Dasar hukum:** PP No. 68 Tahun 2009 Pasal 4 dan Pasal 2 ayat (2); PMK No. 16/PMK.03/2010.\n\n### Asumsi yang dipakai\n- Dianggap dibayarkan sekaligus, yaitu paling lama 2 tahun kalender. Bagian yang dibayar pada tahun ketiga dan seterusnya tidak bersifat final dan dikenakan tarif Pasal 17 (tahun_pembayaran_ke=3).\n- Diasumsikan Anda memiliki NPWP atau NIK yang telah dipadankan.\n\n**Disclaimer:** Hasil ini merupakan alat bantu hitung, bukan nasihat pajak resmi. Untuk pelaporan, konfirmasikan kepada konsultan pajak atau DJP.",
+      "error": null,
+      "galat_api": [],
+      "perilaku_benar_satu_giliran": true,
+      "tool_graf": 0,
+      "klarifikasi": false,
+      "sitasi_belum_terverifikasi": [],
+      "sitasi_diperiksa": true,
+      "sitasi_audit_ablasi": [],
+      "sitasi_dikoreksi": [],
+      "status_distempel": [],
+      "angka_tanpa_sumber": [],
+      "pph_di_jawaban": true,
+      "token_masuk": 34299,
+      "token_keluar": 363,
+      "jejak": [
+        {
+          "tool": "calculate_pph21_final",
+          "argumen": {
+            "tahun_pajak": 2026,
+            "jenis": "pesangon",
+            "jumlah_bruto": 120000000,
+            "tahun_pembayaran_ke": 1,
+            "punya_npwp": true
+          },
+          "hasil": {
+            "berhasil": true,
+            "perlu_konfirmasi": [],
+            "ringkasan_masukan": "PPh 21 final; tahun pajak 2026; ber-NPWP; jenis: pesangon; jumlah bruto Rp120.000.000; penghasilan bruto yang dihitung Rp120.000.000.",
+            "jenis_perhitungan": "final_pesangon",
+            "tahun_pajak": 2026,
+            "masa_pajak": null,
+            "metode_tarif": "PPh final berlapis",
+            "penghasilan_bruto": "120000000",
+            "dasar_pengenaan_pajak": "120000000",
+            "pph_sebelum_penalti": "5500000",
+            "penalti_non_npwp": "0",
+            "pph_terutang": "5500000",
+            "pph_terutang_terbaca": "Rp5.500.000",
+            "objek_pajak": {
+              "kode": "21-401-01",
+              "objek": "Uang pesangon yang dibayarkan sekaligus",
+              "formulir": "BP21",
+              "final": true,
+              "sumber": "Lampiran PER-11/PJ/2025"
+            },
+            "langkah": [
+              {
+                "label": "Jumlah bruto",
+                "formula": "",
+                "nilai": "120000000",
+                "nilai_terbaca": "Rp120.000.000",
+                "catatan": ""
+              },
+              {
+                "label": "Lapisan 0%",
+                "formula": "50000000 x 0%",
+                "nilai": "0",
+                "nilai_terbaca": "Rp0",
+                "catatan": ""
+              },
+              {
+                "label": "Lapisan 5%",
+                "formula": "50000000 x 5%",
+                "nilai": "2500000",
+                "nilai_terbaca": "Rp2.500.000",
+                "catatan": ""
+              },
+              {
+                "label": "Lapisan 15%",
+                "formula": "20000000 x 15%",
+                "nilai": "3000000",
+                "nilai_terbaca": "Rp3.000.000",
+                "catatan": ""
+              },
+              {
+                "label": "PPh final",
+                "formula": "",
+                "nilai": "5500000",
+                "nilai_terbaca": "Rp5.500.000",
+                "catatan": ""
+              }
+            ],
+            "dasar_hukum": [
+              "PP No. 68 Tahun 2009 Pasal 4 dan Pasal 2 ayat (2)",
+              "PMK No. 16/PMK.03/2010"
+            ],
+            "asumsi": [
+              "Dianggap dibayarkan sekaligus, yaitu paling lama 2 tahun kalender. Bagian yang dibayar pada tahun ketiga dan seterusnya tidak bersifat final dan dikenakan tarif Pasal 17 (tahun_pembayaran_ke=3)."
+            ],
+            "peringatan": [],
+            "disclaimer": "Hasil ini merupakan alat bantu hitung, bukan nasihat pajak resmi. Untuk pelaporan, konfirmasikan kepada konsultan pajak atau DJP.",
+            "status_dasar_hukum": [
+              {
+                "peraturan": "PP 68 Tahun 2009",
+                "status": "berlaku",
+                "pada": "2026-11-17",
+                "oleh": []
+              },
+              {
+                "peraturan": "PMK 16 Tahun 2010",
+                "status": "berlaku",
+                "pada": "2026-11-17",
+                "oleh": []
+              }
+            ],
+            "lokasi_dasar_hukum": [
+              {
+                "rujukan": "PP No. 68 Tahun 2009 Pasal 4 dan Pasal 2 ayat (2)",
+                "peraturan": "PP 68 Tahun 2009",
+                "pasal": "4",
+                "halaman_pdf": null,
+                "tautan": "https://jdih.kemenkeu.go.id/dok/pp-68-tahun-2009"
+              },
+              {
+                "rujukan": "PMK No. 16/PMK.03/2010",
+                "peraturan": "PMK 16 Tahun 2010",
+                "pasal": null,
+                "halaman_pdf": null,
+                "tautan": "https://jdih.kemenkeu.go.id/dok/16-pmk-03-2010"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "t26-09",
+      "kategori": "pph26",
+      "tag": [
+        "uji_2026"
+      ],
+      "perilaku": "hitung",
+      "tool_harapan": "calculate_pph_pasal_26",
+      "tool_dipanggil": [
+        "calculate_pph_pasal_26"
+      ],
+      "tool_hitung_pertama": "calculate_pph_pasal_26",
+      "tool_hitung_akhir": "calculate_pph_pasal_26",
+      "tool_benar": true,
+      "tool_benar_percobaan_pertama": true,
+      "argumen_benar": true,
+      "field_benar": 2,
+      "field_total": 2,
+      "argumen_salah": {},
+      "argumen_aktual": {
+        "tahun_pajak": 2026,
+        "penghasilan_bruto": 50000000,
+        "negara_domisili": "tidak disebutkan",
+        "tarif_p3b_persen": -1,
+        "ada_surat_keterangan_domisili": false
+      },
+      "pph_harapan": "10000000",
+      "pph_aktual": "10000000",
+      "angka_benar": true,
+      "perilaku_benar": true,
+      "galat_tool": 0,
+      "tool_halusinasi": [],
+      "putaran": 2,
+      "detik": 10.66,
+      "jawaban": "Data yang dihitung: PPh Pasal 26; tahun pajak 2026; penghasilan bruto Rp50.000.000; negara domisili: tidak disebutkan; penghasilan bruto yang dihitung Rp50.000.000.\n\nPPh Pasal 26 terutang **Rp10.000.000**.\n\n| Rincian | Perhitungan | Nilai |\n|---|---:|---:|\n| Jumlah bruto |  | Rp50.000.000 |\n| PPh Pasal 26 | 50000000 x 20% | Rp10.000.000 |\n\n**Dasar hukum:** UU PPh Pasal 26 ayat (1); [PMK No. 168 Tahun 2023 Pasal 14 ayat (1), hlm. 15](https://jdih.kemenkeu.go.id/api/download/E60A82E0-B218-40F5-9D18-B924AA1E11CE/2023pmkeuangan168.pdf#page=15).\n\n### Asumsi yang dipakai\n- Tidak ada SKD yang disampaikan, sehingga tidak menerapkan tarif P3B.\n- Negara domisili tidak disebutkan.\n- PPh Pasal 26 bersifat final kecuali penerima berubah status menjadi subjek pajak dalam negeri.\n- Penghasilan bruto yang dihitung adalah fee sebesar Rp50.000.000 seperti yang disebutkan.\n- Tidak disebutkan hal lain yang mengubah penghitungan.\n\nHasil ini merupakan alat bantu hitung, bukan nasihat pajak resmi. Untuk pelaporan, konfirmasikan kepada konsultan pajak atau DJP.",
+      "error": null,
+      "galat_api": [],
+      "perilaku_benar_satu_giliran": true,
+      "tool_graf": 0,
+      "klarifikasi": false,
+      "sitasi_belum_terverifikasi": [],
+      "sitasi_diperiksa": true,
+      "sitasi_audit_ablasi": [],
+      "sitasi_dikoreksi": [],
+      "status_distempel": [],
+      "angka_tanpa_sumber": [],
+      "pph_di_jawaban": true,
+      "token_masuk": 34242,
+      "token_keluar": 413,
+      "jejak": [
+        {
+          "tool": "calculate_pph_pasal_26",
+          "argumen": {
+            "tahun_pajak": 2026,
+            "penghasilan_bruto": 50000000,
+            "negara_domisili": "tidak disebutkan",
+            "tarif_p3b_persen": -1,
+            "ada_surat_keterangan_domisili": false
+          },
+          "hasil": {
+            "berhasil": true,
+            "perlu_konfirmasi": [],
+            "ringkasan_masukan": "PPh Pasal 26; tahun pajak 2026; penghasilan bruto Rp50.000.000; negara domisili: tidak disebutkan; penghasilan bruto yang dihitung Rp50.000.000.",
+            "jenis_perhitungan": "pph26",
+            "tahun_pajak": 2026,
+            "masa_pajak": null,
+            "metode_tarif": "Tarif PPh 26 20%",
+            "penghasilan_bruto": "50000000",
+            "dasar_pengenaan_pajak": "50000000",
+            "pph_sebelum_penalti": "10000000",
+            "penalti_non_npwp": "0",
+            "pph_terutang": "10000000",
+            "pph_terutang_terbaca": "Rp10.000.000",
+            "objek_pajak": {
+              "kode": "27-100-99",
+              "objek": "Imbalan jasa, pekerjaan, kegiatan, hadiah, penghargaan, pensiun, dan pembayaran berkala lain yang dipotong PPh Pasal 26",
+              "formulir": "BP26",
+              "final": false,
+              "sumber": "Lampiran PER-11/PJ/2025"
+            },
+            "langkah": [
+              {
+                "label": "Jumlah bruto",
+                "formula": "",
+                "nilai": "50000000",
+                "nilai_terbaca": "Rp50.000.000",
+                "catatan": ""
+              },
+              {
+                "label": "PPh Pasal 26",
+                "formula": "50000000 x 20%",
+                "nilai": "10000000",
+                "nilai_terbaca": "Rp10.000.000",
+                "catatan": ""
+              }
+            ],
+            "dasar_hukum": [
+              "UU PPh Pasal 26 ayat (1)",
+              "PMK No. 168 Tahun 2023 Pasal 14 ayat (1)"
+            ],
+            "asumsi": [
+              "PPh Pasal 26 bersifat final kecuali penerima berubah status menjadi subjek pajak dalam negeri."
+            ],
+            "peringatan": [],
+            "disclaimer": "Hasil ini merupakan alat bantu hitung, bukan nasihat pajak resmi. Untuk pelaporan, konfirmasikan kepada konsultan pajak atau DJP.",
+            "status_dasar_hukum": [
+              {
+                "peraturan": "PMK 168 Tahun 2023",
+                "status": "berlaku",
+                "pada": "2026-11-17",
+                "oleh": []
+              },
+              {
+                "peraturan": "UU 7 Tahun 1983",
+                "status": "berlaku_diubah",
+                "pada": "2026-11-17",
+                "oleh": [
+                  "UU 7 Tahun 1991",
+                  "UU 10 Tahun 1994",
+                  "UU 17 Tahun 2000",
+                  "UU 36 Tahun 2008",
+                  "PMK 24 Tahun 2012",
+                  "PMK 233 Tahun 2015",
+                  "UU 11 Tahun 2020",
+                  "UU 7 Tahun 2021",
+                  "PERPPU 2 Tahun 2022",
+                  "UU 6 Tahun 2023"
+                ]
+              }
+            ],
+            "lokasi_dasar_hukum": [
+              {
+                "rujukan": "PMK No. 168 Tahun 2023 Pasal 14 ayat (1)",
+                "peraturan": "PMK 168 Tahun 2023",
+                "pasal": "14",
+                "halaman_pdf": 15,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/E60A82E0-B218-40F5-9D18-B924AA1E11CE/2023pmkeuangan168.pdf#page=15"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "t26-10",
+      "kategori": "tolak",
+      "tag": [
+        "uji_2026"
+      ],
+      "perilaku": "tolak",
+      "tool_harapan": null,
+      "tool_dipanggil": [
+        "find_legal_basis",
+        "calculate_pph21_non_employee"
+      ],
+      "tool_hitung_pertama": "calculate_pph21_non_employee",
+      "tool_hitung_akhir": "calculate_pph21_non_employee",
+      "tool_benar": true,
+      "tool_benar_percobaan_pertama": false,
+      "argumen_benar": null,
+      "field_benar": 0,
+      "field_total": 0,
+      "argumen_salah": {},
+      "argumen_aktual": {},
+      "pph_harapan": null,
+      "pph_aktual": null,
+      "angka_benar": null,
+      "perilaku_benar": true,
+      "galat_tool": 1,
+      "tool_halusinasi": [],
+      "putaran": 3,
+      "detik": 12.24,
+      "jawaban": "PPh Pasal 23 berada di luar cakupan kalkulator PPh 21/26 yang tersedia, jadi saya tidak bisa menghitung nominalnya. Untuk jasa konsultan dari badan/ PT, pastikan juga jenis jasanya dan ketentuan pemotongan yang berlaku sebelum menentukan potongan.\n\nRujukan yang saya temukan membahas **PPh 21 atas jasa tenaga ahli perorangan**, bukan PPh 23 atas jasa dari badan: [PMK No. 168 Tahun 2023 Pasal 12, halaman PDF 13](https://jdih.kemenkeu.go.id/api/download/E60A82E0-B218-40F5-9D18-B924AA1E11CE/2023pmkeuangan168.pdf#page=13).\n\n**Asumsi yang dipakai**\n- Nilai Rp40 juta adalah imbalan jasa konsultan dari PT, seperti yang Anda sebutkan.",
+      "error": null,
+      "galat_api": [],
+      "perilaku_benar_satu_giliran": true,
+      "tool_graf": 0,
+      "klarifikasi": false,
+      "sitasi_belum_terverifikasi": [],
+      "sitasi_diperiksa": true,
+      "sitasi_audit_ablasi": [],
+      "sitasi_dikoreksi": [],
+      "status_distempel": [],
+      "angka_tanpa_sumber": [],
+      "pph_di_jawaban": null,
+      "token_masuk": 51185,
+      "token_keluar": 285,
+      "jejak": [
+        {
+          "tool": "find_legal_basis",
+          "argumen": {
+            "topic": "bukan_pegawai"
+          },
+          "hasil": {
+            "berhasil": true,
+            "topik": "bukan_pegawai",
+            "judul": "Bukan pegawai",
+            "rujukan": [
+              "PMK No. 168 Tahun 2023 Pasal 12 ayat (3), (4), (5) dan Pasal 16 ayat (3)"
+            ],
+            "ringkasan": "Dasar pengenaan pajak adalah 50% dari jumlah penghasilan bruto pada masa pajak yang bersangkutan, dikenakan tarif Pasal 17 langsung atas DPP masa pajak itu sendiri. TIDAK kumulatif lintas masa pajak dan TIDAK dikurangi PTKP; keduanya aturan PER-16/PJ/2016, yang tidak dicabut secara tegas tetapi kehilangan dasar delegasinya: PMK 252/PMK.03/2008 dan PMK 102/PMK.010/2016 dicabut PMK 168/2023 Pasal 24 sejak 1 Januari 2024, dan aturannya bertentangan dengan PMK 168/2023 (di PMK 168/2023 PTKP hanya untuk Pegawai Tetap dan Pensiunan, Pasal 8 ayat (3)). Untuk jasa selain katering, bruto tidak termasuk upah tenaga kerja yang dipekerjakan penerima, pembelian material terkait jasa, dan pembayaran ke pihak ketiga, sepanjang dibuktikan kontrak/faktur (Pasal 12 ayat (4) huruf b dan ayat (5)).\n",
+            "lokasi_dasar_hukum": [
+              {
+                "rujukan": "PMK No. 168 Tahun 2023 Pasal 12 ayat (3), (4), (5) dan Pasal 16 ayat (3)",
+                "peraturan": "PMK 168 Tahun 2023",
+                "pasal": "12",
+                "halaman_pdf": 13,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/E60A82E0-B218-40F5-9D18-B924AA1E11CE/2023pmkeuangan168.pdf#page=13"
+              }
+            ]
+          }
+        },
+        {
+          "tool": "calculate_pph21_non_employee",
+          "argumen": {
+            "tahun_pajak": 2026,
+            "penghasilan_bruto": 40000000,
+            "pembayaran_dikecualikan": 0,
+            "jasa_katering": false,
+            "jenis_jasa": "tenaga_ahli",
+            "punya_npwp": true
+          },
+          "hasil": {
+            "berhasil": false,
+            "galat": "Pertanyaan menyebut jenis pajak lain (bukan PPh 21/26). Kalkulator ini hanya menghitung PPh 21 dan PPh 26, jadi hasilnya tidak menjawab pertanyaan itu.",
+            "saran": "Jangan menghitung dengan tool PPh 21/26 dan jangan menghitung sendiri. Katakan bahwa jenis pajak ini di luar cakupan; boleh menjelaskan dasar hukumnya tanpa angka hasil hitung."
+          }
+        }
+      ]
+    },
+    {
+      "id": "t26-11",
+      "kategori": "tolak",
+      "tag": [
+        "uji_2026"
+      ],
+      "perilaku": "tolak",
+      "tool_harapan": null,
+      "tool_dipanggil": [
+        "find_legal_basis",
+        "find_legal_basis",
+        "skill_value",
+        "search_text",
+        "find_regulation",
+        "search_text"
+      ],
+      "tool_hitung_pertama": null,
+      "tool_hitung_akhir": null,
+      "tool_benar": true,
+      "tool_benar_percobaan_pertama": true,
+      "argumen_benar": null,
+      "field_benar": 0,
+      "field_total": 0,
+      "argumen_salah": {},
+      "argumen_aktual": {},
+      "pph_harapan": null,
+      "pph_aktual": null,
+      "angka_benar": null,
+      "perilaku_benar": true,
+      "galat_tool": 1,
+      "tool_halusinasi": [],
+      "putaran": 8,
+      "detik": 37.27,
+      "jawaban": "Benar, angka PPN dan total sebelumnya tidak berasal dari hasil tool—seharusnya saya tidak menyajikannya. Saya tidak memiliki tool hitung PPN yang dapat menghitung nilai untuk harga jual Rp100 juta, jadi saya tidak akan mengarang angka pajaknya.\n\nUntuk barang kena pajak yang mengikuti ketentuan umum, [PMK 131 Tahun 2024 Pasal 3, hlm. 4](https://jdih.kemenkeu.go.id/api/download/F128868E-3CF6-4596-8407-C34EECA0E7BE/2024pmkeuangan131.pdf#page=4) menyebut tarif PPN 12% dengan DPP berupa 11/12 dari harga jual. Ketentuan tersebut berstatus berlaku per 17 November 2026. PPN dapat berbeda untuk barang mewah tertentu atau transaksi dengan perlakuan khusus.\n\n**Asumsi yang dipakai**\n- Harga Rp100 juta yang Anda sebut adalah harga jual sebelum PPN.\n- Barangnya bukan barang mewah tertentu atau barang/transaksi dengan perlakuan khusus.",
+      "error": null,
+      "galat_api": [],
+      "perilaku_benar_satu_giliran": true,
+      "tool_graf": 4,
+      "klarifikasi": false,
+      "sitasi_belum_terverifikasi": [],
+      "sitasi_diperiksa": true,
+      "sitasi_audit_ablasi": [],
+      "sitasi_dikoreksi": [],
+      "status_distempel": [],
+      "angka_tanpa_sumber": [],
+      "pph_di_jawaban": null,
+      "token_masuk": 150012,
+      "token_keluar": 767,
+      "jejak": [
+        {
+          "tool": "find_legal_basis",
+          "argumen": {
+            "topic": "tarif_pasal_17"
+          },
+          "hasil": {
+            "berhasil": true,
+            "topik": "tarif_pasal_17",
+            "judul": "Tarif progresif Pasal 17",
+            "rujukan": [
+              "UU PPh Pasal 17 ayat (1) huruf a s.t.d.t.d UU No. 7 Tahun 2021 (UU HPP)"
+            ],
+            "ringkasan": "Lima lapisan: 5% s.d. Rp60 juta, 15% s.d. Rp250 juta, 25% s.d. Rp500 juta, 30% s.d. Rp5 miliar, dan 35% di atas Rp5 miliar.\n",
+            "lokasi_dasar_hukum": [
+              {
+                "rujukan": "UU PPh Pasal 17 ayat (1) huruf a s.t.d.t.d UU No. 7 Tahun 2021 (UU HPP)",
+                "peraturan": "UU 7 Tahun 2021",
+                "pasal": "17",
+                "halaman_pdf": 56,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/A9FAAB97-ACA7-4F87-9FDC-FAA8123D1454/7TAHUN2021UU.pdf#page=56"
+              }
+            ]
+          }
+        },
+        {
+          "tool": "find_legal_basis",
+          "argumen": {
+            "topic": "kode_objek_pajak"
+          },
+          "hasil": {
+            "berhasil": true,
+            "topik": "kode_objek_pajak",
+            "judul": "Kode objek pajak bukti pemotongan PPh 21/26",
+            "rujukan": [
+              "PER-11/PJ/2025 Lampiran (Daftar Kode Objek Pajak dan Objek Pajak)"
+            ],
+            "ringkasan": "BPA1: 21-100-01 pegawai tetap, 21-100-02 pensiunan, 21-100-32 pegawai tetap dengan fasilitas daerah tertentu. BP21 tidak final: 24 kode (21-100-04 sampai 21-100-36) untuk bukan pegawai, komisaris, mantan pegawai, peserta kegiatan, pegawai tidak tetap, dan pesangon tahun ketiga. BP21 final: pesangon 21-401-01, manfaat pensiun/JHT 21-401-02, honor APBN/APBD 21-402-02/03/04. BP26: 27-100-99. Hasil hitung menyertakan kodenya di field objek_pajak.\n",
+            "lokasi_dasar_hukum": [
+              {
+                "rujukan": "PER-11/PJ/2025 Lampiran (Daftar Kode Objek Pajak dan Objek Pajak)",
+                "peraturan": "PER-11/PJ/2025",
+                "pasal": null,
+                "halaman_pdf": null,
+                "tautan": "https://jdih.kemenkeu.go.id/dok/per-11pj2025"
+              }
+            ]
+          }
+        },
+        {
+          "tool": "skill_value",
+          "argumen": {
+            "key": "ppn",
+            "date": "2026-11-17"
+          },
+          "hasil": {
+            "berhasil": false,
+            "galat": "key 'ppn' tidak dikenal.",
+            "saran": "Key yang ada: biaya_jabatan, biaya_pensiun, bukan_pegawai, kategori_ter, natura, non_npwp, pembulatan_pkp, pph26, pph_final_honorarium_pns, pph_final_manfaat_pensiun, pph_final_pesangon, ptkp, tarif_pasal_17, ter_bulanan, ter_harian"
+          }
+        },
+        {
+          "tool": "search_text",
+          "argumen": {
+            "query": "tarif Pajak Pertambahan Nilai PPN penyerahan barang dalam negeri",
+            "date": "2026-11-17",
+            "in_force_only": true
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "metode": "semantik Gemini",
+            "hasil": [
+              {
+                "id": "PMK 131 Tahun 2024#7",
+                "peraturan": "PMK 131 Tahun 2024",
+                "pasal": "Pasal 5",
+                "halaman_pdf": 5,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/F128868E-3CF6-4596-8407-C34EECA0E7BE/2024pmkeuangan131.pdf#page=5",
+                "status_peraturan": "berlaku",
+                "pasal_gugur": false,
+                "skor": 0.89,
+                "teks": "Pasal 5 \nPengusaha Kena Pajak yang melakukan penyerahan Barang \nKena Pajak kepada pembeli dengan karakteristik konsumen \nakhir, atas penyerahan Barang Kena Pajak sebagaimana \ndimaksud dalam Pasal 2 ayat (3) berlaku ketentuan sebagai \nberikut: \na. \nmulai tanggal 1 Januari 2025 sampai dengan tanggal 31 \nJanuari 2025, Pajak Pertambahan Nilai yang terutang \ndihitung dengan cara mengalikan tarif 12% (dua belas \npersen) dengan Dasar Pengenaan Pajak berupa nilai lain \nsebesar 11/12 (sebelas per dua belas) dari harga jual; dan \nb. \nmulai tanggal 1 Februari 2025 berlaku ketentuan \nsebagaimana dimaksud dalam Pasal 2 ayat (2). \n \n"
+              },
+              {
+                "id": "PMK 131 Tahun 2024#4",
+                "peraturan": "PMK 131 Tahun 2024",
+                "pasal": "Pasal 2",
+                "halaman_pdf": 3,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/F128868E-3CF6-4596-8407-C34EECA0E7BE/2024pmkeuangan131.pdf#page=3",
+                "status_peraturan": "berlaku",
+                "pasal_gugur": false,
+                "skor": 0.89,
+                "teks": "Pasal 2 \n(1) \nAtas Impor Barang Kena Pajak dan/atau penyerahan \nBarang Kena Pajak di dalam Daerah Pabean oleh \nPengusaha terutang Pajak Pertambahan Nilai. \n(2) \nPajak Pertambahan Nilai yang terutang sebagaimana \ndimaksud pada ayat (1) dihitung dengan cara mengalikan \ntarif 12% (dua belas persen) dengan Dasar Pengenaan \nPajak berupa harga jual atau nilai impor. \n(3) \nBarang Kena Pajak dengan Dasar Pengenaan Pajak berupa \nharga jual atau nilai impor sebagaimana dimaksud pada \nayat (2) merupakan Barang Kena Pajak yang tergolong \nmewah berupa kendaraan bermotor dan selain kendaraan \nbermotor yang dikenai pajak penjualan atas barang \nmewah sesuai dengan ketentuan peraturan perundang-\nundangan di bidang perpajakan. \n \n\n- 4 - \n \n(4) \nPajak masukan atas perolehan Barang Kena Pajak \ndan/atau Jasa Kena Pajak, Impor Barang Kena Pajak, \nserta pemanfaatan Barang Kena Pajak tidak berwujud \ndan/atau Ja"
+              },
+              {
+                "id": "PP 22 Tahun 1985#12",
+                "peraturan": "PP 22 Tahun 1985",
+                "pasal": "Pasal 14",
+                "halaman_pdf": null,
+                "tautan": "https://www.pajak.go.id/id/peraturan/pelaksanaan-undang-undang-pajak-pertambahan-nilai-1984",
+                "status_peraturan": "berlaku",
+                "pasal_gugur": false,
+                "skor": 0.88,
+                "teks": "Pasal 14\n\nDalam hal Pajak Pertambahan Nilai telah menjadi bagian dari harga atau pembayaran atas penyerahan Barang Kena Pajak, tarif efektif untuk menghitung pajak yang terhutang menurut Pasal 7 ayat (1) Undang-undang Pajak Pertambahan Nilai 1984 adalah 10 bagian dari harga atau pembayaran itu.\n\n110\n\n"
+              },
+              {
+                "id": "PMK 11 Tahun 2025#36",
+                "peraturan": "PMK 11 Tahun 2025",
+                "pasal": "Pasal 3",
+                "halaman_pdf": 18,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/52955502-8733-4FDD-98CE-BB03C31CDA0B/2025pmkeuangan11.pdf#page=18",
+                "status_peraturan": "berlaku_diubah",
+                "pasal_gugur": false,
+                "skor": 0.88,
+                "teks": "Pasal 3 \n(1) \nBesaran tertentu sebagaimana dimaksud dalam Pasal 2 \nayat (1) ditetapkan sebesar:  \na. \ndihapus; dan  \nb. \n1,1% (satu koma satu persen) dari Harga Jual. \n(2) \nBesaran tertentu sebagaimana dimaksud pada ayat (1) \nhuruf b diperoleh dari hasil perkalian 10% (sepuluh \npersen) dikali 11/12 (sebelas per dua belas) dari tarif \nPajak Pertambahan Nilai sebagaimana diatur dalam \nPasal 7 ayat (1) huruf b Undang-Undang Pajak \nPertambahan Nilai dikalikan dengan Harga Jual. \n(3) \nDihapus. \n \n"
+              },
+              {
+                "id": "PMK 131 Tahun 2024#5",
+                "peraturan": "PMK 131 Tahun 2024",
+                "pasal": "Pasal 3",
+                "halaman_pdf": 4,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/F128868E-3CF6-4596-8407-C34EECA0E7BE/2024pmkeuangan131.pdf#page=4",
+                "status_peraturan": "berlaku",
+                "pasal_gugur": false,
+                "skor": 0.88,
+                "teks": "Pasal 3 \n(1) \nAtas Impor dan/atau penyerahan Barang Kena Pajak di \ndalam Daerah Pabean oleh Pengusaha selain Barang Kena \nPajak sebagaimana dimaksud dalam Pasal 2 ayat (3), \npenyerahan Jasa Kena Pajak di dalam Daerah Pabean oleh \nPengusaha, pemanfaatan Barang Kena Pajak tidak \nberwujud dari luar Daerah Pabean di dalam Daerah \nPabean, pemanfaatan Jasa Kena Pajak dari luar Daerah \nPabean \ndi \ndalam \nDaerah \nPabean \nterutang \nPajak \nPertambahan Nilai. \n(2) \nPajak Pertambahan Nilai yang terutang sebagaimana \ndimaksud pada ayat (1) dihitung dengan cara mengalikan \ntarif 12% (dua belas persen) dengan Dasar Pengenaan \nPajak berupa nilai lain. \n(3) \nNilai lain sebagaimana dimaksud pada ayat (2) dihitung \nsebesar 11/12 (sebelas per dua belas) dari nilai impor, \nharga jual, atau penggantian. \n(4) \nPajak masukan atas perolehan Barang Kena Pajak \ndan/atau Jasa Kena Pajak, Impor Barang Kena Pajak, \ns"
+              }
+            ],
+            "dibuang_tidak_berlaku": 1,
+            "sumber": [
+              "PMK 131 Tahun 2024#7",
+              "PMK 131 Tahun 2024#4",
+              "PP 22 Tahun 1985#12",
+              "PMK 11 Tahun 2025#36",
+              "PMK 131 Tahun 2024#5",
+              "PMK 11 Tahun 2025",
+              "PMK 131 Tahun 2024",
+              "PP 22 Tahun 1985"
+            ]
+          }
+        },
+        {
+          "tool": "find_regulation",
+          "argumen": {
+            "regulation": "PMK 131 Tahun 2024",
+            "date": "2026-11-17"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": [
+              {
+                "peraturan": "PMK 131 Tahun 2024",
+                "judul": "Perlakuan Pajak Pertambahan Nilai atas Impor Barang Kena Pajak, Penyerahan Barang Kena Pajak, Penyerahan Jasa Kena Pajak, Pemanfaatan Barang Kena Pajak Tidak Berwujud dari Luar Daerah Pabean di Dalam Daerah Pabean, dan Pemanfaatan Jasa Kena Pajak dari Luar Daerah Pabean di Dalam Daerah Pabean",
+                "teks_tersedia": true,
+                "url": "https://jdih.kemenkeu.go.id/dok/pmk-131-tahun-2024",
+                "berkas_pdf": "https://jdih.kemenkeu.go.id/api/download/F128868E-3CF6-4596-8407-C34EECA0E7BE/2024pmkeuangan131.pdf",
+                "status": "berlaku",
+                "sejak": null,
+                "oleh": [],
+                "pasal_gugur": [],
+                "ayat_gugur": {},
+                "pasti": true,
+                "catatan": []
+              }
+            ],
+            "sumber": [
+              "PMK 131 Tahun 2024"
+            ]
+          }
+        },
+        {
+          "tool": "search_text",
+          "argumen": {
+            "query": "PPN 12 persen dasar pengenaan pajak nilai lain 11/12 dari harga jual perhitungan PPN",
+            "date": "2026-11-17",
+            "in_force_only": true
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "metode": "semantik Gemini",
+            "hasil": [
+              {
+                "id": "PMK 11 Tahun 2025#13",
+                "peraturan": "PMK 11 Tahun 2025",
+                "pasal": "Pasal 13 ayat (1)-(3)",
+                "halaman_pdf": 7,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/52955502-8733-4FDD-98CE-BB03C31CDA0B/2025pmkeuangan11.pdf#page=7",
+                "status_peraturan": "berlaku_diubah",
+                "pasal_gugur": false,
+                "skor": 0.91,
+                "teks": "Pasal 13 \n(1) \nPPN yang terutang atas penyerahan Barang Kena Pajak \nsebagaimana dimaksud dalam Pasal 2 atau Jasa Kena \nPajak sebagaimana dimaksud dalam Pasal 3 dihitung \ndengan cara mengalikan tarif PPN sebagaimana diatur \ndalam \nPasal \n7 \nayat \n(1) \nUndang-Undang \nPajak \nPertambahan Nilai dengan Dasar Pengenaan Pajak \nsesuai \ndengan \nketentuan \nperaturan \nperundang-\nundangan di bidang perpajakan. \n(2) \nDasar Pengenaan Pajak atas penyerahan Barang Kena \nPajak berupa Pulsa dan Kartu Perdana oleh Pengusaha \nPenyelenggara \nJasa \nTelekomunikasi \natau \nPenyelenggara Distribusi Tingkat Pertama sebagaimana \ndimaksud dalam Pasal 4 ayat (1) huruf a dan huruf b \nberupa nilai lain, yaitu sebesar 11/12 (sebelas per dua \nbelas) dari nilai pembayaran yang ditagih oleh \nPengusaha Penyelenggara Jasa Telekomunikasi atau \nPenyelenggara Distribusi. \n(3) \nDasar Pengenaan Pajak atas penyerahan Barang Kena \nP"
+              },
+              {
+                "id": "PMK 11 Tahun 2025#36",
+                "peraturan": "PMK 11 Tahun 2025",
+                "pasal": "Pasal 3",
+                "halaman_pdf": 18,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/52955502-8733-4FDD-98CE-BB03C31CDA0B/2025pmkeuangan11.pdf#page=18",
+                "status_peraturan": "berlaku_diubah",
+                "pasal_gugur": false,
+                "skor": 0.9,
+                "teks": "Pasal 3 \n(1) \nBesaran tertentu sebagaimana dimaksud dalam Pasal 2 \nayat (1) ditetapkan sebesar:  \na. \ndihapus; dan  \nb. \n1,1% (satu koma satu persen) dari Harga Jual. \n(2) \nBesaran tertentu sebagaimana dimaksud pada ayat (1) \nhuruf b diperoleh dari hasil perkalian 10% (sepuluh \npersen) dikali 11/12 (sebelas per dua belas) dari tarif \nPajak Pertambahan Nilai sebagaimana diatur dalam \nPasal 7 ayat (1) huruf b Undang-Undang Pajak \nPertambahan Nilai dikalikan dengan Harga Jual. \n(3) \nDihapus. \n \n"
+              },
+              {
+                "id": "PMK 11 Tahun 2025#7",
+                "peraturan": "PMK 11 Tahun 2025",
+                "pasal": "Pasal 2",
+                "halaman_pdf": 4,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/52955502-8733-4FDD-98CE-BB03C31CDA0B/2025pmkeuangan11.pdf#page=4",
+                "status_peraturan": "berlaku_diubah",
+                "pasal_gugur": false,
+                "skor": 0.9,
+                "teks": "Pasal 2 \nNilai Lain sebagaimana dimaksud dalam Pasal 1 ditetapkan \nsebagai berikut: \na. \nuntuk pemakaian sendiri Barang Kena Pajak dan/atau \nJasa Kena Pajak yaitu sebesar 11/12 (sebelas per dua \nbelas) dari Harga Jual atau Penggantian setelah \ndikurangi laba kotor; \nb. \nuntuk pemberian cuma-cuma Barang Kena Pajak \ndan/atau Jasa Kena Pajak yaitu sebesar 11/12 (sebelas \nper dua belas) dari Harga Jual atau Penggantian setelah \ndikurangi laba kotor; \nc. \ndihapus; \nd. \nuntuk penyerahan film cerita yaitu sebesar 11/12 \n(sebelas per dua belas) dari perkiraan hasil rata-rata per \njudul film; \ne. \ndihapus; \nf. \nuntuk Barang Kena Pajak berupa persediaan dan/atau \naktiva yang menurut tujuan semula tidak untuk \ndiperjualbelikan, \nyang \nmasih \ntersisa \npada \nsaat \npembubaran perusahaan, yaitu sebesar 11/12 (sebelas \nper dua belas) dari harga pasar wajar; \n\n- 5 - \n \ng. \ndihapus; \nh. \nuntuk \npenyerahan"
+              },
+              {
+                "id": "PMK 11 Tahun 2025#60",
+                "peraturan": "PMK 11 Tahun 2025",
+                "pasal": "Lampiran",
+                "halaman_pdf": 31,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/52955502-8733-4FDD-98CE-BB03C31CDA0B/2025pmkeuangan11.pdf#page=31",
+                "status_peraturan": "berlaku_diubah",
+                "pasal_gugur": false,
+                "skor": 0.9,
+                "teks": " tersebut, penghitungan Pajak Pertambahan Nilai \nyang terutang yaitu sebagai berikut. \na. \nHarga jual sebesar Rp700.000.000,00 (tujuh ratus juta \nrupiah). \nb. \nDasar Pengenaan Pajak sebesar Rp700.000.000,00 (tujuh \nratus juta rupiah). \nc. \nPajak Pertambahan Nilai sebesar Rp7.700.000,00 (tujuh juta \ntujuh ratus ribu rupiah) \n(10% x [11/12] x 12% x Rp700.000.000,00). \n \n \n \n \nMENTERI KEUANGAN REPUBLIK INDONESIA, \n \nttd. \n \nSRI MULYANI INDRAWATI \n \n \n \n \n"
+              },
+              {
+                "id": "PMK 131 Tahun 2024#5",
+                "peraturan": "PMK 131 Tahun 2024",
+                "pasal": "Pasal 3",
+                "halaman_pdf": 4,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/F128868E-3CF6-4596-8407-C34EECA0E7BE/2024pmkeuangan131.pdf#page=4",
+                "status_peraturan": "berlaku",
+                "pasal_gugur": false,
+                "skor": 0.9,
+                "teks": "Pasal 3 \n(1) \nAtas Impor dan/atau penyerahan Barang Kena Pajak di \ndalam Daerah Pabean oleh Pengusaha selain Barang Kena \nPajak sebagaimana dimaksud dalam Pasal 2 ayat (3), \npenyerahan Jasa Kena Pajak di dalam Daerah Pabean oleh \nPengusaha, pemanfaatan Barang Kena Pajak tidak \nberwujud dari luar Daerah Pabean di dalam Daerah \nPabean, pemanfaatan Jasa Kena Pajak dari luar Daerah \nPabean \ndi \ndalam \nDaerah \nPabean \nterutang \nPajak \nPertambahan Nilai. \n(2) \nPajak Pertambahan Nilai yang terutang sebagaimana \ndimaksud pada ayat (1) dihitung dengan cara mengalikan \ntarif 12% (dua belas persen) dengan Dasar Pengenaan \nPajak berupa nilai lain. \n(3) \nNilai lain sebagaimana dimaksud pada ayat (2) dihitung \nsebesar 11/12 (sebelas per dua belas) dari nilai impor, \nharga jual, atau penggantian. \n(4) \nPajak masukan atas perolehan Barang Kena Pajak \ndan/atau Jasa Kena Pajak, Impor Barang Kena Pajak, \ns"
+              }
+            ],
+            "dibuang_tidak_berlaku": 1,
+            "sumber": [
+              "PMK 11 Tahun 2025#13",
+              "PMK 11 Tahun 2025#36",
+              "PMK 11 Tahun 2025#7",
+              "PMK 11 Tahun 2025#60",
+              "PMK 131 Tahun 2024#5",
+              "PMK 11 Tahun 2025",
+              "PMK 131 Tahun 2024"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "t26-12",
+      "kategori": "tolak",
+      "tag": [
+        "uji_2026"
+      ],
+      "perilaku": "tolak",
+      "tool_harapan": null,
+      "tool_dipanggil": [
+        "find_legal_basis",
+        "find_legal_basis",
+        "search_text",
+        "get_article"
+      ],
+      "tool_hitung_pertama": null,
+      "tool_hitung_akhir": null,
+      "tool_benar": true,
+      "tool_benar_percobaan_pertama": true,
+      "argumen_benar": null,
+      "field_benar": 0,
+      "field_total": 0,
+      "argumen_salah": {},
+      "argumen_aktual": {},
+      "pph_harapan": null,
+      "pph_aktual": null,
+      "angka_benar": null,
+      "perilaku_benar": true,
+      "galat_tool": 0,
+      "tool_halusinasi": [],
+      "putaran": 6,
+      "detik": 28.55,
+      "jawaban": "Untuk kwitansi Rp6 juta yang menyatakan penerimaan uang, Bea Meterainya **Rp10.000**. [UU 10 Tahun 2020 Pasal 5, hlm. 5](https://jdih.kemenkeu.go.id/api/download/A4245566-532D-4033-8F47-CA6DC3D8CF2F/10TAHUN2020UU.pdf#page=5)",
+      "error": null,
+      "galat_api": [],
+      "perilaku_benar_satu_giliran": true,
+      "tool_graf": 2,
+      "klarifikasi": false,
+      "sitasi_belum_terverifikasi": [],
+      "sitasi_diperiksa": true,
+      "sitasi_audit_ablasi": [],
+      "sitasi_dikoreksi": [],
+      "status_distempel": [],
+      "angka_tanpa_sumber": [],
+      "pph_di_jawaban": null,
+      "token_masuk": 112265,
+      "token_keluar": 413,
+      "jejak": [
+        {
+          "tool": "find_legal_basis",
+          "argumen": {
+            "topic": "kode_objek_pajak"
+          },
+          "hasil": {
+            "berhasil": true,
+            "topik": "kode_objek_pajak",
+            "judul": "Kode objek pajak bukti pemotongan PPh 21/26",
+            "rujukan": [
+              "PER-11/PJ/2025 Lampiran (Daftar Kode Objek Pajak dan Objek Pajak)"
+            ],
+            "ringkasan": "BPA1: 21-100-01 pegawai tetap, 21-100-02 pensiunan, 21-100-32 pegawai tetap dengan fasilitas daerah tertentu. BP21 tidak final: 24 kode (21-100-04 sampai 21-100-36) untuk bukan pegawai, komisaris, mantan pegawai, peserta kegiatan, pegawai tidak tetap, dan pesangon tahun ketiga. BP21 final: pesangon 21-401-01, manfaat pensiun/JHT 21-401-02, honor APBN/APBD 21-402-02/03/04. BP26: 27-100-99. Hasil hitung menyertakan kodenya di field objek_pajak.\n",
+            "lokasi_dasar_hukum": [
+              {
+                "rujukan": "PER-11/PJ/2025 Lampiran (Daftar Kode Objek Pajak dan Objek Pajak)",
+                "peraturan": "PER-11/PJ/2025",
+                "pasal": null,
+                "halaman_pdf": null,
+                "tautan": "https://jdih.kemenkeu.go.id/dok/per-11pj2025"
+              }
+            ]
+          }
+        },
+        {
+          "tool": "find_legal_basis",
+          "argumen": {
+            "topic": "masa_pajak_terakhir"
+          },
+          "hasil": {
+            "berhasil": true,
+            "topik": "masa_pajak_terakhir",
+            "judul": "Perhitungan masa pajak terakhir",
+            "rujukan": [
+              "PMK No. 168 Tahun 2023 Pasal 1 (definisi Masa Pajak Terakhir)",
+              "PMK No. 168 Tahun 2023 Pasal 15 ayat (1) huruf b, ayat (2), dan ayat (3)",
+              "PMK No. 168 Tahun 2023 Pasal 10 ayat (3) dan Pasal 11 ayat (3)"
+            ],
+            "ringkasan": "Masa Pajak Terakhir adalah masa Desember, masa pajak pegawai tetap berhenti bekerja, atau masa pajak pensiunan berhenti menerima uang pensiun. PPh 21 setahun (atau bagian tahun) dihitung dengan tarif Pasal 17 atas penghasilan kena pajak, kemudian dikurangi PPh 21 yang telah dipotong pada masa-masa pajak sebelumnya. Bila kewajiban pajak subjektif baru dimulai setelah Januari atau berakhir sebelum Desember, neto disetahunkan dan pajaknya dihitung proporsional (ayat (3)). Pegawai yang pindah kerja di tahun yang sama: biaya jabatan/biaya pensiun dihitung pada masing-masing pemberi kerja, lalu penghasilan NETO pemberi kerja sebelumnya (dari bukti pemotongannya) digabung di pemberi kerja baru.\n",
+            "lokasi_dasar_hukum": [
+              {
+                "rujukan": "PMK No. 168 Tahun 2023 Pasal 1 (definisi Masa Pajak Terakhir)",
+                "peraturan": "PMK 168 Tahun 2023",
+                "pasal": "1",
+                "halaman_pdf": 2,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/E60A82E0-B218-40F5-9D18-B924AA1E11CE/2023pmkeuangan168.pdf#page=2"
+              },
+              {
+                "rujukan": "PMK No. 168 Tahun 2023 Pasal 15 ayat (1) huruf b, ayat (2), dan ayat (3)",
+                "peraturan": "PMK 168 Tahun 2023",
+                "pasal": "15",
+                "halaman_pdf": 15,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/E60A82E0-B218-40F5-9D18-B924AA1E11CE/2023pmkeuangan168.pdf#page=15"
+              },
+              {
+                "rujukan": "PMK No. 168 Tahun 2023 Pasal 10 ayat (3) dan Pasal 11 ayat (3)",
+                "peraturan": "PMK 168 Tahun 2023",
+                "pasal": "10",
+                "halaman_pdf": 11,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/E60A82E0-B218-40F5-9D18-B924AA1E11CE/2023pmkeuangan168.pdf#page=11"
+              }
+            ]
+          }
+        },
+        {
+          "tool": "search_text",
+          "argumen": {
+            "query": "Bea Meterai atas kuitansi tanda terima uang pembayaran ambang batas jumlah uang",
+            "date": "",
+            "in_force_only": true
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "metode": "semantik Gemini",
+            "hasil": [
+              {
+                "id": "PMK 78 Tahun 2024#8",
+                "peraturan": "PMK 78 Tahun 2024",
+                "pasal": "Pasal 3 ayat (1)-(3)",
+                "halaman_pdf": 6,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/D228B96F-7577-4CED-ABA7-AF9028EDF1A5/2024pmkeuangan078.pdf#page=6",
+                "status_peraturan": "berlaku",
+                "pasal_gugur": false,
+                "skor": 0.88,
+                "teks": "Pasal 3\n(1) Bea Meterai dikenakan atas:\nDokumen yang dibuat sebagai alat untuk\na.\nmenerangkan mengenai suatu kejadian yang bersifat\nperdata; dan\nb.\nDokumen yang digunakan sebagai alat bukti\ndi pengadilan.\n(2) Dokumen yang bersifat perdata sebagaimana dimaksud\npada ayat (1) huruf a, meliputi:\na.\nsurat perjanjian, surat keterangan, surat pernyataan,\natau surat lainnya yang sejenis, beserta rangkapnya;\nb.\nakta notaris beserta grosse, salinan, dan kutipannya;\nC.\nakta Pejabat Pembuat Akta Tanah beserta salinan dan\nkutipannya;\nd.\nsurat berharga dengan nama dan dalam bentuk\napa pun;\nDokumen transaksi surat berharga, termasuk\ne.\nDokumen transaksi kontrak berjangka, dengan nama\ndan dalam bentuk apa pun;\nf.\nDokumen lelang yang berupa kutipan risalah lelang,\nminuta risalah lelang, salinan risalah lelang, dan\ngrosse risalah lelang;\nDokumen yang menyatakan jumlah uang dengan\ng.\nnilai nominal lebih da"
+              },
+              {
+                "id": "UU 10 Tahun 2020#6",
+                "peraturan": "UU 10 Tahun 2020",
+                "pasal": "Pasal 7",
+                "halaman_pdf": 6,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/A4245566-532D-4033-8F47-CA6DC3D8CF2F/10TAHUN2020UU.pdf#page=6",
+                "status_peraturan": "berlaku",
+                "pasal_gugur": false,
+                "skor": 0.87,
+                "teks": "Pasal 7\nBea Meterai tidak dikenakan atas Dokumen yang berupa:\na. Dokumen yang terkait lalu lintas orang dan barang:\n1. surat penyimpanan barang;\n2. konosemen;\n3. surat angkutan penumpang dan barang;\n4. bukti untuk pengiriman dan penerimaan barang;\n5. surat pengiriman barang untuk dijual atas\ntanggungan pengirim; dan\n6. surat lainnya yang dapat dipersamakan dengan\nsurat sebagaimana dimaksud pada angka 1 sampai\ndengan angka 5;\nb. segala bentuk ijazah;\nc. tanda terima pembayaran gaji, uang tunggu, pensiun,\nuang tunjangan, dan pembayaran lainnya yang\nberkaitan dengan hubungan kerja, serta surat yang\ndiserahkan\nuntuk\nmendapatkan\npembayaran\ndimaksud;\nd. tanda bukti penerimaan uang negara dari kas negara,\nkas pemerintah daerah, bank, dan lembaga lainnya\nyang ditunjuk oleh negara berdasarkan ketentuan\nperaturan perundang-undangan;\ne. kuitansi . . .\nSK No 044360 A\nPRESIDEN\nREPUBLIK NDONESIA\n-7-\ne"
+              },
+              {
+                "id": "UU 10 Tahun 2020#4",
+                "peraturan": "UU 10 Tahun 2020",
+                "pasal": "Pasal 3",
+                "halaman_pdf": 4,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/A4245566-532D-4033-8F47-CA6DC3D8CF2F/10TAHUN2020UU.pdf#page=4",
+                "status_peraturan": "berlaku",
+                "pasal_gugur": false,
+                "skor": 0.87,
+                "teks": "Pasal 3\n(1) Bea Meterai dikenakan atas:\na. Dokumen yang dibuat sebagai alat untuk menerangkan\nmengenai suatu kejadian yang bersifat perdata; dan\nb. Dokumen yang digunakan sebagai alat bukti di\npengadilan.\n(2) Dokumen yang bersifat perdata sebagaimana dimaksud\npada ayat (1) huruf a, meliputi:\na. surat perjanjian, surat keterangan, surat pernyataan,\natau surat lainnya yang sejenis, beserta rangkapnya;\nb. akta notaris beserta grosse, salinan, dan kutipannya;\nc. akta Pejabat Pembuat Akta Tanah beserta salinan dan\nkutipannya;\nd. surat berharga dengan nama dan dalam bentuk apa\npun;\ne. Dokumen transaksi surat berharga, termasuk Dokumen\ntransaksi kontrak berjangka, dengan nama dan dalam\nbentuk apa pun;\nf.\nDokumen lelang yang berupa kutipan risalah lelang,\nminuta risalah lelang, salinan risalah lelang, dan grosse\nrisalah lelang;\nDokumen yang menyatakan jumlah uang dengan nilai\ng.\nnominal lebih da"
+              },
+              {
+                "id": "PP 24 Tahun 2000#3",
+                "peraturan": "PP 24 Tahun 2000",
+                "pasal": "Pasal 2",
+                "halaman_pdf": null,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/907FB89E-CFBC-4A2A-9DBA-8EE28121E4B3/24Tahun2000PP.HTM",
+                "status_peraturan": "berlaku",
+                "pasal_gugur": false,
+                "skor": 0.87,
+                "teks": "Pasal 2\n(1)\nDokumen sebagaimana dimaksud dalam Pasal 1\nhuruf a, huruf b, huruf c, dan huruf f dikenakan Bea Meterai dengan tarif Rp\n6.000,00 (enam ribu rupiah).\n(2)\nDokumen sebagaimana dimaksud pada Pasal I\nhuruf d dan huruf e:\na.\nyang mempunyai harga nominal sampai dengan\nRp 250.000,00 (dua ratus lima puluh ribu rupiah), tidak dikenakan Bea Meterai;\nb.\nyang mempunyai harga nominal lebih dari Rp\n250.000,00 (dua ratus lima puluh ribu rupiah) sampai dengan Rp 1.000.000,00 (satu juta\nrupiah), dikenakan Bea Meterai dengan tarif sebesar Rp 3.000,00 (tiga ribu\nrupiah);\nc.\nyang mempunyai harga nominal lebih dari Rp\n1.000.000,00 (satu juta rupiah), dikenakan Bea Meterai dengan tarif sebesar Rp\n6.000,00 (enam ribu rupiah).\n"
+              },
+              {
+                "id": "PMK 78 Tahun 2024#58",
+                "peraturan": "PMK 78 Tahun 2024",
+                "pasal": "Pasal 55",
+                "halaman_pdf": 33,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/D228B96F-7577-4CED-ABA7-AF9028EDF1A5/2024pmkeuangan078.pdf#page=33",
+                "status_peraturan": "berlaku",
+                "pasal_gugur": false,
+                "skor": 0.87,
+                "teks": "Pasal 55\n(1) Pemungutan Bea Meterai yang terutang atas Dokumen\nsebagaimana dimaksud dalam Pasal 3 ayat (2) dapat\ndilakukan oleh Pemungut Bea Meterai.\n(2)\nDokumen yang wajib dipungut oleh Pemungut Bea Meterai\nsebagaimana dimaksud pada ayat (1) merupakan\nDokumen tertentu yang meliputi:\nsurat berharga berupa cek dan/atau bilyet giro;\n1\njdih.kemenkeu.go.id\n-34-\nb.\nDokumen transaksi surat berharga termasuk\nDokumen transaksi kontrak berjangka, dengan nama\ndan dalam bentuk apa pun;\nC.\nsurat keterangan, surat pernyataan, atau surat\nlainnya yang sejenis, beserta rangkapnya; dan\nd.\nDokumen yang menyatakan jumlah uang dengan\nnilai nominal lebih dari Rp5.000.000,00 (lima juta\nrupiah), yang:\n1.\nmenyebutkan penerimaan uang; atau\n2.\nberisi pengakuan bahwa utang seluruhnya atau\nsebagiannya\ntelah\ndilunasi\natau\ndiperhitungkan.\n(3) Dokumen tertentu sebagaimana dimaksud pada ayat (2)\nyang mendapat fasilitas"
+              }
+            ],
+            "dibuang_tidak_berlaku": 2,
+            "sumber": [
+              "PMK 78 Tahun 2024#8",
+              "UU 10 Tahun 2020#6",
+              "UU 10 Tahun 2020#4",
+              "PP 24 Tahun 2000#3",
+              "PMK 78 Tahun 2024#58",
+              "PMK 78 Tahun 2024",
+              "PP 24 Tahun 2000",
+              "UU 10 Tahun 2020"
+            ]
+          }
+        },
+        {
+          "tool": "get_article",
+          "argumen": {
+            "regulation": "UU 10 Tahun 2020",
+            "article": "5",
+            "date": "2026-11-17"
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "peraturan": "UU 10 Tahun 2020",
+            "pasal": "5",
+            "label": [
+              "Pasal 4-6"
+            ],
+            "teks": "Pasal 4\nBea Meterai dikenakan 1 (satu) kali untuk setiap Dokumen\nsebagaimana dimaksud dalam Pasal 3.\nBagian Kedua\nTarif Bea Meterai\nPasal 5\nDokumen sebagaimana dimaksud dalam Pasal 3 dikenai\nBea Meterai dengan tarif tetap sebesar Rp10.000,00\n(sepuluh ribu rupiah).\nPasal 6\n(1) Besarnya batas nilai nominal Dokumen yang dikenai\nBea Meterai sebagaimana dimaksud dalam Pasal 3\nayat (2) huruf g dapat diturunkan atau dinaikkan\nsesuai dengan kondisi perekonomian nasional dan\ntingkat pendapatan masyarakat.\n(2) Besarnya tarif Bea Meterai sebagaimana dimaksud\ndalam Pasal 5 dapat diturunkan atau dinaikkan\nsesuai dengan kondisi perekonomian nasional dan\ntingkat pendapatan masyarakat.\n(3)\nDokumen sebagaimana dimaksud dalam Pasal 3\ndapat dikenai Bea Meterai dengan tarif tetap yang\nberbeda dalam rangka melaksanakan program\npemerintah dan mendukung pelaksanaan kebijakan\nmoneter dan/atau sektor keuangan.\n(4) Perubahan . . .\nSK No 044359 A\nPRESIDEN\nREPUBLIK INDONESIA\n-6-\n(4) Perubahan besarnya batas nilai nominal Dokumen\nyang dikenai Bea Meterai sebagaimana dimaksud\npada ayat (1), besarnya tarif Bea Meterai sebagaimana\ndimaksud pada ayat (2), atau Dokumen dan besaran\ntarif tetap yang berbeda sebagaimana dimaksud pada\nayat (3), ditetapkan dengan Peraturan Pemerintah\nsetelah berkonsultasi dengan Dewan Perwakilan\nRakyat Republik Indonesia.\n",
+            "halaman_pdf": 5,
+            "tautan": "https://jdih.kemenkeu.go.id/api/download/A4245566-532D-4033-8F47-CA6DC3D8CF2F/10TAHUN2020UU.pdf#page=5",
+            "status_peraturan": "berlaku",
+            "peringatan": [],
+            "sumber": [
+              "UU 10 Tahun 2020",
+              "UU 10 Tahun 2020#5"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "t26-13",
+      "kategori": "tolak",
+      "tag": [
+        "uji_2026"
+      ],
+      "perilaku": "tolak",
+      "tool_harapan": null,
+      "tool_dipanggil": [
+        "find_legal_basis",
+        "lookup_pasal_17_rates",
+        "calculate_pph21_final",
+        "search_text",
+        "report_possibly_stale"
+      ],
+      "tool_hitung_pertama": "calculate_pph21_final",
+      "tool_hitung_akhir": "calculate_pph21_final",
+      "tool_benar": true,
+      "tool_benar_percobaan_pertama": false,
+      "argumen_benar": null,
+      "field_benar": 0,
+      "field_total": 0,
+      "argumen_salah": {},
+      "argumen_aktual": {},
+      "pph_harapan": null,
+      "pph_aktual": null,
+      "angka_benar": null,
+      "perilaku_benar": true,
+      "galat_tool": 2,
+      "tool_halusinasi": [],
+      "putaran": 6,
+      "detik": 24.79,
+      "jawaban": "Tarif PPh Pasal 4 ayat (2) atas sewa ruko adalah **10% dari jumlah bruto nilai sewa**. Namun, saya tidak dapat menghitung nominal pajaknya karena kalkulator yang tersedia hanya mencakup PPh 21/26, bukan jenis pajak ini. Rujukan yang ditemukan adalah [PP 34 Tahun 2017 Pasal 4, hlm. 4](https://jdih.kemenkeu.go.id/api/download/C9BE149C-4489-4D9E-B1F6-912808E416C4/34TAHUN2017PP.pdf#page=4).\n\n**Asumsi yang dipakai**\n- Yang menyewakan adalah orang pribadi dalam negeri, sehingga perusahaan penyewa memotong PPh final atas sewa.\n- Rp120 juta merupakan jumlah bruto sewa dan tidak ada biaya lain yang berkaitan dengan ruko yang dibebankan kepada penyewa.\n\n**Peringatan:** Kalkulator PPh 21/26 menolak karena sewa ruko PPh Pasal 4 ayat (2) berada di luar cakupannya; nilai pajaknya tidak dihitung.",
+      "error": null,
+      "galat_api": [],
+      "perilaku_benar_satu_giliran": true,
+      "tool_graf": 1,
+      "klarifikasi": false,
+      "sitasi_belum_terverifikasi": [],
+      "sitasi_diperiksa": true,
+      "sitasi_audit_ablasi": [],
+      "sitasi_dikoreksi": [],
+      "status_distempel": [],
+      "angka_tanpa_sumber": [],
+      "pph_di_jawaban": null,
+      "token_masuk": 107564,
+      "token_keluar": 452,
+      "jejak": [
+        {
+          "tool": "find_legal_basis",
+          "argumen": {
+            "topic": "final_pesangon"
+          },
+          "hasil": {
+            "berhasil": true,
+            "topik": "final_pesangon",
+            "judul": "PPh final uang pesangon",
+            "rujukan": [
+              "PP No. 68 Tahun 2009 Pasal 4",
+              "PMK No. 16/PMK.03/2010"
+            ],
+            "ringkasan": "Uang pesangon yang dibayarkan sekaligus dikenakan PPh final berlapis: 0% s.d. Rp50 juta, 5% s.d. Rp100 juta, 15% s.d. Rp500 juta, dan 25% di atas Rp500 juta. Bersifat sekaligus bila dibayarkan paling lama 2 tahun kalender.\n",
+            "lokasi_dasar_hukum": [
+              {
+                "rujukan": "PP No. 68 Tahun 2009 Pasal 4",
+                "peraturan": "PP 68 Tahun 2009",
+                "pasal": "4",
+                "halaman_pdf": null,
+                "tautan": "https://jdih.kemenkeu.go.id/dok/pp-68-tahun-2009"
+              },
+              {
+                "rujukan": "PMK No. 16/PMK.03/2010",
+                "peraturan": "PMK 16 Tahun 2010",
+                "pasal": null,
+                "halaman_pdf": null,
+                "tautan": "https://jdih.kemenkeu.go.id/dok/16-pmk-03-2010"
+              }
+            ]
+          }
+        },
+        {
+          "tool": "lookup_pasal_17_rates",
+          "argumen": {
+            "tahun_pajak": 2026
+          },
+          "hasil": {
+            "berhasil": true,
+            "lapisan": [
+              {
+                "batas_atas": "60000000",
+                "persen": "5"
+              },
+              {
+                "batas_atas": "250000000",
+                "persen": "15"
+              },
+              {
+                "batas_atas": "500000000",
+                "persen": "25"
+              },
+              {
+                "batas_atas": "5000000000",
+                "persen": "30"
+              },
+              {
+                "batas_atas": null,
+                "persen": "35"
+              }
+            ],
+            "peringatan": [],
+            "dasar_hukum": [
+              "UU PPh Pasal 17 ayat (1) huruf a s.t.d.t.d UU HPP"
+            ],
+            "status_dasar_hukum": [
+              {
+                "peraturan": "UU 7 Tahun 1983",
+                "status": "berlaku_diubah",
+                "pada": "2026-11-17",
+                "oleh": [
+                  "UU 7 Tahun 1991",
+                  "UU 10 Tahun 1994",
+                  "UU 17 Tahun 2000",
+                  "UU 36 Tahun 2008",
+                  "PMK 24 Tahun 2012",
+                  "PMK 233 Tahun 2015",
+                  "UU 11 Tahun 2020",
+                  "UU 7 Tahun 2021",
+                  "PERPPU 2 Tahun 2022",
+                  "UU 6 Tahun 2023"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "tool": "calculate_pph21_final",
+          "argumen": {
+            "tahun_pajak": 2026,
+            "jenis": "pesangon",
+            "jumlah_bruto": 120000000,
+            "tahun_pembayaran_ke": 1
+          },
+          "hasil": {
+            "berhasil": false,
+            "galat": "Pertanyaan menyebut jenis pajak lain (bukan PPh 21/26). Kalkulator ini hanya menghitung PPh 21 dan PPh 26, jadi hasilnya tidak menjawab pertanyaan itu.",
+            "saran": "Jangan menghitung dengan tool PPh 21/26 dan jangan menghitung sendiri. Katakan bahwa jenis pajak ini di luar cakupan; boleh menjelaskan dasar hukumnya tanpa angka hasil hitung."
+          }
+        },
+        {
+          "tool": "search_text",
+          "argumen": {
+            "query": "PPh final atas persewaan tanah dan/atau bangunan, tarif 10 persen jumlah bruto nilai persewaan",
+            "date": ""
+          },
+          "hasil": {
+            "berhasil": true,
+            "tanggal": "2026-11-17",
+            "metode": "semantik Gemini",
+            "hasil": [
+              {
+                "id": "KMK 394/KMK04/1996#3",
+                "peraturan": "KMK 394/KMK04/1996",
+                "pasal": "Pasal 2",
+                "halaman_pdf": null,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/7DCBA700-65CF-477F-B7A0-223A4DB10C85/394~KMK.04~1996Kep.htm",
+                "status_peraturan": "berlaku_diubah",
+                "pasal_gugur": false,
+                "skor": 0.89,
+                "teks": "Pasal 2\n(1)\nBesarnya Pajak Penghasilan yang terutang sebagaimana dimaksud dalam\nPasal 1 adalah :\na.\nsebesar 6% (enam persen ) dari jumlah bruto nilai persewaan tanah dan\n/ atau bangunan dan bersifat final dalam hal kepemilikan tanah dan/atau\nbangunan yang disewakan maupun yang menyewakannya adalah wajib Pajak badan\ndalam negeri atau bentuk usaha tetap;\nb.\nsebesar 10% ( sepuluh persen ) dari jumlah bruto nilai persewaan tanah\ndan / atau bangunan dan bersifat final dalam hal yang menyewakan adalah\nwajib Pajak orang pribadi dalam negeri;\nc.\nsebesar 10% ( sepuluh persen ) dari jumlah bruto nilai persewaan tanah\ndan/atau bangunan dan bersifat final dalam hal kepemilikan tanah dan/atau\nbangunan yang disewakan adalah milik wajib pajak orang pribadi tetapi yang\nmenyewakannya adalah wajib Pajak badan dalam negeri atau bentuk usaha tetap.\n(2)\nYang dimaksud dengan jumlah bruto nilai persewaan adala"
+              },
+              {
+                "id": "PP 34 Tahun 2017#5",
+                "peraturan": "PP 34 Tahun 2017",
+                "pasal": "Pasal 4",
+                "halaman_pdf": 4,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/C9BE149C-4489-4D9E-B1F6-912808E416C4/34TAHUN2017PP.pdf#page=4",
+                "status_peraturan": "berlaku",
+                "pasal_gugur": false,
+                "skor": 0.89,
+                "teks": "Pasal 4\n(1) Besarnya Pajak Penghasilan sebagaimana dimaksud\ndalam Pasal 2 ayat (1) sebesar 10% (sepuluh persen) dari\njumlah bruto nilai persewaan tanah dan/atau Bangunan.\n(2) Jumlah . . .\nPRESIDEN\nREPUBLIK INDONESIA\n-5-\n(2) Jumlah bruto nilai persewaan tanah dan/atau Bangunan\nsebagaimana dimaksud pada ayat (1) merupakan semua\njumlah yang dibayarkan atau yang diakui sebagai utang\noleh Penyewa dengan nama dan dalam bentuk apapun\nyang berkaitan dengan tanah dan/atau Bangunan yang\ndisewa termasuk biaya perawatan, biaya pemeliharaan,\nbiaya keamanan, biaya layanan, dan biaya fasilitas\nlainnya, baik yang perjanjiannya dibuat secara terpisah\nmaupun yang disatukan.\n(3) Jumlah bruto nilai persewaan tanah dan/atau Bangunan\nsebagaimana dimaksud pada ayat (1) atas penghasilan\nyang diterima atau diperoleh orang pribadi atau badan\ndalam bentuk Bangunan sebagaimana dimaksud dalam\nPasal 2 ayat (2) huruf "
+              },
+              {
+                "id": "KMK 120/KMK03/2002#2",
+                "peraturan": "KMK 120/KMK03/2002",
+                "pasal": "Pasal I",
+                "halaman_pdf": null,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/B2C131B3-3F01-4C9C-AE86-3BFAD4EA26BE/120~KMK.03~2002Kep.htm",
+                "status_peraturan": "berlaku",
+                "pasal_gugur": false,
+                "skor": 0.89,
+                "teks": "Pasal I\nMengubah ketentuan Pasal 2 Keputusan Menteri Keuangan Nomor 394/KMK.04/1996, sehingga\nseluruhnya menjadi sebagai berikut :\n“ Pasal 2\n(1)\nBesarnya Pajak Penghasilan yang terutang bagi Wajib Pajak\norang pribadi maupun Wajib Pajak badan yang menerima atau memperoleh penghasilan dari persewaan tanah dan atau\nbangunan sebagaimana dimaksud dalam Pasal 1 adalah 10% ( sepuluh persen ) dari jumlah bruto\nnilai persewaan tanah dan atau\nbangunan dan bersifat final.\n(2)\nYang dimaksud dengan jumlah bruto nilai persewaan\nadalah semua jumlah yang dibayarkan atau terutang oleh penyewa dengan nama dan\ndalam bentuk apapun juga yang berkaitan dengan tanah dan/atau bangunan yang disewa termasuk biaya perawatan , biaya pemeliharaan , biaya keamanan , biaya fasilitas lainnya dan “service charge” baik yang perjanjiannya dibuat secara terpisah maupun yang disatukan .”\n"
+              },
+              {
+                "id": "PP 34 Tahun 2017#3",
+                "peraturan": "PP 34 Tahun 2017",
+                "pasal": "Pasal 2",
+                "halaman_pdf": 3,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/C9BE149C-4489-4D9E-B1F6-912808E416C4/34TAHUN2017PP.pdf#page=3",
+                "status_peraturan": "berlaku",
+                "pasal_gugur": false,
+                "skor": 0.89,
+                "teks": "Pasal 2\n(1)\nAtas penghasilan dari persewaan tanah dan/atau\nBangunan baik sebagian maupun seluruh Bangunan\nyang diterima atau diperoleh orang pribadi atau badan\ndikenai Pajak Penghasilan yang bersifat final.\nPenghasilan sebagaimana dimaksud pada ayat (1)\ntermasuk penghasilan yang diterima atau diperoleh orang\npribadi atau badan pemegang hak atas tanah dari\nInvestor terkait dengan pelaksanaan perjanjian Bangun\nGuna Serah, meliputi:\na.\npenghasilan atas pembayaran berkala selama masa\nperjanjian Bangun Guna Serah;\nb.\npenghasilan dalam bentuk Bangunan yang\ndiserahkan sebelum perjanjian Bangun Guna Serah\nberakhir;\npenghasilan dalam bentuk Bangunan yang\nC.\ndiserahkan atau seharusnya diserahkan pada saat\nperjanjian Bangun Guna Serah berakhir; dan/atau\nd.\npenghasilan lain terkait perjanjian Bangun Guna\nSerah, termasuk pembayaran terkait bagi hasil\npenggunaan Bangunan dan\ndenda\nperjanjian\nBangun Gu"
+              },
+              {
+                "id": "KMK 394/KMK04/1996#2",
+                "peraturan": "KMK 394/KMK04/1996",
+                "pasal": "Pasal 1",
+                "halaman_pdf": null,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/7DCBA700-65CF-477F-B7A0-223A4DB10C85/394~KMK.04~1996Kep.htm",
+                "status_peraturan": "berlaku_diubah",
+                "pasal_gugur": false,
+                "skor": 0.88,
+                "teks": "Pasal 1\nPenghasilan yang diterima atau diperoleh orang pribadi atau badan sehubungan\ndengan Persewaan tanah dan / atau bangunan berupa tanah , rumah, rumah\nsusun, apartemen, kondominium, gedung perkantoran, pertokoan, atau pertemuan\ntermasuk bagiannya, rumah kantor, toko, rumah toko, gudang dan bangunan\nindustri, terutang Pajak Penghasilan yang bersifat final.\n"
+              }
+            ],
+            "dibuang_tidak_berlaku": 1,
+            "sumber": [
+              "KMK 394/KMK04/1996#3",
+              "PP 34 Tahun 2017#5",
+              "KMK 120/KMK03/2002#2",
+              "PP 34 Tahun 2017#3",
+              "KMK 394/KMK04/1996#2",
+              "KMK 120/KMK03/2002",
+              "KMK 394/KMK04/1996",
+              "PP 34 Tahun 2017"
+            ]
+          }
+        },
+        {
+          "tool": "report_possibly_stale",
+          "argumen": {
+            "reason": "tabel_tarif_belum_ada",
+            "details": "Kalkulator PPh 21/26 menolak karena sewa ruko PPh Pasal 4 ayat (2) berada di luar cakupannya; nilai pajaknya tidak dihitung."
+          },
+          "hasil": {
+            "berhasil": false,
+            "galat": "tanggal_fakta kosong atau bukan YYYY-MM-DD",
+            "saran": "Isi tanggal_fakta dengan tanggal/masa pajak yang ditanyakan pengguna (mis. '2027-01-31'), lalu panggil ulang."
+          }
+        }
+      ]
+    },
+    {
+      "id": "t26-14",
+      "kategori": "tolak",
+      "tag": [
+        "uji_2026"
+      ],
+      "perilaku": "tolak",
+      "tool_harapan": null,
+      "tool_dipanggil": [
+        "find_legal_basis",
+        "calculate_pph21_final",
+        "find_legal_basis"
+      ],
+      "tool_hitung_pertama": "calculate_pph21_final",
+      "tool_hitung_akhir": "calculate_pph21_final",
+      "tool_benar": false,
+      "tool_benar_percobaan_pertama": false,
+      "argumen_benar": null,
+      "field_benar": 0,
+      "field_total": 0,
+      "argumen_salah": {},
+      "argumen_aktual": {},
+      "pph_harapan": null,
+      "pph_aktual": null,
+      "angka_benar": null,
+      "perilaku_benar": false,
+      "galat_tool": 0,
+      "tool_halusinasi": [],
+      "putaran": 4,
+      "detik": 10.28,
+      "jawaban": "Maaf, jawaban sebelumnya memakai kategori pajak yang keliru: omzet warung bukan pesangon dan bukan PPh Pasal 21. Saya tidak punya kalkulator PPh UMKM untuk memastikan pajak Anda. Perhitungan juga dapat bergantung pada jenis usaha dan apakah omzet memenuhi ketentuan skema UMKM.\n\nAgar saya bisa mengarahkan dengan tepat, apakah warung dijalankan sebagai **orang pribadi atau badan usaha**, dan apakah yang ingin dihitung adalah **PPh final UMKM atas omzet**?",
+      "error": null,
+      "galat_api": [],
+      "perilaku_benar_satu_giliran": false,
+      "tool_graf": 0,
+      "klarifikasi": false,
+      "sitasi_belum_terverifikasi": [],
+      "sitasi_diperiksa": true,
+      "sitasi_audit_ablasi": [],
+      "sitasi_dikoreksi": [],
+      "status_distempel": [],
+      "angka_tanpa_sumber": [],
+      "pph_di_jawaban": false,
+      "token_masuk": 69971,
+      "token_keluar": 194,
+      "jejak": [
+        {
+          "tool": "find_legal_basis",
+          "argumen": {
+            "topic": "tarif_pasal_17"
+          },
+          "hasil": {
+            "berhasil": true,
+            "topik": "tarif_pasal_17",
+            "judul": "Tarif progresif Pasal 17",
+            "rujukan": [
+              "UU PPh Pasal 17 ayat (1) huruf a s.t.d.t.d UU No. 7 Tahun 2021 (UU HPP)"
+            ],
+            "ringkasan": "Lima lapisan: 5% s.d. Rp60 juta, 15% s.d. Rp250 juta, 25% s.d. Rp500 juta, 30% s.d. Rp5 miliar, dan 35% di atas Rp5 miliar.\n",
+            "lokasi_dasar_hukum": [
+              {
+                "rujukan": "UU PPh Pasal 17 ayat (1) huruf a s.t.d.t.d UU No. 7 Tahun 2021 (UU HPP)",
+                "peraturan": "UU 7 Tahun 2021",
+                "pasal": "17",
+                "halaman_pdf": 56,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/A9FAAB97-ACA7-4F87-9FDC-FAA8123D1454/7TAHUN2021UU.pdf#page=56"
+              }
+            ]
+          }
+        },
+        {
+          "tool": "calculate_pph21_final",
+          "argumen": {
+            "tahun_pajak": 2026,
+            "jenis": "pesangon",
+            "jumlah_bruto": 400000000
+          },
+          "hasil": {
+            "berhasil": true,
+            "perlu_konfirmasi": [],
+            "ringkasan_masukan": "PPh 21 final; tahun pajak 2026; ber-NPWP; jenis: pesangon; jumlah bruto Rp400.000.000; penghasilan bruto yang dihitung Rp400.000.000.",
+            "jenis_perhitungan": "final_pesangon",
+            "tahun_pajak": 2026,
+            "masa_pajak": null,
+            "metode_tarif": "PPh final berlapis",
+            "penghasilan_bruto": "400000000",
+            "dasar_pengenaan_pajak": "400000000",
+            "pph_sebelum_penalti": "47500000",
+            "penalti_non_npwp": "0",
+            "pph_terutang": "47500000",
+            "pph_terutang_terbaca": "Rp47.500.000",
+            "objek_pajak": {
+              "kode": "21-401-01",
+              "objek": "Uang pesangon yang dibayarkan sekaligus",
+              "formulir": "BP21",
+              "final": true,
+              "sumber": "Lampiran PER-11/PJ/2025"
+            },
+            "langkah": [
+              {
+                "label": "Jumlah bruto",
+                "formula": "",
+                "nilai": "400000000",
+                "nilai_terbaca": "Rp400.000.000",
+                "catatan": ""
+              },
+              {
+                "label": "Lapisan 0%",
+                "formula": "50000000 x 0%",
+                "nilai": "0",
+                "nilai_terbaca": "Rp0",
+                "catatan": ""
+              },
+              {
+                "label": "Lapisan 5%",
+                "formula": "50000000 x 5%",
+                "nilai": "2500000",
+                "nilai_terbaca": "Rp2.500.000",
+                "catatan": ""
+              },
+              {
+                "label": "Lapisan 15%",
+                "formula": "300000000 x 15%",
+                "nilai": "45000000",
+                "nilai_terbaca": "Rp45.000.000",
+                "catatan": ""
+              },
+              {
+                "label": "PPh final",
+                "formula": "",
+                "nilai": "47500000",
+                "nilai_terbaca": "Rp47.500.000",
+                "catatan": ""
+              }
+            ],
+            "dasar_hukum": [
+              "PP No. 68 Tahun 2009 Pasal 4 dan Pasal 2 ayat (2)",
+              "PMK No. 16/PMK.03/2010"
+            ],
+            "asumsi": [
+              "Dianggap dibayarkan sekaligus, yaitu paling lama 2 tahun kalender. Bagian yang dibayar pada tahun ketiga dan seterusnya tidak bersifat final dan dikenakan tarif Pasal 17 (tahun_pembayaran_ke=3)."
+            ],
+            "peringatan": [],
+            "disclaimer": "Hasil ini merupakan alat bantu hitung, bukan nasihat pajak resmi. Untuk pelaporan, konfirmasikan kepada konsultan pajak atau DJP.",
+            "status_dasar_hukum": [
+              {
+                "peraturan": "PP 68 Tahun 2009",
+                "status": "berlaku",
+                "pada": "2026-11-17",
+                "oleh": []
+              },
+              {
+                "peraturan": "PMK 16 Tahun 2010",
+                "status": "berlaku",
+                "pada": "2026-11-17",
+                "oleh": []
+              }
+            ],
+            "lokasi_dasar_hukum": [
+              {
+                "rujukan": "PP No. 68 Tahun 2009 Pasal 4 dan Pasal 2 ayat (2)",
+                "peraturan": "PP 68 Tahun 2009",
+                "pasal": "4",
+                "halaman_pdf": null,
+                "tautan": "https://jdih.kemenkeu.go.id/dok/pp-68-tahun-2009"
+              },
+              {
+                "rujukan": "PMK No. 16/PMK.03/2010",
+                "peraturan": "PMK 16 Tahun 2010",
+                "pasal": null,
+                "halaman_pdf": null,
+                "tautan": "https://jdih.kemenkeu.go.id/dok/16-pmk-03-2010"
+              }
+            ]
+          }
+        },
+        {
+          "tool": "find_legal_basis",
+          "argumen": {
+            "topic": "bukan_pegawai"
+          },
+          "hasil": {
+            "berhasil": true,
+            "topik": "bukan_pegawai",
+            "judul": "Bukan pegawai",
+            "rujukan": [
+              "PMK No. 168 Tahun 2023 Pasal 12 ayat (3), (4), (5) dan Pasal 16 ayat (3)"
+            ],
+            "ringkasan": "Dasar pengenaan pajak adalah 50% dari jumlah penghasilan bruto pada masa pajak yang bersangkutan, dikenakan tarif Pasal 17 langsung atas DPP masa pajak itu sendiri. TIDAK kumulatif lintas masa pajak dan TIDAK dikurangi PTKP; keduanya aturan PER-16/PJ/2016, yang tidak dicabut secara tegas tetapi kehilangan dasar delegasinya: PMK 252/PMK.03/2008 dan PMK 102/PMK.010/2016 dicabut PMK 168/2023 Pasal 24 sejak 1 Januari 2024, dan aturannya bertentangan dengan PMK 168/2023 (di PMK 168/2023 PTKP hanya untuk Pegawai Tetap dan Pensiunan, Pasal 8 ayat (3)). Untuk jasa selain katering, bruto tidak termasuk upah tenaga kerja yang dipekerjakan penerima, pembelian material terkait jasa, dan pembayaran ke pihak ketiga, sepanjang dibuktikan kontrak/faktur (Pasal 12 ayat (4) huruf b dan ayat (5)).\n",
+            "lokasi_dasar_hukum": [
+              {
+                "rujukan": "PMK No. 168 Tahun 2023 Pasal 12 ayat (3), (4), (5) dan Pasal 16 ayat (3)",
+                "peraturan": "PMK 168 Tahun 2023",
+                "pasal": "12",
+                "halaman_pdf": 13,
+                "tautan": "https://jdih.kemenkeu.go.id/api/download/E60A82E0-B218-40F5-9D18-B924AA1E11CE/2023pmkeuangan168.pdf#page=13"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

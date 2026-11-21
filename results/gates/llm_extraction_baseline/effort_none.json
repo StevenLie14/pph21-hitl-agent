@@ -1,0 +1,1528 @@
+{
+ "ringkasan": {
+  "model": "azure:gpt-6-luna",
+  "reasoning_effort": "none",
+  "dokumen": 31,
+  "lama_27dok_digit_salah": 82,
+  "lama_27dok_digit_n": 87,
+  "berlabel_digit_salah": 109,
+  "berlabel_digit_n": 117,
+  "berlabel_asli_salah": 0,
+  "asli_n": 31,
+  "berlabel_digit_salah_27dok": 81,
+  "digit_tidak_valid": 0
+ },
+ "sumber_teks": {
+  "PMK 101 Tahun 2016": "jdih",
+  "PMK 102 Tahun 2016": "pajak.go.id",
+  "PMK 168 Tahun 2023": "jdih",
+  "UU 7 Tahun 2021": "jdih",
+  "PER-16/PJ/2016": "pajak.go.id",
+  "PP 58 Tahun 2023": "jdih",
+  "PMK 66 Tahun 2023": "jdih",
+  "PP 55 Tahun 2022": "pajak.go.id",
+  "PMK 167 Tahun 2018": "jdih",
+  "PMK 40 Tahun 2017": "pajak.go.id",
+  "PP 41 Tahun 2016": "pajak.go.id",
+  "PMK 114 Tahun 2025": "jdih",
+  "PMK 68 Tahun 2020": "pajak.go.id",
+  "PMK 122 Tahun 2015": "jdih",
+  "PMK 162 Tahun 2012": "jdih",
+  "PMK 137 Tahun 2005": "jdih",
+  "KMK 564 Tahun 2004": "pajak.go.id",
+  "PMK 152 Tahun 2015": "jdih",
+  "PMK 206 Tahun 2012": "jdih",
+  "PMK 254 Tahun 2008": "jdih",
+  "PMK 138 Tahun 2005": "jdih",
+  "PMK 10 Tahun 2005": "jdih",
+  "PMK 250 Tahun 2008": "jdih",
+  "PP 68 Tahun 2009": "jdih",
+  "PMK 16 Tahun 2010": "jdih",
+  "PP 80 Tahun 2010": "jdih",
+  "PMK 262 Tahun 2010": "jdih",
+  "UU 17 Tahun 2000": "pajak.go.id",
+  "PER-31/PJ/2009": "pajak.go.id",
+  "PER-31/PJ/2012": "pajak.go.id",
+  "PER-32/PJ/2015": "pajak.go.id"
+ },
+ "kasus": [
+  {
+   "dokumen": "PMK 101 Tahun 2016",
+   "jenis": "asli",
+   "llm_salah": false,
+   "llm_salah_berlabel": false
+  },
+  {
+   "dokumen": "PMK 101 Tahun 2016",
+   "jenis": "digit",
+   "angka": "ptkp.maksimal_tanggungan: 3 -> 4",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "ptkp.maksimal_tanggungan": "4"
+   }
+  },
+  {
+   "dokumen": "PMK 101 Tahun 2016",
+   "jenis": "digit",
+   "angka": "ptkp.tambahan_kawin,ptkp.tambahan_tanggungan: 4500000 -> 5400000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "ptkp.tambahan_kawin": "5400000",
+    "ptkp.tambahan_tanggungan": "5400000"
+   }
+  },
+  {
+   "dokumen": "PMK 101 Tahun 2016",
+   "jenis": "digit",
+   "angka": "ptkp.wajib_pajak_sendiri: 54000000 -> 64800000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "ptkp.wajib_pajak_sendiri": "64800000"
+   }
+  },
+  {
+   "dokumen": "PMK 102 Tahun 2016",
+   "jenis": "asli",
+   "llm_salah": false,
+   "llm_salah_berlabel": false
+  },
+  {
+   "dokumen": "PMK 102 Tahun 2016",
+   "jenis": "digit",
+   "angka": "ter_harian.batas_bebas_harian: 450000 -> 540000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "ter_harian.batas_bebas_harian": "540000"
+   }
+  },
+  {
+   "dokumen": "PMK 168 Tahun 2023",
+   "jenis": "asli",
+   "llm_salah": true,
+   "llm_salah_berlabel": false
+  },
+  {
+   "dokumen": "PMK 168 Tahun 2023",
+   "jenis": "digit",
+   "angka": "biaya_jabatan.persen,biaya_pensiun.persen: 5 -> 6",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "biaya_jabatan.persen": "6",
+    "biaya_pensiun.persen": "6"
+   }
+  },
+  {
+   "dokumen": "PMK 168 Tahun 2023",
+   "jenis": "digit",
+   "angka": "bukan_pegawai.dpp_persen,ter_harian.dpp_persen_di_atas_batas: 50 -> 51",
+   "llm_salah": false,
+   "llm_salah_berlabel": false,
+   "llm_valid": true,
+   "bacaan": {}
+  },
+  {
+   "dokumen": "PMK 168 Tahun 2023",
+   "jenis": "digit",
+   "angka": "biaya_pensiun.maksimal_sebulan: 200000 -> 240000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "biaya_pensiun.maksimal_sebulan": "240000"
+   }
+  },
+  {
+   "dokumen": "PMK 168 Tahun 2023",
+   "jenis": "digit",
+   "angka": "biaya_jabatan.maksimal_sebulan: 500000 -> 600000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "biaya_jabatan.maksimal_sebulan": "600000"
+   }
+  },
+  {
+   "dokumen": "PMK 168 Tahun 2023",
+   "jenis": "digit",
+   "angka": "biaya_pensiun.maksimal_setahun: 2400000 -> 2880000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "biaya_pensiun.maksimal_setahun": "2880000"
+   }
+  },
+  {
+   "dokumen": "PMK 168 Tahun 2023",
+   "jenis": "digit",
+   "angka": "ter_harian.batas_atas_ter_harian: 2500000 -> 3000000",
+   "llm_salah": false,
+   "llm_salah_berlabel": false,
+   "llm_valid": true,
+   "bacaan": {}
+  },
+  {
+   "dokumen": "PMK 168 Tahun 2023",
+   "jenis": "digit",
+   "angka": "biaya_jabatan.maksimal_setahun: 6000000 -> 7200000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "biaya_jabatan.maksimal_setahun": "7200000"
+   }
+  },
+  {
+   "dokumen": "UU 7 Tahun 2021",
+   "jenis": "asli",
+   "llm_salah": false,
+   "llm_salah_berlabel": false
+  },
+  {
+   "dokumen": "UU 7 Tahun 2021",
+   "jenis": "digit",
+   "angka": "ptkp.maksimal_tanggungan: 3 -> 4",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "ptkp.maksimal_tanggungan": "4"
+   }
+  },
+  {
+   "dokumen": "UU 7 Tahun 2021",
+   "jenis": "digit",
+   "angka": "tarif_pasal_17[0].persen: 5 -> 6",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "tarif_pasal_17[0].persen": "6"
+   }
+  },
+  {
+   "dokumen": "UU 7 Tahun 2021",
+   "jenis": "digit",
+   "angka": "tarif_pasal_17[1].persen: 15 -> 16",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "tarif_pasal_17[1].persen": "16"
+   }
+  },
+  {
+   "dokumen": "UU 7 Tahun 2021",
+   "jenis": "digit",
+   "angka": "tarif_pasal_17[2].persen: 25 -> 26",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "tarif_pasal_17[2].persen": "26"
+   }
+  },
+  {
+   "dokumen": "UU 7 Tahun 2021",
+   "jenis": "digit",
+   "angka": "tarif_pasal_17[3].persen: 30 -> 31",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "tarif_pasal_17[3].persen": "31"
+   }
+  },
+  {
+   "dokumen": "UU 7 Tahun 2021",
+   "jenis": "digit",
+   "angka": "tarif_pasal_17[4].persen: 35 -> 36",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "tarif_pasal_17[4].persen": "36"
+   }
+  },
+  {
+   "dokumen": "UU 7 Tahun 2021",
+   "jenis": "digit",
+   "angka": "ptkp.tambahan_kawin,ptkp.tambahan_tanggungan: 4500000 -> 5400000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "ptkp.tambahan_tanggungan": "5400000"
+   }
+  },
+  {
+   "dokumen": "UU 7 Tahun 2021",
+   "jenis": "digit",
+   "angka": "ptkp.wajib_pajak_sendiri: 54000000 -> 64800000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "ptkp.wajib_pajak_sendiri": "64800000"
+   }
+  },
+  {
+   "dokumen": "UU 7 Tahun 2021",
+   "jenis": "digit",
+   "angka": "tarif_pasal_17[0].batas_atas: 60000000 -> 72000000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "tarif_pasal_17[0].batas_atas": "72000000"
+   }
+  },
+  {
+   "dokumen": "UU 7 Tahun 2021",
+   "jenis": "digit",
+   "angka": "tarif_pasal_17[1].batas_atas: 250000000 -> 300000000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "tarif_pasal_17[1].batas_atas": "300000000"
+   }
+  },
+  {
+   "dokumen": "UU 7 Tahun 2021",
+   "jenis": "digit",
+   "angka": "tarif_pasal_17[2].batas_atas: 500000000 -> 600000000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "tarif_pasal_17[2].batas_atas": "600000000"
+   }
+  },
+  {
+   "dokumen": "UU 7 Tahun 2021",
+   "jenis": "digit",
+   "angka": "tarif_pasal_17[3].batas_atas: 5000000000 -> 6000000000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "tarif_pasal_17[3].batas_atas": "6000000000"
+   }
+  },
+  {
+   "dokumen": "PER-16/PJ/2016",
+   "jenis": "asli",
+   "llm_salah": true,
+   "llm_salah_berlabel": false
+  },
+  {
+   "dokumen": "PER-16/PJ/2016",
+   "jenis": "digit",
+   "angka": "ptkp.maksimal_tanggungan: 3 -> 4",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "ptkp.maksimal_tanggungan": "4"
+   }
+  },
+  {
+   "dokumen": "PER-16/PJ/2016",
+   "jenis": "digit",
+   "angka": "biaya_jabatan.persen,biaya_pensiun.persen: 5 -> 6",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "biaya_jabatan.persen": "6",
+    "biaya_pensiun.persen": "6"
+   }
+  },
+  {
+   "dokumen": "PER-16/PJ/2016",
+   "jenis": "digit",
+   "angka": "bukan_pegawai.dpp_persen: 50 -> 51",
+   "llm_salah": true,
+   "llm_salah_berlabel": false,
+   "llm_valid": true,
+   "bacaan": {}
+  },
+  {
+   "dokumen": "PER-16/PJ/2016",
+   "jenis": "digit",
+   "angka": "biaya_pensiun.maksimal_sebulan: 200000 -> 240000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "biaya_pensiun.maksimal_sebulan": "240000"
+   }
+  },
+  {
+   "dokumen": "PER-16/PJ/2016",
+   "jenis": "digit",
+   "angka": "ter_harian.batas_bebas_harian: 450000 -> 540000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "ter_harian.batas_bebas_harian": "540000"
+   }
+  },
+  {
+   "dokumen": "PER-16/PJ/2016",
+   "jenis": "digit",
+   "angka": "biaya_jabatan.maksimal_sebulan: 500000 -> 600000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "biaya_jabatan.maksimal_sebulan": "600000"
+   }
+  },
+  {
+   "dokumen": "PER-16/PJ/2016",
+   "jenis": "digit",
+   "angka": "biaya_pensiun.maksimal_setahun: 2400000 -> 2880000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "biaya_pensiun.maksimal_setahun": "2880000"
+   }
+  },
+  {
+   "dokumen": "PER-16/PJ/2016",
+   "jenis": "digit",
+   "angka": "ptkp.tambahan_kawin,ptkp.tambahan_tanggungan: 4500000 -> 5400000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "ptkp.tambahan_kawin": "5400000",
+    "ptkp.tambahan_tanggungan": "5400000"
+   }
+  },
+  {
+   "dokumen": "PER-16/PJ/2016",
+   "jenis": "digit",
+   "angka": "biaya_jabatan.maksimal_setahun: 6000000 -> 7200000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "biaya_jabatan.maksimal_setahun": "7200000"
+   }
+  },
+  {
+   "dokumen": "PER-16/PJ/2016",
+   "jenis": "digit",
+   "angka": "ptkp.wajib_pajak_sendiri: 54000000 -> 64800000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "ptkp.wajib_pajak_sendiri": "64800000"
+   }
+  },
+  {
+   "dokumen": "PP 58 Tahun 2023",
+   "jenis": "asli",
+   "llm_salah": true,
+   "llm_salah_berlabel": false
+  },
+  {
+   "dokumen": "PMK 66 Tahun 2023",
+   "jenis": "asli",
+   "llm_salah": false,
+   "llm_salah_berlabel": false
+  },
+  {
+   "dokumen": "PP 55 Tahun 2022",
+   "jenis": "asli",
+   "llm_salah": false,
+   "llm_salah_berlabel": false
+  },
+  {
+   "dokumen": "PMK 167 Tahun 2018",
+   "jenis": "asli",
+   "llm_salah": false,
+   "llm_salah_berlabel": false
+  },
+  {
+   "dokumen": "PMK 40 Tahun 2017",
+   "jenis": "asli",
+   "llm_salah": false,
+   "llm_salah_berlabel": false
+  },
+  {
+   "dokumen": "PP 41 Tahun 2016",
+   "jenis": "asli",
+   "llm_salah": false,
+   "llm_salah_berlabel": false
+  },
+  {
+   "dokumen": "PMK 114 Tahun 2025",
+   "jenis": "asli",
+   "llm_salah": false,
+   "llm_salah_berlabel": false
+  },
+  {
+   "dokumen": "PMK 68 Tahun 2020",
+   "jenis": "asli",
+   "llm_salah": false,
+   "llm_salah_berlabel": false
+  },
+  {
+   "dokumen": "PMK 122 Tahun 2015",
+   "jenis": "asli",
+   "llm_salah": false,
+   "llm_salah_berlabel": false
+  },
+  {
+   "dokumen": "PMK 122 Tahun 2015",
+   "jenis": "digit",
+   "angka": "ptkp.maksimal_tanggungan: 3 -> 4",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "ptkp.maksimal_tanggungan": "4"
+   }
+  },
+  {
+   "dokumen": "PMK 122 Tahun 2015",
+   "jenis": "digit",
+   "angka": "ptkp.tambahan_kawin,ptkp.tambahan_tanggungan: 3000000 -> 3600000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "ptkp.tambahan_kawin": "3600000",
+    "ptkp.tambahan_tanggungan": "3600000"
+   }
+  },
+  {
+   "dokumen": "PMK 122 Tahun 2015",
+   "jenis": "digit",
+   "angka": "ptkp.wajib_pajak_sendiri: 36000000 -> 43200000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "ptkp.wajib_pajak_sendiri": "43200000"
+   }
+  },
+  {
+   "dokumen": "PMK 162 Tahun 2012",
+   "jenis": "asli",
+   "llm_salah": false,
+   "llm_salah_berlabel": false
+  },
+  {
+   "dokumen": "PMK 162 Tahun 2012",
+   "jenis": "digit",
+   "angka": "ptkp.maksimal_tanggungan: 3 -> 4",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "ptkp.maksimal_tanggungan": "4"
+   }
+  },
+  {
+   "dokumen": "PMK 162 Tahun 2012",
+   "jenis": "digit",
+   "angka": "ptkp.tambahan_kawin,ptkp.tambahan_tanggungan: 2025000 -> 2430000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "ptkp.tambahan_kawin": "2430000",
+    "ptkp.tambahan_tanggungan": "2430000"
+   }
+  },
+  {
+   "dokumen": "PMK 162 Tahun 2012",
+   "jenis": "digit",
+   "angka": "ptkp.wajib_pajak_sendiri: 24300000 -> 29160000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "ptkp.wajib_pajak_sendiri": "29160000"
+   }
+  },
+  {
+   "dokumen": "PMK 137 Tahun 2005",
+   "jenis": "asli",
+   "llm_salah": false,
+   "llm_salah_berlabel": false
+  },
+  {
+   "dokumen": "PMK 137 Tahun 2005",
+   "jenis": "digit",
+   "angka": "ptkp.maksimal_tanggungan: 3 -> 4",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "ptkp.maksimal_tanggungan": "4"
+   }
+  },
+  {
+   "dokumen": "PMK 137 Tahun 2005",
+   "jenis": "digit",
+   "angka": "ptkp.tambahan_kawin,ptkp.tambahan_tanggungan: 1200000 -> 1440000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "ptkp.tambahan_kawin": "1440000",
+    "ptkp.tambahan_tanggungan": "1440000"
+   }
+  },
+  {
+   "dokumen": "PMK 137 Tahun 2005",
+   "jenis": "digit",
+   "angka": "ptkp.wajib_pajak_sendiri: 13200000 -> 15840000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "ptkp.wajib_pajak_sendiri": "15840000"
+   }
+  },
+  {
+   "dokumen": "KMK 564 Tahun 2004",
+   "jenis": "asli",
+   "llm_salah": false,
+   "llm_salah_berlabel": false
+  },
+  {
+   "dokumen": "KMK 564 Tahun 2004",
+   "jenis": "digit",
+   "angka": "ptkp.maksimal_tanggungan: 3 -> 4",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "ptkp.maksimal_tanggungan": "4"
+   }
+  },
+  {
+   "dokumen": "KMK 564 Tahun 2004",
+   "jenis": "digit",
+   "angka": "ptkp.tambahan_kawin,ptkp.tambahan_tanggungan: 1200000 -> 1440000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "ptkp.tambahan_kawin": "1440000",
+    "ptkp.tambahan_tanggungan": "1440000"
+   }
+  },
+  {
+   "dokumen": "KMK 564 Tahun 2004",
+   "jenis": "digit",
+   "angka": "ptkp.wajib_pajak_sendiri: 12000000 -> 14400000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "ptkp.wajib_pajak_sendiri": "14400000"
+   }
+  },
+  {
+   "dokumen": "PMK 152 Tahun 2015",
+   "jenis": "asli",
+   "llm_salah": false,
+   "llm_salah_berlabel": false
+  },
+  {
+   "dokumen": "PMK 152 Tahun 2015",
+   "jenis": "digit",
+   "angka": "ter_harian.batas_bebas_harian: 300000 -> 360000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "ter_harian.batas_bebas_harian": "360000"
+   }
+  },
+  {
+   "dokumen": "PMK 206 Tahun 2012",
+   "jenis": "asli",
+   "llm_salah": false,
+   "llm_salah_berlabel": false
+  },
+  {
+   "dokumen": "PMK 206 Tahun 2012",
+   "jenis": "digit",
+   "angka": "ter_harian.batas_bebas_harian: 200000 -> 240000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "ter_harian.batas_bebas_harian": "240000"
+   }
+  },
+  {
+   "dokumen": "PMK 254 Tahun 2008",
+   "jenis": "asli",
+   "llm_salah": false,
+   "llm_salah_berlabel": false
+  },
+  {
+   "dokumen": "PMK 254 Tahun 2008",
+   "jenis": "digit",
+   "angka": "ter_harian.batas_bebas_harian: 150000 -> 180000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "ter_harian.batas_bebas_harian": "180000"
+   }
+  },
+  {
+   "dokumen": "PMK 138 Tahun 2005",
+   "jenis": "asli",
+   "llm_salah": false,
+   "llm_salah_berlabel": false
+  },
+  {
+   "dokumen": "PMK 138 Tahun 2005",
+   "jenis": "digit",
+   "angka": "ter_harian.batas_bebas_harian: 110000 -> 132000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "ter_harian.batas_bebas_harian": "132000"
+   }
+  },
+  {
+   "dokumen": "PMK 10 Tahun 2005",
+   "jenis": "asli",
+   "llm_salah": false,
+   "llm_salah_berlabel": false
+  },
+  {
+   "dokumen": "PMK 10 Tahun 2005",
+   "jenis": "digit",
+   "angka": "ter_harian.batas_bebas_harian: 100000 -> 120000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "ter_harian.batas_bebas_harian": "120000"
+   }
+  },
+  {
+   "dokumen": "PMK 250 Tahun 2008",
+   "jenis": "asli",
+   "llm_salah": false,
+   "llm_salah_berlabel": false
+  },
+  {
+   "dokumen": "PMK 250 Tahun 2008",
+   "jenis": "digit",
+   "angka": "biaya_jabatan.persen,biaya_pensiun.persen: 5 -> 6",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "biaya_jabatan.persen": "6",
+    "biaya_pensiun.persen": "6"
+   }
+  },
+  {
+   "dokumen": "PMK 250 Tahun 2008",
+   "jenis": "digit",
+   "angka": "biaya_pensiun.maksimal_sebulan: 200000 -> 240000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "biaya_pensiun.maksimal_sebulan": "240000"
+   }
+  },
+  {
+   "dokumen": "PMK 250 Tahun 2008",
+   "jenis": "digit",
+   "angka": "biaya_jabatan.maksimal_sebulan: 500000 -> 600000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "biaya_jabatan.maksimal_sebulan": "600000"
+   }
+  },
+  {
+   "dokumen": "PMK 250 Tahun 2008",
+   "jenis": "digit",
+   "angka": "biaya_pensiun.maksimal_setahun: 2400000 -> 2880000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "biaya_pensiun.maksimal_setahun": "2880000"
+   }
+  },
+  {
+   "dokumen": "PMK 250 Tahun 2008",
+   "jenis": "digit",
+   "angka": "biaya_jabatan.maksimal_setahun: 6000000 -> 7200000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "biaya_jabatan.maksimal_setahun": "7200000"
+   }
+  },
+  {
+   "dokumen": "PP 68 Tahun 2009",
+   "jenis": "asli",
+   "llm_salah": false,
+   "llm_salah_berlabel": false
+  },
+  {
+   "dokumen": "PP 68 Tahun 2009",
+   "jenis": "digit",
+   "angka": "pph_final_pesangon[0].persen,pph_final_manfaat_pensiun[0].persen: 0 -> 1",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "pph_final_pesangon[0].persen": "1",
+    "pph_final_manfaat_pensiun[0].persen": "1"
+   }
+  },
+  {
+   "dokumen": "PP 68 Tahun 2009",
+   "jenis": "digit",
+   "angka": "pph_final_pesangon[1].persen,pph_final_manfaat_pensiun[1].persen: 5 -> 6",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "pph_final_pesangon[1].persen": "6",
+    "pph_final_manfaat_pensiun[1].persen": "6"
+   }
+  },
+  {
+   "dokumen": "PP 68 Tahun 2009",
+   "jenis": "digit",
+   "angka": "pph_final_pesangon[2].persen: 15 -> 16",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "pph_final_pesangon[2].persen": "16"
+   }
+  },
+  {
+   "dokumen": "PP 68 Tahun 2009",
+   "jenis": "digit",
+   "angka": "pph_final_pesangon[3].persen: 25 -> 26",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "pph_final_pesangon[3].persen": "26"
+   }
+  },
+  {
+   "dokumen": "PP 68 Tahun 2009",
+   "jenis": "digit",
+   "angka": "pph_final_pesangon[0].batas_atas,pph_final_manfaat_pensiun[0].batas_atas: 50000000 -> 60000000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "pph_final_pesangon[0].batas_atas": "60000000",
+    "pph_final_manfaat_pensiun[0].batas_atas": "60000000"
+   }
+  },
+  {
+   "dokumen": "PP 68 Tahun 2009",
+   "jenis": "digit",
+   "angka": "pph_final_pesangon[1].batas_atas: 100000000 -> 120000000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "pph_final_pesangon[1].batas_atas": "120000000"
+   }
+  },
+  {
+   "dokumen": "PP 68 Tahun 2009",
+   "jenis": "digit",
+   "angka": "pph_final_pesangon[2].batas_atas: 500000000 -> 600000000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "pph_final_pesangon[2].batas_atas": "600000000"
+   }
+  },
+  {
+   "dokumen": "PMK 16 Tahun 2010",
+   "jenis": "asli",
+   "llm_salah": false,
+   "llm_salah_berlabel": false
+  },
+  {
+   "dokumen": "PMK 16 Tahun 2010",
+   "jenis": "digit",
+   "angka": "pph_final_pesangon[0].persen,pph_final_manfaat_pensiun[0].persen: 0 -> 1",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "pph_final_pesangon[0].persen": "1",
+    "pph_final_manfaat_pensiun[0].persen": "1"
+   }
+  },
+  {
+   "dokumen": "PMK 16 Tahun 2010",
+   "jenis": "digit",
+   "angka": "pph_final_pesangon[1].persen,pph_final_manfaat_pensiun[1].persen: 5 -> 6",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "pph_final_pesangon[1].persen": "6",
+    "pph_final_manfaat_pensiun[1].persen": "6"
+   }
+  },
+  {
+   "dokumen": "PMK 16 Tahun 2010",
+   "jenis": "digit",
+   "angka": "pph_final_pesangon[2].persen: 15 -> 16",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "pph_final_pesangon[2].persen": "16"
+   }
+  },
+  {
+   "dokumen": "PMK 16 Tahun 2010",
+   "jenis": "digit",
+   "angka": "pph_final_pesangon[3].persen: 25 -> 26",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "pph_final_pesangon[3].persen": "26"
+   }
+  },
+  {
+   "dokumen": "PMK 16 Tahun 2010",
+   "jenis": "digit",
+   "angka": "pph_final_pesangon[0].batas_atas,pph_final_manfaat_pensiun[0].batas_atas: 50000000 -> 60000000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "pph_final_pesangon[0].batas_atas": "60000000",
+    "pph_final_manfaat_pensiun[0].batas_atas": "60000000"
+   }
+  },
+  {
+   "dokumen": "PMK 16 Tahun 2010",
+   "jenis": "digit",
+   "angka": "pph_final_pesangon[1].batas_atas: 100000000 -> 120000000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "pph_final_pesangon[1].batas_atas": "120000000"
+   }
+  },
+  {
+   "dokumen": "PMK 16 Tahun 2010",
+   "jenis": "digit",
+   "angka": "pph_final_pesangon[2].batas_atas: 500000000 -> 600000000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "pph_final_pesangon[2].batas_atas": "600000000"
+   }
+  },
+  {
+   "dokumen": "PP 80 Tahun 2010",
+   "jenis": "asli",
+   "llm_salah": false,
+   "llm_salah_berlabel": false
+  },
+  {
+   "dokumen": "PP 80 Tahun 2010",
+   "jenis": "digit",
+   "angka": "pph_final_honorarium_pns.I,pph_final_honorarium_pns.II: 0 -> 1",
+   "llm_salah": false,
+   "llm_salah_berlabel": false,
+   "llm_valid": true,
+   "bacaan": {}
+  },
+  {
+   "dokumen": "PP 80 Tahun 2010",
+   "jenis": "digit",
+   "angka": "pph_final_honorarium_pns.III: 5 -> 6",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "pph_final_honorarium_pns.III": "6"
+   }
+  },
+  {
+   "dokumen": "PP 80 Tahun 2010",
+   "jenis": "digit",
+   "angka": "pph_final_honorarium_pns.IV: 15 -> 16",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "pph_final_honorarium_pns.IV": "16"
+   }
+  },
+  {
+   "dokumen": "PMK 262 Tahun 2010",
+   "jenis": "asli",
+   "llm_salah": false,
+   "llm_salah_berlabel": false
+  },
+  {
+   "dokumen": "PMK 262 Tahun 2010",
+   "jenis": "digit",
+   "angka": "pph_final_honorarium_pns.I,pph_final_honorarium_pns.II: 0 -> 1",
+   "llm_salah": false,
+   "llm_salah_berlabel": false,
+   "llm_valid": true,
+   "bacaan": {}
+  },
+  {
+   "dokumen": "PMK 262 Tahun 2010",
+   "jenis": "digit",
+   "angka": "ptkp.maksimal_tanggungan: 3 -> 4",
+   "llm_salah": false,
+   "llm_salah_berlabel": false,
+   "llm_valid": true,
+   "bacaan": {}
+  },
+  {
+   "dokumen": "PMK 262 Tahun 2010",
+   "jenis": "digit",
+   "angka": "pph_final_honorarium_pns.III: 5 -> 6",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "pph_final_honorarium_pns.III": "6"
+   }
+  },
+  {
+   "dokumen": "PMK 262 Tahun 2010",
+   "jenis": "digit",
+   "angka": "pph_final_honorarium_pns.IV: 15 -> 16",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "pph_final_honorarium_pns.IV": "16"
+   }
+  },
+  {
+   "dokumen": "UU 17 Tahun 2000",
+   "jenis": "asli",
+   "llm_salah": false,
+   "llm_salah_berlabel": false
+  },
+  {
+   "dokumen": "UU 17 Tahun 2000",
+   "jenis": "digit",
+   "angka": "ptkp.maksimal_tanggungan: 3 -> 4",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "ptkp.maksimal_tanggungan": "4"
+   }
+  },
+  {
+   "dokumen": "UU 17 Tahun 2000",
+   "jenis": "digit",
+   "angka": "tarif_pasal_17[0].persen: 5 -> 6",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "tarif_pasal_17[0].persen": "6"
+   }
+  },
+  {
+   "dokumen": "UU 17 Tahun 2000",
+   "jenis": "digit",
+   "angka": "tarif_pasal_17[1].persen: 10 -> 11",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "tarif_pasal_17[1].persen": "11"
+   }
+  },
+  {
+   "dokumen": "UU 17 Tahun 2000",
+   "jenis": "digit",
+   "angka": "tarif_pasal_17[2].persen: 15 -> 16",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "tarif_pasal_17[2].persen": "16"
+   }
+  },
+  {
+   "dokumen": "UU 17 Tahun 2000",
+   "jenis": "digit",
+   "angka": "tarif_pasal_17[3].persen: 25 -> 26",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "tarif_pasal_17[3].persen": "26"
+   }
+  },
+  {
+   "dokumen": "UU 17 Tahun 2000",
+   "jenis": "digit",
+   "angka": "tarif_pasal_17[4].persen: 35 -> 36",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "tarif_pasal_17[4].persen": "36"
+   }
+  },
+  {
+   "dokumen": "UU 17 Tahun 2000",
+   "jenis": "digit",
+   "angka": "ptkp.tambahan_kawin,ptkp.tambahan_tanggungan: 1440000 -> 1728000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "ptkp.tambahan_kawin": "1728000",
+    "ptkp.tambahan_tanggungan": "1728000"
+   }
+  },
+  {
+   "dokumen": "UU 17 Tahun 2000",
+   "jenis": "digit",
+   "angka": "ptkp.wajib_pajak_sendiri: 2880000 -> 3456000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "ptkp.wajib_pajak_sendiri": "3456000"
+   }
+  },
+  {
+   "dokumen": "UU 17 Tahun 2000",
+   "jenis": "digit",
+   "angka": "tarif_pasal_17[0].batas_atas: 25000000 -> 30000000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "tarif_pasal_17[0].batas_atas": "30000000"
+   }
+  },
+  {
+   "dokumen": "UU 17 Tahun 2000",
+   "jenis": "digit",
+   "angka": "tarif_pasal_17[1].batas_atas: 50000000 -> 60000000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "tarif_pasal_17[1].batas_atas": "60000000"
+   }
+  },
+  {
+   "dokumen": "UU 17 Tahun 2000",
+   "jenis": "digit",
+   "angka": "tarif_pasal_17[2].batas_atas: 100000000 -> 120000000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "tarif_pasal_17[2].batas_atas": "120000000"
+   }
+  },
+  {
+   "dokumen": "UU 17 Tahun 2000",
+   "jenis": "digit",
+   "angka": "tarif_pasal_17[3].batas_atas: 200000000 -> 240000000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "tarif_pasal_17[3].batas_atas": "240000000"
+   }
+  },
+  {
+   "dokumen": "PER-31/PJ/2009",
+   "jenis": "asli",
+   "llm_salah": true,
+   "llm_salah_berlabel": false
+  },
+  {
+   "dokumen": "PER-31/PJ/2009",
+   "jenis": "digit",
+   "angka": "ptkp.maksimal_tanggungan: 3 -> 4",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "ptkp.maksimal_tanggungan": "4"
+   }
+  },
+  {
+   "dokumen": "PER-31/PJ/2009",
+   "jenis": "digit",
+   "angka": "biaya_jabatan.persen,biaya_pensiun.persen: 5 -> 6",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "biaya_jabatan.persen": "6",
+    "biaya_pensiun.persen": "6"
+   }
+  },
+  {
+   "dokumen": "PER-31/PJ/2009",
+   "jenis": "digit",
+   "angka": "bukan_pegawai.dpp_persen: 50 -> 51",
+   "llm_salah": true,
+   "llm_salah_berlabel": false,
+   "llm_valid": true,
+   "bacaan": {}
+  },
+  {
+   "dokumen": "PER-31/PJ/2009",
+   "jenis": "digit",
+   "angka": "ter_harian.batas_bebas_harian: 150000 -> 180000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "ter_harian.batas_bebas_harian": "180000"
+   }
+  },
+  {
+   "dokumen": "PER-31/PJ/2009",
+   "jenis": "digit",
+   "angka": "biaya_pensiun.maksimal_sebulan: 200000 -> 240000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "biaya_pensiun.maksimal_sebulan": "240000"
+   }
+  },
+  {
+   "dokumen": "PER-31/PJ/2009",
+   "jenis": "digit",
+   "angka": "biaya_jabatan.maksimal_sebulan: 500000 -> 600000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "biaya_jabatan.maksimal_sebulan": "600000"
+   }
+  },
+  {
+   "dokumen": "PER-31/PJ/2009",
+   "jenis": "digit",
+   "angka": "ptkp.tambahan_kawin,ptkp.tambahan_tanggungan: 1320000 -> 1584000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "ptkp.tambahan_kawin": "1584000",
+    "ptkp.tambahan_tanggungan": "1584000"
+   }
+  },
+  {
+   "dokumen": "PER-31/PJ/2009",
+   "jenis": "digit",
+   "angka": "biaya_pensiun.maksimal_setahun: 2400000 -> 2880000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "biaya_pensiun.maksimal_setahun": "2880000"
+   }
+  },
+  {
+   "dokumen": "PER-31/PJ/2009",
+   "jenis": "digit",
+   "angka": "biaya_jabatan.maksimal_setahun: 6000000 -> 7200000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "biaya_jabatan.maksimal_setahun": "7200000"
+   }
+  },
+  {
+   "dokumen": "PER-31/PJ/2009",
+   "jenis": "digit",
+   "angka": "ptkp.wajib_pajak_sendiri: 15840000 -> 19008000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "ptkp.wajib_pajak_sendiri": "19008000"
+   }
+  },
+  {
+   "dokumen": "PER-31/PJ/2012",
+   "jenis": "asli",
+   "llm_salah": true,
+   "llm_salah_berlabel": false
+  },
+  {
+   "dokumen": "PER-31/PJ/2012",
+   "jenis": "digit",
+   "angka": "ptkp.maksimal_tanggungan: 3 -> 4",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "ptkp.maksimal_tanggungan": "4"
+   }
+  },
+  {
+   "dokumen": "PER-31/PJ/2012",
+   "jenis": "digit",
+   "angka": "biaya_jabatan.persen,biaya_pensiun.persen: 5 -> 6",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "biaya_pensiun.persen": "6"
+   }
+  },
+  {
+   "dokumen": "PER-31/PJ/2012",
+   "jenis": "digit",
+   "angka": "bukan_pegawai.dpp_persen: 50 -> 51",
+   "llm_salah": true,
+   "llm_salah_berlabel": false,
+   "llm_valid": true,
+   "bacaan": {}
+  },
+  {
+   "dokumen": "PER-31/PJ/2012",
+   "jenis": "digit",
+   "angka": "biaya_pensiun.maksimal_sebulan,ter_harian.batas_bebas_harian: 200000 -> 240000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "biaya_pensiun.maksimal_sebulan": "240000",
+    "ter_harian.batas_bebas_harian": "240000"
+   }
+  },
+  {
+   "dokumen": "PER-31/PJ/2012",
+   "jenis": "digit",
+   "angka": "biaya_jabatan.maksimal_sebulan: 500000 -> 600000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "biaya_jabatan.maksimal_sebulan": "600000"
+   }
+  },
+  {
+   "dokumen": "PER-31/PJ/2012",
+   "jenis": "digit",
+   "angka": "ptkp.tambahan_kawin,ptkp.tambahan_tanggungan: 2025000 -> 2430000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "ptkp.tambahan_kawin": "2430000",
+    "ptkp.tambahan_tanggungan": "2430000"
+   }
+  },
+  {
+   "dokumen": "PER-31/PJ/2012",
+   "jenis": "digit",
+   "angka": "biaya_pensiun.maksimal_setahun: 2400000 -> 2880000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "biaya_pensiun.maksimal_setahun": "2880000"
+   }
+  },
+  {
+   "dokumen": "PER-31/PJ/2012",
+   "jenis": "digit",
+   "angka": "biaya_jabatan.maksimal_setahun: 6000000 -> 7200000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "biaya_jabatan.maksimal_setahun": "7200000"
+   }
+  },
+  {
+   "dokumen": "PER-31/PJ/2012",
+   "jenis": "digit",
+   "angka": "ptkp.wajib_pajak_sendiri: 24300000 -> 29160000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "ptkp.wajib_pajak_sendiri": "29160000"
+   }
+  },
+  {
+   "dokumen": "PER-32/PJ/2015",
+   "jenis": "asli",
+   "llm_salah": true,
+   "llm_salah_berlabel": false
+  },
+  {
+   "dokumen": "PER-32/PJ/2015",
+   "jenis": "digit",
+   "angka": "ptkp.maksimal_tanggungan: 3 -> 4",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "ptkp.maksimal_tanggungan": "4"
+   }
+  },
+  {
+   "dokumen": "PER-32/PJ/2015",
+   "jenis": "digit",
+   "angka": "biaya_jabatan.persen,biaya_pensiun.persen: 5 -> 6",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "biaya_pensiun.persen": "6"
+   }
+  },
+  {
+   "dokumen": "PER-32/PJ/2015",
+   "jenis": "digit",
+   "angka": "bukan_pegawai.dpp_persen: 50 -> 51",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "bukan_pegawai.dpp_persen": "51"
+   }
+  },
+  {
+   "dokumen": "PER-32/PJ/2015",
+   "jenis": "digit",
+   "angka": "biaya_pensiun.maksimal_sebulan: 200000 -> 240000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "biaya_pensiun.maksimal_sebulan": "240000"
+   }
+  },
+  {
+   "dokumen": "PER-32/PJ/2015",
+   "jenis": "digit",
+   "angka": "ter_harian.batas_bebas_harian: 300000 -> 360000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "ter_harian.batas_bebas_harian": "360000"
+   }
+  },
+  {
+   "dokumen": "PER-32/PJ/2015",
+   "jenis": "digit",
+   "angka": "biaya_jabatan.maksimal_sebulan: 500000 -> 600000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "biaya_jabatan.maksimal_sebulan": "600000"
+   }
+  },
+  {
+   "dokumen": "PER-32/PJ/2015",
+   "jenis": "digit",
+   "angka": "biaya_pensiun.maksimal_setahun: 2400000 -> 2880000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "biaya_pensiun.maksimal_setahun": "2880000"
+   }
+  },
+  {
+   "dokumen": "PER-32/PJ/2015",
+   "jenis": "digit",
+   "angka": "ptkp.tambahan_kawin,ptkp.tambahan_tanggungan: 3000000 -> 3600000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "ptkp.tambahan_kawin": "3600000",
+    "ptkp.tambahan_tanggungan": "3600000"
+   }
+  },
+  {
+   "dokumen": "PER-32/PJ/2015",
+   "jenis": "digit",
+   "angka": "biaya_jabatan.maksimal_setahun: 6000000 -> 7200000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "biaya_jabatan.maksimal_setahun": "7200000"
+   }
+  },
+  {
+   "dokumen": "PER-32/PJ/2015",
+   "jenis": "digit",
+   "angka": "ptkp.wajib_pajak_sendiri: 36000000 -> 43200000",
+   "llm_salah": true,
+   "llm_salah_berlabel": true,
+   "llm_valid": true,
+   "bacaan": {
+    "ptkp.wajib_pajak_sendiri": "43200000"
+   }
+  }
+ ]
+}

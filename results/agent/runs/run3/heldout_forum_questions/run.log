@@ -1,0 +1,33 @@
+[1/22] al-01      BENAR tool=- pph=-
+[2/22] al-03      BENAR tool=- pph=-
+[3/22] al-05      BENAR tool=- pph=-
+[4/22] al-06      SALAH tool=- pph=-
+[5/22] al-07      BENAR tool=- pph=-
+[6/22] al-10      BENAR tool=calculate_pph21_non_employee pph=525000
+[7/22] al-11      BENAR tool=- pph=-
+[8/22] al-12      BENAR tool=- pph=-
+[9/22] al-13      BENAR tool=calculate_pph21_final pph=0
+[10/22] al-15      BENAR tool=- pph=-
+[11/22] al-16      BENAR tool=calculate_pph21_non_employee pph=16500000
+[12/22] al-17      BENAR tool=calculate_pph21_permanent_monthly pph=2160000
+[13/22] al-18      BENAR tool=- pph=-
+[14/22] al-19      BENAR tool=- pph=-
+[15/22] al-20      BENAR tool=- pph=-
+[16/22] al-21      BENAR tool=- pph=-
+[17/22] al-22      SALAH tool=calculate_pph21_non_permanent pph=-
+[18/22] al-23      BENAR tool=calculate_pph21_non_employee pph=116850
+[19/22] al-24      BENAR tool=- pph=-
+[20/22] al-25      SALAH tool=- pph=-
+[21/22] al-26      SALAH tool=- pph=-
+[22/22] al-27      BENAR tool=- pph=-
+
+Akurasi keseluruhan : 0.8182 (maks. 1 klarifikasi)
+Akurasi satu giliran: 0.5909
+Klarifikasi tak perlu: 5
+Kasus hitung yang memanggil graf: 4
+Token LLM: masuk 1430966, keluar 12752 (rata-rata keluar per kasus 579.6)
+Hitung - tool       : 1.0 (percobaan pertama 1.0)
+Hitung - argumen    : 1.0 (per field 1.0)
+Hitung - angka akhir: 1.0
+Non-hitung          : {'tanya_balik': 0.8, 'tolak': None, 'info': 0.75}
+Laporan: hasil_evaluasi\akhir_20261117\sitasi\run3\uji_alami\20261117-153743_azure_gpt-6-luna.md
